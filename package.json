@@ -1,0 +1,21 @@
+{
+  "name": "sunbird-ui-components",
+  "version": "1.0.0",
+  "description": "Repository of common Sunbird UI components which are used across all Sunbird apps",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajwal88/sunbird-ui-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prajwal88/sunbird-ui-components/issues"
+  },
+  "homepage": "https://github.com/prajwal88/sunbird-ui-components#readme"
+}
