@@ -6,7 +6,10 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-patch": "gulp styles && npm version patch",
+    "build-minor": "gulp styles && npm version minor",
+    "build-major": "gulp styles && npm version major"
   },
   "repository": {
     "type": "git",

@@ -1188,7 +1188,7 @@ input[type="button"].btn-block {
     display: flex;
     flex-direction: row-reverse;
     align-items: center; }
-  .sb-modal .ui.modal .sb-modal-fullscreen {
+  .sb-modal .ui.modal.sb-modal-fullscreen {
     top: 0;
     position: fixed;
     bottom: 0;
@@ -1198,15 +1198,15 @@ input[type="button"].btn-block {
     margin: 0;
     overflow-y: auto;
     overflow-x: hidden; }
-    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-header {
+    .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-header {
       height: 4rem;
       width: auto;
       border-radius: 0px;
       display: flex;
       justify-content: space-between; }
-    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-content {
+    .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-content {
       height: calc(100vh - 120px); }
-  .sb-modal .ui.modal .small {
+  .sb-modal .ui.modal.small {
     color: #666; }
   .sb-modal .ui.modal.small {
     max-width: 300px; }
