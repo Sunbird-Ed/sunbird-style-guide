@@ -67,13 +67,6 @@ $font-stack-ur:
   Cantarell,
   'Helvetica Neue',
   sans-serif;
-/* gray colors */
-$gray-0:       #f3f3f3; // place holder active bg
-$gray-100:     #cccccc; // disable btn bg, icon color
-$gray-200:     #979797; // disable text, place holder text
-$gray-300:     #999999; // sub heading 2
-$gray-400:     #666666; // sub heading
-$gray-800:     #333333; // text color
 // Base Colors
 $blue:    #024f9d;
 $green:   #008840;
@@ -86,6 +79,7 @@ $pink:    #e83e8c;
 $yellow:  #ffc107;
 $teal:    #20c997;
 $cyan:    #17a2b8;
+$gray:    #333333;
 // brand Colors
 $primary-color:   $blue;
 $secondary-color: $green;
@@ -98,27 +92,23 @@ $danger-color:    $red;
 // Nuetral Colors
 $white-color:     $white;
 $theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary":    $primary-color,
-  "secondary":  $secondary-color,
-  "tertiary":   $tertiary-color,
-  "success":    $success-color,
-  "info":       $info-color,
-  "warning":    $warning-color,
-  "danger":     $danger-color,
-  "light":      $gray-100,
-  "dark":       $gray-800
-), $theme-colors);
-// primary colors shades 
+// gray colors shades 
+$gray-800:     $gray; // text color
+$gray-0:   lighten($gray-800,75%); //   #f3f3f3; place holder active bg
+$gray-100: lighten($gray-800,60%); //   #cccccc; disable btn bg, icon color
+$gray-200: lighten($gray-800,39%); //   #979797; disable text, place holder text
+$gray-300: lighten($gray-800,40%);  //  #999999; sub heading 2
+$gray-400: lighten($gray-800,20%); //   #666666; sub heading, button bg, heading, table titles, links, toggles 
+// primary colors shades  
 $primary-0:   lighten($primary-color,65%); // bg
-$primary-100: lighten($primary-color,15%); // default button bg
-$primary-200: lighten($primary-color,10%); // divider
-$primary-300: lighten($primary-color,5%);  // outline, focus fields
+$primary-100: lighten($primary-color,62%); // default button bg
+$primary-200: lighten($primary-color,45%); // divider
+$primary-300: lighten($primary-color,40%);  // outline, focus fields
 $primary-400: $primary-color; // button bg, heading, table titles, links, toggles 
-$primary-600: darken($primary-color,15%);  // on press
-$primary-800: darken($primary-color,30%);  // hover
+$primary-600: darken($primary-color,10%);  // on press
+$primary-800: darken($primary-color,20%);  // hover
 // secondary colors shades
-$secondary-0:   lighten($secondary-color,50%);  // toast bg
+$secondary-0:   lighten($secondary-color,70%);  // toast bg
 $secondary-100: lighten($secondary-color,15%);   // buttong bg, toast
 $secondary-200: lighten($secondary-color,10%);   // button hover
 $secondary-400: $secondary-color;               // icon
@@ -130,6 +120,17 @@ $tertiary-400: $tertiary-color; // icon, label, notification bg
 $red-0:   lighten($red,50%); // toast bg
 $red-100: lighten($red,15%); // buttong bg, toast
 $red-400: $red; // icon color, lable, notification bg
+$theme-colors: map-merge((
+  "primary":    $primary-color,
+  "secondary":  $secondary-color,
+  "tertiary":   $tertiary-color,
+  "success":    $success-color,
+  "info":       $info-color,
+  "warning":    $warning-color,
+  "danger":     $danger-color,
+  "light":      $gray-100,
+  "dark":       $gray-800
+), $theme-colors);
 // Settings for the `<body>` element.
 $bg-body:       $primary-0;
 $body-color:    $gray-800;
@@ -140,24 +141,24 @@ $link-decoration:           none;
 $link-hover-decoration:     underline;
 // Fonts
 // $font-default-size: 14px;
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 14px; // Assumes the browser default, typically `16px`
 $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-bold:            700;
 $font-weight-base:            $font-weight-normal;
-$line-height-base:            $font-size-base * .25;
-$h1-font-size:                $font-size-base * 2.5; // 40px
-$h2-font-size:                $font-size-base * 2; // 32px
-$h3-font-size:                $font-size-base * 1.75; // 28px
-$h4-font-size:                $font-size-base * 1.5; // 24px
-$h5-font-size:                $font-size-base * 1.25; // 20px
-$h6-font-size:                $font-size-base; // 16px
-$font-size-lg:                ($h4-font-size); //24px
-$font-size-normal:            ($h6-font-size); // 16px
-$font-size-md:                ($font-size-base * .825); // 14px
-$font-size-sm:                ($font-size-base * .75); // 12px
-$font-size-xs:                ($font-size-base * .625); // 10px
-$p-font-size:                 $font-size-md;
+$line-height-base:            ($font-size-base + 8);
+$h1-font-size:                $font-size-base * 2.286; // 32px
+$h2-font-size:                $font-size-base * 2; // 28px
+$h3-font-size:                $font-size-base * 1.714; // 24px
+$h4-font-size:                $font-size-base * 1.429; // 20px
+$h5-font-size:                $font-size-base * 1.143;  // 16px
+$h6-font-size:                $font-size-base * 1; // 14px
+$font-size-lg:                ($h3-font-size); //24px
+$font-size-normal:            ($h5-font-size); // 16px
+$font-size-md:                ($font-size-base * 1); // 14px
+$font-size-sm:                ($font-size-base * 0.8571); // 12px
+$font-size-xs:                ($font-size-base * 0.7143); // 10px
+$p-font-size:                 $font-size-md;            
 // spaces
 $base-block-space: 8px;
 $block-padding-y-x: ($base-block-space * 1) ($base-block-space * 3); // any block default spacing

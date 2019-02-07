@@ -1,13 +1,9 @@
-/* gray colors */
-* {
-  transition: all 300ms ease-in-out; }
-
-html, body {
+html,
+body {
   height: 100%;
-  font-size: 1rem; }
+  font-size: 14px; }
 
 body {
-  background: #ecf5ff;
   position: relative;
   font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Bengali", "Noto Sans Malayalam", "Noto Sans Gurmukhi", "Noto Sans Gujarati", "Noto Sans Telugu", "Noto Sans Kannada", "Noto Sans Oriya", "Noto Nastaliq Urdu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   letter-spacing: 0.2px;
@@ -21,9 +17,6 @@ body {
 
 *[lang="ur"] body {
   font-family: "Noto Sans", "Noto Nastaliq Urdu", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Bengali", "Noto Sans Malayalam", "Noto Sans Gurmukhi", "Noto Sans Gujarati", "Noto Sans Telugu", "Noto Sans Kannada", "Noto Sans Oriya", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
-
-*[lang="ur"] {
-  font-size: 0.525rem; }
 
 button,
 input,
@@ -963,11 +956,6 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-.d-flex-btns {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
 .sb-btn {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
@@ -979,6 +967,7 @@ input[type="button"].btn-block {
   color: #fff;
   cursor: pointer;
   margin: 0px 0px 0px 8px;
+  min-width: 64px;
   text-transform: capitalize;
   text-decoration: none; }
 
@@ -992,7 +981,7 @@ input[type="button"].btn-block {
 .sb-btn-small {
   height: 24px;
   padding: 4px 16px;
-  font-size: 0.625rem;
+  font-size: 10.0002px;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px; }
@@ -1000,7 +989,7 @@ input[type="button"].btn-block {
 .sb-btn-normal {
   height: 32px;
   padding: 8px 24px;
-  font-size: 0.75rem;
+  font-size: 11.9994px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px; }
@@ -1008,20 +997,22 @@ input[type="button"].btn-block {
 .sb-btn-big {
   height: 40px;
   padding: 8px 24px;
-  font-size: 1rem;
+  font-size: 16.002px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px; }
 
 .sb-btn-disabled {
   background-color: #cccccc;
-  color: #979797;
-  border: 1px solid #cccccc; }
+  color: #969696;
+  border: 1px solid #cccccc;
+  cursor: not-allowed; }
 
 .sb-btn-outline-disabled {
   background-color: #fff;
   color: #cccccc;
-  border: 1px solid #cccccc; }
+  border: 1px solid #cccccc;
+  cursor: not-allowed; }
 
 .sb-btn-outline-primary {
   border-color: #024a93;
@@ -1161,27 +1152,27 @@ input[type="button"].btn-block {
 
 .sb-modal .ui.modal {
   margin: 0 auto;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   height: auto;
   width: 100%; }
-  .sb-modal .ui.modal > .sb-modal-header {
+  .sb-modal .ui.modal .sb-modal-header {
     background-color: #024f9d;
     color: #fff;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 16.002px;
     padding: 8px 24px;
-    border-bottom: 0px solid #cccccc;
-    height: 2.5rem;
-    width: auto; }
-  .sb-modal .ui.modal > .sb-modal-content {
+    border-bottom: 0 solid #cccccc;
+    min-height: 40px;
+    line-height: 24.002px; }
+  .sb-modal .ui.modal .sb-modal-content {
     min-height: 100px;
     padding: 24px; }
-  .sb-modal .ui.modal > .close {
+  .sb-modal .ui.modal .close {
     color: #fff;
-    top: 0px;
-    right: 0px;
-    font-size: 1rem;
+    top: 0;
+    right: 0;
+    font-size: 14px;
     padding: 0;
     margin: 0;
     height: 40px;
@@ -1189,15 +1180,34 @@ input[type="button"].btn-block {
     display: flex;
     align-items: center;
     justify-content: center; }
-  .sb-modal .ui.modal > .sb-modal-actions {
+  .sb-modal .ui.modal .sb-modal-actions {
     padding: 8px 24px;
     background: #fff;
     border-top: 1px solid #cccccc;
-    min-height: 56px; }
+    min-height: 56px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
+  .sb-modal .ui.modal .sb-modal-fullscreen {
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-header {
+      height: 4rem;
+      width: auto;
+      border-radius: 0px;
+      display: flex;
+      justify-content: space-between; }
+    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-content {
+      height: calc(100vh - 120px); }
   .sb-modal .ui.modal .small {
     color: #666; }
-  .sb-modal .ui.modal.scroll {
-    margin: 0 !important; }
   .sb-modal .ui.modal.small {
     max-width: 300px; }
   .sb-modal .ui.modal.normal {
@@ -1210,6 +1220,10 @@ input[type="button"].btn-block {
     .sb-modal .ui.modal.large .content {
       height: calc(100vh - 100px); }
 
+[dir="rtl"] .sb-modal .ui.modal > .close {
+  right: auto;
+  left: 0; }
+
 .modals.dimmer .ui.scrolling.modal {
   position: absolute !important;
   margin: 0 !important; }
@@ -1220,8 +1234,13 @@ input[type="button"].btn-block {
     width: 95%;
     margin: 0 auto !important;
     top: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(0, -50%);
     height: inherit; }
+    .sb-modal .ui.modal .close {
+      top: 0 !important;
+      right: 0 !important; }
+    .sb-modal .ui.modal .sb-modal-actions {
+      padding: 8px 24px; }
   .sb-modal .ui.modal .scrolling.content {
     max-height: calc(100vh - 10rem);
     overflow: auto; }
