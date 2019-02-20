@@ -43,7 +43,7 @@ input[type="button"] {
 }
 .sb-btn-xs {
     height:($base-block-space * 3);
-    padding: ($base-block-space * 1);
+    padding:($base-block-space * 0) ($base-block-space * 1);
     font-size:$font-size-sm;
 }
 .sb-btn-normal {
@@ -62,7 +62,7 @@ input[type="button"] {
 }
 .sb-btn-lg {
   height:($base-block-space * 7);
-  padding: ($base-block-space * 3);
+  padding: ($base-block-space * 0) ($base-block-space * 3);
   font-size:$font-size-lg;
 }
 // disabled button
