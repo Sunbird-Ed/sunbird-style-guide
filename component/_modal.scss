@@ -46,6 +46,7 @@
           overflow-y: auto;
           overflow-x: hidden;
           .sb-modal-header {
+              align-items: center;
               height: 4rem;
               width: auto;
               border-radius: 0px;
@@ -54,6 +55,9 @@
           }
           .sb-modal-content {
               height: calc(100vh - 120px);
+          }
+          .close {
+            position: relative;
           }
       }
       .small {

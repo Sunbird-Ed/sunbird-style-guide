@@ -1340,6 +1340,7 @@ input[type="button"].btn-block {
     overflow-y: auto;
     overflow-x: hidden; }
     .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-header {
+      align-items: center;
       height: 4rem;
       width: auto;
       border-radius: 0px;
@@ -1347,6 +1348,8 @@ input[type="button"].btn-block {
       justify-content: space-between; }
     .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-content {
       height: calc(100vh - 120px); }
+    .sb-modal .ui.modal.sb-modal-fullscreen .close {
+      position: relative; }
   .sb-modal .ui.modal .small {
     color: #666; }
   .sb-modal .ui.modal.small {
