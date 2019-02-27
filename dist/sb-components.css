@@ -1329,23 +1329,23 @@ input[type="button"].btn-block {
     display: flex;
     flex-direction: row-reverse;
     align-items: center; }
-  .sb-modal .ui.modal .sb-modal-fullscreen {
+  .sb-modal .ui.modal.sb-modal-fullscreen {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    margin: 0;
+    margin: 0 !important;
     overflow-y: auto;
     overflow-x: hidden; }
-    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-header {
+    .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-header {
       height: 4rem;
       width: auto;
       border-radius: 0px;
       display: flex;
       justify-content: space-between; }
-    .sb-modal .ui.modal .sb-modal-fullscreen .sb-modal-content {
+    .sb-modal .ui.modal.sb-modal-fullscreen .sb-modal-content {
       height: calc(100vh - 120px); }
   .sb-modal .ui.modal .small {
     color: #666; }
