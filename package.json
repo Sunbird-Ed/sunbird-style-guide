@@ -1,6 +1,6 @@
 {
   "name": "sunbird-ui-components",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Repository of common Sunbird UI components which are used across all Sunbird apps",
   "main": "gulpfile.js",
   "dependencies": {},
