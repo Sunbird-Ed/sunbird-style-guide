@@ -1,0 +1,40 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading" *ngIf="template.title">
+  {{template.title}}
+</h1>
+<!--/Page Heading-->
+  
+ <!--Page Content-->
+<ng-container *ngIf="template.sections">
+  <div class="docs-sections" *ngFor="let section of template.sections;">
+  
+    <h4 class="docs-sectionHeading" *ngIf="section.title">
+      {{section.title}}
+      <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+    </h4> 
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml" *ngIf="section.demoCode">
+    <ng-template component-host></ng-template>
+    </div>
+    <!--/Display output-->
+  
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="section.expandCode && section.copyCode">
+  
+      <!--Copy code button-->
+      <button ngxClipboard [cbContent]="section.copyCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+      <!--/Copy code button-->
+  
+      <!--Copy code display-->
+      <pre>
+        <code [highlight]="section.copyCode"></code>
+      </pre>
+      <!--/Copy code display-->
+  
+    </div>
+    <!--/Display code-->
+    
+  </div>
+</ng-container>
+<!--Page Content-->
