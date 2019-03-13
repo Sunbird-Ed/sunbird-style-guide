@@ -1,0 +1,375 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+
+<!--Large Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Large Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="largemodal = !largemodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showLargeModal = !showLargeModal">Show Modal</button>
+    <sui-modal *ngIf="showLargeModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'large'"
+      class="sb-modal" appBodyScroll (dismissed)="showLargeModal = !showLargeModal" #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showLargeModal = !showLargeModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showLargeModal = !showLargeModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="largemodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="largeModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="largeModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Large Modal-->
+
+<!--Normal Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Normal Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="normalmodal = !normalmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showNormalModal = !showNormalModal">Show Modal</button>
+    <sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showNormalModal = !showNormalModal" #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showNormalModal = !showNormalModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showNormalModal = !showNormalModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="normalmodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="normalModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="normalModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Normal Modal-->
+
+<!--Small Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Small Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="smallmodal = !smallmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showSmallModal = !showSmallModal">Show Modal</button>
+    <sui-modal *ngIf="showSmallModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+      class="sb-modal" appBodyScroll (dismissed)="showSmallModal = !showSmallModal" #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showSmallModal = !showSmallModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showSmallModal = !showSmallModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="smallmodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="smallModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="smallModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Small Modal-->
+
+<!--Full screen Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Fullscreen Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="fullscreenmodal = !fullscreenmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showFullscreenModal = !showFullscreenModal">Show
+      Modal</button>
+    <!-- <sui-modal *ngIf="showFullscreenModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'fullscreen'" class="sb-modal sb-modal-fullscreen" appBodyScroll
+      (dismissed)="showFullscreenModal = !showFullscreenModal" #modal> -->
+      <div class="sb-modal sb-modal-fullscreen">
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showFullscreenModal = !showFullscreenModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary"
+          (click)="showFullscreenModal = !showFullscreenModal">
+          No
+        </button>
+      </div>
+    </div>
+    <!-- </sui-modal> -->
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="fullscreenmodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="fullscreenModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="fullscreenModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Fullscreen Modal-->
+
+<!--Success Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Success Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="successmodal = !successmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-success sb-btn-normal" (click)="showSuccessModal = !showSuccessModal">Show
+      Modal</button>
+    <sui-modal *ngIf="showSuccessModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'small'" class="sb-modal sb-success" appBodyScroll (dismissed)="showSuccessModal = !showSuccessModal"
+      #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-success" (click)="showSuccessModal = !showSuccessModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-success" (click)="showSuccessModal = !showSuccessModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="successmodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="successModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="successModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Success Modal-->
+
+<!--Error Modal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Error Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="errormodal = !errormodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-error sb-btn-normal" (click)="showErrorModal = !showErrorModal">Show Modal</button>
+    <sui-modal *ngIf="showErrorModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+      class="sb-modal sb-error" appBodyScroll (dismissed)="showErrorModal = !showErrorModal" #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-error" (click)="showErrorModal = !showErrorModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-error" (click)="showErrorModal = !showErrorModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="errormodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="errorModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="errorModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Danger Modal-->
+
+<!--WarningModal-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    Warning Modal
+    <i class="fa fa-code text-gray docs-expandCode" (click)="warningmodal = !warningmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-warning sb-btn-normal" (click)="showWarningModal = !showWarningModal">Show
+      Modal</button>
+    <sui-modal *ngIf="showWarningModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'small'" class="sb-modal sb-warning" appBodyScroll (dismissed)="showWarningModal = !showWarningModal"
+      #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-warning" (click)="showWarningModal = !showWarningModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-warning" (click)="showWarningModal = !showWarningModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="warningmodal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="warningModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+        <code [highlight]="warningModalCode"></code>
+      </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Danger Modal-->
+
+<!--Page Content-->

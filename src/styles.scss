@@ -1,0 +1,251 @@
+@import '~highlight.js/styles/github.css';
+
+.docs-body {
+    display: flex;
+    background: #fbfbfb;
+    .docs-sidebar {
+        width: 200px;
+        height: 100vh;
+        padding: 20px 20px 20px 30px;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        border-right: 1px solid #ddd;
+        .sb-branding {
+            img {
+                width: 25%;
+            }
+        }
+        h4 {
+            color: #666;
+            font-size: 10px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        ul li {
+            margin-bottom:10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            ul {
+                margin: 5px 0 0 10px;
+                padding: 5px 0 0 0;
+                border-left: 1px dashed #ccc;
+                li {
+                    margin: 0 0 10px 25px;
+                    position: relative;
+                    font-size: 12px;
+                    &::before {
+                        content: " ";
+                        display: inline-block;
+                        position: absolute;
+                        top: 8px;
+                        left: -25px;
+                        width: 15px;
+                        border-top: 1px dashed #ccc;
+                    }
+                    a {
+                        color: #333;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                            color: #024fd9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .docs-content {
+        padding: 20px 30px 20px 230px;
+        width: 100vw;
+        min-height: 100vh;
+        .docs-pageHeading {
+            padding: 50px;
+            line-height: normal;
+            margin-bottom: 50px;
+            margin-left: -30px;
+            background: #186d80;
+            margin-top: -30px;
+            margin-right: -30px;
+            color: #fff;
+        }
+        .docs-sections {
+            margin: 0 0 50px 0;
+        }
+        .docs-sectionHeading {
+            border-bottom: 1px solid #ddd;
+            margin: 0 0 35px 0;
+            padding: 0 0 10px 0;
+        }
+        .docs-expandCode {
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .btn-copy {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-weight: bold;
+        }
+        .docs-sectionCopyCode {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 {
+    margin: 10px 0px;
+}
+
+h6 {
+    margin: 10px 0px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.sb-doc-app-title {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #186d80 !important;
+}
+
+.sb-doc-hidden {
+    display: none;
+}
+
+.sb-doc-condition-sign {
+    color: red;
+}
+
+.sb-doc-space-30 {
+    height: 30px;
+}
+
+.sb-doc-hr {
+    margin:50px 0px;
+    border:1px solid #eee;
+}
+// colors 
+.sb-doc-color-block {
+    .color-tile {
+        width: 100%;
+        height: 75px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+    }
+    .color-tile2 {
+        height: 75px;
+    }
+    .primary {
+        background: #024fd9;
+    }
+    .primary-B800 {
+        background: #002E50;
+    }
+    .primary-B600 {
+        background: #005391;
+    }
+    .primary-B300 {
+        background: #7AB4EE;
+    }
+    .primary-B200 {
+        background: #80A7CE;
+    }
+    .primary-B100 {
+        background: #EDF4F9;
+    }
+    .primary-B0 {
+        background: #F3F7FA;
+    }
+    .secondary {
+        background: #008840;
+    }
+    .secondary-G200 {
+        background: #07BC81;
+    }
+    .secondary-G100 {
+        background: #00C786;
+    }
+    .secondary-G0 {
+        background: #E1FFDF;
+    }
+    .tertiary {
+        background: #E55A28;
+    }
+    .tertiary-O100 {
+        background: #FFA11D;
+    }
+    .tertiary-O0 {
+        background: #FEEDD7;
+    }
+    .red-R400 {
+        background:#FF4558;
+    }
+    .red-R100 {
+        background:#FF6979
+    }
+    .red-R0 {
+        background:#FBCCD1;
+    }
+    .grey-T800 {
+        background:#333;
+    }
+    .grey-T400 {
+        background:#666;
+    }
+    .grey-T300 {
+        background:#969696;
+    }
+    .grey-T200 {
+        background:#999;
+    }
+    .grey-T100 {
+        background:#ccc;
+    }
+    .grey-T0 {
+        background:#F2F2F2;
+    }
+    .color-details {
+        font-size: 10px;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        .fullrow {
+            grid-column: 3 / 1;
+        }
+        .block {
+            margin-bottom: 10px;
+            label {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .label-value {
+                font-size: 12px;
+            }
+        }
+    }
+}
