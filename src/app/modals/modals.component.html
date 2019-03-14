@@ -172,10 +172,9 @@
   <div class="docs-sectionDemoCode">
     <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showFullscreenModal = !showFullscreenModal">Show
       Modal</button>
-    <!-- <sui-modal *ngIf="showFullscreenModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+    <sui-modal *ngIf="showFullscreenModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
       [size]="'fullscreen'" class="sb-modal sb-modal-fullscreen" appBodyScroll
-      (dismissed)="showFullscreenModal = !showFullscreenModal" #modal> -->
-      <div class="sb-modal sb-modal-fullscreen">
+      (dismissed)="showFullscreenModal = !showFullscreenModal" #modal>
       <div class="sb-modal-header">
         Modal Heading
       </div>
@@ -190,9 +189,8 @@
           (click)="showFullscreenModal = !showFullscreenModal">
           No
         </button>
-      </div>
     </div>
-    <!-- </sui-modal> -->
+    </sui-modal>
   </div>
   <!--/Display output-->
 

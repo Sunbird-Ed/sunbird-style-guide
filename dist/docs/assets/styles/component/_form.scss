@@ -1,0 +1,121 @@
+/* form element styles */
+
+
+.sb-form {
+    position: relative;
+    max-width: 100%;
+}
+.sb-field {
+    position: relative;
+    margin-bottom: 0.5714rem;
+    .sb-input-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        pointer-events: none;
+    }
+    &.disabled, [disabled],  {
+        background-color: #F2F2F2;
+        border-radius: .2143rem;
+        opacity: .45;
+        pointer-events: none;
+        border: 1px solid #F2F2F2;
+    } 
+}
+.sb-input {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.5px solid black;
+    border-radius: .2143rem;
+    color: #495057;
+    display: block;
+    line-height: 1.5;
+    font-size: 0.8571rem;
+    padding: 0.5714rem;
+    position: relative;
+    max-width:100%;
+    width: 100%;
+    &.sb-fluid {
+     width:100%
+    }
+    &:focus {
+      border: 0.5px solid #005DA2;
+    }
+    &:hover {
+      border: 0.5px solid #7AB4EE; 
+    }
+    &.sb-error, .sb-error:hover {
+      border: .5px solid #FF4558;
+    }
+    &.sb-success, .sb-success:hover {
+      border: .5px solid #07BC81;
+    } 
+  
+  }
+
+  .sb-textarea {
+    border-radius: .2143rem;
+    height: 12rem;
+    min-height: 8rem;
+    max-height: 24rem;
+    padding: 0.5714rem;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.8571rem;
+    overflow: auto;
+    resize: vertical;
+    &:focus {
+      border: 0.5px solid #005DA2;
+    }
+    &:hover {
+      border: 0.5px solid #7AB4EE; 
+    }
+  }
+
+.sb-form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[required], input.required { 
+    &:before {
+        color: red;
+        content: "*";
+        position: absolute;
+        margin-left: -15px;
+    }    
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5714rem;
+    font-size: 0.8571rem;
+    font-weight: bold;
+}
+
+small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+#{$all-text-inputs} {
+    //border: 1px solid #ccc;
+  }
+  #{$all-text-inputs-active} {
+    // border: 1px solid #aaa;
+  }
+  #{$all-text-inputs-focus} {
+    // border: 1px solid #1565c0;
+  }
+  #{$all-text-inputs-hover} {
+    // border: 1px solid #aaa;
+  }
+  #{$all-text-inputs-invalid} {
+    // border: 1px solid #00f;
+  }
