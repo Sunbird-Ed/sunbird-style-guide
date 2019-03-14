@@ -1,0 +1,42 @@
+{
+    "buttons": {
+        "title": "Buttons",
+        "sections" :[
+            {
+                "expandCode": false,
+                "title": "Basic Buttons",
+                "demoCode": "<button class=\"sb-btn sb-btn-outline-primary sb-btn-normal mr-10\">Basic Button</button><button class=\"sb-btn sb-btn-outline-secondary sb-btn-normal mr-10\">Secondary</button><button class=\"sb-btn sb-btn-outline-tertiary sb-btn-normal mr-10\">Tertiary</button><button class=\"sb-btn sb-btn-outline-info sb-btn-normal mr-10\">Info</button><button class=\"sb-btn sb-btn-outline-success sb-btn-normal mr-10\">Success</button><button class=\"sb-btn sb-btn-outline-warning sb-btn-normal mr-10\">Warning</button><button class=\"sb-btn sb-btn-outline-error sb-btn-normal mr-10\">Error</button>",
+                "copyCode": "<button class=\"sb-btn sb-btn-outline-primary sb-btn-normal\">Basic Button</button>\n<button class=\"sb-btn sb-btn-outline-secondary sb-btn-normal\">Secondary</button>\n<button class=\"sb-btn sb-btn-outline-tertiary sb-btn-normal\">Tertiary</button>\n<button class=\"sb-btn sb-btn-outline-info sb-btn-normal\">Info</button>\n<button class=\"sb-btn sb-btn-outline-success sb-btn-normal mr-10\">Success</button>\n<button class=\"sb-btn sb-btn-outline-warning sb-btn-normal\">Warning</button>\n<button class=\"sb-btn sb-btn-outline-error sb-btn-normal\">Error</button>"
+            },
+            {
+                "expandCode": false,
+                "title": "Button States",
+                "demoCode": "<button class=\"sb-btn sb-btn-disabled sb-btn-normal mr-10\">Primary Disable</button><button class=\"sb-btn sb-btn-outline-disabled sb-btn-normal\">Basic Button Disable</button>",
+                "copyCode": "<button class=\"sb-btn sb-btn-disabled sb-btn-normal\">Primary Disable</button>\n<button class=\"sb-btn sb-btn-outline-disabled sb-btn-normal\">Basic Button Disable</button>"
+            },
+            {
+                "expandCode": false,
+                "title": "Colored Buttons",
+                "demoCode": "<button class=\"sb-btn sb-btn-primary sb-btn-normal mr-10\">Primary Button</button><button class=\"sb-btn sb-btn-secondary sb-btn-normal mr-10\">Secondary</button><button class=\"sb-btn sb-btn-tertiary sb-btn-normal mr-10\">Tertiary</button><button class=\"sb-btn sb-btn-warning sb-btn-normal mr-10\">warning</button><button class=\"sb-btn sb-btn-error sb-btn-normal mr-10\">Error</button><button class=\"sb-btn sb-btn-info sb-btn-normal mr-10\">Info</button>",
+                "copyCode": "<button class=\"sb-btn sb-btn-primary sb-btn-normal\">Primary Button</button>\n<button class=\"sb-btn sb-btn-secondary sb-btn-normal\">Secondary</button>\n<button class=\"sb-btn sb-btn-tertiary sb-btn-normal\">Tertiary</button>\n<button class=\"sb-btn sb-btn-warning sb-btn-normal\">warning</button>\n<button class=\"sb-btn sb-btn-error sb-btn-normal\">Error</button>\n<button class=\"sb-btn sb-btn-info sb-btn-normal\">Info</button>"
+            },
+            {
+                "expandCode": false,
+                "title": "Button Sizes",
+                "demoCode": "<button class=\"sb-btn sb-btn-primary sb-btn-xs mr-10\">mini</button><button class=\"sb-btn sb-btn-primary sb-btn-normal mr-10\">normal</button><button class=\"sb-btn sb-btn-primary sb-btn-sm mr-10\">small</button><button class=\"sb-btn sb-btn-primary sb-btn-md mr-10\">medium</button><button class=\"sb-btn sb-btn-primary sb-btn-lg mr-10\">large</button>",
+                "copyCode": "<button class=\"sb-btn sb-btn-primary sb-btn-xs\">mini</button>\n<button class=\"sb-btn sb-btn-primary sb-btn-normal\">normal</button>\n<button class=\"sb-btn sb-btn-primary sb-btn-sm\">small</button>\n<button class=\"sb-btn sb-btn-primary sb-btn-md\">medium</button>\n<button class=\"sb-btn sb-btn-primary sb-btn-lg\">large</button>"
+            }
+        ]
+    },
+    "modals": {
+        "title": "Modals",
+        "sections" :[
+            {
+                "expandCode": false,
+                "title": "Large Modals",
+                "demoCode": "<button class=\"sb-btn sb-btn-primary sb-btn-normal mr-10\">Click Here</button>\n<sui-modal [mustScroll]=\"true\" [isClosable]=\"true\" [transitionDuration]=\"0\" [size]=\"'large'\" class=\"sb-modal\" appBodyScroll (dismissed)=\"redirect()\" #modal><div class=\"sb-modal-header\">Modal Heading</div><div class=\"sb-modal-content\">Modal Content</div><div class=\"sb-modal-actions\"><button class=\"sb-btn sb-btn-normal sb-btn-outline-primary\">No</button><button class=\"sb-btn sb-btn-normal sb-btn-primary\">Yes</button></div></sui-modal>",
+                "copyCode": "<sui-modal [mustScroll]=\"true\" [isClosable]=\"true\" [transitionDuration]=\"0\" [size]=\"'large'\" class=\"sb-modal\" appBodyScroll (dismissed)=\"redirect()\" #modal>\n<div class=\"sb-modal-header\">\n\tModal Heading\n</div>\n<div class=\"sb-modal-content\">\n\tModal Content\n</div>\n<div class=\"sb-modal-actions\">\n\t<button class=\"sb-btn sb-btn-normal sb-btn-outline-primary\">No</button>\n\t<button class=\"sb-btn sb-btn-normal sb-btn-primary\">Yes</button>\n</div>\n</sui-modal>"
+            }
+        ]
+    }
+}
