@@ -7,6 +7,9 @@ import { Ng2IzitoastService } from 'ng2-izitoast';
   templateUrl: './toasters.component.html'
 })
 export class ToastersComponent implements OnInit {
+  showLargeModal;
+  section;
+  expandCode;
 
   constructor(public iziToast: Ng2IzitoastService) { }
 

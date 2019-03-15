@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "github": "ng build --base-href /sunbird-style-guide/docs/"
+    "github": "ng build --prod --base-href /sunbird-style-guide/docs/"
   },
   "private": true,
   "dependencies": {
