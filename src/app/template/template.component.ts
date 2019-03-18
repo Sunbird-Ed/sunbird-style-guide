@@ -9,8 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TemplateComponent implements OnInit {
 
-  component = '';
-  template = '';
+  component;
+  template;
+  title;
+  sections;
 
   constructor( private activeRoute: ActivatedRoute, private http: HttpClient ) {
 
