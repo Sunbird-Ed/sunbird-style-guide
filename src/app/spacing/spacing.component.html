@@ -1,0 +1,74 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+<p>Space is everywhere. CSS uses properties like padding, margin, and absolute positioning’s left, right, top and bottom to separate objects. Across five libraries (Bootstrap, Salesforce Lightning, Foundation, a previous project, and a current project), I compared occurrence of these space properties relative to property groups of color, size, type, layout and more.</p>
+
+<h4>8-Point Grid System</h4>
+<p>I’ve used design systems like Bootstrap or Foundation to jumpstart web projects, even tried to build a few similar systems myself. It wasn’t until recently that I realized components like buttons can be beautifully laid out individually but degrade the overall design when set into a larger soup of elements and content. This is because reaching an aesthetically pleasing composition to the overall page is difficult to consistently create. I can use my design eye to nudge a few elements here or there but I can’t rely on a team of designers and developers to share my same vision. Without a system to define the spacing relationships of my elements it’s difficult to create consistency.</p>
+
+<p>In this comparison you can see an 8pt grid system vertically aligning the elements of a form versus a popular design system that utilizes arbitrary numbers to space and size elements.</p>
+
+
+<div class="img-block"><img src="../../docs/assets/images/8ptspace.jpg" width="100%" alt="" title="" /></div>
+
+<hr class="sb-doc-hr">
+
+<h4>Why? 8-Point Grid System</h4>
+<p>The variety of screen sizes and pixel densities has continued to increase making the work of asset generation more complicated for designers. Utilizing an even number like 8 to size and space elements makes scaling for a wide variety of devices easy and consistent.</p>
+<p>Smaller components, such as iconography and typography, can align to a 4dp grid.</p>
+
+<div class="img-block"><img src="../../docs/assets/images/space-02.jpg" width="100%" alt="" title="" /></div>
+
+    <hr class="sb-doc-hr">
+
+    <h4>Borders in the 8pt grid system</h4>
+<p>You’ve got an auto width button meaning the content determines its width and you’ve decided to add an 8px padding on the left and right of it. Your current brand style calls for an outlined button. How do you count the border?</p>
+
+<div class="img-block"><img src="../../docs/assets/images/space-03.jpg" width="100%" alt="" title="" /></div>
+
+<hr class="sb-doc-hr">
+
+<h4>Button Style</h4>
+<p>Loream ipsum</p>
+
+<div class="img-block"><img src="../../docs/assets/images/space-04.jpg" width="100%" alt="" title="" /></div>
+<div class="img-block"><img src="../../docs/assets/images/space-05.jpg" width="100%" alt="" title="" /></div>
+
+
+
+<div class="docs-sections sb-doc-hidden" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<!--Page Content-->
