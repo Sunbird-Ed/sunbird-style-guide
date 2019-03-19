@@ -16,7 +16,37 @@ export class PageSectionComponent implements OnInit {
       demoCode: `
      `,
       copyCode: `
-      
+      <div class="sb-pageSection">
+          <!--Header-->
+          <div class="sb-pageSection-header">
+              <!--Section Title-->
+              <h4 class="sb-pageSection-title m-0 mr-5">
+                My Courses
+              </h4>
+              <!--/Section Title-->
+              <!--Count-->
+              <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">
+            25
+              </span>
+              <!--/Count-->
+              <!--View all button-->
+              <button class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">
+                  View all
+              </button>
+              <!--/View all button-->
+          </div>
+          <!--/Header-->
+
+          <!--Content-->
+          <div class="sb-pageSection-content">
+              <ngx-slick class="carousel" [config]="slideConfig">
+                  <div ngxSlickItem class="mr-15">
+                    <app-card></card>
+                  </div>
+              </ngx-slick>
+          </div>
+          <!--/Content-->
+      </div>
       `
     }
   ];

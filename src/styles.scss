@@ -14,6 +14,28 @@
         left: 0;
         overflow-y: auto;
         border-right: 1px solid #ddd;
+        z-index: 2;
+        .docs-toggleSidebar {
+            color: #fff;
+            background: #186d80;
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            position: fixed;
+            top: 5px;
+            left: 205px;
+            text-align: center;
+            box-shadow: 1px 1px 1px #186d80;
+        }
+        &.docs-hideSidebar {
+            width:0;
+            padding: 0;
+            .docs-toggleSidebar {
+                left: 5px;
+            }
+        }
         .sb-branding {
             img {
                 width: 25%;
@@ -68,6 +90,10 @@
         padding: 20px 30px 20px 230px;
         width: 100vw;
         min-height: 100vh;
+        position: relative;
+        &.docs-fullWidth{
+            padding: 20px 30px;
+        }
         .docs-pageHeading {
             padding: 50px;
             line-height: normal;
