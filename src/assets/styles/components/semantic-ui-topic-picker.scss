@@ -1,3 +1,19 @@
+.sb-treePicker {
+    display: flex;
+    .sb-treePicker-selectionSection {
+        width: 400px;
+        border-right: 1px solid #ccc;
+        .sb-search-box {
+            width: 392px;
+        }
+    }
+    .sb-treePicker-selectedSection {
+        width: 282px;
+        padding: 8px;
+    }
+}
+
+
 .ui.tree-picker.modal .ui.warning.message .header {
     border-bottom: none;
 }
@@ -9,10 +25,6 @@
 
 .ui.tree-picker.modal .header .menu .item.highlighted {
     color: #2b9289;
-}
-
-.ui.tree-picker.modal .search {
-    padding: 7px 21px;
 }
 
 .ui.tree-picker.modal .search .icon {
