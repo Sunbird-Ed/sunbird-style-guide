@@ -1,13 +1,14 @@
 @import '~highlight.js/styles/github.css';
 
+
 .docs-body {
     display: flex;
-    background: #fbfbfb;
+    background: #fff;
     .docs-sidebar {
         width: 200px;
         height: 100vh;
         padding: 20px 20px 20px 30px;
-        background: #fff;
+        background: #fbfbfb;
         position: fixed;
         top: 0;
         left: 0;
@@ -51,9 +52,12 @@
                     a {
                         color: #333;
                         text-decoration: none;
-                        &:hover {
+                        &:hover,&.active {
                             text-decoration: underline;
-                            color: #024fd9;
+                            color: #186d80;
+                        }
+                        &.active {
+                           font-weight:bold;
                         }
                     }
                 }

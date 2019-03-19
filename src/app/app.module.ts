@@ -64,7 +64,7 @@ export function hljsLanguages() {
     FormsComponent,
     ToastersComponent,
     GridlayoutComponent,
-    SpacingComponent
+    SpacingComponent,
     CardsComponent,
     PageSectionComponent
   ],
