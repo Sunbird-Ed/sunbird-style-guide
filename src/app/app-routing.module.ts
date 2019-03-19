@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'toasters', component: ToastersComponent },
   { path: 'gridlayout', component: GridlayoutComponent },
-  { path: 'spacing', component: SpacingComponent }
+  { path: 'spacing', component: SpacingComponent },
   { path: 'cards', component: CardsComponent },
   { path: 'page-section', component: PageSectionComponent}
 ];
