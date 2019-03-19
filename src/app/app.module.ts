@@ -32,6 +32,10 @@ import { ToastersComponent } from './toasters/toasters.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SelectComponent } from './select/select.component';
 
+import { GridlayoutComponent } from './gridlayout/gridlayout.component';
+import { SpacingComponent } from './spacing/spacing.component';
+import { CardsComponent } from './cards/cards.component';
+import { PageSectionComponent } from './page-section/page-section.component';
 
 /**
  * Import every language you wish to highlight here
@@ -65,6 +69,10 @@ export function hljsLanguages() {
     ToastersComponent,
     TabsComponent,
     SelectComponent,
+    GridlayoutComponent,
+    SpacingComponent,
+    CardsComponent,
+    PageSectionComponent
   ],
   imports: [
     BrowserModule,

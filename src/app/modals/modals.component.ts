@@ -8,6 +8,21 @@ export class ModalsComponent implements OnInit {
 
   constructor() { }
 
+  showLargeModal;
+  largemodal;
+  showNormalModal;
+  normalmodal;
+  showSmallModal;
+  smallmodal;
+  showFullscreenModal;
+  fullscreenmodal;
+  showSuccessModal;
+  successmodal;
+  showErrorModal;
+  errormodal;
+  showWarningModal;
+  warningmodal;
+
   pageTitle = 'Modals';
   largeModalCode = `<sui-modal 
   *ngIf="showLargeModal"

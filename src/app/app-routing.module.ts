@@ -12,9 +12,13 @@ import { FormsComponent } from './forms/forms.component';
 import { ToastersComponent } from './toasters/toasters.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SelectComponent } from './select/select.component';
+import { GridlayoutComponent } from './gridlayout/gridlayout.component';
+import { SpacingComponent } from './spacing/spacing.component';
+import { CardsComponent } from './cards/cards.component';
+import { PageSectionComponent } from './page-section/page-section.component';
 
 const routes: Routes = [
-  { path: '', component: TypographyComponent},
+  { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'labels', component: LabelsComponent },
@@ -27,7 +31,10 @@ const routes: Routes = [
   { path: 'toasters', component: ToastersComponent },
   { path: 'tabs', component: TabsComponent },
   { path: 'select', component: SelectComponent },
-  
+  { path: 'gridlayout', component: GridlayoutComponent },
+  { path: 'spacing', component: SpacingComponent },
+  { path: 'cards', component: CardsComponent },
+  { path: 'page-section', component: PageSectionComponent}
 ];
 
 @NgModule({
