@@ -7,10 +7,13 @@ import { Ng2IzitoastService } from 'ng2-izitoast';
   templateUrl: './toasters.component.html'
 })
 export class ToastersComponent implements OnInit {
+  SuccessToaster;
+  WarningToaster;
+  ErrorToaster;
 
   constructor(public iziToast: Ng2IzitoastService) { }
 
-public InfoToaster() {
+  public InfoToaster() {
     this.iziToast.show({ 
       title: "Standard Information Toaster",
       message: "Message come here",
