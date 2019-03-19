@@ -1,0 +1,29 @@
+.ui.selection.dropdown:focus, .ui.multiple.dropdown:focus {
+    border-color: $sb-dropdown-border-focus;
+}
+
+.ui.selection.active.dropdown:hover {
+    border-color: $sb-dropdown-border-hover;
+}
+
+.ui.multiple.dropdown {
+    border-color: $sb-dropdown-border-color;
+}
+
+.ui.selection.dropdown .menu>.item.active, .prominent-filter .ui.selection.dropdown .menu>.item.active {
+    color: $sb-dropdown-active-item
+}
+
+.multi-select-dropdown i.icon {
+    font-size: $sb-multi-select-dropdown-icon-font-size;
+}
+
+.ui.selection.dropdown {
+    border: $sb-dropdown-border;
+    border-radius: $sb-dropdown-border-radius;
+    min-height: $sb-dropdown-min-height;
+}
+
+.ui.multiple.dropdown .label {
+    font-size: $sb-dropdown-label-font-size;
+}

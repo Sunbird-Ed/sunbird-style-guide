@@ -10,6 +10,8 @@ import { ColorsComponent } from './colors/colors.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { FormsComponent } from './forms/forms.component';
 import { ToastersComponent } from './toasters/toasters.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { SelectComponent } from './select/select.component';
 
 const routes: Routes = [
   { path: '', component: TypographyComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'loaders', component: LoadersComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'toasters', component: ToastersComponent },
+  { path: 'tabs', component: TabsComponent },
+  { path: 'select', component: SelectComponent },
   
 ];
 
