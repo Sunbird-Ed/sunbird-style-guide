@@ -15,10 +15,10 @@ export class GridlayoutComponent implements OnInit {
       expandCode: false,
       title: 'gridlayout',
       demoCode: `
-     
+
       `,
       copyCode: `
-     
+
       `
     }
   ];
