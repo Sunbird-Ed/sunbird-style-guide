@@ -79,12 +79,13 @@
       }
       .sb-toast-title {
         font-size: 16px !important;
-        color: #333;
-        margin-bottom: $block-padding-xy;
+        color: $gray-800;
+        margin-bottom: $base-block-space;
         font-weight:600;
+        text-transform: capitalize;
       }
       .sb-toast-message {
-        color: #333;
+        color:  $gray-800;
         font-size: 14px !important;
         line-height: 22px;
         margin-bottom: 0px;
@@ -92,7 +93,7 @@
       }
     }
     &.sb-toast-normal {
-      background: #fff;
+      background: $white;
       border-right-width: 1px;
       border-bottom-width: 1px;
       border-top-width: 1px;

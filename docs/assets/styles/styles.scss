@@ -11,16 +11,16 @@
 @import "./fonts/notosans-oriya/notosansoriya.css";
 @import "./fonts/noto-nastaliqurdu/notonastaliqurdu.css";
 
+
 // base structure
 @import "./mixins/mixins";
 @import "./base/base";
 @import "./component/component";
 @import "./components/components";
-@import "./helpers/helpers";
 @import "./layout/layout";
-@import "./pages/pages";
-@import "./themes/themes";
-@import "./vendors/vendors";
 @import "./semantic/semantic-rtl";
-@import "./legacy";
+@import "./helpers/helpers";
+@import "./pages/pages";
+@import "./vendors/vendors";
+//@import "./legacy";
 @import "./global";
