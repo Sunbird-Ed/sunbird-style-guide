@@ -5,19 +5,24 @@
 <!--/Page Heading-->
 
 <!--Page Content-->
-<div class="docs-sections">
 
+
+<button class="sb-btn sb-btn-info sb-btn-normal" (click)="InfoToaster();">Info</button>
+<button class="sb-btn sb-btn-success sb-btn-normal" (click)="SuccessToaster();">Success</button>
+<button class="sb-btn sb-btn-warning sb-btn-normal" (click)="WarningToaster();">Warning</button>
+<button class="sb-btn sb-btn-error sb-btn-normal" (click)="ErrorToaster();">Error</button>
+
+
+<br><br>
+
+<div class="docs-sections" *ngFor="let section of sections;">
   <h4 class="docs-sectionHeading">
-    Standard Toasters
+    {{section.title}}
     <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
   </h4> 
 
   <!--Display output-->
-  <div class="docs-sectionDemoCode">
-      <button class="sb-btn sb-btn-info sb-btn-normal" (click)="showLargeModal = !showLargeModal">Info</button>
-      <button class="sb-btn sb-btn-success sb-btn-normal" (click)="showLargeModal = !showLargeModal">Success</button>
-      <button class="sb-btn sb-btn-warning sb-btn-normal" (click)="showLargeModal = !showLargeModal">Warning</button>
-      <button class="sb-btn sb-btn-error sb-btn-normal" (click)="showLargeModal = !showLargeModal">Error</button>  
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
   </div>
   <!--/Display output-->
 

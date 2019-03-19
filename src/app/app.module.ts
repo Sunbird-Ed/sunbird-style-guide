@@ -28,7 +28,8 @@ import { ColorsComponent } from './colors/colors.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { FormsComponent } from './forms/forms.component';
 import { ToastersComponent } from './toasters/toasters.component';
-
+import { GridlayoutComponent } from './gridlayout/gridlayout.component';
+import { SpacingComponent } from './spacing/spacing.component';
 
 /**
  * Import every language you wish to highlight here
@@ -59,7 +60,9 @@ export function hljsLanguages() {
     ColorsComponent,
     LoadersComponent,
     FormsComponent,
-    ToastersComponent
+    ToastersComponent,
+    GridlayoutComponent,
+    SpacingComponent
   ],
   imports: [
     BrowserModule,
