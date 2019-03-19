@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SlickModule } from 'ngx-slick';
 
 import { HighlightModule } from 'ngx-highlightjs';
 import xml from 'highlight.js/lib/languages/xml';
@@ -72,6 +73,7 @@ export function hljsLanguages() {
     HighlightModule.forRoot({ languages: hljsLanguages }),
     SuiModule,
     Ng2IziToastModule,
+    SlickModule,
     ClipboardModule
   ],
   providers: [],
