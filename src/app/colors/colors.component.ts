@@ -15,10 +15,10 @@ export class ColorsComponent implements OnInit {
       expandCode: false,
       title: 'Colors',
       demoCode: `
-     
+
       `,
       copyCode: `
-     
+
       `
     }
   ];

@@ -16,7 +16,7 @@ import { CardsComponent } from './cards/cards.component';
 import { PageSectionComponent } from './page-section/page-section.component';
 
 const routes: Routes = [
-  { path: '', component: TypographyComponent},
+  { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'labels', component: LabelsComponent },
