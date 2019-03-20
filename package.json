@@ -8,7 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "github": "ng build --prod --base-href /sunbird-style-guide/docs/"
+    "github": "ng build --prod --base-href /sunbird-style-guide/dist/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run github && git add -A"
+    }
   },
   "private": true,
   "dependencies": {
@@ -78,6 +83,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0"
   }
 }

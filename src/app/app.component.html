@@ -1,8 +1,9 @@
 <div class="docs-body">
-    <div class="docs-sidebar">
+    <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
+        <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
         <app-sidebar></app-sidebar>
     </div>
-    <div class="docs-content">
+    <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
         <router-outlet></router-outlet>
     </div>
 </div>
