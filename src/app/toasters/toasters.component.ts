@@ -17,7 +17,7 @@ export class ToastersComponent implements OnInit {
     this.iziToast.show({ 
       title: "Standard Information Toaster",
       message: "Message come here",
-      class: "sb-toast sb-toast-info",
+      class: "sb-toaster sb-toast-success",
       icon: 'icon-person',
       position: 'center',
       timeout: 100000000,
