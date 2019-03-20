@@ -10,6 +10,8 @@ import { ColorsComponent } from './colors/colors.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { FormsComponent } from './forms/forms.component';
 import { ToastersComponent } from './toasters/toasters.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { SelectComponent } from './select/select.component';
 import { GridlayoutComponent } from './gridlayout/gridlayout.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { CardsComponent } from './cards/cards.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'loaders', component: LoadersComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'toasters', component: ToastersComponent },
+  { path: 'tabs', component: TabsComponent },
+  { path: 'select', component: SelectComponent },
   { path: 'gridlayout', component: GridlayoutComponent },
   { path: 'spacing', component: SpacingComponent },
   { path: 'cards', component: CardsComponent },
