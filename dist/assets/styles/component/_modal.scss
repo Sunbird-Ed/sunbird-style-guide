@@ -40,6 +40,9 @@
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
+            .sb-btn:nth-last-child(1){
+                margin:0 $base-block-space 0 $base-block-space;
+            }
         }
         .small {
             color: $gray-400;
