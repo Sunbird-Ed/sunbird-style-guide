@@ -357,6 +357,9 @@ MIT
 ngx-highlightjs
 MIT
 
+ngx-slick
+MIT
+
 ngx-window-token
 MIT
 
@@ -569,6 +572,8 @@ Apache-2.0
  
 
 
+undefined
+
 tslib
 Apache-2.0
 Apache License
@@ -627,8 +632,6 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 
 END OF TERMS AND CONDITIONS
 
-
-undefined
 
 webpack
 MIT
