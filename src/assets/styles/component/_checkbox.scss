@@ -39,15 +39,17 @@
 .sb-checkbox.sb-checkbox-primary input:checked~label:after {
     content: '✔';
     border-radius: $sb-checkbox-border-radius;
+    font-weight: normal;
 }
 
 .sb-checkbox.sb-checkbox-primary label {
-    cursor: auto;
+    cursor: pointer;
     position: relative;
     display: block;
-    padding-left: ($base-block-space * 4);
+    padding-left: ($base-block-space * 3);
     outline: 0;
     font-size: $sb-checkbox-label-font-size;
+    font-weight: normal;
 }
 
 .sb-checkbox.sb-checkbox-primary input[type=checkbox],

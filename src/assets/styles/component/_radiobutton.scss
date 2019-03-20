@@ -24,7 +24,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: 0;
+        top: 1px;
         width: ($base-block-space * 2);
         height: ($base-block-space * 2);
         border: $sb-radio-btn-border solid $sb-radio-btn-border-color;
@@ -37,7 +37,7 @@
         height: ($base-block-space * 1);
         background: $sb-radio-btn-backgroud-after-checked;
         position: absolute;
-        top: 4px;
+        top: 5px;
         left: 4px;
         border-radius: $sb-radio-btn-border-radius;
         -webkit-transition: all 0.2s ease;
