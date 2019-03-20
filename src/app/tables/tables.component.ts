@@ -295,8 +295,6 @@ export class TablesComponent implements OnInit {
         title: 'Table - with Placeholder',
         demoCode: `
             <div class="sb-table-container">
-            <div class="sb-table-search-header">
-            </div>
             <table class="sb-table sb-table-fixed sb-table-placeholder">
             <thead class="sb-table-header heading-large">
                 <tr>
@@ -326,8 +324,6 @@ export class TablesComponent implements OnInit {
         copyCode: `
 
             <div class="sb-table-container">
-            <div class="sb-table-search-header">
-            </div>
             <table class="sb-table sb-table-fixed sb-table-placeholder">
             <thead class="sb-table-header heading-large">
                 <tr>
