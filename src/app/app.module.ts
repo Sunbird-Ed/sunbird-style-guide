@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { HighlightModule } from 'ngx-highlightjs';
 import xml from 'highlight.js/lib/languages/xml';
@@ -11,7 +12,7 @@ import typescript from 'highlight.js/lib/languages/typescript';
 import html from 'highlight.js/lib/languages/htmlbars';
 import { ClipboardModule } from 'ngx-clipboard';
 
-import { SuiModule } from 'ng2-semantic-ui';
+import { SuiModule, SuiTabsModule, SuiSelectModule } from 'ng2-semantic-ui';
 import { Ng2IziToastModule } from 'ng2-izitoast';
 
 import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
@@ -28,6 +29,9 @@ import { ColorsComponent } from './colors/colors.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { FormsComponent } from './forms/forms.component';
 import { ToastersComponent } from './toasters/toasters.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { SelectComponent } from './select/select.component';
+
 import { GridlayoutComponent } from './gridlayout/gridlayout.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { CardsComponent } from './cards/cards.component';
@@ -63,6 +67,8 @@ export function hljsLanguages() {
     LoadersComponent,
     FormsComponent,
     ToastersComponent,
+    TabsComponent,
+    SelectComponent,
     GridlayoutComponent,
     SpacingComponent,
     CardsComponent,
@@ -75,7 +81,10 @@ export function hljsLanguages() {
     HighlightModule.forRoot({ languages: hljsLanguages }),
     SuiModule,
     Ng2IziToastModule,
-    ClipboardModule
+    ClipboardModule,
+    SuiTabsModule,
+    SuiSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
