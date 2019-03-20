@@ -1,6 +1,9 @@
 @import '~highlight.js/styles/github.css';
 
-
+body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+}
 .docs-body {
     display: flex;
     background: #fff;
@@ -20,20 +23,21 @@
             background: #186d80;
             height: 30px;
             width: 30px;
-            padding: 5px;
+            padding: 8px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 14px;
             position: fixed;
-            top: 5px;
-            left: 205px;
+            top: 48px;
+            right: 10px;
             text-align: center;
-            box-shadow: 1px 1px 1px #186d80;
+            border-radius: 50%;
+            font-weight: 100;
         }
         &.docs-hideSidebar {
             width:0;
             padding: 0;
             .docs-toggleSidebar {
-                left: 5px;
+                //right: 5px;
             }
         }
         .sb-branding {
@@ -95,7 +99,7 @@
             padding: 20px 30px;
         }
         .docs-pageHeading {
-            padding: 50px;
+            padding: 50px 30px;
             line-height: normal;
             margin-bottom: 50px;
             margin-left: -30px;
