@@ -5,15 +5,72 @@
 <!--/Page Heading-->
 
 <!--Page Content-->
+<div class="docs-sections">
+<h4 class="docs-sectionHeading">
+    iziToast Critical Examples
+    <i class="fa fa-code text-gray docs-expandCode" (click)="iziToasterCritical = !iziToasterCritical" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+ <!--Display output-->
+ <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-info sb-btn-normal mr-8" (click)="InfoToasterCritical();">Info</button>
+<button class="sb-btn sb-btn-success sb-btn-normal mr-8" (click)="SuccessToasterCritical();">Success</button>
+<button class="sb-btn sb-btn-warning sb-btn-normal mr-8" (click)="WarningToasterCritical();">Warning</button>
+<button class="sb-btn sb-btn-error sb-btn-normal" (click)="ErrorToasterCritical();">Error</button>
+  </div>
+  <!--/Display output-->
+
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="iziToasterCritical">
+        <!--Copy code button-->
+        <button ngxClipboard [cbContent]="iziToasterCriticalCode"
+          class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+        <!--/Copy code button-->
+        <!--Copy code display-->
+        <pre>
+          <code [highlight]="iziToasterCriticalCode"></code>
+        </pre>
+        <!--/Copy code display-->
+      </div>
+      <!--/Display code-->
+
+      <div class="sb-spacer48"></div>
+
+      <h4 class="docs-sectionHeading">
+          iziToast Standard Examples
+          <i class="fa fa-code text-gray docs-expandCode" (click)="iziToasterStandard = !iziToasterStandard" title="Toggle Code"
+            tabindex="0"></i>
+        </h4>
+      
+       <!--Display output-->
+       <div class="docs-sectionDemoCode">
+          <button class="sb-btn sb-btn-normal sb-btn-outline-info mr-8" (click)="InfoToasterStandard();">Info</button>
+      <button class="sb-btn sb-btn-normal sb-btn-outline-success mr-8" (click)="SuccessToasterStandard();">Success</button>
+      <button class="sb-btn sb-btn-normal sb-btn-outline-warning mr-8" (click)="WarningToasterStandard();">Warning</button>
+      <button class="sb-btn sb-btn-normal sb-btn-outline-error" (click)="ErrorToasterStandard();">Error</button>
+        </div>
+        <!--/Display output-->
+      
+          <!--Display code-->
+          <div class="docs-sectionCopyCode" *ngIf="iziToasterStandard">
+              <!--Copy code button-->
+              <button ngxClipboard [cbContent]="iziToasterStandardCode"
+                class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+              <!--/Copy code button-->
+              <!--Copy code display-->
+              <pre>
+                <code [highlight]="iziToasterStandardCode"></code>
+              </pre>
+              <!--/Copy code display-->
+            </div>
+            <!--/Display code-->
+
+</div>
 
 
-<button class="sb-btn sb-btn-info sb-btn-normal mr-8" (click)="InfoToaster();">Info</button>
-<button class="sb-btn sb-btn-success sb-btn-normal mr-8" (click)="SuccessToaster();">Success</button>
-<button class="sb-btn sb-btn-warning sb-btn-normal mr-8" (click)="WarningToaster();">Warning</button>
-<button class="sb-btn sb-btn-error sb-btn-normal" (click)="ErrorToaster();">Error</button>
 
 
-<br><br>
 
 <div class="docs-sections" *ngFor="let section of sections;">
   <h4 class="docs-sectionHeading">
