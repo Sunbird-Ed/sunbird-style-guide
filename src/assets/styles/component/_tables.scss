@@ -58,8 +58,7 @@
   white-space: nowrap;
 }
 
-.sb-table .sb-table-header {
-
+.sb-table .sb-table-header, .sb-table .sb-table-body {
   tr th {
     font-size: $font-size-sm;
     color: $gray;
