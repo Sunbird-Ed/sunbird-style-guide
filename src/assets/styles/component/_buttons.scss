@@ -175,7 +175,7 @@ input[type="button"] {
 .sb-btn-error{
     @include btn-theme($danger-color);
     &:hover,&:active {
-        background: $red-100;
+        background: $red-400;
     }
 }
 
