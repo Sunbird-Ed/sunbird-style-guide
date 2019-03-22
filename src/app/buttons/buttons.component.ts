@@ -15,22 +15,36 @@ export class ButtonsComponent implements OnInit {
       expandCode: false,
       title: 'Basic Buttons',
       demoCode: `
-      <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-10">Basic Button</button>
-      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-10">Secondary</button>
-      <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal mr-10">Tertiary</button>
-      <button class="sb-btn sb-btn-outline-info sb-btn-normal mr-10">Info</button>
-      <button class="sb-btn sb-btn-outline-success sb-btn-normal mr-10">Success</button>
-      <button class="sb-btn sb-btn-outline-warning sb-btn-normal mr-10">Warning</button>
-      <button class="sb-btn sb-btn-outline-error sb-btn-normal mr-10">Error</button>
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Primary Button/Info</button>
+      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-8">Secondary/Success</button>
+      <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
+      <button class="sb-btn sb-btn-outline-error sb-btn-normal mr-8">Error</button>
+      <button class="sb-btn sb-btn-outline-gray sb-btn-normal">Default</button>
       `,
       copyCode: `
-      <button class="sb-btn sb-btn-outline-primary sb-btn-normal">Basic Button</button>
-      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal">Secondary</button>
-      <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal">Tertiary</button>
-      <button class="sb-btn sb-btn-outline-info sb-btn-normal">Info</button>
-      <button class="sb-btn sb-btn-outline-success sb-btn-normal">Success</button>
-      <button class="sb-btn sb-btn-outline-warning sb-btn-normal">Warning</button>
-      <button class="sb-btn sb-btn-outline-error sb-btn-normal">Error</button>
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Primary Button/Info</button>
+      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-8">Secondary/Success</button>
+      <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
+      <button class="sb-btn sb-btn-outline-error sb-btn-normal mr-8">Error</button>
+      <button class="sb-btn sb-btn-outline-gray sb-btn-normal">Default</button>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Colored Buttons',
+      demoCode: `
+      <button class="sb-btn sb-btn-primary sb-btn-normal mr-8">Primary Button/Info</button>
+      <button class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Secondary/Success</button>
+      <button class="sb-btn sb-btn-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
+      <button class="sb-btn sb-btn-error sb-btn-normal mr-8">Error</button>
+      <button class="sb-btn sb-btn-gray sb-btn-normal">Gray</button>
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-primary sb-btn-normal mr-8">Primary Button/Info</button>
+      <button class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Secondary/Success</button>
+      <button class="sb-btn sb-btn-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
+      <button class="sb-btn sb-btn-error sb-btn-normal mr-8">Error</button>
+      <button class="sb-btn sb-btn-gray sb-btn-normal">Gray</button>
       `
     },
     {
@@ -63,12 +77,44 @@ export class ButtonsComponent implements OnInit {
       expandCode: false,
       title: 'Icon Buttons',
       demoCode: `
-      <button class="sb-btn sb-btn-normal sb-btn-primary sb-right-icon-btn">right icon button <i class="home icon"></i></button>
-<button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn"><i class="home icon"></i>left icon button </button>
+      <button class="sb-btn sb-btn-normal sb-btn-primary sb-right-icon-btn">View More<i class="chevron down icon"></i></button>
+<button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn"><i class="home icon"></i>Home</button>
+<button class="sb-btn sb-btn-normal sb-btn-outline-error sb-left-icon-btn"><i class="trash alternate outline icon"></i>Remove All</button>
       `,
       copyCode: `
-      <button class="sb-btn sb-btn-normal sb-btn-primary sb-right-icon-btn">right icon button <i class="home icon"></i></button>
-<button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn"><i class="home icon"></i>left icon button </button>
+      <button class="sb-btn sb-btn-normal sb-btn-primary sb-right-icon-btn">View More<i class="chevron down icon"></i></button>
+<button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn"><i class="home icon"></i>Home</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="trash alternate outline icon"></i>Remove All</button>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Text Link Buttons',
+      demoCode: `
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary">Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-secondary">Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-tertiary">Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-error">Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-gray">Text Link</button>
+<div class="sb-spacer48"></div>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-secondary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-tertiary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-error sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+<button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-gray sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary">Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-secondary">Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-tertiary">Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-error">Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-gray">Text Link</button>
+      <div class="sb-spacer48"></div>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-secondary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-tertiary sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-error sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
+      <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-gray sb-left-icon-btn"><i class="home icon"></i>Text Link</button>
       `
     },
     {
@@ -99,26 +145,7 @@ export class ButtonsComponent implements OnInit {
       <button class="sb-btn sb-btn-outline-disabled sb-btn-normal">Basic Button Disable</button>
       `
     },
-    {
-      expandCode: false,
-      title: 'Colored Buttons',
-      demoCode: `
-      <button class="sb-btn sb-btn-primary sb-btn-normal mr-10">Primary Button</button>
-      <button class="sb-btn sb-btn-secondary sb-btn-normal mr-10">Secondary</button>
-      <button class="sb-btn sb-btn-tertiary sb-btn-normal mr-10">Tertiary</button>
-      <button class="sb-btn sb-btn-warning sb-btn-normal mr-10">warning</button>
-      <button class="sb-btn sb-btn-error sb-btn-normal mr-10">Error</button>
-      <button class="sb-btn sb-btn-info sb-btn-normal mr-10">Info</button>
-      `,
-      copyCode: `
-      <button class="sb-btn sb-btn-primary sb-btn-normal">Primary Button</button>
-      <button class="sb-btn sb-btn-secondary sb-btn-normal">Secondary</button>
-      <button class="sb-btn sb-btn-tertiary sb-btn-normal">Tertiary</button>
-      <button class="sb-btn sb-btn-warning sb-btn-normal">warning</button>
-      <button class="sb-btn sb-btn-error sb-btn-normal">Error</button>
-      <button class="sb-btn sb-btn-info sb-btn-normal">Info</button>
-      `
-    },
+  
     {
       expandCode: false,
       title: 'Button Sizes',
@@ -128,13 +155,25 @@ export class ButtonsComponent implements OnInit {
       <button class="sb-btn sb-btn-primary sb-btn-sm">small</button>
       <button class="sb-btn sb-btn-primary sb-btn-md">medium</button>
       <button class="sb-btn sb-btn-primary sb-btn-lg">large</button>
+      <div class="sb-spacer48"></div>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-xs"><i class="home icon"></i>Mini</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-normal"><i class="home icon"></i>Normal</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-sm"><i class="home icon"></i>Small</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-md"><i class="home icon"></i>Medium</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-lg"><i class="home icon"></i>Large</button>
       `,
       copyCode: `
-      <button class="sb-btn sb-btn-primary sb-btn-xs">mini</button>
-      <button class="sb-btn sb-btn-primary sb-btn-normal">normal</button>
-      <button class="sb-btn sb-btn-primary sb-btn-sm">small</button>
+      <button class="sb-btn sb-btn-primary sb-btn-xs">Mini</button>
+      <button class="sb-btn sb-btn-primary sb-btn-normal">Normal</button>
+      <button class="sb-btn sb-btn-primary sb-btn-sm">Small</button>
       <button class="sb-btn sb-btn-primary sb-btn-md">medium</button>
       <button class="sb-btn sb-btn-primary sb-btn-lg">large</button>
+      <div class="sb-spacer48"></div>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-xs"><i class="home icon"></i>Mini</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-normal"><i class="home icon"></i>Normal</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-sm"><i class="home icon"></i>Small</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-md"><i class="home icon"></i>Medium</button>
+      <button class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-lg"><i class="home icon"></i>Large</button>
       `
     }
   ];
