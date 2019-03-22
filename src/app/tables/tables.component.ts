@@ -197,12 +197,12 @@ export class TablesComponent implements OnInit {
             </div>
                 <div class="download-file"><i class="download icon"></i>Download File</div>
             </div>
-            <table class="sb-table sb-table-hover sb-table-striped br-0">
+            <table class="sb-table sb-table-hover sb-table-striped sb-table-sortable br-0">
             <thead class="sb-table-header">
                 <tr>
-                <th class="sb-sort-icon">Name</th>
-                <th class="sb-sort-icon">Age</th>
-                <th class="sb-sort-icon">Job</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Job</th>
                 </tr>
             </thead>
             <tbody class="sb-table-body">
@@ -250,12 +250,12 @@ export class TablesComponent implements OnInit {
             </div>
                 <div class="download-file"><i class="download icon"></i>Download File</div>
             </div>
-            <table class="sb-table sb-table-hover sb-table-striped br-0">
+            <table class="sb-table sb-table-hover sb-table-striped sb-table-sortable br-0">
                 <thead class="sb-table-header">
                 <tr>
-                    <th class="sb-sort-icon">Name</th>
-                    <th class="sb-sort-icon">Age</th>
-                    <th class="sb-sort-icon">Job</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Job</th>
                 </tr>
                 </thead>
                 <tbody class="sb-table-body">
