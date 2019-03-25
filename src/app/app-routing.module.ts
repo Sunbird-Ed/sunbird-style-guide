@@ -16,6 +16,7 @@ import { GridlayoutComponent } from './gridlayout/gridlayout.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { CardsComponent } from './cards/cards.component';
 import { PageSectionComponent } from './page-section/page-section.component';
+import {FormElementsComponent} from './form-elements/form-elements.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'gridlayout', component: GridlayoutComponent },
   { path: 'spacing', component: SpacingComponent },
   { path: 'cards', component: CardsComponent },
-  { path: 'page-section', component: PageSectionComponent}
+  { path: 'page-section', component: PageSectionComponent},
+  { path: 'form-elements', component: FormElementsComponent}
 ];
 
 @NgModule({

@@ -12,8 +12,14 @@
     <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
   </h4> 
 
+    <!--Display output-->
+    <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+      </div>
+      <!--/Display output-->
+
   <!--Display output-->
-  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+  <div class="docs-sectionDemoCode"  *ngIf="section.title === 'toggle'">
+      <sui-checkbox class="toggle sb-toggle">Toggle checkbox</sui-checkbox>
   </div>
   <!--/Display output-->
 
