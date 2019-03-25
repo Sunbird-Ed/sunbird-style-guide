@@ -4,6 +4,10 @@ body ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 5px;
 }
+.sb-spacer48 {
+    height:48px;
+    display:block;
+}
 .docs-body {
     display: flex;
     background: #fff;
@@ -49,7 +53,9 @@ body ::-webkit-scrollbar {
             color: #666;
             font-size: 10px;
             margin: 0;
+            margin: 20px 0px 0px 0px;
             text-transform: uppercase;
+            line-height: normal;
         }
         ul li {
             margin-bottom:10px;
