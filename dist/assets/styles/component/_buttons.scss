@@ -1,5 +1,4 @@
 /* buttons sytle guide */
-// Specificity overrides
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -76,7 +75,6 @@ input[type="button"] {
     background:none;
     border:0;
     color:$primary-color;
-    text-decoration: underline;
     &:hover {
         font-weight:$font-weight-bold;
     }
@@ -178,8 +176,39 @@ input[type="button"] {
         background: $red-400;
     }
 }
+.sb-btn-gray{
+    @include btn-theme($gray-200);
+    &:hover,&:active {
+        background: $gray-400;
+    }
+}
 
-
+// button links colored
+.sb-btn-link-primary{
+    @include btn-theme-links($primary-color);
+} 
+.sb-btn-link-secondary{
+    @include btn-theme-links($secondary-200);
+} 
+.sb-btn-link-tertiary{
+    @include btn-theme-links($tertiary-color);
+}
+// status outline buttons
+.sb-btn-link-info{
+    @include btn-theme-links($primary-color);
+} 
+.sb-btn-link-success{
+    @include btn-theme-links($secondary-200);
+} 
+.sb-btn-link-warning{
+    @include btn-theme-links($tertiary-color);
+}   
+.sb-btn-link-error{
+    @include btn-theme-links($red-400);
+} 
+.sb-btn-link-gray{
+    @include btn-theme-links($gray-800);
+} 
 
 
  .sb-btn-loading-spinner {
@@ -190,6 +219,52 @@ input[type="button"] {
     to { transform: rotate(360deg); }
   }
 
+
+.loading-spinner {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 8px;
+    border-width: .2em;
+    display: inline-block;
+    vertical-align: text-bottom;
+    border: .15em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+}
+
+.sb-btn-loading:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -.64285714em 0 0 -.64285714em;
+    width: 1.28571429em;
+    height: 1.28571429em;
+    border-radius: 500rem;
+    border: 0.2em solid rgba(0, 0, 0, 0.15);
+}
+
+.sb-btn-loading:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -.64285714em 0 0 -.64285714em;
+    width: 1.28571429em;
+    height: 1.28571429em;
+    -webkit-animation: button-spin .6s linear;
+    animation: button-spin .6s linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 500rem;
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: .2em;
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent;
+}
 
 // Buttons with icon
 
@@ -205,6 +280,9 @@ input[type="button"] {
     i.icon{
         margin-right: $base-block-space;
     }
+}
+.sb-left-icon-btn.sb-btn-xs {
+    padding: ($base-block-space * 0)  ($base-block-space * 1)  ($base-block-space * 0)  ($base-block-space * 1);
 }
 
 //Buttons toggle
