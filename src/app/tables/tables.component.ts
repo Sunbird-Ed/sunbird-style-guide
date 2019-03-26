@@ -102,7 +102,7 @@ export class TablesComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -189,6 +189,19 @@ export class TablesComponent implements OnInit {
                 </tr>
             </tbody>
             </table>
+        </div>
+        <div class="sb-pagination-container flex-jc-flex-end">
+            <div class="sb-pagination">
+                <a class="sb-item">First</a>
+                <a class="sb-item">Previous</a>
+                <a class="sb-item sb-item-active">1</a>
+                <a class="sb-item">...</a>
+                <a class="sb-item">10</a>
+                <a class="sb-item">11</a>
+                <a class="sb-item">12</a>
+                <a class="sb-item">Next</a>
+                <a class="sb-item">Last</a>
+            </div>
         </div>
       `
     },

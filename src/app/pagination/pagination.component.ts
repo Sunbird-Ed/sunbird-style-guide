@@ -20,7 +20,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -35,7 +35,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -54,7 +54,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -69,7 +69,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -88,7 +88,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -103,7 +103,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -122,7 +122,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -137,7 +137,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -156,7 +156,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
@@ -171,7 +171,7 @@ export class PaginationComponent implements OnInit {
                 <a class="sb-item">First</a>
                 <a class="sb-item">Previous</a>
                 <a class="sb-item sb-item-active">1</a>
-                <div class="sb-item">...</div>
+                <a class="sb-item">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
