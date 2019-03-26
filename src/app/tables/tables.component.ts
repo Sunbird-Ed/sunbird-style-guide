@@ -97,7 +97,19 @@ export class TablesComponent implements OnInit {
             </tbody>
             </table>
         </div>
-
+        <div class="sb-pagination-container flex-jc-flex-end">
+            <div class="sb-pagination">
+                <a class="sb-item">First</a>
+                <a class="sb-item">Previous</a>
+                <a class="sb-item sb-item-active">1</a>
+                <a class="sb-item">...</a>
+                <a class="sb-item">10</a>
+                <a class="sb-item">11</a>
+                <a class="sb-item">12</a>
+                <a class="sb-item">Next</a>
+                <a class="sb-item">Last</a>
+            </div>
+        </div>
       `,
         copyCode: `
             <div class="sb-table-container">
@@ -178,6 +190,19 @@ export class TablesComponent implements OnInit {
             </tbody>
             </table>
         </div>
+        <div class="sb-pagination-container flex-jc-flex-end">
+            <div class="sb-pagination">
+                <a class="sb-item">First</a>
+                <a class="sb-item">Previous</a>
+                <a class="sb-item sb-item-active">1</a>
+                <a class="sb-item">...</a>
+                <a class="sb-item">10</a>
+                <a class="sb-item">11</a>
+                <a class="sb-item">12</a>
+                <a class="sb-item">Next</a>
+                <a class="sb-item">Last</a>
+            </div>
+        </div>
       `
     },
     {
@@ -234,7 +259,7 @@ export class TablesComponent implements OnInit {
             </tbody>
             </table>
         </div>
-
+        <div class="ui pagination"></div>
       `,
         copyCode: `
             <div class="sb-table-container">
