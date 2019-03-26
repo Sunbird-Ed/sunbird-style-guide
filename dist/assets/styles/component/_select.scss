@@ -1,4 +1,6 @@
-.ui.selection.dropdown:focus, .ui.multiple.dropdown:focus, .ui.selection.dropdown:focus .menu {
+.ui.selection.dropdown:focus,
+.ui.multiple.dropdown:focus,
+.ui.selection.dropdown:focus .menu {
     border-color: $sb-dropdown-border-focus;
 }
 
@@ -10,8 +12,9 @@
     border-color: $sb-dropdown-border-color;
 }
 
-.ui.selection.dropdown .menu>.item.active, .prominent-filter .ui.selection.dropdown .menu>.item.active {
-    color: $sb-dropdown-active-item
+.ui.selection.dropdown .menu>.item.active,
+.prominent-filter .ui.selection.dropdown .menu>.item.active {
+    color: $sb-dropdown-active-item;
 }
 
 .multi-select-dropdown i.icon {
@@ -23,6 +26,7 @@
     border-radius: $sb-dropdown-border-radius;
     min-height: $sb-selection-dropdown-min-height;
     padding: $sb-selection-dropdown-padding;
+    line-height: $sb-selection-line-height;
 }
 
 .ui.multiple.dropdown .label {
@@ -32,7 +36,8 @@
     margin-right: $sb-multiple-dropdown-label-margin-right;
 }
 
-.ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon {
+.ui.selection.dropdown>.dropdown.icon,
+.ui.selection.dropdown>.search.icon {
     margin: -.8571429em;
 }
 
