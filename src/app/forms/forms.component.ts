@@ -29,6 +29,22 @@ export class FormsComponent implements OnInit {
     },
     {
       expandCode: false,
+      title: 'Diabled Checkbox',
+      demoCode: `
+      <div class="sb-checkbox sb-checkbox-primary">
+      <input type="checkbox" id="check" name="disabled" disabled="disabled">
+      <label for="check">Make my profile visible</label>
+      </div>
+      `,
+      copyCode: `
+      <div class="sb-checkbox sb-checkbox-primary">
+      <input type="checkbox" name="example" disabled="disabled">
+      <label>Make my profile visible</label>
+  </div>
+      `
+    },
+    {
+      expandCode: false,
       title: 'Input Disabled',
       demoCode: `
       
@@ -196,7 +212,19 @@ export class FormsComponent implements OnInit {
           </div>
           </div>
       `
+    },
+
+    {
+      expandCode: false,
+      title: 'toggle',
+      demoCode: `
+      <sui-checkbox class="toggle"></sui-checkbox>
+      `,
+      copyCode: `
+    <sui-checkbox class="toggle">Toggle checkbox</sui-checkbox>
+      `
     }
+
 
   ];
 
