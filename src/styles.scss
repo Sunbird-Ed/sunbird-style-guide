@@ -8,6 +8,13 @@ body ::-webkit-scrollbar {
     height:48px;
     display:block;
 }
+.sb-reference-url {
+    display:block;
+    color:#fff;font-size:12px;
+}
+.sb-reference-url:hover {
+    color:#fff;text-decoration:underline;
+}
 .docs-body {
     display: flex;
     background: #fff;
