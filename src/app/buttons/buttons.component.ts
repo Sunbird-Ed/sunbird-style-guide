@@ -9,7 +9,7 @@ export class ButtonsComponent implements OnInit {
 
   constructor() { }
 
-  pageTitle = 'Buttons';
+  pageTitle  = 'Buttons';
   sections = [
     {
       expandCode: false,

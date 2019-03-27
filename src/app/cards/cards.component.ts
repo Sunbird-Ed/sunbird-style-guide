@@ -17,7 +17,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -49,7 +49,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -80,7 +80,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -99,7 +99,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -132,7 +132,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -164,7 +164,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -195,7 +195,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -214,7 +214,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
@@ -251,7 +251,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">
@@ -284,7 +284,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">
@@ -307,7 +307,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">
@@ -341,7 +341,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">
@@ -374,7 +374,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">
@@ -397,7 +397,7 @@ export class CardsComponent implements OnInit {
       <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
-            <div class="sb-card-image mr-15">
+            <div class="sb-card-image mr-16">
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta non-course">

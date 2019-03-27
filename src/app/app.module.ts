@@ -38,6 +38,8 @@ import { SpacingComponent } from './spacing/spacing.component';
 import { CardsComponent } from './cards/cards.component';
 import { PageSectionComponent } from './page-section/page-section.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { HeaderComponent } from './header/header.component';
 
 /**
  * Import every language you wish to highlight here
@@ -75,7 +77,9 @@ export function hljsLanguages() {
     SpacingComponent,
     CardsComponent,
     PageSectionComponent,
-    FormElementsComponent
+    FormElementsComponent,
+    PaginationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
