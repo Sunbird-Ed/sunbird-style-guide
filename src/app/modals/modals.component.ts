@@ -22,6 +22,8 @@ export class ModalsComponent implements OnInit {
   errormodal;
   showWarningModal;
   warningmodal;
+  ShowTabModal;
+  TabModal;
 
   pageTitle = 'Modals';
   largeModalCode = `<sui-modal 
@@ -198,6 +200,31 @@ export class ModalsComponent implements OnInit {
       No
     </button>
   </div>
+</sui-modal>`;
+tabModalCode = `
+<sui-modal *ngIf="ShowTabModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="ShowTabModal = !ShowTabModal" #modal>
+<div class="sb-modal-header">
+  Modal with Tab Design
+</div>
+<div class="sb-modal-content sb-modal-tab">
+    <sui-tabset>
+        <div class="ui pointing secondary menu">
+            <a class="item" suiTabHeader="1">Nested 1</a>
+            <a class="item" suiTabHeader="2">Nested 2</a>
+        </div>
+        <div class="ui container" suiTabContent="1">First nested tab!</div>
+        <div class="ui container" suiTabContent="2">Second nested tab!</div>
+    </sui-tabset>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="ShowTabModal = !ShowTabModal">
+    Yes
+  </button>
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="ShowTabModal = !ShowTabModal">
+    No
+  </button>
+</div>
 </sui-modal>`;
 
   ngOnInit() {
