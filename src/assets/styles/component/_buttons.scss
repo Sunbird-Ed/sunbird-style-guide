@@ -107,32 +107,51 @@ input[type="button"] {
   padding: ($base-block-space * 2) ($base-block-space * 3);
   font-size:$font-size-lg;
 }
-// default outline colored btns
-.sb-btn-outline-primary{
-    @include btn-theme-bgwhite($primary-color);
-} 
-.sb-btn-outline-secondary{
-    @include btn-theme-bgwhite($secondary-200);
-} 
-.sb-btn-outline-tertiary{
-    @include btn-theme-bgwhite($tertiary-color);
-}
+
 // status outline buttons
-.sb-btn-outline-info{
+.sb-btn-outline-primary, .sb-btn-outline-info{
     @include btn-theme-bgwhite($primary-color);
+    &:hover,&:active {
+        color: $primary-800;
+        border-color: $primary-800;
+    }
 } 
-.sb-btn-outline-success{
+.sb-btn-outline-secondary, .sb-btn-outline-success{
     @include btn-theme-bgwhite($secondary-200);
+    color: $secondary-100;
+    border-color: $secondary-100;
+    &:hover,&:active {
+        color: $secondary-400;
+        border-color: $secondary-400;
+    }
 } 
-.sb-btn-outline-warning{
+.sb-btn-outline-tertiary, .sb-btn-outline-warning{
     @include btn-theme-bgwhite($tertiary-color);
+    color: $tertiary-100;
+    border-color: $tertiary-100;
+    &:hover,&:active {
+        color: $tertiary-400;
+        border-color: $tertiary-400;
+    }
 }   
 .sb-btn-outline-error{
     @include btn-theme-bgwhite($red-400);
+    color: $red-100;
+    border-color: $red-100;
+    &:hover,&:active {
+        color: $red-400;
+        border-color: $red-400;
+    }
 } 
 .sb-btn-outline-gray{
     @include btn-theme-bgwhite($gray-800);
-} 
+    color: $gray-300;
+    border-color:$gray-300;
+    &:hover,&:active {
+        color:$gray-800;
+        border-color: $gray-800;
+    }
+}
 // default colored btns
 .sb-btn-primary,.sb-btn-info{
     @include btn-theme($primary-color);

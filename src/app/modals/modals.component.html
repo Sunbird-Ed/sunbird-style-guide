@@ -173,7 +173,7 @@
     <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showFullscreenModal = !showFullscreenModal">Show
       Modal</button>
     <sui-modal *ngIf="showFullscreenModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
-      [size]="'fullscreen'" class="sb-modal sb-modal-fullscreen" appBodyScroll
+      [size]="'fullscreen'" class="sb-modal" appBodyScroll
       (dismissed)="showFullscreenModal = !showFullscreenModal" #modal>
       <div class="sb-modal-header">
         Modal Heading

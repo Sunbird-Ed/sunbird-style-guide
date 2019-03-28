@@ -1,5 +1,8 @@
 .masonry-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: normal;
+    >.sb-card {
+        margin: 0 24px 24px 0;
+    }
 }

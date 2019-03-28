@@ -51,3 +51,6 @@
     width: calc(100%);
 }
 
+.ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
+    color: #333;
+}
