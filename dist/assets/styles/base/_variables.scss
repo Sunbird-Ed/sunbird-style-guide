@@ -283,7 +283,9 @@ $sb-selection-line-height: 18px;
 //tabs
 $sb-tabs-border-active-color: $primary-600;
 $sb-tabs-color: $primary-600;
-
+$sb-pointing-tabs-border: #dededf; //TODO design team need to add this in color scheme
+$sb-pointing-tabs-min-width: 2.285714em;
+$sb-pointing-tabs-border-radius: 4px;
 
 // radio buttons 
 $sb-radio-btn-border: 1px; //width of the border
