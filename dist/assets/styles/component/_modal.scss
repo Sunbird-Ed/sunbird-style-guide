@@ -70,10 +70,18 @@
                 max-height: 380px;
             }
         }
+        &.fullscreen {
+            width: 100% !important;
+            margin: 0 0 0 0 !important;
+            left: 0px !important;
+            .sb-modal-content {
+                height: calc(100vh - 96px);
+            }
+        }
         &.large {
             max-width: $sb-modal-large-width;
             .sb-modal-content {
-                height: calc(100vh - 100px);
+                height: calc(100vh - 200px);
             }
         }
         &.sb-modal-fullscreen {

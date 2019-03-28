@@ -10,16 +10,17 @@
 <div class="docs-sections">
 
   <h4 class="docs-sectionHeading">
-    Large Modal
-    <i class="fa fa-code text-gray docs-expandCode" title="Toggle Code" tabindex="0"></i>
+    Sample Form
+    <!-- <i class="fa fa-code text-gray docs-expandCode" title="Toggle Code" tabindex="0"></i> -->
   </h4>
 
   <!--Display output-->
   <div class="docs-sectionDemoCode">
-    <sui-modal [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'" class="sb-modal" appBodyScroll
-      #modal>
+    <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="ViewForm = !ViewForm">View Form</button>
+    <sui-modal *ngIf="ViewForm" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
+      class="sb-modal" appBodyScroll (dismissed)="ViewForm = !ViewForm" #modal>
       <div class="sb-modal-header">
-       Sample Form
+        Sample Form
       </div>
       <div class="sb-modal-content">
         <div class="ui form">
@@ -34,7 +35,7 @@
             </div>
             <div class="six wide column pt-0">
               <label>Grade</label>
-              <sui-multi-select class="fluid selection"  labelField="name" #multiSelect>
+              <sui-multi-select class="fluid selection" labelField="name" #multiSelect>
                 <sui-select-option *ngFor="let option of grade" [value]="option">
                 </sui-select-option>
               </sui-multi-select>
@@ -49,8 +50,7 @@
             </div>
             <div class="six wide column pt-0">
               <label>Subject</label>
-              <sui-select class="fluid selection" labelField="name"
-                 #select>
+              <sui-select class="fluid selection" labelField="name" #select>
                 <sui-select-option *ngFor="let option of subject" [value]="option">
                 </sui-select-option>
               </sui-select>
@@ -58,8 +58,7 @@
 
             <div class="six wide column pt-0">
               <label>Medium</label>
-              <sui-select class="fluid selection" labelField="name"
-                 #searchSelect>
+              <sui-select class="fluid selection" labelField="name" #searchSelect>
                 <sui-select-option *ngFor="let option of medium" [value]="option">
                 </sui-select-option>
               </sui-select>
@@ -70,10 +69,10 @@
         </div>
       </div>
       <div class="sb-modal-actions">
-        <button class="sb-btn sb-btn-normal sb-btn-primary">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="ViewForm = !ViewForm">
           Yes
         </button>
-        <button class="sb-btn sb-btn-normal sb-btn-outline-primary">
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="ViewForm = !ViewForm">
           No
         </button>
       </div>
@@ -82,19 +81,7 @@
   <!--/Display output-->
 
   <!--Display code-->
-  <div class="docs-sectionCopyCode" >
 
-    <!--Copy code button-->
-    <button ngxClipboard  class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-    <!--/Copy code button-->
-
-    <!--Copy code display-->
-    <!-- <pre>
-      <code [highlight]="largeModalCode"></code>
-    </pre> -->
-    <!--/Copy code display-->
-
-  </div>
   <!--/Display code-->
 </div>
 <!--/Large Modal-->
