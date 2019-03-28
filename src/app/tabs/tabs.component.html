@@ -59,6 +59,49 @@
     <!--Display output-->
     <div class="docs-sectionDemoCode">
         <sui-tabset>
+            <div class="ui pointing secondary menu pointing-tab">
+                <a class="item" suiTabHeader="1">Nested 1</a>
+                <a class="item" suiTabHeader="2">Nested 2</a>
+                <a class="item" suiTabHeader="3">Nested 3</a>
+            </div>
+            <div class="ui segment" suiTabContent="1">First nested tab!</div>
+            <div class="ui segment" suiTabContent="2">Second nested tab!</div>
+            <div class="ui segment" suiTabContent="3">Third nested tab!</div>
+        </sui-tabset>
+  
+    </div>
+    <!--/Display output-->
+  
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+  
+      <!--Copy code button-->
+      <button ngxClipboard [cbContent]="section.copyCode1" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+      <!--/Copy code button-->
+  
+      <!--Copy code display-->
+      <pre>
+        <code [highlight]="section.copyCode1"></code>
+      </pre>
+      <!--/Copy code display-->
+  
+    </div>
+    <!--/Display code-->
+    
+  </div>
+  <!--Page Content-->
+
+  <!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections2;">
+
+    <h4 class="docs-sectionHeading">
+      {{section.title}}
+      <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+    </h4> 
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode">
+        <sui-tabset>
             <div class="ui pointing secondary menu">
                 <a class="item" suiTabHeader="1">Nested 1</a>
                 <a class="item" suiTabHeader="2">Nested 2</a>

@@ -8,3 +8,37 @@
   .ui.tabular.menu .active.item {
     color: $sb-tabs-color;
   }
+
+  .ui.secondary.pointing.menu.pointing-tab .active.item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: solid 8px $primary-100;
+    border-right: solid 8px transparent;
+  }
+
+  .ui.secondary.pointing.menu.pointing-tab .active.item,
+  .ui.secondary.pointing.menu.pointing-tab .active.item:hover {
+    border:0;
+    margin:0;
+    background-color: $primary-100;
+  }
+
+  .ui.secondary.pointing.menu.pointing-tab {
+    border: 1px solid #DEDEDF;
+    border-radius:4px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    min-height: 2.285714em;
+  }
+
+  .ui.secondary.pointing.menu.pointing-tab .item {
+    border-right: 1px solid #E9EAEA;
+  }
+  .ui.secondary.pointing.menu.pointing-tab .item:last-child {
+    border-right: 0;
+  }
