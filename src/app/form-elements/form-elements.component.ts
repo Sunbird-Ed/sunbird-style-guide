@@ -16,8 +16,8 @@ export class FormElementsComponent implements OnInit {
     this.medium = [{name: 'English'}, {name: 'Kannada'}];
     this.subject = [{name: 'English'}, {name: 'Kannada'}];
    }
-
-   pageTitle = 'Form Elements';
+   ViewForm;
+   pageTitle = 'Sample Forms';
    sections = [
      {
        expandCode: false,
