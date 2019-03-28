@@ -1,0 +1,95 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <footer class="footer">
+      <div class="ui container">
+        <div class="ui grid stackable px-20">
+          <div class="four wide column footerMenu mr-auto">
+            <ul class="p-0 m-0">
+              <li class="mb-15">
+                <a>
+                  Verticals
+                </a>
+              </li>
+              <li class="mb-15">
+                <a>
+                  Help Center
+                </a>
+              </li>
+              <li class="mb-15">
+                <a>
+                  Partners
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="download-diksha">
+            <div class="diksha-logo p-15">
+              <div class="mobile-circles">
+                <div class="big-box border-round border-r50"></div>
+                <div class="oval-box border-round ml-20 ml-10"></div>
+                <div class="small-box border-round border-r50 ml-20 mr-10"></div>
+                <div class="small-box border-round border-r50"></div>
+              </div>
+              <label class="d-block pb-10">Download DIKSHA for Mobile</label>
+              <a class="d-block pb-10 app-download">
+                <img class="playStore-img" src="/assets/images/google_playstore.png" alt="">
+              </a>
+              <p class="d-block">Get unlimited access to textbooks, lessons and courses offline on your mobile phone.
+              </p>
+            </div>
+          </div>
+          <div class="four wide column contantDetails">
+            <label class="d-block mb-10">
+              Contact for queries:
+            </label>
+            <a class="d-block mb-30">
+              support@diksha-ncte.freshdesk.com
+            </a>
+            <label class="d-block">
+              <a>
+                Terms of use
+              </a>
+              <span>| &copy; 2019, DIKSHA</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<!--Page Content-->

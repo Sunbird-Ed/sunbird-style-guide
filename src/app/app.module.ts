@@ -40,6 +40,7 @@ import { PageSectionComponent } from './page-section/page-section.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 /**
  * Import every language you wish to highlight here
@@ -79,7 +80,8 @@ export function hljsLanguages() {
     PageSectionComponent,
     FormElementsComponent,
     PaginationComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
