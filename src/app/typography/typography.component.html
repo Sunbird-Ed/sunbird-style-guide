@@ -1,0 +1,162 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+    {{pageTitle}}
+  </h1>
+  <!--/Page Heading-->
+  
+  <!--Page Content-->
+  <p>Text is the main way that teams visualize content and complete their work, so we've developed a typographic landscape that uses system fonts for all standard typefaces in Diksha products.</p>
+  
+  <hr class="sb-doc-hr">
+  
+  <h4>Font</h4>
+  <div class="img-block"><img src="docs/assets/images/font.jpg" width="" alt="" title="" /></div>
+  <p>Please note : All the fonts are of the same font size and weight, i.e. Noto Sans Regular</p>
+  
+  <hr class="sb-doc-hr">
+  
+  <h4>Typography</h4>
+  <p>The most powerful part of the 8pt grid concept is its ability to drive consistency throughout your designs. You will need to assess the needs of your users and the best way to scale your typography to meet those needs.</p>
+  
+  <div class="sb-dtable-container">
+    <table class="ui selectable fixed single-line table no-br-radius sb-dtable">
+      <thead class="sb-dtable-header">
+        <tr>
+          <th>Size</th>
+          <th>in REM</th>
+          <th>in PX</th>
+        </tr>
+      </thead>
+      <tbody class="sb-dtable-body">
+        <tr>
+          <td>H1</td>
+          <td>2.071rem/2.285rem</td>
+          <td>29px/32px</td>
+        </tr>
+        <tr>
+          <td>H1</td>
+          <td>2.071rem/2.285rem</td>
+          <td>29px/32px</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td>1.714rem/2rem</td>
+          <td>24px/28px</td>
+        </tr>
+        <tr>
+          <td>H3</td>
+          <td>1.428rem/1.714rem</td>
+          <td>20px/24px</td>
+        </tr>
+        <tr>
+          <td>H4</td>
+          <td>1.142rem/1.428rem</td>
+          <td>16px/20px</td>
+        </tr>
+        <tr>
+          <td>H5</td>
+          <td>1rem/1.285rem</td>
+          <td>14px/18px</td>
+        </tr>
+        <tr>
+          <td>H6</td>
+          <td>0.857rem/1.142rem</td>
+          <td>12px/16px</td>
+        </tr>
+        <tr>
+          <td>P</td>
+          <td>1rem/1.428rem</td>
+          <td>14px/20px</td>
+        </tr>
+        <tr>
+          <td>Overline</td>
+          <td>0.714rem</td>
+          <td>10px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+      
+  <hr class="sb-doc-hr">
+
+  <h4>Font Scale & Line Height</h4>
+  <p>The font scale and line height determine the beauty of the dynamics and order of a font system. Font scale refers to a series of font with different sizes. Line height can be understood as an invisible box wrapped outside the font.</p>
+  <div class="img-block"><img src="docs/assets/images/fontsize.jpg" width="100%" alt="" title="" /></div>
+  
+  <div class="sb-table-container">
+    <table class="sb-table sb-table-hover">
+      <!-- <thead class="sb-dtable-header">
+        <tr>
+          <th class="sb-sort-icon">Font Size</th>
+          <td>H1</td>
+          <td>2.071rem/2.285rem</td>
+          <td>29px/32px</td>
+        </tr>stats
+      </thead> -->
+      <tbody class="sb-table-body">
+        <tr>
+          <th>Font Size</th>
+          <td>12</td>
+          <td>14</td>
+          <td>16</td>
+          <td>20</td>
+          <td>24</td>
+          <td>32</td>
+          <td>40</td>
+          <td>48</td>
+          <td>56</td>
+          <td>64</td>
+        </tr>
+        <tr>
+          <th>Line Height</th>
+          <td>20</td>
+          <td>22</td>
+          <td>24</td>
+          <td>28</td>
+          <td>32</td>
+          <td>40</td>
+          <td>48</td>
+          <td>56</td>
+          <td>64</td>
+          <td>72</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p>Our recommended base font size is 14, and its corresponding line height is 22. The choice of the rest of the font scale can be freely defined according to the specific circumstances. It is recommended that in a design system (except for display pages), the choice of font scale should be controlled within 3 to 5 types, and the principle of restraint should be maintained.</p>
+  
+  
+  
+  <div class="docs-sections sb-doc-hidden" *ngFor="let section of sections;">
+  
+    <h4 class="docs-sectionHeading">
+      {{section.title}}
+      <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+        title="Toggle Code" tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+    </div>
+    <!--/Display output-->
+  
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+  
+      <!--Copy code button-->
+      <button ngxClipboard [cbContent]="section.copyCode"
+        class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+      <!--/Copy code button-->
+  
+      <!--Copy code display-->
+      <pre>
+        <code [highlight]="section.copyCode"></code>
+      </pre>
+      <!--/Copy code display-->
+  
+    </div>
+    <!--/Display code-->
+  
+  </div>
+  <!--Page Content-->

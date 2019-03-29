@@ -1,0 +1,667 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+  </h4> 
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+      <div class="sb-pageSection">
+          <!--Header-->
+          <div class="sb-pageSection-header">
+              <!--Section Title-->
+              <h4 class="sb-pageSection-title m-0 mr-5">
+                My Courses
+              </h4>
+              <!--/Section Title-->
+              <!--Count-->
+              <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">
+            25
+              </span>
+              <!--/Count-->
+              <!--View all button-->
+              <button class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">
+                  View all
+              </button>
+              <!--/View all button-->
+          </div>
+          <!--/Header-->
+
+          <!--Content-->
+          <div class="sb-pageSection-content">
+              <ngx-slick class="carousel" [config]="slideConfig">
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                  <div ngxSlickItem class="mr-15">
+                      <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
+                        <div class="sb-card-body">
+                          <div class="sb-card-metas">
+                            <div class="sb-card-image mr-16">
+                              <img src="assets/images/book.png">
+                            </div>
+                            <div class="sb-card-meta non-course">
+                              <div class="d-flex mb-auto">
+                                <div class="sb-card-label">
+                                ورکشاپ</div>
+                                <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                              </div>
+                              <div class="sb-card-meta-item ellipsis">
+                                  مضمون: انگریزی
+                              </div>
+                              <div class="sb-card-meta-item ellipsis mt-4">
+                                  کلاس: کلاس 1، کلاس 2، کلاس 3، کلاس 4، کلاس5
+                              </div>
+                              <div class="sb-card-meta-item ellipsis mt-4">
+                                  درمیانہ: دیگر
+                              </div>
+                            </div>
+                          </div>
+                          <h4 class="sb-card-title">
+                              ڈیٹا ڈھانچہ اور الگورتھم - اہداف 1 کتابچہ
+                          </h4>
+                          <div class="sb-card-org ellipsis">
+                              یورپی قانون اکیڈمی (ایرا اے)
+                          </div>
+                        </div>
+                        <div class="sb-card-progressbar">
+                        </div>
+                      </div>
+                    </div>
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+              </ngx-slick>
+          </div>
+          <!--/Content-->
+      </div>
+      <div class="sb-pageSection">
+          <!--Header-->
+          <div class="sb-pageSection-header">
+              <!--Section Title-->
+              <h4 class="sb-pageSection-title m-0 mr-5">
+                My Resources
+              </h4>
+              <!--/Section Title-->
+              <!--Count-->
+              <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">
+                25
+              </span>
+              <!--/Count-->
+              <!--View all button-->
+              <button class="sb-btn sb-btn-xs sb-btn-secondary ml-auto">
+                  View all
+              </button>
+              <!--/View all button-->
+          </div>
+          <!--/Header-->
+
+          <!--Content-->
+          <div class="sb-pageSection-content">
+              <ngx-slick class="carousel" [config]="slideConfig">
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Worksheet</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                            Subject : English
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Medium : Other
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure and Algorithm - Assignment 1 Paperback
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Book</div>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">ورکشاپ</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                          مضمون: انگریزی
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          کلاس: کلاس 1، کلاس 2، کلاس 3، کلاس 4، کلاس 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          درمیانہ: دیگر
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                      ڈیٹا ڈھانچہ اور الگورتھم - اہداف 1 کتابچہ
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                      یورپی قانون اکیڈمی (ایرا اے)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block mr-15" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Worksheet</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                              Subject : English
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                              Medium : Other
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure and Algorithm - Assignment 1 Paperback
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block mr-15" tabindex="0">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">Book</div>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                          Data Structure
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                          Academy of European Law (ERA)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                  <div ngxSlickItem class="mr-15">
+                    <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
+                      <div class="sb-card-body">
+                        <div class="sb-card-metas">
+                          <div class="sb-card-image mr-16">
+                            <img src="assets/images/book.png">
+                          </div>
+                          <div class="sb-card-meta non-course">
+                            <div class="d-flex mb-auto">
+                              <div class="sb-card-label">ورکشاپ</div>
+                              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                            </div>
+                            <div class="sb-card-meta-item ellipsis">
+                            مضمون: انگریزی
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                            کلاس: کلاس 1، کلاس 2، کلاس 3، کلاس 4، کلاس 5
+                            </div>
+                            <div class="sb-card-meta-item ellipsis mt-4">
+                            درمیانہ: دیگر
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="sb-card-title">
+                        ڈیٹا ڈھانچہ اور الگورتھم - اہداف 1 کتابچہ
+                        </h4>
+                        <div class="sb-card-org ellipsis">
+                        یورپی قانون اکیڈمی (ایرا اے)
+                        </div>
+                      </div>
+                      <div class="sb-card-progressbar">
+                      </div>
+                    </div>
+                  </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Worksheet</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                            Subject : English
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Medium : Other
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure and Algorithm - Assignment 1 Paperback
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Book</div>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">ورکشاپ</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                          مضمون: انگریزی
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          کلاس: کلاس 1، کلاس 2، کلاس 3، کلاس 4، کلاس 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          درمیانہ: دیگر
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                      ڈیٹا ڈھانچہ اور الگورتھم - اہداف 1 کتابچہ
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                      یورپی قانون اکیڈمی (ایرا اے)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Worksheet</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                            Subject : English
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                            Medium : Other
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure and Algorithm - Assignment 1 Paperback
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">Book</div>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                        Data Structure
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                        Academy of European Law (ERA)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+                <div ngxSlickItem class="mr-15">
+                  <div class="sb-card d-inline-block mr-15" tabindex="0" dir="rtl" lang="ur">
+                    <div class="sb-card-body">
+                      <div class="sb-card-metas">
+                        <div class="sb-card-image mr-16">
+                          <img src="assets/images/book.png">
+                        </div>
+                        <div class="sb-card-meta non-course">
+                          <div class="d-flex mb-auto">
+                            <div class="sb-card-label">ورکشاپ</div>
+                            <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+                          </div>
+                          <div class="sb-card-meta-item ellipsis">
+                          مضمون: انگریزی
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          کلاس: کلاس 1، کلاس 2، کلاس 3، کلاس 4، کلاس 5
+                          </div>
+                          <div class="sb-card-meta-item ellipsis mt-4">
+                          درمیانہ: دیگر
+                          </div>
+                        </div>
+                      </div>
+                      <h4 class="sb-card-title">
+                      ڈیٹا ڈھانچہ اور الگورتھم - اہداف 1 کتابچہ
+                      </h4>
+                      <div class="sb-card-org ellipsis">
+                      یورپی قانون اکیڈمی (ایرا اے)
+                      </div>
+                    </div>
+                    <div class="sb-card-progressbar">
+                    </div>
+                  </div>
+                </div>
+              </ngx-slick>
+          </div>
+          <!--/Content-->
+      </div>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+  
+</div>
+<!--Page Content-->
