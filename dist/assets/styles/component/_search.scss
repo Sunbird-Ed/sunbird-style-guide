@@ -5,14 +5,17 @@
     border-radius: 3px;
     &.large {
       max-width: 492px;
+      width: 100%;
     }
   
     &.medium {
       max-width: 392px;
+      width: 100%;
     }
   
     &.small {
       max-width: 282px;
+      width: 100%;
     }
   
     &:focus-within {

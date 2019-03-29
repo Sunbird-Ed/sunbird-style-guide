@@ -33,6 +33,24 @@ export class TabsComponent implements OnInit {
   sections1 = [
     {
       expandCode: false,
+      title: 'Pointing Tabs',
+      copyCode1: `
+      <sui-tabset>
+      <div class="ui pointing secondary menu pointing-tab">
+          <a class="item" suiTabHeader="1">Nested 1</a>
+          <a class="item" suiTabHeader="2">Nested 2</a>
+      </div>
+      <div class="ui segment" suiTabContent="1">First nested tab!</div>
+      <div class="ui segment" suiTabContent="2">Second nested tab!</div>
+  </sui-tabset>
+
+      `
+    }
+
+  ];
+  sections2 = [
+    {
+      expandCode: false,
       title: 'Secondary Pointing Tabs',
       copyCode1: `
       <sui-tabset>

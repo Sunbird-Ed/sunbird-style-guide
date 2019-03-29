@@ -20,6 +20,20 @@
             padding: $sb-modal-content-padding;
             overflow-y: auto;
         }
+        .sb-modal-content.sb-modal-tab {
+            padding: 0;
+            .ui.secondary.menu {
+                background-color: $gray-0;
+                padding:0;
+                padding-left: ($base-block-space * 2);
+                border:0;
+            }
+            .ui.container {
+                padding-left: ($base-block-space * 2);
+                padding-right: ($base-block-space * 2);
+                min-height: 100px;
+            }
+        }
         &>.close {
             color: $white-color;
             font-size: $font-size-base;
@@ -56,10 +70,18 @@
                 max-height: 380px;
             }
         }
+        &.fullscreen {
+            width: 100% !important;
+            margin: 0 0 0 0 !important;
+            left: 0px !important;
+            .sb-modal-content {
+                height: calc(100vh - 96px);
+            }
+        }
         &.large {
             max-width: $sb-modal-large-width;
             .sb-modal-content {
-                height: calc(100vh - 100px);
+                height: calc(100vh - 200px);
             }
         }
         &.sb-modal-fullscreen {
