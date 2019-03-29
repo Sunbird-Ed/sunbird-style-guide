@@ -10,3 +10,11 @@ before_script:
     - cd src/app
 script:
     - ng build --prod --base-href https://prajwal88.github.io/sunbird-style-guide/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: master
