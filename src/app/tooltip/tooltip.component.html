@@ -1,0 +1,58 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <h4 class="mt-20 mb-15">Standard Tooltip</h4>
+    <button class="sb-btn sb-btn-outline-gray sb-btn-normal" suiPopup popupHeader="Short text Discription">Hover for
+      tooltip</button>
+    <h4 class="mt-20 mb-15">Diffent position of tooltip</h4>
+    <div class="ui card mx-auto" suiPopup popupHeader="You can customise my placement!" [popupPlacement]="selectedPosition">
+      <div class="content">
+        <div class="header">Positioning</div>
+        <div class="description">
+          Popup placement can be anywhere around the content.
+        </div>
+      </div>
+    </div>
+    <sui-select class="selection" [(ngModel)]="selectedPosition">
+      <sui-select-option *ngFor="let option of positions" [value]="option">
+      </sui-select-option>
+    </sui-select>
+    <h4 class="mt-20 mb-15">Tooltip with Title and Discription</h4>
+    <button class="sb-btn sb-btn-outline-gray sb-btn-normal mr-20" suiPopup popupHeader="Title"
+      popupText="Short text Discription" popupPlacement="top">Title tooltip</button>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<!--Page Content-->

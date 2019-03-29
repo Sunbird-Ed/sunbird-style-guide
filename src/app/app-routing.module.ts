@@ -20,6 +20,7 @@ import {FormElementsComponent} from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -42,8 +43,8 @@ const routes: Routes = [
   { path: 'form-elements', component: FormElementsComponent},
   { path: 'pagination', component: PaginationComponent},
   { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent}
-
+  { path: 'footer', component: FooterComponent},
+  { path: 'tooltip', component: TooltipComponent}
 ];
 
 @NgModule({

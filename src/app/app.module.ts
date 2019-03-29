@@ -41,6 +41,7 @@ import { FormElementsComponent } from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 /**
  * Import every language you wish to highlight here
@@ -81,7 +82,8 @@ export function hljsLanguages() {
     FormElementsComponent,
     PaginationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,
