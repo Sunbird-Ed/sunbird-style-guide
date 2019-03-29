@@ -18,6 +18,7 @@ import { CardsComponent } from './cards/cards.component';
 import { PageSectionComponent } from './page-section/page-section.component';
 import {FormElementsComponent} from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { RatingComponent } from './rating/rating.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'page-section', component: PageSectionComponent},
   { path: 'form-elements', component: FormElementsComponent},
   { path: 'pagination', component: PaginationComponent},
+  { path: 'rating', component: RatingComponent},
   { path: 'header', component: HeaderComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'tooltip', component: TooltipComponent}
