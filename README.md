@@ -1,2 +1,2 @@
-# sunbird-ui-components
-Repository of common Sunbird UI components which are used across all Sunbird apps
+# sunbird-style-guide
+Repository of examples demonstrating usage of Sunbird UI Components
