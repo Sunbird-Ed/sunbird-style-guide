@@ -12,7 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Build site using command npm run github'"
+      "pre-commit": "echo To generate site use command - npm run github"
     }
   },
   "private": true,
