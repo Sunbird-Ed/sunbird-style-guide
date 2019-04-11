@@ -43,6 +43,7 @@ import { RatingComponent } from './rating/rating.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { MenusComponent } from './menus/menus.component';
 
 /**
  * Import every language you wish to highlight here
@@ -85,7 +86,8 @@ export function hljsLanguages() {
     RatingComponent,
     HeaderComponent,
     FooterComponent,
-    TooltipComponent
+    TooltipComponent,
+    MenusComponent
   ],
   imports: [
     BrowserModule,
