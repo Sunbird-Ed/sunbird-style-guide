@@ -22,6 +22,7 @@ import { RatingComponent } from './rating/rating.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { MenusComponent } from './menus/menus.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -46,7 +47,8 @@ const routes: Routes = [
   { path: 'rating', component: RatingComponent},
   { path: 'header', component: HeaderComponent},
   { path: 'footer', component: FooterComponent},
-  { path: 'tooltip', component: TooltipComponent}
+  { path: 'tooltip', component: TooltipComponent},
+  { path: 'menus', component: MenusComponent}
 ];
 
 @NgModule({
