@@ -5,7 +5,7 @@
 <!--/Page Heading-->
 
 <!--Page Content-->
-<p>Where appropriate, we enable people to introduce their own color palettes. Our products adapt intelligently and
+<!-- <p>Where appropriate, we enable people to introduce their own color palettes. Our products adapt intelligently and
   flexibly to cater for the user's preference. We are also committed to complying with AA standard contrast ratios . To
   accomplish this, you should choose primary, secondary and extended colors that ensure sufficient color contrast
   between elements. This allows users with low vision to see and use the interface.</p>
@@ -17,7 +17,7 @@
 <p>Refer : Level AA Conformance to Web Content Accessibility Guidelines 2.0- <a
     href="https://www.w3.org/WAI/WCAG2AA-Conformance">https://www.w3.org/WAI/WCAG2AA-Conformance</a></p>
 
-    <hr class="sb-doc-hr">
+    <hr class="sb-doc-hr"> -->
 
 <h4>Color Palette</h4>
 <p>Our primary palette uses bright colors to bring a boldness to our brand, and is used in logical ways throughout
@@ -62,6 +62,10 @@
           <div class="label-value">100, 78, 60, 0</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$blue, $primary-color</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Standard button, Table titles, Toggles hover, Subtle links, Hover state, Standard
             button background, Headding</div>
@@ -70,6 +74,7 @@
     </div>
   </div>
 
+  <div class="clearfix"></div>
   <h6>Primary neutral colors - B400</h6>
   <p>We use as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
     transparent
@@ -86,6 +91,10 @@
         <div class="block">
           <label>HEX</label>
           <div class="label-value">#002E50</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-800</div>
         </div>
         <div class="block fullrow">
           <label>Usage</label>
@@ -108,6 +117,10 @@
           <div class="label-value">#005391</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-600</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">On Press</div>
         </div>
@@ -126,6 +139,10 @@
         <div class="block">
           <label>HEX</label>
           <div class="label-value">#7AB4EE</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-300</div>
         </div>
         <div class="block fullrow">
           <label>Usage</label>
@@ -148,6 +165,10 @@
           <div class="label-value">#80A7CE</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-200</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Divider</div>
         </div>
@@ -166,6 +187,10 @@
         <div class="block">
           <label>HEX</label>
           <div class="label-value">#EDF4F9</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-100</div>
         </div>
         <div class="block fullrow">
           <label>Usage</label>
@@ -188,6 +213,10 @@
           <div class="label-value">#F3F7FA</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$primary-0</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Background</div>
         </div>
@@ -202,13 +231,18 @@
 <!-- secondary color-->
 <div class="ui grid ">
 
-    <h6>Secondary & Tertiary color palette</h6>
-    <p>Our secondary palette contains a variety of colors to keep things fresh and interesting. We lean on these colors more frequently when brand awareness is high, or on our own properties where we control the surrounding environment. When used in conjunction with our primary palette, these colors makes every moment feel on-brand.</p>
-    <p>The extended palette consists of all the useable tints and shades of each color in the palette. They are all helpfully named and numbered for easy reference. Usage of these colors varies depending on the element, but they come in handy for illustrations and components in product.</p>
+  <h6>Secondary & Tertiary color palette</h6>
+  <p>Our secondary palette contains a variety of colors to keep things fresh and interesting. We lean on these colors
+    more frequently when brand awareness is high, or on our own properties where we control the surrounding environment.
+    When used in conjunction with our primary palette, these colors makes every moment feel on-brand.</p>
+  <p>The extended palette consists of all the useable tints and shades of each color in the palette. They are all
+    helpfully named and numbered for easy reference. Usage of these colors varies depending on the element, but they
+    come in handy for illustrations and components in product.</p>
 
   <div class="five wide column">
     <h6>Secondary Color</h6>
-    <p>Our secondary palette is made up of  green, and orange. These colors are not used equally - see the Color System below for more information.</p>
+    <p>Our secondary palette is made up of green, and orange. These colors are not used equally - see the Color System
+      below for more information.</p>
     <p><span class="sb-doc-condition-sign">*</span> G400 is used to represent success in flags and inline messages.</p>
   </div>
   <div class="four wide column">
@@ -234,7 +268,12 @@
         </div>
         <div class="block">
           <label>CMYK</label>
-          <div class="label-value">87, 22, 100, 8</div>
+          <div class="label-value">
+            87, 22, 100, 8</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$secondary-400</div>
         </div>
         <div class="block fullrow">
           <label>Usage</label>
@@ -245,7 +284,8 @@
   </div>
 
   <h6>Secondary neutral colors for text - G400</h6>
-  <p>We use G400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+  <p>We use G400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
+    transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
 
   <div class="four wide column">
     <div class="sb-doc-color-block">
@@ -258,6 +298,10 @@
         <div class="block">
           <label>HEX</label>
           <div class="label-value">#07BC81</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$secondary-200</div>
         </div>
         <div class="block fullrow">
           <label>Usage</label>
@@ -280,6 +324,10 @@
           <div class="label-value">#00C786</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$secondary-100</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Colored button background, Toasts design element</div>
         </div>
@@ -300,13 +348,17 @@
           <div class="label-value">#E1FFDF</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$secondary-0</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Toasts background</div>
         </div>
       </div>
     </div>
   </div>
-  
+
 </div>
 
 <hr class="sb-doc-hr">
@@ -315,8 +367,10 @@
 <div class="ui grid ">
   <div class="five wide column">
     <h6>Tertiary neutral colors for text - O400</h6>
-    <p>We use O400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
-    <p><span class="sb-doc-condition-sign">*</span> primarily to indicate warning and to indicate destructive actions.</p>
+    <p>We use O400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
+      transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+    <p><span class="sb-doc-condition-sign">*</span> primarily to indicate warning and to indicate destructive actions.
+    </p>
   </div>
   <div class="four wide column">
     <div class="sb-doc-space-30"></div>
@@ -344,124 +398,151 @@
           <div class="label-value">5, 79, 99, 0</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$tertiary-400</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
-          <div class="label-value">Illustration color, icon color, Label color, Notification background, Button hover state</div>
+          <div class="label-value">Illustration color, icon color, Label color, Notification background, Button hover
+            state</div>
         </div>
       </div>
     </div>
   </div>
-<div class="three wide column computer only"></div>
- 
-    <h6>Tertiary neutral colors for text - O400</h6>
-    <p>We use O400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
-  
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 tertiary-O100"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">O100</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#FFA11D</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Colored button background, Toasts design element, Icon color, Button color</div>
-          </div>
+  <div class="three wide column computer only"></div>
+
+  <h6>Tertiary neutral colors for text - O400</h6>
+  <p>We use O400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
+    transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 tertiary-O100"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">O100</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#FFA11D</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$tertiary-100</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Colored button background, Toasts design element, Icon color, Button color</div>
         </div>
       </div>
     </div>
-  
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 tertiary-O0"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">O0</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#FEEDD7</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Toasts background</div>
-          </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 tertiary-O0"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">O0</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#FEEDD7</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$tertiary-0</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Toasts background</div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <hr class="sb-doc-hr">
 
 <!-- red color-->
 <div class="ui grid">
-    <h6>Red neutral colors - R400</h6>
-    <p>We use R400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
-  
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 red-R400"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">R400</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#FF4558</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Illustration color, icon color, Label color, Notification background</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 red-R100"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">R100</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#FF6979</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Colored button background, Toasts design element, Icon color</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <h6>Red neutral colors - R400</h6>
+  <p>We use R400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
+    transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
 
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 red-R0"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">R0</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#FBCCD1</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Toasts background</div>
-          </div>
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 red-R400"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">R400</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#FF4558</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$red-400</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Illustration color, icon color, Label color, Notification background</div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 red-R100"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">R100</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#FF6979</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$red-100</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Colored button background, Toasts design element, Icon color</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 red-R0"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">R0</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#FBCCD1</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$red-0</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Toasts background</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <hr class="sb-doc-hr">
@@ -470,7 +551,8 @@
 <div class="ui grid ">
   <div class="five wide column">
     <h6>Grey Neutrals colors for font</h6>
-    <p>Muted and neutral palettes are derived from Gray. Their varying degrees of saturation allow for the appropriate level of warmth across marketing and product.</p>
+    <p>Muted and neutral palettes are derived from Gray. Their varying degrees of saturation allow for the appropriate
+      level of warmth across marketing and product.</p>
   </div>
   <div class="four wide column">
     <div class="sb-doc-space-30"></div>
@@ -490,137 +572,162 @@
           <div class="label-value">0%</div>
         </div>
         <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray,$gray-800</div>
+        </div>
+        <div class="block fullrow">
           <label>Usage</label>
           <div class="label-value">Secoundary Text color</div>
         </div>
       </div>
     </div>
   </div>
-<div class="three wide column computer only"></div>
- 
-    <h6>Grey neutral colors  - T400</h6>
-    <p>We use T400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
-  
-  
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 grey-T400"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">T400</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#666666</div>
-          </div>
-          <div class="block">
-            <label>Percentage Color</label>
-            <div class="label-value">20%</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Subheading one</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="three wide column computer only"></div>
 
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 grey-T300"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">T300</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#969696</div>
-          </div>
-          <div class="block">
-            <label>Percentage Color</label>
-            <div class="label-value">39%</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Place holder text, Disable button text</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <h6>Grey neutral colors - T400</h6>
+  <p>We use T400 as a basis for the RGB values to avoid shadows from desaturating other colors that appear beneath
+    transparent neutral colors and is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
 
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 grey-T200"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">T200</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#99999</div>
-          </div>
-          <div class="block">
-            <label>Percentage Color</label>
-            <div class="label-value">40%</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Subheading two</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 grey-T100"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">T100</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#CCCCCC</div>
-          </div>
-          <div class="block">
-            <label>Percentage Color</label>
-            <div class="label-value">60%</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Secondary Button outline, Divider line, Icon color, Disable button background</div>
-          </div>
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 grey-T400"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">T400</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#666666</div>
+        </div>
+        <div class="block">
+          <label>Percentage Color</label>
+          <div class="label-value">20%</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray-400</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Subheading one</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="four wide column">
-      <div class="sb-doc-color-block">
-        <div class="color-tile color-tile2 grey-T0"></div>
-        <div class="color-details">
-          <div class="block">
-            <label>Name</label>
-            <div class="label-value">T0</div>
-          </div>
-          <div class="block">
-            <label>HEX</label>
-            <div class="label-value">#F2F2F2</div>
-          </div>
-          <div class="block">
-            <label>Percentage Color</label>
-            <div class="label-value">75%</div>
-          </div>
-          <div class="block fullrow">
-            <label>Usage</label>
-            <div class="label-value">Place holder active background</div>
-          </div>
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 grey-T300"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">T300</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#969696</div>
+        </div>
+        <div class="block">
+          <label>Percentage Color</label>
+          <div class="label-value">39%</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray-300</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Place holder text, Disable button text</div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 grey-T200"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">T200</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#99999</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray-200</div>
+        </div>
+        <div class="block">
+          <label>Percentage Color</label>
+          <div class="label-value">40%</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Subheading two</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 grey-T100"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">T100</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#CCCCCC</div>
+        </div>
+        <div class="block">
+          <label>Percentage Color</label>
+          <div class="label-value">60%</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray-100</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Secondary Button outline, Divider line, Icon color, Disable button background</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="sb-doc-color-block">
+      <div class="color-tile color-tile2 grey-T0"></div>
+      <div class="color-details">
+        <div class="block">
+          <label>Name</label>
+          <div class="label-value">T0</div>
+        </div>
+        <div class="block">
+          <label>HEX</label>
+          <div class="label-value">#F2F2F2</div>
+        </div>
+        <div class="block">
+          <label>Percentage Color</label>
+          <div class="label-value">75%</div>
+        </div>
+        <div class="block fullrow">
+          <label>Sunbird color variable</label>
+          <div class="label-value">$gray-0</div>
+        </div>
+        <div class="block fullrow">
+          <label>Usage</label>
+          <div class="label-value">Place holder active background</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
