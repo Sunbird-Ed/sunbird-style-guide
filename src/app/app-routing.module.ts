@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
+import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -48,7 +49,8 @@ const routes: Routes = [
   { path: 'header', component: HeaderComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'tooltip', component: TooltipComponent},
-  { path: 'menus', component: MenusComponent}
+  { path: 'menus', component: MenusComponent},
+  { path: 'treenavigation', component: TreenavigationComponent}
 ];
 
 @NgModule({
