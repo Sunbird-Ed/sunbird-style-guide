@@ -1,3 +1,6 @@
+@import "../mixins/mixins";
+@import "../base/variables";
+
 .ui {
   &.popup {
     background: $tooltip-bg;
