@@ -1,4 +1,6 @@
 // base label styles
+@import "../mixins/mixins";
+@import "../base/variables";
 .sb-label {
     display: inline-block;
     border: 1px solid;

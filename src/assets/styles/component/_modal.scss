@@ -1,5 +1,6 @@
 /* modal styles */
-
+@import "../mixins/mixins";
+@import "../base/variables";
 .sb-modal {
     .ui.modal {
         @include margin(3.5rem auto 0 auto);

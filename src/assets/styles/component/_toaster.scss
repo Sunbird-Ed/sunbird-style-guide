@@ -1,3 +1,5 @@
+@import "../mixins/mixins";
+@import "../base/base";
 .sb-toaster {
   width: 100%;
   max-width: ($base-block-space * 56);

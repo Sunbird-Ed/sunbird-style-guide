@@ -1,3 +1,5 @@
+@import "../mixins/mixins";
+@import "../base/variables";
 .sb-pageSection {
   @include margin($sb-page-sections-between-space);
   .sb-pageSection-header {
