@@ -55,7 +55,7 @@
 }
 
 .sb-table-sortable {
-  tr th::before, tr th::after {
+  .sb-sort-icon::before, .sb-sort-icon::after {
     border: 4px solid transparent;
     content: "";
     height: 0;
@@ -67,11 +67,11 @@
     cursor: pointer;
   }
 
-  tr th::before {
+  .sb-sort-icon::before {
     margin-top: -($base-block-space);
   }
 
-  tr th::after {
+  .sb-sort-icon::after {
     margin-top: 2px;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);

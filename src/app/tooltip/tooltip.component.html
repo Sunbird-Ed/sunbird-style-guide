@@ -1,0 +1,118 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<!--Page Content-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    {{section1.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section1.expandCode = !section1.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-outline-gray sb-btn-normal" suiPopup popupHeader="Short text Discription">Hover for
+      tooltip</button>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section1.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section1.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section1.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    {{section2.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section2.expandCode = !section2.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <div class="ui card mx-auto" >
+      <div class="content" suiPopup popupHeader="You can customise my placement!" [popupPlacement]="selectedPosition">
+        <div class="header">Positioning</div>
+        <div class="description">
+          Popup placement can be anywhere around the content.
+        </div>
+      </div>
+      <p class="mt-20 mb-5 px-15"><strong>Select Positions</strong></p>
+      <sui-select class="selection mx-15 mb-10" [(ngModel)]="selectedPosition">
+        <sui-select-option *ngFor="let option of positions" [value]="option">
+        </sui-select-option>
+      </sui-select>
+    </div>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section2.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section2.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section2.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+    {{section3.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section3.expandCode = !section3.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <button class="sb-btn sb-btn-outline-gray sb-btn-normal mr-20" suiPopup popupHeader="Title"
+    popupText="Short text Discription" popupPlacement="top">Title tooltip</button>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section3.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section3.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section3.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<!--Page Content-->

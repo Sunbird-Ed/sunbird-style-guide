@@ -61,6 +61,7 @@ Cantarell,
 sans-serif;
 // Base Colors
 $blue: #024f9d;
+$black: #000000;
 $green: #008840;
 $orange: #e55a28;
 $red: #ff4558;
@@ -113,7 +114,7 @@ $secondary-400: $secondary-color;               // icon
 
 $secondary-0: #E1FFDF; // toast bg
 $secondary-100: #00C786; // buttong bg, toast
-$secondary-200: #07BC81; // button bg
+$secondary-200: #07bc81; // button bg
 $secondary-400: $secondary-color; // hover
 /*
 // tertiary colors shades
@@ -202,12 +203,13 @@ $sb-modal-actions-bg: $white-color;
 $sb-modal-actions-padding:($base-block-space * 1) ($base-block-space * 2);
 $sb-modal-actions-height:($base-block-space * 7);
 $sb-modal-header-bg-success: $secondary-200;
-$sb-modal-header-bg-warning: $tertiary-400;
+$sb-modal-header-bg-warning: $tertiary-100;
 $sb-modal-header-bg-error: $red-400;
 $sb-modal-header-fsize: $h5-font-size;
 $sb-modal-small-width:480px;
 $sb-modal-normal-width:720px;
 $sb-modal-large-width:900px;
+$sb-modal-corner-radius:8px;
 //button component
 
 
@@ -357,6 +359,13 @@ $sb-card-label-font-size-ur: 9px;
 $sb-card-meta-font-size-ur: 10px;
 $sb-card-title-font-size-ur: $font-size-sm;
 $sb-card-meta-org-font-size-ur: $font-size-sm;
+
+// tooltip Component
+$tooltip-bg: $gray;
+$tooltip-color: $white;
+$tooltip-content-color: $gray-200;
+$tooltip-content-font-size: $font-size-sm;
+$tooltip-header-font-size: $font-size-sm;
 
 // To clean
 $text-lightDark: $gray-400;
