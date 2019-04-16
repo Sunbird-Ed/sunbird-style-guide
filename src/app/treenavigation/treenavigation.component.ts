@@ -127,6 +127,36 @@ export class TreenavigationComponent implements OnInit , AfterViewInit{
       demoCode: `
       `,
       copyCode: `
+      ngAfterViewInit() {
+        this.initTopicPicker(this.data);
+      }
+    
+      private initTopicPicker(data: Array<TopicTreeNode>) {
+        jQuery('.topic-picker-selector').treePicker({
+          data: this.data,
+          name: 'Topics',
+          noDataMessage: 'No Data',
+          submitButtonText: 'Done',
+          cancelButtonText: 'Cancel',
+          removeAllText: 'Remove all',
+          chooseAllText: 'Choose all',
+          searchText: 'Search',
+          selectedText: 'Selected',
+          picked: _.map(this.selectedNodes, 'identifier'),
+          onSubmit: (selectedNodes) => {
+            this.selectedNodes = selectedNodes;
+            this.selectedTopics = _.map(selectedNodes, node => ({
+              identifier: node.id,
+              name: node.name
+            }));
+            this.placeHolder = this.selectedTopics.length + ' topics selected';
+          },
+          nodeName: 'topicSelector',
+          minSearchQueryLength: 1
+        });
+        setTimeout(() =>
+          document.getElementById('topicSelector').classList.add(this.topicPickerClass), 100);
+      }
       `
     }
   ];
