@@ -45,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 
 /**
  * Import every language you wish to highlight here
@@ -89,7 +90,8 @@ export function hljsLanguages() {
     FooterComponent,
     TooltipComponent,
     MenusComponent,
-    WorkspaceComponent
+    WorkspaceComponent,
+    TreenavigationComponent
   ],
   imports: [
     BrowserModule,
