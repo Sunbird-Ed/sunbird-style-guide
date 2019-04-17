@@ -25,6 +25,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
+import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -52,7 +53,8 @@ const routes: Routes = [
   { path: 'tooltip', component: TooltipComponent},
   { path: 'menus', component: MenusComponent},
   { path: 'workspace', component: WorkspaceComponent},
-  { path: 'treenavigation', component: TreenavigationComponent}
+  { path: 'treenavigation', component: TreenavigationComponent},
+  { path: 'workspace-filter', component: WorkspaceFilterComponent}
 ];
 
 @NgModule({
