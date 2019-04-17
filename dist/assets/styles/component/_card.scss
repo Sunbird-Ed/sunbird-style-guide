@@ -113,3 +113,39 @@ app-card[lang="ur"] {
     }
   }
 }
+
+// workspace cards
+
+.sb-wspace-card {
+  height: $base-block-space*16;
+  max-width: $base-block-space*37;
+  border: $sb-card-border;
+  border-radius: 4px;
+  background: $white;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.16);
+  padding: 16px 24px;
+  
+  .sb-wspace-title {
+    margin-bottom: $base-block-space;
+    font-size: $h5-font-size;
+    font-weight: $font-weight-bold;
+  }
+  
+  .sb-wspace-description {
+    font-size: $font-size-sm;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  &:hover {
+    .sb-wspace-title {
+      color: $blue;
+    }
+    border-left: 4px solid $secondary-200;
+    cursor: pointer;
+    box-shadow: 2px 5px 7px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+

@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent},
   { path: 'tooltip', component: TooltipComponent},
   { path: 'menus', component: MenusComponent},
+  { path: 'workspace', component: WorkspaceComponent},
   { path: 'treenavigation', component: TreenavigationComponent}
 ];
 
