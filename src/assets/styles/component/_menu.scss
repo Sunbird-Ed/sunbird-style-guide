@@ -70,5 +70,18 @@
     }
 }
 .sb-sidebar-container {
+    padding: $base-block-space*2 $base-block-space*3;
     background: $primary-100;
 }
+
+.sb-dotmenu {
+    width: $base-block-space/2;
+    height: $base-block-space/2;
+    border-radius: 50%;
+    background-color: $gray-200;
+    box-shadow: 0px -6px 0px $gray-200, 0px 6px 0px $gray-200;
+    display: inline-block;
+    margin-left: $base-block-space*3;
+    cursor: pointer;
+}
+

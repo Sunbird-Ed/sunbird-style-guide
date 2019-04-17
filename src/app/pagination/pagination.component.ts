@@ -17,30 +17,30 @@ export class PaginationComponent implements OnInit {
       demoCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `,
       copyCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `
@@ -51,30 +51,30 @@ export class PaginationComponent implements OnInit {
       demoCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination mini">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `,
       copyCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination mini">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `
@@ -85,30 +85,30 @@ export class PaginationComponent implements OnInit {
       demoCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination large">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `,
       copyCode: `
       <div class="sb-pagination-container">
             <div class="sb-pagination large">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `
@@ -119,30 +119,30 @@ export class PaginationComponent implements OnInit {
       demoCode: `
       <div class="sb-pagination-container flex-jc-center">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `,
       copyCode: `
       <div class="sb-pagination-container flex-jc-center">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `
@@ -153,30 +153,30 @@ export class PaginationComponent implements OnInit {
       demoCode: `
       <div class="sb-pagination-container flex-jc-flex-end">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `,
       copyCode: `
       <div class="sb-pagination-container flex-jc-flex-end">
             <div class="sb-pagination">
-                <a class="sb-item">First</a>
-                <a class="sb-item">Previous</a>
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
                 <a class="sb-item sb-item-active">1</a>
-                <a class="sb-item">...</a>
+                <a class="sb-item no-border">...</a>
                 <a class="sb-item">10</a>
                 <a class="sb-item">11</a>
                 <a class="sb-item">12</a>
-                <a class="sb-item">Next</a>
-                <a class="sb-item">Last</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
             </div>
         </div>
       `

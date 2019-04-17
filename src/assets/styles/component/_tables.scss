@@ -63,7 +63,7 @@
     top: 50%;
     position: absolute;
     width: 0;
-    border-bottom-color: $primary-300;
+    border-bottom-color: $primary-color;
     cursor: pointer;
   }
 
@@ -161,6 +161,10 @@
   .media-heading {
     margin: 0 auto;
     font-weight: $font-weight-normal;
+    max-width: $base-block-space*28;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .media-description {
@@ -169,6 +173,11 @@
   }
 }
 
+.sb-table.sb-table-fixed .sb-media {
+  .media-heading {
+    max-width: $base-block-space*17;
+  }
+}
 .sb-table {
   &.sb-table-placeholder {
     .sb-media-obj-placeholder {
