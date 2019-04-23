@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-workspace-filter',
   templateUrl: './workspace-filter.component.html',
-  styleUrls: ['./workspace-filter.component.sass']
+  styleUrls: ['./workspace-filter.component.scss']
 })
 export class WorkspaceFilterComponent implements OnInit {
   multiSelect1: any;
