@@ -1,58 +1,57 @@
-<div class="ui four column grid">
-  <div class="row">
-    <div class="column">
+  <div class="sb-workspace-filter-container">
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Select Board</p>
       <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-multi-select>
     </div>
-    <div class="column">
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Medium</p>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="column">
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Select Grade</p>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="column">
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Subject</p>
       <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-multi-select></div>
-  </div>
-  <div class="row">
-    <div class="column">
+
+
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Select Status</p>
       <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-multi-select>
     </div>
-    <div class="column">
+    <div class="sb-workspace-filter-field">
       <p class="mb-8">Select Resourcetype</p>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="column">
+    <div class="sb-workspace-filter-field">
         <p class="mb-8">Content Type</p>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="column right aligned bottom aligned">
+
+    <div class="sb-workspace-filter-field ">
         <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
-        <button class="sb-btn sb-btn-primary sb-btn-normal mr-8">Apply</button>
+        <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
     </div>
   </div>
-</div>

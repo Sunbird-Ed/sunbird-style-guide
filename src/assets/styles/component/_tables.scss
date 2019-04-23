@@ -24,6 +24,21 @@
       cursor: pointer;
     }
   }
+  
+  .sb-table-dropdown {
+    &.ui.dropdown {
+        .icon {
+          color: $primary-color;
+          font-size: $font-size-sm;
+        }
+        .menu {
+          > .item {
+            font-size: 12px;
+            min-width: 148px;
+        }
+      }
+    }
+  }
 }
 
 .sb-table {
@@ -91,6 +106,10 @@
     position: relative;
     height: $base-block-space*5;
     border-bottom: 1px solid $gray-100;
+    &.sb-table-dropdown {
+      width: 100%;
+      height: inherit;
+    }
   }
 
   &.heading-large {
