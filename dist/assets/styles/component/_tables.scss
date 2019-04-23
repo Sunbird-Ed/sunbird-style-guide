@@ -117,18 +117,18 @@
     }
   }
 
-  .sb-table-active,
-  .sb-table-success,
-  .sb-table-warning,
-  .sb-table-danger {
-    font-weight: $font-weight-bold;
-  }
+  // .sb-table-active,
+  // .sb-table-success,
+  // .sb-table-warning,
+  // .sb-table-danger {
+  //   font-weight: $font-weight-bold;
+  // }
   
   .sb-table-active {
     background: $primary-0;
-    .sb-media .media-heading {
-      font-weight: $font-weight-bold;
-    }
+    // .sb-media .media-heading {
+    //   font-weight: $font-weight-bold;
+    // }
   }
 
   .sb-table-success {
