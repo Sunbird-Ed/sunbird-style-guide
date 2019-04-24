@@ -32,6 +32,7 @@
           font-size: $font-size-sm;
         }
         .menu {
+          top:85%;
           > .item {
             font-size: 12px;
             min-width: 148px;
@@ -114,7 +115,7 @@
 
   &.heading-large {
     tr th {
-      padding: ($base-block-space * 2) ($base-block-space * 3);
+      padding: ($base-block-space * 2) ($base-block-space * 2);
     }
   }
 }

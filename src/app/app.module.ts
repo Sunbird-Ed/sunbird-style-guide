@@ -48,6 +48,12 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
 
+import { CustomerService } from './services/table-data.service';
+
+import { SortService } from './sortable-table/sort.service';
+import { SortableTableDirective } from './sortable-table/sortable-table.directive';
+import { SortableColumnComponent } from './sortable-table/sortable-column.component';
+
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -93,7 +99,7 @@ export function hljsLanguages() {
     MenusComponent,
     WorkspaceComponent,
     TreenavigationComponent,
-    WorkspaceFilterComponent
+    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +114,7 @@ export function hljsLanguages() {
     SuiSelectModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
