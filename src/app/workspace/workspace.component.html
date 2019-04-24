@@ -1,158 +1,193 @@
-            <div class="ui stackable grid m-0 h-100">
-                <div class="two wide column sb-sidebar-menu px-0">
-                  <h5>My Workspace</h5>
-                  <ul>
-                    <li>Create</li>
-                    <li class="active">All my content</li>
-                    <li>Course Batches</li>
-                    <li>Create</li>
-                  </ul>
-                </div>
-                <div class="ten wide column sb-sidebar-container px-24">
-                  
-                    <div class="sb-table-container">
-                        <div class="sb-table-search-header px-0">
-                            <div class="sb-search-box small">
-                                    <div class="input-div relative">
-                                        <i class="search icon"></i>
-                                        <input class="sb-search-input" type="text" placeholder="Search..." />
-                                        <i class="close icon"></i>
-                                        <div class="sb-loader"></div>
-                                    </div>
-                                    <button class="sb-btn sb-btn-normal">Search</button>
-                            </div>
+<div class="ui stackable grid m-0 h-100">
+    <div class="two wide column sb-sidebar-menu px-0">
+        <h5>My Workspace</h5>
+        <ul>
+            <li>Create</li>
+            <li class="active">All my content</li>
+            <li>Course Batches</li>
+            <li>Create</li>
+        </ul>
+    </div>
+    <div class="ten wide column sb-sidebar-container px-24">
 
-                            <div class="ui dropdown sb-btn sb-btn-normal sb-btn-outline-primary ml-auto sb-table-dropdown" suiDropdown autoClose="itemClick">
-                                <div class="text">Sort by</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu" suiDropdownMenu>
-                                    <div class="item">Modified on</div>
-                                    <div class="item">Created on</div>
-                                </div>
-                            </div>
-                            <div class="ui primary top right pointing dropdown sb-btn sb-btn-primary sb-btn-normal ml-8" suiDropdown>
-                                <div class="text">Show Filters</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu py-16 px-24 pr-0" suiDropdownMenu>
-                                    <app-workspace-filter></app-workspace-filter>
-                                </div>
-                            </div>
-                            <!-- <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
+        <div class="sb-table-container">
+            <div class="sb-table-search-header px-0">
+                <div class="sb-search-box small">
+                    <div class="input-div relative">
+                        <i class="search icon"></i>
+                        <input class="sb-search-input" type="text" placeholder="Search..." />
+                        <i class="close icon"></i>
+                        <div class="sb-loader"></div>
+                    </div>
+                    <button class="sb-btn sb-btn-normal">Search</button>
+                </div>
+
+                <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto"
+                    suiDropdown autoClose="itemClick">
+                    <div class="text">Sort by</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu" suiDropdownMenu>
+                        <div class="item">Modified on</div>
+                        <div class="item">Created on</div>
+                    </div>
+                </div>
+                <div class="ui primary top right pointing dropdown sb-btn sb-btn-primary sb-btn-normal ml-8"
+                    suiDropdown>
+                    <div class="text">Show Filters</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu py-16 px-24 sb-workspace-filter-view" suiDropdownMenu>
+                        <app-workspace-filter></app-workspace-filter>
+                    </div>
+                </div>
+                <!-- <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
                              suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick" [popupPlacement]="'bottom right'">Show Filter</button> -->
-                        </div>
-                        <table class="sb-table sb-table-hover sb-table-sortable">
-                        <thead class="sb-table-header heading-large">
-                            <tr>
-                            <th class="sb-sort-icon">Name</th>
-                            <th class="sb-sort-icon">Age</th>
-                            <th class="sb-sort-icon">Job</th>
-                            <th class="ui dropdown sb-table-dropdown" suiDropdown>
-                                <div class="text">Status</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu" suiDropdownMenu>
-                                    <div class="item">All</div>
-                                    <div class="item">Live</div>
-                                    <div class="item selected">Draft</div>
-                                    <div class="item">Review</div>
-                                    <div class="item">Unlisted</div>
-                                </div>
-                            </th>
-                            </tr>
-                        </thead>
-                        <tbody class="sb-table-body body-large">
-                            <tr>
-                            <td data-label="Name">
-                                <div class="sb-media">
-                                <img src="" alt="" class="sb-media-object mr-15">
-                                <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
-                                </div>
-                                </div>
-                            </td>
-                            <td data-label="Age">24</td>
-                            <td data-label="Job">Engineer</td>
-                            <td data-label="live"><span class="sb-label sb-label-table sb-label-primary-100">Review</span></td>
-                            </tr>
-                            <tr>
-                            <td data-label="Name">
-                                <div class="sb-media">
-                                <img src="" alt="" class="sb-media-object mr-15">
-                                <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
-                                </div>
-                                </div>
-                            </td>
-                            <td data-label="Age">26</td>
-                            <td data-label="Job">Engineer</td>
-                            <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0"><span class="sb-live"></span>Live</span></td>
-                            </tr>
-                            <tr>
-                            <td data-label="Name">
-                                <div class="sb-media">
-                                <img src="" alt="" class="sb-media-object mr-15">
-                                <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
-                                </div>
-                                </div>
-                            </td>
-                            <td data-label="Age">24</td>
-                            <td data-label="Job">Designer</td>
-                            <td data-label="live"><span class="sb-label sb-label-table sb-label-warning-0">Draft</span></td>
-                            </tr>
-                            <tr>
-                            <td data-label="Name">
-                                <div class="sb-media">
-                                <img src="" alt="" class="sb-media-object mr-15">
-                                <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
-                                </div>
-                                </div>
-                            </td>
-                            <td data-label="Age">24</td>
-                            <td data-label="Job">Designer</td>
-                            <td data-label="live"><span class="sb-label sb-label-table sb-label-gray-0">Unlisted</span></td>
-                            </tr>
-                            <tr>
-                            <td data-label="Name">
-                                <div class="sb-media">
-                                <img src="" alt="" class="sb-media-object mr-15">
-                                <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
-                                </div>
-                                </div>
-                            </td>
-                            <td data-label="Age">24</td>
-                            <td data-label="Job">Designer</td>
-                            <td data-label="live"><span class="sb-dotmenu"></span></td>
-                            </tr>
-                        </tbody>
-                        </table>
-                      </div>
-                      <div class="sb-pagination-container flex-jc-flex-end">
-                          <div class="sb-pagination">
-                              <a class="sb-item">&laquo;</a>
-                              <a class="sb-item">&lt;</a>
-                              <a class="sb-item sb-item-active">1</a>
-                              <a class="sb-item no-border">...</a>
-                              <a class="sb-item">10</a>
-                              <a class="sb-item">11</a>
-                              <a class="sb-item">12</a>
-                              <a class="sb-item">&gt;</a>
-                              <a class="sb-item">&raquo;</a>
-                          </div>
-                      </div>
+            </div>
 
-                </div>
-              </div>
+            <table class="sb-table sb-table-hover sb-table-sortable">
+                <thead class="sb-table-header heading-large">
+                    <tr>
+                        <th class="sb-sort-icon">Name</th>
+                        <th class="sb-sort-icon">Age</th>
+                        <th class="sb-sort-icon">Job</th>
+                        <th class="sb-sort-icon ui dropdown sb-table-dropdown" suiDropdown>
+                            <div class="text">Status</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu" suiDropdownMenu>
+                                <div class="item">All</div>
+                                <div class="item">Live</div>
+                                <div class="item selected">Draft</div>
+                                <div class="item">Review</div>
+                                <div class="item">Unlisted</div>
+                            </div>
+                        </th>
+                        <th class="sb-sort-icon">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="sb-table-body body-large">
+                    <tr>
+                        <td data-label="Name">
+                            <div class="sb-media">
+                                <img src="" alt="" class="sb-media-object mr-15">
+                                <div class="sb-media-body">
+                                    <h6 class="media-heading">United Course</h6>
+                                    <p class="media-description">Course</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Job">Engineer</td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-primary-100">Review</span>
+                        </td>
+                        <td><span class="sb-dotmenu"></span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">
+                            <div class="sb-media">
+                                <img src="" alt="" class="sb-media-object mr-15">
+                                <div class="sb-media-body">
+                                    <h6 class="media-heading">United Course</h6>
+                                    <p class="media-description">Course</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Age">26</td>
+                        <td data-label="Job">Engineer</td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0"><span
+                                    class="sb-live"></span>Live</span></td>
+                        <td><span class="sb-dotmenu"></span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">
+                            <div class="sb-media">
+                                <img src="" alt="" class="sb-media-object mr-15">
+                                <div class="sb-media-body">
+                                    <h6 class="media-heading">United Course</h6>
+                                    <p class="media-description">Course</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Job">Designer</td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-warning-0">Draft</span></td>
+                        <td><span class="sb-dotmenu"></span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">
+                            <div class="sb-media">
+                                <img src="" alt="" class="sb-media-object mr-15">
+                                <div class="sb-media-body">
+                                    <h6 class="media-heading">United Course</h6>
+                                    <p class="media-description">Course</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Job">Designer</td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-gray-0">Unlisted</span></td>
+                        <td><span class="sb-dotmenu"></span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Name">
+                            <div class="sb-media">
+                                <img src="" alt="" class="sb-media-object mr-15">
+                                <div class="sb-media-body">
+                                    <h6 class="media-heading">United Course</h6>
+                                    <p class="media-description">Course</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-label="Age">24</td>
+                        <td data-label="Job">Designer</td>
+                        <td></td> <td><span class="sb-dotmenu"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-              <!-- <ng-template let-popup #popupTemplate>
+        <div class="sb-pagination-container flex-jc-flex-end">
+            <div class="sb-pagination">
+                <a class="sb-item">&laquo;</a>
+                <a class="sb-item">&lt;</a>
+                <a class="sb-item sb-item-active">1</a>
+                <a class="sb-item no-border">...</a>
+                <a class="sb-item">10</a>
+                <a class="sb-item">11</a>
+                <a class="sb-item">12</a>
+                <a class="sb-item">&gt;</a>
+                <a class="sb-item">&raquo;</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <ng-template let-popup #popupTemplate>
                 <div style="width: 880px; padding: 16px;">
                     <app-workspace-filter></app-workspace-filter>
                 </div>
               </ng-template> -->
 
+
+
+<br>
+<br>
+<h4>Sort Testing</h4>
+<div class="sb-table-container">
+
+    <table sortable-table (sorted)="onSorted($event)" class="sb-table sb-table-hover sb-table-sortable">
+        <thead class="sb-table-header heading-large">
+            <tr>
+                <th sortable-column="id" sort-direction="asc">Id</th>
+                <th sortable-column="firstname">First Name</th>
+                <th sortable-column="lastname">Last Name</th>
+            </tr>
+        </thead>
+        <tbody class="sb-table-body body-large">
+            <tr *ngFor="let c of customers">
+                <td>{{c.id}}</td>
+                <td>{{c.firstname}}</td>
+                <td>{{c.lastname}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

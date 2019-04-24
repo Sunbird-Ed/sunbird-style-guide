@@ -37,14 +37,14 @@ export class ButtonsComponent implements OnInit {
       <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Secondary/Success</button>
       <button type="button" class="sb-btn sb-btn-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
       <button type="button" class="sb-btn sb-btn-error sb-btn-normal mr-8">Error</button>
-      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal">Gray</button>
+      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal mr-8">Gray</button>
       `,
       copyCode: `
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8">Primary Button/Info</button>
       <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Secondary/Success</button>
       <button type="button" class="sb-btn sb-btn-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
       <button type="button" class="sb-btn sb-btn-error sb-btn-normal mr-8">Error</button>
-      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal">Gray</button>
+      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal mr-8">Gray</button>
       `
     },
     {

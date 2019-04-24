@@ -1,57 +1,125 @@
-  <div class="sb-workspace-filter-container">
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Select Board</p>
+<h4>Using Flex</h4>
+
+  <div class="sb-explore-filter-container">
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Select Board</label>
       <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-multi-select>
     </div>
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Medium</p>
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Medium</label>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Select Grade</p>
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Select Grade</label>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Subject</p>
-      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
-        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
-        </sui-select-option>
-      </sui-multi-select></div>
-
-
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Select Status</p>
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Subject</label>
       <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-multi-select>
     </div>
-    <div class="sb-workspace-filter-field">
-      <p class="mb-8">Select Resourcetype</p>
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Select Status</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="sb-explore-filter-field">
+      <label class="mb-8">Select Resourcetype</label>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-    <div class="sb-workspace-filter-field">
-        <p class="mb-8">Content Type</p>
+    <div class="sb-explore-filter-field">
+        <label class="mb-8">Content Type</label>
         <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
     </div>
-
-    <div class="sb-workspace-filter-field ">
+    <div class="sb-explore-filter-field text-right">
         <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
         <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
     </div>
   </div>
+
+
+  <!--
+<h4>Using Semantic UI Grid</h4>
+
+  <div class="five column doubling ui grid">
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column">
+      <label class="mb-8">Select Board</label>
+      <sui-multi-select class="selection" labelField="name" [hasLabels]="false" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-multi-select>
+    </div>
+    <div class="six wide mobile three wide tablet two wide computer column text-right">
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
+      <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
+    </div>
+  </div>
+-->

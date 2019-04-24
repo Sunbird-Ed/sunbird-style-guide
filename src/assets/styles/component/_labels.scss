@@ -1,7 +1,7 @@
 // base label styles
 .sb-label {
     display: inline-block;
-    border: 1px solid;
+    @include border(border,1px,null);
     color: $white-color;
     line-height: inherit;
     @include border-radius(3px);
