@@ -10,6 +10,14 @@ import { CustomerService, Customer, CustomerSearchCriteria } from '../services/t
 
 export class WorkspaceComponent implements OnInit {
 
+  handlePin() {
+    console.log('pinned');
+  }
+  handleUnpin() {
+    console.log('unpinned');
+  }
+  
+  pageTitle = 'Workspace';
   multiSelect1: any;
   
   constructor(private service: CustomerService) {

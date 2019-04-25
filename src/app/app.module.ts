@@ -54,6 +54,10 @@ import { SortService } from './sortable-table/sort.service';
 import { SortableTableDirective } from './sortable-table/sortable-table.directive';
 import { SortableColumnComponent } from './sortable-table/sortable-column.component';
 
+// requires BrowserAnimationsModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import HeadroomModule
+import { HeadroomModule } from '@ctrl/ngx-headroom';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -112,7 +116,9 @@ export function hljsLanguages() {
     ClipboardModule,
     SuiTabsModule,
     SuiSelectModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    HeadroomModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]

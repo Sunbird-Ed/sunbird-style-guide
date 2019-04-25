@@ -177,6 +177,34 @@ export class ButtonsComponent implements OnInit {
       <button type="button" class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-md mr-8"><i class="home icon"></i>Medium</button>
       <button type="button" class="sb-btn sb-btn-primary sb-left-icon-btn sb-btn-lg mr-8"><i class="home icon"></i>Large</button>
       `
+    },
+    {
+      expandCode: false,
+      title: 'Dropdowns',
+      demoCode: `
+      <div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu style="right: 0;left: auto;">
+                                <div class="item">Edit</div> 
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+      `,
+      copyCode: `
+      <div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu style="right: 0;left: auto;">
+                                <div class="item">Edit</div>
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+      `
     }
   ];
 
