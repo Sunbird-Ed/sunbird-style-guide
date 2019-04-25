@@ -44,6 +44,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { TreenavigationComponent } from './treenavigation/treenavigation.component';
+import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
+
+import { CustomerService } from './services/table-data.service';
+
+import { SortService } from './sortable-table/sort.service';
+import { SortableTableDirective } from './sortable-table/sortable-table.directive';
+import { SortableColumnComponent } from './sortable-table/sortable-column.component';
 
 /**
  * Import every language you wish to highlight here
@@ -87,7 +96,10 @@ export function hljsLanguages() {
     HeaderComponent,
     FooterComponent,
     TooltipComponent,
-    MenusComponent
+    MenusComponent,
+    WorkspaceComponent,
+    TreenavigationComponent,
+    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +114,7 @@ export function hljsLanguages() {
     SuiSelectModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

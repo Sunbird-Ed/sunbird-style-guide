@@ -8,9 +8,6 @@
         margin-top: $base-block-space;
         margin-bottom: $base-block-space;
         font-weight: $font-weight-normal;
-        border: 1px solid #dedede;
-        border-radius: $base-block-space/2;
-        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
         background-color: #ffffff;
         font-size: $font-size-base;
     
@@ -29,16 +26,21 @@
         }
     
         .sb-item {
-            padding:  $base-block-space*2;
+            padding: $base-block-space $base-block-space*2;
             line-height: $font-size-base;
-            color: $gray;
+            color: $gray-400;
             cursor: pointer;
-            border-right: 1px solid #dedede;
+            border: 0.5px solid #dedede;
+            border-right: none;
             &:hover {
                 background: $gray-0;
             }
+            &:first-child {
+                border-radius: 4px 0 0 4px;
+            }
             &:last-child {
-                border-right: none;
+                border: 0.5px solid #dedede;
+                border-radius: 0 4px 4px 0;
             }
         }
     
@@ -46,5 +48,9 @@
             background-color: #dedede;
         }
     
+        .no-border {
+            border: none;
+            border-left: 0.5px solid #dedede;
+        }
     }
 }

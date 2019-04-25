@@ -20,6 +20,7 @@ input[type="button"] {
     cursor: pointer;
     min-width:($base-block-space * 8);
     @include border-radius(3px);
+    position:relative;
     text: {
         transform: capitalize;
         decoration: none;
@@ -44,11 +45,11 @@ input[type="button"] {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 5px;
-        height: 5px;
-        background: rgba(255, 255, 255, .5);
+        width: 3px;
+        height: 3px;
+        background: $primary-600;
         opacity: 0;
-        border-radius: 100%;
+        border-radius: 50%;
         transform: scale(1, 1) translate(-50%);
         transform-origin: 50% 50%;
       }
@@ -58,31 +59,18 @@ input[type="button"] {
           transform: scale(0, 0);
           opacity: 1;
         }
-        20% {
-          transform: scale(25, 25);
-          opacity: 1;
-        }
         100% {
           opacity: 0;
-          transform: scale(40, 40);
+          transform: scale(50, 50);
         }
       }
       &:focus:not(:active)::after {
-        animation: ripple 1s ease-out;
+        animation: ripple 1s ease-in-out;
       }
       
 }
   
-// button link
-.sb-btn-link {
-    background:none;
-    border:0;
-    color:$primary-color;
-    &:hover {
-        font-weight:$font-weight-bold;
-    }
-    
-}
+
 // button sizes
 .sb-btn-xs, .sb-btn-normal, .sb-btn-sm, .sb-btn-md {
     padding: ($base-block-space * 1) ($base-block-space * 2);
@@ -112,6 +100,7 @@ input[type="button"] {
 }
 
 // status outline buttons
+
 .sb-btn-outline-primary, .sb-btn-outline-info{
     @include btn-theme-bgwhite($primary-color);
     &:hover,&:active {
@@ -206,32 +195,47 @@ input[type="button"] {
 }
 
 // button links colored
-.sb-btn-link-primary{
+.sb-btn-link-primary, .sb-btn-link-info{
     @include btn-theme-links($primary-color);
+    &:hover,&:active {
+        background: $primary-0;
+    }
 } 
-.sb-btn-link-secondary{
+.sb-btn-link-secondary, .sb-btn-link-success{
     @include btn-theme-links($secondary-200);
+    &:hover,&:active {
+        background: $secondary-0;
+    }
 } 
-.sb-btn-link-tertiary{
+.sb-btn-link-tertiary,.sb-btn-link-warning{
     @include btn-theme-links($tertiary-color);
+    &:hover,&:active {
+        background: $tertiary-0;
+    }
 }
 // status outline buttons
-.sb-btn-link-info{
-    @include btn-theme-links($primary-color);
-} 
-.sb-btn-link-success{
-    @include btn-theme-links($secondary-200);
-} 
-.sb-btn-link-warning{
-    @include btn-theme-links($tertiary-color);
-}   
 .sb-btn-link-error{
     @include btn-theme-links($red-400);
+    &:hover,&:active {
+        background: $red-0;
+    }
 } 
 .sb-btn-link-gray{
     @include btn-theme-links($gray-800);
+    &:hover,&:active {
+        background: $gray-0;
+    }
 } 
 
+// button link
+.sb-btn-link {
+    background:none;
+    border:0;
+    &:hover {
+        font-weight:$font-weight-bold;
+    }
+    
+}
 
  .sb-btn-loading-spinner {
     padding: ($base-block-space * 1)  ($base-block-space * 2)  ($base-block-space * 1)  ($base-block-space * 1);

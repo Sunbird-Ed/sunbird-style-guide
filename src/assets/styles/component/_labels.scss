@@ -3,7 +3,7 @@
 @import "../base/variables";
 .sb-label {
     display: inline-block;
-    border: 1px solid;
+    @include border(border,1px,null);
     color: $white-color;
     line-height: inherit;
     @include border-radius(3px);
@@ -42,6 +42,20 @@
   padding: ($base-block-space * 3);
   font-size: $font-size-lg;
 }
+.sb-label-table {
+    padding: ($base-block-space / 2) ($base-block-space);
+    font-size: $font-size-sm;
+    min-width: $base-block-space*6;
+    text-align: center;
+    .sb-live {
+        height: $base-block-space;
+        width: $base-block-space;
+        background: $secondary-200;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: $base-block-space/2;
+    }
+}
 // default outline colored labels
 .sb-label-outline-primary {
     @include label-theme-bgwhite($primary-color);
@@ -72,14 +86,29 @@
 .sb-label-primary,
 .sb-label-info {
     @include label-theme($primary-color);
+}
+.sb-label-primary-100,
+.sb-label-info-100 {
+    @include label-theme($primary-100);
+    color: $primary-color;
 } 
 .sb-label-secondary,
 .sb-label-success {
     @include label-theme($secondary-200);
 }
+.sb-label-secondary-0,
+.sb-label-success-0 {
+    @include label-theme($secondary-0);
+    color: $secondary-200;
+}
 .sb-label-tertiary,
 .sb-label-warning {
     @include label-theme($tertiary-color);
+}
+.sb-label-tertiary-0,
+.sb-label-warning-0 {
+    @include label-theme($tertiary-0);
+    color: $tertiary-color;
 }
 .sb-label-success {
     @include label-theme($success-color);
@@ -92,4 +121,8 @@
 } 
 .sb-label-error {
     @include label-theme($danger-color);
+}
+.sb-label-gray-0 {
+    @include label-theme($gray-0);
+    color: $gray-400;
 }
