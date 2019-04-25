@@ -1,0 +1,33 @@
+@import "../../assets/styles/base/variables";
+
+::ng-deep {
+    .sb-filter-menufix.ui.dropdown .menu {
+        .menu {
+            top: inherit !important;
+            left: 0;
+            right: auto;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            }
+        }
+    .ui.dropdown .menu {
+        > .item {
+            font-size: 12px;
+            min-width: 148px;
+        }
+    }
+}
+
+.sb-pagination-container .sb-pagination .no-border {
+    background: $primary-100;
+    border-top: 0.5px solid $primary-100;
+}
+
+.sb-explore-filter {
+    position: absolute;
+    top: 56px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 0 31px -9px rgba(0,0,0,0.5);
+    padding: 16px 24px;
+}
