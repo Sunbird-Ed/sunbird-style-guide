@@ -1,4 +1,11 @@
-<div class="ui stackable grid m-0 h-100">
+<!--Page Heading-->
+<ngx-headroom (pin)="handlePin()" (unpin)="handleUnpin()" downTolerance="10" upTolerance="0">
+<h1 class="docs-pageHeading">
+    {{pageTitle}}
+  </h1>
+  <!--/Page Heading-->
+</ngx-headroom>
+<div class="ui stackable grid m-0 mt-48">
     <div class="two wide column sb-sidebar-menu px-0">
         <h5>My Workspace</h5>
         <ul>
@@ -8,7 +15,7 @@
             <li>Create</li>
         </ul>
     </div>
-    <div class="ten wide column sb-sidebar-container px-24">
+    <div class="ten wide column sb-sideview-tab-container p-24 pt-72">
 
         <div class="sb-table-container">
             <div class="sb-table-search-header px-0">
@@ -42,7 +49,7 @@
                 <!-- <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
                              suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick" [popupPlacement]="'bottom right'">Show Filter</button> -->
             </div>
-
+            <div class="sb-table-responsive-div">
             <table class="sb-table sb-table-hover sb-table-sortable">
                 <thead class="sb-table-header heading-large">
                     <tr>
@@ -60,7 +67,7 @@
                                 <div class="item">Unlisted</div>
                             </div>
                         </th>
-                        <th class="sb-sort-icon">Actions</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="sb-table-body body-large">
@@ -69,16 +76,27 @@
                             <div class="sb-media">
                                 <img src="" alt="" class="sb-media-object mr-15">
                                 <div class="sb-media-body">
-                                    <h6 class="media-heading">United Course</h6>
-                                    <p class="media-description">Course</p>
+                                    <h6 class="media-heading ellipsis p-0" suiPopup popupPlacement="bottom" popupHeader="Popup Header" popupText="United Resource - Area of focusUnited Resource - Area of focus">United Resource - Area of focusUnited Resource - Area of focus</h6>
+                                    <p class="media-description">Course Name: Course progress in mobile</p>
+                                    <p class="media-description">Creator: Kumar Content Creator</p>
                                 </div>
                             </div>
                         </td>
                         <td data-label="Age">24</td>
                         <td data-label="Job">Engineer</td>
-                        <td data-label="live"><span class="sb-label sb-label-table sb-label-primary-100">Review</span>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-primary-100">Review/Upcoming</span>
                         </td>
-                        <td><span class="sb-dotmenu"></span></td>
+                        <td><div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu>
+                                <div class="item">Edit</div>
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                        </td>
                     </tr>
                     <tr>
                         <td data-label="Name">
@@ -94,7 +112,17 @@
                         <td data-label="Job">Engineer</td>
                         <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0"><span
                                     class="sb-live"></span>Live</span></td>
-                        <td><span class="sb-dotmenu"></span></td>
+                                    <td><div class="ui dropdown sb-dotted-dropdown"
+                                        suiDropdown autoClose="itemClick">
+                                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                                        <div class="menu" suiDropdownMenu>
+                                            <div class="item">Edit</div>
+                                            <div class="item">Share</div>
+                                            <div class="item">Preview</div>
+                                            <div class="item">Delete</div>
+                                        </div>
+                                    </div>
+                                    </td>
                     </tr>
                     <tr>
                         <td data-label="Name">
@@ -108,8 +136,18 @@
                         </td>
                         <td data-label="Age">24</td>
                         <td data-label="Job">Designer</td>
-                        <td data-label="live"><span class="sb-label sb-label-table sb-label-warning-0">Draft</span></td>
-                        <td><span class="sb-dotmenu"></span></td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-warning-0">Draft/Expired</span><span class="sb-lock-icon" suiPopup popupPlacement="bottom right" popupHeader="Title" popupText="You don't have access"><i class="lock icon"></i></span></td>
+                        <td><div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu>
+                                <div class="item">Edit</div>
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                        </td>
                     </tr>
                     <tr>
                         <td data-label="Name">
@@ -124,7 +162,17 @@
                         <td data-label="Age">24</td>
                         <td data-label="Job">Designer</td>
                         <td data-label="live"><span class="sb-label sb-label-table sb-label-gray-0">Unlisted</span></td>
-                        <td><span class="sb-dotmenu"></span></td>
+                        <td><div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu>
+                                <div class="item">Edit</div>
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                        </td>
                     </tr>
                     <tr>
                         <td data-label="Name">
@@ -138,10 +186,22 @@
                         </td>
                         <td data-label="Age">24</td>
                         <td data-label="Job">Designer</td>
-                        <td></td> <td><span class="sb-dotmenu"></span></td>
+                        <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0">Live/On going</span></td>
+                        <td><div class="ui dropdown sb-dotted-dropdown"
+                            suiDropdown autoClose="itemClick">
+                            <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                            <div class="menu" suiDropdownMenu>
+                                <div class="item">Edit</div>
+                                <div class="item">Share</div>
+                                <div class="item">Preview</div>
+                                <div class="item">Delete</div>
+                            </div>
+                        </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
         </div>
 
         <div class="sb-pagination-container flex-jc-flex-end">

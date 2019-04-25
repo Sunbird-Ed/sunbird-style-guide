@@ -11,6 +11,7 @@
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .font-weight-bold {
@@ -76,4 +77,22 @@ a{
 
 .white-space-nowrap {
   white-space: nowrap !important;
+}
+
+
+.form-text {
+  display: block;
+  margin-top: .25rem;
+}
+
+.text-disabled {
+  color: #F2F2F2;
+}
+
+.text-error {
+  color: #FF4558;
+}
+
+.text-success {
+  color: #07BC81;
 }
