@@ -26,6 +26,10 @@ import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
+import { OfflineComponent } from './offline/offline.component';
+import { BannerComponent } from './banner/banner.component';
+import { ListsComponent } from './lists/lists.component';
+
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -54,7 +58,10 @@ const routes: Routes = [
   { path: 'menus', component: MenusComponent},
   { path: 'workspace', component: WorkspaceComponent},
   { path: 'treenavigation', component: TreenavigationComponent},
-  { path: 'workspace-filter', component: WorkspaceFilterComponent}
+  { path: 'workspace-filter', component: WorkspaceFilterComponent},
+  { path: 'offline', component: OfflineComponent},
+  { path: 'banner', component: BannerComponent},
+  { path: 'lists', component: ListsComponent}
 ];
 
 @NgModule({
