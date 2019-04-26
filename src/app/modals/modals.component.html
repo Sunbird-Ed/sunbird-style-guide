@@ -224,26 +224,29 @@
 
   <!--Display output-->
   <div class="docs-sectionDemoCode">
-    <button class="sb-btn sb-btn-success sb-btn-normal" (click)="showSuccessModal = !showSuccessModal">Show
+    <button class="sb-btn sb-btn-success sb-btn-normal mr-8" (click)="showSuccessModal = !showSuccessModal">Show
       Modal</button>
     <sui-modal *ngIf="showSuccessModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
       [size]="'small'" class="sb-modal sb-success" appBodyScroll (dismissed)="showSuccessModal = !showSuccessModal"
       #modal>
-      <div class="sb-modal-header">
+      <div class="sb-modal-header"> 
         Modal Heading
       </div>
       <div class="sb-modal-content">
         Modal Content
       </div>
       <div class="sb-modal-actions">
-        <button class="sb-btn sb-btn-normal sb-btn-success" (click)="showSuccessModal = !showSuccessModal">
+        <button class="sb-btn sb-btn-normal" (click)="showSuccessModal = !showSuccessModal">
           Yes
         </button>
-        <button class="sb-btn sb-btn-normal sb-btn-outline-success" (click)="showSuccessModal = !showSuccessModal">
+        <button class="sb-btn sb-btn-normal" (click)="showSuccessModal = !showSuccessModal">
           No
         </button>
       </div>
     </sui-modal>
+
+  
+
   </div>
   <!--/Display output-->
 
@@ -287,10 +290,10 @@
         Modal Content
       </div>
       <div class="sb-modal-actions">
-        <button class="sb-btn sb-btn-normal sb-btn-error" (click)="showErrorModal = !showErrorModal">
+        <button class="sb-btn sb-btn-normal" (click)="showErrorModal = !showErrorModal">
           Yes
         </button>
-        <button class="sb-btn sb-btn-normal sb-btn-outline-error" (click)="showErrorModal = !showErrorModal">
+        <button class="sb-btn sb-btn-normal" (click)="showErrorModal = !showErrorModal">
           No
         </button>
       </div>
@@ -340,10 +343,10 @@
         Modal Content
       </div>
       <div class="sb-modal-actions">
-        <button class="sb-btn sb-btn-normal sb-btn-warning" (click)="showWarningModal = !showWarningModal">
+        <button class="sb-btn sb-btn-normal" (click)="showWarningModal = !showWarningModal">
           Yes
         </button>
-        <button class="sb-btn sb-btn-normal sb-btn-outline-warning" (click)="showWarningModal = !showWarningModal">
+        <button class="sb-btn sb-btn-normal" (click)="showWarningModal = !showWarningModal">
           No
         </button>
       </div>
@@ -429,4 +432,82 @@
   </div>
   <!--/Tab Modal-->
 
+
+  
+  <!--Center Aligned Modals-->
+<div class="docs-sections">
+
+  <h4 class="docs-sectionHeading">
+      Modal with Center Aligned Text
+    <i class="fa fa-code text-gray docs-expandCode" (click)="CenterAlignedModal = !CenterAlignedModal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+   
+    <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8" (click)="showCenterAlignedModal = !showCenterAlignedModal">Show
+      Modal Center Aligned</button>
+    <sui-modal *ngIf="showCenterAlignedModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'small'" class="sb-modal sb-modal-center" appBodyScroll (dismissed)="showCenterAlignedModal = !showCenterAlignedModal"
+      #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showCenterAlignedModal = !showCenterAlignedModal">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showCenterAlignedModal = !showCenterAlignedModal">
+          No
+        </button>
+      </div>
+    </sui-modal>
+
+    <button class="sb-btn sb-btn-outline-primary sb-btn-normal" (click)="showCenterAlignedModal1 = !showCenterAlignedModal1">Show
+      Modal Center Aligned</button>
+    <sui-modal *ngIf="showCenterAlignedModal1" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'small'" class="sb-modal sb-modal-content-center" appBodyScroll (dismissed)="showCenterAlignedModal1 = !showCenterAlignedModal1"
+      #modal>
+      <div class="sb-modal-header">
+        Modal Heading
+      </div>
+      <div class="sb-modal-content">
+        Modal Content
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showCenterAlignedModal1 = !showCenterAlignedModal1">
+          Yes
+        </button>
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showCenterAlignedModal1 = !showCenterAlignedModal1">
+          No
+        </button>
+      </div>
+    </sui-modal>
+
+
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="CenterAlignedModal">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="CenterAlignedModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="CenterAlignedModalCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Center Aligned Modals Modal-->
 <!--Page Content-->

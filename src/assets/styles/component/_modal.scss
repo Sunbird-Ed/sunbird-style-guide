@@ -64,6 +64,12 @@
             .sb-btn:nth-last-child(1){
                 margin:0 $base-block-space 0 $base-block-space;
             }
+            button{
+                @extend .sb-btn-outline-primary;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-primary;
+            }
         }
         .small {
             color: $gray-400;
@@ -111,20 +117,63 @@
                 position: relative;
             }
         }
-    } // sb modal confirmation/alert styles 
+    } 
+    // sb modal confirmation/alert styles 
     &.sb-warning .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-warning;
+        }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-warning;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-warning;
+            }
         }
     }
     &.sb-success .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-success;
         }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-success;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-success;
+            }
+        }
     }
     &.sb-error .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-error;
+        }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-error;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-error;
+            }
+        }
+    }
+    &.sb-modal-content-center .ui.modal {
+        .sb-modal-content {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &.sb-modal-center .ui.modal {
+        .sb-modal-content {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sb-modal-actions {
+            justify-content: center;
+            border-top:0px;
         }
     }
 }
