@@ -149,3 +149,16 @@ app-card[lang="ur"] {
   }
 }
 
+// QR Card
+
+.sb-card-qr {
+  .sb-btn {
+    border-radius: 0px;
+    width:100%;
+  }
+  &:hover {
+    .sb-btn {
+      background:$secondary-400;
+    }
+  }
+}
