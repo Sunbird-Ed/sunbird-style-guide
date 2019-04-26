@@ -193,7 +193,9 @@
     }
 }
 
-
+.sb-select-searchfilter.ui.multiple.search.dropdown>input.search {
+    margin: 0 0 4px 8px;
+}
 
 
 @include respond-above(lg) {
