@@ -30,4 +30,26 @@
     background: $white;
     box-shadow: 0 0 31px -9px rgba(0,0,0,0.5);
     padding: $base-block-space*2 $base-block-space*3;
+    // -webkit-animation: fadeIn 1s;
+    // animation: fadeIn 1s;
+    // transition: 1s all;
 }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+// @-webkit-keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }

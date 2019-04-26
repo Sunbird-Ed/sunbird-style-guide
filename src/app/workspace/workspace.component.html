@@ -38,9 +38,9 @@
                         <div class="item">Created on</div>
                     </div>
                 </div>
-                <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn mr-8">Show Filters<i class="caret down icon"></i>
+                <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn mr-8" (click)="toggleSbFilter()">Show Filters<i class="caret down icon"></i>
                 </button>
-                <div class="sb-explore-filter">
+                <div class="sb-explore-filter" *ngIf="sbExploreFilter" @fade>
                     <app-workspace-filter></app-workspace-filter>
                 </div>
                 
