@@ -17,6 +17,8 @@ export class ModalsComponent implements OnInit {
   showFullscreenModal;
   fullscreenmodal;
   showSuccessModal;
+  showSuccessModalCenter;
+  showSuccessModalContentCenter;
   successmodal;
   showErrorModal;
   errormodal;
@@ -24,6 +26,8 @@ export class ModalsComponent implements OnInit {
   warningmodal;
   ShowTabModal;
   TabModal;
+  showCenterAlignedModal;showCenterAlignedModal1;
+  CenterAlignedModal;
 
   pageTitle = 'Modals';
   largeModalCode = `<sui-modal 
@@ -226,6 +230,46 @@ tabModalCode = `
   </button>
 </div>
 </sui-modal>`;
+
+CenterAlignedModalCode = `
+<sui-modal *ngIf="showCenterAlignedModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'small'" class="sb-modal sb-modal-center" appBodyScroll (dismissed)="showSuccessModalCenter = !showSuccessModalCenter"
+#modal>
+<div class="sb-modal-header">
+  Modal Heading
+</div>
+<div class="sb-modal-content">
+  Modal Content
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showCenterAlignedModal = !showCenterAlignedModal">
+    Yes
+  </button>
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showCenterAlignedModal = !showCenterAlignedModal">
+    No
+  </button>
+</div>
+</sui-modal>
+
+<sui-modal *ngIf="showCenterAlignedModal1" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'small'" class="sb-modal sb-modal-content-center" appBodyScroll (dismissed)="showCenterAlignedModal1 = !showCenterAlignedModal1"
+#modal>
+<div class="sb-modal-header">
+  Modal Heading
+</div>
+<div class="sb-modal-content">
+  Modal Content
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showCenterAlignedModal1 = !showCenterAlignedModal1">
+    Yes
+  </button>
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary" (click)="showCenterAlignedModal1 = !showCenterAlignedModal1">
+    No
+  </button>
+</div>
+</sui-modal>
+`;
 
   ngOnInit() {
   }

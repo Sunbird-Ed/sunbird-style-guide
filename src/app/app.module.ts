@@ -57,6 +57,10 @@ import { OfflineComponent } from './offline/offline.component';
 import { ListsComponent } from './lists/lists.component';
 import { BannerComponent } from './banner/banner.component';
 
+// requires BrowserAnimationsModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import HeadroomModule
+import { HeadroomModule } from '@ctrl/ngx-headroom';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -115,7 +119,9 @@ export function hljsLanguages() {
     ClipboardModule,
     SuiTabsModule,
     SuiSelectModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    HeadroomModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]

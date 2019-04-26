@@ -6,6 +6,7 @@
         @include position(null, 0 0 null 0); //bourbon
         @include size(100%, auto); //bourbon
         border-radius: $sb-modal-corner-radius;
+        background:none;
         .sb-modal-header {
             background-color: $sb-modal-header-bg;
             color: $sb-modal-header-color;
@@ -22,6 +23,7 @@
             min-height: 100px;
             padding: $sb-modal-content-padding;
             overflow-y: auto;
+            background:$white;
         }
         .sb-modal-content.sb-modal-tab {
             padding: 0;
@@ -61,6 +63,12 @@
             align-items: center;
             .sb-btn:nth-last-child(1){
                 margin:0 $base-block-space 0 $base-block-space;
+            }
+            button{
+                @extend .sb-btn-outline-primary;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-primary;
             }
         }
         .small {
@@ -109,20 +117,63 @@
                 position: relative;
             }
         }
-    } // sb modal confirmation/alert styles 
+    } 
+    // sb modal confirmation/alert styles 
     &.sb-warning .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-warning;
+        }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-warning;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-warning;
+            }
         }
     }
     &.sb-success .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-success;
         }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-success;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-success;
+            }
+        }
     }
     &.sb-error .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-error;
+        }
+        .sb-modal-actions {
+            button{
+                @extend .sb-btn-outline-error;  
+            }
+            button:nth-child(1){
+                @extend .sb-btn-error;
+            }
+        }
+    }
+    &.sb-modal-content-center .ui.modal {
+        .sb-modal-content {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &.sb-modal-center .ui.modal {
+        .sb-modal-content {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sb-modal-actions {
+            justify-content: center;
+            border-top:0px;
         }
     }
 }

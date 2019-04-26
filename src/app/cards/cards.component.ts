@@ -437,45 +437,44 @@ export class CardsComponent implements OnInit {
       expandCode: false,
       title: 'QR Card',
       demoCode: `
-      <div class="masonry-grid">
-      <div class="sb-card" tabindex="0">
-        <div class="sb-card-body">
-          <div class="sb-card-metas">
-            <div class="sb-card-image mr-16">
-              <img src="assets/images/book.png">
-            </div>
-            <div class="sb-card-meta non-course">
-              <div class="d-flex mb-auto">
-                <div class="sb-card-label">Worksheet</div>
-                <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
-              </div>
-              <div class="sb-card-meta-item ellipsis">
-                Subject : English
-              </div>
-              <div class="sb-card-meta-item ellipsis mt-4">
-                Class : Class 1,Class 2,Class 3,Class 4,Class 5
-              </div>
-              <div class="sb-card-meta-item ellipsis mt-4">
-                Medium : Other
-              </div>
-            </div>
+      <div class="sb-card sb-card-qr" tabindex="0">
+      <div class="sb-card-body">
+        <div class="sb-card-metas">
+          <div class="sb-card-image mr-16">
+            <img src="assets/images/book.png">
           </div>
-          <h4 class="sb-card-title">
-            Data Structure and Algorithm - Assignment 1 Paperback
-          </h4>
-          <div class="sb-card-org ellipsis">
-            Academy of European Law (ERA)
+          <div class="sb-card-meta non-course">
+            <div class="d-flex mb-auto">
+              <div class="sb-card-label">Worksheet</div>
+              <img src="assets/images/badge1.png" class="sb-card-badge ml-auto">
+            </div>
+            <div class="sb-card-meta-item ellipsis">
+              Subject : English
+            </div>
+            <div class="sb-card-meta-item ellipsis mt-4">
+              Class : Class 1,Class 2,Class 3,Class 4,Class 5
+            </div>
+            <div class="sb-card-meta-item ellipsis mt-4">
+              Medium : Other
+            </div>
           </div>
         </div>
-        <div class="btn-div">
-                  <button class="ui primary button w-100">
-                    <i class="caret right icon"></i> Play Content
-                  </button>
-                </div>
+        <h4 class="sb-card-title">
+          Data Structure and Algorithm - Assignment 1 Paperback
+        </h4>
+        <div class="sb-card-org ellipsis">
+          Academy of European Law (ERA)
+        </div>
       </div>
+      <div class="btn-div">
+      <button class="sb-btn sb-btn-normal sb-btn-secondary">
+        <i class="caret right icon"></i> Play Content
+      </button>
+    </div>
+    </div>
       `,
       copyCode: `
-      <div class="sb-card" tabindex="0">
+      <div class="sb-card sb-card-qr" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
             <div class="sb-card-image mr-16">
@@ -505,7 +504,7 @@ export class CardsComponent implements OnInit {
           </div>
         </div>
         <div class="btn-div">
-        <button class="ui primary button w-100">
+        <button class="sb-btn sb-btn-normal sb-btn-secondary">
           <i class="caret right icon"></i> Play Content
         </button>
       </div>
