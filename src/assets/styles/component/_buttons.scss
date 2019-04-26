@@ -144,6 +144,15 @@ input[type="button"] {
         border-color: $gray-800;
     }
 }
+.sb-btn-outline-white{
+    @include btn-theme-bgwhite( $white-color);
+    color: $primary-800;
+    border-color: $white-color;
+    &:hover,&:active {
+        color: $primary-800;
+        border-color:  $white-color;
+    }
+}
 // default colored btns
 .sb-btn-primary,.sb-btn-info{
     @include btn-theme($primary-color);

@@ -53,6 +53,9 @@ import { CustomerService } from './services/table-data.service';
 import { SortService } from './sortable-table/sort.service';
 import { SortableTableDirective } from './sortable-table/sortable-table.directive';
 import { SortableColumnComponent } from './sortable-table/sortable-column.component';
+import { OfflineComponent } from './offline/offline.component';
+import { ListsComponent } from './lists/lists.component';
+import { BannerComponent } from './banner/banner.component';
 
 /**
  * Import every language you wish to highlight here
@@ -99,7 +102,7 @@ export function hljsLanguages() {
     MenusComponent,
     WorkspaceComponent,
     TreenavigationComponent,
-    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent
+    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent, OfflineComponent, ListsComponent, BannerComponent
   ],
   imports: [
     BrowserModule,

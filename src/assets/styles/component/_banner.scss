@@ -1,0 +1,31 @@
+.sb-banner {
+    padding: $sb-banner-padding;
+    border-radius: $sb-banner-border-radius;
+    background-color: $sb-banner-background-color;
+    box-shadow: $sb-banner-box-shadow;
+  }
+  .sb-banner-content {
+    display: flex;
+    align-items: center;
+  }
+  .sb-banner-heading {
+    color: $sb-banner-heading-color;
+    font-weight: bold;
+    font-size: $sb-banner-heading-font-size;
+  }
+  [dir="ltr"].sb-banner-close-icon.close.icon, .sb-banner-close-icon.close.icon {
+    width: $sb-banner-close-icon-width;
+    margin-left: $sb-banner-close-icon-margin-left;
+    font-size: $sb-banner-close-icon-font-size;
+    align-self: flex-start;
+  }
+  [dir="rtl"].sb-banner-close-icon.close.icon {
+    width: 16px;
+    margin-right: $sb-banner-close-icon-margin-right;
+    font-size: $sb-banner-close-icon-font-size;
+    align-self: flex-start;
+  }
+  .sb-banner-content-left {
+    display: flex;
+    margin-left:auto;
+  }

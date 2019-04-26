@@ -104,6 +104,9 @@ input[type="button"] {
 .sb-btn-outline-gray{
     @include btn-theme-bgwhite($gray-800);
 } 
+.sb-btn-outline-white{
+    @include btn-theme-bgwhite($gray-800);
+} 
 // default colored btns
 .sb-btn-primary,.sb-btn-info{
     @include btn-theme($primary-color);
