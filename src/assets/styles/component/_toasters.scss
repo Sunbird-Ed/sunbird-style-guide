@@ -14,6 +14,11 @@
     opacity: 1;
     background: none;
   }
+  
+  &.sb-toast-sm-padding {
+    padding: $base-block-space*2 $base-block-space*3;
+    min-height: auto;
+  }
 
   &.sb-toast-info,
   &.sb-toast-success,
