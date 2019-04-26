@@ -29,7 +29,7 @@
                     <button class="sb-btn sb-btn-normal">Search</button>
                 </div>
 
-                <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto"
+                <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto  sb-table-dropdown"
                     suiDropdown autoClose="itemClick">
                     <div class="text">Sort by</div>
                     <i class="dropdown icon"></i>
@@ -38,15 +38,28 @@
                         <div class="item">Created on</div>
                     </div>
                 </div>
-                <div class="ui primary top right pointing dropdown sb-btn sb-btn-primary sb-btn-normal ml-8"
-                    suiDropdown>
-                    <div class="text">Show Filters</div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu py-16 px-24 sb-workspace-filter-view" suiDropdownMenu>
-                        <app-workspace-filter></app-workspace-filter>
-                    </div>
+                <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn mr-8">Show Filters<i class="caret down icon"></i>
+                </button>
+                <div class="sb-explore-filter">
+                    <app-workspace-filter></app-workspace-filter>
                 </div>
-                <!-- <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
+                
+                <!--<div class="ui dropdown sb-btn sb-btn-normal sb-btn-outline-primary ml-auto sb-table-dropdown" suiDropdown autoClose="itemClick">
+                                <div class="text">Sort by</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu" suiDropdownMenu>
+                                    <div class="item">Modified on</div>
+                                    <div class="item">Created on</div>
+                                </div>
+                            </div>
+                            <div class="ui primary top right pointing dropdown sb-filter-menufix sb-btn sb-btn-primary sb-btn-normal ml-8" suiDropdown>
+                                <div class="text">Show Filters</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu py-16 px-24 pr-0" suiDropdownMenu>
+                                    <app-workspace-filter></app-workspace-filter>
+                                </div>
+                            </div>
+                            <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
                              suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick" [popupPlacement]="'bottom right'">Show Filter</button> -->
             </div>
             <div class="sb-table-responsive-div">
@@ -56,16 +69,18 @@
                         <th class="sb-sort-icon">Name</th>
                         <th class="sb-sort-icon">Age</th>
                         <th class="sb-sort-icon">Job</th>
-                        <th class="sb-sort-icon ui dropdown sb-table-dropdown" suiDropdown>
-                            <div class="text">Status</div>
-                            <i class="dropdown icon"></i>
-                            <div class="menu" suiDropdownMenu>
-                                <div class="item">All</div>
-                                <div class="item">Live</div>
-                                <div class="item selected">Draft</div>
-                                <div class="item">Review</div>
-                                <div class="item">Unlisted</div>
-                            </div>
+                        <th class="sb-sort-icon">
+                            <span class="ui dropdown sb-table-dropdown" suiDropdown>
+                                <div class="text">Status</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu" suiDropdownMenu>
+                                    <div class="item">All</div>
+                                    <div class="item">Live</div>
+                                    <div class="item selected">Draft</div>
+                                    <div class="item">Review</div>
+                                    <div class="item">Unlisted</div>
+                                </div>
+                            </span>
                         </th>
                         <th>Actions</th>
                     </tr>
