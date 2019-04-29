@@ -58,6 +58,9 @@ import { SortableColumnComponent } from './sortable-table/sortable-column.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import HeadroomModule
 import { HeadroomModule } from '@ctrl/ngx-headroom';
+import { BannerComponent } from './banner/banner.component';
+import { ListsComponent } from './lists/lists.component';
+import { OfflineComponent } from './offline/offline.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -103,7 +106,7 @@ export function hljsLanguages() {
     MenusComponent,
     WorkspaceComponent,
     TreenavigationComponent,
-    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent
+    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent, BannerComponent, ListsComponent, OfflineComponent
   ],
   imports: [
     BrowserModule,

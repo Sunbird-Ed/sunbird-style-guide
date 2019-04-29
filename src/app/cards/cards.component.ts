@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html'
 })
 export class CardsComponent implements OnInit {
-
+  hover;
   constructor() { }
+
 
   pageTitle = 'Cards';
   sections = [
@@ -46,7 +47,6 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -77,7 +77,6 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -96,7 +95,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -162,7 +160,6 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -193,7 +190,6 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -212,7 +208,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -283,7 +278,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -306,7 +300,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -374,7 +367,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -397,7 +389,6 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
-
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -514,6 +505,12 @@ export class CardsComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  @HostListener('mouseenter') onMouseEnter() {
+    this.hover = true;
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.hover = false;
+  }
 
 }
