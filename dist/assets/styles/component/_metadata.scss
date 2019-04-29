@@ -1,0 +1,24 @@
+.sb-meta-data {
+    display: flex;
+    flex-flow: row wrap;
+    &.sb-meta-d1 {
+
+    }
+    dt {
+        flex-basis: 20%;
+        padding: 4px 8px;
+        text-align: right;    
+        font-weight: bold;
+        word-break: break-all;
+        &::after{
+            content: " :";
+            width:10px;
+        }
+    }
+    dd {
+        flex-basis: 70%;
+        flex-grow: 1;
+        margin: 0;
+        padding: 4px 8px;
+    }
+}

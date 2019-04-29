@@ -45,8 +45,10 @@ import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { FiltersComponent } from './filters/filters.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
-import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
+import { ExploreFilterComponent } from './explore-filter/explore-filter.component';
+import { TestPageComponent } from './test-page/test-page.component';
 
 import { CustomerService } from './services/table-data.service';
 
@@ -105,8 +107,15 @@ export function hljsLanguages() {
     TooltipComponent,
     MenusComponent,
     WorkspaceComponent,
+    FiltersComponent,
     TreenavigationComponent,
-    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent, BannerComponent, ListsComponent, OfflineComponent
+    SortableColumnComponent, 
+    BannerComponent, 
+    ListsComponent, 
+    OfflineComponent,
+    ExploreFilterComponent,
+    SortableTableDirective, 
+    TestPageComponent
   ],
   imports: [
     BrowserModule,
