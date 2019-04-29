@@ -1,15 +1,15 @@
 <!--Page Heading-->
-<ngx-headroom (pin)="handlePin()" (unpin)="handleUnpin()" downTolerance="10" upTolerance="0">
+<!-- <ngx-headroom (pin)="handlePin()" (unpin)="handleUnpin()" downTolerance="10" upTolerance="0"></ngx-headroom> -->
 <h1 class="docs-pageHeading">
     {{pageTitle}}
   </h1>
   <!--/Page Heading-->
-</ngx-headroom>
+
 <div class="ui stackable grid m-0 mt-48">
     <div class="two wide column sb-sidebar-menu px-0">
         <h5>My Workspace</h5>
         <ul>
-            <li>Create</li>
+            <li title="create" alt="create">Create</li>
             <li class="active">All my content</li>
             <li>Course Batches</li>
             <li>Create</li>
@@ -38,10 +38,10 @@
                         <div class="item">Created on</div>
                     </div>
                 </div>
-                <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn mr-8" (click)="toggleSbFilter()">Show Filters<i class="caret down icon"></i>
+                <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn" (click)="toggleSbFilter()">Show Filters<i class="caret down icon"></i>
                 </button>
                 <div class="sb-explore-filter" *ngIf="sbExploreFilter" @fade>
-                    <app-workspace-filter></app-workspace-filter>
+                    <app-explore-filter></app-explore-filter>
                 </div>
                 
                 <!--<div class="ui dropdown sb-btn sb-btn-normal sb-btn-outline-primary ml-auto sb-table-dropdown" suiDropdown autoClose="itemClick">
@@ -56,7 +56,7 @@
                                 <div class="text">Show Filters</div>
                                 <i class="dropdown icon"></i>
                                 <div class="menu py-16 px-24 pr-0" suiDropdownMenu>
-                                    <app-workspace-filter></app-workspace-filter>
+                                    <app-explore-filter></app-explore-filter>
                                 </div>
                             </div>
                             <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
@@ -238,7 +238,7 @@
 
 <!-- <ng-template let-popup #popupTemplate>
                 <div style="width: 880px; padding: 16px;">
-                    <app-workspace-filter></app-workspace-filter>
+                    <app-explore-filter></app-explore-filter>
                 </div>
               </ng-template> -->
 
