@@ -62,6 +62,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadroomModule } from '@ctrl/ngx-headroom';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
+import { MetadataComponent } from './metadata/metadata.component';
 import { OfflineComponent } from './offline/offline.component';
 /**
  * Import every language you wish to highlight here
@@ -115,6 +116,7 @@ export function hljsLanguages() {
     OfflineComponent,
     ExploreFilterComponent,
     SortableTableDirective, 
+    MetadataComponent,
     TestPageComponent
   ],
   imports: [
