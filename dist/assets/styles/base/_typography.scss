@@ -28,3 +28,14 @@ p {
     font-size: $p-font-size;
     line-height: ($p-font-size * 1.42857); //1.618
 }
+
+.sb-section-title,
+.sb-pageSection-title {
+    font-size: $h5-font-size;
+    display: inline;
+    text-transform: lowercase;
+    font-weight: 600;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+}
