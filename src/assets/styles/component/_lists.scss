@@ -1,9 +1,10 @@
-.sb-circular-list {
+[dir="ltr"] {
+  .sb-circular-list {
     list-style-type: none;
     padding-left: 0;
     .sb-circular-list-item {
       position: relative;   
-      padding: $sb-circular-list-item-padding;
+      padding: $sb-circular-list-item-padding-ltr;
       font-size: $sb-circular-list-item-font-size;    
       &:before {
         content: '';
@@ -17,7 +18,36 @@
       }
     }
   }
+  .description-list-value {
+    margin-left: $sb-description-list-value-margin-left;
+  }
+}
 
+[dir="rtl"] {
+  .sb-circular-list {
+    list-style-type: none;
+    padding-left: 0;
+    .sb-circular-list-item {
+      position: relative;   
+      padding:$sb-circular-list-item-padding-rtl;
+      font-size: $sb-circular-list-item-font-size;    
+      &:before {
+        content: '';
+        height: $sb-circular-list-item-circle-height;
+        width: $sb-circular-list-item-circle-width;
+        background-color: $sb-circular-list-item-circle-color;
+        border-radius: $sb-circular-list-item-circle-border-radius;
+        position: absolute;
+        right: 0;
+        top: $sb-circular-list-item-circle-top;
+      }
+    }
+  }
+  .description-list-value {
+    margin-right: $sb-description-list-value-margin-right;
+  }
+
+}
 
   .description-list-key {
     color: $sb-description-list-key-color;
@@ -27,6 +57,57 @@
   .description-list-value {
     color: $sb-description-list-value-color;
     font-size: $sb-description-list-value-font-size;
-    margin-left: $sb-description-list-value-margin-left;
   }
+
+  // two lines list item 
+  .multiline-list-key {
+    font-size: 11px;
+    color:#666;
+  }
+  .multiline-list-value {
+    font-size: 11px;
+    color:#666;
+    margin-inline-start: 0;
+  }
+
+
+  //bordered list 
+
+  .sb-bordered-list {
+    padding-inline-start: 0;
+    list-style-type: none;
+    border: 1px solid #CCC;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    .sb-bordered-list-item {
+      font-size: 16px;
+      padding: 16px 24px;
+      border-bottom: 1px solid #CCC;
+      background: #F7F7F7;
+      .sb-bordered-list-item-title {
+        font-size:14px;
+        color:#024F9D;
+      }
+      .sb-bordered-list-item-title-extra {
+        font-size:12px;
+        color:#333;
+      }
+      .sb-bordered-list-item-heading {
+        font-size:14px;
+        color:#333;
+      }
+      .sb-bordered-list-item-subheading {
+        font-size:12px;
+        color:#666;
+      }
+    }
+    .sb-bordered-list-item:first-child {
+      padding: 8px 16px;
+      background: #fff;
+    }
+    .sb-bordered-list-item:last-child {
+      border-bottom: 0;
+    }
+  }
+
   

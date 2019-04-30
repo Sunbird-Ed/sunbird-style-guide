@@ -29,7 +29,7 @@ import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.co
 import { OfflineComponent } from './offline/offline.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
-
+import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -61,7 +61,8 @@ const routes: Routes = [
   { path: 'workspace-filter', component: WorkspaceFilterComponent},
   { path: 'offline', component: OfflineComponent},
   { path: 'banner', component: BannerComponent},
-  { path: 'lists', component: ListsComponent}
+  { path: 'lists', component: ListsComponent},
+  { path: 'telemetry', component: OfflineTelemetryComponent}
 ];
 
 @NgModule({
