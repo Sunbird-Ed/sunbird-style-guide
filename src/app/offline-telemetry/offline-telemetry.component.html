@@ -1,93 +1,49 @@
-<div class="offline-telemetry-page-title">
-   App settings
-</div>
-
-<div class="d-flex flex-jc-space-between mt-32">
-  <a class="offline-telemetry-title cursor-pointer">Sync telemetry automatically</a>
-   <a class="offline-telemetry-clear-title cursor-pointer">Clear Telemetry</a>
-</div>
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
 
 
-<div class="sb-radio-btn sb-radio-primary mt-32">
-  <input type="radio" id="alwaysOn" name="radio-group">
-  <label for="alwaysOn">Always on</label>
-</div>
-<div class="sb-radio-btn sb-radio-primary">
-  <input type="radio" id="off" name="radio-group">
-  <label for="off">Off</label>
-</div>
-<div class="d-flex mt-32">
-<div class="">
-    <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8">Sync Telemetry (500KB)&#x200E;</button>
-    <dl class="mt-8 mb-0">
-        <dt class="multiline-list-key">Last synced:</dt>
-        <dd class="multiline-list-value">19 February 2019 at 6:40 PM</dd>
-    </dl>
-</div>
-<div class="ml-24">
-    <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Share Telemetry (500KB)&#x200E;</button>
-    <dl class="mt-8 mb-0">
-      <dt class="multiline-list-key">Last shared:</dt>
-      <dd class="multiline-list-value">19 February 2019 at 6:40 PM</dd>
-    </dl>
-</div>
-</div>
+ <!--Page Content-->
+ <div class="docs-sections" *ngFor="let section of sections;">
 
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+  </h4> 
 
-<ul class="sb-bordered-list mt-32">
-  <li class="sb-bordered-list-item">
-  <div class="d-flex flex-ai-center">
-  <div class="sb-bordered-list-item-title">Files imported (03)&#x200E;</div>
-  <div class="sb-bordered-list-item-title-extra ml-16">Total size: 75KB</div>
+  <!--Display output-->
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
   </div>
-  </li>
-  <li class="sb-bordered-list-item">
-  <div class="d-flex flex-ai-center">
-  <div class="sb-bordered-list-item-heading">File_1.gsa</div>
-  <div class="sb-bordered-list-item-subheading ml-16">19 February 2019 at 6:40 PM, 25KB</div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.demoCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
   </div>
-  </li>
-  <li class="sb-bordered-list-item">
-  <div class="d-flex flex-ai-center">
-  <div class="sb-bordered-list-item-heading">File_2.gsa</div>
-  <div class="sb-bordered-list-item-subheading ml-16">19 February 2019 at 6:40 PM, 25KB</div>
-  </div>
-  </li>
-  </ul>
-
-<div class="mt-32"></div>
-  <div class="offline-telemetry-page-title">
-   About App
- </div>
-
-<h2 class="about-app-heading">DIKSHA Lite Desktop App</h2>
-<div class="d-flex flex-jc-space-between">
-<div class="">
-  <dl class="mt-8 mb-0">
-    <div class="d-flex">
-      <dt class="description-list-key description-list-key-small">Version:</dt>
-      <dd class="description-list-value description-list-value-small">0.12.12</dd>
-    </div>
-  </dl>
-  <dl class="mt-8 mb-0">
-    <div class="d-flex">
-      <dt class="description-list-key description-list-key-small">Release Date:</dt>
-      <dd class="description-list-value description-list-value-small">12/12/19</dd>
-    </div>
-  </dl>
-  <dl class="mt-8 mb-0">
-    <div class="d-flex">
-      <dt class="description-list-key description-list-key-small">Supported Languages:</dt>
-      <dd class="description-list-value description-list-value-small"> English, Hindi, Tamil, Bengali</dd>
-    </div>
-  </dl>
+  <!--/Display code-->
+  
 </div>
-<div class="about-app-left-content">
-  <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Update DIKSHA Desktop</button>
-  <div class="about-app-update-text cursor-pointer mt-16">Update available for version 0.12.16</div>
-</div>
-</div>
+<!--Page Content-->
 
+
+
+
+
+
+
+ 
 
 
 

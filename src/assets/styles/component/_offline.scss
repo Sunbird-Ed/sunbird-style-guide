@@ -1,0 +1,70 @@
+.offline-page-content {
+    height:100%;
+}
+
+.offline-page-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.offline-page-subheading {
+    font-size: 18px;
+    color: #666;
+}
+
+.offline-download-card {
+    background-color: #fff;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+.offline-download-card-heading {
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+}
+  .offline-download-card-description{
+    font-size: 14px;
+    color: #333;
+  }
+  .offline-download-card-extra {
+    color: $primary-color;
+    font-size: 12px;
+  }
+
+
+
+  // telemtry & about 
+  .about-app-heading {
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .about-app-update-text {
+    text-align: right;
+    font-size: 14px;
+    color: $primary-color;
+  }
+
+  .about-app-left-content {
+    text-align: end;
+    align-self: flex-end;
+  }
+
+  .offline-telemetry-title {
+    color: $primary-color;
+    font-size: 14px;
+  }
+  .offline-telemetry-clear-title {
+    color: #E55A28;
+    font-size: 14px;
+  }
+
+  .offline-telemetry-page-title {
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    background: #024F9D;
+    padding: 16px;
+  }
