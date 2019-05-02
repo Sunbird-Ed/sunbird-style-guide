@@ -28,7 +28,7 @@
 }
 [dir="rtl"] {
   .sb-banner-close-icon.close.icon {
-    width: 16px;
+    width: $sb-banner-close-icon-width;
     margin-right: $sb-banner-close-icon-margin-right;
     font-size: $sb-banner-close-icon-font-size;
   }
