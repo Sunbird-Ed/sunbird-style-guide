@@ -30,9 +30,9 @@ import { TreenavigationComponent } from './treenavigation/treenavigation.compone
 import { OfflineComponent } from './offline/offline.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
+import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { TestPageComponent } from './test-page/test-page.component';
-
 
 
 const routes: Routes = [
@@ -67,6 +67,7 @@ const routes: Routes = [
   { path: 'offline', component: OfflineComponent},
   { path: 'banner', component: BannerComponent},
   { path: 'lists', component: ListsComponent},
+  { path: 'telemetry', component: OfflineTelemetryComponent},
   { path: 'metadata', component: MetadataComponent},
   { path: 'test-page', component: TestPageComponent}
 ];
