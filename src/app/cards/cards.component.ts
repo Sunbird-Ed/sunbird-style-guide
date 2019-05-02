@@ -16,6 +16,7 @@ export class CardsComponent implements OnInit {
       title: 'Course Card',
       demoCode: `
       <div class="masonry-grid">
+
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -47,6 +48,8 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
+
+      <!-- 2nd card -->
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -77,6 +80,8 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
+      
+      <!-- 3rd card -->
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -95,6 +100,8 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
+
+      <!-- 4th card -->
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -129,6 +136,7 @@ export class CardsComponent implements OnInit {
       </div>
       `,
       copyCode: `
+
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -160,6 +168,8 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
+
+      <!-- 2nd card -->
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -190,6 +200,8 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
+
+      <!-- 3rd card -->
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -208,6 +220,8 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
+
+      <!-- 4th card -->
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -500,6 +514,96 @@ export class CardsComponent implements OnInit {
       </div>
       </div>
       `
+    },
+    {
+      expandCode: false,
+      title: 'Offline Card with hover',
+      demoCode: `
+      <div class="sb-card relative" tabindex="0">
+<div class="sb-card-body">
+  <div class="sb-card-metas">
+    <div class="sb-card-image mr-16">
+      <img src="assets/images/book.png">
+    </div>
+    <div class="sb-card-meta course">
+      <div class="sb-card-meta-item mb-15">
+        Topic : Global positioning system and its application
+      </div>
+      <div class="sb-card-meta-item">
+        Subtopic : Limits of artificial intelligence
+      </div>
+    </div>
+  </div>
+  <h4 class="sb-card-title">
+    Data Structure and Algorithm - Assignment 1 Paperback
+  </h4>
+  <div class="sb-card-org ellipsis">
+    Academy of European Law (ERA)
+  </div>
+</div>
+<div class="sb-card-progressbar">
+  <sui-progress class="ui progress success">
+    <div class="bar" style="width: 100%;">
+      <div class="progress">100%</div>
+    </div>
+    <div class="label"></div>
+  </sui-progress>
+</div>
+<div class="sb-card-hover" *ngIf="hover">
+   <div class="sb-card-hover-content">
+     <div>
+     <div class="d-flex flex-jc-center">
+     <button class="sb-btn sb-btn-outline-white sb-btn-normal">Open</button>
+     </div>
+     <button class="sb-btn sb-btn-outline-white sb-btn-normal sb-right-icon-btn mt-16">Export<i class="sign in alternate icon"></i></button>
+     </div>
+   </div>
+</div> 
+</div>
+      `,
+      copyCode: `
+      <div class="sb-card relative" tabindex="0">
+<div class="sb-card-body">
+  <div class="sb-card-metas">
+    <div class="sb-card-image mr-16">
+      <img src="assets/images/book.png">
+    </div>
+    <div class="sb-card-meta course">
+      <div class="sb-card-meta-item mb-15">
+        Topic : Global positioning system and its application
+      </div>
+      <div class="sb-card-meta-item">
+        Subtopic : Limits of artificial intelligence
+      </div>
+    </div>
+  </div>
+  <h4 class="sb-card-title">
+    Data Structure and Algorithm - Assignment 1 Paperback
+  </h4>
+  <div class="sb-card-org ellipsis">
+    Academy of European Law (ERA)
+  </div>
+</div>
+<div class="sb-card-progressbar">
+  <sui-progress class="ui progress success">
+    <div class="bar" style="width: 100%;">
+      <div class="progress">100%</div>
+    </div>
+    <div class="label"></div>
+  </sui-progress>
+</div>
+<div class="sb-card-hover" *ngIf="hover">
+   <div class="sb-card-hover-content">
+     <div>
+     <div class="d-flex flex-jc-center">
+     <button class="sb-btn sb-btn-outline-white sb-btn-normal">Open</button>
+     </div>
+     <button class="sb-btn sb-btn-outline-white sb-btn-normal sb-right-icon-btn mt-16">Export<i class="sign in alternate icon"></i></button>
+     </div>
+   </div>
+</div> 
+</div>
+      `
     }
   ];
 
@@ -514,3 +618,8 @@ export class CardsComponent implements OnInit {
   }
 
 }
+
+
+
+
+

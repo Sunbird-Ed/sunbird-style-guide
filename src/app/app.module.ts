@@ -45,8 +45,10 @@ import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { FiltersComponent } from './filters/filters.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
-import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
+import { ExploreFilterComponent } from './explore-filter/explore-filter.component';
+import { TestPageComponent } from './test-page/test-page.component';
 
 import { CustomerService } from './services/table-data.service';
 
@@ -60,6 +62,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadroomModule } from '@ctrl/ngx-headroom';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
+import { MetadataComponent } from './metadata/metadata.component';
 import { OfflineComponent } from './offline/offline.component';
 import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 /**
@@ -106,8 +109,17 @@ export function hljsLanguages() {
     TooltipComponent,
     MenusComponent,
     WorkspaceComponent,
+    FiltersComponent,
     TreenavigationComponent,
-    WorkspaceFilterComponent,SortableTableDirective, SortableColumnComponent, BannerComponent, ListsComponent, OfflineComponent, OfflineTelemetryComponent
+    SortableColumnComponent,
+    BannerComponent,
+    ListsComponent,
+    OfflineComponent,
+    ExploreFilterComponent,
+    SortableTableDirective,
+    MetadataComponent,
+    OfflineTelemetryComponent,
+    TestPageComponent
   ],
   imports: [
     BrowserModule,

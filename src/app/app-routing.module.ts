@@ -24,12 +24,16 @@ import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { ExploreFilterComponent } from './explore-filter/explore-filter.component';
+import { FiltersComponent } from './filters/filters.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
-import { WorkspaceFilterComponent } from './workspace-filter/workspace-filter.component';
 import { OfflineComponent } from './offline/offline.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
 import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
+import { MetadataComponent } from './metadata/metadata.component';
+import { TestPageComponent } from './test-page/test-page.component';
+
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -57,12 +61,15 @@ const routes: Routes = [
   { path: 'tooltip', component: TooltipComponent},
   { path: 'menus', component: MenusComponent},
   { path: 'workspace', component: WorkspaceComponent},
+  { path: 'filters', component: FiltersComponent},
   { path: 'treenavigation', component: TreenavigationComponent},
-  { path: 'workspace-filter', component: WorkspaceFilterComponent},
+  { path: 'explore-filter', component: ExploreFilterComponent},
   { path: 'offline', component: OfflineComponent},
   { path: 'banner', component: BannerComponent},
   { path: 'lists', component: ListsComponent},
-  { path: 'telemetry', component: OfflineTelemetryComponent}
+  { path: 'telemetry', component: OfflineTelemetryComponent},
+  { path: 'metadata', component: MetadataComponent},
+  { path: 'test-page', component: TestPageComponent}
 ];
 
 @NgModule({
