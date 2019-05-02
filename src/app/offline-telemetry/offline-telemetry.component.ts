@@ -9,7 +9,7 @@ export class OfflineTelemetryComponent implements OnInit {
 
   constructor() { }
 
-  pageTitle = 'Offline - Telemetry';
+  pageTitle = 'Offline - Telemetry (Desktop App)';
 
   sections = [
     {
