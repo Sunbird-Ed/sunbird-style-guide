@@ -138,6 +138,31 @@
 
 
 /* new filter */
+
+
+.sb-pagination-container .sb-pagination .no-border {
+    background: $primary-100;
+    border-top: 0.5px solid $primary-100;
+}
+
+.sb-explore-filter {
+    top: $base-block-space*7;
+    background: $white;
+    box-shadow: 0 0 31px -9px rgba(0,0,0,0.5);
+    padding: $base-block-space*2 $base-block-space*3;
+    // -webkit-animation: fadeIn 1s;
+    // animation: fadeIn 1s;
+    // transition: 1s all;
+    &.sb-posi-absolute {
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+
+
+
+
 .sb-workspace-filter-view {
     min-width:800px;
 }
