@@ -64,6 +64,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { OfflineComponent } from './offline/offline.component';
+import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -110,13 +111,14 @@ export function hljsLanguages() {
     WorkspaceComponent,
     FiltersComponent,
     TreenavigationComponent,
-    SortableColumnComponent, 
-    BannerComponent, 
-    ListsComponent, 
+    SortableColumnComponent,
+    BannerComponent,
+    ListsComponent,
     OfflineComponent,
     ExploreFilterComponent,
-    SortableTableDirective, 
+    SortableTableDirective,
     MetadataComponent,
+    OfflineTelemetryComponent,
     TestPageComponent
   ],
   imports: [
