@@ -15,7 +15,7 @@
 }
 
 .font-weight-bold {
-  font-weight: bold !important;;
+  font-weight: 700;
 }
 
 .cursor-text {
@@ -97,4 +97,8 @@ a{
 
 .text-success {
   color: #07BC81;
+}
+
+.sb-break-line {
+  height: 1px;background-color:$gray-100;border: 0px;
 }

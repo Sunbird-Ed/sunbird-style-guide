@@ -19,120 +19,61 @@ export class FooterComponent implements OnInit {
     expandCode: false,
     title: 'Footer Bar',
     demoCode: `
-    <footer class="footer" *ngIf="showFooter">
-    <div class="ui container">
-  <div class="ui grid stackable">
-    <div class="four wide column footerMenu mr-auto">
-      <ul class="p-0 m-0">
-        <li class="mb-15">
-          <a>
-            Verticals
-          </a>
-        </li>
-        <li class="mb-15">
-          <a>
-            Help Center
-          </a>
-        </li>
-        <li class="mb-15">
-          <a>
-            Partners
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="download-diksha">
-      <div class="diksha-logo p-15">
-        <div class="mobile-circles">
-          <div class="big-box border-round border-r50"></div>
-          <div class="oval-box border-round ml-20 ml-10"></div>
-          <div class="small-box border-round border-r50 ml-20 mr-10"></div>
-          <div class="small-box border-round border-r50"></div>
-        </div>
-        <label class="d-block pb-10">Download DIKSHA for Mobile</label>
-        <a class="d-block pb-10 app-download">
-          <img class="playStore-img" src="/assets/images/google_playstore.png"
-            alt="">
-        </a>
-        <p class="d-block">Get unlimited access to textbooks, lessons and courses offline on your mobile phone.</p>
-      </div>
-    </div>
-    <div class="four wide column contantDetails">
-      <label class="d-block mb-10">
-        Contact for queries:
-      </label>
-      <a class="d-block mb-30">
-        support@diksha-ncte.freshdesk.com
-      </a>
-      <label class="d-block">
-        <a >
-          Terms of use
-        </a>
-        <span>| &copy; 2019, DIKSHA</span>
-      </label>
-    </div>
-  </div>
-</div>
-</footer>
+    
       `,
     copyCode: `
-    <footer class="footer" *ngIf="showFooter">
+    <footer class="footer">
     <div class="ui container">
-  <div class="ui grid stackable">
-    <div class="four wide column footerMenu mr-auto">
-      <ul class="p-0 m-0">
-        <li class="mb-15">
-          <a>
-            Verticals
-          </a>
-        </li>
-        <li class="mb-15">
-          <a>
-            Help Center
-          </a>
-        </li>
-        <li class="mb-15">
-          <a>
-            Partners
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="download-diksha">
-      <div class="diksha-logo p-15">
-        <div class="mobile-circles">
-          <div class="big-box border-round border-r50"></div>
-          <div class="oval-box border-round ml-20 ml-10"></div>
-          <div class="small-box border-round border-r50 ml-20 mr-10"></div>
-          <div class="small-box border-round border-r50"></div>
+      <div class="ui grid stackable px-16">
+        <div class="four wide column footerMenu mr-auto">
+          <ul class="p-0 m-0">
+            <li class="mb-16">
+              <a href="javascript:void(0)" title="Verticals">Verticals</a>
+            </li>
+            <li class="mb-16">
+              <a href="javascript:void(0)" title="Help Center">
+                Help Center
+              </a>
+            </li>
+            <li class="mb-16">
+              <a href="javascript:void(0)" title="Partners">
+                Partners
+              </a>
+            </li>
+          </ul>
         </div>
-        <label class="d-block pb-10">Download DIKSHA for Mobile</label>
-        <a class="d-block pb-10 app-download">
-          <img class="playStore-img" src="/assets/images/google_playstore.png"
-            alt="">
-        </a>
-        <p class="d-block">Get unlimited access to textbooks, lessons and courses offline on your mobile phone.</p>
+
+        <div class="download-diksha">
+          <div class="diksha-logo p-16">
+            <div class="mobile-circles">
+              <div class="big-box border-round border-r50"></div>
+              <div class="oval-box border-round ml-16"></div>
+              <div class="small-box border-round border-r50 ml-24 mr-8"></div>
+              <div class="small-box border-round border-r50"></div>
+            </div>
+            <label class="d-block mb-8">Download DIKSHA for Mobile</label>
+            <a href="javascript:void(0)" class="d-block pb-8 app-download">
+              <img class="playStore-img" src="assets/images/google_playstore.png" alt="">
+            </a>
+            <p class="d-block">Get unlimited access to textbooks, lessons and courses offline on your mobile phone.
+            </p>
+          </div>
+        </div>
+        <div class="four wide column contantDetails">
+          <label class="d-block mb-8">
+            Contact for queries:
+          </label>
+          <a  href="mailto:support@diksha-ncte.freshdesk.com" class="d-block mb-32">
+            support@diksha-ncte.freshdesk.com
+          </a>
+          <label class="d-block">
+            <a href="javascript:void(0)">Terms of use</a>
+            <span>| &copy; 2019, DIKSHA</span>
+          </label>
+        </div>
       </div>
     </div>
-    <div class="four wide column contantDetails">
-      <label class="d-block mb-10">
-        Contact for queries:
-      </label>
-      <a class="d-block mb-30">
-        support@diksha-ncte.freshdesk.com
-      </a>
-      <label class="d-block">
-        <a >
-          Terms of use
-        </a>
-        <span>| &copy; 2019, DIKSHA</span>
-      </label>
-    </div>
-  </div>
-</div>
-</footer>
+  </footer>
       `
   }];
 
