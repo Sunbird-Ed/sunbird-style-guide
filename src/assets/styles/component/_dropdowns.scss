@@ -11,3 +11,16 @@
     
     }
 }
+
+
+.sb-btn-dropdown {
+    &.ui.dropdown {
+        .menu {
+          top:100%;
+          >.item {
+            font-size:$font-size-sm;
+          }
+      }
+    }
+  }
+
