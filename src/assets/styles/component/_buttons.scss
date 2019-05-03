@@ -207,7 +207,7 @@ input[type="button"] {
 .sb-btn-link-primary, .sb-btn-link-info{
     @include btn-theme-links($primary-color);
     &:hover,&:active {
-        background: $primary-0;
+        background: $primary-100;
     }
 } 
 .sb-btn-link-secondary, .sb-btn-link-success{
