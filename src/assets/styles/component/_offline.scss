@@ -68,3 +68,22 @@
     background: #024F9D;
     padding: 16px;
   }
+
+   // offline video
+   .offline-watch-video{
+    height: 450px;
+    width: 790px;
+  }
+  .offline-video{
+    height: 100%;
+    width:100%;
+  }
+  .offline-video-heading{
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .offline-video-title{
+    color: $primary-color;
+    font-size: 14px;
+  }

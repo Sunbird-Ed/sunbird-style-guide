@@ -100,6 +100,29 @@ export class OfflineComponent implements OnInit {
       copyCode: `
       
       `
+    },
+    {
+      expandCode: false,
+      title: 'How to video',
+      demoCode: `
+      <div class="ui stackable grid">
+      <div class="column">
+        <div class="offline-watch-video mx-auto">
+          <div class="mb-16">
+            <span class="offline-video-heading">How to Video</span>
+            <span class="offline-video-title right-floated"><i class="download icon"></i> Download PDF</span>
+          </div>
+          <video controls="" class="offline-video">
+            <source
+              src="https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_312719162116210688118940/1e9id3spwfzvobzbuyonlibqgwl2r-de6_1_streamed.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+      `,
+      copyCode: `
+      
+      `
     }
    
   ];
