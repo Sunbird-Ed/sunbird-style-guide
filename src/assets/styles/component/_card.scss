@@ -216,18 +216,14 @@ app-card[lang="ur"] {
 
 // Batch Card
 
-.sb-course-batch-card {
-  border: 1px solid $primary-200 !important;
-  box-shadow: none !important;
-  .header {
+.ui.card.sb-batch-card{
+  border: 1px solid $primary-200;
+  box-shadow: none;
+}
+.sb-batch-card {
+  .sb-batch-card-title {
     font-weight: 600;
     font-size: 1.18em;
-  }
-  .item{
-    padding: 10px 0 !important;
-    .content >.header{
-      padding-bottom: 5px;
-    }
   }
   .item i.icon {
     font-size: 16.002px;
@@ -235,11 +231,20 @@ app-card[lang="ur"] {
   .sb-no-batch-found {
     background-color: $tertiary-0;
     border: 1px solid $tertiary-100;
-    padding: 8px 16px;
+    padding: ($base-block-space $base-block-space*2);
     border-radius: 4px;
     font-size: 11.9994px;
   }
 }
-.sb-course-batch-card > .content{
-  padding: 0 1rem !important;
+.ui.card.sb-batch-card{
+  .item{
+    padding: 10px 0;
+    .content >.header{
+      padding-bottom: 5px;
+    }
+  }
+}
+.ui.card.sb-batch-card > .sb-batch-card-content{
+  padding: 0 1rem;
+  border-top: 1px solid rgba(34,36,38,.1);
 }
