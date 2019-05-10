@@ -123,6 +123,92 @@ export class OfflineComponent implements OnInit {
       copyCode: `
       
       `
+    },
+    {
+      expandCode: false,
+      title: 'Import content',
+      demoCode: `
+     <div class="ui grid sb-offline-import-content">
+     <div class="six wide column sb-offline-import-content-column">
+     <div class="sb-offline-imports sb-offline-import-content-border">
+     <div class="ui container sb-offline-area d-flex">
+       <div class="sb-import-icon">
+       <img src="./assets/images/offline-import-file.png" alt="offline import">
+       </div>
+       <div class="sb-import-content">
+         <h4 class="sb-import-content-title">Import content</h4>
+         <p class="mt-8 mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
+       </div>
+       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
+         Import Files
+       </button>
+     </div>
+    </div>
+    </div>
+    <div class="six wide column sb-offline-import-content-column">
+    <div class="sb-offline-imports">
+    <div class="ui container sb-offline-area d-flex">
+      <div class="sb-import-icon sb-import-icon-watch-video">
+      <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+      </div>
+      <div class="sb-import-content">
+        <h4 class="sb-import-content-title">How to video</h4>
+        <dl class="mt-8 mb-0">
+      <div class="d-flex">
+        <dt class="sb-offline-import-description-list-key">Subtopic :</dt>
+        <dd class="sb-offline-import-description-list-value">Limits of artificial intelligence</dd>
+      </div>
+    </dl>
+      </div>
+      <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto sb-btn-tertiary">
+        watch video
+      </button>
+    </div>
+   </div>
+   </div>
+     </div>
+      `,
+      copyCode: `
+      <div class="ui grid sb-offline-import-content">
+      <div class="six wide column sb-offline-import-content-column">
+      <div class="sb-offline-imports sb-offline-import-content-border">
+      <div class="ui container sb-offline-area d-flex">
+        <div class="sb-import-icon">
+        <img src="./assets/images/offline-import-file.png" alt="offline import">
+        </div>
+        <div class="sb-import-content">
+          <h4 class="sb-import-content-title">Import content</h4>
+          <p class="mt-8 mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
+        </div>
+        <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
+          Import Files
+        </button>
+      </div>
+     </div>
+     </div>
+     <div class="six wide column sb-offline-import-content-column">
+     <div class="sb-offline-imports">
+     <div class="ui container sb-offline-area d-flex">
+       <div class="sb-import-icon sb-import-icon-watch-video">
+       <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+       </div>
+       <div class="sb-import-content">
+         <h4 class="sb-import-content-title">How to video</h4>
+         <dl class="mt-8 mb-0">
+       <div class="d-flex">
+         <dt class="sb-offline-import-description-list-key">Subtopic :</dt>
+         <dd class="sb-offline-import-description-list-value">Limits of artificial intelligence</dd>
+       </div>
+     </dl>
+       </div>
+       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto sb-btn-tertiary">
+         watch video
+       </button>
+     </div>
+    </div>
+    </div>
+      </div>
+      `
     }
    
   ];
