@@ -33,6 +33,8 @@ import { ListsComponent } from './lists/lists.component';
 import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { TestPageComponent } from './test-page/test-page.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import {HelpPageComponent} from './help-page/help-page.component';
 
 
 const routes: Routes = [
@@ -69,7 +71,9 @@ const routes: Routes = [
   { path: 'lists', component: ListsComponent},
   { path: 'telemetry', component: OfflineTelemetryComponent},
   { path: 'metadata', component: MetadataComponent},
-  { path: 'test-page', component: TestPageComponent}
+  { path: 'test-page', component: TestPageComponent},
+  { path: 'accordion', component: AccordionComponent},
+  { path: 'help-page', component: HelpPageComponent}
 ];
 
 @NgModule({

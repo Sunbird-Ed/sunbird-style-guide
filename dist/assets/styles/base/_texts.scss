@@ -1,3 +1,5 @@
+@import "../../assets/styles/base/variables";
+
 .text-capitalize {
   text-transform: capitalize;
 }
@@ -23,6 +25,9 @@
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.right-floated {
+  float: right !important;
 }
 .va-bottom {
   vertical-align: bottom !important;
@@ -99,6 +104,19 @@ a{
   color: #07BC81;
 }
 
+.sb-info-text {
+  color: $gray-400;
+  font-size: 12px;
+}
+
+*[dir="ltr"] .right-floated {
+  float: right !important;
+}
+*[dir="rtl"] .right-floated {
+  float: left !important;
+}
 .sb-break-line {
-  height: 1px;background-color:$gray-100;border: 0px;
+  height: 1px;
+  background-color:$gray-100;
+  border: 0px;
 }
