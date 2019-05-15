@@ -5,7 +5,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
   templateUrl: './cards.component.html'
 })
 export class CardsComponent implements OnInit {
-  hover;
   constructor() { }
 
 
@@ -700,13 +699,6 @@ export class CardsComponent implements OnInit {
   ];
 
   ngOnInit() {
-  }
-  @HostListener('mouseenter') onMouseEnter() {
-    this.hover = true;
-  }
-
-  @HostListener('mouseleave') onMouseLeave() {
-    this.hover = false;
   }
 
 }

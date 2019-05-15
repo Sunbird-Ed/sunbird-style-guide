@@ -9,11 +9,13 @@
   border-radius: $sb-card-border-radius;
   cursor: pointer;
   overflow: hidden;
-
-  @media screen and (min-width: 340px) {
-    max-width: $sb-card-width;
+  margin-top: $sb-card-hover-movement;
+  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+  transition-delay: .1s;
+  &:hover {
+    transform: translate(0, -$sb-card-hover-movement);
+    box-shadow: $sb-card-box-shadow;
   }
-
   .sb-card-body {
     height: $sb-card-body-height;
     padding: $sb-card-padding;
