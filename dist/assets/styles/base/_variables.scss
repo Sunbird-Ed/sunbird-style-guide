@@ -112,7 +112,7 @@ $secondary-200: lighten($secondary-color,10%);   // button hover
 $secondary-400: $secondary-color;               // icon
 */
 
-$secondary-0: #E1FFDF; // toast bg
+$secondary-0: #E1FFDF; // toast bg, label
 $secondary-100: #00C786; // buttong bg, toast
 $secondary-200: #07bc81; // button bg
 $secondary-400: $secondary-color; // hover
@@ -123,7 +123,7 @@ $tertiary-100: lighten($tertiary-color,15%); // buttong bg, toast
 $tertiary-400: $tertiary-color; // icon, label, notification bg
 */
 
-$tertiary-0: #FEEDD7; // toast bg
+$tertiary-0: #FEEDD7; // toast bg, label
 $tertiary-100: #FFA11D; // buttong bg, toast
 $tertiary-400: $tertiary-color; // icon, label, notification bg
 /*
@@ -146,6 +146,8 @@ $success-color: $secondary-200;
 $warning-color: $tertiary-400;
 $danger-color: $red-100;
 // Settings for the `<body>` element.
+$body-background-color: $primary-0;
+$default-text-color: $gray-800;
 $bg-body: $primary-0;
 $body-color: $gray-800;
 $theme-colors: () !default;
@@ -242,6 +244,7 @@ $sb-label-font-size: 0.8571rem;
 
 
 
+
 // buttons
 
 /* dashed button */
@@ -317,7 +320,7 @@ $sb-page-sections-divider-color: $gray-0 !important;
 // card component
 $sb-card-width: 292px;
 $sb-card-height: 200px;
-$sb-card-body-height: 194px;
+$sb-card-body-height: 204px;
 $sb-card-progressbar-height: 4px;
 $sb-card-hover-movement: 3px;
 $sb-card-padding: ($base-block-space * 2) ($base-block-space * 2) ($base-block-space) ($base-block-space * 2);
@@ -466,6 +469,31 @@ $sb-bordered-list-item-first-child-padding: ($base-block-space * 1) ($base-block
 $sb-bordered-list-item-first-child-background: $white-color;
 
 
+
+// label 
+$sb-label-status-width: 130px;
+$sb-label-status-height: 32px;
+$sb-label-status-padding: 5px;
+$sb-label-status-font-size: 14px;
+$sb-label-status-before-border: 1px solid teal;
+$sb-label-status-before-top: -11%;
+$sb-label-status-before-bottom: -11%;
+$sb-label-status-before-left: -2%;
+$sb-label-status-before-right: -3%;
+$sb-label-status-before-border-bottom-left-radius: 10px;
+$sb-label-status-before-border-bottom-right-radius: 10px;
+$sb-label-status-success-border-color: $secondary-0;
+$sb-label-status-success-background-color: $secondary-0;
+$sb-label-status-error-background-color: $tertiary-0;
+$sb-label-status-error-border-color: $tertiary-0;
+$sb-label-status-error-color:  $tertiary-color;
+$sb-label-status-success-color: $secondary-color;
+$sb-label-status-indicator-height: 8px;
+$sb-label-status-indicator-width: 8px;
+$sb-label-status-indicator-border-radius: 50%;
+$sb-label-status-indicator-margin-right: 4px;
+$sb-label-status-indicator-success-background: $secondary-color;
+$sb-label-status-indicator-error-background: $tertiary-color;
 
 
 
