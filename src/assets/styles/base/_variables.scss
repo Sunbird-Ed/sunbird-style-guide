@@ -146,6 +146,8 @@ $success-color: $secondary-200;
 $warning-color: $tertiary-400;
 $danger-color: $red-100;
 // Settings for the `<body>` element.
+$body-background-color: $primary-0;
+$default-text-color: $gray-800;
 $bg-body: $primary-0;
 $body-color: $gray-800;
 $theme-colors: () !default;
@@ -317,7 +319,7 @@ $sb-page-sections-divider-color: $gray-0 !important;
 // card component
 $sb-card-width: 292px;
 $sb-card-height: 200px;
-$sb-card-body-height: 194px;
+$sb-card-body-height: 204px;
 $sb-card-progressbar-height: 4px;
 $sb-card-padding: ($base-block-space * 2) ($base-block-space * 2) ($base-block-space) ($base-block-space * 2);
 $sb-card-border-radius: ($base-block-space / 2);
