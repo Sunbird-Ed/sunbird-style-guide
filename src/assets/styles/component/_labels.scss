@@ -161,3 +161,60 @@
         border-radius: $base-block-space/4;
     }
 }
+
+
+//network status label offline
+.sb-label-status {
+   width: $sb-label-status-width; 
+   position: relative;
+   padding: $sb-label-status-padding;
+   height:$sb-label-status-height;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   font-size:$sb-label-status-font-size;
+   z-index: 2;
+    &:before {
+        content: "";
+        position: absolute;
+        border: $sb-label-status-before-border; 
+        top: $sb-label-status-before-top;
+        bottom: $sb-label-status-before-bottom;
+        left: $sb-label-status-before-left;
+        right: $sb-label-status-before-right;
+        z-index: -1;
+        -webkit-transform: perspective(60px) rotateX(-40deg);
+        transform: perspective(200px) rotateX(-40deg);
+        border-bottom-left-radius: $sb-label-status-before-border-bottom-left-radius;
+        border-bottom-right-radius: $sb-label-status-before-border-bottom-right-radius;
+
+    }
+    &.sb-label-status-success:before {
+        border-color: $sb-label-status-success-border-color;
+        background-color: $sb-label-status-success-background-color;
+    }
+    &.sb-label-status-error:before {
+        border-color:$sb-label-status-error-border-color;  
+        background-color:$sb-label-status-error-background-color;
+    }
+    .sb-label-status-indicator {
+        height: $sb-label-status-indicator-height;
+        width: $sb-label-status-indicator-width;
+        display: inline-block;
+        border-radius: $sb-label-status-indicator-border-radius;
+        margin-right: $sb-label-status-indicator-margin-right;
+        &.sb-label-status-indicator-error {
+            background: $sb-label-status-indicator-error-background;
+        }
+        &.sb-label-status-indicator-success {
+            background: $sb-label-status-indicator-success-background;
+        }
+    }
+ }
+
+ .sb-label-status-error {
+    color: $sb-label-status-error-color;  
+  }
+  .sb-label-status-success {
+    color: $sb-label-status-success-color;  
+  }

@@ -1,0 +1,68 @@
+@import "../../assets/styles/base/variables";
+
+
+::ng-deep {
+
+    .ui.styled.accordion .accordion .content,
+    .ui.styled.accordion .content {
+        padding: 0;
+    }
+
+    .ui.styled.accordion .active.title,
+    .ui.styled.accordion .accordion .active.title {
+        padding: ($base-block-space * 2);
+        color: $primary-400;
+    }
+
+    .ui.styled.accordion .accordion .title,
+    .ui.styled.accordion .title {
+        padding: ($base-block-space * 2);
+        color: $gray-800;
+    }
+
+    .ui.accordion .active.title .chevron.down.icon {
+        transform: rotate(180deg);
+    }
+
+}
+
+
+.ui.styled.sb-accordion.accordion,
+.ui.styled.sb-accordion.accordion .accordion {
+    box-shadow: none;
+}
+.help-section-title {
+    font-size: 16px;
+    color: $gray-800;
+}
+
+.sb-help-section-subheading {
+    color: $gray-800;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sb-help-section-extra {
+    color: $gray-800;
+    font-size: 12px;
+}
+
+.sb-help-section-heading {
+    font-size: 14px;
+    color: $gray-800;
+}
+
+.sb-accordion-content {
+    background-color: $primary-0;
+    padding: ($base-block-space * 2);
+}
+
+.sb-accordion-text {
+  color: $gray-800;
+  font-size: 14px;
+}
+
+.sb-accordion-footer {
+    padding: ($base-block-space * 3);
+    font-size: 12px;
+}

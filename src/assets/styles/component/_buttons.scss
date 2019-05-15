@@ -303,17 +303,34 @@ input[type="button"] {
 
 // Buttons with icon
 
-.sb-right-icon-btn {
-    padding: ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 2);
-    i.icon{
-        margin-left: $base-block-space;
-        margin-right: 0;
+*[dir="ltr"] {
+    .sb-right-icon-btn {
+        padding: ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 2);
+        i.icon{
+            margin-left: $base-block-space;
+            margin-right: 0;
+        }
+    }
+    .sb-left-icon-btn {
+        padding: ($base-block-space * 1)  ($base-block-space * 2)  ($base-block-space * 1)  ($base-block-space * 1);
+        i.icon{
+            margin-right: $base-block-space;
+        }
     }
 }
-.sb-left-icon-btn {
-    padding: ($base-block-space * 1)  ($base-block-space * 2)  ($base-block-space * 1)  ($base-block-space * 1);
-    i.icon{
-        margin-right: $base-block-space;
+*[dir="rtl"] {
+    .sb-right-icon-btn {
+        padding: ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 1)  ($base-block-space * 2);
+        i.icon{
+            margin-left: 0;
+            margin-right: $base-block-space;
+        }
+    }
+    .sb-left-icon-btn {
+        padding: ($base-block-space * 1)  ($base-block-space * 2)  ($base-block-space * 1)  ($base-block-space * 1);
+        i.icon{
+            margin-left: $base-block-space;
+        }
     }
 }
 .sb-left-icon-btn.sb-btn-xs {
