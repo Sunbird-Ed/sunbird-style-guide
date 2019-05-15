@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 export class LabelsComponent implements OnInit {
 
   constructor() { }
-
   pageTitle = 'Labels';
   sections = [
     {
@@ -28,7 +27,27 @@ export class LabelsComponent implements OnInit {
       <div class="sb-label sb-label-table sb-label-gray-0">Review</div>
       `
     },
-   
+    {
+      expandCode: false,
+      title: 'label States',
+      demoCode: `
+      <div class="sb-label-status sb-label-status-success">
+      <span class="sb-label-status-indicator sb-label-status-indicator-success"></span>You are online
+    </div>
+    <div class="sb-label-status sb-label-status-error mt-16">
+    <span class="sb-label-status-indicator sb-label-status-indicator-error"></span>You are offline
+    </div>
+      `,
+      copyCode: `
+      <div class="sb-label-status sb-label-status-success">
+      <span class="sb-label-status-indicator sb-label-status-indicator-success"></span>You are online
+    </div>
+    <div class="sb-label-status sb-label-status-error">
+    <span class="sb-label-status-indicator sb-label-status-indicator-error"></span>You are offline
+  </div>
+      `
+    },
+
   ];
 
   ngOnInit() {

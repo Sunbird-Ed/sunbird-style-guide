@@ -1,3 +1,5 @@
+@import "../../assets/styles/base/variables";
+
 .text-capitalize {
   text-transform: capitalize;
 }
@@ -97,4 +99,16 @@ a{
 
 .text-success {
   color: #07BC81;
+}
+
+.sb-info-text {
+  color: #666;
+  font-size: 12px;
+}
+
+*[dir="ltr"] .right-floated {
+  float: right !important;
+}
+*[dir="rtl"] .right-floated {
+  float: left !important;
 }
