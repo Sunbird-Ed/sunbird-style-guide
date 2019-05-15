@@ -5,7 +5,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
   templateUrl: './cards.component.html'
 })
 export class CardsComponent implements OnInit {
-  hover;
   constructor() { }
 
 
@@ -558,7 +557,7 @@ export class CardsComponent implements OnInit {
      <button class="sb-btn sb-btn-outline-white sb-btn-normal sb-right-icon-btn mt-16">Export<i class="sign in alternate icon"></i></button>
      </div>
    </div>
-</div> 
+</div>
 </div>
       `,
       copyCode: `
@@ -601,25 +600,105 @@ export class CardsComponent implements OnInit {
      <button class="sb-btn sb-btn-outline-white sb-btn-normal sb-right-icon-btn mt-16">Export<i class="sign in alternate icon"></i></button>
      </div>
    </div>
-</div> 
 </div>
+</div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Batch Card with list',
+      demoCode: `
+      <div class="ui card sb-batch-card">
+      <div class="p-16">
+        <h4 class="sb-batch-card-title">Batches</h4>
+      </div>
+      <div class="sb-batch-card-content">
+        <div class="ui divided list">
+        <div class="item">
+            <i class="calendar outline icon"></i>
+            <div class="content width-100">
+            <button class="ui right floated sb-btn sb-btn-outline-primary sb-btn-normal">Enroll</button>
+            <span class="header pb-5"> 6th May 2019 - </span>
+            <div class="description">Created by Creation </div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="icon right-floated cursor-pointer write"></i>
+            <i class="calendar outline icon"></i>
+            <div class="content width-100">
+            <span class="header pb-5"> 7th May 2019 - </span>
+            <div class="description">Created by Creation </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="ui bottom attached sb-btn sb-btn-primary sb-left-icon-btn sb-btn-md no-border">
+        <i class="add icon"></i>Create Batch
+      </button>
+    </div>
+      `,
+      copyCode: `
+      <div class="ui card sb-batch-card">
+      <div class="p-16">
+        <h4 class="sb-batch-card-title">Batches</h4>
+      </div>
+      <div class="sb-batch-card-content">
+        <div class="ui divided list">
+        <div class="item">
+            <i class="calendar outline icon"></i>
+            <div class="content width-100">
+            <button class="ui right floated sb-btn sb-btn-outline-primary sb-btn-normal">Enroll</button>
+            <span class="header pb-5"> 6th May 2019 - </span>
+            <div class="description">Created by Creation </div>
+            </div>
+        </div>
+        <div class="item">
+            <i class="icon right-floated cursor-pointer write"></i>
+            <i class="calendar outline icon"></i>
+            <div class="content width-100">
+            <span class="header pb-5"> 7th May 2019 - </span>
+            <div class="description">Created by Creation </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="ui bottom attached sb-btn sb-btn-primary sb-left-icon-btn sb-btn-md no-border">
+        <i class="add icon"></i>Create Batch
+      </button>
+    </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Batch Card without list',
+      demoCode: `
+      <div class="ui card sb-batch-card">
+      <div class="p-16">
+        <h4 class="sb-batch-card-title">Batches</h4>
+      </div>
+      <div class="sb-batch-card-content">
+        <div class="my-16">
+          <div class="sb-no-batch-found">No Batch Found</div>
+        </div>
+      </div>
+    </div>
+      `,
+      copyCode: `
+      <div class="ui card sb-batch-card">
+      <div class="p-16">
+        <h4 class="sb-batch-card-title">Batches</h4>
+      </div>
+      <div class="sb-batch-card-content">
+        <div class="my-16">
+          <div class="sb-no-batch-found">No Batch Found</div>
+        </div>
+      </div>
+    </div>
       `
     }
   ];
 
   ngOnInit() {
   }
-  @HostListener('mouseenter') onMouseEnter() {
-    this.hover = true;
-  }
-
-  @HostListener('mouseleave') onMouseLeave() {
-    this.hover = false;
-  }
 
 }
-
-
-
-
-

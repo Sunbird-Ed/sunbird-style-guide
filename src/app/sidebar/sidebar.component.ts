@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-sidebar',
   styles:[`
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   `],
   templateUrl: './sidebar.component.html'
 })
+
 export class SidebarComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
+
+   
+
   }
 
 }
+
+

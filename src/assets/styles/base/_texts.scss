@@ -17,7 +17,7 @@
 }
 
 .font-weight-bold {
-  font-weight: bold !important;;
+  font-weight: 700;
 }
 
 .cursor-text {
@@ -25,6 +25,9 @@
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.right-floated {
+  float: right !important;
 }
 .va-bottom {
   vertical-align: bottom !important;
@@ -102,7 +105,7 @@ a{
 }
 
 .sb-info-text {
-  color: #666;
+  color: $gray-400;
   font-size: 12px;
 }
 
@@ -111,4 +114,9 @@ a{
 }
 *[dir="rtl"] .right-floated {
   float: left !important;
+}
+.sb-break-line {
+  height: 1px;
+  background-color:$gray-100;
+  border: 0px;
 }

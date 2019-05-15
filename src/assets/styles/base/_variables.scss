@@ -169,8 +169,8 @@ $h3-font-size: $font-size-base * 1.714; // 24px
 $h4-font-size: $font-size-base * 1.429; // 20px
 $h5-font-size: $font-size-base * 1.143; // 16px
 $h6-font-size: $font-size-base * 1; // 14px
-$font-size-lg: ($h4-font-size); //20px
-$font-size-md: ($h5-font-size); // 16px
+$font-size-lg: $h4-font-size; //20px
+$font-size-md: $h5-font-size; // 16px
 $font-size-normal: ($font-size-base * 1); // 14px
 $font-size-sm: ($font-size-base * 0.8571); // 12px
 $font-size-xs: ($font-size-base * 0.7143); // 10px
@@ -320,6 +320,7 @@ $sb-card-width: 292px;
 $sb-card-height: 200px;
 $sb-card-body-height: 194px;
 $sb-card-progressbar-height: 4px;
+$sb-card-hover-movement: 3px;
 $sb-card-padding: ($base-block-space * 2) ($base-block-space * 2) ($base-block-space) ($base-block-space * 2);
 $sb-card-border-radius: ($base-block-space / 2);
 $sb-card-border: 0.5px solid #dedede;

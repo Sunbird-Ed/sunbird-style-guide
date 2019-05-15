@@ -57,6 +57,7 @@
       border-radius: 0px;
       padding: $base-block-space $base-block-space * 6 $base-block-space $base-block-space * 4;
       border-radius: 3px 0 0 3px;
+      background:$white;
     }
   
     .sb-btn {
@@ -112,3 +113,16 @@
       }
     }
   }
+
+*[dir="rtl"] {
+    .sb-search-box .sb-search-input {
+      border-left: .5px solid $primary-300;
+      border-right: 0px;
+      border-radius: 0px 3px 3px 0px;
+  }
+  .sb-search-box .sb-loader {
+    left:32px;
+    right: unset;
+  }
+}
+

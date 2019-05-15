@@ -5,7 +5,8 @@
   </h1>
   <!--/Page Heading-->
 
-<div class="ui stackable grid m-0 mt-48">
+  <div class="twelve wide column sb-sidebar-menu px-0 bg-white">
+<div class="ui container stackable grid m-0 mt-48 mr-0">
     <div class="two wide column sb-sidebar-menu px-0">
         <h5>My Workspace</h5>
         <ul>
@@ -29,7 +30,7 @@
                     <button class="sb-btn sb-btn-normal">Search</button>
                 </div>
 
-                <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto  sb-table-dropdown"
+                <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto sb-btn-dropdown"
                     suiDropdown autoClose="itemClick">
                     <div class="text">Sort by</div>
                     <i class="dropdown icon"></i>
@@ -40,7 +41,7 @@
                 </div>
                 <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn" (click)="toggleSbFilter()">Show Filters<i class="caret down icon"></i>
                 </button>
-                <div class="sb-explore-filter" *ngIf="sbExploreFilter" @fade>
+                <div class="sb-explore-filter sb-posi-absolute" *ngIf="sbExploreFilter" @fade>
                     <app-explore-filter></app-explore-filter>
                 </div>
                 
@@ -62,6 +63,17 @@
                             <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
                              suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick" [popupPlacement]="'bottom right'">Show Filter</button> -->
             </div>
+
+              <div class="sb-filter-label mb-16">
+    <div class="d-inline-flex"><span class="sb-label-name">Board/Syllabus:</span><span class="sb-label-value">CBSE<i class="close icon mr-0 pl-4"></i></span>
+    </div>
+        <div class="d-inline-flex"><span class="sb-label-name">Grade:</span><span class="sb-label-value">KG<i class="close icon mr-0 pl-4"></i></span>
+    </div>
+    <div class="d-inline-flex"><span class="sb-label-name">Medium:</span><span class="sb-label-value">English<i class="close icon mr-0 pl-4"></i></span></div>
+    <div class="d-inline-flex"><span class="sb-label-name">Resource Type:</span><span class="sb-label-value">Practice<i class="close icon mr-0 pl-4"></i></span></div>
+    <div class="d-inline-flex"><span class="sb-label-name">Status:</span><span class="sb-label-value">Draft<i class="close icon mr-0 pl-4"></i></span></div>
+  </div>
+
             <div class="sb-table-responsive-div">
             <table class="sb-table sb-table-hover sb-table-sortable">
                 <thead class="sb-table-header heading-large">
@@ -241,7 +253,7 @@
                     <app-explore-filter></app-explore-filter>
                 </div>
               </ng-template> -->
-
+</div>
 
 
 <br>
