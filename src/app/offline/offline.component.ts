@@ -100,6 +100,115 @@ export class OfflineComponent implements OnInit {
       copyCode: `
       
       `
+    },
+    {
+      expandCode: false,
+      title: 'How to video',
+      demoCode: `
+      <div class="ui stackable grid">
+      <div class="column">
+        <div class="offline-watch-video mx-auto">
+          <div class="mb-16">
+            <span class="offline-video-heading">How to Video</span>
+            <span class="offline-video-title right-floated"><i class="download icon"></i> Download PDF</span>
+          </div>
+          <video controls="" class="offline-video">
+            <source
+              src="https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_312719162116210688118940/1e9id3spwfzvobzbuyonlibqgwl2r-de6_1_streamed.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+      `,
+      copyCode: `
+      
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Import content',
+      demoCode: `
+     <div class="ui grid sb-offline-import-content">
+     <div class="six wide column sb-offline-import-content-column">
+     <div class="sb-offline-imports sb-offline-import-content-border">
+     <div class="ui container sb-offline-area d-flex">
+       <div class="sb-import-icon">
+       <img src="./assets/images/offline-import-file.png" alt="offline import">
+       </div>
+       <div class="sb-import-content">
+         <h4 class="sb-import-content-title">Import content</h4>
+         <p class="mt-8 mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
+       </div>
+       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
+         Import Files
+       </button>
+     </div>
+    </div>
+    </div>
+    <div class="six wide column sb-offline-import-content-column">
+    <div class="sb-offline-imports">
+    <div class="ui container sb-offline-area d-flex">
+      <div class="sb-import-icon sb-import-icon-watch-video">
+      <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+      </div>
+      <div class="sb-import-content">
+        <h4 class="sb-import-content-title">How to video</h4>
+        <dl class="mt-8 mb-0">
+      <div class="d-flex">
+        <dt class="sb-offline-import-description-list-key">Subtopic :</dt>
+        <dd class="sb-offline-import-description-list-value">Limits of artificial intelligence</dd>
+      </div>
+    </dl>
+      </div>
+      <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto sb-btn-tertiary">
+        watch video
+      </button>
+    </div>
+   </div>
+   </div>
+     </div>
+      `,
+      copyCode: `
+      <div class="ui grid sb-offline-import-content">
+      <div class="six wide column sb-offline-import-content-column">
+      <div class="sb-offline-imports sb-offline-import-content-border">
+      <div class="ui container sb-offline-area d-flex">
+        <div class="sb-import-icon">
+        <img src="./assets/images/offline-import-file.png" alt="offline import">
+        </div>
+        <div class="sb-import-content">
+          <h4 class="sb-import-content-title">Import content</h4>
+          <p class="mt-8 mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
+        </div>
+        <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
+          Import Files
+        </button>
+      </div>
+     </div>
+     </div>
+     <div class="six wide column sb-offline-import-content-column">
+     <div class="sb-offline-imports">
+     <div class="ui container sb-offline-area d-flex">
+       <div class="sb-import-icon sb-import-icon-watch-video">
+       <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+       </div>
+       <div class="sb-import-content">
+         <h4 class="sb-import-content-title">How to video</h4>
+         <dl class="mt-8 mb-0">
+       <div class="d-flex">
+         <dt class="sb-offline-import-description-list-key">Subtopic :</dt>
+         <dd class="sb-offline-import-description-list-value">Limits of artificial intelligence</dd>
+       </div>
+     </dl>
+       </div>
+       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto sb-btn-tertiary">
+         watch video
+       </button>
+     </div>
+    </div>
+    </div>
+      </div>
+      `
     }
    
   ];
