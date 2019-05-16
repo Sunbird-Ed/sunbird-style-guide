@@ -67,6 +67,7 @@ import { OfflineComponent } from './offline/offline.component';
 import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -123,7 +124,8 @@ export function hljsLanguages() {
     OfflineTelemetryComponent,
     TestPageComponent,
     AccordionComponent,
-    HelpPageComponent
+    HelpPageComponent,
+    HelpCenterComponent
   ],
   imports: [
     BrowserModule,

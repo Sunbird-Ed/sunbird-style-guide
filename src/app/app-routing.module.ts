@@ -35,6 +35,8 @@ import { MetadataComponent } from './metadata/metadata.component';
 import { TestPageComponent } from './test-page/test-page.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import {HelpPageComponent} from './help-page/help-page.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+
 
 
 const routes: Routes = [
@@ -73,7 +75,8 @@ const routes: Routes = [
   { path: 'metadata', component: MetadataComponent},
   { path: 'test-page', component: TestPageComponent},
   { path: 'accordion', component: AccordionComponent},
-  { path: 'help-page', component: HelpPageComponent}
+  { path: 'help-page', component: HelpPageComponent},
+  { path: 'help-center', component: HelpCenterComponent}
 ];
 
 @NgModule({
