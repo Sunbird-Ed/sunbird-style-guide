@@ -695,6 +695,44 @@ export class CardsComponent implements OnInit {
       </div>
     </div>
       `
+    },
+    {
+      expandCode: false,
+      title: 'Workspace - Cards',
+      demoCode: `
+      <div class="d-flex">
+      <div class="sb-wspace-card active">
+      <div class="sb-wspace-body">
+        <div class="sb-wspace-title">Book</div>
+        <div class="sb-wspace-description">Build books using resources for an interesting learning experience.</div>
+      </div>
+    </div>
+
+    <div class="sb-wspace-card">
+      <div class="sb-wspace-body">
+        <div class="sb-wspace-title">Course</div>
+        <div class="sb-wspace-description">Build books using resources for an interesting learning experience.</div>
+      </div>
+    </div>
+    </div>
+      `,
+      copyCode: `
+      <div class="d-flex">
+      <div class="sb-wspace-card active">
+      <div class="sb-wspace-body">
+        <div class="sb-wspace-title">Book</div>
+        <div class="sb-wspace-description">Build books using resources for an interesting learning experience.</div>
+      </div>
+    </div>
+
+    <div class="sb-wspace-card">
+      <div class="sb-wspace-body">
+        <div class="sb-wspace-title">Course</div>
+        <div class="sb-wspace-description">Build books using resources for an interesting learning experience.</div>
+      </div>
+    </div>
+    </div>
+      `
     }
   ];
 
@@ -702,3 +740,6 @@ export class CardsComponent implements OnInit {
   }
 
 }
+
+
+
