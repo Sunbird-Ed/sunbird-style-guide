@@ -29,6 +29,7 @@ export class LabelsComponent implements OnInit {
       <div class="sb-pageSection-count sb-label sb-label-xs sb-label-warning ml-8">25/234zne</div>
       `
     },
+    
     {
       expandCode: false,
       title: 'label States',
@@ -49,7 +50,24 @@ export class LabelsComponent implements OnInit {
   </div>
       `
     },
-
+    {
+      expandCode: false,
+      title: 'Filter label Tags',
+      demoCode: `
+      <div class="sb-filter-label">
+      <div class="d-inline-flex"><span class="sb-label-name">Board/Syllabus:</span><span class="sb-label-value">CBSE<i class="close icon mr-0 pl-4"></i></span>
+    </div>
+    <div class="d-inline-flex"><span class="sb-label-value mr-8">CBSE</span><span class="sb-label-value">CBSE</span></div>
+      </div>
+      `,
+      copyCode: `
+      <div class="sb-filter-label">
+      <div class="d-inline-flex"><span class="sb-label-name">Board/Syllabus:</span><span class="sb-label-value">CBSE<i class="close icon mr-0 pl-4"></i></span>
+    </div>
+    <div class="d-inline-flex"><span class="sb-label-value mr-8">CBSE</span><span class="sb-label-value">CBSE</span></div>
+      </div>
+      `
+    }
   ];
 
   ngOnInit() {
