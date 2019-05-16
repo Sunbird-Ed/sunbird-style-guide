@@ -1,6 +1,6 @@
 
 <h2 class="help-section-title pb-16">Look through the list to resolve your issue</h2>
-<sui-accordion class="styled fluid sb-accordion">
+<sui-accordion [closeOthers]="true"  class="styled fluid sb-accordion">
   <sui-accordion-panel [isOpen]="true">
     <div title class="sb-accordion-title">
       Why am I unable to sign up?
@@ -21,7 +21,7 @@
       <div class="sb-label sb-label-table sb-label-success-0 mt-8">Thanks for your response!</div>
     </div>
   </sui-accordion-panel>
-  <sui-accordion-panel [isOpen]="true">
+  <sui-accordion-panel>
     <div title class="sb-accordion-title">
       Why can’t I find my class?
       <i class="chevron down icon right-floated d-flex flex-ai-center"></i>
@@ -43,7 +43,7 @@
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal d-flex ml-auto">Submit</button>
     </div>
   </sui-accordion-panel>
-  <sui-accordion-panel [isOpen]="true">
+  <sui-accordion-panel>
     <div title class="sb-accordion-title">
       Why can’t I find my class?
       <i class="chevron down icon right-floated d-flex flex-ai-center"></i>
@@ -55,7 +55,7 @@
       <p>Add classes to the <code>sui-accordion</code> element to apply styles.</p>
     </div>
   </sui-accordion-panel>
-  <sui-accordion-panel [isOpen]="true">
+  <sui-accordion-panel>
     <div title class="sb-accordion-title">
       Some content is downloaded but not playing offline? Why?
       <i class="chevron down icon right-floated d-flex flex-ai-center"></i>
