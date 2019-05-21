@@ -101,7 +101,7 @@
         }
     }
     .docs-content {
-        padding: 0px 30px 30px 230px;
+        padding: 0px 60px 60px 260px;
         width: 100vw;
         min-height: 100vh;
         position: relative;
@@ -110,12 +110,12 @@
             padding: 0px 30px;
         }
         .docs-pageHeading {
-            padding: 24px 30px;
+            padding: 24px 60px;
             line-height: normal;
-            margin-left: -30px;
+            margin-left: -60px;
             margin-bottom:30px;
             background: #186d80;
-            margin-right: -30px;
+            margin-right: -60px;
             color: #fff;
         }
         .docs-sections {
@@ -145,6 +145,13 @@
             margin: 0;
             box-sizing: border-box;
         }
+        // p, h4 {
+        //     padding: 0px 15%;
+        // }
+        // h4 {
+        //     font-weight:bold;
+        //     margin-top:24px;
+        // }
     }
 }
 
