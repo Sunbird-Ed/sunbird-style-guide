@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor() {
     this.language = [{name: 'English'}, {name: 'Kannada'}];
   }
+  toggleIcon = true;
 
   pageTitle = 'Header';
   sections = [{
@@ -59,6 +60,12 @@ export class HeaderComponent implements OnInit {
   <div class="sb-sub-header">
     <div class="blue-bar">
       <div class="ui container d-flex flex-ai-center">
+        <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon">
+          <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
+          Explore Content
+          <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
+        </span>
+        <span class="sb-divider computer only">|</span>
         <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center computer only"
           title="Enter QR code">
           <i class="qrcode icon"></i>
@@ -136,6 +143,12 @@ export class HeaderComponent implements OnInit {
   <div class="sb-sub-header">
     <div class="blue-bar">
       <div class="ui container d-flex flex-ai-center">
+        <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon">
+          <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
+          Explore Content
+          <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
+        </span>
+        <span class="sb-divider computer only">|</span>
         <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center computer only"
           title="Enter QR code">
           <i class="qrcode icon"></i>
