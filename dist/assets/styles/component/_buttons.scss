@@ -104,6 +104,7 @@ input[type="button"] {
 .sb-btn-outline-primary, .sb-btn-outline-info{
     @include btn-theme-bgwhite($primary-color);
     &:hover,&:active {
+        background: $primary-100;
         color: $primary-800;
         border-color: $primary-800;
     }
@@ -113,6 +114,7 @@ input[type="button"] {
     color: $secondary-100;
     border-color: $secondary-100;
     &:hover,&:active {
+        background: $secondary-0;
         color: $secondary-400;
         border-color: $secondary-400;
     }
@@ -122,6 +124,7 @@ input[type="button"] {
     color: $tertiary-100;
     border-color: $tertiary-100;
     &:hover,&:active {
+        background: $tertiary-0;
         color: $tertiary-400;
         border-color: $tertiary-400;
     }
@@ -131,6 +134,7 @@ input[type="button"] {
     color: $red-100;
     border-color: $red-100;
     &:hover,&:active {
+        background: $red-0;
         color: $red-400;
         border-color: $red-400;
     }
@@ -140,6 +144,7 @@ input[type="button"] {
     color: $gray-300;
     border-color:$gray-300;
     &:hover,&:active {
+        background: $gray-0;
         color:$gray-800;
         border-color: $gray-800;
     }
@@ -149,6 +154,7 @@ input[type="button"] {
     color: $primary-800;
     border-color: $white-color;
     &:hover,&:active {
+        background: $gray-0;
         color: $primary-800;
         border-color:  $white-color;
     }
@@ -174,7 +180,7 @@ input[type="button"] {
     }
 }
 .sb-btn-tertiary,.sb-btn-warning{
-    @include btn-theme($tertiary-color);
+    @include btn-theme($tertiary-100);
     &:hover,&:active {
         background: $tertiary-400;
     }
@@ -470,14 +476,18 @@ input[type="button"] {
 
 
 //dashed buttons
-
 .sb-btn-dashed {
-  border: $sb-btn-dashed-border;
   border-style: dashed;
-  background-color: $sb-btn-dashed-background-color;
-  color: $sb-btn-dashed-color;
+  border-width: 1px;
 }
-
+.sb-btn-dashed-primary,.sb-btn-dashed-info {
+    background-color: $sb-btn-dashed-background-color;
+    border-color:$primary-400;
+    color: $sb-btn-dashed-color;
+    &:hover,&:active{
+    background-color: $primary-0;
+    }
+}
 // disabled button
 .sb-btn-disabled,
 .sb-btn-primary[disabled],

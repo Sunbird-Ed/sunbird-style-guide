@@ -98,14 +98,22 @@
   background: rgba(0, 136, 64, 0.5);
   position: relative;
 }
-.six.wide.column.sb-offline-import-content-column{
-  padding: 0;
-}
-.sb-offline-import-content-border{
-  // border-right: 2px solid #E5E5E5;
+.sb-offline-brake {
+  width: 1px;
+background: rgba(255, 255, 255, 0.5);
+position: absolute;
+right: 0px;
+left: 0px;
+top: 50%;
+bottom: 0px;
+margin: 0px auto;
+padding: 0px !important;
+z-index: 9999;
+height: 56px;
+transform: translateY(-50%);
+color: rgba(255, 255, 255, 0.5);
 }
 .sb-offline-imports {
-  padding: 0 24px;
   .sb-offline-area {
     border: 1px solid #008840;
   }

@@ -67,10 +67,10 @@ export class ButtonsComponent implements OnInit {
       expandCode: false,
       title: 'Dashed Buttons',
       demoCode: `
-      <button type="button" class="sb-btn sb-btn-normal sb-btn-dashed mr-8">Basic Button</button>
+      <button type="button" class="sb-btn sb-btn-normal sb-btn-dashed sb-btn-dashed-primary mr-8">Basic Button</button>
       `,
       copyCode: `
-      <button type="button" class="sb-btn sb-btn-normal sb-btn-dashed">Basic Button</button>
+      <button type="button" class="sb-btn sb-btn-normal sb-btn-dashed sb-btn-dashed-primary">Basic Button</button>
       `
     },
     {
