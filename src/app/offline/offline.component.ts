@@ -129,20 +129,12 @@ export class OfflineComponent implements OnInit {
       title: 'Import content',
       demoCode: `
      <div class="ui grid sb-offline-import-content py-8">
-     <div style="
-    width: 5px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-    background: #f00;
-    z-index: 9999;
-"></div>
-<div class="ui container grid p-0 m-0">
-     <div class="six wide column sb-offline-import-content-column sb-offline-imports sb-offline-import-content-border pr-16">
+<div class="ui container grid p-0 m-0 relative">
+<div class="sb-offline-brake"></div>
+     <div class="six wide column sb-offline-imports p-0 pr-16">
       <div class="sb-offline-area d-flex p-16">
         <div class="sb-import-icon">
-        <img src="./assets/images/offline-import-file.png" alt="offline import">
+        <img src="./assets/images/usb.svg" alt="offline import">
         </div>
         <div class="sb-import-content">
           <h4 class="sb-import-content-title">Import content</h4>
@@ -154,7 +146,7 @@ export class OfflineComponent implements OnInit {
       </div>
     </div>
 
-    <div class="six wide column sb-offline-import-content-column sb-offline-imports sb-offline-video-demo pl-16">
+    <div class="six wide column sb-offline-imports sb-offline-video-demo p-0 pl-16">
     <div class="sb-offline-area d-flex p-16">
       <div class="sb-import-icon sb-import-icon-watch-video">
       <img src="./assets/images/offline-import-book.png" alt="offline watch video">
