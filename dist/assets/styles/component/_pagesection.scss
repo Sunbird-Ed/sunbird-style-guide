@@ -10,6 +10,7 @@
     display: inline;
     font-weight: 600;
     text-transform: lowercase;
+    line-height: normal;
     &::first-letter{
       text-transform: uppercase;
     }
