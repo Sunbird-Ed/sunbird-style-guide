@@ -52,6 +52,9 @@
     <div class="sb-sub-header">
       <div class="blue-bar">
         <div class="ui container d-flex flex-ai-center">
+          <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon ">
+            <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
+            Explore Content
             <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
           </span>
           <span class="sb-divider computer only">|</span>
@@ -59,6 +62,7 @@
             title="Enter QR code">
             <i class="qrcode icon"></i>
             Enter QR code
+          </button>
           <div class="sb-divider computer only"></div>
           <div class="sb-search-box mr-auto medium tour-4">
             <div class="input-div relative">
