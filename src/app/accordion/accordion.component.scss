@@ -24,6 +24,31 @@
         transform: rotate(180deg);
     }
 
+    .ui.styled.accordion.sb-single-pannel-accordion {
+        position: fixed;
+        bottom: 0;
+        width: 1216px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .ui.styled.accordion.sb-single-pannel-accordion .title,
+    .ui.styled.accordion.sb-single-pannel-accordion .accordion .active.title {
+        padding:0;
+    }
+
+    .ui.styled.accordion.sb-single-pannel-accordion .content {
+        overflow-y: auto;
+        max-height: 250px;
+    }
+
+    .sb-single-pannel-accordion .ui.progress{
+        margin-right: ($base-block-space * 4);
+        margin-bottom: 0;
+    }
+
 }
 
 
@@ -65,4 +90,93 @@
 .sb-accordion-footer {
     padding: ($base-block-space * 3);
     font-size: 12px;
+}
+
+.ui.styled.accordion.sb-single-pannel-accordion {
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -4px 5px 0 rgba(0,0,0,0.25);
+  }
+
+  .sb-single-pannel-accordion-heading {
+    background: $primary-color;
+    padding: ($base-block-space * 2) ($base-block-space * 3);
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
+  .sb-single-pannel-accordion-list-item {
+    font-size: 14px;
+    padding: ($base-block-space * 2) ($base-block-space * 3);
+    background: $white-color;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+i.icon.error-icon {
+    font-size:1.3rem;
+    color:$danger-color;
+}
+i.icon.success-icon {
+    font-size:1.3rem;
+    color:$success-color;
+}
+i.icon.waiting-icon {
+    font-size: 1.25rem;
+    color: $tertiary-400;
+}
+
+.error-text {
+    font-size: 14px;
+    color: $danger-color;
+    text-align:right; 
+}
+.success-text {
+    font-size: 14px;
+    color: $success-color;;
+    text-align: right;
+}
+.waiting-text {
+    font-size: 14px;
+    color: $tertiary-400;
+    text-align:right; 
+}
+
+.info-text {
+    width:110px;
+    font-size: 14px;
+    text-align: right;
+}
+
+
+::ng-deep {
+
+    .ui.styled.accordion.sb-single-pannel-accordion .title,
+    .ui.styled.accordion.sb-single-pannel-accordion .accordion .active.title {
+        padding:0;
+    }
+
+    .ui.styled.accordion.sb-single-pannel-accordion .content {
+        overflow-y: auto;
+        max-height: 250px;
+    }
+
+    .sb-single-pannel-accordion .ui.progress {
+        margin-right: ($base-block-space * 4);
+        margin-bottom: 0;
+    }
+
+    .sb-single-pannel-accordion-list-item  .ui.progress {
+        height: 14px;
+        border-radius: $base-block-space;
+        width: 160px;
+        border: 1px solid $primary-color;
+        background: $white-color;
+    }
+
+    .sb-single-pannel-accordion-list-item  .ui.progress .bar {
+        height: 13px !important;
+        border-radius: $base-block-space;
+        background: $primary-color;
+    }
+
 }
