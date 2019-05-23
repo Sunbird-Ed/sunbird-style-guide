@@ -1,22 +1,35 @@
 import {
-  Component,
+  Component, AfterViewInit,
   OnInit
 } from '@angular/core';
 import {
   HighlightResult
 } from 'ngx-highlightjs';
 declare var jQuery: any;
+import { ShepherdService } from 'angular-shepherd';
+import { steps as defaultSteps, defaultStepOptions} from '../data';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   language;
-  constructor() {
+  constructor(private shepherdService: ShepherdService) {
     this.language = [{name: 'English'}, {name: 'Kannada'}];
   }
   toggleIcon = true;
+
+
+
+  ngAfterViewInit() {
+    this.shepherdService.defaultStepOptions = defaultStepOptions;
+    this.shepherdService.disableScroll = true;
+    this.shepherdService.modal = true;
+    this.shepherdService.confirmCancel = false;
+    this.shepherdService.addSteps(defaultSteps);
+    this.shepherdService.start();
+  }
 
   pageTitle = 'Header';
   sections = [{
