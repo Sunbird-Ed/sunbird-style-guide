@@ -128,44 +128,39 @@ export class OfflineComponent implements OnInit {
       expandCode: false,
       title: 'Import content',
       demoCode: `
-     <div class="ui grid sb-offline-import-content">
-     <div class="six wide column sb-offline-import-content-column">
-     <div class="sb-offline-imports sb-offline-import-content-border">
-     <div class="ui container sb-offline-area d-flex">
-       <div class="sb-import-icon">
-       <img src="./assets/images/offline-import-file.png" alt="offline import">
-       </div>
-       <div class="sb-import-content">
-         <h4 class="sb-import-content-title">Import content</h4>
-         <p class="mt-8 mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
-       </div>
-       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
-         Import Files
-       </button>
-     </div>
+     <div class="ui grid sb-offline-import-content py-8">
+<div class="ui container grid p-0 m-0 relative">
+<div class="sb-offline-brake"></div>
+     <div class="six wide column sb-offline-imports p-0 pr-16">
+      <div class="sb-offline-area d-flex p-16">
+        <div class="sb-import-icon">
+        <img src="./assets/images/usb.svg" alt="offline import">
+        </div>
+        <div class="sb-import-content">
+          <h4 class="sb-import-content-title">Import content</h4>
+          <p class="mb-0 sb-import-content-meta">Import contents by uploading an .CSV file. </p>
+        </div>
+        <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto">
+          Import Files
+        </button>
+      </div>
     </div>
-    </div>
-    <div class="six wide column sb-offline-import-content-column">
-    <div class="sb-offline-imports">
-    <div class="ui container sb-offline-area d-flex">
+
+    <div class="six wide column sb-offline-imports sb-offline-video-demo p-0 pl-16">
+    <div class="sb-offline-area d-flex p-16">
       <div class="sb-import-icon sb-import-icon-watch-video">
       <img src="./assets/images/offline-import-book.png" alt="offline watch video">
       </div>
       <div class="sb-import-content">
         <h4 class="sb-import-content-title">How to video</h4>
-        <dl class="mt-8 mb-0">
-      <div class="d-flex">
-        <dt class="sb-offline-import-description-list-key">Subtopic :</dt>
-        <dd class="sb-offline-import-description-list-value">Limits of artificial intelligence</dd>
-      </div>
-    </dl>
+        <p class="mb-0 sb-import-content-meta">Subtopic:Limits of artificial intelligence</p>
       </div>
       <button class="sb-btn sb-btn-normal sb-btn-secondary ml-auto sb-btn-tertiary">
         watch video
       </button>
     </div>
    </div>
-   </div>
+     </div>
      </div>
       `,
       copyCode: `
