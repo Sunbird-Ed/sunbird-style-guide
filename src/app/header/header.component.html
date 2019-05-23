@@ -23,8 +23,8 @@
             <img src="https://dev.sunbirded.org/assets/images/sunbird_logo.png" alt="sunbird">
           </div>
           <div class="sb-header-links d-flex ml-auto computer only">
-            <a class="item active">Library</a>
-            <a class="item">Course</a>
+            <a class="item active tour-1">Library</a>
+            <a class="item tour-2">Course</a>
           </div>
           <i class="large bars icon link primary-color mobile only ml-auto my-auto" (click)="showSideBar()"></i>
         </div>
@@ -52,9 +52,6 @@
     <div class="sb-sub-header">
       <div class="blue-bar">
         <div class="ui container d-flex flex-ai-center">
-          <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon ">
-            <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
-            Explore Content
             <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
           </span>
           <span class="sb-divider computer only">|</span>
@@ -62,9 +59,8 @@
             title="Enter QR code">
             <i class="qrcode icon"></i>
             Enter QR code
-          </button>
           <div class="sb-divider computer only"></div>
-          <div class="sb-search-box mr-auto medium">
+          <div class="sb-search-box mr-auto medium tour-4">
             <div class="input-div relative">
               <i class="search icon"></i>
               <input type="text" name="filter_search" class="sb-search-input" placeholder="Search in All">
@@ -73,7 +69,7 @@
             </div>
             <button class="sb-btn sb-btn-normal" tabindex="0">Search</button>
           </div>
-          <div class="sb-header-links ml-auto d-flex flex-ai-center computer only">
+          <div class="sb-header-links ml-auto d-flex flex-ai-center computer only tour-5">
             <div>Select Language :</div>
             <sui-select class="sb-sub-header-select" placeholder="Choose" #searchSelect>
               <sui-select-option *ngFor="let option of language" [value]="option.name"></sui-select-option>

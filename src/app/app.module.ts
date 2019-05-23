@@ -12,6 +12,7 @@ import scss from 'highlight.js/lib/languages/scss';
 import typescript from 'highlight.js/lib/languages/typescript';
 import html from 'highlight.js/lib/languages/htmlbars';
 import { ClipboardModule } from 'ngx-clipboard';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SuiModule, SuiTabsModule, SuiSelectModule } from 'ng2-semantic-ui';
 import { Ng2IziToastModule } from 'ng2-izitoast';
@@ -140,7 +141,8 @@ export function hljsLanguages() {
     SuiSelectModule,
     FormsModule,
     BrowserAnimationsModule,
-    HeadroomModule
+    HeadroomModule,
+    NgxPageScrollModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
