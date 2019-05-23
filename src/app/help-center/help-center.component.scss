@@ -1,3 +1,4 @@
+@import "../../assets/styles/base/variables";
 .sb-two-column-table {
     table-layout: fixed;
     word-break: break-word;
@@ -127,4 +128,15 @@
     border: none;
     text-indent: 100%;
     background:url(/assets/images/up-arrow.png) no-repeat 0px 0px;
+}
+
+.sb-help-center-section{
+  .img-block{
+    .image{
+      max-height: 350px;
+    }
+  }
+  .full-image{
+    max-height: 500px;
+  }
 }
