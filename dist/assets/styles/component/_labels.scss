@@ -132,6 +132,10 @@
 .sb-label-error {
     @include label-theme($danger-color);
 }
+.sb-label-error-0 {
+    @include label-theme($red-0);
+    color: $red-400;
+}
 .sb-label-gray-0 {
     @include label-theme($gray-0);
     color: $gray-400;

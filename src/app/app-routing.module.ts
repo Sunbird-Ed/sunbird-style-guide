@@ -20,6 +20,7 @@ import {FormElementsComponent} from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RatingComponent } from './rating/rating.component';
 import { HeaderComponent } from './header/header.component';
+import { GuidetourComponent } from './guidetour/guidetour.component';
 import { FooterComponent } from './footer/footer.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MenusComponent } from './menus/menus.component';
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'form-elements', component: FormElementsComponent},
   { path: 'pagination', component: PaginationComponent},
   { path: 'rating', component: RatingComponent},
+  { path: 'guidetour', component: GuidetourComponent},
   { path: 'header', component: HeaderComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'tooltip', component: TooltipComponent},

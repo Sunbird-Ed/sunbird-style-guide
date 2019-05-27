@@ -1,16 +1,16 @@
 export const builtInButtons = {
     cancel: {
-        classes: 'shepherd-button-secondary cancel-button',
+        classes: 'sb-btn sb-btn-xs sb-btn-secondary cancel-button',
         text: 'Exit',
         type: 'cancel'
     },
     next: {
-        classes: 'shepherd-button-primary next-button',
+        classes: 'sb-btn sb-btn-xs sb-btn-secondary next-button',
         text: 'Next',
         type: 'next'
     },
     back: {
-        classes: 'shepherd-button-primary back-button',
+        classes: 'sb-btn sb-btn-xs sb-btn-outline-gray back-button',
         text: 'Back',
         type: 'back'
     }
@@ -22,7 +22,7 @@ export const defaultStepOptions = {
     modal: true,
     highlightClass: 'highlight',
     classes: 'shadow-md bg-purple-dark',
-
+    id: 'testID1',
     tippyOptions: {
         duration: 500,
     },
@@ -39,15 +39,9 @@ export const steps = [
             buttons: [
                 builtInButtons.next
             ],
-            classes: 'custom-class-name-1 custom-class-name-2',
-            text: [
-                `
-            <h1>Course</h1>
-          `,
-                `
-           This is Course page
-          `
-            ],
+            classes: 'sb-guide-text-area',
+            title: 'Import Contents',
+            text: [`Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.`]
         }
     },
     {
@@ -58,15 +52,9 @@ export const steps = [
             buttons: [
                 builtInButtons.back,
                 builtInButtons.next            ],
-            classes: 'custom-class-name-1 custom-class-name-2',
-            text: [
-                `
-            <h1>Library</h1>
-          `,
-                `
-           This is Library page
-          `
-            ],
+            classes: 'sb-guide-text-area',
+            title: 'Library',
+            text: [`Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.`]
         }
     },
     {
@@ -78,15 +66,9 @@ export const steps = [
                 builtInButtons.back,
                 builtInButtons.next
             ],
-            classes: 'custom-class-name-1 custom-class-name-2',
-            text: [
-                `
-            <h1>Enter QR Code</h1>
-          `,
-                `
-           Enter QR code view this page
-          `
-            ],
+            classes: 'sb-guide-text-area',
+            title: 'Enter QR Code',
+            text: [`Enter QR code view this page`]
         }
     },
     {
@@ -98,15 +80,9 @@ export const steps = [
                 builtInButtons.back,
                 builtInButtons.next,
             ],
-            classes: 'custom-class-name-1 custom-class-name-2',
-            text: [
-                `
-            <h1>This is search section</h1>
-          `,
-                `
-                This is search section where you can search for course and library
-          `
-            ],
+            classes: 'sb-guide-text-area',
+            title: 'This is search section',
+            text: [`This is search section where you can search for course and library`]
         }
     },
 
@@ -119,15 +95,9 @@ export const steps = [
                 builtInButtons.back,
                 builtInButtons.cancel
             ],
-            classes: 'custom-class-name-1 custom-class-name-2',
-            text: [
-                `
-            <h1>This is Language selection dropdown</h1>
-          `,
-                `
-                This is Language selection dropdown where you select the your langauge.
-          `
-            ],
+            classes: 'sb-guide-text-area',
+            title: 'This is Language selection dropdown',
+            text: [`This is Language selection dropdown where you select the your langauge.`]
         }
     },
 ];
