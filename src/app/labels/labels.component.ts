@@ -16,7 +16,8 @@ export class LabelsComponent implements OnInit {
       <div class="sb-label sb-label-table sb-label-primary-100 mr-8">Review</div>
       <div class="sb-label sb-label-table sb-label-success-0 mr-8">Review</div>
       <div class="sb-label sb-label-table sb-label-success-0 mr-8"><span class="sb-live"></span>Review</span></div>
-      <div class="sb-label sb-label-table sb-label-warning-0 mr-8">Review</div>
+      <div class="sb-label sb-label-table sb-label-warning-0 mr-8">Review/Warning</div>
+      <div class="sb-label sb-label-table sb-label-error-0 mr-8">Error</div>
       <div class="sb-label sb-label-table sb-label-gray-0 mr-8">Review</div>
       <div class="sb-pageSection-count sb-label sb-label-xs sb-label-warning ml-8">25/234zne</div>
       `,
@@ -24,7 +25,8 @@ export class LabelsComponent implements OnInit {
       <div class="sb-label sb-label-table sb-label-primary-100">Review</div>
       <div class="sb-label sb-label-table sb-label-success-0">Review</div>
       <div class="sb-label sb-label-table sb-label-success-0"><span class="sb-live"></span>Review</span></div>
-      <div class="sb-label sb-label-table sb-label-warning-0">Review</div>
+      <div class="sb-label sb-label-table sb-label-warning-0">Review/Warning</div>
+      <div class="sb-label sb-label-table sb-label-error-0">Error</div>
       <div class="sb-label sb-label-table sb-label-gray-0">Review</div>
       <div class="sb-pageSection-count sb-label sb-label-xs sb-label-warning ml-8">25/234zne</div>
       `

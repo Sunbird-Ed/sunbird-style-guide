@@ -1,6 +1,6 @@
 import {
   Component, AfterViewInit,  Renderer2, ElementRef,
-  OnInit
+  OnInit, DoCheck
 } from '@angular/core';
 import {
   HighlightResult
@@ -10,10 +10,11 @@ import { ShepherdService } from 'angular-shepherd';
 import { steps as defaultSteps, defaultStepOptions} from '../data';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html'
+  selector: 'app-guidetour',
+  templateUrl: './guidetour.component.html'
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+
+export class GuidetourComponent implements OnInit, AfterViewInit, DoCheck {
   language;
   addRemoveBtn;
   constructor(private shepherdService: ShepherdService, private renderer: Renderer2, private el: ElementRef) {
@@ -23,9 +24,23 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
   }
+  
+  ngDoCheck() {
+    this.addRemoveBtn = document.querySelector('.shepherd-button');
+    if (this.addRemoveBtn) {
+      this.addRemoveBtn.classList.remove('shepherd-button');
+    }
+  }
 
   ngAfterViewInit() {
-    
+    this.shepherdService.defaultStepOptions = defaultStepOptions;
+    this.shepherdService.disableScroll = true;
+    this.shepherdService.modal = true;
+    this.shepherdService.confirmCancel = false;
+    this.shepherdService.addSteps(defaultSteps);
+    this.shepherdService.start();
+    this.addRemoveBtn = document.querySelector('.shepherd-button');
+    this.addRemoveBtn.classList.remove('shepherd-button');
   }
 
   pageTitle = 'Header';
