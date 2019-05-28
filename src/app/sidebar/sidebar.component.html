@@ -3,6 +3,14 @@
         width="100%" /></div>
     <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
   </div>
+
+  <div>
+  <sui-search placeholder="Example Search..."
+            [hasIcon]="hasIcon"
+            [options]="options"
+            [searchDelay]="0"
+            (resultSelected)="alertSelected($event)"></sui-search>
+          </div>
   <ul>
     <li>
         <h4>Refence</h4> 
