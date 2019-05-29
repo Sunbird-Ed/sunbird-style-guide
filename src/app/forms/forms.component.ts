@@ -13,18 +13,86 @@ export class FormsComponent implements OnInit {
   sections = [
     {
       expandCode: false,
-      title: 'Checkbox',
+      title: 'Checkbox block level element',
       demoCode: `
       <div class="sb-checkbox sb-checkbox-primary">
       <input type="checkbox" id="check1" name="example">
-      <label for="check1">Make my profile visible</label>
+      <label for="check1">Primary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-secondary">
+      <input type="checkbox" id="check2" name="example">
+      <label for="check2">Secondary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-warning">
+      <input type="checkbox" id="check3" name="example">
+      <label for="check3">Warning checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-error">
+      <input type="checkbox" id="check4" name="example">
+      <label for="check4">Error checkbox</label>
       </div>
       `,
       copyCode: `
       <div class="sb-checkbox sb-checkbox-primary">
-      <input type="checkbox" name="example">
-      <label>Make my profile visible</label>
-  </div>
+      <input type="checkbox" id="check1" name="example">
+      <label for="check1">Primary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-secondary">
+      <input type="checkbox" id="check2" name="example">
+      <label for="check2">Secondary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-warning">
+      <input type="checkbox" id="check3" name="example">
+      <label for="check3">Warning checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-error">
+      <input type="checkbox" id="check4" name="example">
+      <label for="check4">Error checkbox</label>
+      </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Checkbox single line',
+      demoCode: `
+      <div class="d-flex flex-w-wrap">
+        <div class="sb-checkbox sb-checkbox-primary">
+        <input type="checkbox" id="check11" name="example">
+        <label for="check11">Primary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-secondary">
+        <input type="checkbox" id="check12" name="example">
+        <label for="check12">Secondary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-warning">
+        <input type="checkbox" id="check13" name="example">
+        <label for="check13">Warning checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-error">
+        <input type="checkbox" id="check14" name="example">
+        <label for="check14">Error checkbox</label>
+        </div>
+      </div>
+      `,
+      copyCode: `
+      <div class="d-flex flex-w-wrap">
+        <div class="sb-checkbox sb-checkbox-primary">
+        <input type="checkbox" id="check1" name="example">
+        <label for="check1">Primary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-secondary">
+        <input type="checkbox" id="check2" name="example">
+        <label for="check2">Secondary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-warning">
+        <input type="checkbox" id="check3" name="example">
+        <label for="check3">Warning checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-error">
+        <input type="checkbox" id="check4" name="example">
+        <label for="check4">Error checkbox</label>
+        </div>
+      </div>
       `
     },
     {
