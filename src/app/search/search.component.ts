@@ -13,6 +13,32 @@ export class SearchComponent implements OnInit {
   sections = [
     {
       expandCode: false,
+      title: 'Searchbox - Full width',
+      demoCode: `
+      <div class="sb-search-box">
+    <div class="input-div relative">
+        <i class="search icon"></i>
+        <input class="sb-search-input" type="text" placeholder="Search..." />
+        <i class="close icon"></i>
+        <div class="sb-loader"></div>
+    </div>
+    <button class="sb-btn sb-btn-normal">Search</button>
+</div>
+      `,
+      copyCode: `
+      <div class="sb-search-box">
+      <div class="input-div relative">
+          <i class="search icon"></i>
+          <input class="sb-search-input" type="text" placeholder="Search..." />
+          <i class="close icon"></i>
+          <div class="sb-loader"></div>
+      </div>
+      <button class="sb-btn sb-btn-normal">Search</button>
+  </div>
+      `
+    },
+    {
+      expandCode: false,
       title: 'Searchbox - Large',
       demoCode: `
       <div class="sb-search-box large">
