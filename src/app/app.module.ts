@@ -16,7 +16,7 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { SuiModule, SuiTabsModule, SuiSelectModule } from 'ng2-semantic-ui';
 import { Ng2IziToastModule } from 'ng2-izitoast';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TemplateComponent } from './template/template.component';
@@ -136,6 +136,7 @@ export function hljsLanguages() {
     HttpClientModule,
     HighlightModule.forRoot({ languages: hljsLanguages }),
     SuiModule,
+    Ng2SearchPipeModule,
     Ng2IziToastModule,
     SlickModule,
     ClipboardModule,

@@ -1,7 +1,7 @@
 .d-inline-block{
     display: inline-block !important;
 }
-.d-block{
+.d-block, .show{
     display: block !important;
 }
 .d-flex{
@@ -14,7 +14,7 @@
 .d-inline{
     display: inline !important;
 }
-.d-none{
+.d-none, .hide{
     display: none !important;
 }
 
