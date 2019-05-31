@@ -1,10 +1,10 @@
-.sb-checkbox {
+.sb-checkbox,
+.sb-radio-btn-checkbox {
   position: relative;
   display: block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   outline: 0;
-  vertical-align: baseline;
   font-style: normal;
   line-height: ($base-block-space * 2);
   min-height: ($base-block-space * 2);
@@ -21,10 +21,44 @@
     margin-right: $base-block-space;
   }
 
-  input:checked~label:before {
-    background-color: $sb-checkbox-primary-background;
-    border-color: $sb-radio-btn-primary-border;
+  label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: ($base-block-space * 2);
+    height: ($base-block-space * 2);
+    background: $sb-checkbox-before-checked-background-color;
+    transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease, -webkit-transform .1s cubic-bezier(0.25, 0.1, 0.43, 0.82);
+    border: $sb-checkbox-border-width solid $sb-radio-btn-border-color;
   }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 3;
+    width: $base-block-space*2;
+    height: $base-block-space*2;
+  }
+
+  [disabled="disabled"]+label,
+  input[disabled="disabled"] {
+    opacity: $sb-radio-btn-disabled-opacity;
+    cursor: not-allowed;
+  }
+
+  [disabled="disabled"]:checked+label:before,
+  &[disabled="disabled"]:not(:checked)+label:before {
+    border: $sb-radio-btn-border solid $sb-radio-btn-border-disabled-color;
+    opacity: $sb-radio-btn-disabled-opacity;
+  }
+}
+
+.sb-checkbox {
 
   &.sb-checkbox-primary {
     input:checked~label:before {
@@ -54,9 +88,13 @@
     }
   }
 
-  input:checked~.box:after,
-  input:checked~label:after {
-    opacity: 1;
+  input:checked~label:before {
+    background-color: $sb-checkbox-primary-background;
+    border-color: $sb-radio-btn-primary-border;
+  }
+
+  label:before {
+    border-radius: $sb-checkbox-border-radius;
   }
 
   label:after {
@@ -73,17 +111,9 @@
     transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease, -webkit-transform .1s ease;
   }
 
-  label:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: ($base-block-space * 2);
-    height: ($base-block-space * 2);
-    background: $sb-checkbox-before-checked-background-color;
-    border-radius: $sb-checkbox-border-radius;
-    transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease, -webkit-transform .1s cubic-bezier(0.25, 0.1, 0.43, 0.82);
-    border: $sb-checkbox-border-width solid $sb-radio-btn-border-color;
+  input:checked~.box:after,
+  input:checked~label:after {
+    opacity: 1;
   }
 
   input:checked~.box:after,
@@ -93,30 +123,72 @@
     font-weight: normal;
   }
 
-  input[type=checkbox],
-  input[type=radio] {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+  input[type=checkbox] {   
     outline: 0;
-    z-index: 3;
-    width: ($base-block-space * 2);
-    height: ($base-block-space * 2);
   }
 
-  [disabled="disabled"]+label,
-  input[disabled="disabled"] {
-    opacity: $sb-radio-btn-disabled-opacity;
-    cursor: not-allowed;
+}
+
+.sb-radio-btn-checkbox {
+
+  &.sb-radio-btn-primary {
+    label:before {
+      border: 1px solid $sb-radio-btn-primary-border;
+    }
+
+    input:checked~label:after {
+      background-color: $sb-checkbox-primary-background;
+    }
   }
 
-  [disabled="disabled"]:checked+label:before,
-  &[disabled="disabled"]:not(:checked)+label:before {
-    border: $sb-radio-btn-border solid $sb-radio-btn-border-disabled-color;
-    opacity: $sb-radio-btn-disabled-opacity;
+  &.sb-radio-btn-secondary {
+    label:before {
+      border: 1px solid $sb-radio-btn-secondary-border;
+    }
+
+    input:checked~label:after {
+      background-color: $sb-checkbox-secondary-background;
+    }
   }
 
+  &.sb-radio-btn-warning {
+    label:before {
+      border: 1px solid $sb-radio-btn-warning-border;
+    }
 
+    input:checked~label:after {
+      background-color: $sb-checkbox-warning-background;
+    }
+
+  }
+
+  &.sb-radio-btn-error {
+    label:before {
+      border: 1px solid $sb-radio-btn-error-border;
+    }
+
+    input:checked~label:after {
+      background: $sb-checkbox-error-background;
+    }
+  }
+
+  label:before {
+    border-radius: 50%;
+  }
+
+  label:after {
+    position: absolute;
+    left: $base-block-space/2;
+    top: $base-block-space/2;
+    border-radius: 50%;
+    height: $base-block-space;
+    width: $base-block-space;
+    opacity: 0;
+  }
+
+  input:checked~label:after {
+    content: '';
+    background: $sb-checkbox-primary-background;
+    opacity: 1;
+  }
 }
