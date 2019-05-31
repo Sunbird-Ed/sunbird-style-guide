@@ -314,6 +314,14 @@ $sb-radio-btn-backgroud-after-checked: $primary-300;
 
 
 //checkbox
+$sb-checkbox-primary-background: $primary-color;
+$sb-checkbox-secondary-background: $secondary-100;
+$sb-checkbox-warning-background: $tertiary-100;
+$sb-checkbox-error-background: $red-100;
+$sb-radio-btn-primary-border: $primary-color;
+$sb-radio-btn-secondary-border: $secondary-100;
+$sb-radio-btn-warning-border: $tertiary-100;
+$sb-radio-btn-error-border: $red-100;
 $sb-checkbox-border-width: 1px; 
 $sb-checkbox-background-color: $secondary-100;
 $sb-checkbox-label-font-size: 0.8571rem;
