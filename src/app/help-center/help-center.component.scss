@@ -1,4 +1,10 @@
 @import "../../assets/styles/base/variables";
+
+.sb-subheader{
+  background: #005da2;
+}
+
+
 .sb-two-column-table {
     table-layout: fixed;
     word-break: break-word;
@@ -51,10 +57,7 @@
     margin-right: 48px;
   }
 
-  .sb-subheader {
-    background: #005da2;
-    padding-top: 80px;
-  }
+  
 
   .sb-secondary-subheader {
     background: #003257;
@@ -130,6 +133,7 @@
     background:url(/assets/images/up-arrow.png) no-repeat 0px 0px;
 }
 
+
 .sb-help-center-section{
   .img-block{
     .image{
@@ -141,8 +145,57 @@
   }
 }
 
+
+.help-center-fixed-content {
+  width:100%;
+  &.sb-help-page-title{
+    position: relative;
+  }
+  .help-center-content-title{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .sb-btn{
+    position: absolute;
+    top: 3px;
+    right: 70px;
+  }
+  .help-center-content-paragraph{
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .help-center-content-subtitle{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  .help-center-content-extra{
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  .help-center-list{
+    margin: 12px 0 0 0;
+    padding-left: 40px;
+      font-size: 14px;
+    .help-center-list-content{
+        margin-top: 4px;
+    }
+  }
+}
+#sb-help-page-section{
+  .help-center-image{
+    max-width: 100%;
+    width: 100%;
+  }
+  .help-center-download-steps{
+    margin: 48px 0;
+  }
+}
+
 @media only screen and (min-width: 1024px){
-  .help-center-main-content{
+  .help-center-fixed-content{
     max-width: 960px;
     margin: auto;
     padding-left: 70px;
@@ -150,50 +203,6 @@
   }
 }
 
-.help-center-image{
-  max-width: 100%;
-}
 
-.help-center-main-content{
-  width:100%;
-  position: relative;
-  .help-center-page-content{
-    .help-center-page-title{
-      margin-bottom: 20px;
-      font-size: 36px;
-      font-weight: bold;
-    }
-    .sb-btn{
-      position: absolute;
-      top: 3px;
-      right: 70px;
-    }
-    .help-center-page-subtitle{
-      margin-top: 20px;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    .help-center-page-extra{
-      font-weight: bold;
-      margin: 10px 0;
-      font-size: 16px;
-    }
-    .help-center-content{
-      margin: 12px 0 0 0;
-      .help-center-content-paragraph{
-        margin-bottom: 12px;
-        font-size: 14px;
-      }
-      .help-center-list{
-        margin: 12px 0 0 0;
-        .help-center-list-content{
-          padding-left: 40px;
-          font-size: 14px;
-          li{
-            margin-top: 4px;
-          }
-        }
-      }
-    }
-  }
-}
+
+
