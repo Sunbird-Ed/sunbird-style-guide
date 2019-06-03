@@ -410,7 +410,7 @@ a.sb-btn {
             width:($base-block-space * 8);
             height: ($base-block-space * 3);
             border-radius: 500rem;
-            @include btn-theme($primary-color);
+            // @include btn-theme($primary-color);
             transition: border .1s ease,opacity .1s ease,transform .1s ease,box-shadow .1s ease,-webkit-transform .1s ease;
         
         }

@@ -13,23 +13,175 @@ export class FormsComponent implements OnInit {
   sections = [
     {
       expandCode: false,
-      title: 'Checkbox',
+      title: 'Checkbox block level element',
       demoCode: `
       <div class="sb-checkbox sb-checkbox-primary">
       <input type="checkbox" id="check1" name="example">
-      <label for="check1">Make my profile visible</label>
+      <label for="check1">Primary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-secondary">
+      <input type="checkbox" id="check2" name="example">
+      <label for="check2">Secondary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-warning">
+      <input type="checkbox" id="check3" name="example">
+      <label for="check3">Warning checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-error">
+      <input type="checkbox" id="check4" name="example">
+      <label for="check4">Error checkbox</label>
       </div>
       `,
       copyCode: `
       <div class="sb-checkbox sb-checkbox-primary">
-      <input type="checkbox" name="example">
-      <label>Make my profile visible</label>
-  </div>
+      <input type="checkbox" id="check1" name="example">
+      <label for="check1">Primary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-secondary">
+      <input type="checkbox" id="check2" name="example">
+      <label for="check2">Secondary checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-warning">
+      <input type="checkbox" id="check3" name="example">
+      <label for="check3">Warning checkbox</label>
+      </div>
+      <div class="sb-checkbox sb-checkbox-error">
+      <input type="checkbox" id="check4" name="example">
+      <label for="check4">Error checkbox</label>
+      </div>
       `
     },
     {
       expandCode: false,
-      title: 'Diabled Checkbox',
+      title: 'Checkbox single line',
+      demoCode: `
+      <div class="d-flex flex-w-wrap">
+        <div class="sb-checkbox sb-checkbox-primary">
+        <input type="checkbox" id="check11" name="example">
+        <label for="check11">Primary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-secondary">
+        <input type="checkbox" id="check12" name="example">
+        <label for="check12">Secondary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-warning">
+        <input type="checkbox" id="check13" name="example">
+        <label for="check13">Warning checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-error">
+        <input type="checkbox" id="check14" name="example">
+        <label for="check14">Error checkbox</label>
+        </div>
+      </div>
+      `,
+      copyCode: `
+      <div class="d-flex flex-w-wrap">
+        <div class="sb-checkbox sb-checkbox-primary">
+        <input type="checkbox" id="check1" name="example">
+        <label for="check1">Primary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-secondary">
+        <input type="checkbox" id="check2" name="example">
+        <label for="check2">Secondary checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-warning">
+        <input type="checkbox" id="check3" name="example">
+        <label for="check3">Warning checkbox</label>
+        </div>
+        <div class="sb-checkbox sb-checkbox-error">
+        <input type="checkbox" id="check4" name="example">
+        <label for="check4">Error checkbox</label>
+        </div>
+      </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Radio button block level element',
+      demoCode: `
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+      <input type="radio" id="radio1" name="example">
+      <label for="radio1">Primary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary">
+      <input type="radio" id="radio2" name="example">
+      <label for="radio2">Secondary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-warning">
+      <input type="radio" id="radio3" name="example">
+      <label for="radio3">Warning checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-error">
+      <input type="radio" id="radio4" name="example">
+      <label for="radio4">Error checkbox</label>
+      </div>
+      `,
+      copyCode: `
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+      <input type="radio" id="radio1" name="example">
+      <label for="radio1">Primary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary">
+      <input type="radio" id="radio2" name="example">
+      <label for="radio2">Secondary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-warning">
+      <input type="radio" id="radio3" name="example">
+      <label for="radio3">Warning checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-error">
+      <input type="radio" id="radio4" name="example">
+      <label for="radio4">Error checkbox</label>
+      </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Checkbox single line',
+      demoCode: `
+      <div class="d-flex flex-w-wrap">
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+      <input type="radio" id="radio11" name="example">
+      <label for="radio11">Primary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary">
+      <input type="radio" id="radio12" name="example">
+      <label for="radio12">Secondary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-warning">
+      <input type="radio" id="radio13" name="example">
+      <label for="radio13">Warning checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-error">
+      <input type="radio" id="radio14" name="example">
+      <label for="radio14">Error checkbox</label>
+      </div>
+      </div>
+      `,
+      copyCode: `
+      <div class="d-flex flex-w-wrap">
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+      <input type="radio" id="radio11" name="example">
+      <label for="radio11">Primary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary">
+      <input type="radio" id="radio12" name="example">
+      <label for="radio12">Secondary checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-warning">
+      <input type="radio" id="radio13" name="example">
+      <label for="radio13">Warning checkbox</label>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-error">
+      <input type="radio" id="radio14" name="example">
+      <label for="radio14">Error checkbox</label>
+      </div>
+      </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Disabled Checkbox',
       demoCode: `
       <div class="sb-checkbox sb-checkbox-primary">
       <input type="checkbox" id="check" name="disabled" disabled="disabled">
@@ -38,6 +190,22 @@ export class FormsComponent implements OnInit {
       `,
       copyCode: `
       <div class="sb-checkbox sb-checkbox-primary">
+      <input type="checkbox" name="example" disabled="disabled">
+      <label>Make my profile visible</label>
+  </div>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Disabled Radio button',
+      demoCode: `
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+      <input type="radio" id="check" name="disabled" disabled="disabled">
+      <label for="check">Make my profile visible</label>
+      </div>
+      `,
+      copyCode: `
+      <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
       <input type="checkbox" name="example" disabled="disabled">
       <label>Make my profile visible</label>
   </div>
