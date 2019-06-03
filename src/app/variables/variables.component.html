@@ -1,0 +1,39 @@
+<!--Page Heading-->
+<h1 class="docs-pageHeading">
+  {{pageTitle}}
+</h1>
+<!--/Page Heading-->
+
+<iframe width="100%" style="border:0px;height:100vh;" src="assets/styles/base/_variables.scss"></iframe>
+
+<!--Page Content-->
+<div class="docs-sections hidden" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+  </h4> 
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+  
+</div>
+<!--Page Content-->

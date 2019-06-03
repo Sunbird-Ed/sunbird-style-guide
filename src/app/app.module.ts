@@ -67,6 +67,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { OfflineComponent } from './offline/offline.component';
 import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
+import { VariablesComponent } from './variables/variables.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
@@ -120,7 +121,7 @@ export function hljsLanguages() {
     SortableColumnComponent,
     BannerComponent,
     ListsComponent,
-    OfflineComponent,
+    OfflineComponent,VariablesComponent,
     ExploreFilterComponent,
     SortableTableDirective,
     MetadataComponent,

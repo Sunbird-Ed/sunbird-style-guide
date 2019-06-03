@@ -28,6 +28,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { ExploreFilterComponent } from './explore-filter/explore-filter.component';
 import { FiltersComponent } from './filters/filters.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
+import { VariablesComponent } from './variables/variables.component';
 import { OfflineComponent } from './offline/offline.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
@@ -78,7 +79,8 @@ const routes: Routes = [
   { path: 'test-page', component: TestPageComponent},
   { path: 'accordion', component: AccordionComponent},
   { path: 'help-page', component: HelpPageComponent},
-  { path: 'help-center', component: HelpCenterComponent}
+  { path: 'help-center', component: HelpCenterComponent},
+  { path: 'variables', component: VariablesComponent}
 ];
 
 @NgModule({
