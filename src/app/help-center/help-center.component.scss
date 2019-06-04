@@ -175,7 +175,7 @@
     }
   }
 }
-#sb-help-page-section {
+.sb-help-page-section {
   .help-center-image {
     max-width: 100%;
     width: 100%;
@@ -253,7 +253,15 @@
     }
   }
 }
-
+.download-pdf{
+  position: relative;
+  .sb-btn-download-pdf{
+    position: absolute;
+    right: 0;
+    top: 55px;
+    z-index: 9999
+  }
+}
 @media only screen and (min-width: 1024px) {
   .help-center-fixed-content {
     max-width: 960px;
