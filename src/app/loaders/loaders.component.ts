@@ -55,6 +55,7 @@ export class LoadersComponent implements OnInit {
       demoCode: `
       <div style="position: relative;width: 80vmin;height: 80vmin;padding: 30px;">
       <div class="animated-helix">
+      <div class="diksha-opening-txt">Opening DIKSHA...</div>
       <img src="https://i.imgur.com/GU9mY0P.png" class="center">
       <div class="dot"></div>
       <div class="dot"></div>
@@ -133,6 +134,7 @@ export class LoadersComponent implements OnInit {
       `,
       copyCode: `
       <div class="animated-helix">
+      <div class="diksha-opening-txt">Opening DIKSHA...</div>
 <img src="https://i.imgur.com/GU9mY0P.png" class="center">
 <div class="dot"></div>
 <div class="dot"></div>
