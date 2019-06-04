@@ -15,21 +15,34 @@ export class HelpCenterComponent implements OnInit {
   topPosToStartShowing = 100;
 
   public generatepdf() {
+    // const data = document.getElementById('pdf-cover');
+    // const options = {background: 'white', height: data.clientHeight, width: data.clientWidth};
+    // html2canvas(data, options).then(canvas => {
+    //   const doc = new jspdf('p', 'mm', 'a4');
+    //   const imgData = canvas.toDataURL('image/PNG');
+    //   doc.addImage(imgData, 'PNG', 20, 20);
+    //   const pdfOutput = doc.output();
+    //   const buffer = new ArrayBuffer(pdfOutput.length);
+    //   const array = new Uint8Array(buffer);
+    //   for (let i = 0; i < pdfOutput.length; i++) {
+    //     array[i] = pdfOutput.charCodeAt(i);
+    //   }
+    //   const fileName = 'example.pdf';
+    //   doc.save(fileName);
+    // });
+
     const data = document.getElementById('pdf-cover');
-    const options = {background: 'white', height: data.clientHeight, width: data.clientWidth};
-    html2canvas(data, options).then(canvas => {
-      const doc = new jspdf('p', 'mm', 'a4');
-      const imgData = canvas.toDataURL('image/PNG');
-      doc.addImage(imgData, 'PNG', 20, 20);
-      const pdfOutput = doc.output();
-      const buffer = new ArrayBuffer(pdfOutput.length);
-      const array = new Uint8Array(buffer);
-      for (let i = 0; i < pdfOutput.length; i++) {
-        array[i] = pdfOutput.charCodeAt(i);
-      }
-      const fileName = 'example.pdf';
-      doc.save(fileName);
-    });
+   html2canvas(data).then(canvas => {
+     const imgWidth = 208;
+     const imgHeight = canvas.height * imgWidth / canvas.width;
+     const heightLeft = imgHeight;
+     const contentDataURL = canvas.toDataURL('image/png');
+     const pdf = new jspdf('p', 'mm', 'a4');
+     const position = 0;
+     pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
+     pdf.save('MYPdf.pdf');
+   });
+   
   }
 
   @HostListener('window:scroll')
