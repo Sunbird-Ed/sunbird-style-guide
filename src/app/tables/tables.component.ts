@@ -226,14 +226,14 @@ export class TablesComponent implements OnInit {
             <thead class="sb-table-header">
                 <tr>
                 <th>Name</th>
-                <th>Age</th>
+                <th class="text-center">Age</th>
                 <th>Job</th>
                 </tr>
             </thead>
             <tbody class="sb-table-body">
                 <tr>
-                <td data-label="Name">James</td>
-                <td data-label="Age">24</td>
+                <td data-label="Name" class="text-right">James</td>
+                <td data-label="Age" class="text-center">24</td>
                 <td data-label="Job">Engineer</td>
                 </tr>
                 <tr>
@@ -279,14 +279,14 @@ export class TablesComponent implements OnInit {
                 <thead class="sb-table-header">
                 <tr>
                     <th>Name</th>
-                    <th>Age</th>
+                    <th class="text-center">Age</th>
                     <th>Job</th>
                 </tr>
                 </thead>
                 <tbody class="sb-table-body">
                 <tr>
-                    <td data-label="Name">James</td>
-                    <td data-label="Age">24</td>
+                <td data-label="Name" class="text-right">James</td>
+                <td data-label="Age" class="text-center">24</td> 
                     <td data-label="Job">Engineer</td>
                 </tr>
                 <tr>

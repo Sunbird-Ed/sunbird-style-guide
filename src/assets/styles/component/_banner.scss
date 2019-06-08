@@ -1,8 +1,18 @@
+
 .sb-banner {
   padding: $sb-banner-padding;
-  border-radius: $sb-banner-border-radius;
+  border-radius: 4px;
   background-color: $sb-banner-background-color;
   box-shadow: $sb-banner-box-shadow;
+  &.sb-fix-bottom {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0 auto;
+    z-index: 999;
+    border-radius: $sb-banner-border-radius;
+  }
 }
 .sb-banner-content {
   display: flex;
