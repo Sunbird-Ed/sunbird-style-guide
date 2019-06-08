@@ -16,7 +16,8 @@ export class OfflineComponent implements OnInit {
       expandCode: false,
       title: 'Desktop - Notification Bar',
       demoCode: `
-      <div class="sb-banner mt-24">
+      <div class="ui fluid container">
+      <div class="ui container sb-banner mt-24 sb-fix-bottom">
   <div class="sb-banner-content">
     <div class="sb-banner-content-right">
       <div class="sb-banner-heading cursor-pointer">Download DIKSHA Lite Desktop App</div>
@@ -29,9 +30,10 @@ export class OfflineComponent implements OnInit {
     </div>
     <div class="sb-banner-content-left">
       <button class="sb-btn sb-btn-primary sb-btn-normal">Download for Windows (64-bit)&#x200E;</button>
-      <i class="sb-banner-close-icon close icon link"></i>
+     <i class="sb-banner-close-icon close icon link hide"></i>
     </div>
   </div>
+</div>
 </div>
       `,
       copyCode: `
@@ -44,7 +46,7 @@ export class OfflineComponent implements OnInit {
       demoCode: `
       <div class="d-flex flex-ai-center flex-jc-center offline-page-content">
       <div class="text-center">
-             <img src="./assets/images/offline-cloud.png" alt="offline computer image">
+             <img src="assets/images/offline-cloud.png" alt="offline computer image">
              <h2 class="offline-page-heading text-center">You are offline</h2>
              <div class="offline-page-subheading mt-8">Please connect to the internet to view content</div>        
             </div>
@@ -88,7 +90,7 @@ export class OfflineComponent implements OnInit {
     <div class="four wide column pl-0">
     <div class="offline-download-card offline-page-content">
         <div class="d-flex flex-ai-center flex-jc-center text-center flex-dc offline-page-content">
-            <img src="../assets/images/offline-computer.png" alt="download diksha app">
+            <img src="assets/images/offline-computer.png" alt="download diksha app">
             <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mt-32">Download for Windows (64-bit)&#x200E;</button>
             <div class="offline-download-card-extra mt-16 cursor-pointer">See download instructions</div>
         </div>      
@@ -134,7 +136,7 @@ export class OfflineComponent implements OnInit {
      <div class="six wide column sb-offline-imports p-0 pr-16">
       <div class="sb-offline-area d-flex p-16">
         <div class="sb-import-icon">
-        <img src="./assets/images/usb.svg" alt="offline import">
+        <img src="assets/images/usb.svg" alt="offline import">
         </div>
         <div class="sb-import-content">
           <h4 class="sb-import-content-title">Import content</h4>
@@ -149,7 +151,7 @@ export class OfflineComponent implements OnInit {
     <div class="six wide column sb-offline-imports sb-offline-video-demo p-0 pl-16">
     <div class="sb-offline-area d-flex p-16">
       <div class="sb-import-icon sb-import-icon-watch-video">
-      <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+      <img src="assets/images/offline-import-book.png" alt="offline watch video">
       </div>
       <div class="sb-import-content">
         <h4 class="sb-import-content-title">How to video</h4>
@@ -169,7 +171,7 @@ export class OfflineComponent implements OnInit {
       <div class="sb-offline-imports sb-offline-import-content-border">
       <div class="ui container sb-offline-area d-flex">
         <div class="sb-import-icon">
-        <img src="./assets/images/offline-import-file.png" alt="offline import">
+        <img src="assets/images/offline-import-file.png" alt="offline import">
         </div>
         <div class="sb-import-content">
           <h4 class="sb-import-content-title">Import content</h4>
@@ -185,7 +187,7 @@ export class OfflineComponent implements OnInit {
      <div class="sb-offline-imports">
      <div class="ui container sb-offline-area d-flex">
        <div class="sb-import-icon sb-import-icon-watch-video">
-       <img src="./assets/images/offline-import-book.png" alt="offline watch video">
+       <img src="assets/images/offline-import-book.png" alt="offline watch video">
        </div>
        <div class="sb-import-content">
          <h4 class="sb-import-content-title">How to video</h4>

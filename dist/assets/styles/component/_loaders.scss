@@ -153,9 +153,18 @@
       z-index: -1;
     }
   }
+  .DikshaLoaderContainer {
+    position: relative;
+      width: 80vmin;
+      height: 80vmin;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      margin: 0 auto;    box-shadow: 0 2px 7px 0 rgba(0,0,0,0.16);
+  }
   .animated-helix {
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);

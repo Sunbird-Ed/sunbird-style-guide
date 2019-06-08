@@ -63,10 +63,12 @@
 }
 
 .sb-table-hover {
+  tbody{
   tr:hover {
     background: $secondary-0;
     color: rgba($gray-0, .95);
   }
+}
 }
 
 .sb-table-striped tbody tr:nth-child(2n) {

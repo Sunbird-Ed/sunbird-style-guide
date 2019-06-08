@@ -19,11 +19,10 @@
           <div class="ml-auto">
             <ul class="d-flex flex-ai-center m-0">
               <li class="nav-item">
-                <a class="brd-none btn btn-header " href="/verticals/profile-registry/" title="Verticals">Verticals</a>
+                <a class="brd-none btn btn-header " href="#" title="My Library">My Library</a>
               </li>
               <li class="nav-item mx-20">
-                <a class="sb-btn sb-btn-outline-primary sb-btn-normal" href="/explore" title="Explore Content">Explore
-                  Content</a>
+                <a class="sb-btn sb-btn-outline-primary sb-btn-normal" href="#" title="Browse Online">Browse Online</a>
               </li>
               <li class="nav-item">
                 <a class="brd-none btn btn-header" href="/resources" title="Sign In">
@@ -52,25 +51,25 @@
           <ul class="sb-subheader-list disable-scrollbars">
 
             <li class="sb-subheader-list-item ">
-              <a class="sb-subheader-list-item-link" title="Install">
+              <a href="#" class="sb-subheader-list-item-link" title="Install">
                 <i class="cogs icon"></i>
                 <span class="sb-subheader-list-item-text">Install</span>
               </a>
             </li>
             <li class="sb-subheader-list-item active">
-              <a class="sb-subheader-list-item-link" title="Download">
+              <a href="#" class="sb-subheader-list-item-link" title="Download">
                 <i class="globe icon"></i>
                 <span class="sb-subheader-list-item-text">Browse</span>
               </a>
             </li>
             <li class="sb-subheader-list-item">
-              <a class="sb-subheader-list-item-link" title="Upload">
+              <a href="#" class="sb-subheader-list-item-link" title="Upload">
                 <i class="upload icon"></i>
                 <span class="sb-subheader-list-item-text">Upload</span>
               </a>
             </li>
             <li class="sb-subheader-list-item">
-              <a class="sb-subheader-list-item-link" title="Play">
+              <a href="#" class="sb-subheader-list-item-link" title="Play">
                 <i class="play icon"></i>
                 <span class="sb-subheader-list-item-text">Play</span>
               </a>
@@ -123,12 +122,11 @@
   </div> -->
 </div>
 
-    <div class="help-center-fixed-content download-pdf">
-        <button type="button" class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
-    </div>
+   
     <div class="ui fluid container mt-48 sb-help-page-section" id="pdf-cover">
         <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">
           <h1 class="help-center-content-title mt-0">Downloading Content</h1>
+          <button type="button" data-html2canvas-ignore class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
         </div>
       
         <div class="help-center-fixed-content">
@@ -166,7 +164,7 @@
                   <h4>Step 1</h4>
                   <p>Click on "Browse" Link.</p>
                 </div>
-                <div class="d-flex step-actions ml-auto">
+                <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
                     <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step2)">Step 2</button>
                   </div>
                 </div>
@@ -190,7 +188,7 @@
                       <h4>Step 2</h4>
                       <p>Select any file and click "Add to Library".</p>
                     </div>
-                    <div class="d-flex step-actions ml-auto">
+                    <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
                         <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step1)">Back</button>
                         <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step3)">Step 3</button>
                       </div>
@@ -220,7 +218,7 @@
                           <h4 class="hide">Step 2</h4>
                           <p>Click Open.</p>
                         </div>
-                        <div class="d-flex step-actions ml-auto">
+                        <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
                             <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step2)">Back</button>
                             <button class="sb-btn sb-btn-xs sb-btn-secondary">Step 4</button>
                           </div>

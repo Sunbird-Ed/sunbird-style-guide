@@ -53,7 +53,7 @@ export class LoadersComponent implements OnInit {
       expandCode: false,
       title: 'Diksha Loader for Offline',
       demoCode: `
-      <div style="position: relative;width: 80vmin;height: 80vmin;padding: 30px;">
+      <div class="DikshaLoaderContainer">
       <div class="animated-helix">
       <div class="diksha-opening-txt">Opening DIKSHA...</div>
       <img src="https://i.imgur.com/GU9mY0P.png" class="center">

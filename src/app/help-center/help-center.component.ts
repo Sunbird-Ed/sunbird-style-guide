@@ -32,16 +32,16 @@ export class HelpCenterComponent implements OnInit {
     // });
 
     const data = document.getElementById('pdf-cover');
-   html2canvas(data).then(canvas => {
-     const imgWidth = 208;
-     const imgHeight = canvas.height * imgWidth / canvas.width;
-     const heightLeft = imgHeight;
-     const contentDataURL = canvas.toDataURL('image/png');
-     const pdf = new jspdf('p', 'mm', 'a4');
-     const position = 0;
-     pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
-     pdf.save('MYPdf.pdf');
-   });
+    html2canvas(data).then(canvas => {
+      const imgWidth = 208;
+      const imgHeight = canvas.height * imgWidth / canvas.width;
+      const heightLeft = imgHeight;
+      const contentDataURL = canvas.toDataURL('image/png');
+      const pdf = new jspdf('p', 'mm', 'a4');
+      const position = 0;
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
+      pdf.save('help-center.pdf');
+    });
    
   }
 
@@ -67,6 +67,8 @@ export class HelpCenterComponent implements OnInit {
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
+
+  
   ngOnInit() {
   }
 
