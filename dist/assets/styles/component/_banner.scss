@@ -14,6 +14,15 @@
     border-radius: $sb-banner-border-radius;
   }
 }
+#sb-fix-bottom {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0 auto;
+  z-index: 999;
+  border-radius: $sb-banner-border-radius;
+}
 .sb-banner-content {
   display: flex;
   align-items: center;

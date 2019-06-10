@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { HighlightResult } from 'ngx-highlightjs';
+import './test.js';
+
+declare const checkOffset: any;
 
 @Component({
   selector: 'app-test-page',
@@ -9,7 +12,15 @@ export class TestPageComponent implements OnInit {
 
   constructor() { }
 
-  pageTitle  = 'Test Page';
+
+
+  @HostListener('window:scroll')
+
+  //checkOffset();
+
+
+
+  pageTitle = 'Test Page';
   sections = [
     {
       expandCode: false,
@@ -31,10 +42,11 @@ export class TestPageComponent implements OnInit {
     </dl>
       `
     }
-    
+
   ];
 
   ngOnInit() {
+   
   }
 
 }

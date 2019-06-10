@@ -1,13 +1,19 @@
-import { Component, OnInit, HostListener, ElementRef  } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
+import mediumZoom from 'medium-zoom';
 
+
+declare const TestFunction: any;
 @Component({
   selector: 'app-help-center',
   templateUrl: './help-center.component.html',
   styleUrls: ['./help-center.component.scss']
 })
+
+
+
 export class HelpCenterComponent implements OnInit {
 
   constructor() { }
@@ -42,7 +48,7 @@ export class HelpCenterComponent implements OnInit {
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
       pdf.save('help-center.pdf');
     });
-   
+
   }
 
   @HostListener('window:scroll')
@@ -55,6 +61,13 @@ export class HelpCenterComponent implements OnInit {
     }
   }
 
+  TestFunction() {
+    alert('test');
+  }
+
+
+
+
   // TODO: Cross browsing
   gotoTop() {
     window.scroll({
@@ -65,11 +78,19 @@ export class HelpCenterComponent implements OnInit {
   }
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior: 'smooth'});
+    el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  
+
   ngOnInit() {
+
+
+
+  }
+
+  ngAfterViewInit() {
+    mediumZoom('img');
+    //mediumZoom(document.querySelector('.mediumZoom'));
   }
 
 }

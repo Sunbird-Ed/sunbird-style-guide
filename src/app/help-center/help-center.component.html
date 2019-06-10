@@ -122,8 +122,50 @@
   </div> -->
 </div>
 
-   
-    <div class="ui fluid container mt-48 sb-help-page-section" id="pdf-cover">
+<div class="ui fluid container mt-48 sb-help-page-section" id="pdf-cover">
+  <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">
+    <h1 class="help-center-content-title mt-0">Downloading Content</h1>
+    <button type="button" data-html2canvas-ignore class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
+  </div>
+
+  <div class="help-center-fixed-content">
+      <p class="help-center-content-paragraph">DIKSHA has a lot of content. You can download any DIKSHA content when
+          you are connected to the Internet. . All files downloaded from DIKSHA are saved on your computer, laptop,
+          mobile or any other device as .ecar files. That is, all the downloaded files have an extension .ecar. </p>
+        <p class="help-center-content-paragraph">This section tells you how to download files from DIKSHA</p>
+        <h2 class="help-center-content-subtitle"><span>Must Do</span></h2>
+        <p class="help-center-content-paragraph">Before downloading content from DIKSHA, ensure the following.</p>
+
+        <ul class="help-center-list help-center-list-content">
+            <li class="help-center-list-content"> You are connected to the internet.</li>
+            <li class="help-center-list-content">You have DIKSHA offline consumption application installed on your desktop.</li>
+          </ul>
+    </div>
+  
+    
+  <div class="help-center-download-steps">
+      <div class="help-center-fixed-content">
+        <h2 class="help-center-content-subtitle">Downloading Content</h2>
+          <div class="d-flex flex-ai-center flex-jc-center flex-jc-space-between mb-8">
+            <h3 class="help-center-content-extra">Step 1/7</h3>
+          </div>
+      </div>
+      <div class="ui container help-center-image-section text-center d-flex">
+        <img src="assets/images/downloading_1.png" class="help-center-image mediumZoom" alt="help-center">
+    </div>
+  </div>
+
+
+
+
+ 
+
+</div>
+
+
+
+
+    <div class="ui fluid container mt-48 sb-help-page-section hide" id="pdf-cover">
         <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">
           <h1 class="help-center-content-title mt-0">Downloading Content</h1>
           <button type="button" data-html2canvas-ignore class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
@@ -227,83 +269,11 @@
                 </div>
         </div>
       
-      </div>
-
-
-
-<!-- <div class="ui container mt-32">
-  <div class="ui raised fluid card p-24">
-    <div class="sb-help-center-section">
-      <div class="sb-help-center-section-header">
-        <div class="sb-help-center-section-title">
-          <h1>Getting Started</h1>
-        </div>
-        <div class="content pt-8">
-            <p class="sb-para">
-              India... It's a country of great wisdom, incredible history, ruins of ancient cities, eastern spices, delicious tea, and beautiful nature. India gave the world a great civilization. You will never want to leave it. However, when you have to do that, don't forget to exchange your rupees. No one is allowed to take them out of the country!
-            </p>
-            <div class="ui stackable grid py-20">
-              <div  class="eight wide column">
-                <div class="img-block">
-                    <img  class="ui fluid image" src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_1400/v1451071843/castle.jpg">
-                </div>
-              </div>
-              <div  class="four wide column">
-                  <h4 class=""> Popular Story</h4>
-                  <p class="sb-para m-0">In 2000, ten years later, the international community met again at the World Education Forum in Dakar, Senegal, an event which drew 1100 participants.</p>
-                  <ul class="sb-circular-list">
-                      <li class="sb-circular-list-item">Free unlimited content</li>
-                      <li class="sb-circular-list-item">Multilingual support</li>
-                      <li class="sb-circular-list-item">Play content offline</li>
-                    </ul>
-              </div>
-            </div>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<div class="ui container mt-32">
-    <div class="ui raised fluid card p-24">
-      <div class="sb-help-center-section">
-        <div class="sb-help-center-section-header">
-          <div class="sb-help-center-section-title">
-            <h1>Getting Started</h1>
-          </div>
-          <div class="content pt-8">
-              <p class="sb-para">
-                India... It's a country of great wisdom, incredible history, ruins of ancient cities, eastern spices, delicious tea, and beautiful nature. India gave the world a great civilization. You will never want to leave it. However, when you have to do that, don't forget to exchange your rupees. No one is allowed to take them out of the country!
-              </p>
-              <img class="ui fluid image full-image" src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_1400/v1451071843/castle.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<div class="ui container mt-32">
-  <div class="ui raised fluid card p-24">
-    <div class="content">
-      <table class="sb-two-column-table">
-        <tbody>
-          <tr>
-            <th class="sb-table-heading first-column">Step
-            </th>
-            <th class="sb-table-heading second-column">Screen
-            </th>
-          </tr>
-          <tr>
-            <td class="sb-table-description">1. Click <b>Explore Content</b>. The Explore DIKSHA page is displayed
-            </td>
-            <td class="sb-table-description"><img src="../images/explorediksha/gettingstarted.png">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div> -->
+
+
 
 
 <a *ngIf="isShow" (click)="gotoTop()" class="scrollup" style="">scroll</a>
