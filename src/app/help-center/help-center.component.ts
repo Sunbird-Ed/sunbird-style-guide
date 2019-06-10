@@ -45,6 +45,8 @@ export class HelpCenterComponent implements OnInit {
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jspdf('p', 'mm', 'a4');
       const position = 0;
+
+      
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
       pdf.save('help-center.pdf');
     });
@@ -88,9 +90,10 @@ export class HelpCenterComponent implements OnInit {
 
   }
 
+
   ngAfterViewInit() {
-    mediumZoom('img');
-    //mediumZoom(document.querySelector('.mediumZoom'));
+    //mediumZoom('img');
+    mediumZoom('[data-zoomable]');
   }
 
 }

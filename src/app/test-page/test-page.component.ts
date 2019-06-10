@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { HighlightResult } from 'ngx-highlightjs';
-import './test.js';
+//import './test.js';
 
 declare const checkOffset: any;
 
