@@ -15,10 +15,12 @@ declare const TestFunction: any;
 
 
 export class HelpCenterComponent implements OnInit {
+  images: any;
 
   constructor() { }
   isShow: boolean;
   topPosToStartShowing = 100;
+
 
   public generatepdf() {
     // const data = document.getElementById('pdf-cover');
@@ -37,15 +39,36 @@ export class HelpCenterComponent implements OnInit {
     //   doc.save(fileName);
     // });
 
+    // const data = document.getElementById('pdf-cover');
+    // html2canvas(data).then(canvas => {
+    //   const imgWidth = 208;
+    //   const imgHeight = canvas.height * imgWidth / canvas.width;
+    //   const heightLeft = imgHeight;
+    //   const contentDataURL = canvas.toDataURL('image/png');
+    //   const pdf = new jspdf('p', 'mm', 'a4');
+    //   const position = 0;
+    //   pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
+    //   pdf.save('help-center.pdf');
+    // });
+    
     const data = document.getElementById('pdf-cover');
     html2canvas(data).then(canvas => {
       const imgWidth = 208;
+      const pageHeight = 350;
       const imgHeight = canvas.height * imgWidth / canvas.width;
-      const heightLeft = imgHeight;
+      let heightLeft = imgHeight;
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jspdf('p', 'mm', 'a4');
-      const position = 0;
-      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, heightLeft);
+      let position = 8;
+      //let margin = 16;
+      pdf.addImage(contentDataURL, 'PNG', 8, position, imgWidth-24, imgHeight);
+      heightLeft -= pageHeight;
+      while (heightLeft >= 0) {
+            position = heightLeft - imgHeight;
+            pdf.addPage();
+            pdf.addImage(contentDataURL, 'PNG', 8, position, imgWidth-24, imgHeight);
+            heightLeft -= pageHeight;
+          }
       pdf.save('help-center.pdf');
     });
 
