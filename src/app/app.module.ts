@@ -71,6 +71,7 @@ import { VariablesComponent } from './variables/variables.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
+import { IconsComponent } from './icons/icons.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -129,7 +130,8 @@ export function hljsLanguages() {
     TestPageComponent,
     AccordionComponent,
     HelpPageComponent,
-    HelpCenterComponent
+    HelpCenterComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
