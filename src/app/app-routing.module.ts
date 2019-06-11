@@ -39,6 +39,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import {HelpPageComponent} from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { LibraryComponent } from './library/library.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 
@@ -83,6 +84,7 @@ const routes: Routes = [
   { path: 'help-center', component: HelpCenterComponent},
   { path: 'variables', component: VariablesComponent},
   { path: 'library', component: LibraryComponent},
+  { path: 'icons', component: IconsComponent}
 ];
 
 @NgModule({
