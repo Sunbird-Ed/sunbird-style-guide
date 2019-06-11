@@ -71,6 +71,8 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { StickyModule } from 'ng2-sticky-kit';
+import { LibraryComponent } from './library/library.component';
+import { IconsComponent } from './icons/icons.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -129,7 +131,9 @@ export function hljsLanguages() {
     TestPageComponent,
     AccordionComponent,
     HelpPageComponent,
-    HelpCenterComponent
+    HelpCenterComponent,
+    LibraryComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,

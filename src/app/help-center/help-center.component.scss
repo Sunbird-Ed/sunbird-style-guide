@@ -1,5 +1,8 @@
 @import "../../assets/styles/base/variables";
 
+.sb-tab-section{
+  width: 100%;
+}
 .sb-subheader {
   background: #005da2;
   height:60px;
@@ -68,9 +71,10 @@
   color: #fff;
   padding: 0;
   display: inline-block;
+  cursor: pointer;
 }
 
-.sb-subheader-list-item.active {
+.sb-subheader-list-item-link.active {
   background: #003257;
 }
 
@@ -146,28 +150,29 @@
   }
 }
 
+.help-center-content-title {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+.help-center-content-paragraph {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.help-center-content-subtitle {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.help-center-content-extra {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 16px;
+}
 .help-center-fixed-content {
   width: 100%;
   &.sb-help-page-title {
     position: relative;
-  }
-  .help-center-content-title {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  .help-center-content-paragraph {
-    margin-bottom: 12px;
-    font-size: 14px;
-  }
-  .help-center-content-subtitle {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  .help-center-content-extra {
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 16px;
   }
   .help-center-list {
     margin: 12px 0 0 0;
@@ -179,12 +184,13 @@
   }
 }
 .sb-help-page-section {
+  padding-bottom: 32px;
   .help-center-image {
     max-width: 100%;
     width: 100%;
   }
   .help-center-download-steps {
-    margin: 48px 0;
+    margin: 32px 0;
     // height: 100vh;
     .help-center-image-section {
       .steps-img-ct {

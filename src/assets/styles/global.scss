@@ -153,3 +153,42 @@ body ::-webkit-scrollbar-thumb
 .fixed {
   position: fixed;
 }
+[class*="sb-icon-"] {
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  background-color: $primary-color;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+[class*="sb-icon-primary"] {
+  background-color: $primary-color;
+}
+
+[class*="sb-icon-secondary"] {
+  background-color: $secondary-color;
+}
+
+[class*="sb-icon-warning"] {
+  background-color: $tertiary-color;
+}
+
+[class*="sb-icon-error"] {
+  background-color: $red;
+}
+
+[class*="sb-icon-edit-user"] {
+  -webkit-mask-image: url(../../assets/images/edit-icon.svg);
+  mask-image: url(../../assets/images/edit-icon.svg);
+}
+
+[class*="sb-icon-delete-user"] {
+  -webkit-mask-image: url(../../assets/images/delete-icon.svg);
+  mask-image: url(../../assets/images/delete-icon.svg);
+}

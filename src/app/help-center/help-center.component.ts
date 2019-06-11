@@ -112,5 +112,4 @@ export class HelpCenterComponent implements OnInit {
     //mediumZoom('img');
     mediumZoom('[data-zoomable]');
   }
-
 }
