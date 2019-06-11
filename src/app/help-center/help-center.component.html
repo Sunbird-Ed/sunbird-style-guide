@@ -142,7 +142,7 @@
           </ul>
     </div>
   
-    
+    <div class="">
   <div class="help-center-download-steps">
       <div class="help-center-fixed-content">
         <h2 class="help-center-content-subtitle">Downloading Content</h2>
@@ -155,6 +155,7 @@
     </div>
   </div>
 
+  <div class="html2pdf__page-break"></div>
 
   <div class="help-center-download-steps">
     <div class="help-center-fixed-content">
@@ -168,17 +169,6 @@
   </div>
 </div>
 
-<div class="help-center-download-steps">
-  <div class="help-center-fixed-content">
-    <h2 class="help-center-content-subtitle">Downloading Status</h2>
-      <div class="d-flex flex-ai-center flex-jc-center flex-jc-space-between mb-8">
-        <h3 class="help-center-content-extra">Step 2/7</h3>
-      </div>
-  </div>
-  <div class="ui container help-center-image-section text-center d-flex">
-    <img src="assets/images/downloading_status.png" data-zoomable class="help-center-image mediumZoom" alt="help-center">
-</div>
-</div>
 
 
 <div class="help-center-download-steps">
@@ -193,117 +183,135 @@
 </div>
 </div>
 
+ 
+
+<div class="help-center-download-steps">
+  <div class="help-center-fixed-content">
+    <h2 class="help-center-content-subtitle">Downloading Status</h2>
+      <div class="d-flex flex-ai-center flex-jc-center flex-jc-space-between mb-8">
+        <h3 class="help-center-content-extra">Step 2/7</h3>
+      </div>
+  </div>
+  <div class="ui container help-center-image-section text-center d-flex">
+    <img src="assets/images/downloading_status.png" data-zoomable class="help-center-image mediumZoom" alt="help-center">
+</div>
+</div>
 
 </div>
 
+<div class="ui fluid container mt-48 sb-help-page-section hide" id="pdf-cover">
+  <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">
+    <h1 class="help-center-content-title mt-0">Downloading Content</h1>
+    <button type="button" data-html2canvas-ignore class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
+  </div>
 
+  <div class="help-center-fixed-content">
+      <p class="help-center-content-paragraph">DIKSHA has a lot of content. You can download any DIKSHA content when
+          you are connected to the Internet. . All files downloaded from DIKSHA are saved on your computer, laptop,
+          mobile or any other device as .ecar files. That is, all the downloaded files have an extension .ecar. </p>
+        <p class="help-center-content-paragraph">This section tells you how to download files from DIKSHA</p>
+        <h2 class="help-center-content-subtitle"><span>Must Do</span></h2>
+        <p class="help-center-content-paragraph">Before downloading content from DIKSHA, ensure the following.</p>
 
-
-    <div class="ui fluid container mt-48 sb-help-page-section hide" id="pdf-cover">
-        <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">
-          <h1 class="help-center-content-title mt-0">Downloading Content</h1>
-          <button type="button" data-html2canvas-ignore class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">Download PDF</button>
-        </div>
-      
-        <div class="help-center-fixed-content">
-            <p class="help-center-content-paragraph">DIKSHA has a lot of content. You can download any DIKSHA content when
-                you are connected to the Internet. . All files downloaded from DIKSHA are saved on your computer, laptop,
-                mobile or any other device as .ecar files. That is, all the downloaded files have an extension .ecar. </p>
-              <p class="help-center-content-paragraph">This section tells you how to download files from DIKSHA</p>
-              <h2 class="help-center-content-subtitle"><span>Must Do</span></h2>
-              <p class="help-center-content-paragraph">Before downloading content from DIKSHA, ensure the following.</p>
-      
-              <ul class="help-center-list help-center-list-content">
-                  <li class="help-center-list-content"> You are connected to the internet.</li>
-                  <li class="help-center-list-content">You have DIKSHA offline consumption application installed on your desktop.</li>
-                </ul>
-          </div>
-        
-          
-        <div class="help-center-download-steps" #step1>
-            <div class="help-center-fixed-content">
-              <h2 class="help-center-content-subtitle">Downloading Content</h2>
-      
-                <div class="d-flex flex-ai-center flex-jc-center flex-jc-space-between mb-8">
-                  <h3 class="help-center-content-extra">Step 1/7</h3>
-                </div>
-      
-            </div>
-      
-            <div class="help-center-image-section d-flex">
-              <div class="steps-img-ct">
-                  <img src="assets/images/downloading_1_1.png" class="help-center-image" alt="help-center">
-              </div>
-              <div class="steps-content-ct">
-                <div class="d-flex flex-w-wrap w-100 flex-as-start">
-                <div class="steps-info steps-info-top">
-                  <h4>Step 1</h4>
-                  <p>Click on "Browse" Link.</p>
-                </div>
-                <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
-                    <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step2)">Step 2</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-      
-      
-        <div class="help-center-download-steps" #step2>
-            <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-center flex-jc-space-between m-8">
-                <h3 class="help-center-content-extra">Step 2/7</h3>
-              
-              </div>
-              <div class="help-center-image-section d-flex">
-                  <div class="steps-img-ct">
-                      <img src="assets/images/downloading_2_2.png" class="help-center-image" alt="help-center">
-                  </div>
-                  <div class="steps-content-ct">
-                      <div class="d-flex flex-w-wrap w-100 flex-as-center">
-                    <div class="steps-info steps-info-middle">
-                      <h4>Step 2</h4>
-                      <p>Select any file and click "Add to Library".</p>
-                    </div>
-                    <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
-                        <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step1)">Back</button>
-                        <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step3)">Step 3</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        </div>
-      
-        <div class="help-center-download-steps" #step3>
-            <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-center flex-jc-space-between m-8">
-                <h3 class="help-center-content-extra">Step 3/7</h3>
-              
-              </div>
-              <div class="help-center-image-section d-flex">
-                  <div class="steps-img-ct">
-                      <img src="assets/images/downloading_3.jpg" class="help-center-image" alt="help-center">
-                  </div>
-                  <div class="steps-content-ct">
-                      <div class="d-flex flex-w-wrap w-100 flex-as-flex-end">
-                    <div class="steps-info steps-info-middle">
-                      <h4>Step 3</h4>
-                      <p>Select the download .ecar file.</p>
-                    </div>
-                    </div>
-                    <div class="d-flex flex-w-wrap w-100 flex-as-flex-end">
-                        <div class="steps-info steps-info-middle">
-                          <h4 class="hide">Step 2</h4>
-                          <p>Click Open.</p>
-                        </div>
-                        <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
-                            <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step2)">Back</button>
-                            <button class="sb-btn sb-btn-xs sb-btn-secondary">Step 4</button>
-                          </div>
-                        </div>
-                  </div>
-                </div>
-        </div>
-      
+        <ul class="help-center-list help-center-list-content">
+            <li class="help-center-list-content"> You are connected to the internet.</li>
+            <li class="help-center-list-content">You have DIKSHA offline consumption application installed on your desktop.</li>
+          </ul>
     </div>
+  
+    
+  <div class="help-center-download-steps" #step1>
+      <div class="help-center-fixed-content">
+        <h2 class="help-center-content-subtitle">Downloading Content</h2>
+
+          <div class="d-flex flex-ai-center flex-jc-center flex-jc-space-between mb-8">
+            <h3 class="help-center-content-extra">Step 1/7</h3>
+          </div>
+
+      </div>
+
+      <div class="help-center-image-section d-flex">
+        <div class="steps-img-ct">
+            <img src="assets/images/downloading_1_1.png" class="help-center-image" alt="help-center">
+        </div>
+        <div class="steps-content-ct">
+          <div class="d-flex flex-w-wrap w-100 flex-as-start">
+          <div class="steps-info steps-info-top">
+            <h4>Step 1</h4>
+            <p>Click on "Browse" Link.</p>
+          </div>
+          <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
+              <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step2)">Step 2</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="help-center-download-steps" #step2>
+      <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-center flex-jc-space-between m-8">
+          <h3 class="help-center-content-extra">Step 2/7</h3>
+        
+        </div>
+        <div class="help-center-image-section d-flex">
+            <div class="steps-img-ct">
+                <img src="assets/images/downloading_2_2.png" class="help-center-image" alt="help-center">
+            </div>
+            <div class="steps-content-ct">
+                <div class="d-flex flex-w-wrap w-100 flex-as-center">
+              <div class="steps-info steps-info-middle">
+                <h4>Step 2</h4>
+                <p>Select any file and click "Add to Library".</p>
+              </div>
+              <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
+                  <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step1)">Back</button>
+                  <button class="sb-btn sb-btn-xs sb-btn-secondary" (click)="scroll(step3)">Step 3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+
+  <div class="help-center-download-steps" #step3>
+      <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-center flex-jc-space-between m-8">
+          <h3 class="help-center-content-extra">Step 3/7</h3>
+        
+        </div>
+        <div class="help-center-image-section d-flex">
+            <div class="steps-img-ct">
+                <img src="assets/images/downloading_3.jpg" class="help-center-image" alt="help-center">
+            </div>
+            <div class="steps-content-ct">
+                <div class="d-flex flex-w-wrap w-100 flex-as-flex-end">
+              <div class="steps-info steps-info-middle">
+                <h4>Step 3</h4>
+                <p>Select the download .ecar file.</p>
+              </div>
+              </div>
+              <div class="d-flex flex-w-wrap w-100 flex-as-flex-end">
+                  <div class="steps-info steps-info-middle">
+                    <h4 class="hide">Step 2</h4>
+                    <p>Click Open.</p>
+                  </div>
+                  <div class="d-flex step-actions ml-auto" data-html2canvas-ignore>
+                      <button class="sb-btn sb-btn-xs sb-btn-outline-primary mr-8" (click)="scroll(step2)">Back</button>
+                      <button class="sb-btn sb-btn-xs sb-btn-secondary">Step 4</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
 
 
 

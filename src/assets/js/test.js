@@ -2,6 +2,7 @@ var socialFloat = document.querySelector('#sb-fix-bottom');
 var footer = document.querySelector('#footer');
 
 function checkOffset() {
+    alert('pass');
     function getRectTop(el) {
         var rect = el.getBoundingClientRect();
         return rect.top;
@@ -15,6 +16,3 @@ function checkOffset() {
     // socialFloat.innerHTML = document.body.scrollTop + window.innerHeight;
 }
 
-document.addEventListener("scroll", function () {
-    checkOffset();
-});

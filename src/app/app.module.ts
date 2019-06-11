@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SlickModule } from 'ngx-slick';
 import { FormsModule } from '@angular/forms';
-
 import { HighlightModule } from 'ngx-highlightjs';
 import xml from 'highlight.js/lib/languages/xml';
 import scss from 'highlight.js/lib/languages/scss';
@@ -71,6 +70,7 @@ import { VariablesComponent } from './variables/variables.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
+import { StickyModule } from 'ng2-sticky-kit';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -146,7 +146,8 @@ export function hljsLanguages() {
     FormsModule,
     BrowserAnimationsModule,
     HeadroomModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    StickyModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
