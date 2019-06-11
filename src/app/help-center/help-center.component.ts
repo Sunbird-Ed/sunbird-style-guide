@@ -6,6 +6,7 @@ import mediumZoom from 'medium-zoom';
 
 
 declare const TestFunction: any;
+declare var jQuery: any;
 @Component({
   selector: 'app-help-center',
   templateUrl: './help-center.component.html',
@@ -112,8 +113,8 @@ export class HelpCenterComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    mediumZoom('img');
+    //mediumZoom('img');
     //mediumZoom(document.querySelector('.mediumZoom'));
+    mediumZoom('[data-zoomable]');
   }
-
 }
