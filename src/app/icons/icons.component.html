@@ -1,0 +1,53 @@
+<h1 class="docs-pageHeading">Icons</h1>
+<div class="main ui container">
+  <div>
+    <div class="d-inline-block">
+      <h4>Sunbird Icons</h4>
+      <p>An icon set contains an arbitrary number of glyphs, search for icons in the searchbar and click on it. It will automatically get copied.</p>
+    </div>
+    <div class="mt-16 sb-search-box small no-btn" style="margin: 0 auto;">
+      <div class="input-div relative">
+        <i class="search icon"></i>
+        <input class="sb-search-input" type="text" id="iconSearch" (keyup)="searchIcon($event)"
+          placeholder="Search for icon.." title="Search for.." />
+        <i class="close icon hide"></i>
+        <div class="sb-loader hide"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui grid d-flex flex-w-wrap flex-jc-center mt-24" id="iconList">
+    <div class="column" ngxClipboard [cbContent]="editIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-edit-user"></span>
+      <p>edit user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user sb-icon-primary"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user sb-icon-secondary"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user sb-icon-warning"></span>
+      <p>delete user icon</p>
+    </div>
+    <div class="column" ngxClipboard [cbContent]="deleteIcon" (cbOnSuccess)="iconCopied($event)">
+      <span class="sb-icon-delete-user sb-icon-error"></span>
+      <p>delete user icon</p>
+    </div>
+  </div>
+</div>

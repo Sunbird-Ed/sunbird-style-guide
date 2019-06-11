@@ -1,0 +1,20 @@
+.column {
+  text-align: center;
+  color: transparent;
+  cursor: pointer;
+  transition: color 0.6s ease,
+  transform 0.2s ease;
+  min-width: 12.5%;
+  &:hover {
+    color: #333333;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 5px 0px rgba(0,0,0,.2); 
+    span {
+      transform: scale(1.5);
+    }
+  }
+  p {
+    font-size: 12px;
+    margin: 16px auto;
+  }
+}
