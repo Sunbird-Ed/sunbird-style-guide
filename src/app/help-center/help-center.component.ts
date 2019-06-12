@@ -3,7 +3,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
 import mediumZoom from 'medium-zoom';
-// import * as $ from 'jquery';
+import * as $ from 'jquery';
 import * as html2pdf from 'html2pdf.js';
 
 declare var $: any;
