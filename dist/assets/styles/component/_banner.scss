@@ -4,7 +4,7 @@
   border-radius: 4px;
   background-color: $sb-banner-background-color;
   box-shadow: $sb-banner-box-shadow;
-  &.sb-fix-bottom {
+  &.sb-fix-bottom, &.fixed {
     position: fixed;
     left: 0px;
     right: 0px;

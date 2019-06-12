@@ -1,0 +1,18 @@
+var socialFloat = document.querySelector('#sb-fix-bottom');
+var footer = document.querySelector('#footer');
+
+function checkOffset() {
+    alert('pass');
+    function getRectTop(el) {
+        var rect = el.getBoundingClientRect();
+        return rect.top;
+    }
+
+    if ((getRectTop(socialFloat) + document.body.scrollTop) + socialFloat.offsetHeight >= (getRectTop(footer) + document.body.scrollTop) - 10)
+        socialFloat.style.position = 'relative';
+    if (document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop))
+        socialFloat.style.position = 'fixed'; // restore when you scroll up
+
+    // socialFloat.innerHTML = document.body.scrollTop + window.innerHeight;
+}
+

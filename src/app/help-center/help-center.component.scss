@@ -151,17 +151,17 @@
 }
 
 .help-center-content-title {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: 36px;
   font-weight: bold;
 }
 .help-center-content-paragraph {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   font-size: 14px;
 }
 .help-center-content-subtitle {
   margin-top: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-weight: bold;
 }
 .help-center-content-extra {
@@ -190,7 +190,7 @@
     width: 100%;
   }
   .help-center-download-steps {
-    margin: 32px 0;
+    margin: 0px 0;
     // height: 100vh;
     .help-center-image-section {
       .steps-img-ct {

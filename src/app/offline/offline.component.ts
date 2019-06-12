@@ -17,7 +17,7 @@ export class OfflineComponent implements OnInit {
       title: 'Desktop - Notification Bar',
       demoCode: `
       <div class="ui fluid container">
-      <div class="ui container sb-banner mt-24 sb-fix-bottom">
+      <div class="ui container sb-banner mt-24 sb-sticky-top">
   <div class="sb-banner-content">
     <div class="sb-banner-content-right">
       <div class="sb-banner-heading cursor-pointer">Download DIKSHA Lite Desktop App</div>
