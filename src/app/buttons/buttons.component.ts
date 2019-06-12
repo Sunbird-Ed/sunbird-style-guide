@@ -15,11 +15,11 @@ export class ButtonsComponent implements OnInit {
       expandCode: false,
       title: 'Basic Buttons',
       demoCode: `
-      <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Primary Button/Info</button>
-      <button type="button" class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-8">Secondary/Success</button>
-      <button type="button" class="sb-btn sb-btn-outline-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
-      <button type="button" class="sb-btn sb-btn-outline-error sb-btn-normal mr-8">Error</button>
-      <button type="button" class="sb-btn sb-btn-outline-gray sb-btn-normal">Default</button>
+      <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8 ripple">Primary Button/Info</button>
+      <button type="button" class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-8 ripple">Secondary/Success</button>
+      <button type="button" class="sb-btn sb-btn-outline-tertiary sb-btn-normal mr-8 ripple">Tertiary/Warning</button>
+      <button type="button" class="sb-btn sb-btn-outline-error sb-btn-normal mr-8 ripple">Error</button>
+      <button type="button" class="sb-btn sb-btn-outline-gray sb-btn-normal ripple">Default</button>
       `,
       copyCode: `
       <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal">Primary Button/Info</button>
@@ -33,11 +33,11 @@ export class ButtonsComponent implements OnInit {
       expandCode: false,
       title: 'Colored Buttons',
       demoCode: `
-      <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8">Primary Button/Info</button>
-      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8">Secondary/Success</button>
-      <button type="button" class="sb-btn sb-btn-tertiary sb-btn-normal mr-8">Tertiary/Warning</button>
-      <button type="button" class="sb-btn sb-btn-error sb-btn-normal mr-8">Error</button>
-      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal mr-8">Gray</button>
+      <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8 ripple">Primary Button/Info</button>
+      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8 ripple">Secondary/Success</button>
+      <button type="button" class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 ripple">Tertiary/Warning</button>
+      <button type="button" class="sb-btn sb-btn-error sb-btn-normal mr-8 ripple">Error</button>
+      <button type="button" class="sb-btn sb-btn-gray sb-btn-normal mr-8 ripple">Gray</button>
       `,
       copyCode: `
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal">Primary Button/Info</button>

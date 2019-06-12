@@ -80,13 +80,13 @@ export class HelpCenterComponent implements OnInit {
   }
 
   generatepdf(){
-    let element = document.getElementById('pdf-cover');
+    let element = document.querySelector('#pdf-cover');
     let opt = {
-      margin: 10,
-      filename: 'myfile.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
+      margin: 0,
+      filename: 'help-center.pdf',
+      image: { type: 'jpeg', quality: 1 },
       enableLinks:true,
-      html2canvas: { scale: 2, dpi: 300, letterRendering: true },
+      html2canvas: { scale: 1, dpi: 300, letterRendering: true },
       jspdf: { unit: 'px', format: 'a4', orientation: 'portrait', position: 0, pagesplit: true, compress:true }
     };
     html2pdf().from(element).set(opt).save();

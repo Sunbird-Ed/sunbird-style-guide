@@ -70,7 +70,6 @@ import { VariablesComponent } from './variables/variables.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
-import { StickyModule } from 'ng2-sticky-kit';
 import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
 /**
@@ -150,8 +149,7 @@ export function hljsLanguages() {
     FormsModule,
     BrowserAnimationsModule,
     HeadroomModule,
-    NgxPageScrollModule,
-    StickyModule
+    NgxPageScrollModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
