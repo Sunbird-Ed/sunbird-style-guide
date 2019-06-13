@@ -8,5 +8,10 @@ import { Component} from '@angular/core';
 export class AppComponent {
   showSidebar = true;
   title = 'docs';
+  selectedlink;
+
+  displayMatchedLocationPath(val) {
+    this.selectedlink = val;
+  }
 
 }
