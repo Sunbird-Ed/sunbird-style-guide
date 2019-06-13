@@ -1,32 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-
-
+import { Component, ViewChild,
+  AfterViewInit,
+  ElementRef, HostListener, OnInit, EventEmitter, Output  } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
 @Component({
   selector: 'app-sidebar',
-  styles:[`
-   
-  `],
+  providers: [Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  styles: [` `],
   templateUrl: './sidebar.component.html'
 })
 
 export class SidebarComponent implements OnInit {
-
-  //title = 'Angular Search Using ng2-search-filter';
+  darkmode = true;
+  private entityId;
+  routeParametertemp;
+  routeParameter;
   searchText;
+
   heroes = [
     { id: 11, name: 'Mr. Nice', country: 'India' }
   ];
+  @Output() getMatchedLocationPath = new EventEmitter();
+  constructor( private route: ActivatedRoute, private location: Location) {
 
-
-  constructor() { 
-   
   }
+
+
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   ngOnInit() {
-
   }
 
-  myFunction(event) {
+  clearSearchInput() {
+      this.searchInput.nativeElement.value = '';
+      this.menuSearch('');
+  }
+
+  @HostListener('click', ['$event.target'])
+  onClick(targetElement: string) {
+    console.log(this.location.path());
+    this.routeParametertemp = this.location.path();
+    this.routeParameter = this.routeParametertemp.replace (/\//g, '');
+    this.getMatchedLocationPath.emit(this.routeParameter);
+  }
+
+  menuSearch(event) {
     // tslint:disable-next-line:one-variable-per-declaration
     let filter, ul, li, a, i, j, listHeading;
     filter = event.target.value.toUpperCase();
@@ -48,10 +66,6 @@ export class SidebarComponent implements OnInit {
       }
     }
   }
-
-    
-  
-
 }
 
 
