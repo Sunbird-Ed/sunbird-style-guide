@@ -9,5 +9,10 @@ export class AppComponent {
   constructor(public router : Router){}
   showSidebar = true;
   title = 'docs';
+  selectedlink;
+
+  displayMatchedLocationPath(val) {
+    this.selectedlink = val;
+  }
 
 }
