@@ -1,22 +1,21 @@
-<div class="sb-branding">
-  <div><img src="https://project-sunbird.atlassian.net/secure/projectavatar?pid=10000&avatarId=10512&size=xxlarge"
-      width="100%" /></div>
-  <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
+<div class="sb-branding pl-8">
+    <img src="docs/assets/images/sunbird-logo.png" />
 </div>
-
-<div class="mt-16 sb-search-box small no-btn">
-  <div class="input-div relative">
-    <i class="search icon"></i>
-    <input class="sb-search-input" type="text" id="myInput" (keyup)="myFunction($event)"
-      placeholder="Search for.." title="Search for.." />
-    <i class="close icon hide"></i>
-    <div class="sb-loader hide"></div>
+<div class="p-8">
+  <div class="sb-search-box small no-btn">
+    <div class="input-div relative">
+      <i class="search icon"></i>
+      <input class="sb-search-input" type="text" id="myInput" (keyup)="myFunction($event)"
+        placeholder="Search for.." title="Search for.." />
+      <i class="close icon hide"></i>
+      <div class="sb-loader hide"></div>
+    </div>
   </div>
 </div>
-
+<div class="sb-components-sidebar">
 <ul id="myUL">
   <li class="site-list">
-    <h4 class="sb-site-list-heading">Refence</h4>
+    <h4 class="sb-site-list-heading m-0">Refence</h4>
     <ul>
       <li class="sb-site-list-item"><a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
       </li>
@@ -47,6 +46,7 @@
       <li class="sb-site-list-item"><a routerLink="/labels" routerLinkActive="active">Labels</a></li>
       <li class="sb-site-list-item"><a routerLink="/lists" routerLinkActive="active">Lists</a></li>
       <li class="sb-site-list-item"><a routerLink="/loaders" routerLinkActive="active">Loaders</a></li>
+      <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active">Icons</a></li>
       <li class="sb-site-list-item"><a routerLink="/menus" routerLinkActive="active">Menus</a></li>
       <li class="sb-site-list-item"><a routerLink="/metadata" routerLinkActive="active">Metadata</a></li>
       <li class="sb-site-list-item"><a routerLink="/modals" routerLinkActive="active">Modals</a></li>
@@ -65,7 +65,6 @@
   <li class="site-list">
     <h4 class="sb-site-list-heading">Pages/Templates</h4>
     <ul>
-      <li class="sb-site-list-item"><a routerLink="/accordion" routerLinkActive="active">Accordion</a></li>
       <li class="sb-site-list-item"><a routerLink="/workspace" routerLinkActive="active">Workspace</a></li>
       <li class="sb-site-list-item"><a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a></li>
       <li class="sb-site-list-item"><a routerLink="/offline" routerLinkActive="active">Desktop App Download</a></li>
@@ -86,13 +85,11 @@
   <li class="site-list">
     <h4 class="sb-site-list-heading">Coming Soon</h4>
     <ul>
-      <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active">Icons</a></li>
       <li class="sb-site-list-item"><a routerLink="/tooltips" routerLinkActive="active">Toolbars</a></li>
-      <li class="sb-site-list-item"><a>--Pages--</a></li>
       <li class="sb-site-list-item"><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
-      <li class="sb-site-list-item"><a routerLink="/library" routerLinkActive="active">Library</a></li>
       <li class="sb-site-list-item"><a routerLink="/search-results" routerLinkActive="active">Search Results</a></li>
       <li class="sb-site-list-item"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
     </ul>
   </li>
 </ul>
+</div>

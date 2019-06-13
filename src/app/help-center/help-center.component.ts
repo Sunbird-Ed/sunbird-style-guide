@@ -79,37 +79,53 @@ export class HelpCenterComponent implements OnInit {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  generatepdf(){
+  generatepdf() {
     let element = document.querySelector('#pdf-cover');
     let opt = {
       margin: 0,
       filename: 'help-center.pdf',
       image: { type: 'jpeg', quality: 1 },
-      enableLinks:true,
+      enableLinks: true,
       html2canvas: { scale: 1, dpi: 300, letterRendering: true },
-      jspdf: { unit: 'px', format: 'a4', orientation: 'portrait', position: 0, pagesplit: true, compress:true }
+      jspdf: { unit: 'px', format: 'a4', orientation: 'portrait', position: 0, pagesplit: true, compress: true }
     };
     html2pdf().from(element).set(opt).save();
     //html2pdf(element)
-    console.log('----------------',element)
+    console.log('----------------', element)
   }
+
+  
+
 
   ngOnInit() {
 
-    // console.log('000000',html2pdf())
-// 
-    
+    var downloadButton = document.querySelector('.sb-btn-download');
+  if(downloadButton) {
+    downloadButton.addEventListener('click', function (event) {
+      event.preventDefault();
 
-    // New Promise-based usage:
-    
+      /* Start loading process. */
+      downloadButton.classList.add('loading');
+
+      /* Set delay before switching from loading to success. */
+      window.setTimeout(function () {
+        downloadButton.classList.remove('loading');
+        downloadButton.classList.add('success');
+      }, 3000);
+
+      /* Reset animation. */
+      window.setTimeout(function () {
+        downloadButton.classList.remove('success');
+      }, 8000);
+    });
+  };
+
 
   }
 
 
 
   ngAfterViewInit() {
-
-    //mediumZoom('img');
     mediumZoom('[data-zoomable]');
   }
 }

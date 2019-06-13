@@ -20,39 +20,49 @@ body,html {height:100%;}
     .docs-sidebar {
         width: 220px;
         height: 100vh;
-        padding: 10px;
+        padding: 0px 0px 10px 0px;
         background: #fbfbfb;
         position: fixed;
         top: 0;
         left: 0;
-        overflow-y: auto;
-        border-right: 1px solid #ddd;
+        // overflow-y: auto;
+        // border-right: 1px solid #ddd;
         z-index: 2;
         .docs-toggleSidebar {
             color: #fff;
-            background: #186d80;
             height: 30px;
             width: 30px;
             padding: 8px;
             cursor: pointer;
             font-size: 14px;
             position: fixed;
-            top: 32px;
-            right: 10px;
+            top: 30px;
+            left: 220px;
             text-align: center;
             border-radius: 50%;
-            font-weight: 100;
+            font-weight: 100;z-index: 99;
+            &:hover {
+            background: #186d80;
+            }
         }
         &.docs-hideSidebar {
             width:0;
             padding: 0;
+            margin-left:-220px;
             .docs-toggleSidebar {
-                //right: 5px;
+                left:0px;
             }
         }
         .sb-branding {
+            display:flex;
+            align-items: center;
+            justify-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #0f9278;
+    min-height: 90px;
             img {
-                width: 25%;
+                width: 150px;
             }
         }
         h4 {
@@ -101,9 +111,15 @@ body,html {height:100%;}
                 }
             }
         }
+        .sb-components-sidebar {
+            overflow:hidden;
+            overflow-y:auto;
+            height:100vh;
+            padding:0px 8px;    height: calc(100% - 130px);
+        }
     }
     .docs-content {
-        padding: 0px 60px 60px 280px;
+        padding: 140px 60px 60px 280px;
         width: 100vw;
         min-height:100vh;
         // height: auto;
@@ -112,15 +128,22 @@ body,html {height:100%;}
         // overflow-y: auto;
         &.docs-fullWidth{
             padding: 0px 60px 60px 60px;
+            .docs-pageHeading {
+                width: 100%;
+            }
         }
         .docs-pageHeading {
-            padding: 24px 60px;
+            min-height:90px;
+            padding: 10px 60px;
             line-height: normal;
             margin-left: -60px;
-            margin-bottom:30px;
-            background: #186d80;
+            background: #0d9474;
+            background: -moz-linear-gradient(45deg, #0d9474 0%, #2a6fa8 100%);
+            background: -o-linear-gradient(45deg, #0d9474 0%, #2a6fa8 100%);
+            background: -webkit-linear-gradient(45deg, #0d9474 0%, #2a6fa8 100%);
+            background: linear-gradient(45deg, #0d9474 0%, #2a6fa8 100%);
             margin-right: -60px;
-            color: #fff;
+            color: #fff;width: calc(100% - 220px);position:fixed;z-index: 1;top:0px;
         }
         .docs-sections {
             margin: 48px 0 0px 0;
