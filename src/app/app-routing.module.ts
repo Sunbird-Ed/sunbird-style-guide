@@ -40,7 +40,7 @@ import {HelpPageComponent} from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
-
+import { LandingComponent } from './landing/landing.component';
 
 
 const routes: Routes = [
@@ -84,7 +84,8 @@ const routes: Routes = [
   { path: 'help-center', component: HelpCenterComponent},
   { path: 'variables', component: VariablesComponent},
   { path: 'library', component: LibraryComponent},
-  { path: 'icons', component: IconsComponent}
+  { path: 'icons', component: IconsComponent},
+  { path: 'landing', component: LandingComponent}
 ];
 
 @NgModule({
