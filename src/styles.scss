@@ -115,7 +115,7 @@ body,html {height:100%;}
             overflow:hidden;
             overflow-y:auto;
             height:100vh;
-            padding:0px 8px;    height: calc(100% - 130px);
+            padding:8px 8px;    height: calc(100% - 130px);
         }
     }
     .docs-content {
@@ -134,7 +134,7 @@ body,html {height:100%;}
         }
         .docs-pageHeading {
             min-height:90px;
-            padding: 10px 60px;
+            padding: 12px 60px;
             line-height: normal;
             margin-left: -60px;
             background: #0d9474;
@@ -144,6 +144,7 @@ body,html {height:100%;}
             background: linear-gradient(45deg, #0d9474 0%, #2a6fa8 100%);
             margin-right: -60px;
             color: #fff;width: calc(100% - 220px);position:fixed;z-index: 1;top:0px;
+            text-transform: capitalize;
         }
         .docs-sections {
             margin: 48px 0 0px 0;

@@ -33,7 +33,6 @@ export class SidebarComponent implements OnInit {
 
   clearSearchInput() {
       this.searchInput.nativeElement.value = '';
-      this.menuSearch('');
   }
 
   @HostListener('click', ['$event.target'])
