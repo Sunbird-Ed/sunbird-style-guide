@@ -1,4 +1,5 @@
-<div class="docs-body">
+
+<div *ngIf="router.url!='/'" class="docs-body">
     <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
         <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
         <app-sidebar></app-sidebar>
@@ -7,5 +8,6 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-
-
+<div *ngIf="router.url==='/'">
+<app-landing></app-landing>
+</div>
