@@ -18,7 +18,7 @@ export class HelpCenterComponent implements OnInit {
   images: any;
   activeTab: any;
 
-  constructor() {}
+  constructor() { }
   isShow: boolean;
   topPosToStartShowing = 100;
 
@@ -129,10 +129,33 @@ export class HelpCenterComponent implements OnInit {
   //   console.log('----------------',element)
   // }
 
+
+
+
   ngOnInit() {
-    // console.log('000000',html2pdf())
-    //
-    // New Promise-based usage:
+
+    /* download animation */
+    var downloadButton = document.querySelector('.sb-btn-download');
+    if (downloadButton) {
+      downloadButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        /* Start loading process. */
+        downloadButton.classList.add('loading');
+
+        /* Set delay before switching from loading to success. */
+        window.setTimeout(function () {
+          downloadButton.classList.remove('loading');
+          downloadButton.classList.add('success');
+        }, 3000);
+
+        /* Reset animation. */
+        window.setTimeout(function () {
+          downloadButton.classList.remove('success');
+        }, 8000);
+      });
+    };
+    /* download animation ends */
     this.activeTab = 'browse';
   }
   tabClicked(tab) {

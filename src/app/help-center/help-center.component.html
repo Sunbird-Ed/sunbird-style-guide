@@ -1,12 +1,8 @@
-<!--Page Heading-->
-<h1 class="docs-pageHeading">
-  Help Center
-</h1>
-<!--/Page Heading-->
+
 
 <div class="ui fluid container">
   <div class="sb-header">
-    <div class="ui container fixed main menu ">
+    <div class="ui container fixed main menu">
       <div class="ui container d-flex">
         <div class="sb-header-logo d-flex mr-auto">
           <img src="assets/images/logos.svg" alt="DIKSHA" />
@@ -26,7 +22,7 @@
   <div class="ui stackable grid m-0">
     <sui-tabset class="sb-tab-section p-0">
       <div class="sb-subheader">
-        <div class="ui container">
+        <div class="ui container d-flex flex-ai-center">
           <ul class="sb-subheader-list disable-scrollbars">
             <li class="sb-subheader-list-item" (click)='tabClicked("browse")'>
               <a class="sb-subheader-list-item-link active" title="Browse" suiTabHeader="1">
@@ -59,16 +55,14 @@
               </a>
             </li>
           </ul>
+          <button type="button" data-html2canvas-ignore
+      class="sb-btn sb-btn-tertiary sb-btn-normal ml-auto sb-btn-download-pdf sb-btn-download" (click)="generatepdf()" id="nopdf">
+      <i class="icon"></i> Download PDF
+    </button>
         </div>
       </div>
 
 <div class="suiTabContainer download-pdf">
-  <div classs="help-center-fixed-content">
-    <button type="button" data-html2canvas-ignore
-      class="sb-btn sb-btn-tertiary sb-btn-normal mr-8 sb-btn-download-pdf" (click)="generatepdf()" id="nopdf">
-      <i class="file pdf outline icon"></i> Download PDF
-    </button>
-</div>
       <div class="ui" suiTabContent="1">
         <div class="ui fluid container mt-48 sb-help-page-section" id="browser-cover">
           <div class="help-center-fixed-content d-flex flex-ai-center flex-jc-space-between sb-help-page-title">

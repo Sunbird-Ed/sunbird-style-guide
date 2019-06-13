@@ -4,7 +4,7 @@
     <app-sidebar (getMatchedLocationPath)='displayMatchedLocationPath($event)'></app-sidebar>
   </div>
   <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
-    Sunbird Design system {{selectedlink}}
+      <h1 class="docs-pageHeading"><span class="fmedium d-block">Sunbird Design system</span>{{selectedlink}}</h1>
     <router-outlet></router-outlet>
   </div>
 </div>
