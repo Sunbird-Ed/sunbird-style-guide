@@ -1,0 +1,43 @@
+
+
+.sb-landing-section{
+    padding: 1%;
+    justify-content: center;
+    .sb-landing-logo{
+        width: 125px;
+        height: 125px;
+        background: #fff;
+    }
+}
+.sb-landing-section-info{
+    max-width: 1024px;
+    margin: 20px auto;
+    text-align:center;
+    .sb-search-box{
+        margin: 0 auto;
+    }
+}
+
+#myUL {
+    max-width: 1024px;margin: 0 auto;text-align:center;
+li {
+    list-style: none;
+    margin:0px 0px;
+    display: inline-block;
+    ul li {
+        display: inline-block;
+        margin: 4px;
+        padding: 8px;
+        line-height: inherit;
+        border:1px solid #fff;
+        border-radius: 4px;
+    &:hover {
+        border:1px solid #ddd;
+        box-shadow: 0 2px 7px 0 rgba(0,0,0,.16);
+    }
+    }
+}
+h4.sb-site-list-heading {
+    display: none;
+}
+}
