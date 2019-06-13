@@ -83,7 +83,7 @@ export class HelpCenterComponent implements OnInit {
         );
         heightLeft -= pageHeight;
       }
-      pdf.save('help-center.pdf');
+      pdf.save('helpcenter_' + '' + this.activeTab + '' + '.pdf');
     });
   }
 
