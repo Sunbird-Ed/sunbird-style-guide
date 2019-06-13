@@ -1,14 +1,13 @@
-
 <div *ngIf="router.url!='/'" class="docs-body">
-    <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
-        <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
-        <app-sidebar (getMatchedLocationPath)='displayMatchedLocationPath($event'></app-sidebar>
-    </div>
-    <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
-      Sunbird Design system {{selectedlink}}
-        <router-outlet></router-outlet>
-    </div>
+  <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
+    <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
+    <app-sidebar (getMatchedLocationPath)='displayMatchedLocationPath($event)'></app-sidebar>
+  </div>
+  <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
+    Sunbird Design system {{selectedlink}}
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <div *ngIf="router.url==='/'">
-<app-landing></app-landing>
+  <app-landing></app-landing>
 </div>
