@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-<div *ngIf="router.url != '/'" class="docs-body">
-    <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
-        <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
-        <app-sidebar (getMatchedLocationPath)="displayMatchedLocationPath($event)"></app-sidebar>
-    </div>
-    <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
-        <!--component Heading-->
-        <h1 class="docs-pageHeading">
-            <span class="fmedium d-block">Design System</span> {{ selectedlink }}
-        </h1>
-        <!--/component Heading-->
-        <router-outlet></router-outlet>
-    </div>
-</div>
-<div *ngIf="router.url === '/'" class="flex">
-    <p>this is the main page</p>
-</div>
-=======
 <div *ngIf="router.url!='/'" class="docs-body">
   <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
     <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
     <app-sidebar (getMatchedLocationPath)='displayMatchedLocationPath($event)'></app-sidebar>
   </div>
   <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
-    Sunbird Design system {{selectedlink}}
+      <h1 class="docs-pageHeading"><span class="fmedium d-block">Sunbird Design system</span>{{selectedlink}}</h1>
     <router-outlet></router-outlet>
   </div>
 </div>
 <div *ngIf="router.url==='/'">
   <app-landing></app-landing>
 </div>
->>>>>>> 8540cba2b8a2af7ec2f46842037e29d5eaf3562b
