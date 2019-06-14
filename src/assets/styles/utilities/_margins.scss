@@ -14,7 +14,16 @@
 .m-24 {
   @include margin(24px);
 }
+.m-32 {
+  @include margin(24px);
+}
+.m-40 {
+  @include margin(48px);
+}
 .m-48 {
+  @include margin(48px);
+}
+.m-64 {
   @include margin(48px);
 }
 /* Margin in top direction */
