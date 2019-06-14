@@ -1,30 +1,24 @@
-<div class="d-flex flex-dc flex-ai-center flex-js-center">
-    <div class="sb-branding-container d-flex flex-ai-center flex-js-center sb-landing-section">
-        <div class="sb-landing-logo">
-          <img src="https://ekstep.org/img/logo.png"
-          width="100%" />
+<div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page">
+    <div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page-container">
+        <div class="sb-landing-page-logo">
+          <img src="https://project-sunbird.atlassian.net/secure/projectavatar?pid=10000&avatarId=10512&size=xxlarge"/>
         </div>
-          <div style="
-          width: 150px;
-          height: 150px;
-          background: #fff;"><img src="https://project-sunbird.atlassian.net/secure/projectavatar?pid=10000&avatarId=10512&size=xxlarge" width="100%" /></div>
-          
-        <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
-    </div>
-    
-    <div class="sb-landing-section-info">
-        <div class="mt-16 sb-search-box small no-btn">
-          <div class="input-div relative">
-            <i class="search icon"></i>
-            <input class="sb-search-input" type="text" id="myInput" (keyup)="myFunction($event)"
-              placeholder="Search for.." title="Search for.." />
-            <i class="close icon hide"></i>
-            <div class="sb-loader hide"></div>
+        <div class="sb-landing-section-title">
+          <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
+        </div>
+          <!-- <div class="sb-landing-logo">
+            <img src="https://ekstep.org/img/logo.png"/>
+          </div> -->
+      </div>
+          <div class="mt-16 sb-search-box small no-btn sb-landing-page-search">
+            <div class="input-div relative">
+              <i class="search icon"></i>
+              <input class="sb-search-input" type="text" id="myInput" (keyup)="myFunction($event)"
+                placeholder="Search for.." title="Search for.." />
+            </div>
           </div>
-        </div>
-    </div>
-      
-      <ul id="myUL">
+
+     <ul id="myUL" class="sb-landing-page-list">
         <li class="site-list">
           <h4 class="sb-site-list-heading">Refence</h4>
           <ul>
@@ -110,7 +104,11 @@
         </li>
       </ul>
 
-      <div class="copyright flex-as-flex-end">Copyright © 2016 EkStep Foundation . All Rights Reserved</div>
+      <div class="sb-landing-page-copyright d-flex flex-dc flex-ai-center">
+        <div class="sb-landing-page-copyright-text">
+            Copyright © 2016 EkStep Foundation . All Rights Reserved
+        </div>
+      </div>
 </div>
 
 
