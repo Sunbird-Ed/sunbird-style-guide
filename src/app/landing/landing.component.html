@@ -10,11 +10,13 @@
             <img src="https://ekstep.org/img/logo.png"/>
           </div> -->
       </div>
-          <div class="mt-16 sb-search-box small no-btn sb-landing-page-search">
+     
+      <div class="">
+          <div class="mt-16 sb-search-box medium no-btn ml-auto mr-auto sb-landing-page-search">
             <div class="input-div relative">
               <i class="search icon"></i>
-              <input class="sb-search-input" type="text" id="myInput" (keyup)="myFunction($event)"
-                placeholder="Search for.." title="Search for.." />
+              <input class="sb-search-input" #searchInput type="text" (keyup)="menuSearch($event)" placeholder="Search for.."
+        title="Search for.." />
             </div>
           </div>
 
@@ -30,11 +32,11 @@
         </li>
         <li class="site-list">
           <h4 class="sb-site-list-heading">Base</h4>
-         
+         <!-- 
+                [routerLinkActiveOptions]="{ exact: true }" -->
           <ul>
               <li class="sb-site-list-item"><a routerLink="/landing" routerLinkActive="active"> Landing Page</a></li>
-            <li class="sb-site-list-item"><a routerLink="/" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }">Grid & Layout</a></li>
+            <li class="sb-site-list-item"><a routerLink="/gridlayout" routerLinkActive="active">Grid & Layout</a></li>
             <li class="sb-site-list-item"><a routerLink="/spacing" routerLinkActive="active">Spacing</a></li>
             <li class="sb-site-list-item"><a routerLink="/typography" routerLinkActive="active">Typography</a></li>
             <li class="sb-site-list-item"><a routerLink="/colors" routerLinkActive="active">Colors</a></li>
@@ -51,6 +53,7 @@
             <li class="sb-site-list-item"><a routerLink="/footer" routerLinkActive="active">Footer</a></li>
             <li class="sb-site-list-item"><a routerLink="/guidetour" routerLinkActive="active">Guide Tour</a></li>
             <li class="sb-site-list-item"><a routerLink="/header" routerLinkActive="active">Header</a></li>
+            <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active">Icons</a></li>
             <li class="sb-site-list-item"><a routerLink="/labels" routerLinkActive="active">Labels</a></li>
             <li class="sb-site-list-item"><a routerLink="/lists" routerLinkActive="active">Lists</a></li>
             <li class="sb-site-list-item"><a routerLink="/loaders" routerLinkActive="active">Loaders</a></li>
@@ -72,7 +75,6 @@
         <li class="site-list">
           <h4 class="sb-site-list-heading">Pages/Templates</h4>
           <ul>
-            <li class="sb-site-list-item"><a routerLink="/accordion" routerLinkActive="active">Accordion</a></li>
             <li class="sb-site-list-item"><a routerLink="/workspace" routerLinkActive="active">Workspace</a></li>
             <li class="sb-site-list-item"><a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a></li>
             <li class="sb-site-list-item"><a routerLink="/offline" routerLinkActive="active">Desktop App Download</a></li>
@@ -93,16 +95,14 @@
         <li class="site-list">
           <h4 class="sb-site-list-heading">Coming Soon</h4>
           <ul>
-            <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active">Icons</a></li>
             <li class="sb-site-list-item"><a routerLink="/tooltips" routerLinkActive="active">Toolbars</a></li>
-            <li class="sb-site-list-item"><a>--Pages--</a></li>
             <li class="sb-site-list-item"><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
-            <li class="sb-site-list-item"><a routerLink="/library" routerLinkActive="active">Library</a></li>
             <li class="sb-site-list-item"><a routerLink="/search-results" routerLinkActive="active">Search Results</a></li>
             <li class="sb-site-list-item"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
           </ul>
         </li>
       </ul>
+    </div>
 
       <div class="sb-landing-page-copyright d-flex flex-dc flex-ai-center">
         <div class="sb-landing-page-copyright-text">
