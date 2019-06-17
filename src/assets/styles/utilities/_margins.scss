@@ -93,7 +93,7 @@
   @include margin(null null 48px null);
 }
 
-/* Margin in horizontal direction */
+ /* Margin in horizontal direction */
 .mx-auto {
   @include margin(null auto);
 }
@@ -241,7 +241,7 @@
   }
 }
 
-/* Negative margins */
+ /* Negative margins */
 @media screen and (min-width:768px){
   .mx--20{
     margin: 0 -20px;
