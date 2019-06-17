@@ -41,13 +41,9 @@
               ]
             },
             "scripts": [
-              "node_modules/moment/min/moment.min.js",
               "node_modules/izitoast/dist/js/iziToast.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/slick-carousel/slick/slick.js",
-              "src/assets/libs/pagedown-core/Markdown.Converter.js",
-              "src/assets/libs/pagedown-core/Markdown.Editor.js",
-              "src/assets/libs/pagedown-core/Markdown.Sanitizer.js",
               "node_modules/fine-uploader/fine-uploader/fine-uploader.min.js",
               "src/assets/libs/semantic.min.js",
               "src/assets/libs/semantic-ui-tree-picker/semantic-ui-tree-picker.js",
