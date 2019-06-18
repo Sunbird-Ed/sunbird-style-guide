@@ -77,8 +77,31 @@
   }
 
 }
+
+*[dir="rtl"] {
+
+  .diksha-logo {
+    height: 148px;
+  }
+
+  .mobile-circles {
+    flex-direction: row-reverse;
+
+    .oval-box {
+      margin-right: 0px !important;
+      margin-left: 20px !important;
+    }
+
+    .border-round:nth-child(3) {     
+      margin-left: 20px !important;
+      margin-right: 10px !important;
+    }
+  }
+
+}
+
 .footer {
-  background: $blue;
+  background: $primary-color;
   color: $white-color !important;
   padding: $base-block-space * 4 0;
   margin-top: 100px;

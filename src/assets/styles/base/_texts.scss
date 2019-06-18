@@ -1,60 +1,59 @@
 @import "../../assets/styles/base/variables";
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
-.text-center,
-.text-ac{
-  text-align: center !important;
-}
-
-.ellipsis{
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.cursor-text {
-  cursor: text !important;
-}
-.cursor-pointer {
-  cursor: pointer;
-}
-.right-floated {
-  float: right !important;
-}
-.va-bottom {
-  vertical-align: bottom !important;
-}
-
-.va-middle{
-  vertical-align: middle;
-}
-
-a{
+a {
   color: $primary-color;
 
   &:hover {
     opacity:0.8;
     color: $primary-color;
   }
+  &:focus {
+    outline: 0;
 }
-
-.line-height-1-3 {
-  line-height: 1.3em !important;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.ellipsis{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.font-weight-bold {
+  font-weight: bold !important;;
+}
+.font-weight-normal {
+  font-weight: normal !important;;
+}
+.font-italic {
+  font-style: italic;
+}
+.cursor-text {
+  cursor: text !important;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+.va-bottom {
+  vertical-align: bottom !important;
+}
+.va-middle {
+  vertical-align: middle;
 }
 
 *[dir="ltr"] {
   .text-right {
     text-align: right;
   }
-
   .text-left {
     text-align: left;
   }
@@ -64,7 +63,6 @@ a{
   .text-right {
     text-align: left;
   }
-
   .text-left {
     text-align: right;
   }
@@ -73,47 +71,25 @@ a{
 .break-word {
   word-break: break-word;
 }
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.font-weight-normal {
-  font-weight: normal !important;;
-}
-
 .white-space-nowrap {
   white-space: nowrap !important;
 }
-
-
 .form-text {
   display: block;
   margin-top: .25rem;
 }
-
 .text-disabled {
   color: #F2F2F2;
 }
-
 .text-error {
   color: #FF4558;
 }
-
 .text-success {
   color: #07BC81;
 }
-
 .sb-info-text {
   color: $gray-400;
   font-size: 12px;
-}
-
-*[dir="ltr"] .right-floated {
-  float: right !important;
-}
-*[dir="rtl"] .right-floated {
-  float: left !important;
 }
 .sb-break-line {
   height: 1px;

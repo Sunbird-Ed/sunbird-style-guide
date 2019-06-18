@@ -5,8 +5,6 @@
         @include margin(3.5rem auto 0 auto);
         @include position(null, 0 0 null 0); //bourbon
         @include size(100%, auto); //bourbon
-        border-radius: $sb-modal-corner-radius;
-        background:none;
         .sb-modal-header {
             background-color: $sb-modal-header-bg;
             color: $sb-modal-header-color;
@@ -16,28 +14,11 @@
             border-bottom: 0 solid $gray-100; //@include size(auto,($base-block-space * 5)); //bourbon
             min-height: $sb-modal-header-height;
             line-height:$sb-modal-header-line-height;
-            border-top-left-radius: $sb-modal-corner-radius;
-            border-top-right-radius: $sb-modal-corner-radius;
         }
         .sb-modal-content {
             min-height: 100px;
             padding: $sb-modal-content-padding;
             overflow-y: auto;
-            background:$white;
-        }
-        .sb-modal-content.sb-modal-tab {
-            padding: 0;
-            .ui.secondary.menu {
-                background-color: $gray-0;
-                padding:0;
-                padding-left: ($base-block-space * 2);
-                border:0;
-            }
-            .ui.container {
-                padding-left: ($base-block-space * 2);
-                padding-right: ($base-block-space * 2);
-                min-height: 100px;
-            }
         }
         &>.close {
             color: $white-color;
@@ -52,23 +33,15 @@
             @include position(absolute, 0 0 null null); //bourbon
         }
         .sb-modal-actions {
-            border-bottom-left-radius: $sb-modal-corner-radius;
-            border-bottom-right-radius: $sb-modal-corner-radius;
-          padding: $sb-modal-actions-padding;
+            padding: $sb-modal-actions-padding;
             background: $sb-modal-actions-bg;
             border-top: 1px solid $gray-100;
             min-height: $sb-modal-actions-height;
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            .sb-btn:nth-last-child(1){
-                margin:0 $base-block-space 0 $base-block-space;
-            }
-            button{
-                @extend .sb-btn-outline-primary;  
-            }
-            button:nth-child(1){
-                @extend .sb-btn-primary;
+            .sb-btn+.sb-btn{
+                @include margin(0 $base-block-space 0 0);
             }
         }
         .small {
@@ -81,20 +54,15 @@
             max-width: $sb-modal-normal-width;
             .sb-modal-content {
                 max-height: 380px;
-            }
-        }
-        &.fullscreen {
-            width: 100% !important;
-            margin: 0 0 0 0 !important;
-            left: 0px !important;
-            .sb-modal-content {
-                height: calc(100vh - 96px);
+                &.o-y-visible {
+                    max-height: inherit;
+                }
             }
         }
         &.large {
             max-width: $sb-modal-large-width;
             .sb-modal-content {
-                height: calc(100vh - 200px);
+                height: calc(100vh - 100px);
             }
         }
         &.sb-modal-fullscreen {
@@ -106,7 +74,7 @@
             .sb-modal-header {
                 height: $sb-modal-fs-header-height;
                 width: auto;
-                border-radius: 0px;
+                border-radius: 0;
                 display: flex;
                 justify-content: space-between;
             }
@@ -117,70 +85,36 @@
                 position: relative;
             }
         }
-    } 
-    // sb modal confirmation/alert styles 
+    } // sb modal confirmation/alert styles 
     &.sb-warning .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-warning;
-        }
-        .sb-modal-actions {
-            button{
-                @extend .sb-btn-outline-warning;  
-            }
-            button:nth-child(1){
-                @extend .sb-btn-warning;
-            }
         }
     }
     &.sb-success .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-success;
         }
-        .sb-modal-actions {
-            button{
-                @extend .sb-btn-outline-success;  
-            }
-            button:nth-child(1){
-                @extend .sb-btn-success;
-            }
-        }
     }
     &.sb-error .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-error;
         }
-        .sb-modal-actions {
-            button{
-                @extend .sb-btn-outline-error;  
-            }
-            button:nth-child(1){
-                @extend .sb-btn-error;
-            }
-        }
-    }
-    &.sb-modal-content-center .ui.modal {
-        .sb-modal-content {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    &.sb-modal-center .ui.modal {
-        .sb-modal-content {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .sb-modal-actions {
-            justify-content: center;
-            border-top:0px;
-        }
     }
 }
 
-[dir="rtl"] .sb-modal .ui.modal>.close {
-    right: auto;
-    left: 0;
+[dir="rtl"] .sb-modal {
+    .ui.modal {
+        &>.close {
+            right: auto;
+            left: 0;
+        }
+        .sb-modal-actions {
+            .sb-btn+.sb-btn{
+                @include margin(0 0 0 $base-block-space);
+            }
+        }
+    }
 }
 
 @include respond-below(sm) {
@@ -208,16 +142,6 @@
             display: flex !important;
             align-items: center;
             justify-content: center;
-        }
-    }
-}
-.ui.tree-picker.modal {
-    top: 3.5rem;
-    .sb-modal-actions {
-        .pick-search,
-        .unpick-search,
-        .unpick-picked {
-            display: none;
         }
     }
 }
