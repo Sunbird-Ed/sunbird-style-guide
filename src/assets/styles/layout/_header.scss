@@ -162,7 +162,7 @@
   min-height: $base-block-space * 10;
   .ui {
     &.menu {
-      padding: $base-block-space * 2 0 $base-block-space;
+      padding: $base-block-space * 2 $base-block-space;
       max-width: 1140px;
       margin: 0 auto;
       border: 0 !important;

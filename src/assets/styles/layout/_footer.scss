@@ -103,25 +103,25 @@
 .footer {
   background: $primary-color;
   color: $white-color !important;
-  padding: $base-block-space * 4 0;
-  margin-top: 100px;
+  padding: 34px 0;
   font-size: 14px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
   a {
-    color: $white !important;
+    color: $white-color !important;
+
     &:hover,
     &:active,
     &:focus {
-      color: $white !important;
+      color: $white-color !important;
       text-decoration: underline;
       opacity: 1;
     }
   }
-  ul {
-    li {
-      list-style-type: none;
-    }
-  }
+
 }
 
 .contantDetails,
@@ -155,20 +155,29 @@
 @media screen and (max-width: 767px) {
 
   .download-diksha {
-    bottom: 178px;
+    bottom: 204px;
     margin: 0 auto;
     right: 0;
     left: 0;
     z-index: inherit;
+    box-shadow: 0 -5px 20px 5px rgba(0, 0, 0, 0.2);
+
     a {
       padding-bottom: 0 !important;
     }
-    p {
-      display: none !important;
-    }
   }
+
+    .download-diksha {
+      height: auto;
+
+      .diksha-logo {
+        height: auto;
+      }
+
+    }
+
   .footer {
-    margin-top: 170px;
+
     .footerMenu {
       ul {
         margin-top: 0 !important;
@@ -186,7 +195,4 @@
       padding: 0 !important;
     }
   }
-}
-.footer-fix {
-  min-height: 90vh;
 }

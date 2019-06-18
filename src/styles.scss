@@ -341,3 +341,20 @@ h6 {
 .headroom--pinned {
   left: 230px !important;
 }
+body ::-webkit-scrollbar
+{
+  width: 5px;
+  height:5px;background-color: $primary-400;
+    -webkit-appearance: none;
+}
+
+body ::-webkit-scrollbar-thumb
+{
+	
+	background-color: $gray-800;
+}
+body ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: $gray-0;
+}
