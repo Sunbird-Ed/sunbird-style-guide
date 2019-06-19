@@ -140,13 +140,12 @@
     @include label-theme($gray-0);
     color: $gray-400;
 }
-
 .sb-label-text-gray-0 {
     color: $gray-400;
 }
-
 //qr code result label
-.sb-result-label,.sb-pageSection-count{
+.sb-result-label,
+.sb-pageSection-count{
     background: $tertiary-color;
     padding: ($base-block-space/2) ($base-block-space);
     border-radius: ($base-block-space / 2);
@@ -190,8 +189,6 @@
         border-radius: $base-block-space/4;
     }
 }
-
-
 //network status label offline
 .sb-label-status {
    width: $sb-label-status-width; 
@@ -216,7 +213,6 @@
         transform: perspective(200px) rotateX(-40deg);
         border-bottom-left-radius: $sb-label-status-before-border-bottom-left-radius;
         border-bottom-right-radius: $sb-label-status-before-border-bottom-right-radius;
-
     }
     &.sb-label-status-success:before {
         border-color: $sb-label-status-success-border-color;
@@ -240,10 +236,9 @@
         }
     }
  }
-
- .sb-label-status-error {
+.sb-label-status-error {
     color: $sb-label-status-error-color;  
-  }
-  .sb-label-status-success {
+}
+.sb-label-status-success {
     color: $sb-label-status-success-color;  
-  }
+}

@@ -15,16 +15,16 @@
   @include margin(24px);
 }
 .m-32 {
-  @include margin(24px);
+  @include margin(32px);
 }
 .m-40 {
-  @include margin(48px);
+  @include margin(40px);
 }
 .m-48 {
   @include margin(48px);
 }
 .m-64 {
-  @include margin(48px);
+  @include margin(64px);
 }
 /* Margin in top direction */
 .mt-auto {
@@ -80,6 +80,9 @@
 .mb-8 {
   @include margin(null null 8px null);
 }
+.mb-12 {
+  @include margin(null null 12px null);
+}
 .mb-16 {
   @include margin(null null 16px null);
 }
@@ -93,7 +96,7 @@
   @include margin(null null 48px null);
 }
 
-/* Margin in horizontal direction */
+ /* Margin in horizontal direction */
 .mx-auto {
   @include margin(null auto);
 }
@@ -147,6 +150,9 @@
   .ml-8 {
     @include margin(null null null 8px);
   }
+  .ml-12 {
+    @include margin(null null null 12px);
+  }
   .ml-16 {
     @include margin(null null null 16px);
   }
@@ -166,6 +172,9 @@
   }
   .ml-8 {
     @include margin(null 8px null null);
+  }
+  .ml-12 {
+    @include margin(null 12px null null);
   }
   .ml-16 {
     @include margin(null 16px null null);
@@ -194,6 +203,9 @@
   }
   .mr-16 {
     @include margin(null 16px null null);
+  }
+  .mr-20 {
+    @include margin(null 20px null null);
   }
   .mr-24 {
     @include margin(null 24px null null);
@@ -241,7 +253,7 @@
   }
 }
 
-/* Negative margins */
+ /* Negative margins */
 @media screen and (min-width:768px){
   .mx--20{
     margin: 0 -20px;
