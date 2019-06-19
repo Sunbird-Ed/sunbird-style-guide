@@ -41,6 +41,9 @@ import { HelpCenterComponent } from './help-center/help-center.component';
 import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
 import { LandingComponent } from './landing/landing.component';
+import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
+
+
 
 
 const routes: Routes = [
@@ -85,7 +88,8 @@ const routes: Routes = [
   { path: 'variables', component: VariablesComponent},
   { path: 'library', component: LibraryComponent},
   { path: 'icons', component: IconsComponent},
-  { path: 'landing', component: LandingComponent}
+  { path: 'landing', component: LandingComponent},
+  { path: 'CBSE-program', component: CBSEProgramComponent}
 ];
 
 @NgModule({

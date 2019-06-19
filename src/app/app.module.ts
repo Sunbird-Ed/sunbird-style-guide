@@ -73,6 +73,7 @@ import { HelpCenterComponent } from './help-center/help-center.component';
 import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
 import { LandingComponent } from './landing/landing.component';
+import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -134,7 +135,8 @@ export function hljsLanguages() {
     HelpCenterComponent,
     LibraryComponent,
     IconsComponent,
-    LandingComponent
+    LandingComponent,
+    CBSEProgramComponent
   ],
   imports: [
     BrowserModule,
