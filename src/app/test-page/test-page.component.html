@@ -1,8 +1,6 @@
 
-
-
 <!--Page Content -->
-<div class="docs-sections" *ngFor="let section of sections">
+<div class="docs-sections hide" *ngFor="let section of sections">
     <h4 class="docs-sectionHeading">
       {{ section.title }}
       <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
@@ -30,15 +28,18 @@
   </div>
   <!--Page Content-->
 
-<div class="top-container">
-  <h1>Scroll Down</h1>
-  <p>Scroll down to see the sticky effect.</p>
-</div>
 
+  
+     
+
+  <div class="hide">
+    
+<div class="top-container">
+    <h1>Scroll Down</h1>
+    <p>Scroll down to see the sticky effect.</p>
+  </div>
 <h1 class="docs-pageHeading">
   {{ pageTitle }}
-  <a href="docs/assets/design-system/index.html#/screens/344424222" target="_blank" class="sb-reference-url">(reference
-    link)</a>
 </h1>
 
 <div class="content">
@@ -361,6 +362,6 @@
 </div>
 
 
-
+</div>
 
 
