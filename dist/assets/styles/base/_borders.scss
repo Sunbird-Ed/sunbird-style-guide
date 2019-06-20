@@ -16,9 +16,6 @@
 .bb-0{
     border-bottom: none;
 }
-.b-0 {
-    @include border(border,0px,$gray-400);
-}
 .b-1 {
     @include border(border,1px,$gray-400);
 }
