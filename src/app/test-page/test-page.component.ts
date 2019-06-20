@@ -20,20 +20,10 @@ export class TestPageComponent implements OnInit {
             expandCode: false,
             title: "Meta Data List",
             demoCode: `
-      <dl class="sb-meta-data sb-meta-d1">
-        <dt>Title</dt>
-        <dd>SNF Chapter 1 Kalrav Hindi</dd>
-        <dt>aklsdjflsd lfsldjflsakfljslkdfjlksdjflks fljalskdfjl;asdfjlsdjf;l</dt>
-        <dd>SNF Chapter 1 Kalrav Hindi</dd>
-      </dl>
+     
       `,
             copyCode: `
-      <dl class="sb-meta-data sb-meta-d1">
-      <dt>Title</dt>
-      <dd>SNF Chapter 1 Kalrav Hindi</dd>
-      <dt>aklsdjflsd lfsldjflsakfljslkdfjlksdjflks fljalskdfjl;asdfjlsdjf;l</dt>
-      <dd>SNF Chapter 1 Kalrav Hindi</dd>
-    </dl>
+     
       `
         }
     ];
