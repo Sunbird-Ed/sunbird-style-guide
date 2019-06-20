@@ -40,42 +40,42 @@ export class CBSEProgramComponent implements OnInit {
           <h4 class="page-section-title">Learning Outcomes</h4>
           <div class="sb-question-content-learning">
             <div class="sb-question-content-card">
+              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                 <label> Long / short Text question and long / short text options</label>
               </div>
             </div>
             <div class="sb-question-content-card">
+              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-error sb-shape-circle"></span>
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                 <label> Text question with small image and image as
                   options. Big image as question and short text options with small
                   image</label>
               </div>
             </div>
             <div class="sb-question-content-card">
+              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-warning sb-shape-circle"></span>
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                 <label>Big image as question and short text options with small
                   image</label>
               </div>
             </div>
             <div class="sb-question-content-card">
+                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                   <label> Long / short Text question and long / short text options</label>
                 </div>
               </div>
               <div class="sb-question-content-card">
+                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-error sb-shape-circle"></span>
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                   <label> Text question with small image and image as
                     options</label>
                 </div>
               </div>
               <div class="sb-question-content-card">
+                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-warning sb-shape-circle"></span>
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-learning-outcome-label">
                   <label>Big image as question and short text options with small
                     image</label>
                 </div>
@@ -122,29 +122,29 @@ export class CBSEProgramComponent implements OnInit {
                 </div>
                 <div class="sb-question-content-focus-spot-group">
                     <div class="sb-question-content-focus-spot-extra">Why</div>
+                      <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                       <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                      <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-focus-spot-label">
                         <label> Long / short Text question and long / short text options</label>
                       </div>
                   </div>
                   <div class="sb-question-content-focus-spot-group">
                       <div class="sb-question-content-focus-spot-extra">Impact</div>
+                        <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                         <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                        <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-focus-spot-label">
                           <label> Long / short Text question and long / short text options</label>
                         </div>
                     </div>
                     <div class="sb-question-content-focus-spot-group">
                         <div class="sb-question-content-focus-spot-extra">Why</div>
+                          <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                           <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                          <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-focus-spot-label">
                             <label> Long / short Text question and long / short text options</label>
                           </div>
                       </div>
                       <div class="sb-question-content-focus-spot-group">
                           <div class="sb-question-content-focus-spot-extra">Impact</div>
+                            <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                             <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                            <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-focus-spot-label">
                               <label> Long / short Text question and long / short text options</label>
                             </div>
                         </div>
