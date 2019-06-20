@@ -15,7 +15,7 @@ export class CardsComponent implements OnInit {
       title: 'Course Card',
       demoCode: `
       <div class="masonry-grid">
-
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -47,8 +47,9 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-
+      </div>
       <!-- 2nd card -->
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -79,8 +80,9 @@ export class CardsComponent implements OnInit {
           </sui-progress>
         </div>
       </div>
-      
+      </div>
       <!-- 3rd card -->
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -99,8 +101,10 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
+      </div>
 
       <!-- 4th card -->
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -131,6 +135,7 @@ export class CardsComponent implements OnInit {
             <div class="label"></div>
           </sui-progress>
         </div>
+      </div>
       </div>
       </div>
       `,
@@ -259,6 +264,7 @@ export class CardsComponent implements OnInit {
       title: 'Resource Card',
       demoCode: `
       <div class="masonry-grid">
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -291,6 +297,9 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
+      </div>
+
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -313,6 +322,9 @@ export class CardsComponent implements OnInit {
         <div class="sb-card-progressbar">
         </div>
       </div>
+      </div>
+
+      <div class="masonry-item">
       <div class="sb-card" tabindex="0" dir="rtl" lang="ur">
         <div class="sb-card-body">
           <div class="sb-card-metas">
@@ -344,6 +356,7 @@ export class CardsComponent implements OnInit {
         </div>
         <div class="sb-card-progressbar">
         </div>
+      </div>
       </div>
       </div>
       `,
