@@ -32,7 +32,7 @@ html {
     left: 0;
     // overflow-y: auto;
     // border-right: 1px solid #ddd;
-    z-index: 9999;
+    z-index: 99;
     .docs-toggleSidebar {
       color: #fff;
       height: 30px;
@@ -155,7 +155,7 @@ html {
       color: #fff;
       width: calc(100% - 220px);
       position: fixed;
-      z-index: 9998;
+      z-index: 99;
       top: 0px;
       text-transform: capitalize;
     }

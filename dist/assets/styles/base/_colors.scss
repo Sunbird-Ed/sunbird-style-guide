@@ -1,11 +1,14 @@
-//bg colors
-.sb-color-primary,.sb-color-info {
+// text colors
+.sb-color-primary,
+.sb-color-info {
     color: $primary-color;
 }
-.sb-color-success,.sb-color-secondary {
+.sb-color-success,
+.sb-color-secondary {
     color: $secondary-200;
 }
-.sb-color-warning, .sb-color-tertiary {
+.sb-color-warning,
+.sb-color-tertiary {
     color: $warning-color;
 }
 .sb-color-error {
@@ -14,34 +17,26 @@
 .sb-color-gray {
     color: $gray-800;
 }
-.sb-color-primary,.sb-color-info {
-    color: $primary-color;
-}
 
-
-//bg colors
+// bg colors
 .sb-workspace-bg {
     background-image: linear-gradient(-90deg, $primary-0, $white);
 }
-.sb-bg-color-primary,.sb-bg-color-info {
-    color: $primary-color;
+.sb-bg-color-primary,
+.sb-bg-color-info {
+    background-color: $primary-color;
 }
-.sb-bg-color-success,.sb-bg-color-secondary {
-    color: $secondary-200;
+.sb-bg-color-success,
+.sb-bg-color-secondary {
+    background-color: $secondary-200;
 }
-.sb-bg-color-warning, .sb-bg-color-tertiary {
-    color: $warning-color;
+.sb-bg-color-warning, 
+.sb-bg-color-tertiary {
+    background-color: $warning-color;
 }
 .sb-bg-color-error {
-    color: $red;
+    background-color: $red;
 }
 .sb-bg-color-gray {
-    color: $gray-800;
-}
-
-.bg-white {
-    background: $white;
-}
-.bg-primary-body {
-    background: $primary-100;
+    background-color: $gray-800;
 }
