@@ -114,8 +114,8 @@ export class CBSEProgramComponent implements OnInit {
               <div class="sb-question-content-card">
                 <div class="sb-question-content-focus-spot-group">
                   <div class="sb-question-content-focus-spot-extra">Hard Spot:</div>
+                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                     <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex sb-focus-spot-label">
                       <label> Long / short Text question and long / short text options Long / short
                        Text question and long / short text options</label>
                     </div>
@@ -134,20 +134,6 @@ export class CBSEProgramComponent implements OnInit {
                           <label> Long / short Text question and long / short text options</label>
                         </div>
                     </div>
-                    <div class="sb-question-content-focus-spot-group">
-                        <div class="sb-question-content-focus-spot-extra">Why</div>
-                          <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                          <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                            <label> Long / short Text question and long / short text options</label>
-                          </div>
-                      </div>
-                      <div class="sb-question-content-focus-spot-group">
-                          <div class="sb-question-content-focus-spot-extra">Impact</div>
-                            <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                            <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                              <label> Long / short Text question and long / short text options</label>
-                            </div>
-                        </div>
               </div>
             </div>
           </div>
