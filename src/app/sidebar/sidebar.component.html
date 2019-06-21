@@ -7,9 +7,9 @@
   <div class="sb-search-box small no-btn">
     <div class="input-div relative">
       <i class="search icon"></i>
-      <input class="sb-search-input" #searchInput type="text" (keyup)="menuSearch($event)" placeholder="Search for Component(s), Pages"
+      <input class="sb-search-input" #searchInput type="text" (keyup)="menuSearch($event.target.value.toUpperCase())" placeholder="Search for Component(s), Pages"
         title="Search for Component(s), Pages" />
-      <i class="close icon" (click)="clearSearchInput()"></i>
+      <i class="close icon hide" (click)="clearSearchInput()"></i>
       <div class="sb-loader hide"></div>
     </div>
   </div>
@@ -145,7 +145,7 @@
         </li>
         <li class="sb-site-list-item">
           <a routerLink="/help-center" routerLinkActive="active">
-            help center</a>
+            Help Center</a>
         </li>
         <li class="sb-site-list-item">
           <a routerLink="/library" routerLinkActive="active"> Library</a>
