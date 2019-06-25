@@ -78,11 +78,11 @@ i.icon.trash {
     height: 100vh;
 
     .question-bg {
-      background-image: linear-gradient(-90deg, lightblue, white);
+      background-image: linear-gradient(-90deg, lightblue, #c5e3ed);
     }
 
     .answer-bg {
-      background-image: linear-gradient(-90deg, #fcf2d6, white);
+      background-image: linear-gradient(-90deg, #fcf2d6, #fdf5dd);
     }
 
     .question-menu {
@@ -190,7 +190,7 @@ i.icon.trash {
       height: calc(100% - 44px);
 
       .question-bg {
-        background-image: linear-gradient(-90deg, #00c786, #e1ffdf);
+        background-image: linear-gradient(-90deg, #00c786, #a3efc6);
       }
 
       .page-section {

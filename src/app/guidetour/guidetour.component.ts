@@ -26,10 +26,10 @@ export class GuidetourComponent implements OnInit, AfterViewInit, DoCheck {
   }
   
   ngDoCheck() {
-    this.addRemoveBtn = document.querySelector('.shepherd-button');
-    if (this.addRemoveBtn) {
-      this.addRemoveBtn.classList.remove('shepherd-button');
-    }
+    // this.addRemoveBtn = document.querySelector('.shepherd-button');
+    // if (this.addRemoveBtn) {
+    //   this.addRemoveBtn.classList.remove('shepherd-button');
+    // }
   }
 
   ngAfterViewInit() {
@@ -39,8 +39,8 @@ export class GuidetourComponent implements OnInit, AfterViewInit, DoCheck {
     this.shepherdService.confirmCancel = false;
     this.shepherdService.addSteps(defaultSteps);
     this.shepherdService.start();
-    this.addRemoveBtn = document.querySelector('.shepherd-button');
-    this.addRemoveBtn.classList.remove('shepherd-button');
+    //this.addRemoveBtn = document.querySelector('.shepherd-button');
+    //this.addRemoveBtn.classList.remove('shepherd-button');
   }
 
   pageTitle = 'Header';
