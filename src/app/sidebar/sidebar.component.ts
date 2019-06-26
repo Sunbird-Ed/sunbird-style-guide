@@ -16,6 +16,7 @@ export class SidebarComponent implements OnInit {
   routeParametertemp;
   routeParameter;
   searchText;
+  ClearInput;
 
   heroes = [
     { id: 11, name: 'Mr. Nice', country: 'India' }
@@ -31,10 +32,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  clearSearchInput() {
-      this.searchInput.nativeElement.value = '';
-  }
-
+  
   @HostListener('click', ['$event.target'])
   onClick(targetElement: string) {
     console.log(this.location.path());
@@ -42,11 +40,17 @@ export class SidebarComponent implements OnInit {
     this.routeParameter = this.routeParametertemp.replace (/\//g, '');
     this.getMatchedLocationPath.emit(this.routeParameter);
   }
-
+ 
+  SearchInputfocusOff(){
+    document.querySelector('.close').classList.remove('show');
+    document.querySelector('.close').classList.add('hide');
+  }
   menuSearch(event) {
     // tslint:disable-next-line:one-variable-per-declaration
+    document.querySelector('.close').classList.remove('hide');
+    document.querySelector('.close').classList.add('show');
     let filter, ul, li, a, i, j, listHeading;
-    filter = event.target.value.toUpperCase();
+    filter = event;
     ul = document.getElementById('myUL');
     li = ul.getElementsByClassName('sb-site-list-item');
     listHeading = ul.getElementsByClassName('sb-site-list-heading');
@@ -65,6 +69,15 @@ export class SidebarComponent implements OnInit {
       }
     }
   }
+
+  clearSearchInput() {
+    this.searchInput.nativeElement.value = '';
+    this.ClearInput ="";
+    this.menuSearch(this.ClearInput)
+    document.querySelector('.close').classList.add('hide');
+  }
+
+
 }
 
 

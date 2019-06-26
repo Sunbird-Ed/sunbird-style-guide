@@ -13,7 +13,12 @@ export const builtInButtons = {
         classes: 'sb-btn sb-btn-xs sb-btn-outline-gray back-button',
         text: 'Back',
         type: 'back'
-    }
+    },
+    skip: {
+        classes: 'sb-btn sb-btn-xs sb-btn-link sb-btn-link-tertiary skip-button',
+        text: 'Skip',
+        type: 'cancel'
+    },
 };
 
 export const defaultStepOptions = {
@@ -37,6 +42,7 @@ export const steps = [
         options: {
             attachTo: '.tour-1 bottom',
             buttons: [
+                builtInButtons.skip,
                 builtInButtons.next
             ],
             classes: 'sb-guide-text-area',
@@ -50,8 +56,10 @@ export const steps = [
         options: {
             attachTo: '.tour-2 bottom',
             buttons: [
+                builtInButtons.skip,
                 builtInButtons.back,
-                builtInButtons.next            ],
+                builtInButtons.next
+            ],
             classes: 'sb-guide-text-area',
             title: 'Library',
             text: [`Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.`]
