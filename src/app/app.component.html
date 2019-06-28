@@ -8,6 +8,4 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-<div *ngIf="router.url==='/'">
-  <app-landing></app-landing>
-</div>
+<app-landing *ngIf="router.url==='/'"></app-landing>

@@ -3,6 +3,7 @@
   height: 100vh;
   justify-content: center;
   justify-content: space-evenly;
+  padding:24px;
   .sb-landing-page-container {
     // padding-top: 7%;
 
@@ -58,9 +59,9 @@
       margin: 4px;
       padding: 4px 12px;
       line-height: inherit;
-      border: 1px solid $primary-100;
+      border: 1px solid var(--gray-100);
       border-radius: 60px;
-      background: #f2f2f2;
+      background: #fff;
       font-size: 12px;display: inline-block;
       &:hover {
         background: $primary-200;

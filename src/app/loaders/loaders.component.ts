@@ -51,11 +51,11 @@ export class LoadersComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Diksha Loader for Offline',
+      title: '***** Loader for Offline',
       demoCode: `
       <div class="DikshaLoaderContainer">
       <div class="animated-helix">
-      <div class="diksha-opening-txt">Opening DIKSHA...</div>
+      <div class="diksha-opening-txt">Opening *****...</div>
       <img src="https://i.imgur.com/GU9mY0P.png" class="center">
       <div class="dot"></div>
       <div class="dot"></div>
@@ -134,7 +134,7 @@ export class LoadersComponent implements OnInit {
       `,
       copyCode: `
       <div class="animated-helix">
-      <div class="diksha-opening-txt">Opening DIKSHA...</div>
+      <div class="diksha-opening-txt">Opening *****...</div>
 <img src="https://i.imgur.com/GU9mY0P.png" class="center">
 <div class="dot"></div>
 <div class="dot"></div>
