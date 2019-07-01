@@ -1,3 +1,6 @@
+
+@import "variables";
+
 #shepherdModalOverlayContainer {
     background-color: $white;
 }
@@ -11,7 +14,7 @@
 
 .shepherd-element .shepherd-content {
     background-color: $gray-800;
-    padding: 16px;
+    padding: ($base-block-space * 2);
     // max-width:454px;
     //width:454px;
 }

@@ -518,7 +518,7 @@ export class CBSEProgramComponent implements OnInit {
     </div>
     <div class="sb-card-content-list mt-24">
     <h4> Recommended for</h4>
-    <ul>
+    <ul class="sb-card-circular-list">
     <li class="sb-circular-list-item">Long / short Text question and long / short text options</li>
     <li class="sb-circular-list-item">Text question with small image and text options</li>
     <li class="sb-circular-list-item">Text question with small image and text options with small image</li>
@@ -531,7 +531,7 @@ export class CBSEProgramComponent implements OnInit {
     </div>
     <div class="sb-card-content-list mt-24">
     <h4> Recommended for</h4>
-    <ul>
+    <ul class="sb-card-circular-list">
     <li class="sb-circular-list-item">Text question and image as options</li>
     <li class="sb-circular-list-item">Text question with small image and image as options</li>
   </ul>
@@ -545,7 +545,7 @@ export class CBSEProgramComponent implements OnInit {
     </div>
     <div class="sb-card-content-list mt-24">
     <h4> Recommended for</h4>
-    <ul>
+    <ul class="sb-card-circular-list">
     <li class="sb-circular-list-item">Big image as question and text options</li>
     <li class="sb-circular-list-item">Big image as question and short text options with small image</li>
   </ul>
@@ -559,7 +559,7 @@ export class CBSEProgramComponent implements OnInit {
     </div>
     <div class="sb-card-content-list mt-24">
     <h4> Recommended for</h4>
-    <ul>
+    <ul class="sb-card-circular-list">
     <li class="sb-circular-list-item">Big image as question and image as options</li>
   </ul>
     </div>
