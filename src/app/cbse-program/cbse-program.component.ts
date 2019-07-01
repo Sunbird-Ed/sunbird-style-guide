@@ -503,6 +503,99 @@ export class CBSEProgramComponent implements OnInit {
    </div> 
       `,
       copyCode: ``
+    },
+    {
+      expandCode: false,
+      title: 'modal template',
+      demoCode: `
+      <div class="sb-question-dsp-container">
+      <div class="sb-question-dsp-body">
+      <div class="d-flex flex-jc-space-around flex-w-wrap">
+  <div class="sb-card mb-16 template-items p-24 mr-8 relative">
+    <div class="sb-card-metas mb-8">
+      <div class="sb-card-image">
+        <img src="../../assets/images/horizontal.png"></div>
+    </div>
+    <div class="sb-card-content-list mt-24">
+    <h4> Recommended for</h4>
+    <ul>
+    <li class="sb-circular-list-item">Long / short Text question and long / short text options</li>
+    <li class="sb-circular-list-item">Text question with small image and text options</li>
+    <li class="sb-circular-list-item">Text question with small image and text options with small image</li>
+  </ul>
+    </div>
+  </div>
+  <div class="sb-card mb-16 template-items p-24 mr-8 relative">
+    <div class="sb-card-metas mb-8">
+      <div class="sb-card-image"><img src="../../assets/images/vertical.png"></div>
+    </div>
+    <div class="sb-card-content-list mt-24">
+    <h4> Recommended for</h4>
+    <ul>
+    <li class="sb-circular-list-item">Text question and image as options</li>
+    <li class="sb-circular-list-item">Text question with small image and image as options</li>
+  </ul>
+    </div>
+  </div>
+  <div class="sb-card mb-16 template-items p-24 mr-8 relative">
+    <div class="sb-card-metas mb-8">
+      <div class="sb-card-image">
+        <img src="../../assets/images/vertical2.png">
+      </div>
+    </div>
+    <div class="sb-card-content-list mt-24">
+    <h4> Recommended for</h4>
+    <ul>
+    <li class="sb-circular-list-item">Big image as question and text options</li>
+    <li class="sb-circular-list-item">Big image as question and short text options with small image</li>
+  </ul>
+    </div>
+  </div>
+  <div class="sb-card mb-16 template-items p-24 mr-8 relative">
+    <div class="sb-card-metas mb-8">
+      <div class="sb-card-image">
+        <img src="../../assets/images/grid2.png">
+      </div>
+    </div>
+    <div class="sb-card-content-list mt-24">
+    <h4> Recommended for</h4>
+    <ul>
+    <li class="sb-circular-list-item">Big image as question and image as options</li>
+  </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      `,
+      copyCode: ``
+    },
+    {
+      expandCode: false,
+      title: 'VSA/SA/LA Layout',
+      demoCode: `
+      <div class="sb-question-dsp-container">
+    <div class="sb-question-dsp-body">
+      <div class="sb-question-header question-bg">
+          <span class="sb-question"></span>
+          <span class="sb-mark">4 Marks</span>
+          <button type="button" class="sb-btn sb-btn-primary sb-btn-normal" id="questionBtn" (click)="onScroll('question')" style="display: none;">Question</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-0" id="answerBtn" (click)="onScroll('answer')">Solution</button>
+      </div>
+      <div class="sb-question-content" (scroll)="onScroll($event)">
+          <div class="page-section question-bg" id="question">
+              <div class="sb-question">Question<span class=" sb-star-icon"><i class="star outline icon"></i></span></div>
+              <div class="sb-question-content-card">quesiton 21</div>
+          </div>
+          <div class="page-section answer-bg" id="answer">
+              <div class="sb-answer">Solution</div>
+              <div class="sb-question-content-card">answer 21</div>
+          </div>
+      </div>
+  </div>
+  </div>
+      `,
+      copyCode: ``
     }
   ];
 
@@ -520,6 +613,9 @@ export class CBSEProgramComponent implements OnInit {
   //   }
   // }
 
+
+
+
   ngOnInit() {
     $(document).on('click', '.cheveron-helper .chevron', (e) => {
       $('.mcq-title').toggleClass('expand');
@@ -528,5 +624,21 @@ export class CBSEProgramComponent implements OnInit {
       $(this).off('click');
     });
   }
-
+  @HostListener('scroll', ['$event.target'])
+  onScroll(event: any) {
+    if (event === 'question') {
+      $('.sb-question-content').animate( {
+        scrollTop: $('#' + event).offset().top
+      });
+    } else if (event === 'answer') {
+      const el = document.getElementById(event);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    } else if (event.target.scrollTop > (event.target.lastChild.offsetHeight / 2)) {
+      document.getElementById('questionBtn').style.display = 'inline-block';
+      document.getElementById('answerBtn').style.display = 'none';
+    } else if (event.target.scrollTop < (event.target.firstChild.offsetHeight / 2) ) {
+      document.getElementById('answerBtn').style.display = 'inline-block';
+      document.getElementById('questionBtn').style.display = 'none';
+    }
+  }
 }
