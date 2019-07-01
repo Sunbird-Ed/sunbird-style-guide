@@ -17,7 +17,7 @@ export class BannerComponent implements OnInit {
       <div class="sb-banner">
       <div class="sb-banner-content">
         <div class="sb-banner-content-right">
-          <div class="sb-banner-heading cursor-pointer">Download DIKSHA Lite Desktop App</div>
+          <div class="sb-banner-heading cursor-pointer">Download ***** Lite Desktop App</div>
           <dl class="mt-8 mb-0">
             <div class="d-flex">
               <dt class="description-list-key">Version:</dt>
@@ -36,7 +36,7 @@ export class BannerComponent implements OnInit {
       <div class="sb-banner">
       <div class="sb-banner-content">
         <div class="sb-banner-content-right">
-          <div class="sb-banner-heading cursor-pointer">Download DIKSHA Lite Desktop App</div>
+          <div class="sb-banner-heading cursor-pointer">Download ***** Lite Desktop App</div>
           <dl class="mt-8 mb-0">
             <div class="d-flex">
               <dt class="description-list-key">Version:</dt>
