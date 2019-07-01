@@ -82,7 +82,7 @@ export class OfflineTelemetryComponent implements OnInit {
    About App
  </div>
 
-<h2 class="about-app-heading mt-24">DIKSHA Lite Desktop App</h2>
+<h2 class="about-app-heading mt-24">***** Lite Desktop App</h2>
 <div class="d-flex flex-jc-space-between">
 <div class="">
   <dl class="mt-8 mb-0">
@@ -105,7 +105,7 @@ export class OfflineTelemetryComponent implements OnInit {
   </dl>
 </div>
 <div class="about-app-left-content">
-  <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal">Update DIKSHA Desktop</button>
+  <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal">Update ***** Desktop</button>
   <div class="about-app-update-text cursor-pointer mt-16">Update available for version 0.12.16</div>
 </div>
 </div>

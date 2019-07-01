@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins/mixins";
+
 html,
 body {
   height: 100%;
@@ -11,7 +14,7 @@ body {
   letter-spacing: 0.2px;
   height: auto;
   color: $default-text-color;
-  padding-bottom: 400px;
+  padding-bottom: 220px;
   min-height: 100vh;
   &.pushable {
     background: $body-background-color !important;
@@ -80,4 +83,3 @@ body {
     overflow: hidden;
   }
 }
-
