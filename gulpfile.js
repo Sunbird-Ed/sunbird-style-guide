@@ -50,8 +50,8 @@ gulp.task('scss-main', function () {
 });
 
 /* Watch SCSS files */
-gulp.task('watch', function() {
-  gulp.watch('./src/assets/styles/**/*.scss', ['copy-style','copy-mixins','append-import','scss-components','scss-main']);
-});
+// gulp.task('watch', function() {
+//   gulp.watch('./src/assets/styles/**/*.scss', ['copy-style','copy-mixins','append-import','scss-components','scss-main']);
+// });
 
-gulp.task('default', ['copy-style','copy-mixins','append-import','scss-components','scss-main','watch']);
+gulp.task('default', ['copy-style','copy-mixins','append-import','scss-components','scss-main']);//,'watch'
