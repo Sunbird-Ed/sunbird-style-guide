@@ -15,8 +15,6 @@
   border: none;
 }
 
-
-
 i.icon.trash {
   color: var(--red-100);
 }
@@ -30,7 +28,6 @@ i.icon.trash {
   margin: 0 auto;
   position: relative;
 }
-
 .sb-question-dsp-container {
   .sb-editor-image {
     height: 392px;
@@ -39,7 +36,6 @@ i.icon.trash {
     border-radius: 15px;
     margin: 0 auto;
     position: relative;
-
     .phone-sensors {
       position: absolute;
       z-index: 99;
@@ -58,7 +54,6 @@ i.icon.trash {
         background: #252525;
         border-radius: 50%;
       }
-
       .speaker {
         width: ($base-block-space - 3);
         height: 74px;
@@ -66,7 +61,6 @@ i.icon.trash {
         border-radius: ($base-block-space + 2);
         margin: ($base-block-space + 2) 0 ($base-block-space + 2) 1px;
       }
-
       .sensor {
         width: $base-block-space;
         height: $base-block-space;
@@ -106,10 +100,8 @@ i.icon.trash {
         margin: ($base-block-space - 4) 0;
         background-color: var(--gray);
       }
-
       .sb-btn-arrows {
         min-width: 50px;
-
         .icon {
           margin: 0;
         }
@@ -127,7 +119,6 @@ i.icon.trash {
       padding-right: $base-block-space;
       color: var(--blue);
     }
-
     &.sb-learning-outcome-header {
       align-items: center;
     }
@@ -225,14 +216,11 @@ i.icon.trash {
             &:first-child {
               margin-top: 0;
             }
-
             .sb-learning-outcome-label {
               width: 100%;
-
               span.sb-status-label {
                 padding: ($base-block-space - 4);
               }
-
               label {
                 margin-bottom: 0px;
               }
@@ -241,17 +229,13 @@ i.icon.trash {
         }
       }
     }
-
     &.sb-focus-spots {
       height: calc(100% - 44px);
-
       .page-section {
         padding: 0;
-
         .sb-question-content-focus-spot {
           height: 100%;
           overflow-y: auto;
-
           .sb-question-content-focus-spot-label {
             padding: ($base-block-space * 2) ($base-block-space * 3);
 
@@ -259,13 +243,11 @@ i.icon.trash {
               padding: $base-block-space;
             }
           }
-
           .sb-question-content-card {
             min-height: 60px;
             font-size: $font-size-base;
             margin: ($base-block-space * 2) ($base-block-space * 3);
             margin-top: 0;
-
             .sb-question-content-focus-spot-group {
               padding-bottom: ($base-block-space * 2);
 
@@ -273,14 +255,11 @@ i.icon.trash {
                 font-size: $font-size-sm;
                 color: var(--gray-200);
               }
-
               .sb-focus-spot-label {
                 width: 100%;
-
                 span.sb-status-label {
                   padding: ($base-block-space - 4);
                 }
-
                 label {
                   margin-bottom: 0px;
                 }
@@ -295,7 +274,6 @@ i.icon.trash {
 
 .sb-question-dsp-container {
   .sb-question-dsp-body {
-
     .mcq-horizontal,
     .mcq-vertical,
     .mcq-grid {
@@ -433,7 +411,6 @@ i.icon.trash {
 
       .mcq-options .mcq-option {
         width: 100%;
-
         &:last-child {
           margin-bottom: 0;
         }
@@ -443,11 +420,9 @@ i.icon.trash {
     .mcq-grid {
       .mcq-options .mcq-option {
         width: 45%;
-
         &:nth-child(3) {
           margin-bottom: 0;
         }
-
         &:nth-child(4) {
           margin-bottom: 0;
         }

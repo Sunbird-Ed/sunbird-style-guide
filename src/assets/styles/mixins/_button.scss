@@ -5,7 +5,7 @@
 }
 
 @mixin btn-theme-bgwhite($btn-color) {
-	//border-color: darken($btn-color, 2%); Lakhan
+	//border-color: darken($btn-color, 2%);
 	background-color: $white;
 	color: $btn-color;
 }
