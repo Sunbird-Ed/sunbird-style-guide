@@ -11,8 +11,7 @@ declare var jQuery: any;
 
 @Component({
   selector: 'app-help-center',
-  templateUrl: './help-center.component.html',
-  styleUrls: ['./help-center.component.scss']
+  templateUrl: './help-center.component.html'
 })
 export class HelpCenterComponent implements OnInit {
   images: any;
