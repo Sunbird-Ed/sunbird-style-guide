@@ -171,6 +171,7 @@
 
 .sb-header {
   min-height: $base-block-space * 10;
+  background:$white;
   .ui {
     &.menu {
       padding: $base-block-space * 2 $base-block-space;

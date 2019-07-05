@@ -311,6 +311,12 @@ a.sb-btn {
   }
 }
 
+// button icon only
+.sb-btn-icon-only {
+  width: auto;
+  min-width: auto;
+}
+
 .sb-btn-loading-spinner {
   padding: ($base-block-space * 1) ($base-block-space * 2)
     ($base-block-space * 1) ($base-block-space * 1);

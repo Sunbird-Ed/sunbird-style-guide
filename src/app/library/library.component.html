@@ -1,22 +1,87 @@
-
 <div class="mb-48">
   <!-- header component -->
-    <app-header></app-header>
+  <app-header [ShowContent]="false"  ></app-header>
 </div>
 <div class="mb-48">
   <!-- page section/carousel component -->
-    <app-page-section></app-page-section>
+  <app-page-section [ShowContent]="false"></app-page-section>
 </div>
+<sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel">
+  <sui-accordion-panel>
+    <div title class="p-0">
+      <div class="sb-single-pannel-accordion-heading">
+        <span>Content Manager</span>
+        <i class="chevron up icon d-flex flex-ai-center"></i>
+      </div>
+    </div>
+    <div content>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center mb-8">
+          <div class="download-text">List-1</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-success sb-btn-icon-only ml-auto">
+            <i class="check circle icon success-icon d-flex flex-ai-center mr-0"></i>
+          </button>
+        </div>
+        <sui-progress [value]="100" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+        <!-- <div class="success-text">Download completed</div> -->
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center">
+          <div class="download-text">List-2</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-btn-icon-only ml-auto">
+            <i class="pause circle icon outline d-flex flex-ai-center mr-0"></i>
+          </button>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only">
+            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
+          </button>
+        </div>
+        <div class="info-text mb-8">300MB/350MB</div>
+        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center mb-8">
+          <div class="download-text">List-3</div>
+          <div class="sb-label sb-label-table sb-label-error-0 ml-auto mr-auto">Retry</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-btn-icon-only">
+            <i class="undo icon info-icon d-flex flex-ai-center mr-0"></i>
+          </button>
+        </div>
+        <!-- <div class="error-text">Download failed</div> -->
+        <sui-progress [value]="0" [maximum]="100" class="mb-0 mr-8 error"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center">
+          <div class="download-text">List-4</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only ml-auto">
+            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
+          </button>
+        </div>
+        <div class="info-text mb-8">1.45kb/350MB</div>
+        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center mb-8">
+          <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+          <div class="download-text">List-5</div>
+          <div class="sb-label sb-label-table sb-label-warning-0 ml-auto mr-auto">Waiting...</div>
+          <!-- <div class="waiting-text">Waiting...</div> -->
+        </div>
+        <sui-progress [value]="0" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center">
+          <div class="download-text">List-6</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only ml-auto">
+            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
+          </button>
+        </div>
+        <div class="info-text mb-8">30MB/350MB</div>
+        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+    </div>
+  </sui-accordion-panel>
+</sui-accordion>
 <div class="mb-48">
   <!-- footer component -->
-    <app-footer></app-footer>
+  <app-footer [ShowContent]="false"></app-footer>
 </div>
-
-
-
-
-
-
-
-
-

@@ -21,6 +21,8 @@ const fontsinpath = './src/assets/styles/fonts/';
 const fontsoutpath = './src/assets/dist/fonts/';
 const rootvariables = ":root{--font-stack-en: 'Noto Sans','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-hi: 'Noto Sans Devanagari','Noto Sans','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-ur: 'Noto Sans','Noto Nastaliq Urdu','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--blue: #024f9d;--black: #000000;--green: #008840;--orange: #e55a28;--red: #ff4558;--white: #ffffff;--indigo: #6610f2;--purple: #6f42c1;--pink: #e83e8c;--yellow: #ffc107;--teal: #20c997;--cyan: #17a2b8;--gray-hs: 0,0%;";
 
+
+
 /* Temp Folder - Copy all other files with imports appended at head*/
 gulp.task('append-import', function () {
   return gulp.src([stylespath + '**/*.scss', !stylespath + '*.scss', !mixinpath +'**/*.scss'])
