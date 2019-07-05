@@ -1,17 +1,17 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from "@angular/core";
 
-import * as jspdf from 'jspdf';
-import html2canvas from 'html2canvas';
-import mediumZoom from 'medium-zoom';
-import * as $ from 'jquery';
-import * as html2pdf from 'html2pdf.js';
+import * as jspdf from "jspdf";
+import html2canvas from "html2canvas";
+import mediumZoom from "medium-zoom";
+import * as $ from "jquery";
+import * as html2pdf from "html2pdf.js";
 
 declare var $: any;
 declare var jQuery: any;
 
 @Component({
-  selector: 'app-help-center',
-  templateUrl: './help-center.component.html'
+  selector: "app-help-center",
+  templateUrl: "./help-center.component.html"
 })
 export class HelpCenterComponent implements OnInit {
   images: any;
@@ -21,27 +21,28 @@ export class HelpCenterComponent implements OnInit {
   isShow: boolean;
   topPosToStartShowing = 100;
 
+
   public generatepdf() {
-    let elementId: any = '';
+    let elementId: any = "";
     switch (this.activeTab) {
-      case 'browse':
-        elementId = document.getElementById('browser-cover');
+      case "browse":
+        elementId = document.getElementById("browser-cover");
         break;
 
-      case 'search':
-        elementId = document.getElementById('search-cover');
+      case "search":
+        elementId = document.getElementById("search-cover");
         break;
 
-      case 'download':
-        elementId = document.getElementById('download-cover');
+      case "download":
+        elementId = document.getElementById("download-cover");
         break;
 
-      case 'play':
-        elementId = document.getElementById('play-cover');
+      case "play":
+        elementId = document.getElementById("play-cover");
         break;
 
-      case 'upload':
-        elementId = document.getElementById('upload-cover');
+      case "upload":
+        elementId = document.getElementById("upload-cover");
         break;
 
       default:
@@ -56,13 +57,13 @@ export class HelpCenterComponent implements OnInit {
       const pageHeight = 350;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       let heightLeft = imgHeight;
-      const contentDataURL = canvas.toDataURL('image/png');
-      const pdf = new jspdf('p', 'mm', 'a4');
+      const contentDataURL = canvas.toDataURL("image/png");
+      const pdf = new jspdf("p", "mm", "a4");
       let position = 8;
       // let margin = 16;
       pdf.addImage(
         contentDataURL,
-        'PNG',
+        "PNG",
         8,
         position,
         imgWidth - 24,
@@ -74,7 +75,7 @@ export class HelpCenterComponent implements OnInit {
         pdf.addPage();
         pdf.addImage(
           contentDataURL,
-          'PNG',
+          "PNG",
           8,
           position,
           imgWidth - 24,
@@ -82,11 +83,11 @@ export class HelpCenterComponent implements OnInit {
         );
         heightLeft -= pageHeight;
       }
-      pdf.save('helpcenter_' + '' + this.activeTab + '' + '.pdf');
+      pdf.save("helpcenter_" + "" + this.activeTab + "" + ".pdf");
     });
   }
 
-  @HostListener('window:scroll')
+  @HostListener("window:scroll")
   checkScroll() {
     const scrollPosition =
       window.pageYOffset ||
@@ -105,12 +106,12 @@ export class HelpCenterComponent implements OnInit {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   }
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    el.scrollIntoView({ behavior: "smooth" });
   }
 
   // generatepdf(){
@@ -128,34 +129,30 @@ export class HelpCenterComponent implements OnInit {
   //   console.log('----------------',element)
   // }
 
-
-
-
   ngOnInit() {
-
     /* download animation */
-    var downloadButton = document.querySelector('.sb-btn-download');
+    var downloadButton = document.querySelector(".sb-btn-download");
     if (downloadButton) {
-      downloadButton.addEventListener('click', function (event) {
+      downloadButton.addEventListener("click", function (event) {
         event.preventDefault();
 
         /* Start loading process. */
-        downloadButton.classList.add('loading');
+        downloadButton.classList.add("loading");
 
         /* Set delay before switching from loading to success. */
         window.setTimeout(function () {
-          downloadButton.classList.remove('loading');
-          downloadButton.classList.add('success');
+          downloadButton.classList.remove("loading");
+          downloadButton.classList.add("success");
         }, 3000);
 
         /* Reset animation. */
         window.setTimeout(function () {
-          downloadButton.classList.remove('success');
+          downloadButton.classList.remove("success");
         }, 8000);
       });
-    };
+    }
     /* download animation ends */
-    this.activeTab = 'browse';
+    this.activeTab = "browse";
   }
   tabClicked(tab) {
     this.activeTab = tab;
@@ -164,6 +161,9 @@ export class HelpCenterComponent implements OnInit {
 
   ngAfterViewInit() {
     // mediumZoom('img');
-    mediumZoom('[data-zoomable]');
+    mediumZoom("[data-zoomable]");
   }
 }
+
+
+
