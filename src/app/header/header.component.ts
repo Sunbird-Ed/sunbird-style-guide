@@ -1,6 +1,7 @@
 import {
   Component, AfterViewInit,  Renderer2, ElementRef,
-  OnInit
+  OnInit,
+  Input
 } from '@angular/core';
 import {
   HighlightResult
@@ -14,6 +15,7 @@ import { steps as defaultSteps, defaultStepOptions} from '../data';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
+  @Input() ShowContent;
   language;
   addRemoveBtn;
   constructor(private shepherdService: ShepherdService, private renderer: Renderer2, private el: ElementRef) {
@@ -21,6 +23,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
   toggleIcon = true;
   ngOnInit() {
+    //console.log('hideContent', typeof(this.ShowContent));
 
   }
 

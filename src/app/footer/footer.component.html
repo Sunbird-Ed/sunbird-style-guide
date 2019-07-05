@@ -3,7 +3,7 @@
 <!--Page Content-->
 <div class="docs-sections" *ngFor="let section of sections;">
 
-  <h4 class="docs-sectionHeading">
+  <h4 class="docs-sectionHeading" *ngIf='ShowContent'>
     {{section.title}}
     <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
       title="Toggle Code" tabindex="0"></i>

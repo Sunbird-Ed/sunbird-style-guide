@@ -1,5 +1,9 @@
 @import "variables";
+
 .sb-landing-page {
+  ul {
+    padding:0px;margin:0px;
+  }
   height: 100vh;
   justify-content: center;
   justify-content: space-evenly;
