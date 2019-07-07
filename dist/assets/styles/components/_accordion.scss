@@ -167,7 +167,7 @@ i.icon {
 
     .ui.styled.accordion.sb-single-pannel-accordion .content {
         overflow-y: auto;
-        max-height: 560px;
+        max-height: calc(100vh - 200px);
     }
 
     .sb-single-pannel-accordion .ui.progress {

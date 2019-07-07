@@ -19,7 +19,7 @@ const distpath = './src/assets/dist/';
 const mixinpath = './src/assets/styles/mixins/';
 const fontsinpath = './src/assets/styles/fonts/';
 const fontsoutpath = './src/assets/dist/fonts/';
-const rootvariables = ":root{--font-stack-en: 'Noto Sans','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-hi: 'Noto Sans Devanagari','Noto Sans','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-ur: 'Noto Sans','Noto Nastaliq Urdu','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--blue: #024f9d;--black: #000000;--green: #008840;--orange: #e55a28;--red: #ff4558;--white: #ffffff;--indigo: #6610f2;--purple: #6f42c1;--pink: #e83e8c;--yellow: #ffc107;--teal: #20c997;--cyan: #17a2b8;--gray-hs: 0,0%;";
+const rootvariables = "/:root{--font-stack-en: 'Noto Sans','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-hi: 'Noto Sans Devanagari','Noto Sans','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-ur: 'Noto Sans','Noto Nastaliq Urdu','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--blue: #024f9d;--black: #000000;--green: #008840;--orange: #e55a28;--red: #ff4558;--white: #ffffff;--indigo: #6610f2;--purple: #6f42c1;--pink: #e83e8c;--yellow: #ffc107;--teal: #20c997;--cyan: #17a2b8;--gray-hs: 0,0%;\d+/g";
 
 
 
@@ -43,7 +43,7 @@ gulp.task('copy-mixins', function () {stylespath
 
 /* Temp Folder - Fonts folder*/
 gulp.task('fonts', function() {
-  return gulp.src([fontsinpath + '**/*.woff', fontsinpath + '**/*.woff2'])
+  return gulp.src(fontsinpath + '**/*.{woff,woff2}')
     .pipe(inlineFonts({ name: 'allnotosans' }))
     .pipe(gulp.dest(fontsoutpath));
 });
@@ -75,7 +75,7 @@ gulp.task('scss-main', function () {
 /* replace root variables */
 gulp.task('rm-root', function() {
   gulp.src([distpath + 'styles.css'])
-    .pipe(replace(rootvariables, " "))
+  .pipe(replace('--gray: hsl(var(--gray-hs),20%);--gray-0: hsl(var(--gray-hs),95%);--gray-100: hsl(var(--gray-hs),80%);--gray-200: hsl(var(--gray-hs),60%);--gray-300: hsl(var(--gray-hs),59%);--gray-400: hsl(var(--gray-hs),40%);--gray-800: var(--gray);--primary-color: var(--blue);--secondary-color: var(--green);--tertiary-color: var(--orange);--primary-0: #F3F7FA;--primary-100: #EDF4F9;--primary-200: #80A7CE;--primary-250:#D3E7F4;--primary-300: #7AB4EE;--primary-400: var(--primary-color);--primary-600: #005391;--primary-800: #002E50;--secondary-0: #E1FFDF;--secondary-100: #00C786;--secondary-200: #07bc81;--secondary-400: var(--secondary-color);--tertiary-0: #FEEDD7;--tertiary-100: #FFA11D;--tertiary-400: var(--tertiary-color);--red-0: #FBCCD1;--red-100: #FF6979;--red-400: var(--red)}', ' '))  //http:\/\/localhost:\d+/g
     .pipe(gulp.dest(distpath + 'new'))
 });
 
@@ -88,7 +88,7 @@ gulp.task('clean', function(cb) {
 
 /* Watch SCSS files */
 gulp.task('watch', function () {
-  gulp.watch(stylespath + '**/*.scss', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'fonts', 'scss-main'));
+  gulp.watch(stylespath + '**/*.scss', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
 });
 
-gulp.task('default', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'fonts', 'scss-main','watch')); //
+gulp.task('default', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch')); //
