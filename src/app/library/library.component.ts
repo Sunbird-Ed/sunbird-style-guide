@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-library',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./library.component.scss']
 })
 export class LibraryComponent implements OnInit {
-  showTopLeftBars=false;
-  constructor() { }
+
+  constructor(private router: Router){
+  }
+ 
   ngOnInit() {
+    
   }
 
 }

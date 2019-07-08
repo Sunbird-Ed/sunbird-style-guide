@@ -378,8 +378,8 @@ a.sb-btn {
 
 *[dir="ltr"] {
   .sb-right-icon-btn {
-    padding: ($base-block-space * 1) ($base-block-space * 1)
-      ($base-block-space * 1) ($base-block-space * 2);
+    padding: ($base-block-space * 1)/2 ($base-block-space * 1)
+      ($base-block-space * 1) ($base-block-space * 1);
     i.icon {
       margin-left: $base-block-space;
       margin-right: 0;
@@ -395,8 +395,8 @@ a.sb-btn {
 }
 *[dir="rtl"] {
   .sb-right-icon-btn {
-    padding: ($base-block-space * 1) ($base-block-space * 1)
-      ($base-block-space * 1) ($base-block-space * 2);
+    padding: ($base-block-space * 1)/2 ($base-block-space * 1)
+      ($base-block-space * 1) ($base-block-space * 1);
     i.icon {
       margin-left: 0;
       margin-right: $base-block-space;
