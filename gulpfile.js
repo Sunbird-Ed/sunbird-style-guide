@@ -1,94 +1,211 @@
 const gulp = require('gulp');
-const concat = require('gulp-concat');
-const minify = require('gulp-minify');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
-path = require('path');
 const header = require('gulp-header');
 const inlineFonts = require('gulp-inline-fonts');
 const gulpSequence = require('gulp-sequence');
 const rimraf = require('rimraf');
-var replace = require('gulp-string-replace');
+const inline = require('gulp-inline-fonts');
+const concat = require('gulp-concat');
+const merge  = require('merge-stream');
+path = require('path');
 
-const rootpath = './src/assets/';
-const stylespath = './src/assets/styles/';
-const temppath = './src/assets/temp/';
-const distpath = './src/assets/dist/';
-const mixinpath = './src/assets/styles/mixins/';
-const fontsinpath = './src/assets/styles/fonts/';
-const fontsoutpath = './src/assets/dist/fonts/';
-const rootvariables = "/:root{--font-stack-en: 'Noto Sans','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-hi: 'Noto Sans Devanagari','Noto Sans','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya','Noto Nastaliq Urdu',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--font-stack-ur: 'Noto Sans','Noto Nastaliq Urdu','Noto Sans Devanagari','Noto Sans Tamil','Noto Sans Bengali','Noto Sans Malayalam','Noto Sans Gurmukhi','Noto Sans Gujarati','Noto Sans Telugu','Noto Sans Kannada','Noto Sans Oriya',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;--blue: #024f9d;--black: #000000;--green: #008840;--orange: #e55a28;--red: #ff4558;--white: #ffffff;--indigo: #6610f2;--purple: #6f42c1;--pink: #e83e8c;--yellow: #ffc107;--teal: #20c997;--cyan: #17a2b8;--gray-hs: 0,0%;\d+/g";
-
+/* Inline Fonts */
+// Urdu
+gulp.task('noto-nastaliqurdu', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/noto-nastaliqurdu/NotoNastaliqUrdu-Regular.woff')
+  .pipe(inline({ name: 'Noto Nastaliq Urdu', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff'] })));
+  return fontStream.pipe(concat('noto-nastaliqurdu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/noto-nastaliqurdu'));
+});
+// English
+gulp.task('notosans', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans/latin-ext.woff2')
+  .pipe(inline({ name: 'Noto Sans', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans/latin-ext-bold.woff2')
+  .pipe(inline({ name: 'Noto Sans', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans'));
+});
+// Bengali
+gulp.task('notosans-bengali', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-bengali/NotoSansBengali-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Bengali', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-bengali/NotoSansBengali-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Bengali', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-bengali.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-bengali'));
+});
+// Hindi & Marathi
+gulp.task('notosans-devanagari', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-devanagari/NotoSansDevanagari-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Devanagari', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-devanagari/NotoSansDevanagari-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Devanagari', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-devanagari.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-devanagari'));
+});
+// Gujarati
+gulp.task('notosans-gujarati', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gujarati/NotoSansGujarati-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Gujarati', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gujarati/NotoSansGujarati-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Gujarati', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-gujarati.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gujarati'));
+});
+// Punjabi
+gulp.task('notosans-gurmukhi', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gurmukhi/NotoSansGurmukhi-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Gurmukhi', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gurmukhi/NotoSansGurmukhi-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Gurmukhi', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-gurmukhi.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gurmukhi'));
+});
+// Kannada
+gulp.task('notosans-kannada', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-kannada/NotoSansKannada-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Kannada', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-kannada/NotoSansKannada-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Kannada', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-kannada.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-kannada'));
+});
+// Malayalam
+gulp.task('notosans-malayalam', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-malayalam/NotoSansMalayalam-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Malayalam', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-malayalam/NotoSansMalayalam-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Malayalam', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-malayalam.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-malayalam'));
+});
+// Oriya
+gulp.task('notosans-oriya', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-oriya/NotoSansOriya-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Oriya', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-oriya/NotoSansOriya-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Oriya', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-oriya.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-oriya'));
+});
+// Tamil
+gulp.task('notosans-tamil', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-tamil/NotoSansTamil-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-tamil/NotoSansTamil-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-tamil.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-tamil'));
+});
+// Telugu
+gulp.task('notosans-telugu', function() {
+  // create an accumulated stream
+  var fontStream = merge();
+  // Regular
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Regular.woff2')
+  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  // Bold
+  fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Bold.woff2')
+  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-telugu'));
+});
+/* Default task */
+gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu'));
 
 
 /* Temp Folder - Copy all other files with imports appended at head*/
 gulp.task('append-import', function () {
-  return gulp.src([stylespath + '**/*.scss', !stylespath + '*.scss', !mixinpath +'**/*.scss'])
+  return gulp.src(['./src/assets/styles/**/*.scss', '!./src/assets/styles/*.scss', '!./src/assets/styles/mixins/**/*.scss','!./src/assets/styles/fonts/**/*.scss'])
     .pipe(header('@import \'../mixins/mixins\';\n'))
     .pipe(header('@import \'../variables\';\n'))
-    .pipe(gulp.dest(temppath));
-});
-/* Temp Folder - Copy files of level 1*/
-gulp.task('copy-style', function () {
-  return gulp.src([stylespath + 'styles.scss',  stylespath + '_variables.scss', stylespath + 'legacy.scss', stylespath + 'global.scss'])
-    .pipe(gulp.dest(temppath));
-});
-/* Temp Folder - Copy mixins folder*/
-gulp.task('copy-mixins', function () {stylespath
-  return gulp.src([mixinpath + '**/*'])
-    .pipe(gulp.dest(temppath + 'mixins/'));
+    .pipe(gulp.dest('./src/assets/temp'));
 });
 
-/* Temp Folder - Fonts folder*/
-gulp.task('fonts', function() {
-  return gulp.src(fontsinpath + '**/*.{woff,woff2}')
-    .pipe(inlineFonts({ name: 'allnotosans' }))
-    .pipe(gulp.dest(fontsoutpath));
+/* Temp Folder - Copy files of level 1*/
+gulp.task('copy-style', function () {
+  return gulp.src(['./src/assets/styles/_variables.scss'])
+    .pipe(gulp.dest('./src/assets/temp'));
+});
+
+/* Temp Folder - Copy mixins folder*/
+gulp.task('copy-mixins', function () {
+  return gulp.src(['./src/assets/styles/mixins/**/*'])
+    .pipe(gulp.dest('./src/assets/temp/mixins'));
+});
+
+/* Temp Folder - Copy mixins folder*/
+gulp.task('copy-fonts', function () {
+  return gulp.src(['./src/assets/styles/inlinefonts/**/*'])
+    .pipe(gulp.dest('./src/assets/temp/inlinefonts'));
 });
 
 /* Generate Components CSS files from temp folder */
 gulp.task('scss-components', function () {
-  return gulp.src([temppath + '**/*.scss', '!./src/assets/temp/mixins/**/*.scss', !temppath + '*.scss'])
+  return gulp.src(['./src/assets/temp/**/*.scss', '!./src/assets/temp/mixins/**/*.scss', '!./src/assets/temp/*.scss','!./src/assets/temp/fonts/**/*.scss','!./src/assets/temp/inlinefonts/**/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(rename(function (path) { //since sass() wont compile _partials files we are removing it here
       path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
     }))
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
-    .pipe(rename(function (file) { 
+    .pipe(rename(function (file) {
       const parentFolder = path.dirname(file.dirname);
       file.dirname = path.join(parentFolder, 'components'); //generated file extension
     }))
-    .pipe(gulp.dest(distpath));
+    .pipe(gulp.dest('./src/assets/dist/'));
 });
 
 /* Generate Main CSS files from temp folder */
 gulp.task('scss-main', function () {
-  return gulp.src([stylespath + 'styles.scss'])
+  return gulp.src(['./src/assets/styles/styles.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(gulp.dest(distpath));
+    .pipe(gulp.dest('./src/assets/dist/'));
 });
 
-/* replace root variables */
-gulp.task('rm-root', function() {
-  gulp.src([distpath + 'styles.css'])
-  .pipe(replace('--gray: hsl(var(--gray-hs),20%);--gray-0: hsl(var(--gray-hs),95%);--gray-100: hsl(var(--gray-hs),80%);--gray-200: hsl(var(--gray-hs),60%);--gray-300: hsl(var(--gray-hs),59%);--gray-400: hsl(var(--gray-hs),40%);--gray-800: var(--gray);--primary-color: var(--blue);--secondary-color: var(--green);--tertiary-color: var(--orange);--primary-0: #F3F7FA;--primary-100: #EDF4F9;--primary-200: #80A7CE;--primary-250:#D3E7F4;--primary-300: #7AB4EE;--primary-400: var(--primary-color);--primary-600: #005391;--primary-800: #002E50;--secondary-0: #E1FFDF;--secondary-100: #00C786;--secondary-200: #07bc81;--secondary-400: var(--secondary-color);--tertiary-0: #FEEDD7;--tertiary-100: #FFA11D;--tertiary-400: var(--tertiary-color);--red-0: #FBCCD1;--red-100: #FF6979;--red-400: var(--red)}', ' '))  //http:\/\/localhost:\d+/g
-    .pipe(gulp.dest(distpath + 'new'))
+/* Delete temp and dist folder before regenerate */
+gulp.task('clean', function() {
+  rimraf.sync('./src/assets/dist');
+  rimraf.sync('./src/assets/temp');
 });
 
-/* delete folders */
-gulp.task('clean', function(cb) {
-  // rimraf.sync(distpath + '**/*');
-  // rimraf.sync(temppath + '**/*');
-  rimraf(distpath, cb);rimraf(temppath, cb);
-});
-
-/* Watch SCSS files */
+/* Watch file changes */
 gulp.task('watch', function () {
-  gulp.watch(stylespath + '**/*.scss', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
+  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
 });
 
-gulp.task('default', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch')); //
+/* Default task */
+gulp.task('default', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch'));
