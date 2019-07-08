@@ -93,7 +93,6 @@
     "codelyzer": "~4.5.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-css-adjust-url-path": "^1.1.0",
     "gulp-header": "^2.0.7",
     "gulp-inline-fonts": "^1.2.1",
     "gulp-minify": "^3.1.0",

@@ -4,7 +4,6 @@ sass.compiler = require('node-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const header = require('gulp-header');
-const inlineFonts = require('gulp-inline-fonts');
 const gulpSequence = require('gulp-sequence');
 const rimraf = require('rimraf');
 const inline = require('gulp-inline-fonts');
@@ -12,7 +11,10 @@ const concat = require('gulp-concat');
 const merge  = require('merge-stream');
 path = require('path');
 
-/* Inline Fonts */
+/*========================
+      Inline Fonts 
+==========================*/
+
 // Urdu
 gulp.task('noto-nastaliqurdu', function() {
   // create an accumulated stream
@@ -22,6 +24,7 @@ gulp.task('noto-nastaliqurdu', function() {
   .pipe(inline({ name: 'Noto Nastaliq Urdu', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff'] })));
   return fontStream.pipe(concat('noto-nastaliqurdu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/noto-nastaliqurdu'));
 });
+
 // English
 gulp.task('notosans', function() {
   // create an accumulated stream
@@ -34,6 +37,7 @@ gulp.task('notosans', function() {
   .pipe(inline({ name: 'Noto Sans', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans'));
 });
+
 // Bengali
 gulp.task('notosans-bengali', function() {
   // create an accumulated stream
@@ -46,6 +50,7 @@ gulp.task('notosans-bengali', function() {
   .pipe(inline({ name: 'Noto Sans Bengali', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-bengali.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-bengali'));
 });
+
 // Hindi & Marathi
 gulp.task('notosans-devanagari', function() {
   // create an accumulated stream
@@ -58,6 +63,7 @@ gulp.task('notosans-devanagari', function() {
   .pipe(inline({ name: 'Noto Sans Devanagari', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-devanagari.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-devanagari'));
 });
+
 // Gujarati
 gulp.task('notosans-gujarati', function() {
   // create an accumulated stream
@@ -70,6 +76,7 @@ gulp.task('notosans-gujarati', function() {
   .pipe(inline({ name: 'Noto Sans Gujarati', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-gujarati.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gujarati'));
 });
+
 // Punjabi
 gulp.task('notosans-gurmukhi', function() {
   // create an accumulated stream
@@ -82,6 +89,7 @@ gulp.task('notosans-gurmukhi', function() {
   .pipe(inline({ name: 'Noto Sans Gurmukhi', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-gurmukhi.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gurmukhi'));
 });
+
 // Kannada
 gulp.task('notosans-kannada', function() {
   // create an accumulated stream
@@ -94,6 +102,7 @@ gulp.task('notosans-kannada', function() {
   .pipe(inline({ name: 'Noto Sans Kannada', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-kannada.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-kannada'));
 });
+
 // Malayalam
 gulp.task('notosans-malayalam', function() {
   // create an accumulated stream
@@ -106,6 +115,7 @@ gulp.task('notosans-malayalam', function() {
   .pipe(inline({ name: 'Noto Sans Malayalam', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-malayalam.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-malayalam'));
 });
+
 // Oriya
 gulp.task('notosans-oriya', function() {
   // create an accumulated stream
@@ -118,6 +128,7 @@ gulp.task('notosans-oriya', function() {
   .pipe(inline({ name: 'Noto Sans Oriya', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-oriya.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-oriya'));
 });
+
 // Tamil
 gulp.task('notosans-tamil', function() {
   // create an accumulated stream
@@ -130,6 +141,7 @@ gulp.task('notosans-tamil', function() {
   .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-tamil.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-tamil'));
 });
+
 // Telugu
 gulp.task('notosans-telugu', function() {
   // create an accumulated stream
@@ -142,13 +154,41 @@ gulp.task('notosans-telugu', function() {
   .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-telugu'));
 });
-/* Default task */
+
+// Generate all fonts inline scss
 gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu'));
 
+/*========================
+  Fonts CSS generate
+==========================*/
+
+/* Generate Fonts CSS files */
+gulp.task('fonts-concated', function () {
+  return gulp.src(['./src/assets/styles/inlinefonts/**/*.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./src/assets/dist/fonts'));
+});
+
+/*========================
+  Main CSS file generation
+==========================*/
+
+/* Generate Main CSS files from styles folder */
+gulp.task('scss-main', function () {
+  return gulp.src(['./src/assets/styles/styles.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./src/assets/dist/'));
+});
+
+/*========================
+  Component CSS Generation
+==========================*/
 
 /* Temp Folder - Copy all other files with imports appended at head*/
 gulp.task('append-import', function () {
-  return gulp.src(['./src/assets/styles/**/*.scss', '!./src/assets/styles/*.scss', '!./src/assets/styles/mixins/**/*.scss','!./src/assets/styles/fonts/**/*.scss'])
+  return gulp.src(['./src/assets/styles/**/*.scss', '!./src/assets/styles/*.scss', '!./src/assets/styles/mixins/**/*.scss','!./src/assets/styles/fonts/**/*.scss','!./src/assets/styles/inlinefonts/**/*.scss'])
     .pipe(header('@import \'../mixins/mixins\';\n'))
     .pipe(header('@import \'../variables\';\n'))
     .pipe(gulp.dest('./src/assets/temp'));
@@ -188,13 +228,9 @@ gulp.task('scss-components', function () {
     .pipe(gulp.dest('./src/assets/dist/'));
 });
 
-/* Generate Main CSS files from temp folder */
-gulp.task('scss-main', function () {
-  return gulp.src(['./src/assets/styles/styles.scss'])
-    .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(gulp.dest('./src/assets/dist/'));
-});
+/*========================
+    Cleanup
+==========================*/
 
 /* Delete temp and dist folder before regenerate */
 gulp.task('clean', function() {
@@ -202,10 +238,14 @@ gulp.task('clean', function() {
   rimraf.sync('./src/assets/temp');
 });
 
+/*========================
+    Watcher
+==========================*/
+
 /* Watch file changes */
 gulp.task('watch', function () {
-  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
+  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-concated','copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean','append-import', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch'));
+gulp.task('default', gulpSequence('clean','append-import', 'fonts-concated', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch'));
