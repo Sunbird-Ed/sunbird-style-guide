@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
   toggleIcon = true;
   ngOnInit() {
-    //console.log('hideContent', typeof(this.ShowContent));
+    
 
   }
 

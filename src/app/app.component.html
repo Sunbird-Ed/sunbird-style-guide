@@ -1,10 +1,10 @@
 <div *ngIf="router.url!='/'" class="docs-body">
-  <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar" *ngIf='showTopLeftBars'>
+  <div class="docs-sidebar" [class.docs-hideSidebar]="!showSidebar">
     <i class="fa fa-bars docs-toggleSidebar" (click)="showSidebar = !showSidebar" title="Toggle Sidebar"></i>
     <app-sidebar (getMatchedLocationPath)='displayMatchedLocationPath($event)'></app-sidebar>
   </div>
   <div class="docs-content" [class.docs-fullWidth]="!showSidebar">
-      <h1 class="docs-pageHeading" *ngIf='showTopLeftBars'><span class="fmedium d-block">Sunbird Design system</span>{{selectedlink}}</h1>
+      <h1 class="docs-pageHeading"><span class="fmedium d-block">Sunbird Design system</span>{{selectedlink}}</h1>
     <router-outlet></router-outlet>
   </div>
 </div>
