@@ -163,11 +163,19 @@ gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengal
 ==========================*/
 
 /* Generate Fonts CSS files */
-gulp.task('fonts-concated', function () {
-  return gulp.src(['./src/assets/styles/inlinefonts/**/*.scss'])
+gulp.task('fonts-css', function () {
+  return gulp.src(['./src/assets/styles/inlinefonts/**/*.scss','!./src/assets/styles/inlinefonts/fonts.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('./src/assets/dist/fonts'));
+});
+
+/* Generate Concated Fonts CSS files */
+gulp.task('fonts-concated', function () {
+  return gulp.src(['./src/assets/styles/inlinefonts/fonts.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./src/assets/dist/'));
 });
 
 /*========================
@@ -179,6 +187,23 @@ gulp.task('scss-main', function () {
   return gulp.src(['./src/assets/styles/styles.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./src/assets/dist/'));
+});
+
+/*========================
+  Generate Variables file
+==========================*/
+gulp.task('scss-variables', function () {
+  return gulp.src(['./src/assets/styles/_variables.scss'])
+    .pipe(rename(function (path) { //since sass() wont compile _partials files we are removing it here
+      path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
+    }))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sourcemaps.write('./'))
+    .pipe(rename(function (file) {
+      const parentFolder = path.dirname(file.dirname);
+      file.dirname = path.join(parentFolder, ''); //generated file extension
+    }))
     .pipe(gulp.dest('./src/assets/dist/'));
 });
 
@@ -214,7 +239,7 @@ gulp.task('copy-fonts', function () {
 
 /* Generate Components CSS files from temp folder */
 gulp.task('scss-components', function () {
-  return gulp.src(['./src/assets/temp/**/*.scss', '!./src/assets/temp/mixins/**/*.scss', '!./src/assets/temp/*.scss','!./src/assets/temp/fonts/**/*.scss','!./src/assets/temp/inlinefonts/**/*.scss'])
+  return gulp.src(['./src/assets/temp/components/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(rename(function (path) { //since sass() wont compile _partials files we are removing it here
       path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
@@ -244,8 +269,8 @@ gulp.task('clean', function() {
 
 /* Watch file changes */
 gulp.task('watch', function () {
-  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-concated','copy-style', 'copy-mixins', 'scss-components', 'scss-main'));
+  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated','copy-style', 'scss-variables','copy-mixins', 'scss-components', 'scss-main'));
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean','append-import', 'fonts-concated', 'copy-style', 'copy-mixins', 'scss-components', 'scss-main','watch'));
+gulp.task('default', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-main','watch'));
