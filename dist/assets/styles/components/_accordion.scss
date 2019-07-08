@@ -29,7 +29,12 @@
     bottom: 0;
     width: 100%;
     margin-left: auto;
-    max-width: 360px;
+    max-width: $base-block-space*60;
+}
+
+.ui.styled.accordion.sb-single-pannel-accordion.sb-single-pannel-accordion-fixed {
+    position: fixed;
+    right: 43px;
 }
 
 .ui.styled.accordion.sb-single-pannel-accordion .title,
@@ -37,10 +42,10 @@
     padding:0;
 }
 
-.ui.styled.accordion.sb-single-pannel-accordion .content {
-    overflow-y: auto;
-    max-height: 560px;
-}
+// .ui.styled.accordion.sb-single-pannel-accordion .content {
+//     overflow-y: auto;
+//     max-height: 560px;
+// }
 
 .sb-single-pannel-accordion .ui.progress{
     margin-right: ($base-block-space * 4);
@@ -105,7 +110,7 @@
     align-items: center;
     border-radius: 4px 4px 0px 0px;
     span {
-        font-size: 12px;
+        font-size: $font-size-base;
     }
   }  
   .sb-single-pannel-accordion-list-item {
@@ -152,12 +157,16 @@ i.icon {
 
 .info-text {
     width:110px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: left;
 }
 
 .download-text {
-    font-size: 12px;
+    font-size: $font-size-base;
+    max-width: $base-block-space*40;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .ui.styled.accordion.sb-single-pannel-accordion .title,
@@ -176,7 +185,7 @@ i.icon {
     }
 
     .sb-single-pannel-accordion-list-item  .ui.progress {
-        height: $base-block-space/2;
+        height: $base-block-space;
         border-radius: $base-block-space;
         width: 100%;
         border: 1px solid $white-color;
@@ -191,7 +200,7 @@ i.icon {
             }
         }
         .bar {
-            height: ($base-block-space/2 - 1) !important;
+            height: ($base-block-space - 1) !important;
             border-radius: $base-block-space/2;
             background: $green;
         }

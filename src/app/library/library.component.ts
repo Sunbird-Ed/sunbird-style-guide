@@ -8,11 +8,9 @@ import { Router } from '@angular/router';
 })
 export class LibraryComponent implements OnInit {
 
-  constructor(private router: Router){
-  }
- 
-  ngOnInit() {
-    
-  }
+  constructor(private router: Router) {}
+
+  panelOpened = false;
+  ngOnInit() {}
 
 }
