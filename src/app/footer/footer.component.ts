@@ -1,6 +1,7 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  Input
 } from '@angular/core';
 import {
   HighlightResult
@@ -11,8 +12,8 @@ import {
   templateUrl: './footer.component.html'
 })
 export class FooterComponent implements OnInit {
-
-  constructor() {}
+  @Input() ShowContent;
+  constructor() { }
 
   pageTitle = 'Footer';
   sections = [{
@@ -129,6 +130,6 @@ export class FooterComponent implements OnInit {
   }];
 
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

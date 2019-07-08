@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page-section',
   templateUrl: './page-section.component.html'
 })
 export class PageSectionComponent implements OnInit {
-
+  @Input() ShowContent;
   constructor() { }
 
   pageTitle = 'Page Section / Carousel';

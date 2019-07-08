@@ -1,5 +1,5 @@
+@import "./buttons";
 /* modal styles */
-
 .sb-modal {
     .ui.modal {
         @include margin(3.5rem auto 0 auto);
@@ -62,7 +62,7 @@
         &.large {
             max-width: $sb-modal-large-width;
             .sb-modal-content {
-                height: calc(100vh - 100px);
+                height: calc(100vh - 200px);
             }
         }
         &.sb-modal-fullscreen {
@@ -85,20 +85,52 @@
                 position: relative;
             }
         }
+        &.fullscreen {
+            width: 100% !important;
+            margin: 0px !important;
+            left: 0px !important;
+            .sb-modal-content {
+                min-height: calc(100vh - 96px);
+            }
+        }
     } // sb modal confirmation/alert styles 
     &.sb-warning .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-warning;
+        }
+        .sb-modal-actions {
+            .sb-btn-normal:first-child {
+                @extend .sb-btn-warning;
+            }
+            .sb-btn-normal:last-child {
+                @extend .sb-btn-outline-warning;
+            }
         }
     }
     &.sb-success .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-success;
         }
+        .sb-modal-actions {
+            .sb-btn-normal:first-child {
+                @extend .sb-btn-success;
+            }
+            .sb-btn-normal:last-child {
+                @extend .sb-btn-outline-success;
+            }
+        }
     }
     &.sb-error .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-error;
+        }
+        .sb-modal-actions {
+            .sb-btn-normal:first-child {
+                @extend .sb-btn-error;
+            }
+            .sb-btn-normal:last-child {
+                @extend .sb-btn-outline-error;
+            }
         }
     }
 }
@@ -144,4 +176,9 @@
             justify-content: center;
         }
     }
+}
+
+
+.ui.dimmer {
+    z-index: 99999;
 }

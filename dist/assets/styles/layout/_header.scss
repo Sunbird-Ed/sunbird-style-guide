@@ -171,6 +171,7 @@
 
 .sb-header {
   min-height: $base-block-space * 10;
+  background:$white;
   .ui {
     &.menu {
       padding: $base-block-space * 2 $base-block-space;
@@ -189,7 +190,7 @@
 
       .item:hover {
         background: transparent;
-        font-weight: $font-weight-bold;
+        // font-weight: $font-weight-bold;
         color: $blue;
       }
 
@@ -221,6 +222,11 @@
     padding-left: $base-block-space;
     &.ui.dropdown:not(.button) > .default.text {
       color:$white;
+    }
+    @media only screen and (max-width: 768px) {
+      &.ui.dropdown:not(.button) > .default.text {
+        color:$primary-color;
+      }
     }
     &.ui.dropdown{
       .menu {

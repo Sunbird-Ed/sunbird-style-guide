@@ -3,7 +3,7 @@
 <!--Page Content-->
 <div class="docs-sections" *ngFor="let section of sections;">
 
-  <h4 class="docs-sectionHeading">
+  <h4 class="docs-sectionHeading" *ngIf='ShowContent'>
     {{section.title}}
     <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
       title="Toggle Code" tabindex="0"></i>
@@ -11,7 +11,6 @@
 
   <!--Display output-->
   <div class="docs-sectionDemoCode">
-    <div class="ui container">
     <div class="sb-header">
       <div class="ui container fixed main menu ">
         <div class="ui container d-flex">
@@ -60,7 +59,7 @@
             Enter QR code
           </button>
           <div class="sb-divider computer only"></div>
-          <div class="sb-search-box mr-auto medium">
+          <div class="sb-search-box mr-auto b-0 medium">
             <div class="input-div relative">
               <i class="search icon"></i>
               <input type="text" name="filter_search" class="sb-search-input" placeholder="Search in All">
@@ -95,7 +94,6 @@
         <app-explore-filter></app-explore-filter>
       </div>
     </div>
-  </div>
   </div>
   <!--/Display output-->
 
