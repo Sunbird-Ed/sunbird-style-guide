@@ -1,16 +1,15 @@
 /* Load fonts first*/
-@import "./fonts/notosans/notosans.css";
-@import "./fonts/notosans-bengali/notosansbengali.css";
-@import "./fonts/notosans-malayalam/notosansmalayalam.css";
-@import "./fonts/notosans-gurmukhi/notosansgurmukhi.css";
-@import "./fonts/notosans-devanagari/notosansdevanagari.css";
-@import "./fonts/notosans-gujarati/notosansgujarati.css";
-@import "./fonts/notosans-telugu/notosanstelugu.css";
-@import "./fonts/notosans-tamil/notosanstamil.css";
-@import "./fonts/notosans-kannada/notosanskannada.css";
-@import "./fonts/notosans-oriya/notosansoriya.css";
-@import "./fonts/noto-nastaliqurdu/notonastaliqurdu.css";
-
+@import "./inlinefonts/notosans/notosans";
+@import "./inlinefonts/notosans-bengali/notosans-bengali";
+@import "./inlinefonts/notosans-malayalam/notosans-malayalam";
+@import "./inlinefonts/notosans-gurmukhi/notosans-gurmukhi";
+@import "./inlinefonts/notosans-devanagari/notosans-devanagari";
+@import "./inlinefonts/notosans-gujarati/notosans-gujarati";
+@import "./inlinefonts/notosans-telugu/notosans-telugu";
+@import "./inlinefonts/notosans-tamil/notosans-tamil";
+@import "./inlinefonts/notosans-kannada/notosans-kannada";
+@import "./inlinefonts/notosans-oriya/notosans-oriya";
+@import "./inlinefonts/noto-nastaliqurdu/noto-nastaliqurdu";
 
 // base structure
 @import "./variables";
