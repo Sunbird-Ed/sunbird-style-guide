@@ -3,75 +3,53 @@
 <!-- page section/carousel component -->
 <div class="my-32"><app-page-section [ShowContent]="false"></app-page-section></div>
 
-<sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel" [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}" (click)="panelOpened = !panelOpened">
+<sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel" [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
   <sui-accordion-panel>
     <div title class="p-0">
-      <div class="sb-single-pannel-accordion-heading">
+      <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
         <span>Content Manager</span>
         <i class="chevron up icon d-flex flex-ai-center"></i>
       </div>
     </div>
     <div content>
       <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center mb-8">
-          <div class="download-text">Downloading content name downloading content name</div>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-success sb-btn-icon-only ml-auto">
-            <i class="check circle icon success-icon d-flex flex-ai-center mr-0"></i>
-          </button>
-        </div>
-        <sui-progress [value]="100" [maximum]="100" class="mb-0 mr-8"></sui-progress>
-      </div>
-      <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center">
-          <div class="download-text">Downloading content name 2</div>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-btn-icon-only ml-auto">
-            <i class="pause circle icon outline d-flex flex-ai-center mr-0"></i>
-          </button>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only">
-            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
-          </button>
-        </div>
-        <div class="info-text mb-8">300MB/350MB</div>
-        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
-      </div>
-      <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center mb-8">
-          <div class="download-text">Downloading content name 3</div>
-          <div class="sb-label sb-label-table sb-label-error-0 ml-auto mr-8">Retry</div>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-btn-icon-only">
-            <i class="undo icon info-icon d-flex flex-ai-center mr-0"></i>
-          </button>
-        </div>
-        <!-- <div class="error-text">Download failed</div> -->
-        <sui-progress [value]="0" [maximum]="100" class="mb-0 mr-8 error"></sui-progress>
-      </div>
-      <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center">
-          <div class="download-text">Downloading content name 4</div>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only ml-auto">
-            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
-          </button>
-        </div>
-        <div class="info-text mb-8">1.45kb/350MB</div>
-        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
-      </div>
-      <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center mb-8">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
           <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
           <div class="download-text">Downloading content name 5</div>
           <div class="sb-label sb-label-table sb-label-warning-0 ml-auto">Waiting...</div>
           <!-- <div class="waiting-text">Waiting...</div> -->
         </div>
-        <sui-progress [value]="0" [maximum]="100" class="mb-0 mr-8"></sui-progress>
       </div>
       <div class="sb-single-pannel-accordion-list-item">
-        <div class="d-flex flex-ai-center flex-jc-center">
-          <div class="download-text">Downloading content name 6</div>
-          <button type="button" class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-error sb-btn-icon-only ml-auto">
-            <i class="close icon error-icon d-flex flex-ai-center mr-0"></i>
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name 2</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary sb-left-icon-btn ml-auto">
+            <i class="pause circle icon outline mr-8"></i>Pause
+          </button>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-8">
+            <i class="close icon mr-8"></i>Close
           </button>
         </div>
+        <div class="info-text">300MB/350MB</div>
         <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name 3</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-auto">
+            <i class="undo icon mr-8"></i>Retry
+          </button>
+        </div>
+        <!-- <div class="error-text">Download failed</div> -->
+      </div>
+      
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name downloading content name</div>
+          
+            <i class="check circle icon success-icon ml-auto"></i>
+          
+        </div>
       </div>
     </div>
     </sui-accordion-panel>
