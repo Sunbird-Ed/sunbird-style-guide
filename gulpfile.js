@@ -145,8 +145,16 @@ gulp.task('notosans-telugu', function() {
   return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-telugu'));
 });
 
+// SB Icons
+gulp.task('sb-icons', function() {
+  var fontStream = merge();
+  fontStream.add(gulp.src('./src/assets/styles/fonts/sb-icons/icomoon.woff')
+  .pipe(inline({ name: 'icomoon', style: 'normal',stretch: 'normal',weight: 'normal',display: 'swap', formats: ['woff'] })));
+  return fontStream.pipe(concat('sb-icons.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/sb-icons'));
+});
+
 // Generate all fonts inline scss
-gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu'));
+gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu','sb-icons'));
 
 /*========================
   Fonts CSS generate
