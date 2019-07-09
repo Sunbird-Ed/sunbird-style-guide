@@ -139,10 +139,10 @@ gulp.task('notosans-telugu', function() {
   var fontStream = merge();
   // Regular
   fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Regular.woff2')
-  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
+  .pipe(inline({ name: 'Noto Sans Telugu', style: 'normal',stretch: 'normal',weight: 400,display: 'swap', formats: ['woff2'] })));
   // Bold
   fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Bold.woff2')
-  .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
+  .pipe(inline({ name: 'Noto Sans Telugu', style: 'normal',stretch: 'normal',weight: 700,display: 'swap', formats: ['woff2'] })));
   return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-telugu'));
 });
 
@@ -154,8 +154,16 @@ gulp.task('sb-icons', function() {
   return fontStream.pipe(concat('sb-icons.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/sb-icons'));
 });
 
+// Semantic Icons
+gulp.task('semantic-icons', function() {
+  var fontStream = merge();
+  fontStream.add(gulp.src('./src/assets/styles/fonts/semantic-icons/icons.woff2')
+  .pipe(inline({ name: 'Icons', style: 'normal',stretch: 'normal',weight: 'normal',display: 'swap', formats: ['woff2'] })));
+  return fontStream.pipe(concat('semantic-icons.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/semantic-icons'));
+});
+
 // Generate all fonts inline scss
-gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu','sb-icons'));
+gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi','notosans-kannada','notosans-malayalam','notosans-oriya','notosans-tamil','notosans-telugu','sb-icons','semantic-icons'));
 
 /*========================
   Fonts CSS generate
