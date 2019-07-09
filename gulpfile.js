@@ -9,12 +9,14 @@ const rimraf = require('rimraf');
 const inline = require('gulp-inline-fonts');
 const concat = require('gulp-concat');
 const merge  = require('merge-stream');
+const replace = require('gulp-string-replace');
+const fs = require('fs');
+const log = require('fancy-log');
 path = require('path');
 
 /*========================
       Inline Fonts 
 ==========================*/
-
 // Urdu
 gulp.task('noto-nastaliqurdu', function() {
   // create an accumulated stream
@@ -161,7 +163,6 @@ gulp.task('fonts', gulpSequence('noto-nastaliqurdu','notosans', 'notosans-bengal
 /*========================
   Fonts CSS generate
 ==========================*/
-
 /* Generate Fonts CSS files */
 gulp.task('fonts-css', function () {
   return gulp.src(['./src/assets/styles/inlinefonts/**/*.scss','!./src/assets/styles/inlinefonts/fonts.scss'])
@@ -181,7 +182,6 @@ gulp.task('fonts-concated', function () {
 /*========================
   Main CSS file generation
 ==========================*/
-
 /* Generate Main CSS files from styles folder */
 gulp.task('scss-main', function () {
   return gulp.src(['./src/assets/styles/styles.scss'])
@@ -210,10 +210,10 @@ gulp.task('scss-variables', function () {
 /*========================
   Component CSS Generation
 ==========================*/
-
 /* Temp Folder - Copy all other files with imports appended at head*/
 gulp.task('append-import', function () {
   return gulp.src(['./src/assets/styles/**/*.scss', '!./src/assets/styles/*.scss', '!./src/assets/styles/mixins/**/*.scss','!./src/assets/styles/fonts/**/*.scss','!./src/assets/styles/inlinefonts/**/*.scss'])
+    .pipe(header('/*!Delete before this*/'))
     .pipe(header('@import \'../mixins/mixins\';\n'))
     .pipe(header('@import \'../variables\';\n'))
     .pipe(gulp.dest('./src/assets/temp'));
@@ -253,10 +253,17 @@ gulp.task('scss-components', function () {
     .pipe(gulp.dest('./src/assets/dist/'));
 });
 
+/* Remove variables from component file */
+gulp.task('components-cleanup', function () {
+  replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+  return gulp.src(['./src/assets/dist/components/*.css'])
+  .pipe(replace(replaceBeforeRegex, ''))
+  .pipe(gulp.dest('./src/assets/dist/components/'));
+});
+
 /*========================
     Cleanup
 ==========================*/
-
 /* Delete temp and dist folder before regenerate */
 gulp.task('clean', function() {
   rimraf.sync('./src/assets/dist');
@@ -269,8 +276,8 @@ gulp.task('clean', function() {
 
 /* Watch file changes */
 gulp.task('watch', function () {
-  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated','copy-style', 'scss-variables','copy-mixins', 'scss-components', 'scss-main'));
+  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated','copy-style', 'scss-variables','copy-mixins', 'scss-components','components-cleanup', 'scss-main'));
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-main','watch'));
+gulp.task('default', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components','components-cleanup', 'scss-main','watch'));
