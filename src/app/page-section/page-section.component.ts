@@ -40,7 +40,7 @@ export class PageSectionComponent implements OnInit {
           <!--Content-->
           <div class="sb-pageSection-content">
               <ngx-slick class="carousel" [config]="slideConfig">
-                  <div ngxSlickItem class="mr-15">
+                  <div ngxSlickItem class="mr-16">
                     <app-card></card>
                   </div>
               </ngx-slick>

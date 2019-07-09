@@ -160,7 +160,7 @@ html {
       text-transform: capitalize;
     }
     .docs-sections {
-      margin: 48px 0 0px 0;
+      margin: 0 0 0px 0;
     }
     .docs-sectionHeading {
       border-bottom: 1px solid #ddd;
@@ -357,4 +357,29 @@ body ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: $gray-0;
+}
+
+
+.hideLeftTopBars {
+  .docs-sidebar, .docs-pageHeading  {display: none;}
+  .docs-body {
+      .docs-content {
+          padding: 0 0 0 0;
+          .docs-sections {
+              margin: 0 0 0 0;
+          }
+      }
+  }
+  .docs-body 
+  .sb-header {
+      display: flex;
+      align-items: center;
+      .ui.menu.fixed {
+          position: relative;
+          padding: 0px 0px;
+      }
+  }
+.footer {
+  position: relative;
+}
 }

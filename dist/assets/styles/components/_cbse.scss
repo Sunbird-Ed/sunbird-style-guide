@@ -453,15 +453,15 @@ i.icon.trash {
 }
 
 .sb-card {
-  .sb-card-metas .sb-card-image {
-    width: 120px;
-    height: 96px;
+  // .sb-card-metas .sb-card-image {
+  //   width: 120px;
+  //   height: 96px;
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+  //   img {
+  //     width: auto;
+  //     height: auto;
+  //   }
+  // }
 
   .sb-card-content-list {
     font-size: $font-size-sm;
