@@ -1,16 +1,4 @@
-/* Load fonts first*/
-@import "./inlinefonts/notosans/notosans";
-@import "./inlinefonts/notosans-bengali/notosans-bengali";
-@import "./inlinefonts/notosans-malayalam/notosans-malayalam";
-@import "./inlinefonts/notosans-gurmukhi/notosans-gurmukhi";
-@import "./inlinefonts/notosans-devanagari/notosans-devanagari";
-@import "./inlinefonts/notosans-gujarati/notosans-gujarati";
-@import "./inlinefonts/notosans-telugu/notosans-telugu";
-@import "./inlinefonts/notosans-tamil/notosans-tamil";
-@import "./inlinefonts/notosans-kannada/notosans-kannada";
-@import "./inlinefonts/notosans-oriya/notosans-oriya";
-@import "./inlinefonts/noto-nastaliqurdu/noto-nastaliqurdu";
-
+@import "./inlinefonts/fonts";
 // base structure
 @import "./variables";
 @import "./mixins/mixins";

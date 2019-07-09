@@ -378,7 +378,7 @@ a.sb-btn {
 
 *[dir="ltr"] {
   .sb-right-icon-btn {
-    padding: ($base-block-space * 1)/2 ($base-block-space * 1)
+    padding: ($base-block-space * 1) ($base-block-space * 1)
       ($base-block-space * 1) ($base-block-space * 1);
     i.icon {
       margin-left: $base-block-space;
@@ -395,7 +395,7 @@ a.sb-btn {
 }
 *[dir="rtl"] {
   .sb-right-icon-btn {
-    padding: ($base-block-space * 1)/2 ($base-block-space * 1)
+    padding: ($base-block-space * 1) ($base-block-space * 1)
       ($base-block-space * 1) ($base-block-space * 1);
     i.icon {
       margin-left: 0;
