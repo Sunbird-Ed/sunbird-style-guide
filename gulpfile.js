@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const merge  = require('merge-stream');
 const replace = require('gulp-string-replace');
 const log = require('fancy-log');
+const concatCss = require('gulp-concat-css');
 path = require('path');
 
 /*========================
@@ -200,7 +201,42 @@ gulp.task('scss-variables', function () {
     }))
     .pipe(gulp.dest('./src/assets/dist/'));
 });
-
+/*========================
+  Generate Base file
+==========================*/
+gulp.task('scss-base', function () {
+  replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+  return gulp.src(['./src/assets/styles/base/base.scss'])
+    .pipe(header('/*!Delete before this*/'))
+    .pipe(header('@import \'../mixins/mixins\';\n'))
+    .pipe(header('@import \'../variables\';\n'))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(replace(replaceBeforeRegex, ''))
+    .pipe(gulp.dest('./src/assets/dist/'));
+});
+/*========================
+  Generate Layout file
+==========================*/
+gulp.task('scss-layout', function () {
+  replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+  return gulp.src(['./src/assets/styles/layout/layout.scss'])
+    .pipe(header('/*!Delete before this*/'))
+    .pipe(header('@import \'../mixins/mixins\';\n'))
+    .pipe(header('@import \'../variables\';\n'))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(replace(replaceBeforeRegex, ''))
+    .pipe(gulp.dest('./src/assets/dist/'));
+});
+/*========================
+  Generate Common file
+==========================*/
+gulp.task('scss-common', function () {
+  replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+  return gulp.src(['./src/assets/dist/base.css','./src/assets/dist/base.css'])
+    .pipe(concatCss("common.css"))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./src/assets/dist/'));
+});
 /*========================
   Component CSS Generation
 ==========================*/
@@ -288,8 +324,8 @@ gulp.task('clean', function() {
 
 /* Watch file changes */
 gulp.task('watch', function () {
-  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated','copy-style', 'scss-variables','copy-mixins', 'scss-components','scss-components-concated','scss-semantic', 'scss-main'));
+  gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated','copy-style', 'scss-variables','copy-mixins', 'scss-components','scss-components-concated','scss-semantic','scss-base','scss-layout','scss-common', 'scss-main'));
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components','scss-components-concated', 'scss-main','scss-semantic','watch'));
+gulp.task('default', gulpSequence('clean','append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components','scss-components-concated', 'scss-main','scss-semantic','scss-base','scss-layout','scss-common','watch'));
