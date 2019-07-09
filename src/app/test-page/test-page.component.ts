@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener, Inject } from "@angular/core";
+import { Component, OnInit, HostListener, OnDestroy, Inject, Renderer2 } from "@angular/core";
+import { Router } from '@angular/router';
 import { HighlightResult } from "ngx-highlightjs";
 import { DOCUMENT } from "@angular/platform-browser";
 
@@ -6,26 +7,26 @@ import { DOCUMENT } from "@angular/platform-browser";
   selector: "app-test-page",
   templateUrl: "./test-page.component.html"
 })
-export class TestPageComponent implements OnInit {
+export class TestPageComponent implements OnInit, OnDestroy {
    
   //public fixed: boolean = true;
-  constructor(@Inject(DOCUMENT) private doc: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
    
   pageTitle = "Test Page";
   sections = [
     {
       expandCode: false,
       title: "Meta Data List",
-      demoCode: `
-           
-      `,
-      copyCode: `
-     
-      `
+      demoCode: ``,
+      copyCode: ``
     }
   ];
 
   ngOnInit() {
+    this.renderer.addClass(this.document.body, 'hideLeftTopBars');
+  }
+  ngOnDestroy(): void {
+    this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }
 
  
