@@ -1,5 +1,33 @@
 
   
-<div class="sb-explore-filter">
-    <app-explore-filter></app-explore-filter>
-</div>
+ <!--Display output-->
+
+ <!--Filters-->
+<div class="docs-sections">
+    <h4 class="docs-sectionHeading">
+        Filters
+      <i class="fa fa-code text-gray docs-expandCode" (click)="filters = !filters" title="Toggle Code"
+        tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+        <div class="sb-explore-filter">
+            <app-explore-filter></app-explore-filter>
+        </div>
+  
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="filters">
+      <!--Copy code button-->
+      <button ngxClipboard [cbContent]="filtersCode"
+        class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+      <!--Copy code button-->
+  
+      <!--Copy code display-->
+      <pre>
+        <code [highlight]="filtersCode"></code>
+      </pre>
+      <!--Copy code display-->
+    </div>
+    <!--/Display code-->
+  </div>
+  <!--/Filters-->
