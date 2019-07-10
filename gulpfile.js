@@ -236,6 +236,70 @@ gulp.task('scss-layout', function() {
         .pipe(gulp.dest('./src/assets/dist/'));
 });
 /*========================
+  Generate Pages file
+==========================*/
+// Individual
+gulp.task('scss-pages', function() {
+    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+    return gulp.src(['./src/assets/styles/pages/*.scss','!./src/assets/styles/pages/pages.scss'])
+        .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
+            path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
+        }))
+        .pipe(header('/*!Delete before this*/'))
+        .pipe(header('@import \'../mixins/mixins\';\n'))
+        .pipe(header('@import \'../variables\';\n'))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(replace(replaceBeforeRegex, ''))
+        .pipe(rename(function(file) {
+            const parentFolder = path.dirname(file.dirname);
+            file.dirname = path.join(parentFolder, 'pages'); //generated file extension
+        }))
+        .pipe(gulp.dest('./src/assets/dist/'));
+});
+// Concated
+gulp.task('scss-pages-concated', function() {
+    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+    return gulp.src(['./src/assets/styles/pages/pages.scss'])
+        .pipe(header('/*!Delete before this*/'))
+        .pipe(header('@import \'../mixins/mixins\';\n'))
+        .pipe(header('@import \'../variables\';\n'))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(replace(replaceBeforeRegex, ''))
+        .pipe(gulp.dest('./src/assets/dist/'));
+});
+/*========================
+  Generate vendors file
+==========================*/
+// Individual
+gulp.task('scss-vendors', function() {
+    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+    return gulp.src(['./src/assets/styles/vendors/*.scss','!./src/assets/styles/vendors/vendors.scss'])
+        .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
+            path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
+        }))
+        .pipe(header('/*!Delete before this*/'))
+        .pipe(header('@import \'../mixins/mixins\';\n'))
+        .pipe(header('@import \'../variables\';\n'))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(replace(replaceBeforeRegex, ''))
+        .pipe(rename(function(file) {
+            const parentFolder = path.dirname(file.dirname);
+            file.dirname = path.join(parentFolder, 'vendors'); //generated file extension
+        }))
+        .pipe(gulp.dest('./src/assets/dist/'));
+});
+// Concated
+gulp.task('scss-vendors-concated', function() {
+    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+    return gulp.src(['./src/assets/styles/vendors/vendors.scss'])
+        .pipe(header('/*!Delete before this*/'))
+        .pipe(header('@import \'../mixins/mixins\';\n'))
+        .pipe(header('@import \'../variables\';\n'))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(replace(replaceBeforeRegex, ''))
+        .pipe(gulp.dest('./src/assets/dist/'));
+});
+/*========================
   Generate Common file
 ==========================*/
 gulp.task('scss-common', function() {
@@ -332,8 +396,8 @@ gulp.task('clean', function() {
 
 /* Watch file changes */
 gulp.task('watch', function() {
-    gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common', 'scss-main'));
+    gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common','scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'scss-main'));
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-main', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common', 'watch'));
+gulp.task('default', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-main', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common', 'scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'watch'));
