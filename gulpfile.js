@@ -13,6 +13,13 @@ const replace = require('gulp-string-replace');
 const concatCss = require('gulp-concat-css');
 path = require('path');
 
+const basepath = './src/assets/styles/';
+const fontspath = basepath + 'fonts/';
+const infontspath = basepath + 'inlinefonts/';
+const temppath = './src/assets/temp/';
+const repopath = './src/assets/sb-repo/';
+replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
+
 /*========================
       Inline Fonts 
 ==========================*/
@@ -20,145 +27,145 @@ path = require('path');
 gulp.task('noto-nastaliqurdu', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/noto-nastaliqurdu/NotoNastaliqUrdu-Regular.woff')
+    fontStream.add(gulp.src(fontspath + 'noto-nastaliqurdu/NotoNastaliqUrdu-Regular.woff')
         .pipe(inline({ name: 'Noto Nastaliq Urdu', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff'] })));
-    return fontStream.pipe(concat('noto-nastaliqurdu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/noto-nastaliqurdu'));
+    return fontStream.pipe(concat('noto-nastaliqurdu.scss')).pipe(gulp.dest(infontspath + 'noto-nastaliqurdu'));
 });
 
 // English
 gulp.task('notosans', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans/latin-ext.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans/latin-ext.woff2')
         .pipe(inline({ name: 'Noto Sans', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans/latin-ext-bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans/latin-ext-bold.woff2')
         .pipe(inline({ name: 'Noto Sans', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans'));
+    return fontStream.pipe(concat('notosans.scss')).pipe(gulp.dest(infontspath + 'notosans'));
 });
 
 // Bengali
 gulp.task('notosans-bengali', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-bengali/NotoSansBengali-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-bengali/NotoSansBengali-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Bengali', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-bengali/NotoSansBengali-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-bengali/NotoSansBengali-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Bengali', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-bengali.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-bengali'));
+    return fontStream.pipe(concat('notosans-bengali.scss')).pipe(gulp.dest(infontspath + 'notosans-bengali'));
 });
 
 // Hindi & Marathi
 gulp.task('notosans-devanagari', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-devanagari/NotoSansDevanagari-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-devanagari/NotoSansDevanagari-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Devanagari', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-devanagari/NotoSansDevanagari-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-devanagari/NotoSansDevanagari-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Devanagari', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-devanagari.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-devanagari'));
+    return fontStream.pipe(concat('notosans-devanagari.scss')).pipe(gulp.dest(infontspath + 'notosans-devanagari'));
 });
 
 // Gujarati
 gulp.task('notosans-gujarati', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gujarati/NotoSansGujarati-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-gujarati/NotoSansGujarati-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Gujarati', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gujarati/NotoSansGujarati-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-gujarati/NotoSansGujarati-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Gujarati', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-gujarati.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gujarati'));
+    return fontStream.pipe(concat('notosans-gujarati.scss')).pipe(gulp.dest(infontspath + 'notosans-gujarati'));
 });
 
 // Punjabi
 gulp.task('notosans-gurmukhi', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gurmukhi/NotoSansGurmukhi-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-gurmukhi/NotoSansGurmukhi-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Gurmukhi', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-gurmukhi/NotoSansGurmukhi-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-gurmukhi/NotoSansGurmukhi-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Gurmukhi', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-gurmukhi.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-gurmukhi'));
+    return fontStream.pipe(concat('notosans-gurmukhi.scss')).pipe(gulp.dest(infontspath + 'notosans-gurmukhi'));
 });
 
 // Kannada
 gulp.task('notosans-kannada', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-kannada/NotoSansKannada-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-kannada/NotoSansKannada-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Kannada', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-kannada/NotoSansKannada-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-kannada/NotoSansKannada-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Kannada', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-kannada.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-kannada'));
+    return fontStream.pipe(concat('notosans-kannada.scss')).pipe(gulp.dest(infontspath + 'notosans-kannada'));
 });
 
 // Malayalam
 gulp.task('notosans-malayalam', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-malayalam/NotoSansMalayalam-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-malayalam/NotoSansMalayalam-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Malayalam', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-malayalam/NotoSansMalayalam-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-malayalam/NotoSansMalayalam-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Malayalam', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-malayalam.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-malayalam'));
+    return fontStream.pipe(concat('notosans-malayalam.scss')).pipe(gulp.dest(infontspath + 'notosans-malayalam'));
 });
 
 // Oriya
 gulp.task('notosans-oriya', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-oriya/NotoSansOriya-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-oriya/NotoSansOriya-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Oriya', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-oriya/NotoSansOriya-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-oriya/NotoSansOriya-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Oriya', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-oriya.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-oriya'));
+    return fontStream.pipe(concat('notosans-oriya.scss')).pipe(gulp.dest(infontspath + 'notosans-oriya'));
 });
 
 // Tamil
 gulp.task('notosans-tamil', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-tamil/NotoSansTamil-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-tamil/NotoSansTamil-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-tamil/NotoSansTamil-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-tamil/NotoSansTamil-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Tamil', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-tamil.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-tamil'));
+    return fontStream.pipe(concat('notosans-tamil.scss')).pipe(gulp.dest(infontspath + 'notosans-tamil'));
 });
 
 // Telugu
 gulp.task('notosans-telugu', function() {
     var fontStream = merge();
     // Regular
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Regular.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-telugu/NotoSansTelugu-Regular.woff2')
         .pipe(inline({ name: 'Noto Sans Telugu', style: 'normal', stretch: 'normal', weight: 400, display: 'swap', formats: ['woff2'] })));
     // Bold
-    fontStream.add(gulp.src('./src/assets/styles/fonts/notosans-telugu/NotoSansTelugu-Bold.woff2')
+    fontStream.add(gulp.src(fontspath + 'notosans-telugu/NotoSansTelugu-Bold.woff2')
         .pipe(inline({ name: 'Noto Sans Telugu', style: 'normal', stretch: 'normal', weight: 700, display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/notosans-telugu'));
+    return fontStream.pipe(concat('notosans-telugu.scss')).pipe(gulp.dest(infontspath + 'notosans-telugu'));
 });
 
 // SB Icons
 gulp.task('sb-icons', function() {
     var fontStream = merge();
-    fontStream.add(gulp.src('./src/assets/styles/fonts/sb-icons/icomoon.woff')
+    fontStream.add(gulp.src(fontspath + 'sb-icons/icomoon.woff')
         .pipe(inline({ name: 'icomoon', style: 'normal', stretch: 'normal', weight: 'normal', display: 'swap', formats: ['woff'] })));
-    return fontStream.pipe(concat('sb-icons.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/sb-icons'));
+    return fontStream.pipe(concat('sb-icons.scss')).pipe(gulp.dest(infontspath + 'sb-icons'));
 });
 
 // Semantic Icons
 gulp.task('semantic-icons', function() {
     var fontStream = merge();
-    fontStream.add(gulp.src('./src/assets/styles/fonts/semantic-icons/icons.woff2')
+    fontStream.add(gulp.src(fontspath + 'semantic-icons/icons.woff2')
         .pipe(inline({ name: 'Icons', style: 'normal', stretch: 'normal', weight: 'normal', display: 'swap', formats: ['woff2'] })));
-    return fontStream.pipe(concat('semantic-icons.scss')).pipe(gulp.dest('./src/assets/styles/inlinefonts/semantic-icons'));
+    return fontStream.pipe(concat('semantic-icons.scss')).pipe(gulp.dest(infontspath + 'semantic-icons'));
 });
 
 // Generate all fonts inline scss
@@ -169,16 +176,16 @@ gulp.task('fonts', gulpSequence('noto-nastaliqurdu', 'notosans', 'notosans-benga
 ==========================*/
 /* Generate Fonts CSS files */
 gulp.task('fonts-css', function() {
-    return gulp.src(['./src/assets/styles/inlinefonts/**/*.scss', '!./src/assets/styles/inlinefonts/fonts.scss'])
+    return gulp.src([infontspath + '**/*.scss', '!' + infontspath + 'fonts.scss'])
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/dist/fonts'));
+        .pipe(gulp.dest(repopath + 'fonts'));
 });
 
 /* Generate Concated Fonts CSS files */
 gulp.task('fonts-concated', function() {
-    return gulp.src(['./src/assets/styles/inlinefonts/fonts.scss'])
+    return gulp.src([infontspath + 'fonts.scss'])
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 
 /*========================
@@ -186,61 +193,57 @@ gulp.task('fonts-concated', function() {
 ==========================*/
 /* Generate Main CSS files from styles folder */
 gulp.task('scss-main', function() {
-    return gulp.src(['./src/assets/styles/styles.scss'])
+    return gulp.src([basepath + 'styles.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 
 /*========================
   Generate Variables file
 ==========================*/
 gulp.task('scss-variables', function() {
-    return gulp.src(['./src/assets/styles/_variables.scss'])
+    return gulp.src([basepath + '_variables.scss'])
         .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
             path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
         }))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write('./'))
         .pipe(rename(function(file) {
             const parentFolder = path.dirname(file.dirname);
             file.dirname = path.join(parentFolder, ''); //generated file extension
         }))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Generate Base file
 ==========================*/
 gulp.task('scss-base', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/base/base.scss'])
+    return gulp.src([basepath + 'base/base.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Generate Layout file
 ==========================*/
 gulp.task('scss-layout', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/layout/layout.scss'])
+    return gulp.src([basepath + 'layout/layout.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Generate Pages file
 ==========================*/
 // Individual
 gulp.task('scss-pages', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/pages/*.scss','!./src/assets/styles/pages/pages.scss'])
+    return gulp.src([basepath + 'pages/*.scss','!' + basepath + 'pages/pages.scss'])
         .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
             path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
         }))
@@ -253,26 +256,24 @@ gulp.task('scss-pages', function() {
             const parentFolder = path.dirname(file.dirname);
             file.dirname = path.join(parentFolder, 'pages'); //generated file extension
         }))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 // Concated
 gulp.task('scss-pages-concated', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/pages/pages.scss'])
+    return gulp.src([basepath + 'pages/pages.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Generate vendors file
 ==========================*/
 // Individual
 gulp.task('scss-vendors', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/vendors/*.scss','!./src/assets/styles/vendors/vendors.scss'])
+    return gulp.src([basepath + 'vendors/*.scss','!' + basepath + 'vendors/vendors.scss'])
         .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
             path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
         }))
@@ -285,63 +286,60 @@ gulp.task('scss-vendors', function() {
             const parentFolder = path.dirname(file.dirname);
             file.dirname = path.join(parentFolder, 'vendors'); //generated file extension
         }))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 // Concated
 gulp.task('scss-vendors-concated', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/vendors/vendors.scss'])
+    return gulp.src([basepath + 'vendors/vendors.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Generate Common file
 ==========================*/
 gulp.task('scss-common', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/dist/base.css', './src/assets/dist/base.css'])
+    return gulp.src([repopath + 'base.css', repopath + 'layout.css'])
         .pipe(concatCss("common.css"))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 /*========================
   Component CSS Generation
 ==========================*/
 /* Temp Folder - Copy all other files with imports appended at head*/
 gulp.task('append-import', function() {
-    return gulp.src(['./src/assets/styles/**/*.scss', '!./src/assets/styles/*.scss', '!./src/assets/styles/mixins/**/*.scss', '!./src/assets/styles/fonts/**/*.scss', '!./src/assets/styles/inlinefonts/**/*.scss'])
+    return gulp.src([basepath + '**/*.scss', '!' + basepath + '*.scss', '!' + basepath + 'mixins/**/*.scss','!' + basepath + 'fonts/**/*.scss', '!' + basepath + 'inlinefonts/**/*.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
-        .pipe(gulp.dest('./src/assets/temp'));
+        .pipe(gulp.dest(temppath));
 });
 
 /* Temp Folder - Copy files of level 1*/
 gulp.task('copy-style', function() {
-    return gulp.src(['./src/assets/styles/_variables.scss'])
-        .pipe(gulp.dest('./src/assets/temp'));
+    return gulp.src([basepath + '_variables.scss'])
+        .pipe(gulp.dest(temppath));
 });
 
 /* Temp Folder - Copy mixins folder*/
 gulp.task('copy-mixins', function() {
-    return gulp.src(['./src/assets/styles/mixins/**/*'])
-        .pipe(gulp.dest('./src/assets/temp/mixins'));
+    return gulp.src([basepath + 'mixins/**/*'])
+        .pipe(gulp.dest(temppath + 'mixins'));
 });
 
 /* Temp Folder - Copy mixins folder*/
 gulp.task('copy-fonts', function() {
-    return gulp.src(['./src/assets/styles/inlinefonts/**/*'])
-        .pipe(gulp.dest('./src/assets/temp/inlinefonts'));
+    return gulp.src([basepath + 'inlinefonts/**/*'])
+        .pipe(gulp.dest(temppath + 'inlinefonts'));
 });
 
 /* Generate Components CSS files from temp folder */
 gulp.task('scss-components', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/temp/components/*.scss', '!./src/assets/temp/components/components.scss'])
+    return gulp.src([temppath + 'components/*.scss', '!' + temppath + 'components/components.scss'])
         .pipe(rename(function(path) { //since sass() wont compile _partials files we are removing it here
             path.basename = path.basename[0] == '_' ? path.basename.substr(1) : path.basename
         }))
@@ -352,32 +350,31 @@ gulp.task('scss-components', function() {
             file.dirname = path.join(parentFolder, 'components'); //generated file extension
         }))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 
 /* Generate Concated Components CSS files from temp folder */
 gulp.task('scss-components-concated', function() {
-    replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
-    return gulp.src(['./src/assets/styles/components/components.scss'])
+    return gulp.src([basepath + 'components/components.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 
 /*========================
   Generate Semantic file
 ==========================*/
 gulp.task('scss-semantic', function() {
-    return gulp.src(['./src/assets/styles/semantic/semantic-merged.scss'])
+    return gulp.src([basepath + 'semantic/semantic-merged.scss'])
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(replace(replaceBeforeRegex, ''))
-        .pipe(gulp.dest('./src/assets/dist/'));
+        .pipe(gulp.dest(repopath));
 });
 
 /*========================
@@ -385,8 +382,8 @@ gulp.task('scss-semantic', function() {
 ==========================*/
 /* Delete temp and dist folder before regenerate */
 gulp.task('clean', function() {
-    rimraf.sync('./src/assets/dist');
-    rimraf.sync('./src/assets/temp');
+    rimraf.sync(repopath);
+    rimraf.sync(temppath);
 });
 
 /*========================
@@ -396,8 +393,8 @@ gulp.task('clean', function() {
 gulp.task('sequence', function(callback) {gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common','scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'scss-main')(callback)});
 /* Watch file changes */
 gulp.task('watch', function() {
-    gulp.watch('./src/assets/styles/**/*.scss', ['sequence']);
+    gulp.watch(basepath + '**/*.scss', ['sequence']);
 });
 
 /* Default task */
-gulp.task('default', ['watch']);
+gulp.task('default', ['sequence','watch']);
