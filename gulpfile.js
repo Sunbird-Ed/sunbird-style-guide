@@ -10,7 +10,6 @@ const inline = require('gulp-inline-fonts');
 const concat = require('gulp-concat');
 const merge = require('merge-stream');
 const replace = require('gulp-string-replace');
-const log = require('fancy-log');
 const concatCss = require('gulp-concat-css');
 path = require('path');
 
@@ -393,11 +392,12 @@ gulp.task('clean', function() {
 /*========================
     Watcher
 ==========================*/
-
+/* Sequence of tasks*/
+gulp.task('sequence', function(callback) {gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common','scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'scss-main')(callback)});
 /* Watch file changes */
 gulp.task('watch', function() {
-    gulp.watch('./src/assets/styles/**/*.scss', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common','scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'scss-main'));
+    gulp.watch('./src/assets/styles/**/*.scss', ['sequence']);
 });
 
 /* Default task */
-gulp.task('default', gulpSequence('clean', 'append-import', 'fonts-css', 'fonts-concated', 'copy-style', 'scss-variables', 'copy-mixins', 'scss-components', 'scss-components-concated', 'scss-main', 'scss-semantic', 'scss-base', 'scss-layout', 'scss-common', 'scss-pages','scss-pages-concated','scss-vendors','scss-vendors-concated', 'watch'));
+gulp.task('default', ['watch']);
