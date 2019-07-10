@@ -10,7 +10,6 @@ const inline = require('gulp-inline-fonts');
 const concat = require('gulp-concat');
 const merge = require('merge-stream');
 const replace = require('gulp-string-replace');
-const log = require('fancy-log');
 const concatCss = require('gulp-concat-css');
 path = require('path');
 
