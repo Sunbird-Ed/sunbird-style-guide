@@ -42,7 +42,7 @@
     "jquery": "^3.4.0",
     "jquery.fancytree": "^2.28.1",
     "jspdf": "^1.5.3",
-    "lodash-es": "^4.17.11",
+    "lodash-es": "^4.17.14",
     "medium-zoom": "^1.0.4",
     "moment": "^2.20.1",
     "moment-duration-format": "^2.2.2",
