@@ -231,6 +231,7 @@ gulp.task('scss-base', function() {
 ==========================*/
 gulp.task('scss-layout', function() {
     return gulp.src([basepath + 'layout/layout.scss'])
+        .pipe(header('@import \'../global\';\n'))
         .pipe(header('/*!Delete before this*/'))
         .pipe(header('@import \'../mixins/mixins\';\n'))
         .pipe(header('@import \'../variables\';\n'))
