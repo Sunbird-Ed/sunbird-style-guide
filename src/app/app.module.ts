@@ -64,8 +64,8 @@ import { HeadroomModule } from '@ctrl/ngx-headroom';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
 import { MetadataComponent } from './metadata/metadata.component';
-import { OfflineComponent } from './offline/offline.component';
-import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
+import { OnlineDesktopAppComponent } from './online-desktop-app/online-desktop-app.component';
+import { OfflineDesktopAppComponent } from './offline-desktop-app/offline-desktop-app.component';
 import { VariablesComponent } from './variables/variables.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { HelpPageComponent } from './help-page/help-page.component';
@@ -124,11 +124,12 @@ export function hljsLanguages() {
     SortableColumnComponent,
     BannerComponent,
     ListsComponent,
-    OfflineComponent,VariablesComponent,
+    OnlineDesktopAppComponent,
+    VariablesComponent,
     ExploreFilterComponent,
     SortableTableDirective,
     MetadataComponent,
-    OfflineTelemetryComponent,
+    OfflineDesktopAppComponent,
     TestPageComponent,
     AccordionComponent,
     HelpPageComponent,

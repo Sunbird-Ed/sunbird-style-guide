@@ -29,10 +29,10 @@ import { ExploreFilterComponent } from './explore-filter/explore-filter.componen
 import { FiltersComponent } from './filters/filters.component';
 import { TreenavigationComponent } from './treenavigation/treenavigation.component';
 import { VariablesComponent } from './variables/variables.component';
-import { OfflineComponent } from './offline/offline.component';
+import { OnlineDesktopAppComponent } from './online-desktop-app/online-desktop-app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListsComponent } from './lists/lists.component';
-import { OfflineTelemetryComponent } from './offline-telemetry/offline-telemetry.component';
+import { OfflineDesktopAppComponent } from './/offline-desktop-app/offline-desktop-app.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { TestPageComponent } from './test-page/test-page.component';
 import { AccordionComponent } from './accordion/accordion.component';
@@ -76,10 +76,10 @@ const routes: Routes = [
   { path: 'filters', component: FiltersComponent},
   { path: 'treenavigation', component: TreenavigationComponent},
   { path: 'explore-filter', component: ExploreFilterComponent},
-  { path: 'offline', component: OfflineComponent},
+  { path: 'online-desktop-app', component: OnlineDesktopAppComponent},
   { path: 'banner', component: BannerComponent},
   { path: 'lists', component: ListsComponent},
-  { path: 'telemetry', component: OfflineTelemetryComponent},
+  { path: 'offline-desktop-app', component: OfflineDesktopAppComponent},
   { path: 'metadata', component: MetadataComponent},
   { path: 'test-page', component: TestPageComponent},
   { path: 'accordion', component: AccordionComponent},
