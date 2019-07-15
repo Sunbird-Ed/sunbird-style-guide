@@ -11,9 +11,9 @@
 
   <!--Display output-->
   <div class="docs-sectionDemoCode">
-    <div class="sb-header">
-      <div class="ui container fixed main menu ">
-        <div class="ui container d-flex">
+   
+      <div class="ui main menu bs-0 d-block scroll-down" #header-menu>
+        <div class="ui container py-8 d-flex">
           <div class="sb-header-logo d-flex mr-auto">
             <img src="https://dev.sunbirded.org/assets/images/sunbird_logo.png" alt="sunbird">
           </div>
@@ -23,77 +23,77 @@
           </div>
           <i class="large bars icon link primary-color mobile only ml-auto my-auto" (click)="showSideBar()"></i>
         </div>
-      </div>
-    </div>
-    <div class="mobile only">
-      <div class="ui sidebar right vertical menu">
-        <ng-container>
-          <div class="item font-weight-bold">
-            <i class="close link icon" (click)="showSideBar()" tabindex="0" title="close"></i>
-            <div class="ellipsis">
-              firstName lastname
+        <div class="sb-sub-header">
+          <div class="blue-bar">
+            <div class="ui container d-flex flex-ai-center">
+              <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon ">
+                <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
+                Explore Content
+                <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
+              </span>
+              <span class="sb-divider computer only">|</span>
+              <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center computer only"
+                title="Enter QR code">
+                <i class="qrcode icon"></i>
+                Enter QR code
+              </button>
+              <div class="sb-divider computer only"></div>
+              <div class="sb-search-box mr-auto b-0 medium">
+                <div class="input-div relative">
+                  <i class="search icon"></i>
+                  <input type="text" name="filter_search" class="sb-search-input" placeholder="Search in All">
+                  <!-- <i class="close icon"></i>
+                    <div class="sb-loader"></div> -->
+                </div>
+                <button class="sb-btn sb-btn-normal" tabindex="0">Search</button>
+              </div>
+              <div class="sb-header-links ml-auto d-flex flex-ai-center computer only">
+                <div>Select Language :</div>
+                <sui-select class="sb-sub-header-select" placeholder="Choose" #searchSelect>
+                  <sui-select-option *ngFor="let option of language" [value]="option.name"></sui-select-option>
+                </sui-select>
+              </div>
             </div>
           </div>
-          <div class="ui divider mt-0"></div>
-          <a class="item">
-            Library
-          </a>
-          <a class="item">
-            Course
-          </a>
-        </ng-container>
-      </div>
-    </div>
-    <div class="sb-sub-header">
-      <div class="blue-bar">
-        <div class="ui container d-flex flex-ai-center">
-          <span class="sb-toggle-btn" [ngClass]="{'rotate': toggleIcon}" tabindex="0" title="Explore Content" (click)="toggleIcon =! toggleIcon ">
-            <img src="assets/images/sort.svg" class="sb-icon-sort" alt="Toggle Icon">
-            Explore Content
-            <img src="assets/images/arrow-down.svg" class="sb-icon-arrow-down" alt="Toggle Icon">
-          </span>
-          <span class="sb-divider computer only">|</span>
-          <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center computer only"
-            title="Enter QR code">
-            <i class="qrcode icon"></i>
-            Enter QR code
-          </button>
-          <div class="sb-divider computer only"></div>
-          <div class="sb-search-box mr-auto b-0 medium">
-            <div class="input-div relative">
-              <i class="search icon"></i>
-              <input type="text" name="filter_search" class="sb-search-input" placeholder="Search in All">
-              <!-- <i class="close icon"></i>
-                <div class="sb-loader"></div> -->
+          <div class="white-bar mobile only">
+            <div class="ui container d-flex flex-ai-center">
+              <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center mr-auto"
+                title="Enter QR code">
+                <i class="qrcode icon"></i>
+                Enter QR code
+              </button>
+              <div class="sb-header-links ml-auto d-flex flex-ai-center">
+                <sui-select class="sb-sub-header-select sb-btn sb-btn-normal sb-btn-outline-primary" placeholder="Choose" #searchSelect>
+                  <sui-select-option *ngFor="let option of language" [value]="option.name"></sui-select-option>
+                </sui-select>
+              </div>
             </div>
-            <button class="sb-btn sb-btn-normal" tabindex="0">Search</button>
           </div>
-          <div class="sb-header-links ml-auto d-flex flex-ai-center computer only">
-            <div>Select Language :</div>
-            <sui-select class="sb-sub-header-select" placeholder="Choose" #searchSelect>
-              <sui-select-option *ngFor="let option of language" [value]="option.name"></sui-select-option>
-            </sui-select>
+          <div class="sb-explore-filter" *ngIf="toggleIcon">
+            <app-explore-filter></app-explore-filter>
+          </div>
+        </div>
+        <div class="mobile only">
+          <div class="ui sidebar right vertical menu">
+            <ng-container>
+              <div class="item font-weight-bold">
+                <i class="close link icon" (click)="showSideBar()" tabindex="0" title="close"></i>
+                <div class="ellipsis">
+                  firstName lastname
+                </div>
+              </div>
+              <div class="ui divider mt-0"></div>
+              <a class="item">
+                Library
+              </a>
+              <a class="item">
+                Course
+              </a>
+            </ng-container>
           </div>
         </div>
       </div>
-      <div class="white-bar mobile only">
-        <div class="ui container d-flex flex-ai-center">
-          <button class="sb-btn sb-btn-normal sb-btn-outline-primary d-flex flex-ai-center mr-auto"
-            title="Enter QR code">
-            <i class="qrcode icon"></i>
-            Enter QR code
-          </button>
-          <div class="sb-header-links ml-auto d-flex flex-ai-center">
-            <sui-select class="sb-sub-header-select sb-btn sb-btn-normal sb-btn-outline-primary" placeholder="Choose" #searchSelect>
-              <sui-select-option *ngFor="let option of language" [value]="option.name"></sui-select-option>
-            </sui-select>
-          </div>
-        </div>
-      </div>
-      <div class="sb-explore-filter" *ngIf="toggleIcon">
-        <app-explore-filter></app-explore-filter>
-      </div>
-    </div>
+  
   </div>
   <!--/Display output-->
 

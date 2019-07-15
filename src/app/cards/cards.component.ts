@@ -23,7 +23,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
                 Topic : Global positioning system and its application
               </div>
               <div class="sb-card-meta-item">
@@ -57,7 +57,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
                 Topic : Global positioning
               </div>
               <div class="sb-card-meta-item">
@@ -112,7 +112,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
               موضوع: گلوبل پوزیشننگ سسٹم اور اس کی درخواست
               </div>
               <div class="sb-card-meta-item">
@@ -148,7 +148,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
                 Topic : Global positioning system and its application
               </div>
               <div class="sb-card-meta-item">
@@ -181,7 +181,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
                 Topic : Global positioning
               </div>
               <div class="sb-card-meta-item">
@@ -233,7 +233,7 @@ export class CardsComponent implements OnInit {
               <img src="assets/images/book.png">
             </div>
             <div class="sb-card-meta course">
-              <div class="sb-card-meta-item mb-15">
+              <div class="sb-card-meta-item mb-16">
               موضوع: گلوبل پوزیشننگ سسٹم اور اس کی درخواست
               </div>
               <div class="sb-card-meta-item">
@@ -538,7 +538,7 @@ export class CardsComponent implements OnInit {
       <img src="assets/images/book.png">
     </div>
     <div class="sb-card-meta course">
-      <div class="sb-card-meta-item mb-15">
+      <div class="sb-card-meta-item mb-16">
         Topic : Global positioning system and its application
       </div>
       <div class="sb-card-meta-item">
@@ -581,7 +581,7 @@ export class CardsComponent implements OnInit {
       <img src="assets/images/book.png">
     </div>
     <div class="sb-card-meta course">
-      <div class="sb-card-meta-item mb-15">
+      <div class="sb-card-meta-item mb-16">
         Topic : Global positioning system and its application
       </div>
       <div class="sb-card-meta-item">
