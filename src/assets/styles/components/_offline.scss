@@ -1,6 +1,9 @@
+//commomn
 .offline-page-content {
   height:100%;
 }
+
+//offline
 .offline-page-heading {
   font-size: 24px;
   font-weight: bold;
@@ -9,24 +12,6 @@
 .offline-page-subheading {
   font-size: 18px;
   color: #666;
-}
-.offline-download-card {
-  background-color: #fff;
-  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
-  padding: 40px;
-}
-.offline-download-card-heading {
-  color: $primary-color;
-  font-size: 18px;
-  font-weight: bold;
-}
-.offline-download-card-description{
-  font-size: 14px;
-  color: #333;
-}
-.offline-download-card-extra {
-  color: $primary-color;
-  font-size: 12px;
 }
 // telemtry & about 
 .about-app-heading {
@@ -78,7 +63,7 @@
 }
 //offline import
 .ui.grid.offline-import-content{
-padding: 0;
+  padding: 0;
 }
 .sb-offline-import-content{
 background: rgba(0, 136, 64, 0.5);
@@ -100,63 +85,89 @@ transform: translateY(-50%);
 color: rgba(255, 255, 255, 0.5);
 }
 .sb-offline-imports {
-.sb-offline-area {
-  border: 1px solid #008840;
-}
+  .sb-offline-area {
+    border: 1px solid #008840;
+  }
 }
 .sb-offline-video-demo {
-.sb-offline-area{
-  border: 1px solid #D0D0D0;
-}
+  .sb-offline-area{
+    border: 1px solid #D0D0D0;
+  }
 }
 .sb-offline-area {
-align-items: center;
-background: #fff;
-min-height: 72px;
+  align-items: center;
+  background: #fff;
+  min-height: 72px;
   border-radius: 4px;
 }
 .sb-import-icon.sb-import-icon-watch-video{
-background-color: rgba(255,161,29,0.1);
+  background-color: rgba(255,161,29,0.1);
 }
 .sb-btn-secondary.sb-btn-tertiary{
-background: $tertiary-100;
-border: none;
+  background: $tertiary-100;
+  border: none;
 }
 .sb-import-icon {
-height: 40px;
-width: 40px;
-border-radius: 50%;
-// background-color: rgba(0,136,64,0.1);
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-right: 16px;
-i {
-  font-size: 32px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  // background-color: rgba(0,136,64,0.1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  i {
+      font-size: 32px;
+    }
+  }
+  .sb-offline-import-description-list-key,.sb-offline-import-description-list-value{
+    font-size: 12px;
+    color:#333333;
+  }
+  .sb-offline-import-description-list-value{
+    margin-left: 8px;
+  }
+  .sb-import-content {
+    flex: 50%;
+  .sb-import-content-title {
+    color: $blue;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0px;
+  }
+  .sb-import-content-meta {
+    color: $gray;  
+    font-size: 12px;    
+    line-height: 18px;
+  }
 }
+
+
+
+
+
+
+//online
+.offline-download-card {
+  background-color: #fff;
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 40px;
 }
-.sb-offline-import-description-list-key,.sb-offline-import-description-list-value{
-font-size: 12px;
-color:#333333;
+.offline-download-card-heading {
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: bold;
 }
-.sb-offline-import-description-list-value{
-margin-left: 8px;
-}
-.sb-import-content {
-flex: 50%;
-.sb-import-content-title {
-  color: $blue;
+.offline-download-card-description{
   font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 0px;
+  color: #333;
 }
-.sb-import-content-meta {
-  color: $gray;  
-  font-size: 12px;    
-  line-height: 18px;
+.offline-download-card-extra {
+  color: $primary-color;
+  font-size: 12px;
 }
-}
+
 
 
 // help page styles
@@ -281,42 +292,3 @@ font-size: 14px;
     margin-inline-start: 0;
   }
 
-
-  //bordered list 
-
-  .sb-bordered-list {
-    padding-inline-start: 0;
-    list-style-type: none;
-    border: $sb-bordered-list-border;
-    border-radius:$sb-bordered-list-border-radius;
-    overflow: hidden;
-    .sb-bordered-list-item {
-      font-size: $sb-bordered-list-item-font-size;
-      padding: $sb-bordered-list-item-padding;
-      border-bottom: $sb-bordered-list-item-border-bottom;
-      background: $sb-bordered-list-item-border-background;
-      .sb-bordered-list-item-title {
-        font-size: $sb-bordered-list-item-title-font-size;
-        color: $sb-bordered-list-item-title-color;
-      }
-      .sb-bordered-list-item-title-extra {
-        font-size: $sb-bordered-list-item-title-extra-font-size;
-        color: $sb-bordered-list-item-title-extra-color;
-      }
-      .sb-bordered-list-item-heading {
-        font-size: $sb-bordered-list-item-heading-font-size;
-        color: $sb-bordered-list-item-heading-color;
-      }
-      .sb-bordered-list-item-subheading {
-        font-size:$sb-bordered-list-item-subheading-font-size;
-        color:$sb-bordered-list-item-subheading-color;
-      }
-    }
-    .sb-bordered-list-item:first-child {
-      padding: $sb-bordered-list-item-first-child-padding;
-      background: $sb-bordered-list-item-first-child-background;
-    }
-    .sb-bordered-list-item:last-child {
-      border-bottom: 0;
-    }
-  } 
