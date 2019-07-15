@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OfflineTelemetryComponent } from './offline-telemetry.component';
+import { OnlineDesktopAppComponent } from './online-desktop-app.component';
 
-describe('OfflineTelemetryComponent', () => {
-  let component: OfflineTelemetryComponent;
-  let fixture: ComponentFixture<OfflineTelemetryComponent>;
+describe('OnlineDesktopAppComponent', () => {
+  let component: OnlineDesktopAppComponent;
+  let fixture: ComponentFixture<OnlineDesktopAppComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfflineTelemetryComponent ]
+      declarations: [ OnlineDesktopAppComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OfflineTelemetryComponent);
+    fixture = TestBed.createComponent(OnlineDesktopAppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
