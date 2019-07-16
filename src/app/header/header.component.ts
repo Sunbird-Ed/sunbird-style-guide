@@ -1,41 +1,81 @@
 import {
-  Component, AfterViewInit,  Renderer2, ElementRef,
+  Component,
+  AfterViewInit,
+  Renderer2,
+  ElementRef,
   OnInit,
   Input
-} from '@angular/core';
-import {
-  HighlightResult
-} from 'ngx-highlightjs';
+} from "@angular/core";
+import { HighlightResult } from "ngx-highlightjs";
 declare var jQuery: any;
-import { ShepherdService } from 'angular-shepherd';
-import { steps as defaultSteps, defaultStepOptions} from '../data';
+import { ShepherdService } from "angular-shepherd";
+import { steps as defaultSteps, defaultStepOptions } from "../data";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html'
+  selector: "app-header",
+  templateUrl: "./header.component.html"
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   @Input() ShowContent;
   language;
   addRemoveBtn;
-  constructor(private shepherdService: ShepherdService, private renderer: Renderer2, private el: ElementRef) {
-    this.language = [{name: 'English'}, {name: 'Kannada'}];
+  constructor(
+    private shepherdService: ShepherdService,
+    private renderer: Renderer2,
+    private el: ElementRef
+  ) {
+    this.language = [{ name: "English" }, { name: "Kannada" }];
   }
   toggleIcon = true;
   ngOnInit() {
-    
+    // header hide and show when scroll-down and scroll-up
+    let didScroll;
+    let lastScrollTop = 0;
+    const delta = 5;
+    const navbarHeight = jQuery('#header-menu').outerHeight();
 
+    jQuery(window).scroll((event) => {
+      didScroll = true;
+    });
+
+
+     const  hasScrolled = () => {
+      const st = document.documentElement.scrollTop || document.body.scrollTop;
+
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta) { return; }
+      // If they scrolled down and are past the header, add class .scroll-up.
+      // This is necessary so you never see what is "behind" the header.
+      if (st > lastScrollTop && st > navbarHeight) {
+        // Scroll Down
+        document.querySelector('#header-menu').classList.remove('scroll-down');
+        document.querySelector('#header-menu').classList.add('scroll-up');
+      } else {
+        // Scroll Up
+        if (st + jQuery(window).height() < jQuery(document).height()) {
+          document.querySelector('#header-menu').classList.remove('scroll-up');
+        document.querySelector('#header-menu').classList.add('scroll-down');
+        }
+      }
+      lastScrollTop = st;
+    };
+    setInterval(() => {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+    // header hide and show when scroll-down and scroll-up //
   }
 
-  ngAfterViewInit() {
-    
-  }
+  ngAfterViewInit() {}
 
-  pageTitle = 'Header';
-  sections = [{
-    expandCode: false,
-    title: 'Header Bar',
-    demoCode: `
+  pageTitle = "Header";
+  sections = [
+    {
+      expandCode: false,
+      title: "Header Bar",
+      demoCode: `
     <div class="sb-header">
     <div class="ui container fixed main menu ">
       <div class="ui container d-flex">
@@ -118,7 +158,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     </div>
   </div>
       `,
-    copyCode: `
+      copyCode: `
     <div class="sb-header">
     <div class="ui container fixed main menu ">
       <div class="ui container d-flex">
@@ -207,9 +247,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     </div>
   </div>
       `
-  }];
+    }
+  ];
 
   showSideBar() {
-    jQuery('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+    jQuery(".ui.sidebar")
+      .sidebar("setting", "transition", "overlay")
+      .sidebar("toggle");
   }
 }
