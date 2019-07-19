@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ) {
     this.language = [{ name: "English" }, { name: "Kannada" }];
   }
-  toggleIcon = true;
+  toggleIcon = false;
   ngOnInit() {
     // header hide and show when scroll-down and scroll-up
     let didScroll;

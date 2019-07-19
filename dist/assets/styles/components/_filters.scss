@@ -1,6 +1,16 @@
+.sb-explore-filter {
+  &.Open{
+    height: 180px;transition: height 500ms;
+  }
+  &.Close {
+    overflow:hidden;transition: height 500ms;height:0px;
+  }
+
+}
 .sb-prominent-filter {
   background: $sb-prominent-filter-background-color;
   padding: $sb-prominent-filter-padding;
+  border:0px solid transparent;
 
   .sb-prominent-filter-header {
     font-weight: $sb-prominent-filter-header-font-weight;

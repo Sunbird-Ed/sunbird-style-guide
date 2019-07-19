@@ -69,7 +69,8 @@
               </div>
             </div>
           </div>
-          <div class="sb-explore-filter" *ngIf="toggleIcon">
+           <!-- [ngClass]="{'CloseFilter': toggleIcon}" -->
+          <div class="sb-explore-filter" [ngClass]="(toggleIcon==false)?'Open':'Close'" >
             <app-explore-filter></app-explore-filter>
           </div>
         </div>

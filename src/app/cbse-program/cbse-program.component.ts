@@ -1,4 +1,6 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, Inject, Renderer2} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 import * as $ from 'jquery';
 
 declare var $: any;
@@ -7,15 +9,11 @@ declare var jQuery: any;
 @Component({
   selector: 'app-cbse-program',
   templateUrl: './cbse-program.component.html',
-  // styleUrls: ['./cbse-program.component.scss']
+  styleUrls: ['./cbse-program.component.scss']
 })
 export class CBSEProgramComponent implements OnInit {
 
-  constructor() { }
-
-  
-
-
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   pageTitle = 'CBSE Program';
   sections = [
@@ -40,13 +38,13 @@ export class CBSEProgramComponent implements OnInit {
           <h4 class="page-section-title">Learning Outcomes</h4>
           <div class="sb-question-content-learning">
             <div class="sb-question-content-card">
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+              <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
                 <label> Long / short Text question and long / short text options</label>
               </div>
             </div>
             <div class="sb-question-content-card">
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+              <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-error sb-shape-circle"></span>
                 <label> Text question with small image and image as
                   options. Big image as question and short text options with small
@@ -54,27 +52,27 @@ export class CBSEProgramComponent implements OnInit {
               </div>
             </div>
             <div class="sb-question-content-card">
-              <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+              <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-warning sb-shape-circle"></span>
                 <label>Big image as question and short text options with small
                   image</label>
               </div>
             </div>
             <div class="sb-question-content-card">
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+                <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
                   <label> Long / short Text question and long / short text options</label>
                 </div>
               </div>
               <div class="sb-question-content-card">
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+                <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-error sb-shape-circle"></span>
                   <label> Text question with small image and image as
                     options</label>
                 </div>
               </div>
               <div class="sb-question-content-card">
-                <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
+                <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-warning sb-shape-circle"></span>
                   <label>Big image as question and short text options with small
                     image</label>
@@ -114,7 +112,7 @@ export class CBSEProgramComponent implements OnInit {
               <div class="sb-question-content-card">
                 <div class="sb-question-content-focus-spot-group">
                   <div class="sb-question-content-focus-spot-extra">Hard Spot:</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
+                    <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                     <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
                       <label> Long / short Text question and long / short text options Long / short
                        Text question and long / short text options</label>
@@ -122,14 +120,14 @@ export class CBSEProgramComponent implements OnInit {
                 </div>
                 <div class="sb-question-content-focus-spot-group">
                     <div class="sb-question-content-focus-spot-extra">Why</div>
-                      <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
+                      <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                       <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
                         <label> Long / short Text question and long / short text options</label>
                       </div>
                   </div>
                   <div class="sb-question-content-focus-spot-group">
                       <div class="sb-question-content-focus-spot-extra">Impact</div>
-                        <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
+                        <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
                         <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
                           <label> Long / short Text question and long / short text options</label>
                         </div>
@@ -366,7 +364,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 1</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 1</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -374,7 +372,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 2</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 2</label>
              </div>
              <span class="sb-status-label sb-bg-warning sb-shape-circle ml-auto"></span>
            </div>
@@ -382,7 +380,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 3</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 3</label>
              </div>
              <span class="sb-status-label sb-bg-error sb-shape-circle ml-auto"></span>
            </div>
@@ -390,7 +388,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 4</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 4</label>
              </div>
              <span class="sb-status-label sb-bg-warning sb-shape-circle ml-auto"></span>
            </div>
@@ -398,7 +396,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 5</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 5</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -406,7 +404,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 6</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 6</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -414,7 +412,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 7</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 7</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -422,7 +420,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 8</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 8</label>
              </div>
              <span class="sb-status-label sb-bg-error sb-shape-circle ml-auto"></span>
            </div>
@@ -430,7 +428,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 9</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 9</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -438,7 +436,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 10</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 10</label>
              </div>
              <span class="sb-status-label sb-bg-warning sb-shape-circle ml-auto"></span>
            </div>
@@ -446,7 +444,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 11</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 11</label>
              </div>
              <span class="sb-status-label sb-bg-error sb-shape-circle ml-auto"></span>
            </div>
@@ -454,7 +452,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 12</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 12</label>
              </div>
              <span class="sb-status-label sb-bg-warning sb-shape-circle ml-auto"></span>
            </div>
@@ -462,7 +460,7 @@ export class CBSEProgramComponent implements OnInit {
          <div class="questionTab ui header aligned segment p-8">
            <div class="item d-flex flex-ai-center cursor-pointer">
              <div>
-               <label class="mb-0 fs-0-92 font-weight-normal" for="check1"> Question 13</label>
+               <label class="mb-0 font-weight-normal" for="check1"> Question 13</label>
              </div>
              <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
            </div>
@@ -614,9 +612,12 @@ export class CBSEProgramComponent implements OnInit {
   // }
 
 
-
+  ngOnDestroy(): void {
+    this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
+  }
 
   ngOnInit() {
+    this.renderer.addClass(this.document.body, 'hideLeftTopBars');
     $(document).on('click', '.cheveron-helper .chevron', (e) => {
       $('.mcq-title').toggleClass('expand');
       $(e.target).toggleClass('icon-active');
