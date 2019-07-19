@@ -20,7 +20,7 @@ export class GuidetourComponent implements OnInit, AfterViewInit, DoCheck {
   constructor(private shepherdService: ShepherdService, private renderer: Renderer2, private el: ElementRef) {
     this.language = [{name: 'English'}, {name: 'Kannada'}];
   }
-  toggleIcon = true;
+  toggleIcon = false;
   ngOnInit() {
 
   }

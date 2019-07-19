@@ -1,0 +1,29 @@
+::ng-deep {
+  root {
+  --font-size-base: 1rem;
+  --font-size-factor: 1vw;
+  --font-size: calc(var(--font-size-base) + var(--font-size-factor));
+  }
+  body {
+    font-size:calc(14px + 0.72916vw) !important;
+    line-height: normal;
+  }
+  h4,.sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title {
+    font-size: 1.2em;
+    padding:0.575em;
+}
+.sb-question-dsp-container .sb-question-header {
+  padding:0.575em;
+}
+  label {
+    font-size:1em;
+    line-height: normal;
+  }
+  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label span.sb-status-label {
+    padding:calc(0.575em / 4);
+}
+.sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card {
+
+  margin:0.575em;padding:0.575em;
+}
+}
