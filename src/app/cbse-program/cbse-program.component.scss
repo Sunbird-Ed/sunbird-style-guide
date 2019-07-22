@@ -5,25 +5,43 @@
   --font-size: calc(var(--font-size-base) + var(--font-size-factor));
   }
   body {
-    font-size:calc(14px + 0.72916vw) !important;
+    font-size: calc(14px + (32 - 14) * (100vw - 360px)/(1920 - 360)) !important;
+    //font-size:calc(14px + 0.72916vw) !important;
     line-height: normal;
   }
-  h4,.sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title {
-    font-size: 1.2em;
-    padding:0.575em;
-}
+//   h4,.sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title {
+//     font-size: 1.2em;
+//     // padding:0.575em;
+// }
 .sb-question-dsp-container .sb-question-header {
-  padding:0.575em;
+  // padding:0.575em;
+  min-height: 2em;
 }
   label {
     font-size:1em;
     line-height: normal;
   }
+  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title {
+    font-size: 1.2em;
+    padding:0.75em 1em;
+  }
   .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label span.sb-status-label {
-    padding:calc(0.575em / 4);
+    padding:calc(1em / 4);
 }
 .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card {
 
-  margin:0.575em;padding:0.575em;
+  margin:1em;padding:1em;display: flex;
+  align-items: center;
 }
+
+.sb-question-dsp-container .sb-question-dsp-body .mcq-horizontal, .sb-question-dsp-container .sb-question-dsp-body .mcq-vertical, .sb-question-dsp-container .sb-question-dsp-body .mcq-grid {
+  max-width: 100%;
+}
+.sb-question-dsp-container .sb-question-content.sb-focus-spots .page-section .sb-question-content-focus-spot .sb-question-content-card .sb-question-content-focus-spot-group .sb-question-content-focus-spot-extra {
+  font-size: 0.75em;
+}
+.sb-question-dsp-container .sb-question-content.sb-focus-spots .page-section .sb-question-content-focus-spot .sb-question-content-card .sb-question-content-focus-spot-group {
+  padding-bottom: 1em;
+}
+
 }
