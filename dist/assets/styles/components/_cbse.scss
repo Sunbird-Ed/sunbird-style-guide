@@ -185,7 +185,7 @@ i.icon.trash {
 
     // learning out come styles
     &.sb-learning-outcome {
-      height: 100%;
+      height: calc(100% - 44px);
 
       .question-bg {
         background-image: linear-gradient(-90deg, var(--secondary-100), var(--secondary-0));
@@ -472,56 +472,5 @@ i.icon.trash {
         margin-bottom: ($base-block-space * 2);
       }
     }
-  }
-}
-
-
-
-@media screen and (min-width:1024px) and (max-width:1165px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:22px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width:1166px) and (max-width:1399px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:24px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width:1400px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:28px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 22px;
-  }
-}
-@media screen and (min-width:1920px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:32px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 26px;
-  }
-}
-@media screen and (min-width:2400px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:36px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 30px;
-  }
-}
-@media screen and (min-width:2592px){
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .page-section-title{
-    font-size:40px;
-  }
-  .sb-question-dsp-container .sb-question-content.sb-learning-outcome .page-section .sb-question-content-learning .sb-question-content-card .sb-learning-outcome-label label {
-    font-size: 34px;
   }
 }
