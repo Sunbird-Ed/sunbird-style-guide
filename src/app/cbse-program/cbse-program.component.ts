@@ -23,6 +23,16 @@ export class CBSEProgramComponent implements OnInit {
       demoCode: `
       <div class="sb-question-dsp-container">
       <div class="sb-question-dsp-body">
+      <div class="sb-question-header question-menu d-flex sb-learning-outcome-header">
+        <div class="hambergur-menu-container">
+          <div class="hambergur-menu"></div>
+          <div class="hambergur-menu"></div>
+          <div class="hambergur-menu"></div>
+        </div>
+        <h4 class="m-0 px-16">Content/unit name</h4>
+        <button class="sb-btn sb-btn-outline-gray sb-btn-xs ml-auto mr-8 sb-btn-arrows"><i class="chevron left icon"></i></button>
+        <button class="sb-btn sb-btn-outline-gray sb-btn-xs sb-btn-arrows"><i class="chevron right icon"></i></button>
+      </div>
       <div class="sb-question-content sb-learning-outcome">
         <div class="page-section question-bg">
           <h4 class="page-section-title">Learning Outcomes</h4>
