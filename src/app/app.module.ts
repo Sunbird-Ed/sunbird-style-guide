@@ -21,6 +21,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TemplateComponent } from './template/template.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ModalsComponent } from './modals/modals.component';
+import { BulkuploadsComponent } from './bulkuploads/bulkuploads.component';
 import { LabelsComponent } from './labels/labels.component';
 import { TypographyComponent } from './typography/typography.component';
 import { OverviewComponent } from './overview/overview.component';
@@ -95,6 +96,7 @@ export function hljsLanguages() {
     TemplateComponent,
     ButtonsComponent,
     ModalsComponent,
+    BulkuploadsComponent,
     LabelsComponent,
     TypographyComponent,
     OverviewComponent,
