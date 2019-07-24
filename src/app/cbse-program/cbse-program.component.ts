@@ -40,7 +40,7 @@ export class CBSEProgramComponent implements OnInit {
             <div class="sb-question-content-card">
               <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
               <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                <label> Long / short Text question and long / short text options</label>
+                <label> पठन कौशल व लेखन कौशल का विकास।</label>
               </div>
             </div>
             <div class="sb-question-content-card">
@@ -61,7 +61,7 @@ export class CBSEProgramComponent implements OnInit {
             <div class="sb-question-content-card">
                 <div class="mb-0 font-weight-normal d-inline-flex flex-ai-baseline sb-learning-outcome-label">
                 <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                  <label> Long / short Text question and long / short text options</label>
+                  <label> जीव -जन्तुओं के चरित्र को समझनें में समर्थ होंगे।</label>
                 </div>
               </div>
               <div class="sb-question-content-card">

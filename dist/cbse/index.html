@@ -2,90 +2,82 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet">
-
+<style>
+html,body {
+  padding:0px;
+  margin:0px;
+}
+.container {
+  max-width: 100%;
+  width:100%;
+  margin:0 auto;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+@media screen and (min-width:1600px){
+.container {
+  max-width: 1524px;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+}
+@media screen and (min-width:1280px) and (max-width:1599px){
+.container {
+  max-width: 1216px;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+}
+@media screen and (min-width:992px) and (max-width:1280px){
+.container {
+  max-width: 98%;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+}
+@media screen and (min-width:768px) and (max-width:991px){
+.container {
+  max-width: 98%;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+}
+@media screen and (min-width:360px) and (max-width:768px){
+.container {
+  max-width: 98%;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+}
+.responsive {
+  width:100%;
+  height:0px;
+  padding-top: 56.25%;
+  position: relative;
+}
+.responsive iframe {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+h1 {
+  margin:0px;
+  padding:0px;
+}
+</style>
 </head>
 <body>
-
-  <div class="container">
-    <div class="sb-question-dsp-container">
-        <div class="sb-question-dsp-body">
-          <div class="sb-question-header question-menu d-flex sb-learning-outcome-header">
-            <h4 class="m-0 px-16">Content/इकाई का नाम, इकाई का नाम, लंबे / छोटे पाठ प्रश्न और लंबे / छोटे पाठ विकल्प Long / short Text question</h4>
-            <button class="sb-btn sb-btn-outline-gray sb-btn-xs ml-auto mr-8 sb-btn-arrows prev disabled" onclick="plusSlides(-1)"><i
-                class="chevron left icon"></i></button>
-            <button class="sb-btn sb-btn-outline-gray sb-btn-xs sb-btn-arrows next" onclick="plusSlides(1)"><i
-                class="chevron right icon"></i></button>
-          </div>
-          <div class="sb-question-content sb-focus-spots">
-            <div class="page-section question-bg">
-              <div class="sb-question-content-focus-spot">
-                <div class="sb-question-content-card focus-spot-slides">
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Hard Spot:</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                      <label> Long / short Text question and long / short text options Long / short
-                        Text question and long / short text options</label>
-                    </div>
-                  </div>
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Why</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                      <label> लंबे / छोटे पाठ प्रश्न और लंबे / छोटे पाठ विकल्प</label>
-                    </div>
-                  </div>
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">प्रभाव</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                      <label> Long / short Text question and long / short text options</label>
-                    </div>
-                  </div>
-                </div>
-      
-                <div class="sb-question-content-card focus-spot-slides">
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Hard Spot:</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                      <label> विकल्प के रूप में छोटी छवि और छवि के साथ पाठ प्रश्न</label>
-                    </div>
-                  </div>
-      
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Impact</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                      <label> Long / short Text question and long / short text options</label>
-                    </div>
-                  </div>
-                </div>
-      
-               <div class="sb-question-content-card focus-spot-slides">
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Why</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-success sb-shape-circle"></span>
-                      <label> Long / short Text question and long / short text options</label>
-                    </div>
-                  </div>
-                  <div class="sb-question-content-focus-spot-group">
-                    <div class="sb-question-content-focus-spot-extra">Impact</div>
-                    <div class="mb-0 fs-0-92 font-weight-normal d-inline-flex flex-ai-baseline sb-focus-spot-label">
-                      <span class="sb-status-label mr-8 sb-bg-primary sb-shape-circle"></span>
-                      <label> Long / short Text question and long / short text options</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div style="width:100%;height:120px;background:#f2f2f2;">
+    <div class="container">
+  <h1>Header
     </div>
-      <script src="main.js" type="text/javascript"></script>
+  </div>
+<div class="container" style="margin-top:50px;">
+  <div class="responsive">
+<iframe src="cbse.html"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <iframe  src="https://www.youtube.com/embed/X4t0JxiBeO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+</div>
+<div style="height:300px;background:#f2f2f2;width:100%;margin-top:50px;">
+  sample text
+</div>
+</div>
 </body>
 </html> 
 
