@@ -58,7 +58,7 @@
   @media screen and (min-width:1280px) and (max-width:1399px){
       body {background:green;}
       .sb-question-header h4{
-        font-size:28px;
+        font-size:28px;color:#fff;
       }
       .sb-question-dsp-container .sb-question-content.sb-focus-spots .page-section .sb-question-content-focus-spot .sb-question-content-card .sb-question-content-focus-spot-group .sb-focus-spot-label label {
         font-size: 24px;
