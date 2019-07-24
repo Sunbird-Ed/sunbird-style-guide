@@ -43,6 +43,7 @@
   }
     .sb-question-header h4{
         font-size:24px;
+        color:#fff;
       }
       .sb-question-dsp-container .sb-question-content.sb-focus-spots .page-section .sb-question-content-focus-spot .sb-question-content-card .sb-question-content-focus-spot-group .sb-focus-spot-label label {
         font-size: 20px;
@@ -75,7 +76,7 @@
       height: calc(100% - 63px);
   }
     .sb-question-header h4{
-      font-size:32px;
+      font-size:32px;color:#fff;
     }
     .sb-question-dsp-container .sb-question-content.sb-focus-spots .page-section .sb-question-content-focus-spot .sb-question-content-card .sb-question-content-focus-spot-group .sb-focus-spot-label label {
       font-size: 28px;
