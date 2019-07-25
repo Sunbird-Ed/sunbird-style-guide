@@ -4,6 +4,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { LabelsComponent } from './labels/labels.component';
 import { ModalsComponent } from './modals/modals.component';
+import { BulkuploadsComponent } from './bulkuploads/bulkuploads.component';
 import { SearchComponent } from './search/search.component';
 import { TablesComponent } from './tables/tables.component';
 import { ColorsComponent } from './colors/colors.component';
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'buttons', component: ButtonsComponent },
   { path: 'labels', component: LabelsComponent },
   { path: 'modals', component: ModalsComponent },
+  { path: 'bulkuploads', component: BulkuploadsComponent },
   { path: 'search', component: SearchComponent },
   { path: 'tables', component: TablesComponent },
   { path: 'colors', component: ColorsComponent },
