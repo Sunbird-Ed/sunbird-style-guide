@@ -1,23 +1,18 @@
 .sb-certificate {
-.sb-certificate-header{
   .logo {
     width:100px;
   }
-}
-  max-width: 328px;
+  max-width: 320px;
   width: 100%;
   margin: 0 auto;
   padding: 16px;
   text-align: center;
-  .sb-certificate-logo {
-    height :56px;
-  }
   .sb-certificate-desc {
     background-color: #E5EDF5;
     padding: 24px;
     margin: 24px 0;
     img {
-      max-width:  197px;
+      max-width: 197px;
       margin: 0 auto;
     }
   }
@@ -26,15 +21,13 @@
     font-size: 12px;
     line-height: 17px;
     color: #333333;
-    margin: 0;
   }
-  .sb-certificate-field {
+  .sb-certificate-input {
     display: flex;
     justify-content: space-between;
     width: 215px;
-    margin: 0 auto 38px auto;
-
-    .sb-certificate-input {
+    margin: 24px auto;
+    .sb-certificate-input-digit {
       height: 30px;
       width: 30px;
       border: 0;
@@ -85,4 +78,5 @@
         text-align: center;
     }
   }
+
 }
