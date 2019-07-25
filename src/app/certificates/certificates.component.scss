@@ -1,4 +1,9 @@
 .sb-certificate {
+.sb-certificate-header{
+  .logo {
+    width:100px;
+  }
+}
   max-width: 328px;
   width: 100%;
   margin: 0 auto;
@@ -12,7 +17,7 @@
     padding: 24px;
     margin: 24px 0;
     img {
-      max-width: 197px;
+      max-width:  197px;
       margin: 0 auto;
     }
   }
@@ -42,6 +47,42 @@
       &:focus {
         outline: none;
       }
+    }
+  }
+  .sb-certificate-button {
+    height: 40px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #024F9D;
+    box-shadow: 1px 3px 4px 0 rgba(0,0,0,0.26);
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 19px;
+    cursor: pointer;
+  }
+
+  .sb-certificate-holder-details {
+    .sb-icon-badge {
+
+    }
+    h6 {
+        color: #024F9D;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+    }
+    h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+    }
+    p {
+        color: #333333;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
     }
   }
 }
