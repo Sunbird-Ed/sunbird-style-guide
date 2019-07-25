@@ -3,7 +3,11 @@
 }
 .sb-subheader {
   background: var(--blue);
-  height:60px;
+  height:60px;    
+ position: relative;        
+ top: 0px;        
+ width: 100%;        
+ z-index: 9;
 }
 
 .sb-two-column-table {
