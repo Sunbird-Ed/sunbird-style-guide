@@ -4,6 +4,9 @@
   margin: 0 auto;
   padding: 16px;
   text-align: center;
+  .sb-certificate-logo {
+    height :56px;
+  }
   .sb-certificate-desc {
     background-color: #E5EDF5;
     padding: 24px;
@@ -18,13 +21,15 @@
     font-size: 12px;
     line-height: 17px;
     color: #333333;
+    margin: 0;
   }
-  .sb-certificate-input {
+  .sb-certificate-field {
     display: flex;
     justify-content: space-between;
     width: 215px;
-    margin: 24px auto;
-    .sb-certificate-input-digit {
+    margin: 0 auto 38px auto;
+
+    .sb-certificate-input {
       height: 30px;
       width: 30px;
       border: 0;
@@ -38,17 +43,5 @@
         outline: none;
       }
     }
-  }
-  .sb-certificate-button {
-    height: 40px;
-    width: 100%;
-    border-radius: 2px;
-    background-color: #024F9D;
-    box-shadow: 1px 3px 4px 0 rgba(0,0,0,0.26);
-    border: 0;
-    color: #fff;
-    font-size: 14px;
-    line-height: 19px;
-    cursor: pointer;
   }
 }

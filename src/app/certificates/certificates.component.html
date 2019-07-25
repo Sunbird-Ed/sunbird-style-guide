@@ -1,21 +1,23 @@
 <div class="sb-certificate">
   <div class="sb-certificate-header">
-    <img src="assets/images/logos.png" alt="Logo"/>
+    <img class="sb-certificate-logo" src="assets/images/DIKSHA.svg" alt="DIKSHA Logo"/>
   </div>
   <div class="sb-certificate-desc">
-    <img src="assets/images/certificate.png" alt="Logo"/>
+    <img src="assets/images/certificate.png" alt="Certificate Desc"/>
   </div>
-  <form class="sb-certificate-form">
-    <label class="sb-certificate-label" for="certificate">Enter the Certificate Code here</label>
-    <div class="sb-certificate-input" id="certificate">
-      <input type="text" name="certificate1" class="sb-certificate-input-digit"/>
-      <input type="text" name="certificate2" class="sb-certificate-input-digit"/>
-      <input type="text" name="certificate3" class="sb-certificate-input-digit"/>
-      <input type="text" name="certificate4" class="sb-certificate-input-digit"/>
-      <input type="text" name="certificate5" class="sb-certificate-input-digit"/>
-      <input type="text" name="certificate6" class="sb-certificate-input-digit"/>
+  <form class="sb-field-group">
+    <label class="sb-certificate-label" for="certificate">
+      Enter the Certificate Code here
+    </label>
+    <div class="sb-certificate-field" id="certificate">
+      <input type="text" name="certificate1" class="sb-certificate-input" maxlength="1"/>
+      <input type="text" name="certificate2" class="sb-certificate-input" maxlength="1"/>
+      <input type="text" name="certificate3" class="sb-certificate-input" maxlength="1"/>
+      <input type="text" name="certificate4" class="sb-certificate-input" maxlength="1"/>
+      <input type="text" name="certificate5" class="sb-certificate-input" maxlength="1"/>
+      <input type="text" name="certificate6" class="sb-certificate-input" maxlength="1"/>
     </div>
-    <button class="sb-certificate-button">
+    <button class="sb-btn sb-btn-primary sb-btn-normal ripple width-100">
       Verify
     </button>
   </form>
