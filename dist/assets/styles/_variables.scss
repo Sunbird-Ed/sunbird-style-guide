@@ -622,3 +622,32 @@ $sb-bordered-list-item-subheading-font-size: 12px;
 $sb-bordered-list-item-subheading-color: $gray-400;
 $sb-bordered-list-item-first-child-padding: ($base-block-space * 1) ($base-block-space * 2);
 $sb-bordered-list-item-first-child-background: $white-color;
+
+
+// Certificate
+
+$sb-certificate-padding: 16px;
+$sb-certificate-max-width: 320px;
+$sb-certificate-logo-height: 56px;
+$sb-certificate-desc-background: #E5EDF5;
+$sb-certificate-desc-padding: 24px;
+$sb-certificate-desc-margin: 24px 0;
+$sb-certificate-desc-img-width: 197px;
+$sb-certificate-label-font-size: 12px;
+$sb-certificate-label-line-height: 17px;
+$sb-certificate-label-color: #333333;
+$sb-certificate-field-width: 215px;
+$sb-certificate-field-margin: 0 auto 36px auto;
+$sb-certificate-input-height: 30px;
+$sb-certificate-input-width: 30px;
+$sb-certificate-input-border-bottom: 1px solid #979797;
+$sb-certificate-input-font-size: 16px;
+$sb-certificate-input-color: #333333;
+$sb-certificate-holder-desc-font-size: 12px;
+$sb-certificate-holder-desc-line-height: 17px;
+$sb-certificate-holder-desc-color: #333;
+$sb-certificate-holder-desc-primary-color: $primary-color;
+$sb-certificate-holder-name-font-size: 24px;
+$sb-certificate-holder-name-line-height: 30px;
+$sb-certificate-holder-name-color: #333;
+$sb-certificate-holder-name-margin: 8px 0 24px 0;

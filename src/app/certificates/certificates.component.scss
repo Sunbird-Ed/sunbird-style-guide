@@ -1,110 +1,24 @@
-@import "./variables";
-
-.sb-certificate {
-  max-width: 320px;
+.responsive-ct {
+  position: relative;
+  padding-bottom: 56.25%;
   width: 100%;
-  margin: 0 auto;
-  padding: 16px;
-  text-align: center;
-  .sb-certificate-logo {
-    width: 100px;
-  }
-  .sb-certificate-desc {
-    background-color: #e5edf5;
-    padding: 24px;
-    margin: 24px 0;
-    img {
-      max-width: 197px;
-      margin: 0 auto;
-    }
-  }
-  .sb-certificate-label {
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 17px;
-    color: #333333;
-  }
-  .sb-certificate-field {
-    display: flex;
-    justify-content: space-between;
-    width: 215px;
-    margin: 0 auto 36px auto;
-    .sb-certificate-input {
-      height: 30px;
-      width: 30px;
-      border: 0;
-      border-bottom: 1px solid #979797;
-      background: transparent;
-      text-align: center;
-      font-weight: bold;
-      font-size: 16px;
-      color: #333;
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-
-  .sb-certificate-holder-details {
-    .sb-icon-badge {
-    }
-    h6 {
-      color: #024f9d;
-      font-size: 12px;
-      line-height: 18px;
-      text-align: center;
-    }
-    h4 {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 30px;
-      text-align: center;
-    }
-    p {
-      color: #333333;
-      font-size: 12px;
-      line-height: 18px;
-      text-align: center;
-    }
+  height:100%;
+  iframe {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:50%;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    margin:0 auto;
+    transform: translateY(-50%);  
   }
 }
 
-.sb-form-field-group {
-  .sb-form-field {
-    ::placeholder {
-      /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: var(--gray-100);
-      opacity: 1; /* Firefox */
-    }
-
-    :-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: var(--gray-100);
-    }
-
-    ::-ms-input-placeholder {
-      /* Microsoft Edge */
-      color: var(--gray-100);
-    }
-    input {
-      text-transform: uppercase;
-    }
-    input:focus {
-      border: 1px solid var(--primary-color);
-      box-shadow: 0px 0px 5px var(--primary-color);
-    }
-
-    input:invalid {
-      border-bottom: 2px solid var(--red-400);
-    }
-    input:valid {
-      border-bottom: 2px solid var(--secondary-200);
-    }
-    input:invalid + div.sb-validation-placeholder {
-      color: var(--red-400);
-    }
-    //   input:valid {
-    //     border-bottom:1px solid green;
-    // }
-  }
+::ng-deep {
+  .sb-modal .ui.modal.large .sb-modal-content {
+  height: 100%;
+    background: #000;
+}
 }
