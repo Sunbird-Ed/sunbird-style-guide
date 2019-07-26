@@ -65,12 +65,11 @@
       }
     }
     .sb-certificate-holder-name {
-        font-size: $sb-certificate-holder-name-font-size;
-        line-height: $sb-certificate-holder-name-line-height;
-        color: $sb-certificate-holder-name-color;
-        font-weight: 700;
-        text-align: center;
-        margin: $sb-certificate-holder-name-margin;
+      font-size: $sb-certificate-holder-name-font-size;
+      line-height: $sb-certificate-holder-name-line-height;
+      color: $sb-certificate-holder-name-color;
+      text-align: center;
+      margin: $sb-certificate-holder-name-margin;
     }
   }
   .sb-certificate-overlay {
@@ -79,15 +78,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.5);
+    background: $sb-certificate-overlay-background;
     z-index: 2;
     display :none;
   }
   .sb-certificate-loader {
     display: none;
     .sb-certificate-loader-img {
-      height: 50px;
-      width: 50px;
+      height: $sb-certificate-loader-img-height;
+      width: 3$sb-certificate-loader-img-width;
     }
   }
   &.loading {
