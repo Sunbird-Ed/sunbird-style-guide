@@ -43,9 +43,7 @@ import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
 import { LandingComponent } from './landing/landing.component';
 import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
-
-
-
+import { CertificatesComponent } from './certificates/certificates.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -91,7 +89,8 @@ const routes: Routes = [
   { path: 'library', component: LibraryComponent},
   { path: 'icons', component: IconsComponent},
   { path: 'landing', component: LandingComponent},
-  { path: 'CBSE-program', component: CBSEProgramComponent}
+  { path: 'CBSE-program', component: CBSEProgramComponent},
+  { path: 'certificates', component: CertificatesComponent}
 ];
 
 @NgModule({
