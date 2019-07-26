@@ -5,21 +5,21 @@
   <div class="sb-certificate-desc">
     <img src="assets/images/certificate.png" alt="Certificate Desc"/>
   </div>
-  <form class="sb-certificate-form" autocomplete="off">
-    <label class="sb-certificate-label" for="certificate">
-      Enter the Certificate Code here
-    </label>
-    <div class="sb-certificate-field" id="certificate">
-      <input type="text" maxlength="1" name="certificate1" class="sb-certificate-input"/>
-      <input type="text" maxlength="1" name="certificate2" class="sb-certificate-input"/>
-      <input type="text" maxlength="1" name="certificate3" class="sb-certificate-input"/>
-      <input type="text" maxlength="1" name="certificate4" class="sb-certificate-input"/>
-      <input type="text" maxlength="1" name="certificate5" class="sb-certificate-input"/>
-      <input type="text" maxlength="1" name="certificate6" class="sb-certificate-input"/>
+  <form action="" class="sb-certificate-form" autocomplete="off">
+    <div class="sb-form-field-group">  
+        <label class="sb-certificate-label" for="certificate">
+            Enter the Certificate Code here
+          </label>
+    <div class="sb-form-field sb-certificate-field" id="certificate">
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required autofocus placeholder="A" name="certificate1" class="sb-certificate-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="B" name="certificate2" class="sb-certificate-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="C" name="certificate3" class="sb-certificate-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="1" name="certificate4" class="sb-certificate-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="2" name="certificate5" class="sb-certificate-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="3" name="certificate6" class="sb-certificate-input"/>
     </div>
-    <button class="sb-btn sb-btn-primary sb-btn-normal ripple width-100">
-      Verify
-    </button>
+  </div>
+    <button type="submit" class="sb-btn sb-btn-primary sb-btn-normal ripple width-100">Verify</button>
   </form>
 </div>
 
