@@ -1,9 +1,14 @@
-<div class="sb-certificate">
+<div class="sb-certificate" [class.loading]="loader">
+  <div class="sb-certificate-overlay"></div>
   <div class="sb-certificate-header">
     <img src="assets/images/DIKSHA.svg" class="sb-certificate-logo" alt="DIKSHA Logo"/>
   </div>
   <div class="sb-certificate-desc">
-    <img src="assets/images/certificate.png" alt="Certificate Desc"/>
+      <div class="sb-certificate-loader">
+        <p>Verifying your certificates</p>
+        <img src="assets/images/loader.svg" class="sb-certificate-loader-img" alt="Loader"/>
+      </div>
+    <img src="assets/images/certificate.png" class="sb-certificate-desc-img" alt="Certificate Desc"/>
   </div>
   <form class="sb-certificate-form" autocomplete="off">
     <label class="sb-certificate-label" for="certificate">
@@ -17,24 +22,32 @@
       <input type="text" maxlength="1" name="certificate5" class="sb-certificate-input"/>
       <input type="text" maxlength="1" name="certificate6" class="sb-certificate-input"/>
     </div>
-    <button class="sb-btn sb-btn-primary sb-btn-normal ripple width-100">
+    <button type="button" class="sb-btn sb-btn-primary sb-btn-normal ripple width-100" (click)="loader = !loader">
       Verify
     </button>
   </form>
 </div>
 
-
 <br><br>
 
 <div class="sb-certificate">
+    <div class="sb-certificate-overlay"></div>
   <div class="sb-certificate-header">
     <img src="assets/images/DIKSHA.svg" class="sb-certificate-logo" alt="DIKSHA Logo"/>
   </div>
   <div class="sb-certificate-holder-details">
-    <img src="assets/images/badge.svg" class="sb-icon-badge mt-24 mb-8" alt="Logo"/>
-    <h6>Certificate issued to</h6>
-    <h4>Namename Name N</h4>
-    <p class="sb-certificate-label my-24">For successfully completing the course, <strong>“Active Listening for Master Coaches”</strong> on DIKSHA on 09 Aug 2019</p>
-    <button type="button" class="sb-btn sb-btn-normal sb-btn-secondary"><i class="play circle icon"></i> Watch Video</button>
+    <img src="assets/images/badge.svg" class="sb-icon-badge mt-24 mb-8" alt="Badge"/>
+    <p class="sb-certificate-holder-desc sb-certificate-holder-desc-primary">
+      Certificate issued to
+    </p>
+    <h4 class="sb-certificate-holder-name">
+      Namename Name N
+    </h4>
+    <p class="sb-certificate-holder-desc">
+      For successfully completing the course, <strong>“Active Listening for Master Coaches”</strong> on DIKSHA on 09 Aug 2019
+    </p>
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-secondary">
+      <i class="play circle icon"></i> Watch Video
+    </button>
   </div>
 </div>
