@@ -1,107 +1,131 @@
-.sb-certificate {
+.sb-certificatePage{
   width: 100%;
   margin: 0 auto;
-  padding: $sb-certificate-padding;
+  padding: $sb-certificatePage-padding;
   text-align: center;
   position: relative;
 
   @include respond-above(xs) {
-    max-width: $sb-certificate-max-width;
+    max-width: $sb-certificatePage-max-width;
   }
 
-  .sb-certificate-logo {
-    height: $sb-certificate-logo-height;
+  .sb-certificatePage-logo {
+    height: $sb-certificatePage-logo-height;
   }
 
-  .sb-certificate-desc {
-    background-color: $sb-certificate-desc-background;
-    padding: $sb-certificate-desc-padding;
-    margin: $sb-certificate-desc-margin;
+  .sb-certificatePage-desc {
+    background-color: $sb-certificatePage-desc-background;
+    padding: $sb-certificatePage-desc-padding;
+    margin: $sb-certificatePage-desc-margin;
     z-index: 2;
 
-    .sb-certificate-desc-img {
-      max-width: $sb-certificate-desc-img-width;
+    .sb-certificatePage-desc-img {
+      max-width: $sb-certificatePage-desc-img-width;
       margin: 0 auto;
     }
   }
 
-  .sb-certificate-label {
+  .sb-certificatePage-label {
     font-weight: normal;
-    font-size: $sb-certificate-label-font-size;
-    line-height: $sb-certificate-label-line-height;
-    color: $sb-certificate-label-color;
+    font-size: $sb-certificatePage-label-font-size;
+    line-height: $sb-certificatePage-label-line-height;
+    color: $sb-certificatePage-label-color;
   }
 
-  .sb-certificate-field {
+  .sb-certificatePage-field {
     display: flex;
     justify-content: space-between;
-    width: $sb-certificate-field-width;
-    margin: $sb-certificate-field-margin;
+    width: $sb-certificatePage-field-width;
+    margin: $sb-certificatePage-field-margin;
 
-    .sb-certificate-input {
-      height: $sb-certificate-input-height;
-      width: $sb-certificate-input-width;
+    .sb-certificatePage-input {
+      height: $sb-certificatePage-input-height;
+      width: $sb-certificatePage-input-width;
       border: 0;
-      border-bottom: $sb-certificate-input-border-bottom;
+      border-bottom: $sb-certificatePage-input-border-bottom;
       background: transparent;
       text-align: center;
       font-weight: bold;
-      font-size: $sb-certificate-input-font-size;
-      color: $sb-certificate-input-color;
+      font-size: $sb-certificatePage-input-font-size;
+      color: $sb-certificatePage-input-color;
       &:focus {
         outline: none;
       }
     }
   }
 
-  .sb-certificate-holder-details {
-    .sb-certificate-holder-desc {
-      font-size: $sb-certificate-holder-desc-font-size;
-      line-height: $sb-certificate-holder-desc-line-height;
-      color: $sb-certificate-holder-desc-color;
-      &.sb-certificate-holder-desc-primary {
-        color: $sb-certificate-holder-desc-primary-color;
+  .sb-certificatePage-holder-details {
+    .sb-certificatePage-holder-desc {
+      font-size: $sb-certificatePage-holder-desc-font-size;
+      line-height: $sb-certificatePage-holder-desc-line-height;
+      color: $sb-certificatePage-holder-desc-color;
+      &.sb-certificatePage-holder-desc-primary {
+        color: $sb-certificatePage-holder-desc-primary-color;
         margin: 0;
       }
     }
-    .sb-certificate-holder-name {
-      font-size: $sb-certificate-holder-name-font-size;
-      line-height: $sb-certificate-holder-name-line-height;
-      color: $sb-certificate-holder-name-color;
+    .sb-certificatePage-holder-name {
+      font-size: $sb-certificatePage-holder-name-font-size;
+      line-height: $sb-certificatePage-holder-name-line-height;
+      color: $sb-certificatePage-holder-name-color;
       text-align: center;
-      margin: $sb-certificate-holder-name-margin;
+      margin: $sb-certificatePage-holder-name-margin;
     }
   }
-  .sb-certificate-overlay {
+  .sb-certificatePage-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: $sb-certificate-overlay-background;
+    background: $sb-certificatePage-overlay-background;
     z-index: 2;
     display :none;
   }
-  .sb-certificate-loader {
+  .sb-certificatePage-loader {
     display: none;
-    .sb-certificate-loader-img {
-      height: $sb-certificate-loader-img-height;
-      width: 3$sb-certificate-loader-img-width;
+    .sb-certificatePage-loader-img {
+      height: $sb-certificatePage-loader-img-height;
+      width: 3$sb-certificatePage-loader-img-width;
     }
   }
   &.loading {
-    .sb-certificate-overlay {
+    .sb-certificatePage-overlay {
       display: block;
     }
-    .sb-certificate-desc-img {
+    .sb-certificatePage-desc-img {
       display: none;
     }
-    .sb-certificate-loader {
+    .sb-certificatePage-loader {
       display: block;
       z-index: 4;
       position: relative;
-      color: $sb-certificate-holder-desc-primary-color;
+      color: $sb-certificatePage-holder-desc-primary-color;
       font-weight: bold;
     }
+  }
+}
+
+
+.sb-certificate {
+  padding: 12px;
+  width: 843px;
+  background: #fff;
+  margin: 0 auto;
+
+  .sb-certificate-box {
+    border: 2px solid #EBE8E5;
+    width: 819px;
+    height: 571px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sb-certificate-border {
+    background-image: url("/assets/images/certificate-border.svg");
+    background-size: 100% 100%;
+    width: 791px;
+    height: 545px;
   }
 }
