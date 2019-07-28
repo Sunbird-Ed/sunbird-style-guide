@@ -66,7 +66,7 @@ export class ModalsComponent implements OnInit {
 </sui-modal>
 `;
   smallModalCode = `<sui-modal *ngIf="showSmallModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
-  class="sb-modal" appBodyScroll (dismissed)="showSmallModal = !showSmallModal" #modal>
+  class="sb-modal " appBodyScroll (dismissed)="showSmallModal = !showSmallModal" #modal>
   <div class="sb-modal-header">
     Modal Heading
   </div>
@@ -101,7 +101,7 @@ export class ModalsComponent implements OnInit {
   </div>
 </sui-modal>`;
   successModalCode = `<sui-modal *ngIf="showSuccessModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
-  class="sb-modal" appBodyScroll (dismissed)="showSuccessModal = !showSuccessModal" #modal>
+  class="sb-modal sb-success" appBodyScroll (dismissed)="showSuccessModal = !showSuccessModal" #modal>
   <div class="sb-modal-header">
     Modal Heading
   </div>
