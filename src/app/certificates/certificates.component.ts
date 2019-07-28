@@ -11,7 +11,12 @@ export class CertificatesComponent implements OnInit, OnDestroy  {
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
+  
+  showSuccessModal;
+
   loader: boolean;
+  viewCertificate: boolean;
+  viewCertificateHtml: boolean;
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
