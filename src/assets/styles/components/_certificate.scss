@@ -86,7 +86,7 @@
     display: none;
     .sb-certificate-loader-img {
       height: $sb-certificate-loader-img-height;
-      width: 3$sb-certificate-loader-img-width;
+      width: $sb-certificate-loader-img-width;
     }
   }
   &.loading {
