@@ -11,6 +11,9 @@ export class CertificatesComponent implements OnInit, OnDestroy  {
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
+  
+  showSuccessModal;
+
   loader: boolean;
 
   ngOnInit() {
