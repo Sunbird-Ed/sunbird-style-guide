@@ -1,5 +1,8 @@
-
-<div class="sb-certificate hide">
+<div style="width:auto;position: absolute;z-index: 9999999;padding:8px;">
+  <button type="button" (click)="viewCertificate = !viewCertificate"  class="sb-btn sb-btn-xs sb-btn-primary">Show Certificate PDF</button> | <button type="button"  (click)="viewCertificateHtml = !viewCertificateHtml" class="sb-btn sb-btn-xs sb-btn-primary">Show Certificate</button>
+</div>
+<!-- viewCertificate = !viewCertificate  viewCertificateHtml = !viewCertificateHtml-->
+<div class="sb-certificate" *ngIf="viewCertificate">
   <div class="sb-certificate-box">
       <div class="sb-state-logo-bg"></div>
       <div class="sb-certificate-container">
@@ -28,7 +31,7 @@
   </div>
 </div>
 
-<div class="sb-certificateBg">
+<div class="sb-certificateBg" *ngIf="viewCertificateHtml">
 <div class="sb-certificatePage" [class.loading]="loader">
   <div class="sb-certificatePage-overlay"></div>
   <div class="sb-certificatePage-header">
@@ -46,6 +49,9 @@
     <div class="sb-form-field-group">
     <label class="sb-certificatePage-label" for="certificate">
       Enter the Certificate Code here
+    </label>
+    <label class="sb-certificatePage-label red label-error" for="certificate">
+      Please enter valid Certification code
     </label>
     <div class="sb-certificatePage-field sb-form-field" id="certificate">
       <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="A" autofocus name="certificate1" class="sb-certificatePage-input"/>
