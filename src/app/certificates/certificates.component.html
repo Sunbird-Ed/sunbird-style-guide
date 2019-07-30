@@ -50,16 +50,16 @@
     <label class="sb-certificatePage-label" for="certificate">
       Enter the Certificate Code here
     </label>
-    <label class="sb-certificatePage-label red label-error" for="certificate">
+    <label class="sb-certificatePage-label sb-color-error" for="certificate">
       Please enter valid Certification code
     </label>
     <div class="sb-certificatePage-field sb-form-field" id="certificate">
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="A" autofocus name="certificate1" class="sb-certificatePage-input"/>
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="B" name="certificate2" class="sb-certificatePage-input"/>
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="C" name="certificate3" class="sb-certificatePage-input"/>
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="1" name="certificate4" class="sb-certificatePage-input"/>
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="2" name="certificate5" class="sb-certificatePage-input"/>
-      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required placeholder="3" name="certificate6" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="A" autofocus name="certificate1" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="B" name="certificate2" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="C" name="certificate3" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="1" name="certificate4" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="2" name="certificate5" class="sb-certificatePage-input"/>
+      <input type="text" maxlength="1" pattern="[a-zA-Z0-9-]+" required onchange="this.className=(this.value=='')?'':'sb-certificatePage-input visited';" placeholder="3" name="certificate6" class="sb-certificatePage-input"/>
     </div>
   </div>
     <button type="button" class="sb-btn sb-btn-primary sb-btn-normal ripple width-100" (click)="loader = !loader">
