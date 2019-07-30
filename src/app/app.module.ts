@@ -77,6 +77,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
+import { MergeAccountComponent } from './merge-account/merge-account.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -143,7 +144,8 @@ export function hljsLanguages() {
     LandingComponent,
     CBSEProgramComponent,
     CertificatesComponent,
-    OfflineDownloadManagerComponent
+    OfflineDownloadManagerComponent,
+    MergeAccountComponent
   ],
   imports: [
     BrowserModule,
