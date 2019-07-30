@@ -1,21 +1,21 @@
 // text colors
 .sb-color-primary,
 .sb-color-info {
-    color: $primary-color;
+    color: $primary-color !important;
 }
 .sb-color-success,
 .sb-color-secondary {
-    color: $secondary-200;
+    color: $secondary-200 !important;
 }
 .sb-color-warning,
 .sb-color-tertiary {
-    color: $warning-color;
+    color: $warning-color !important;
 }
 .sb-color-error {
-    color: $red;
+    color: $red !important;
 }
 .sb-color-gray {
-    color: $gray-800;
+    color: $gray-800 !important;
 }
 
 // bg colors
