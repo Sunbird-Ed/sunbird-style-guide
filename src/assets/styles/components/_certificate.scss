@@ -3,8 +3,7 @@
   left: 0px;
   right: 0px;
   background: #e5edf5;
-  z-index: 9999;
-  top:0px;
+  z-index: 9999999;
 }
 .sb-certificatePage {
   width: 100%;
@@ -142,7 +141,7 @@
       border-bottom: 1px solid var(--red-400);
       box-shadow: 0px 0px 5px var(--primary-color);
     }
-    input:focus:invalid, input:required:invalid.visited {
+    input:focus:invalid {
       border-bottom: 2px solid var(--red-400);
     }
     input:focus:invalid + div.sb-validation-placeholder {

@@ -1,0 +1,414 @@
+// .sb-offline-download-manager-container {
+//   max-width: 480px;
+//   width: 100%;
+//   max-height: calc(100vh - 240px);
+//   position: fixed;
+//   bottom: 32px;
+//   right: 32px;
+//   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   background: #F3F7FA;
+
+//   .sb-download-manager-header {
+//     background: #00C786;
+//     padding: 16px;
+//     display: flex;
+//     color: white;
+//     font-size: 14px;
+
+//     .header-text {
+//       font-weight: 700;
+//       margin-right: auto;
+//     }
+
+//     .close-button {
+//       background: transparent;
+//       border: none;
+//       color: white;
+//       cursor: pointer;
+//     }
+//   }
+
+//   .sb-offline-download-manager {
+//     padding: 16px;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//     margin: 16px 16px 0 16px;
+//     background: white;
+//     border-radius: 8px;
+
+//     &:last-child {
+//       margin-bottom: 16px;
+//     }
+//   }
+
+//   .download-name {
+//     font-size: 14px;
+//     max-width: 320px;
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     margin-bottom: 4px;
+//     color: black;
+//   }
+
+//   .download-number-content {
+//     display: flex;
+//     margin-bottom: 8px;
+//     align-items: center;
+
+//     .number-downloaded {
+//       font-size: 12px;
+//       color: #999999;
+//     }
+
+//     .download-status {
+//       border-radius: 8px;
+//       font-size: 12px;
+//       margin-left: 16px;
+//       padding: 2px 8px;
+
+//       &.failed {
+//         background: #FBCCD1;
+//         color: #ff4558;
+//       }
+
+//       &.success {
+//         background: #E1FFDF;
+//         color: #008840;
+//       }
+//     }
+//   }
+
+//   .download-progressbar-container {
+//     display: flex;
+//     align-items: center;
+
+//     .download-progress {
+//       height: 8px;
+//       border-radius: 8px;
+//       background: rgb(200, 353, 223);
+//       width: calc(100% - 24px);
+
+//       .download-progress-bar {
+//         height: 8px;
+//         background: #00C786;
+//         border-radius: 8px;
+//       }
+//     }
+
+//     .download-percent {
+//       font-size: 10px;
+//       margin-left: auto;
+//     }
+//   }
+
+// }
+
+// .sb-offline-download-manager-container {
+//   max-width: 480px;
+//   width: 100%;
+//   max-height: calc(100vh - 240px);
+//   position: fixed;
+//   bottom: 32px;
+//   right: 32px;
+//   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   background: #f3f7fa;
+// }
+
+// .sb-offline-download-manager-container .sb-download-manager-header {
+//   background: #00c786;
+//   padding: 16px;
+//   display: flex;
+//   color: white;
+//   font-size: 14px;
+// }
+
+// .sb-offline-download-manager-container .sb-download-manager-header .header-text {
+//   font-weight: 700;
+//   margin-right: auto;
+// }
+
+// .sb-offline-download-manager-container .sb-download-manager-header .close-button {
+//   background: transparent;
+//   border: none;
+//   color: white;
+//   cursor: pointer;
+// }
+
+// .sb-offline-download-manager {
+//   padding: 16px;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//   margin: 16px 16px 0 16px;
+//   background: white;
+//   border-radius: 4px;
+//   border: 1px solid #ccc;
+//   width: auto;
+//   max-width: 480px;
+//   position: relative;
+// }
+
+// .sb-offline-download-manager:last-child {
+//   margin-bottom: 16px;
+// }
+
+// .sb-offline-download-manager .close-btn {
+//   position: absolute;
+//   display: inline-block;
+//   width: 12px;
+//   height: 12px;
+//   overflow: hidden;
+//   cursor: pointer;
+//   background: transparent;
+//   border: none;
+//   top: 4px;
+//   right: 4px;
+
+//   &:hover {
+
+//     &::before,
+//     &::after {
+//       background: #ff4558;
+//     }
+//   }
+
+//   &::before,
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     height: 2px;
+//     width: 100%;
+//     top: 50%;
+//     left: 0;
+//     margin-top: -1px;
+//     background: #ff4558;
+//   }
+
+//   &::before {
+//     transform: rotate(45deg);
+//   }
+
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+// }
+
+// // .sb-offline-download-manager .close-btn::before {
+// //   content: 'x';
+// //   color: black;
+// //   height: 24px;
+// //   width: 24px;
+// // }
+
+// .download-progress-container {
+//   min-height: 64px;
+// }
+
+// .download-failed-container {
+//   max-height: 148px;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+// }
+
+// .download-name-content {
+//   display: flex;
+//   align-items: center;
+//   color: black;
+// }
+
+// .download-name {
+//   font-size: 14px;
+//   max-width: 320px;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   margin-bottom: 4px;
+// }
+
+// .files-downloaded {
+//   margin-left: auto;
+//   font-size: 12px;
+// }
+
+// .download-number-content {
+//   display: flex;
+//   margin-bottom: 8px;
+//   align-items: center;
+// }
+
+// .download-number-content .number-downloaded {
+//   font-size: 12px;
+//   color: #999;
+// }
+
+// .download-progressbar-container {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 8px;
+// }
+
+// .download-progressbar-container .download-progress {
+//   height: 8px;
+//   border-radius: 8px;
+//   background: #ccc;
+//   width: calc(100% - 24px);
+// }
+
+// .download-progressbar-container .download-progress .download-progress-bar {
+//   height: 8px;
+//   background: #00c786;
+//   border-radius: 8px;
+// }
+
+// .download-progressbar-container .download-percent {
+//   font-size: 10px;
+//   margin-left: auto;
+// }
+
+// .download-failed-button-container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-end;
+// }
+
+// .sb-btn {
+//   padding: 8px 16px;
+//   font-size: 12px;
+//   height: 32px;
+//   display: inline-block;
+//   border: 1px solid;
+//   cursor: pointer;
+//   min-width: 64px;
+//   border-radius: 3px;
+//   -webkit-border-radius: 3px;
+//   -moz-border-radius: 3px;
+//   position: relative;
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   border-color: #024f9d;
+//   background-color: #024f9d;
+//   color: white;
+// }
+
+// .sb-btn:focus,
+// .close-btn:focus {
+//   outline-color: white;
+// }
+
+// .sb-btn.sb-btn-error {
+//   border-color: #FF6979;
+//   background-color: #FF6979;
+//   color: white;
+// }
+
+// .sb-btn.sb-btn-xs {
+//   padding: 4px 8px;
+//   height: 24px;
+// }
+
+// .sb-btn.sb-btn-error:focus {
+//   outline-color: #FF6979;
+// }
+
+// hr {
+//   margin: 8px -16px;
+// }
+
+// .download-failed-files {
+//   display: flex;
+//   align-items: center;
+//   border-bottom: .5px solid #dedede;
+//   padding: 8px 0;
+// }
+
+// .download-failed-files:last-child {
+//   border-bottom: none;
+//   padding-bottom: 0;
+// }
+
+// .failed-file-name {
+//   font-size: 12px;
+//   max-width: 400px;
+//   margin-right: auto;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+
+// .success-icon {
+//   display: inline-block;
+//   background: white;
+//   width: 14px;
+//   height: 14px;
+//   border-radius: 50%;
+//   margin-right: 4px;
+
+//   &:after {
+//     content: '';
+//     display: block;
+//     margin-left: 5px;
+//     margin-top: 3px;
+//     width: 4px;
+//     height: 7px;
+//     border: solid #00c786;
+//     border-width: 0 2px 2px 0;
+//     transform: rotate(45deg);
+//   }
+// }
+
+// .arrow-down-icon::before {
+//   border-style: solid;
+//   border-width: 2px 2px 0 0;
+//   content: '';
+//   display: inline-block;
+//   height: 8px;
+//   left: 0;
+//   position: relative;
+//   top: -2px;
+//   -webkit-transform: rotate(135deg);
+//   transform: rotate(135deg);
+//   width: 8px;
+//   margin-left: 8px;
+// }
+
+// .arrow-down-icon.active::before {
+//   transform: rotate(-45deg);
+//   -webkit-transform: rotate(-45deg);
+//   top: 0;
+// }
+
+// .sb-label {
+//   display: flex;
+//   border: 1px solid;
+//   color: white;
+//   line-height: inherit;
+//   border-radius: 3px;
+//   -webkit-border-radius: 3px;
+//   -moz-border-radius: 3px;
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   margin-left: 8px;
+// }
+
+// .sb-label.sb-label-table {
+//   padding: 4px 8px;
+//   font-size: 11.9994px;
+//   min-width: 48px;
+//   text-align: center;
+// }
+
+// .sb-label.sb-label-table.sb-label-success-0 {
+//   background: #e1ffdf;
+//   border-color: #e1ffdf;
+//   color: #008840;
+// }
+
+// .sb-label.sb-label-table.sb-label-warning-0 {
+//   background: #fffadf;
+//   border-color: #fffadf;
+//   color: #e55a28;
+// }
+
+// .sb-label.sb-label-table.sb-label-error-0 {
+//   background: #fbccd1;
+//   border-color: #fbccd1;
+//   color: #ff4558;
+// }

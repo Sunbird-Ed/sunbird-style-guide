@@ -44,6 +44,10 @@ import { IconsComponent } from './icons/icons.component';
 import { LandingComponent } from './landing/landing.component';
 import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
+
+
+
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -90,7 +94,8 @@ const routes: Routes = [
   { path: 'icons', component: IconsComponent},
   { path: 'landing', component: LandingComponent},
   { path: 'CBSE-program', component: CBSEProgramComponent},
-  { path: 'certificates', component: CertificatesComponent}
+  { path: 'certificates', component: CertificatesComponent},
+  { path: 'offline-download', component: OfflineDownloadManagerComponent}
 ];
 
 @NgModule({
