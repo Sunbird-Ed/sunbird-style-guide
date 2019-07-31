@@ -1,0 +1,34 @@
+
+
+
+<!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections;">
+
+    <h4 class="docs-sectionHeading">
+      {{section.title}}
+      <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+    </h4> 
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+    </div>
+    <!--/Display output-->
+  
+    <!--Display code-->
+    <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+  
+      <!--Copy code button-->
+      <button ngxClipboard [cbContent]="section.demoCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+      <!--/Copy code button-->
+  
+      <!--Copy code display-->
+      <pre>
+        <code [highlight]="section.demoCode"></code>
+      </pre>
+      <!--/Copy code display-->
+  
+    </div>
+    <!--/Display code-->
+    
+  </div>
+  <!--Page Content-->

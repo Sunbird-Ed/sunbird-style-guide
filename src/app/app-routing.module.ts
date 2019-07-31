@@ -45,6 +45,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
+import { MergeAccountComponent } from './merge-account/merge-account.component';
 
 
 
@@ -95,6 +96,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingComponent},
   { path: 'CBSE-program', component: CBSEProgramComponent},
   { path: 'certificates', component: CertificatesComponent},
+  { path: 'merge-account', component: MergeAccountComponent},
   { path: 'offline-download', component: OfflineDownloadManagerComponent}
 ];
 
