@@ -24,7 +24,7 @@ replaceBeforeRegex = /^(.*)\/\*\!Delete\ before\ this\*\//mi;
       Inline Fonts 
 ==========================*/
 // Urdu
-gulp.task('noto-nastaliqurdu', function() {
+/*gulp.task('noto-nastaliqurdu', function() {
     var fontStream = merge();
     // Regular
     fontStream.add(gulp.src(fontspath + 'noto-nastaliqurdu/NotoNastaliqUrdu-Regular.woff')
@@ -170,7 +170,7 @@ gulp.task('semantic-icons', function() {
 
 // Generate all fonts inline scss
 gulp.task('fonts', gulpSequence('noto-nastaliqurdu', 'notosans', 'notosans-bengali', 'notosans-devanagari', 'notosans-gujarati', 'notosans-gurmukhi', 'notosans-kannada', 'notosans-malayalam', 'notosans-oriya', 'notosans-tamil', 'notosans-telugu', 'sb-icons', 'semantic-icons'));
-
+*/
 /*========================
   Fonts CSS generate
 ==========================*/
