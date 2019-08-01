@@ -2,9 +2,11 @@
   //position: fixed;
   left: 0px;
   right: 0px;
-  background: #e5edf5;
+  background: #fff; //e5edf5
   z-index: 9999;
-  top:0px;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
 }
 .sb-certificatePage {
   width: 100%;
@@ -14,11 +16,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height:560px;
 
   @include respond-above(xs) {
     max-width: $sb-certificatePage-max-width;
-    min-height: 560px;
   }
 
   .sb-certificatePage-logo {
@@ -42,6 +43,7 @@
     font-size: $sb-certificatePage-label-font-size;
     line-height: $sb-certificatePage-label-line-height;
     color: $sb-certificatePage-label-color;
+    display: block;
   }
 
   .sb-certificatePage-field {
@@ -142,7 +144,7 @@
       border-bottom: 1px solid var(--red-400);
       box-shadow: 0px 0px 5px var(--primary-color);
     }
-    input:focus:invalid, input:required:invalid.visited {
+    input:focus:invalid {
       border-bottom: 2px solid var(--red-400);
     }
     input:focus:invalid + div.sb-validation-placeholder {
