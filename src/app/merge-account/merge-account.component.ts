@@ -35,9 +35,16 @@ export class MergeAccountComponent implements OnInit {
           <div class="sb-field-group">
             <label>Email Id/Phone number</label>
             <div class="sb-field">
-              <input class="sb-form-control" type="text" placeholder="Enter Mobile Number" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-              <button class="sb-btn sb-btn-secondary sb-btn-normal width-100 my-24">Next</button>
+            <input class="sb-form-control" type="text" placeholder="Enter Mobile Number" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
+            <label>Password</label>
+            <div class="sb-field">
+            <input class="sb-form-control" type="text" placeholder="Enter Password" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <button class="sb-btn sb-btn-secondary sb-btn-normal width-100 mt-24 mb-8">Next</button>
+            </div>
+            <p class="sb-or-divider mb-0 ">OR</p>
+            <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple width-100 my-16">Sign In with Google</button>
+
           </div>
         </div>
       </div>
@@ -64,9 +71,16 @@ export class MergeAccountComponent implements OnInit {
           <div class="sb-field-group">
             <label>Email Id/Phone number</label>
             <div class="sb-field">
-              <input class="sb-form-control" type="text" placeholder="Enter Mobile Number" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-              <button class="sb-btn sb-btn-secondary sb-btn-normal width-100 my-24">Next</button>
+            <input class="sb-form-control" type="text" placeholder="Enter Mobile Number" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
+            <label>Password</label>
+            <div class="sb-field">
+            <input class="sb-form-control" type="text" placeholder="Enter Password" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <button class="sb-btn sb-btn-secondary sb-btn-normal width-100 mt-24 mb-8">Next</button>
+            </div>
+            <p class="sb-or-divider mb-0 ">OR</p>
+            <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple width-100 my-16">Sign In with Google</button>
+
           </div>
         </div>
       </div>
