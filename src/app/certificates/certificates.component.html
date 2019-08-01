@@ -2,7 +2,7 @@
   <button type="button" (click)="viewCertificate = !viewCertificate"  class="sb-btn sb-btn-xs sb-btn-primary">Show Certificate PDF</button> | <button type="button"  (click)="viewCertificateHtml = !viewCertificateHtml" class="sb-btn sb-btn-xs sb-btn-primary">Show Certificate</button>
 </div>
 <!-- viewCertificate = !viewCertificate  viewCertificateHtml = !viewCertificateHtml-->
-<div class="sb-certificate" *ngIf="viewCertificate">
+<div class="sb-certificate hide" *ngIf="viewCertificate">
   <div class="sb-certificate-box">
       <div class="sb-state-logo-bg"></div>
       <div class="sb-certificate-container">
@@ -69,7 +69,7 @@
 </div>
 </div>
 
-<div class="sb-certificatePage sb-certificate-view">
+<div class="sb-certificatePage sb-certificate-view hide">
   <div class="sb-certificatePage-header mb-auto">
     <img src="assets/images/DIKSHA.svg" class="sb-certificatePage-logo" alt="DIKSHA Logo"/>
   </div>

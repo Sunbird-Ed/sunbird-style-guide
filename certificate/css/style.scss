@@ -10,6 +10,10 @@ body {
 }
 .sb-certificate {
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   
   .sb-certificate-box {
     width: 839.571px;
@@ -17,14 +21,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     position: relative;
     background: #fff;
   }
 
   .sb-certificate-bg {
-    background-image: url("/images/ap-state-outline.svg");
-    background-size: 100% 100%;
+    background-image: url(../images/gujarat-state-outline.svg);
+    background-size: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,15 +37,17 @@ body {
     z-index: 1;
     margin: 0 auto;
     height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .sb-certificate-container {
-    background-image: url("/images/certificate-frame-1.svg");
+    background-image: url("../images/certificate-frame-1.svg");
     background-size: 100% 100%;
     width: 839.571px;
     height: 588.618px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     position: relative;
     z-index: 2;
@@ -50,10 +55,10 @@ body {
   
     .sb-certificate-header {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
       .state-symbol {
         img { 
           height: 90px;
@@ -69,15 +74,15 @@ body {
       h1 {
         font-family: "July Seventh", cursive,"Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
         font-size: 36px;
-        line-height: 1.4;
-        margin: 12px 0 16px 0;
-        color: #024f9d;
-        font-weight: 400;
+    line-height: 1.4;
+    margin: 12px 0 16px 0;
+    color: #024f9d;
+    font-weight: 400;
       }
       p {
         color: #333333;
         font-size: 16px;
-        line-height: 36px;
+        line-height: 32px;
         text-align: center;
         width: 75%;
         margin: 0;
@@ -86,10 +91,11 @@ body {
 
     .sb-certificate-footer {
       display: inline-flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-      width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 32px;
       .country-symbol {
         flex: 1;
         color: #999999;
@@ -102,9 +108,10 @@ body {
       }
       .state-sign {
         hr.sign-line {
-          width: 75%;
+          width: 90%;
           border: 0;
           border-bottom: 1px solid #ebe7e5;
+          margin: 8px auto;
         }
         p {
           font-style: italic;
