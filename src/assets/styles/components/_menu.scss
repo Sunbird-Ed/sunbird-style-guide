@@ -54,21 +54,19 @@
     ul {
         list-style-type: none;
         padding-left: 0;
-        margin: 0;
         li {
             padding: $base-block-space+4 $base-block-space*2;
             font-size: $font-size-sm;
             color: #333;
             cursor: pointer;
-            margin: 0;
             &.active {
-                background: $primary-100;
+                background: $primary-0;
                 border-left: 2px solid $primary-600;
                 color: $primary-800;
                 font-weight: $font-weight-bold;
             }
             &:hover{
-                background: $primary-100;
+                background: $primary-0;
                 color: $primary-800;
             }
         }
