@@ -6,11 +6,11 @@
 </div>
 <div class="sb-offline-tab-container">
   <div class="offline-status px-16 d-flex flex-ai-center">
-    <div class="wifi-symbol">
-      <div class="wifi-circle first animate"></div>
-      <div class="wifi-circle second animate"></div>
-      <div class="wifi-circle third animate"></div>	
-      <div class="wifi-circle fourth animate"></div>
+    <div class="wifi-symbol animate">
+      <div class="wifi-circle first"></div>
+      <div class="wifi-circle second"></div>
+      <div class="wifi-circle third"></div>
+      <div class="wifi-circle fourth"></div>
     </div>
     <span class="offline-message ml-8 fs-0-785">You are offline</span>
   </div>
@@ -20,29 +20,16 @@
     <a href="javascript:void(0);" class="sb-offline-btn"><span>Download Manager</span></a>
     <a href="javascript:void(0);" class="sb-offline-btn"><span>Get Help</span></a>
   </div>
-  <div class="ui dropdown sb-btn-dropdown ml-8 fs-0-785 hide" suiDropdown autoClose="itemClick">
-    <div class="text">Get Help</div>
-    <i class="dropdown icon"></i>
-    <div class="menu" suiDropdownMenu>
-      <div class="item">Modified on</div>
-      <div class="item">Created on</div>
-    </div>
-  </div>
+  
   <div class="offline-profile-language-section ml-auto">
     <div class="d-flex flex-ai-center">
       <div class="notification-img-container mr-16">
         <span class="img notification-img"></span>
       </div>
-      <div class="ui dropdown sb-btn-dropdown fs-0-785 mr-16" suiDropdown autoClose="itemClick">
-        <div class="text">
-          <!-- <span class="img language-img"></span>  -->
-          Select Language</div>
-        <i class="dropdown icon"></i>
-        <div class="menu" suiDropdownMenu>
-          <div class="item">English</div>
-          <div class="item">Tamil</div>
-        </div>
-      </div>
+      <sui-select class="selection sb-offline-header-selection mr-16" [options]="options" labelField="name" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-select>
       <div class="profile-image-container mr-16">
         <img src="../../assets/images/rafi.png" alt="" class="profile-image">
       </div>
@@ -53,17 +40,18 @@
   <!-- <div class="sb-courses-tab"></div>
   <div class="sb-library-tab"></div>
   <div class="sb-download-manager-tab"></div> -->
-  <button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn sb-btn-filter"><i class="filter icon"></i>Filter content</button>
+  <button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn sb-btn-filter"><i class="filter icon"></i>Filter
+    content</button>
   <div class="sb-search-box medium ml-auto mr-auto">
     <div class="input-div relative">
-        <i class="search icon"></i>
-        <input class="sb-search-input" type="text" placeholder="Search..." />
-        <span class="img qr-code-img"></span>
-        <!-- <i class="close icon"></i> -->
-        <!-- <div class="sb-loader"></div> -->
+      <i class="search icon"></i>
+      <input class="sb-search-input" type="text" placeholder="Search..." />
+      <span class="img qr-code-img"></span>
+      <!-- <i class="close icon"></i> -->
+      <!-- <div class="sb-loader"></div> -->
     </div>
     <button class="sb-btn sb-btn-normal search-btn">Search</button>
   </div>
-  <button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn sb-btn-content-download"><i class="download icon"></i>Download Content</button>
+  <button class="sb-btn sb-btn-normal sb-btn-primary sb-left-icon-btn sb-btn-content-download"><i
+      class="download icon"></i>Download Content</button>
 </div>
-
