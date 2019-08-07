@@ -1,5 +1,5 @@
 <div class="sb-offline-tab-header d-flex flex-ai-center">
-  <span class="fs-0-785 font-weight-bold mr-auto">DIKSHA</span>
+  <span class="fs-0-785 font-weight-bold mr-auto" title="DIKSHA">DIKSHA</span>
   <span class="minimize-bar mr-16"></span>
   <i class="window maximize outline icon mr-16"></i>
   <i class="close icon"></i>
@@ -15,23 +15,23 @@
     <span class="offline-message ml-8 fs-0-785">You are offline</span>
   </div>
   <div class="offline-tab-button ml-16">
-    <a href="javascript:void(0);" class="sb-offline-btn active"><span>Library</span></a>
-    <a href="javascript:void(0);" class="sb-offline-btn"><span>Courses</span></a>
-    <a href="javascript:void(0);" class="sb-offline-btn"><span>Download Manager</span></a>
-    <a href="javascript:void(0);" class="sb-offline-btn"><span>Get Help</span></a>
+    <a href="javascript:void(0);" class="sb-offline-btn active"><span title="Library">Library</span></a>
+    <a href="javascript:void(0);" class="sb-offline-btn"><span title="Courses">Courses</span></a>
+    <a href="javascript:void(0);" class="sb-offline-btn"><span title="Download Manager">Download Manager</span></a>
+    <a href="javascript:void(0);" class="sb-offline-btn"><span title="Get Help">Get Help</span></a>
   </div>
   
   <div class="offline-profile-language-section ml-auto">
     <div class="d-flex flex-ai-center">
       <div class="notification-img-container mr-16">
-        <span class="img notification-img"></span>
+        <span class="img notification-img" title="notification"></span>
       </div>
       <sui-select class="selection sb-offline-header-selection mr-16" labelField="name" #multiSelect>
         <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
         </sui-select-option>
       </sui-select>
       <div class="profile-image-container mr-16">
-        <img src="../../assets/images/rafi.png" alt="" class="profile-image">
+        <img src="../../assets/images/rafi.png" alt="" class="profile-image" title="profile picture">
       </div>
     </div>
   </div>
