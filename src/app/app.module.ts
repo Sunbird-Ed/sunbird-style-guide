@@ -78,6 +78,7 @@ import { CBSEProgramComponent } from './cbse-program/cbse-program.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
 import { MergeAccountComponent } from './merge-account/merge-account.component';
+import { OfflineTabComponent } from './offline-tab/offline-tab.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -145,7 +146,8 @@ export function hljsLanguages() {
     CBSEProgramComponent,
     CertificatesComponent,
     OfflineDownloadManagerComponent,
-    MergeAccountComponent
+    MergeAccountComponent,
+    OfflineTabComponent
   ],
   imports: [
     BrowserModule,

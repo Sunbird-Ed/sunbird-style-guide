@@ -93,13 +93,13 @@ export class OfflineDownloadManagerComponent implements OnInit {
   <div class="d-flex flex-ai-center sb-ct-list list-item">
     <label class="mr-auto mb-0">Systems and Routiens -1</label>
     <span class="list-date mr-8">Jan 19</span>
-    <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="download icon"></i>Download</button>
-    <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="download icon"></i>Share</button>
+    <a class=""><i class="download icon"></i>Download</a>
+    <a class=""><i class="download icon"></i>Share</a>
   </div>
   <div class="d-flex flex-ai-center sb-ct-list list-item">
     <label class="mr-auto mb-0">Sachin invite Batch</label>
     <span class="list-date mr-8">Feb 19</span>
-    <button class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="download icon"></i>Share</button>
+    <a class=""><i class="download icon"></i>Share</a>
   </div>
   <div class="d-flex flex-ai-center sb-ct-list list-item">
     <label class="mr-auto mb-0">Sachin invite Batch</label>

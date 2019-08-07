@@ -40,7 +40,7 @@ a.sb-btn {
     background-color: $gray-100;
     color: $gray-200;
     border: 1px solid $gray-100;
-    cursor: not-allowed;
+    cursor: default;
   }
   & + .sb-btn {
     //margin:0 $base-block-space 0 0;
@@ -259,9 +259,9 @@ a.sb-btn {
 .sb-btn-link-error,
 .sb-btn-link-gray {
   background: none;
-  border: 0px;
-}
-.sb-btn-link-primary,
+    border: 0px;
+    }
+    .sb-btn-link-primary,
 .sb-btn-link-info {
   @include btn-theme-links($primary-color);
   &:hover,
@@ -309,12 +309,6 @@ a.sb-btn {
   &:hover {
     font-weight: $font-weight-bold;
   }
-}
-
-// button icon only
-.sb-btn-icon-only {
-  width: auto;
-  min-width: auto;
 }
 
 .sb-btn-loading-spinner {
@@ -379,7 +373,7 @@ a.sb-btn {
 *[dir="ltr"] {
   .sb-right-icon-btn {
     padding: ($base-block-space * 1) ($base-block-space * 1)
-      ($base-block-space * 1) ($base-block-space * 1);
+      ($base-block-space * 1) ($base-block-space * 2);
     i.icon {
       margin-left: $base-block-space;
       margin-right: 0;
@@ -396,7 +390,7 @@ a.sb-btn {
 *[dir="rtl"] {
   .sb-right-icon-btn {
     padding: ($base-block-space * 1) ($base-block-space * 1)
-      ($base-block-space * 1) ($base-block-space * 1);
+      ($base-block-space * 1) ($base-block-space * 2);
     i.icon {
       margin-left: 0;
       margin-right: $base-block-space;
@@ -479,9 +473,9 @@ a.sb-btn {
       opacity: 1;
       z-index: 2;
       border: none;
-      width: (($base-block-space * 3) - 2);
-      height: (($base-block-space * 3) - 2);
-      top: 2px;
+      width: (($base-block-space * 3) - 4);
+      height: (($base-block-space * 3) - 4);
+      top: 3px;
       left: 0;
       border-radius: 500rem;
       -webkit-transition: background 0.3s ease, left 0.3s ease;
@@ -562,7 +556,7 @@ a.sb-btn {
   background-color: $gray-100;
   border: 1px solid $gray-100;
   color: $gray-200;
-  cursor: not-allowed;
+  cursor: default;
 }
 .sb-btn-outline-disabled,
 .sb-btn-outline-primary[disabled],
@@ -576,7 +570,7 @@ a.sb-btn {
   background-color: $white-color;
   border: 1px solid $gray-100;
   color: $gray-100;
-  cursor: not-allowed;
+  cursor: default;
   font-weight: normal;
 }
 
