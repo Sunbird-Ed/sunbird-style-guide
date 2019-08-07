@@ -13,7 +13,7 @@
 
   i.icon {
     height: auto;
-    cursor: pointer;
+    cursor: pointer;  
     font-size: 12px;
   }
 }
@@ -45,24 +45,27 @@
     outline: 0;
     border: none;
     cursor: pointer;
+    display: inline-flex;
+    // align-items: center;
+    // justify-content: center;
+    height: 32px;
+    height: 32px;
+      padding-left: 10px;
+      padding-right: 10px;line-height: 32px;
+      border-bottom: 32px solid transparent;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
 
-    &.active {
+    &:hover, &.active {
       border-bottom: 32px solid #024f9d;
       border-left: 16px solid transparent;
       border-right: 16px solid transparent;
-      height: 0;
       position: relative;
       padding-top: 0;
       padding-bottom: 0;
-
       // border-top-left-radius: 60%;
       // border-top-right-radius: 60%;
-      span {
-        display: flex;
-        align-items: center;
-        height: 32px;
-        justify-content: center;
-      }
+
     }
   }
 
