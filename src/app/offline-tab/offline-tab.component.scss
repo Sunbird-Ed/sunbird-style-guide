@@ -13,7 +13,7 @@
 
   i.icon {
     height: auto;
-    cursor: pointer;  
+    cursor: pointer;
     font-size: 12px;
   }
 }
@@ -50,13 +50,15 @@
     // justify-content: center;
     height: 32px;
     height: 32px;
-      padding-left: 10px;
-      padding-right: 10px;line-height: 32px;
-      border-bottom: 32px solid transparent;
-      border-left: 16px solid transparent;
-      border-right: 16px solid transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    border-bottom: 32px solid transparent;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
       border-bottom: 32px solid #024f9d;
       border-left: 16px solid transparent;
       border-right: 16px solid transparent;
@@ -138,7 +140,6 @@
   }
 }
 
-
 .wifi-symbol {
   position: relative;
   display: inline-block;
@@ -146,6 +147,14 @@
   height: 8px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+
+  &.animate {
+    .wifi-circle {
+      opacity: 0;
+      -webkit-animation: wifianimation 2s infinite;
+      animation: wifianimation 2s infinite;
+    }
+  }
 
   .wifi-circle {
     display: block;
@@ -159,12 +168,6 @@
     border-style: solid;
     border-width: 2px 2px 0 0;
     border-radius: 0 100% 0 0;
-    
-    &.animate {
-      opacity: 0;
-      -webkit-animation: wifianimation 2s infinite;
-      animation: wifianimation 2s infinite;
-    }
 
     &.first {
       width: 16px;

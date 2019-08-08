@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./offline-tab.component.scss']
 })
 export class OfflineTabComponent implements OnInit, OnDestroy {
+  multiSelect1: { name: string; }[];
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
+    this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
   }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');

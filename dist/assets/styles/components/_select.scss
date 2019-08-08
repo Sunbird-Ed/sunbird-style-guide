@@ -53,3 +53,21 @@
 .ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
     color: #333;
 }
+
+.ui.selection.dropdown.sb-offline-header-selection {
+    color: white;
+    border: none;
+    min-width: 88px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background: #024f9d;
+    }
+}
+.ui.selection.dropdown.sb-offline-header-selection:not(.button)>.default.text {
+    color: white;
+}
+.ui.selection.visible.dropdown.sb-offline-header-selection > .text:not(.default) {
+    color: white;
+}
