@@ -13,7 +13,7 @@ export class OfflineTabComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
-    this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
+    this.multiSelect1 = [{name: 'English'}, {name: 'Hindi'}, {name: 'Urdu'}];
   }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
