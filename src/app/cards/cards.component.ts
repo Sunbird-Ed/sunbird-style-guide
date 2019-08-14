@@ -619,6 +619,90 @@ export class CardsComponent implements OnInit {
     },
     {
       expandCode: false,
+      title: 'Offline Card with hover gray background',
+      demoCode: `
+
+          <div class="sb-card relative" tabindex="0">
+          <div class="sb-card-body">
+            <div class="sb-card-metas">
+              <div class="sb-card-image mr-16">
+                <img src="assets/images/book.png">
+              </div>
+              <div class="sb-card-meta non-course">
+                <div class="d-flex mb-auto">
+                  <div class="sb-card-label">Worksheet</div>
+                  <i class="exclamation circle icon ml-8 sb-color-error fs-1-3"></i>
+                </div>
+                <div class="sb-card-meta-item ellipsis">
+                  Subject : English
+                </div>
+                <div class="sb-card-meta-item ellipsis mt-4">
+                  Class : Class 1,Class 2,Class 3,Class 4,Class 5
+                </div>
+                <div class="sb-card-meta-item ellipsis mt-4">
+                  Medium : Other
+                </div>
+              </div>
+            </div>
+            <h4 class="sb-card-title">
+              Data Structure and Algorithm - Assignment 1 Paperback
+            </h4>
+          </div>
+          <div class="sb-card-hover sb-card-hover-gray">
+            <div class="sb-card-hover-content">
+              <div class="d-flex flex-w-wrap flex-jc-center">
+                <i class="exclamation circle icon sb-exclamation-icon fs-2-5"></i>
+                <p class="m-16 text-center">Please connect to the internet to play the content</p>
+                <button class="sb-btn sb-btn-outline-gray sb-btn-normal sb-right-icon-btn mt-16">Export<i
+                    class="sign in alternate icon"></i></button>
+              </div>
+            </div>
+          </div>
+          </div>
+      `,
+      copyCode: `
+
+        <div class="sb-card relative" tabindex="0">
+        <div class="sb-card-body">
+          <div class="sb-card-metas">
+            <div class="sb-card-image mr-16">
+              <img src="assets/images/book.png">
+            </div>
+            <div class="sb-card-meta non-course">
+              <div class="d-flex mb-auto">
+                <div class="sb-card-label">Worksheet</div>
+                <i class="exclamation circle icon ml-8 sb-color-error fs-1-3"></i>
+              </div>
+              <div class="sb-card-meta-item ellipsis">
+                Subject : English
+              </div>
+              <div class="sb-card-meta-item ellipsis mt-4">
+                Class : Class 1,Class 2,Class 3,Class 4,Class 5
+              </div>
+              <div class="sb-card-meta-item ellipsis mt-4">
+                Medium : Other
+              </div>
+            </div>
+          </div>
+          <h4 class="sb-card-title">
+            Data Structure and Algorithm - Assignment 1 Paperback
+          </h4>
+        </div>
+        <div class="sb-card-hover sb-card-hover-gray">
+          <div class="sb-card-hover-content">
+            <div class="d-flex flex-w-wrap flex-jc-center">
+              <i class="exclamation circle icon sb-exclamation-icon fs-2-5"></i>
+              <p class="m-16 text-center">Please connect to the internet to play the content</p>
+              <button class="sb-btn sb-btn-outline-gray sb-btn-normal sb-right-icon-btn mt-16">Export<i
+                  class="sign in alternate icon"></i></button>
+            </div>
+          </div>
+        </div>
+        </div>
+      `
+    },
+    {
+      expandCode: false,
       title: 'Batch Card with list',
       demoCode: `
       <div class="ui card sb-batch-card">
