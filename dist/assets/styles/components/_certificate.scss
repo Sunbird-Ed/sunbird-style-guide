@@ -60,7 +60,7 @@
   
     .sb-certificatePage-field {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       width: $sb-certificatePage-field-width;
       margin: $sb-certificatePage-field-margin;
   
