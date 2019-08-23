@@ -47,6 +47,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
 import { MergeAccountComponent } from './merge-account/merge-account.component';
 import { OfflineTabComponent } from './offline-tab/offline-tab.component';
+import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 
 
 
@@ -99,7 +100,8 @@ const routes: Routes = [
   { path: 'certificates', component: CertificatesComponent},
   { path: 'merge-account', component: MergeAccountComponent},
   { path: 'offline-download', component: OfflineDownloadManagerComponent},
-  { path: 'offline-tab', component: OfflineTabComponent}
+  { path: 'offline-tab', component: OfflineTabComponent},
+  { path: 'account-recovery', component: AccountRecoveryComponent},
 ];
 
 @NgModule({

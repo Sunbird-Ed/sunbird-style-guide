@@ -79,6 +79,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
 import { MergeAccountComponent } from './merge-account/merge-account.component';
 import { OfflineTabComponent } from './offline-tab/offline-tab.component';
+import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -147,7 +148,8 @@ export function hljsLanguages() {
     CertificatesComponent,
     OfflineDownloadManagerComponent,
     MergeAccountComponent,
-    OfflineTabComponent
+    OfflineTabComponent,
+    AccountRecoveryComponent
   ],
   imports: [
     BrowserModule,
