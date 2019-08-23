@@ -1,0 +1,80 @@
+<!--Page Content-->
+
+<div class="docs-sections">
+  <h4 class="docs-sectionHeading">
+    Recovery Account
+    <i class="fa fa-code text-gray docs-expandCode" (click)="updateRecoverymodal = !updateRecoverymodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+
+
+    <div class="ui semi-circular dodger-blue basic label cursor-pointer" (click)="showUpdateRecoveryIDModal = !showUpdateRecoveryIDModal">
+      
+      <img class=" mr-5" src="assets/images/Recovery.svg" alt="">
+      Add Recovery Account 
+    </div>
+
+    <sui-modal *ngIf="showUpdateRecoveryIDModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'normal'" class="sb-modal" appBodyScroll
+      (dismissed)="showUpdateRecoveryIDModal = !showUpdateRecoveryIDModal" #modal>
+      <div class="sb-modal-header">
+        Update Recovery ID
+      </div>
+      <div class="sb-modal-content">
+        <p>
+          A recovery account helps you to regain access to your account if you are locked out or forget your password. Choose the recovery acount type and enter details
+        </p>
+        <div class="d-flex flex-w-wrap">
+          <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+            <input type="radio" id="email" name="options" checked>
+            <label for="email">Email Address</label>
+          </div>
+          <div class="sb-radio-btn-checkbox sb-radio-btn-primary">
+            <input type="radio" id="phone" name="options">
+            <label for="phone">Phone Number</label>
+          </div>
+        </div>
+        <div class="sb-field">
+          <input class="sb-form-control is-invalid" formcontrolname="email" placeholder="Enter Email Address" type="text">
+          <span class="sb-color-error fxsmall mt-8">
+          This email address is the same as what is linked with your profile
+        </span>
+        </div>
+        <div class="sb-field">
+          <input class="sb-form-control" formcontrolname="phone" placeholder="Enter Phone Number" type="text">
+          <span class="sb-color-error fxsmall mt-8 hide">
+             Please enter 10 digit phone number 
+            </span>
+        </div>
+
+
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary disabled">
+          Submit
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="updateRecoverymodal">
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="UpdateRecoveryIDModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="UpdateRecoveryIDModalCode"></code>
+    </pre>
+    <!--Copy code display-->
+  </div>
+  <!--/Display code-->
+</div>
+
+<!--Page Content-->
