@@ -118,4 +118,15 @@
       color: $gray-400;
     }
   }
-  
+  .ui.info.message{
+    background-color: var(--primary-0) !important;
+}
+.ui.info.message .header {
+  color: var(--primary-color) !important;
+}
+.ui.ordered.list .list, ol.ui.list ol {
+  margin-left: 2em !important;
+}
+.ui.info.message {
+  color: black !important;
+}

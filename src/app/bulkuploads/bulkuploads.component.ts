@@ -13,6 +13,9 @@ export class BulkuploadsComponent implements OnInit {
   uploadmodal;
   showViewDeatilsModal;
   viewdetailsmodal;
+  viewuploadusersmodal;
+  showUploadUserModal;
+  uploadusermodal;
 
   pageTitle = 'Modals';
   uploadModalCode = ` <div class="sb-bulk-upload">
@@ -147,7 +150,49 @@ ViewDeatilsModalCode = `<div class="docs-sectionDemoCode">
     </button>
   </div>
 </sui-modal>
-</div>`;
+</div>`
+ViewUploadUsersModalCode = `   <sui-modal *ngIf="showUploadUserModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showUploadUserModal = !showUploadUserModal" #modal>
+<div class="sb-modal-header">
+  Upload Users
+</div>
+<div class="sb-modal-content">
+  <div class="m-0">
+    <span class="m-0 mr-16">Please upload the CSV file</span>
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary">Download Sample
+      CSV</button>
+  </div>
+
+  <div class="sb-btn sb-btn-tertiary sb-btn-normal mt-8 sb-bulk-upload-btn">
+    Upload CSV file
+    <input type="file" class="sb-btn-upload" name="file" />
+  </div>
+  <div class="ui info message">
+    <div class="header">
+      Instructions:
+    </div>
+    <ol class="ui list">
+      <li>Download the CSV file. Users belonging to a single organization can be uploaded at a time in one CSV
+        file. </li>
+      <li>Enter the following mandatory details of user accounts:
+        <ol>
+          <li>FirstName: User’s first name, alphabetic value.</li>
+          <li>Phone or Email: User’s phone number (ten digit mobile number) or email ID. One of the two have to be
+            provided, however, it is advisable to provide both if available.</li>
+          <li>Username: Unique name assigned to the user by the organization, alphanumeric.</li>
+        </ol>
+      </li>
+    </ol>
+    <p>Note: All other columns in the CSV file are optional, for details on filling these, refer to</p>
+  </div>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showViewDeatilsModal = !showViewDeatilsModal">
+    Upload Users CSV
+  </button>
+</div>
+</sui-modal>`
+;
 
   ngOnInit() {
   }
