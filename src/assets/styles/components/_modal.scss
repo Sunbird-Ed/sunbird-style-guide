@@ -5,6 +5,7 @@
         @include margin(3.5rem auto 0 auto);
         @include position(null, 0 0 null 0); //bourbon
         @include size(100%, auto); //bourbon
+        background: none;
         .sb-modal-header {
             background-color: $sb-modal-header-bg;
             color: $sb-modal-header-color;
@@ -19,6 +20,7 @@
             min-height: 100px;
             padding: $sb-modal-content-padding;
             overflow-y: auto;
+            background:$white;
         }
         &>.close {
             color: $white-color;
@@ -94,15 +96,26 @@
             }
         }
     } // sb modal confirmation/alert styles 
+    &-center {
+        .sb-modal-content {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+        }
+        .sb-modal-actions {
+          @extend .sb-modal-content;
+        }
+    }
     &.sb-warning .ui.modal {
         .sb-modal-header {
             background-color: $sb-modal-header-bg-warning;
         }
         .sb-modal-actions {
-            .sb-btn-normal:first-child {
+            .sb-btn:first-child {
                 @extend .sb-btn-warning;
             }
-            .sb-btn-normal:last-child {
+            .sb-btn:last-child {
                 @extend .sb-btn-outline-warning;
             }
         }
@@ -112,10 +125,10 @@
             background-color: $sb-modal-header-bg-success;
         }
         .sb-modal-actions {
-            .sb-btn-normal:first-child {
+            .sb-btn:first-child {
                 @extend .sb-btn-success;
             }
-            .sb-btn-normal:last-child {
+            .sb-btn:last-child {
                 @extend .sb-btn-outline-success;
             }
         }
@@ -125,10 +138,10 @@
             background-color: $sb-modal-header-bg-error;
         }
         .sb-modal-actions {
-            .sb-btn-normal:first-child {
+            .sb-btn:first-child {
                 @extend .sb-btn-error;
             }
-            .sb-btn-normal:last-child {
+            .sb-btn:last-child {
                 @extend .sb-btn-outline-error;
             }
         }
