@@ -52,27 +52,27 @@ export class PageSectionComponent implements OnInit {
   ];
 
   slideConfig = {
-    "slidesToShow": 4,
+    "slidesToShow": 6,
     "slidesToScroll": 4,
     "responsive": [
       {
         "breakpoint": 2800,
         "settings": {
-          "slidesToShow": 6,
-          "slidesToScroll": 6
+          "slidesToShow": 5,
+          "slidesToScroll": 3
         }
       },
       {
         "breakpoint": 2200,
         "settings": {
           "slidesToShow": 5,
-          "slidesToScroll": 5
+          "slidesToScroll": 3
         }
       },
       {
         "breakpoint": 1920,
         "settings": {
-          "slidesToShow": 4,
+          "slidesToShow": 5,
           "slidesToScroll": 3
         }
       },

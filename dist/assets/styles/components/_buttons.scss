@@ -213,27 +213,6 @@ a.sb-btn {
     background: $tertiary-400;
   }
 }
-.sb-btn-success {
-  @include btn-theme($success-color);
-  &:hover,
-  &:active {
-    background: $secondary-400;
-  }
-}
-.sb-btn-info {
-  @include btn-theme($info-color);
-  &:hover,
-  &:active {
-    background: $primary-800;
-  }
-}
-.sb-btn-warning {
-  @include btn-theme($warning-color);
-  &:hover,
-  &:active {
-    background: $tertiary-400;
-  }
-}
 .sb-btn-error {
   @include btn-theme($danger-color);
   &:hover,
@@ -259,9 +238,9 @@ a.sb-btn {
 .sb-btn-link-error,
 .sb-btn-link-gray {
   background: none;
-    border: 0px;
-    }
-    .sb-btn-link-primary,
+  border: 0px;
+}
+.sb-btn-link-primary,
 .sb-btn-link-info {
   @include btn-theme-links($primary-color);
   &:hover,
