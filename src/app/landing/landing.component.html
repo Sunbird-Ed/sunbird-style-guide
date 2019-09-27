@@ -1,86 +1,124 @@
 <div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page">
-
-
-  <div class="">
-    <div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page-container">
-      <div class="sb-landing-page-logo">
-        <img src="assets/images/sunbird-logo.png" />
-      </div>
-      <div class="sb-landing-section-title">
-        <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
-      </div>
-      <!-- <div class="sb-landing-logo">
-                <img src="https://ekstep.org/img/logo.png"/>
-              </div> -->
-    </div>
-    <div class="mt-32 sb-search-box medium no-btn ml-auto mr-auto sb-landing-page-search mb-32"
-      style="min-width: 392px;">
-      <div class="input-div relative">
-        <i class="search icon"></i>
-        <input class="sb-search-input" autofocus #searchInput type="text" (keyup)="menuSearch($event)"
-          placeholder="Search for Components, Pages" title="Search for Components, Pages" />
-      </div>
-    </div>
-
-    <ul id="myUL" class="sb-landing-page-list">
-      <li class="site-list">
-        <ul>
-            <li class="sb-site-list-item"><a href="docs/assets/design-system/index.html" target="_blank">Design System</a></li>
-            <li class="sb-site-list-item"><a routerLink="/variables" routerLinkActive="active" (click)="onClickGetName($event)">SB Variables</a></li>
-            <li class="sb-site-list-item"><a routerLink="/landing" routerLinkActive="active" (click)="onClickGetName($event)"> Landing Page</a></li>
-          <li class="sb-site-list-item"><a routerLink="/gridlayout" routerLinkActive="active" (click)="onClickGetName($event)">Grid & Layout</a></li>
-          <li class="sb-site-list-item"><a routerLink="/spacing" routerLinkActive="active" (click)="onClickGetName($event)">Spacing</a></li>
-          <li class="sb-site-list-item"><a routerLink="/typography" routerLinkActive="active" (click)="onClickGetName($event)">Typography</a></li>
-          <li class="sb-site-list-item"><a routerLink="/colors" routerLinkActive="active" (click)="onClickGetName($event)">Colors</a></li>
-          <li class="sb-site-list-item"><a routerLink="/accordion" routerLinkActive="active" (click)="onClickGetName($event)">Accordions</a></li>
-          <li class="sb-site-list-item"><a routerLink="/buttons" routerLinkActive="active" (click)="onClickGetName($event)">Buttons</a></li>
-          <li class="sb-site-list-item"><a routerLink="/cards" routerLinkActive="active" (click)="onClickGetName($event)">Cards</a></li>
-          <li class="sb-site-list-item"><a routerLink="/filters" routerLinkActive="active" (click)="onClickGetName($event)">Filter</a></li>
-          <li class="sb-site-list-item"><a routerLink="/forms" routerLinkActive="active" (click)="onClickGetName($event)">Forms</a></li>
-          <li class="sb-site-list-item"><a routerLink="/footer" routerLinkActive="active" (click)="onClickGetName($event)">Footer</a></li>
-          <li class="sb-site-list-item"><a routerLink="/guidetour" routerLinkActive="active" (click)="onClickGetName($event)">Guide Tour</a></li>
-          <li class="sb-site-list-item"><a routerLink="/header" routerLinkActive="active" (click)="onClickGetName($event)">Header</a></li>
-          <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active" (click)="onClickGetName($event)">Icons</a></li>
-          <li class="sb-site-list-item"><a routerLink="/labels" routerLinkActive="active" (click)="onClickGetName($event)">Labels</a></li>
-          <li class="sb-site-list-item"><a routerLink="/lists" routerLinkActive="active" (click)="onClickGetName($event)">Lists</a></li>
-          <li class="sb-site-list-item"><a routerLink="/loaders" routerLinkActive="active" (click)="onClickGetName($event)">Loaders</a></li>
-          <li class="sb-site-list-item"><a routerLink="/menus" routerLinkActive="active" (click)="onClickGetName($event)">Menus</a></li>
-          <li class="sb-site-list-item"><a routerLink="/metadata" routerLinkActive="active" (click)="onClickGetName($event)">Metadata</a></li>
-          <li class="sb-site-list-item"><a routerLink="/modals" routerLinkActive="active" (click)="onClickGetName($event)">Modals</a></li>
-          <li class="sb-site-list-item"><a routerLink="/page-section" routerLinkActive="active" (click)="onClickGetName($event)">Page Sections</a></li>
-          <li class="sb-site-list-item"><a routerLink="/pagination" routerLinkActive="active" (click)="onClickGetName($event)">Pagination</a></li>
-          <li class="sb-site-list-item"><a routerLink="/rating" routerLinkActive="active" (click)="onClickGetName($event)">Rating</a></li>
-          <li class="sb-site-list-item"><a routerLink="/search" routerLinkActive="active" (click)="onClickGetName($event)">Search</a></li>
-          <li class="sb-site-list-item"><a routerLink="/select" routerLinkActive="active" (click)="onClickGetName($event)">Select</a></li>
-          <li class="sb-site-list-item"><a routerLink="/tables" routerLinkActive="active" (click)="onClickGetName($event)">Tables</a></li>
-          <li class="sb-site-list-item"><a routerLink="/tabs" routerLinkActive="active" (click)="onClickGetName($event)">Tabs</a></li>
-          <li class="sb-site-list-item"><a routerLink="/toasters" routerLinkActive="active" (click)="onClickGetName($event)">Toast</a></li>
-          <li class="sb-site-list-item"><a routerLink="/tooltip" routerLinkActive="active" (click)="onClickGetName($event)">Tooltip</a></li>
-          <li class="sb-site-list-item"><a routerLink="/treenavigation" routerLinkActive="active" (click)="onClickGetName($event)">Tree Navigation</a></li>
-          <li class="sb-site-list-item"><a routerLink="/bulkuploads" routerLinkActive="active">Bulk Uploads</a></li>
-          <li class="sb-site-list-item"><a routerLink="/workspace" routerLinkActive="active">Workspace</a></li>
-          <li class="sb-site-list-item"><a routerLink="/certificates" routerLinkActive="active">Certificates</a></li>
-          <li class="sb-site-list-item"><a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a></li>
-          <li class="sb-site-list-item"><a routerLink="/online-desktop-app" routerLinkActive="active">Desktop App Download</a></li>
-          <li class="sb-site-list-item"><a routerLink="/offline-desktop-app" routerLinkActive="active">Offline Desktop App</a></li>
-          <li class="sb-site-list-item"><a routerLink="/help-page" routerLinkActive="active"> FAQ's</a></li>
-          <li class="sb-site-list-item"><a routerLink="/help-center" routerLinkActive="active"> Help Center</a></li>
-          <li class="sb-site-list-item"><a routerLink="/library" routerLinkActive="active" target="_blank"> Library</a>
-          </li>
-          <li class="sb-site-list-item"><a routerLink="/CBSE-program" routerLinkActive="active" target="_blank"> CBSE Program</a></li>
-          <li class="sb-site-list-item"><a routerLink="/merged-account" routerLinkActive="active">Merged Certificate</a></li>
-          <li class="sb-site-list-item"><a routerLink="/account-recovery" routerLinkActive="active">Account Recovery</a></li>
-          <li class="sb-site-list-item"><a routerLink="/sizing" routerLinkActive="active" (click)="onClickGetName($event)">Sizing</a></li>
-          <li class="sb-site-list-item"><a routerLink="/spacing" routerLinkActive="active" (click)="onClickGetName($event)">Spacing</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="sb-landing-page-copyright d-flex flex-dc flex-ai-center">
-    <div class="sb-landing-page-copyright-text">
-      Copyright ©2016 <a href="https://www.sunbird.org/" title="Sunbird.org" target="_blank">Sunbird.org</a>, All Rights
-      Reserved.
-    </div>
-  </div>
-</div>
+   
+     <ul id="myUL" class="sb-landing-page-list hide">
+       <li class="site-list">
+         <ul>
+           <li class="sb-site-list-item"><a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
+           </li>
+           <li class="sb-site-list-item"><a routerLink="/variables" routerLinkActive="active"
+               (click)="onClickGetName($event)">SB Variables</a></li>
+           <li class="sb-site-list-item"><a routerLink="/gridlayout" routerLinkActive="active"
+               (click)="onClickGetName($event)">Grid & Layout</a></li>
+           <li class="sb-site-list-item"><a routerLink="/spacing" routerLinkActive="active"
+               (click)="onClickGetName($event)">Spacing</a></li>
+           <li class="sb-site-list-item"><a routerLink="/typography" routerLinkActive="active"
+               (click)="onClickGetName($event)">Typography</a></li>
+           <li class="sb-site-list-item"><a routerLink="/colors" routerLinkActive="active"
+               (click)="onClickGetName($event)">Colors</a></li>
+           <li class="sb-site-list-item"><a routerLink="/accordion" routerLinkActive="active"
+               (click)="onClickGetName($event)">Accordions</a></li>
+           <li class="sb-site-list-item"><a routerLink="/buttons" routerLinkActive="active"
+               (click)="onClickGetName($event)">Buttons</a></li>
+           <li class="sb-site-list-item"><a routerLink="/cards" routerLinkActive="active"
+               (click)="onClickGetName($event)">Cards</a></li>
+           <li class="sb-site-list-item"><a routerLink="/filters" routerLinkActive="active"
+               (click)="onClickGetName($event)">Filter</a></li>
+           <li class="sb-site-list-item"><a routerLink="/forms" routerLinkActive="active"
+               (click)="onClickGetName($event)">Forms</a></li>
+           <li class="sb-site-list-item"><a routerLink="/footer" routerLinkActive="active"
+               (click)="onClickGetName($event)">Footer</a></li>
+           <li class="sb-site-list-item"><a routerLink="/guidetour" routerLinkActive="active"
+               (click)="onClickGetName($event)">Guide Tour</a></li>
+           <li class="sb-site-list-item"><a routerLink="/header" routerLinkActive="active"
+               (click)="onClickGetName($event)">Header</a></li>
+           <li class="sb-site-list-item"><a routerLink="/icons" routerLinkActive="active"
+               (click)="onClickGetName($event)">Icons</a></li>
+           <li class="sb-site-list-item"><a routerLink="/labels" routerLinkActive="active"
+               (click)="onClickGetName($event)">Labels</a></li>
+           <li class="sb-site-list-item"><a routerLink="/lists" routerLinkActive="active"
+               (click)="onClickGetName($event)">Lists</a></li>
+           <li class="sb-site-list-item"><a routerLink="/loaders" routerLinkActive="active"
+               (click)="onClickGetName($event)">Loaders</a></li>
+           <li class="sb-site-list-item"><a routerLink="/menus" routerLinkActive="active"
+               (click)="onClickGetName($event)">Menus</a></li>
+           <li class="sb-site-list-item"><a routerLink="/metadata" routerLinkActive="active"
+               (click)="onClickGetName($event)">Metadata</a></li>
+           <li class="sb-site-list-item"><a routerLink="/modals" routerLinkActive="active"
+               (click)="onClickGetName($event)">Modals</a></li>
+           <li class="sb-site-list-item"><a routerLink="/page-section" routerLinkActive="active"
+               (click)="onClickGetName($event)">Page Sections</a></li>
+           <li class="sb-site-list-item"><a routerLink="/pagination" routerLinkActive="active"
+               (click)="onClickGetName($event)">Pagination</a></li>
+           <li class="sb-site-list-item"><a routerLink="/rating" routerLinkActive="active"
+               (click)="onClickGetName($event)">Rating</a></li>
+           <li class="sb-site-list-item"><a routerLink="/search" routerLinkActive="active"
+               (click)="onClickGetName($event)">Search</a></li>
+           <li class="sb-site-list-item"><a routerLink="/select" routerLinkActive="active"
+               (click)="onClickGetName($event)">Select</a></li>
+           <li class="sb-site-list-item"><a routerLink="/tables" routerLinkActive="active"
+               (click)="onClickGetName($event)">Tables</a></li>
+           <li class="sb-site-list-item"><a routerLink="/tabs" routerLinkActive="active"
+               (click)="onClickGetName($event)">Tabs</a></li>
+           <li class="sb-site-list-item"><a routerLink="/toasters" routerLinkActive="active"
+               (click)="onClickGetName($event)">Toast</a></li>
+           <li class="sb-site-list-item"><a routerLink="/tooltip" routerLinkActive="active"
+               (click)="onClickGetName($event)">Tooltip</a></li>
+           <li class="sb-site-list-item"><a routerLink="/treenavigation" routerLinkActive="active"
+               (click)="onClickGetName($event)">Tree Navigation</a></li>
+           <li class="sb-site-list-item"><a routerLink="/bulkuploads" routerLinkActive="active">Bulk Uploads</a></li>
+           <li class="sb-site-list-item"><a routerLink="/workspace" routerLinkActive="active">Workspace</a></li>
+           <li class="sb-site-list-item"><a routerLink="/certificates" routerLinkActive="active">Certificates</a></li>
+           <li class="sb-site-list-item"><a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a></li>
+           <li class="sb-site-list-item"><a routerLink="/online-desktop-app" routerLinkActive="active">Desktop App
+               Download</a></li>
+           <li class="sb-site-list-item"><a routerLink="/offline-desktop-app" routerLinkActive="active">Offline Desktop
+               App</a></li>
+           <li class="sb-site-list-item"><a routerLink="/help-page" routerLinkActive="active"> FAQ's</a></li>
+           <li class="sb-site-list-item"><a routerLink="/help-center" routerLinkActive="active"> Help Center</a></li>
+           <li class="sb-site-list-item"><a routerLink="/library" routerLinkActive="active" target="_blank"> Library</a>
+           </li>
+           <li class="sb-site-list-item"><a routerLink="/CBSE-program" routerLinkActive="active" target="_blank"> CBSE
+               Program</a></li>
+           <li class="sb-site-list-item"><a routerLink="/merged-account" routerLinkActive="active">Merged Certificate</a>
+           </li>
+           <li class="sb-site-list-item"><a routerLink="/account-recovery" routerLinkActive="active">Account Recovery</a>
+           </li>
+           <li class="sb-site-list-item"><a routerLink="/sizing" routerLinkActive="active"
+               (click)="onClickGetName($event)">Sizing</a></li>
+           <li class="sb-site-list-item"><a routerLink="/spacing" routerLinkActive="active"
+               (click)="onClickGetName($event)">Spacing</a></li>
+         </ul>
+       </li>
+     </ul>
+   
+   </div>
+   
+   <div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page">
+     <div class="d-flex flex-dc flex-ai-center flex-js-center sb-landing-page-container">
+       <div class="sb-landing-page-logo">
+         <img src="assets/images/sunbird-logo.png" />
+       </div>
+       <div class="sb-landing-section-title">
+         <h4 class="sb-doc-app-title">Sunbird - Design System</h4>
+       </div>
+       <!-- <div class="sb-landing-logo">
+                     <img src="https://ekstep.org/img/logo.png"/>
+                   </div> -->
+     </div>
+     <!-- <div class="mt-32 sb-search-box medium no-btn ml-auto mr-auto sb-landing-page-search mb-32" style="min-width: 392px;">
+       <div class="input-div relative">
+         <i class="search icon"></i>
+         <input class="sb-search-input" autofocus #searchInput type="text" (keyup)="menuSearch($event)"
+           placeholder="Search for Components, Pages" title="Search for Components, Pages" />
+       </div>
+     </div> -->
+     <div class="landing-page-menu">
+       <app-sidebar></app-sidebar>
+     </div>
+     <div class="sb-landing-page-copyright d-flex flex-dc flex-ai-center">
+       <div class="sb-landing-page-copyright-text">
+         Copyright ©2016 <a href="https://www.sunbird.org/" title="Sunbird.org" target="_blank">Sunbird.org</a>, All Rights
+         Reserved.
+       </div>
+     </div>
+   </div>

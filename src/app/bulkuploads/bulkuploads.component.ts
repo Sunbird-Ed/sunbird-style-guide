@@ -16,6 +16,9 @@ export class BulkuploadsComponent implements OnInit {
   viewuploadusersmodal;
   showUploadUserModal;
   uploadusermodal;
+  showErrorUserModal;
+  errorUserModal;
+  errorusermodal;
 
   pageTitle = 'Modals';
   uploadModalCode = ` <div class="sb-bulk-upload">
@@ -189,6 +192,37 @@ ViewUploadUsersModalCode = `   <sui-modal *ngIf="showUploadUserModal" [mustScrol
 <div class="sb-modal-actions">
   <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showViewDeatilsModal = !showViewDeatilsModal">
     Upload Users CSV
+  </button>
+</div>
+</sui-modal>`
+ViewErrorUsersModalCode = `  <sui-modal *ngIf="showErrorUserModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal sb-error" appBodyScroll (dismissed)="showErrorUserModal = !showErrorUserModal" #modal>
+<div class="sb-modal-header">
+  Error in Upload Users
+</div>
+<div class="sb-modal-content">
+  <div class="ui error message">
+    <div class="header">
+      Errors:
+    </div>
+    <ol class="ui list">
+      <li>Download the CSV file. Users belonging to a single organization can be uploaded at a time in one CSV
+        file. </li>
+      <li>Enter the following mandatory details of user accounts:
+        <ol>
+          <li>FirstName: User’s first name, alphabetic value.</li>
+          <li>Phone or Email: User’s phone number (ten digit mobile number) or email ID. One of the two have to be
+            provided, however, it is advisable to provide both if available.</li>
+          <li>Username: Unique name assigned to the user by the organization, alphanumeric.</li>
+        </ol>
+      </li>
+    </ol>
+    <p>Note: All other columns in the CSV file are optional, for details on filling these, refer to</p>
+  </div>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal  sb-btn-error" (click)="showViewDeatilsModal = !showViewDeatilsModal">
+    Copy to clipboard
   </button>
 </div>
 </sui-modal>`

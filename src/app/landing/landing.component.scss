@@ -1,10 +1,11 @@
 @import "variables";
+::ng-deep{
 
 .sb-landing-page {
   ul {
     padding:0px;margin:0px;
   }
-  height: 100vh;
+  //height: 100vh;
   justify-content: center;
   justify-content: space-evenly;
   padding:24px;
@@ -32,60 +33,61 @@
   .sb-landing-page-search {
     margin: 20px 0;
   }
-}
 
-.sb-landing-page-list {
-  .sb-site-list-item {
-    &:hover {
-    //   background: #f1f3f4;
-      border: none;
-      a {
-        color: #000;
+  .sb-landing-page-list {
+    .sb-site-list-item {
+      &:hover {
+      //   background: #f1f3f4;
+        border: none;
+        a {
+          color: #000;
+        }
       }
     }
   }
-}
-#myUL {
-  max-width: 1024px;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 200px;
-  overflow:auto;
-
-  li {
-    list-style: none;
-    margin: 0px 0px;
-    display: inline-block;
-
-    ul li {
+  #myUL {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 200px;
+    overflow:auto;
+  
+    li {
+      list-style: none;
+      margin: 0px 0px;
       display: inline-block;
       a {
-      margin: 4px;
-      padding: 4px 12px;
-      line-height: inherit;
-      border: 1px solid var(--gray-100);
-      border-radius: 60px;
-      background: #fff;
-      font-size: 12px;display: inline-block;
-      &:hover {
-        background: $primary-200;
-        color: $white;
-        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.16);
-      }
-      }
+        margin: 4px;
+        padding: 4px 12px;
+        line-height: inherit;
+        border: 1px solid var(--gray-100);
+        border-radius: 60px;
+        background: #fff;
+        font-size: 12px;display: inline-block;
+        &:hover {
+          background: $primary-200;
+          color: $white;
+          box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.16);
+        }
+        }
     }
   }
+  
+  h4.sb-site-list-heading {
+    display: none;
+  }
+  
+  .sb-landing-page-copyright {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 24px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    margin-top: 24px;font-size:12px;
+  }
+
 }
 
-h4.sb-site-list-heading {
-  display: none;
-}
 
-.sb-landing-page-copyright {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding-top: 24px;
-  width: 100%;
-  border-top: 1px solid #ddd;
-  margin-top: 24px;font-size:12px;
+
 }
