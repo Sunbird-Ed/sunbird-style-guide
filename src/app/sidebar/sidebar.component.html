@@ -1,208 +1,178 @@
 <div class="sb-branding pl-8">
-  <a routerLink="/" routerLinkActive="active"><img src="docs/assets/images/sunbird-logo.png"
-      alt="Sunbird - Design System" /></a>
-</div>
-
-<div class="p-8" style="box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.16);">
-  <div class="sb-search-box small no-btn">
-    <div class="input-div relative">
-      <i class="search icon"></i>
-      <input class="sb-search-input" #searchInput type="text" (keyup)="menuSearch($event.target.value.toUpperCase())"
-        placeholder="Search for Components, Pages" title="Search for Components, Pages" />
-      <i class="close icon hide" (click)="clearSearchInput()"></i>
-      <div class="sb-loader hide"></div>
+    <a routerLink="/" routerLinkActive="active"><img src="docs/assets/images/sunbird-logo.png"
+        alt="Sunbird - Design System" /></a>
+  </div>
+  
+  <div class="p-8 sb-side-bar-search">
+    <div class="sb-search-box small no-btn">
+      <div class="input-div relative">
+        <i class="search icon"></i>
+        <input class="sb-search-input" #searchInput type="text" (keyup)="menuSearch($event.target.value.toUpperCase())"
+          placeholder="Search for Components, Pages" title="Search for Components, Pages" />
+        <i class="close icon hide" (click)="clearSearchInput()"></i>
+        <div class="sb-loader hide"></div>
+      </div>
     </div>
   </div>
-</div>
-<div class="sb-components-sidebar">
-  <ul id="myUL">
-    <li class="site-list">
+
+  
+  <div class="sb-components-sidebar">
+    <ul id="myUL">
       <h4 class="sb-site-list-heading">Reference</h4>
-      <ul>
-        <li class="sb-site-list-item">
-          <a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/variables" routerLinkActive="active">SB Variables</a>
-        </li>
-      </ul>
-    </li>
-    <li class="site-list">
+      <li class="sb-site-list-item">
+        <a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/variables" routerLinkActive="active">SB Variables</a>
+      </li>
+  
       <h4 class="sb-site-list-heading">Base</h4>
       <!-- [routerLinkActiveOptions]="{ exact: true }" -->
-      <ul>
-        <li class="sb-site-list-item">
-          <a routerLink="/gridlayout" routerLinkActive="active">Grid & Layout</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/spacing" routerLinkActive="active">Spacing</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/typography" routerLinkActive="active">Typography</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/colors" routerLinkActive="active">Colors</a>
-        </li>
-      </ul>
-    </li>
-    <li class="site-list">
+      <li class="sb-site-list-item">
+        <a routerLink="/gridlayout" routerLinkActive="active">Grid & Layout</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/spacing" routerLinkActive="active">Spacing</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/typography" routerLinkActive="active">Typography</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/colors" routerLinkActive="active">Colors</a>
+      </li>
+  
       <h4 class="sb-site-list-heading">Components</h4>
-      <ul>
-        <li class="sb-site-list-item">
-          <a routerLink="/accordion" routerLinkActive="active">Accordions</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/buttons" routerLinkActive="active">Buttons</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/cards" routerLinkActive="active">Cards</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/filters" routerLinkActive="active">Filter</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/forms" routerLinkActive="active">Forms</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/footer" routerLinkActive="active">Footer</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/guidetour" routerLinkActive="active">Guide Tour</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/header" routerLinkActive="active">Header</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/icons" routerLinkActive="active">Icons</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/labels" routerLinkActive="active">Labels</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/lists" routerLinkActive="active">Lists</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/loaders" routerLinkActive="active">Loaders</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/menus" routerLinkActive="active">Menus</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/metadata" routerLinkActive="active">Metadata</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/modals" routerLinkActive="active">Modals</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/page-section" routerLinkActive="active">Page Sections</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/pagination" routerLinkActive="active">Pagination</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/rating" routerLinkActive="active">Rating</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/search" routerLinkActive="active">Search</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/select" routerLinkActive="active">Select</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/tables" routerLinkActive="active">Tables</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/tabs" routerLinkActive="active">Tabs</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/toasters" routerLinkActive="active">Toast</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/tooltip" routerLinkActive="active">Tooltip</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/treenavigation" routerLinkActive="active">Tree Navigation</a>
-        </li>
-      </ul>
-    </li>
-    <li class="site-list">
+      <li class="sb-site-list-item">
+        <a routerLink="/accordion" routerLinkActive="active">Accordions</a>
+      </li>
+      <li class="sb-site-list-item" (click)="vinod = !vinod">
+        <a routerLink="/buttons" routerLinkActive="active">Buttons</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/cards" routerLinkActive="active">Cards</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/filters" routerLinkActive="active">Filter</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/forms" routerLinkActive="active">Forms</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/footer" routerLinkActive="active">Footer</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/guidetour" routerLinkActive="active">Guide Tour</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/header" routerLinkActive="active">Header</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/icons" routerLinkActive="active">Icons</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/labels" routerLinkActive="active">Labels</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/lists" routerLinkActive="active">Lists</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/loaders" routerLinkActive="active">Loaders</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/menus" routerLinkActive="active">Menus</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/metadata" routerLinkActive="active">Metadata</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/modals" routerLinkActive="active">Modals</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/page-section" routerLinkActive="active">Page Sections</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/pagination" routerLinkActive="active">Pagination</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/rating" routerLinkActive="active">Rating</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/search" routerLinkActive="active">Search</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/select" routerLinkActive="active">Select</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/tables" routerLinkActive="active">Tables</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/tabs" routerLinkActive="active">Tabs</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/toasters" routerLinkActive="active">Toast</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/tooltip" routerLinkActive="active">Tooltip</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/treenavigation" routerLinkActive="active">Tree Navigation</a>
+      </li>
       <h4 class="sb-site-list-heading">Pages/Templates</h4>
-      <ul>
+       <li class="sb-site-list-item">
+              <a routerLink="/bulkuploads" routerLinkActive="active">Bulk Uploads</a>
+            </li>
           <li class="sb-site-list-item">
-            <a routerLink="/bulkuploads" routerLinkActive="active">Bulk Uploads</a>
+            <a routerLink="/workspace" routerLinkActive="active">Workspace</a>
           </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/workspace" routerLinkActive="active">Workspace</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/certificates" routerLinkActive="active" target="_blank">Certificates</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/offline-download" routerLinkActive="active">Certificates trained</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/online-desktop-app" routerLinkActive="active">Desktop App Download</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/offline-desktop-app" routerLinkActive="active">Offline Desktop App</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/help-page" routerLinkActive="active">FAQs</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/help-center" routerLinkActive="active">
-            Help Center</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/library" routerLinkActive="active" target="_blank"> Library</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/CBSE-program" routerLinkActive="active" target="_blank"> CBSE Program</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/merge-account" routerLinkActive="active"> Merge Account</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/account-recovery" routerLinkActive="active"> Account Recovery</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/offline-tab" routerLinkActive="active"> Offline Tab header</a>
-        </li>
-      </ul>
-    </li>
-    <li class="d-none">
-      <h4>Utilities</h4>
-      <ul>
-        <li class="sb-site-list-item">
-          <a routerLink="/sizing" routerLinkActive="active">Sizing</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/spacing" routerLinkActive="active">Spacing</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/shadows" routerLinkActive="active">Shadows</a>
-        </li>
-      </ul>
-    </li>
-    <li class="site-list">
-      <h4 class="sb-site-list-heading">Coming Soon</h4>
-      <ul>
-        <li class="sb-site-list-item">
-          <a routerLink="/tooltips" routerLinkActive="active">Toolbars</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/courses" routerLinkActive="active">Courses</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/search-results" routerLinkActive="active">Search Results</a>
-        </li>
-        <li class="sb-site-list-item">
-          <a routerLink="/profile" routerLinkActive="active">Profile</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+          <li class="sb-site-list-item">
+            <a routerLink="/certificates" routerLinkActive="active" target="_blank">Certificates</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/offline-download" routerLinkActive="active">Certificates trained</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/form-elements" routerLinkActive="active">Sample Forms</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/online-desktop-app" routerLinkActive="active">Desktop App Download</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/offline-desktop-app" routerLinkActive="active">Offline Desktop App</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/help-page" routerLinkActive="active">FAQs</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/help-center" routerLinkActive="active">
+              Help Center</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/library" routerLinkActive="active" target="_blank"> Library</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/CBSE-program" routerLinkActive="active" target="_blank"> CBSE Program</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/merge-account" routerLinkActive="active"> Merge Account</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/account-recovery" routerLinkActive="active"> Account Recovery</a>
+          </li>
+          <li class="sb-site-list-item">
+            <a routerLink="/offline-tab" routerLinkActive="active"> Offline Tab header</a>
+          </li>
+      <!-- <h4 class="sb-site-list-heading hide">Coming Soon</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/tooltips" routerLinkActive="active">Toolbars</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/courses" routerLinkActive="active">Courses</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/search-results" routerLinkActive="active">Search Results</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      </li> -->
+    </ul>
+  </div>
