@@ -2,248 +2,186 @@
   <!-- header component -->
   <app-header [ShowContent]="false"></app-header>
   <!-- page section/carousel component -->
-  <div class="ui container my-32">
 
-      <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course">
+  <div class="sb-back-bar"><div class="ui container"><h4 style="font-size: 14px;"><i class="icon arrow left"></i> Back to Library</h4></div></div>
+<style>
+  
+
+.sb-column-container-grid {
+  display:grid;
+  grid-template-columns: 1fr;  /* repeat(auto-fit, minmax(240px, 1fr)); */
+    grid-template-rows: 100px 150px 100px 100px; 
+  grid-gap: 24px;
+  grid-template-areas: "player" "toc" "player-info" "player-meta";
+  margin-top:24px !important;
+}
+.grid-item{
+background: #f2f2f2;
+}
+.sb-player-area {
+  grid-area:player;
+}
+.sb-toc-area {
+  grid-area:toc;
+  grid-row:inherit;
+}
+.sb-player-info-area {
+  grid-area:player-info;
+}
+.sb-player-meta-area {
+  grid-area:player-meta;
+}
+@media only screen and (min-width: 768px) {
+  .sb-column-container-grid {
+  grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 150px 100px; 
+  grid-template-areas: "player toc" "player-info toc" "player-meta toc";
+  }
+  .sb-toc-area {
+  grid-row: 1 / span 3;
+  margin-top: -72px;
+  }
+}
+</style>
+
+<div class="ui container sb-column-container-grid mt-24">
+  <div class="sb-player-area grid-item">Player Area</div>
+  <div class="sb-toc-area grid-item">TOC Area</div>
+  <div class="sb-player-info-area grid-item">Player Description</div>
+  <div class="sb-player-meta-area grid-item">Player Meta Data</div>
+</div>
+
+
+
+  <div class="ui container stackable twelve  column grid m-0 hide hidden">
+      <!-- left panel -->
+      <div class="eight wide column p-0 pt-24 pr-24">
+        <div class="sb-player-panel responsive-ct">
+          <iframe class="sb-mobileDevice-videoScreen" src="https://www.youtube.com/embed/2Xgff-gsf0A?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="sb-player-desc mt-24" style="background:#f2f2f2;min-height:100px;">
           
-            <div class="sbcard__main_area">
-            <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
           
-            <div class="sbcard__info">
-              <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-              <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
+        </div>
+        <div class="sb-player-meta mt-24">
+           
+
+          <div class="sb-meta-data-container sb-meta-data-row-facing">
+            <h4 class="sb-section-title">Content Information</h4>
+            <dl class="sb-meta-data sb-meta-d1">
+              <dt>Title</dt>
+              <dd>SNF Chapter 1 Kalrav Hindi</dd>
+              <dt>Ownership</dt>
+              <dd></dd>
+              <dt>Organization</dt>
+              <dd>NTP</dd>
+              <dt>Author</dt>
+              <dd>Balaji A</dd>
+              <dt>Medium</dt>
+              <dd></dd>
+              <dt>Board/Syllabus</dt>
+              <dd>State (Andhra Pradesh)</dd>
+              <dt>Class</dt>
+              <dd>Class 1</dd>
+              <dt>Subject</dt>
+              <dd>Hindi</dd>
+              <dt>Created on</dt>
+              <dd>31st March 2018</dd>
+              <dt>Last update</dt>
+              <dd>31st March 2018</dd>
+              <dt>concept</dt>
+              <dd>comprehension of poems</dd>
+              <dt>Keywords</dt>
+              <dd>comprehension, poems</dd>
+              <dt>Resource Type</dt>
+              <dd>read</dd>
+            </dl>
             </div>
-          </div>
-          
-            <div class="sbcard__moreinfo sb__DesktopOnly">
-              <div class="sbcard__meta2">
-              <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-              <div class="sbcard__org">CBSE</div>
-              </div>
-          
-              <div class="sbcard__tags">
-                <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                <span class="sbcard__type">Book</span>
-              </div>
-            </div>
-          
-            </div>
-          
-            <div class="sbcard sbcard--resource sbcard--course">
-          
-                <div class="sbcard__main_area">
-                <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-              
-                <div class="sbcard__info">
-                  <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                  <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                </div>
-              </div>
-              
-                <div class="sbcard__moreinfo sb__DesktopOnly">
-                  <div class="sbcard__meta2">
-                  <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                  <div class="sbcard__org">CBSE</div>
-                  </div>
-              
-                  <div class="sbcard__tags">
-                    <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                    <span class="sbcard__type">Book</span>
-                  </div>
-                </div>
-              
-                </div>
-          
-                <div class="sbcard sbcard--resource sbcard--course">
-          
-                    <div class="sbcard__main_area">
-                    <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-                  
-                    <div class="sbcard__info">
-                      <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                      <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                    </div>
-                  </div>
-                  
-                    <div class="sbcard__moreinfo sb__DesktopOnly">
-                      <div class="sbcard__meta2">
-                      <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                      <div class="sbcard__org">CBSE</div>
-                      </div>
-                  
-                      <div class="sbcard__tags">
-                        <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                        <span class="sbcard__type">Book</span>
-                      </div>
-                    </div>
-                  
-                    </div>
-          
-                    <div class="sbcard sbcard--resource sbcard--course">
-          
-                        <div class="sbcard__main_area">
-                        <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-                      
-                        <div class="sbcard__info">
-                          <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                          <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                        </div>
-                      </div>
-                      
-                        <div class="sbcard__moreinfo sb__DesktopOnly">
-                          <div class="sbcard__meta2">
-                          <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                          <div class="sbcard__org">CBSE</div>
-                          </div>
-                      
-                          <div class="sbcard__tags">
-                            <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                            <span class="sbcard__type">Book</span>
-                          </div>
-                        </div>
-                      
-                        </div>
-          
-                        <div class="sbcard sbcard--resource sbcard--course">
-          
-                            <div class="sbcard__main_area">
-                            <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-                          
-                            <div class="sbcard__info">
-                              <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                              <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                            </div>
-                          </div>
-                          
-                            <div class="sbcard__moreinfo sb__DesktopOnly">
-                              <div class="sbcard__meta2">
-                              <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                              <div class="sbcard__org">CBSE</div>
-                              </div>
-                          
-                              <div class="sbcard__tags">
-                                <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                                <span class="sbcard__type">Book</span>
-                              </div>
-                            </div>
-                          
-                            </div>
-          
-                            <div class="sbcard sbcard--resource sbcard--course">
-          
-                                <div class="sbcard__main_area">
-                                <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-                              
-                                <div class="sbcard__info">
-                                  <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                                  <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                                </div>
-                              </div>
-                              
-                                <div class="sbcard__moreinfo sb__DesktopOnly">
-                                  <div class="sbcard__meta2">
-                                  <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                                  <div class="sbcard__org">CBSE</div>
-                                  </div>
-                              
-                                  <div class="sbcard__tags">
-                                    <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                                    <span class="sbcard__type">Book</span>
-                                  </div>
-                                </div>
-                              
-                                </div>
-          
-                                <div class="sbcard sbcard--resource sbcard--course">
-          
-                                    <div class="sbcard__main_area">
-                                    <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-                                  
-                                    <div class="sbcard__info">
-                                      <h4 class="sbcard__title">Great thinkers and Great thinkers and thinkers and great thinkers …</h4>
-                                      <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider"></span><span>Class 6</span></div>
-                                    </div>
-                                  </div>
-                                  
-                                    <div class="sbcard__moreinfo sb__DesktopOnly">
-                                      <div class="sbcard__meta2">
-                                      <div class="sbcard__medium">Medium: <span class="medium">Hindi</span></div>
-                                      <div class="sbcard__org">CBSE</div>
-                                      </div>
-                                  
-                                      <div class="sbcard__tags">
-                                        <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                                        <span class="sbcard__type">Book</span>
-                                      </div>
-                                    </div>
-                                  
-                                    </div>
-          </div>
+
+
+        </div>
+      </div>
+      <!-- right panel -->
+      <div class="four wide column p-0">
+        <div class="sb-toc-panel">
+          Right Panel
+        </div>
+      </div>
 
   </div>
-  <div class="my-32">
+
+
+
+
+
+
+  <div class="my-32 hide hidden">
     <app-page-section [ShowContent]="false"></app-page-section>
 
+    
+  
+  <sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel"
+  [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
+  <sui-accordion-panel>
+    <div title class="p-0">
+      <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
+        <span>Content Manager</span>
+        <i class="chevron up icon d-flex flex-ai-center"></i>
+      </div>
+    </div>
+    <div content>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+          <div class="download-text">Downloading content name 5</div>
+          <div class="sb-label sb-label-table sb-label-warning-0 ml-auto">Waiting...</div>
+          <!-- <div class="waiting-text">Waiting...</div> -->
+        </div>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name 2</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary sb-left-icon-btn ml-auto">
+            <i class="pause circle icon outline mr-8"></i>Pause
+          </button>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-8">
+            <i class="close icon mr-8"></i>Close
+          </button>
+        </div>
+        <div class="info-text">300MB/350MB</div>
+        <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
+      </div>
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name 3</div>
+          <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-auto">
+            <i class="undo icon mr-8"></i>Retry
+          </button>
+        </div>
+        <!-- <div class="error-text">Download failed</div> -->
+      </div>
+
+      <div class="sb-single-pannel-accordion-list-item">
+        <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
+          <div class="download-text">Downloading content name downloading content name</div>
+          <div class="sb-label sb-label-table sb-label-success-0 ml-auto">
+            <i class="check circle icon success-icon ml-auto"></i>Completed
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </sui-accordion-panel>
+</sui-accordion>
+<!-- footer component -->
+<app-footer [ShowContent]="false"></app-footer>
+
 
   </div>
 
 
-  
-  <sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel"
-    [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
-    <sui-accordion-panel>
-      <div title class="p-0">
-        <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
-          <span>Content Manager</span>
-          <i class="chevron up icon d-flex flex-ai-center"></i>
-        </div>
-      </div>
-      <div content>
-        <div class="sb-single-pannel-accordion-list-item">
-          <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-            <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
-            <div class="download-text">Downloading content name 5</div>
-            <div class="sb-label sb-label-table sb-label-warning-0 ml-auto">Waiting...</div>
-            <!-- <div class="waiting-text">Waiting...</div> -->
-          </div>
-        </div>
-        <div class="sb-single-pannel-accordion-list-item">
-          <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-            <div class="download-text">Downloading content name 2</div>
-            <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary sb-left-icon-btn ml-auto">
-              <i class="pause circle icon outline mr-8"></i>Pause
-            </button>
-            <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-8">
-              <i class="close icon mr-8"></i>Close
-            </button>
-          </div>
-          <div class="info-text">300MB/350MB</div>
-          <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-8"></sui-progress>
-        </div>
-        <div class="sb-single-pannel-accordion-list-item">
-          <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-            <div class="download-text">Downloading content name 3</div>
-            <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error sb-left-icon-btn ml-auto">
-              <i class="undo icon mr-8"></i>Retry
-            </button>
-          </div>
-          <!-- <div class="error-text">Download failed</div> -->
-        </div>
-
-        <div class="sb-single-pannel-accordion-list-item">
-          <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-            <div class="download-text">Downloading content name downloading content name</div>
-            <div class="sb-label sb-label-table sb-label-success-0 ml-auto">
-              <i class="check circle icon success-icon ml-auto"></i>Completed
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </sui-accordion-panel>
-  </sui-accordion>
-  <!-- footer component -->
-  <app-footer [ShowContent]="false"></app-footer>
 </div>
+
+
+
 

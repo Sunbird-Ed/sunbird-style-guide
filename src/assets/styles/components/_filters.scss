@@ -1,6 +1,6 @@
 .sb-explore-filter {
   &.Open{
-    height: 180px;transition: height 500ms;
+    min-height: 180px;transition: height 500ms;
   }
   &.Close {
     overflow:hidden;transition: height 500ms;height:0px;
