@@ -81,6 +81,7 @@ import { MergeAccountComponent } from './merge-account/merge-account.component';
 import { OfflineTabComponent } from './offline-tab/offline-tab.component';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { OfflineMenuComponent } from './offline-menu/offline-menu.component';
+import { AssessmentComponent } from './assessment/assessment.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -151,7 +152,8 @@ export function hljsLanguages() {
     MergeAccountComponent,
     OfflineTabComponent,
     AccountRecoveryComponent,
-    OfflineMenuComponent
+    OfflineMenuComponent,
+    AssessmentComponent
   ],
   imports: [
     BrowserModule,
