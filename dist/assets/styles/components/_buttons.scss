@@ -16,6 +16,7 @@ a.sb-btn {
 }
 // base button styles
 .sb-btn {
+  white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   outline: 0;
@@ -77,8 +78,7 @@ a.sb-btn {
 // button sizes
 .sb-btn-xs,
 .sb-btn-normal,
-.sb-btn-sm,
-.sb-btn-md {
+.sb-btn-sm {
   padding: ($base-block-space * 1) ($base-block-space * 2);
 }
 .sb-btn-xs {
@@ -98,10 +98,11 @@ a.sb-btn {
 .sb-btn-md {
   height: ($base-block-space * 6);
   font-size: $font-size-md;
+  padding: ($base-block-space * 1.5) ($base-block-space * 3);
 }
 .sb-btn-lg {
   height: ($base-block-space * 7);
-  padding: ($base-block-space * 2) ($base-block-space * 3);
+  padding: ($base-block-space * 2) ($base-block-space * 4);
   font-size: $font-size-lg;
 }
 

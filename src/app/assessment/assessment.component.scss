@@ -1,0 +1,82 @@
+::ng-deep {
+  root {
+    --font-size-base: 1rem;
+    --font-size-factor: 1vw;
+    --font-size: calc(var(--font-size-base) + var(--font-size-factor));
+  }
+
+  body {
+    font-size: calc(14px + (32 - 14) * (100vw - 360px)/(1920 - 360)) !important;
+    //font-size:calc(14px + 0.72916vw) !important;
+    line-height: normal;
+  }
+
+  //Download Pdf popup
+  .assessment-content {
+    padding: 30px;
+    font-size: 1em;
+    max-width: 36em;
+    margin: 0 auto;
+    .assessment-content-title{
+        font-size: 1em;
+        color: #024F9D;
+        text-align: center;
+    }
+    .assessment-content-description{
+        color: #333333;
+        font-size: 0.9em;
+    }
+   
+    .assessment-action-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .sb-btn-responsive {
+        height: auto;
+        padding: 0.75em 1.5em;
+        transition: 0.3s;
+        font-size: 0.8em;
+        display: inline-block;
+      }
+      .assement-view{
+        font-size: 0.9em;
+        color: #024F9D;
+        a{
+            color: #024F9D;
+        }
+      }
+    }
+    
+  }
+  .assessment-result-content{
+    min-width: 320px;
+    margin: 0 auto;
+    .score{
+        font-weight: bold;
+    }
+  }
+  .assessment-score-content{
+    .assessment-content-title{
+        color: #333333;
+        font-weight: bold;
+    }
+    .assessment-content-description{
+        color: #666666;
+    }
+  }
+  .assessment-result{
+      color:#008840;
+      font-size: 0.7em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon{
+        font-size: 1.7em;
+      }
+  }
+  .assessment-result-info{
+    color: #008840;
+    font-size: 0.9em;
+  }
+}
