@@ -61,8 +61,9 @@ export class AssessmentComponent implements OnInit, OnDestroy {
     <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-responsive"> Go to Next Module </button>
   </div>
   <div class="assessment-action-buttons mt-32">
-    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-btn-responsive">View
-      answers</button>
+  <div class="assement-view">To view answers to this assessment,
+    <a href="" class="text-decoration-underline"> click here</a>
+  </div>
   </div>
 </div>
   `
@@ -112,7 +113,7 @@ export class AssessmentComponent implements OnInit, OnDestroy {
     </div>
   </div>
   <div class="assessment-action-buttons mt-32">
-    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-btn-responsive">View
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-btn-responsive mr-24">View
       Assement answers</button>
     <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-responsive"> go to next module </button>
   </div>
