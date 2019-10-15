@@ -15,8 +15,8 @@ export class TestingComponent implements OnInit {
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
   }
-  ngOnDestroy(): void {
-    this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
-  }
+  // ngOnDestroy(): void {
+  //   this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
+  // }
 
 }
