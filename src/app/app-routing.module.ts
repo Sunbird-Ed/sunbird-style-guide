@@ -51,6 +51,7 @@ import { AccountRecoveryComponent } from './account-recovery/account-recovery.co
 import { TestingComponent } from './testing/testing.component';
 import { OfflineMenuComponent } from './offline-menu/offline-menu.component';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { CbseHomepageComponent } from './cbse-homepage/cbse-homepage.component';
 
 
 
@@ -107,6 +108,7 @@ const routes: Routes = [
   { path: 'testing', component: TestingComponent },
   { path: 'offline-menu', component: OfflineMenuComponent},
   { path: 'assessment', component: AssessmentComponent},
+  { path: 'cbse-homepage', component: CbseHomepageComponent}
 ];
 
 @NgModule({

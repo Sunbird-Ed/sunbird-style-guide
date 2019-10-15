@@ -83,6 +83,7 @@ import { TestingComponent } from './testing/testing.component';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { OfflineMenuComponent } from './offline-menu/offline-menu.component';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { CbseHomepageComponent } from './cbse-homepage/cbse-homepage.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -155,7 +156,8 @@ export function hljsLanguages() {
     AccountRecoveryComponent,
     TestingComponent,
     OfflineMenuComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    CbseHomepageComponent
   ],
   imports: [
     BrowserModule,
