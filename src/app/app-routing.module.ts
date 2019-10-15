@@ -48,7 +48,7 @@ import { OfflineDownloadManagerComponent } from './offline-download-manager/offl
 import { MergeAccountComponent } from './merge-account/merge-account.component';
 import { OfflineTabComponent } from './offline-tab/offline-tab.component';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
-
+import { TestingComponent } from './testing/testing.component';
 
 
 
@@ -102,6 +102,7 @@ const routes: Routes = [
   { path: 'offline-download', component: OfflineDownloadManagerComponent},
   { path: 'offline-tab', component: OfflineTabComponent},
   { path: 'account-recovery', component: AccountRecoveryComponent},
+  { path: 'testing', component: TestingComponent },
 ];
 
 @NgModule({
