@@ -79,6 +79,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { OfflineDownloadManagerComponent } from './offline-download-manager/offline-download-manager.component';
 import { MergeAccountComponent } from './merge-account/merge-account.component';
 import { OfflineTabComponent } from './offline-tab/offline-tab.component';
+import { TestingComponent } from './testing/testing.component';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { OfflineMenuComponent } from './offline-menu/offline-menu.component';
 import { AssessmentComponent } from './assessment/assessment.component';
@@ -153,6 +154,7 @@ export function hljsLanguages() {
     MergeAccountComponent,
     OfflineTabComponent,
     AccountRecoveryComponent,
+    TestingComponent,
     OfflineMenuComponent,
     AssessmentComponent,
     CbseHomepageComponent
