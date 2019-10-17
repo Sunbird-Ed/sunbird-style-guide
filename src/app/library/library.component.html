@@ -6,7 +6,7 @@
   <div class="sb-back-bar"><div class="ui container"><h4 style="font-size: 14px;"><i class="icon arrow left"></i> Back to Library</h4></div></div>
 <style>
 
-.sb-column-container-grid {
+.sbcolumn-container-grid {
   display:grid;
   grid-template-columns: 1fr;  /* repeat(auto-fit, minmax(240px, 1fr)); */
     grid-template-rows: auto 150px 100px 100px; 
@@ -15,30 +15,30 @@
   margin-top:24px !important;
 }
 .grid-item{
-background: #f2f2f2;
+
 }
-.sb-player-area {
+.sbplayer-area {
   grid-area:player;
 }
-.sb-toc-area {
+.sbtoc-area {
   grid-area:toc;
   grid-row:inherit;
 }
-.sb-player-info-area {
+.sbplayer-info-area {
   grid-area:player-info;
 }
-.sb-player-meta-area {
+.sbplayer-meta-area {
   grid-area:player-meta;
 }
 @media only screen and (min-width: 1024px) {
-  .sb-column-container-grid {
-  grid-template-columns: 2fr 1fr;
+  .sbcolumn-container-grid {
+  grid-template-columns: 2fr 40%;
     grid-template-rows: auto 150px 100px; 
   grid-template-areas: "player toc" "player-info toc" "player-meta toc";
   }
-  .sb-toc-area {
+  .sbtoc-area {
   grid-row: 1 / span 3;
-  margin-top: -72px;
+  margin-top: -88px;
   }
 }
 .aspectratio {
@@ -73,8 +73,8 @@ background: #f2f2f2;
 }
 </style>
 
-<div class="ui container sb-column-container-grid mt-24">
-  <div class="sb-player-area grid-item">
+<div class="ui container sbcolumn-container-grid mt-24">
+  <div class="sbplayer-area grid-item">
     
       <div class="aspectratio" data-ratio="16:9">
           <div>
@@ -83,28 +83,118 @@ background: #f2f2f2;
       </div>
 
   </div>
-  <div class="sb-toc-area grid-item">TOC Area</div>
-  <div class="sb-player-info-area grid-item">Player Description</div>
-  <div class="sb-player-meta-area grid-item">Player Meta Data</div>
+
+  <div class="sbtoc-area grid-item">
+    
+    <div class="sbtoc-container">
+    <div class="sbselectpopover sbselectpopover--bg-white">
+      <h4>Select Chapter</h4>
+      <i class="icon-svg icon-svg--sm icon-right-round-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#right-round-arrow"></use></svg></i>
+    </div>
+
+    <div class="sbtoc-filter sbtoc-filter--bg-gray">
+      <ul class="sbtoc-filter__grid">
+        <li class="sbtoc-filter__grid-item sbtoc-filter__grid-item--active">All</li>
+        <li class="sbtoc-filter__grid-item"><i class="icon-svg icon-svg--xs icon-videos"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#play"></use></svg></i> Videos</li>
+        <li class="sbtoc-filter__grid-item"><i class="icon-svg icon-svg--xs icon-doc"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#doc"></use></svg></i> Documents</li>
+        <li class="sbtoc-filter__grid-item"><i class="icon-svg icon-svg--xs icon-interaction"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#touch"></use></svg></i> Interactive</li>
+        <li class="sbtoc-filter__grid-item">sdfasdlf</li>
+        <li class="sbtoc-filter__grid-item">Alsdfsdfasdfds dfsdfasdfl</li>
+        <li class="sbtoc-filter__grid-item">fsdfasdf sdf jsdkfj lasflsdkflsdl</li>
+      </ul>
+    </div>
+
+    <div class="sbaccordion sbaccordion--toc">
+       <!-- panel begins -->
+      <div class="sbaccordion__panel">
+        <!-- panel header begins -->
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 01 Name</h4><i class="icon-svg icon-svg--sm icon-up-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#up-arrow"></use></svg></i></div>
+          <!-- panel header ends -->
+          <div class="sbaccordion__panel-content">
+            <!-- chapter begins -->
+            <div class="sbchapter">
+              <h4 class="sbchapter__title">Vedic culture in north India vedic culture in north India vedic culture in north India</h4>
+              <div class="sbchapter__item sbchapter__item--active">
+                <h4 class="sbchapter__item__title">Social Science Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+              <div class="sbchapter__item">
+                <h4 class="sbchapter__item__title">Chapter Item Title</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+            </div>
+             <!-- chapter ends -->
+          </div>
+      </div>
+      <!-- panel ends -->
+      <!-- panel begins -->
+      <div class="sbaccordion__panel">
+        <!-- panel header begins -->
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 02 Name</h4><i class="icon-svg icon-svg--sm icon-down-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#down-arrow"></use></svg></i></div>
+          <!-- panel header ends -->
+          <div class="sbaccordion__panel-content hidden hide">
+            <!-- chapter begins -->
+            <div class="sbchapter">
+              <h4 class="sbchapter__item">Vedic culture in north India vedic culture in north India vedic culture in north India</h4>
+              <div class="sbchapter__item sbchapter__item--active">
+                <h4 class="sbchapter__item__title">Social Science Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+              <div class="sbchapter__item">
+                <h4 class="sbchapter__item__title">Chapter Item Title</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+            </div>
+             <!-- chapter ends -->
+          </div>
+      </div>
+      <!-- panel ends -->
+       <!-- panel begins -->
+       <div class="sbaccordion__panel">
+        <!-- panel header begins -->
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 03 Name</h4><i class="icon-svg icon-svg--sm icon-down-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#down-arrow"></use></svg></i></div>
+          <!-- panel header ends -->
+          <div class="sbaccordion__panel-content hidden hide">
+            <!-- chapter begins -->
+            <div class="sbchapter">
+              <h4 class="sbchapter__title">Vedic culture in north India vedic culture in north India vedic culture in north India</h4>
+              <div class="sbchapter__item sbchapter__item--active">
+                <h4 class="sbchapter__item__title">Social Science Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+              <div class="sbchapter__item">
+                <h4 class="sbchapter__item__title">Chapter Item Title</h4>
+                <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
+              </div>
+            </div>
+             <!-- chapter ends -->
+          </div>
+      </div>
+      <!-- panel ends -->
+    </div>
+  </div>
+
+  <div class="sbtoc-container sbtoc-container--detailed">
+
+    <div class="sbchapter">
+        <div class="sbchapter__title">Chapter 01 Name</div>
+        <div class="sbchapter__topics">
+            <div class="sbchapter__topics__title">Topic Title</div>
+            <div class="sbchapter__topic sbchapter__topic--active">Topic Item 1</div>
+            <div class="sbchapter__topic">Topic Item 2</div>
+        </div>
+    </div>
+
+  </div>
+
+
+  </div>
+
+  <div class="sbplayer-info-area grid-item">Player Description</div>
+  <div class="sbplayer-meta-area grid-item">Player Meta Data</div>
 </div>
 
-<br><br>
-<style>
-.sb-list-grid {
-  display:grid;
-  
-}
-</style>
-<div class="ui container sb-list-grid mt-24">
-
-  <div class=""></div>
-
-</div>
-
-
-
-
-  <div class="ui container stackable twelve  column grid m-0 hide hidden">
+  <div class="ui container stackable twelve  column grid m-0 ">
       <!-- left panel -->
       <div class="eight wide column p-0 pt-24 pr-24">
         <div class="sb-player-panel responsive-ct">
@@ -166,7 +256,7 @@ background: #f2f2f2;
 
 
 
-  <div class="my-32 hide hidden">
+  <div class="my-32">
     <app-page-section [ShowContent]="false"></app-page-section>
 
     
