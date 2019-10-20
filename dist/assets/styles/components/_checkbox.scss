@@ -194,3 +194,28 @@
     opacity: 1;
   }
 }
+
+.sb-chapterlist-modal {
+  .sb-checkbox label, .sb-radio-btn-checkbox label {
+    padding-left: 0;
+    padding-right: 24px;
+    margin-bottom: 0;
+  }
+  
+  .sb-checkbox label:before {
+    left: unset;
+    right: 0;
+  }
+  
+  .sb-radio-btn-checkbox label {
+    &:before {
+      left: unset;
+      right: 0;
+    }
+  
+    &:after {
+      left: unset;
+      right: 4px;
+    }
+  }
+}

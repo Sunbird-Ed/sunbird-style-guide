@@ -71,3 +71,33 @@
 .ui.selection.visible.dropdown.sb-offline-header-selection > .text:not(.default) {
     color: white;
 }
+
+.sb-textbook-allchapters {
+    .ui.dropdown {
+        > .text {
+          margin-top: 4px;
+        }
+      
+        .menu > .item {
+          font-size: 14px;
+        }
+      }
+}
+
+.sb-select-textbox-container {
+    .ui {
+        &.default.dropdown:not(.button) > .text {
+          margin-top: 4px;
+        }
+      
+        &.dropdown {
+          &:not(.button) > .default.text, > .text {
+            margin-top: 4px;
+          }
+      
+          .menu > .item {
+            font-size: 14px;
+          }
+        }
+      }
+}
