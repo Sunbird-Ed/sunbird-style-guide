@@ -55,10 +55,10 @@
   --base-font-size:14px;
   --base-block-space: 8px;
   --icon-svg-xs: calc(var(--base-block-space) * 2);
-  --icon-svg-sm: calc(var(--base-block-space) * 2.5);
-  --icon-svg-md: calc(var(--base-block-space) * 3);
-  --icon-svg-lg: calc(var(--base-block-space) * 4);
-  --icon-svg-xl: calc(var(--base-block-space) * 5);
+  --icon-svg-sm: calc(var(--base-block-space) * 3);
+  --icon-svg-md: calc(var(--base-block-space) * 4);
+  --icon-svg-lg: calc(var(--base-block-space) * 5);
+  --icon-svg-xl: calc(var(--base-block-space) * 6);
 }
 
 // Variables
@@ -143,7 +143,7 @@ $link-decoration: none;
 $link-hover-decoration: underline;
 // Fonts
 // $font-default-size: 14px;
-$font-size-base: 14px; // Assumes the browser default, typically 16px
+$font-size-base: 14px; // Assumes the browser default, typically `16px`
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
@@ -157,10 +157,10 @@ $h5-font-size: $font-size-base * 1.143; // 16px
 $h6-font-size: $font-size-base * 1; // 14px
 $font-size-lg: $h4-font-size; //20px
 $font-size-md: $h5-font-size; // 16px
-$font-size-normal: ($font-size-base * 1); // 14px
+$font-size-normal: $font-size-base; // 14px
 $font-size-sm: ($font-size-base * 0.8571); // 12px
 $font-size-xs: ($font-size-base * 0.7143); // 10px
-$p-font-size: $font-size-normal;
+$p-font-size: $font-size-normal; //14px
 // spaces
 $base-block-space: 8px;
 $block-padding-y-x: ($base-block-space * 1) ($base-block-space * 2); // any block default spacing 16px
