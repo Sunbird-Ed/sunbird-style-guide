@@ -32,8 +32,8 @@
 }
 @media only screen and (min-width: 1024px) {
   .sbcolumn-container-grid {
-  grid-template-columns: 2fr 40%;
-    grid-template-rows: auto 150px 100px; 
+  grid-template-columns: 2fr 400px;
+    grid-template-rows: auto 100px 100px; 
   grid-template-areas: "player toc" "player-info toc" "player-meta toc";
   }
   .sbtoc-area {
@@ -89,10 +89,10 @@
     <div class="sbtoc-container">
     <div class="sbselectpopover sbselectpopover--bg-white">
       <h4>Select Chapter</h4>
-      <i class="icon-svg icon-svg--sm icon-right-round-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#right-round-arrow"></use></svg></i>
+      <i class="icon-svg icon-svg--sm icon-arrow-round-right"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#arrow-round-right"></use></svg></i>
     </div>
 
-    <div class="sbtoc-filter sbtoc-filter--bg-gray">
+    <div class="sbtoc-filter sbtoc-filter--bg-gray sbsmartscroll-style">
       <ul class="sbtoc-filter__grid">
         <li class="sbtoc-filter__grid-item sbtoc-filter__grid-item--active">All</li>
         <li class="sbtoc-filter__grid-item"><i class="icon-svg icon-svg--xs icon-videos"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#play"></use></svg></i> Videos</li>
@@ -108,7 +108,7 @@
        <!-- panel begins -->
       <div class="sbaccordion__panel">
         <!-- panel header begins -->
-          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 01 Name</h4><i class="icon-svg icon-svg--sm icon-up-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#up-arrow"></use></svg></i></div>
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 01 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-up"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#arrow-up"></use></svg></i></div>
           <!-- panel header ends -->
           <div class="sbaccordion__panel-content">
             <!-- chapter begins -->
@@ -130,12 +130,12 @@
       <!-- panel begins -->
       <div class="sbaccordion__panel">
         <!-- panel header begins -->
-          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 02 Name</h4><i class="icon-svg icon-svg--sm icon-down-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#down-arrow"></use></svg></i></div>
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 02 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#arrow-down"></use></svg></i></div>
           <!-- panel header ends -->
           <div class="sbaccordion__panel-content hidden hide">
             <!-- chapter begins -->
             <div class="sbchapter">
-              <h4 class="sbchapter__item">Vedic culture in north India vedic culture in north India vedic culture in north India</h4>
+              <h4 class="sbchapter__title">Vedic culture in north India vedic culture in north India vedic culture in north India</h4>
               <div class="sbchapter__item sbchapter__item--active">
                 <h4 class="sbchapter__item__title">Social Science Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
                 <div class="sbchapter__img"><img src="../assets/images/libdemo/chapter-cover-img.png" alt="Chapter Title" title="Chapter Title" /></div>
@@ -152,7 +152,7 @@
        <!-- panel begins -->
        <div class="sbaccordion__panel">
         <!-- panel header begins -->
-          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 03 Name</h4><i class="icon-svg icon-svg--sm icon-down-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#down-arrow"></use></svg></i></div>
+          <div class="sbaccordion__panel-header"><h4 class="sbaccordion__panel-header__title">Chapter 03 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#arrow-down"></use></svg></i></div>
           <!-- panel header ends -->
           <div class="sbaccordion__panel-content hidden hide">
             <!-- chapter begins -->
@@ -175,12 +175,31 @@
   </div>
 
   <div class="sbtoc-container sbtoc-container--detailed">
-
+      <div class="sbselectpopover sbselectpopover--bg-white">
+          <h4>Select Chapter</h4>
+          <i class="icon-svg icon-svg--sm icon-down-round-arrow"><svg class="icon icon-svg--primary"><use xlink:href="../assets/images/libdemo/sprite.svg#arrow-round-right"></use></svg></i>
+        </div>
     <div class="sbchapter">
         <div class="sbchapter__title">Chapter 01 Name</div>
         <div class="sbchapter__topics">
             <div class="sbchapter__topics__title">Topic Title</div>
             <div class="sbchapter__topic sbchapter__topic--active">Topic Item 1</div>
+            <div class="sbchapter__topic">Topic Item 2</div>
+        </div>
+    </div>
+    <div class="sbchapter">
+        <div class="sbchapter__title">Chapter 01 Name</div>
+        <div class="sbchapter__topics">
+            <div class="sbchapter__topics__title">Topic Title</div>
+            <div class="sbchapter__topic">Topic Item 1</div>
+            <div class="sbchapter__topic">Topic Item 2</div>
+        </div>
+    </div>
+    <div class="sbchapter">
+        <div class="sbchapter__title">Chapter 01 Name</div>
+        <div class="sbchapter__topics">
+            <div class="sbchapter__topics__title">Topic Title</div>
+            <div class="sbchapter__topic">Topic Item 1</div>
             <div class="sbchapter__topic">Topic Item 2</div>
         </div>
     </div>
@@ -194,7 +213,7 @@
   <div class="sbplayer-meta-area grid-item">Player Meta Data</div>
 </div>
 
-  <div class="ui container stackable twelve  column grid m-0 ">
+  <div class="ui container stackable twelve  column grid m-0 hide hidden">
       <!-- left panel -->
       <div class="eight wide column p-0 pt-24 pr-24">
         <div class="sb-player-panel responsive-ct">
@@ -252,14 +271,8 @@
   </div>
 
 
-
-
-
-
-  <div class="my-32">
+  <div class="my-32 hide hidden">
     <app-page-section [ShowContent]="false"></app-page-section>
-
-    
   
   <sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel"
   [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
