@@ -9,6 +9,7 @@ import { DOCUMENT } from '@angular/common';
 export class CbseHomepageComponent implements OnInit {
   multiSelect1: { name: string; }[];
   showLargeModal: boolean;
+  showModal: boolean;
   searchable: any;
   disabled: any;
   options: any;
@@ -17,7 +18,8 @@ export class CbseHomepageComponent implements OnInit {
 
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
     this.multiSelect1 = [{ name: 'Example' }, { name: 'Test' }, { name: 'that' }];
-    this.showLargeModal = true;
+    this.showLargeModal = false;
+    this.showModal = false;
   }
 
 
