@@ -1,0 +1,31 @@
+@import 'variables';
+
+.sb-manage-section{
+    background: $white;
+    .sb-upload-file{
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        .sb-upload-btn {
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+    .sb-pageSection-content{
+        a{
+            color:  $blue;
+        }
+    }
+    .sb-meta-data-container.sb-meta-data-column .sb-meta-data dt{
+        color: $blue;
+    }
+}
+
+
+
