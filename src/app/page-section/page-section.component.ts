@@ -58,21 +58,21 @@ export class PageSectionComponent implements OnInit {
       {
         "breakpoint": 2800,
         "settings": {
-          "slidesToShow": 4,
+          "slidesToShow": 6,
           "slidesToScroll": 3
         }
       },
       {
         "breakpoint": 2200,
         "settings": {
-          "slidesToShow": 4,
+          "slidesToShow": 5,
           "slidesToScroll": 3
         }
       },
       {
         "breakpoint": 1920,
         "settings": {
-          "slidesToShow": 4,
+          "slidesToShow": 5,
           "slidesToScroll": 3
         }
       },
