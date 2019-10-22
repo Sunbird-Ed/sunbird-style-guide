@@ -26,6 +26,9 @@
 .sb-bg-color-info {
     background-color: $primary-color;
 }
+.sb-bg-color-primary-0 {
+    background-color: $primary-0;
+}
 .sb-bg-color-success,
 .sb-bg-color-secondary {
     background-color: $secondary-200;
@@ -39,4 +42,10 @@
 }
 .sb-bg-color-gray {
     background-color: $gray-800;
+}
+.sb-bg-color-gray-0 {
+    background-color: $gray-0;
+}
+.sb-bg-color-white{
+    background:var(--white);
 }

@@ -1,0 +1,31 @@
+.sboffline-appbar{
+    background:var(--primary-800);
+    height:32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title{
+      color:rgba(255,255,255, 0.8);
+      font-size:10px;
+      text-transform:uppercase;
+      padding-left:8px;
+    }
+    &__actions{
+        display: flex;
+        align-items: center;
+        flex:0 0 96px;
+        .actions-item{
+            width:32px;
+            height:32px;display:flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+              background:var(--primary-400);
+            }
+        }
+      .minimise{}
+      .maximise{}
+      .restore-down{}
+      .close{}
+    }
+  }
