@@ -85,6 +85,13 @@ import { OfflineMenuComponent } from './offline-menu/offline-menu.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { CbseHomepageComponent } from './cbse-homepage/cbse-homepage.component';
 import { ManageComponent } from './manage/manage.component';
+import { StateComponent } from './state/state.component';
+import { ClassComponent } from './class/class.component';
+import { MediumComponent } from './medium/medium.component';
+import { OfflineAppbarComponent } from './offline-appbar/offline-appbar.component';
+import { OfflineHeaderComponent } from './offline-header/offline-header.component';
+import { OfflineTestComponent } from './offline-test/offline-test.component';
+import { OfflineMenubarComponent } from './offline-menubar/offline-menubar.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -159,7 +166,14 @@ export function hljsLanguages() {
     OfflineMenuComponent,
     AssessmentComponent,
     CbseHomepageComponent,
-    ManageComponent
+    ManageComponent,
+    StateComponent,
+    ClassComponent,
+    MediumComponent,
+    OfflineAppbarComponent,
+    OfflineHeaderComponent,
+    OfflineTestComponent,
+    OfflineMenubarComponent
   ],
   imports: [
     BrowserModule,
