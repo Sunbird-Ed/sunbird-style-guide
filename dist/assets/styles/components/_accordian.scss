@@ -141,7 +141,7 @@
     }
     
     .download-text {
-        font-size: $font-size-md;
+        font-size: $font-size-normal;
         max-width: ($base-block-space*30) + ($base-block-space*6) + $base-block-space/4;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -149,9 +149,9 @@
     }
 
     .download-image {
-        width: $base-block-space*4;
-        height: $base-block-space*4;
-        margin-right: 8px;
+        width: $base-block-space*3;
+        height: $base-block-space*3;
+        margin-right: 16px;
     }
 
     .download-details-container {
@@ -177,7 +177,7 @@
 
 .info-text {
     width:110px;
-    font-size: 12px;
+    font-size: 11px;
     text-align: left;
 }
 
