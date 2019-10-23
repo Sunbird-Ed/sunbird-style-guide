@@ -1,0 +1,26 @@
+.state-medium-container {
+  background: #fff;
+
+  &__dropdown {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 8px;
+  }
+
+  &__separator {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 8px;
+
+    &__border{
+      border-left: 1px solid #999999;
+      margin-left: 15px;
+      margin-right: 15px;
+      height: 24px;
+    }
+  }
+
+  &__medium{
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,97 @@
+
+.sb-offline-tab-container {
+    min-height: 32px;
+    width: 100%;
+    background: #063C72;
+    color: #e4e4e4;
+    display: flex;
+    align-items: center;
+  
+
+    .offline-link-btn {
+      height: 32px;
+      display: flex;
+      margin-left: 8px;
+  
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: #e4e4e4;
+        position: relative;
+  
+        &.active {
+          z-index: 3;
+  
+          &:before,
+          &:after {
+            z-index: 1;
+            background: #024F9D;
+          }
+  
+          span {
+            background: #024f9d;
+  
+            &:before,
+            &:after {
+              background: #063C93;
+            }
+          }
+        }
+  
+        &:hover {
+          opacity: inherit;
+        }
+  
+    
+  
+        &:before {
+          left: -10px;
+        }
+  
+        &:after {
+          right: -10px;
+        }
+  
+        span {
+          font-size: 12px;
+          padding: 8px 24px;
+          background: #063C93;
+          border-radius: 16px 16px 0 0;
+  
+          &:before {
+            left: -20px;
+          }
+  
+          &:after {
+            right: -20px;
+          }
+  
+        //   &:before,
+        //   &:after {
+        //     width: 20px;
+        //     height: 20px;
+        //     border-radius: 10px;
+        //     background: #063C93;
+        //     z-index: 2;
+        //   }
+        }
+  
+  
+        &:first-child span:before,
+        &:last-child span:after {
+          background: #063C72;
+        }
+  
+        &:before,
+        &:after,
+        span:before,
+        span:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+  }
