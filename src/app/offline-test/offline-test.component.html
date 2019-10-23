@@ -10,9 +10,14 @@
   <app-offline-menubar></app-offline-menubar>
 </div>
 
-<div class="sb-state-medium-bar sb-bg-color-white px-16">
-  <app-state></app-state>
-  <app-medium></app-medium>
+<div class="d-flex state-medium-container sb-bg-color-white px-16">
+  <div class="state-medium-container__dropdown">
+    <app-state></app-state>
+  </div>
+  <div class='state-medium-container__separator__border'></div>
+  <div class="state-medium-container__medium">
+    <app-medium></app-medium>
+  </div>
 </div>
 
 <div class="sb-class-bar sb-bg-color-gray-0 px-16">
