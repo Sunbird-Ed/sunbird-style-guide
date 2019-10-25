@@ -404,3 +404,42 @@ body ::-webkit-scrollbar-track
       padding: 16px !important;
     }
 }
+
+/// dropdown css for offline menu bar
+.ui.selection.dropdown.state-medium {
+  color: #0245FD;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+
+  &:hover{
+    background: #BAC9D8;
+    color: #024F9D !important;
+    box-sizing: border-box;
+    border: 0.5px solid #024F9D;
+    border-radius: 2px;
+    background-color: #E5EDF5;
+    outline: none;
+  }
+}
+
+.ui.selection.dropdown.state-selection {
+  color: #0245fD; 
+  display: flex;
+  align-items: center;
+
+  &:active{
+    background: #BAC9D8 !important;
+    color: #024F9D !important;
+  }
+
+  &:hover{
+    background: #BAC9D8;
+    color: #024F9D !important;
+    box-sizing: border-box;
+    border: 0.5px solid #024F9D;
+    border-radius: 2px;
+    background-color: #E5EDF5;
+  }
+}
