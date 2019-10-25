@@ -1,6 +1,5 @@
-<select class="state-dropdown" name="state">
-  <option value="Karnataka">State (Karnataka)</option>
-  <option value="Andhra Pradesh">State (Andhra Pradesh)</option>
-  <option value="Maharashtra">State (Maharashtra)</option>
-  <option value="Tamil Nadu">State (Tamil Nadu)</option>
-</select>
+
+       <sui-select class="selection state-selection" labelField="name" #multiSelect>
+        <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+        </sui-select-option>
+      </sui-select>

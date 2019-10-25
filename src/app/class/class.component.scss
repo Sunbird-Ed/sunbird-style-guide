@@ -35,11 +35,19 @@
       box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.19);
       color: #024f9d;
       min-height: 32px;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #024f9d;
+        color: #fff;
+       
+      }
     }
 
     .pill.active {
       background-color: #024f9d;
       color: #fff;
+      cursor: pointer;
     }
   }
 
