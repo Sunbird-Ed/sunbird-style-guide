@@ -2,9 +2,12 @@
 
   <div class="sbheader__branding sbheader--offline__branding">
     <div class="logo">
-      <img src="https://dev.sunbirded.org/assets/images/sunbird_logo.png" alt="sunbird">
+      <img src="https://staging.ntp.net.in/assets/imgs/logos.svg" alt="sunbird" title="sunbird">
     </div>
-    <div class="onoff-status"></div>
+    <div class="onoff-status">
+      <span class="online" *ngIf="isShown"><i class="icon-svg icon-svg--xxs icon-wifi"><svg class="icon icon-svg--white"><use xlink:href="assets/images/libdemo/sprite.svg#wifi"></use></svg></i> You are online</span>
+      <span class="offline" *ngIf="!isShown"><i class="icon-svg icon-svg--xxs icon-wifi"><svg class="icon icon-svg--white"><use xlink:href="assets/images/libdemo/sprite.svg#wifi"></use></svg></i> You are offline</span>
+    </div>
   </div>
 
   <div class="sbheader--offline__search">
@@ -13,7 +16,7 @@
         <div class="sbsearchbox__input-container">
             <input class="sbsearchbox__input" type="text" placeholder="Type text to search for content. e.g. 'Story'" />
             <i class="icon-svg icon-svg--xxs icon-close"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#close-button"></use></svg></i>
-            <div class="sb-loader"></div>
+            
         </div>
         <div class="sbsearchbox__input-action">
             <i class="icon-svg icon-svg--xs icon-search"><svg class="icon icon-svg--white"><use xlink:href="assets/images/libdemo/sprite.svg#search"></use></svg></i>

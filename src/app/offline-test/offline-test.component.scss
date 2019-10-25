@@ -16,3 +16,16 @@
     overflow-y: hidden;
   }
 }
+
+.sb-menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-language {
+  border: none;
+  background: none;
+  color: var(--primary-400);
+  outline: none;
+}
