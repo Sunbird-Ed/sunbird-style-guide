@@ -8,8 +8,8 @@
 
 <div class="sb-menubar sb-bg-color-primary-0 px-8">
   <app-offline-menubar></app-offline-menubar>
-  <sui-select class="selection state-medium" labelField="name" #multiSelect>
-      <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+  <sui-select class="selection state-medium medium-selection" labelField="name" [(ngModel)]="selectMedium">
+      <sui-select-option *ngFor="let option of selectOption" [value]="option">
       </sui-select-option>
   </sui-select>
 </div>
