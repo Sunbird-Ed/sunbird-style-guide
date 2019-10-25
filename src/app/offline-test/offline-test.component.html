@@ -2,12 +2,16 @@
     <app-offline-appbar></app-offline-appbar>
 </div>
 
-<div class="sb-header-offline-bar sb-bg-color-white px-16">
+<div class="sb-header-offline-bar sb-bg-color-white px-8">
   <app-offline-header></app-offline-header>
 </div>
 
-<div class="sb-menubar sb-bg-color-primary-0">
+<div class="sb-menubar sb-bg-color-primary-0 px-8">
   <app-offline-menubar></app-offline-menubar>
+  <sui-select class="selection state-medium" labelField="name" #multiSelect>
+      <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+      </sui-select-option>
+  </sui-select>
 </div>
 
 <div class="d-flex state-medium-container sb-bg-color-white">

@@ -1,110 +1,27 @@
-.sb-offline-tab-container {
+@import 'variables';
+
+.sb-offline-menu-container {
   min-height: 32px;
   width: 100%;
+  display:flex;
   align-items: center;
-  justify-content: space-between;
-
-
-  .offline-link-btn {
-    display : flex;
-    flex: 1 1;
-
-    a {
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: #e4e4e4;
-      position: relative;
-
-      &.active {
-        z-index: 3;
-
-        &:before,
-        &:after {
-          z-index: 1;
-          background: #024F9D;
-        }
-
-        span {
-          background: #024f9d;
-          color:#fff;
-
-          &:before,
-          &:after {
-            background: #063C93;
-          }
-        }
-      }
-
-      &:hover {
-        opacity: inherit;
-      }
-
-
-
-      &:before {
-        left: -10px;
-      }
-
-      &:after {
-        right: -10px;
-      }
-
-      span {
-        font-size: 12px;
-        padding: 8px 24px;
-        background: #ddd;
-        color:#000;
-        border-radius: 5px 5px 0 0;
-        margin: 7px 3px 0 3px;
-
-        &:hover{
-          background: #024f9d;
-          color:#fff;
-        }
-
-        &:before {
-          left: -20px;
-        }
-
-        &:after {
-          right: -20px;
-        }
-
-        //   &:before,
-        //   &:after {
-        //     width: 20px;
-        //     height: 20px;
-        //     border-radius: 10px;
-        //     background: #063C93;
-        //     z-index: 2;
-        //   }
-      }
-
-
-      &:first-child span:before,
-      &:last-child span:after {
-        background: #063C72;
-      }
-
-      &:before,
-      &:after,
-      span:before,
-      span:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
+  justify-content: flex-start;
+  margin-top:4px;
+  a {
+    position: relative;
+    position: relative;
+    background:rgba($primary-400, 0.5);
+    font-size: 12px;
+    padding: 8px 16px;
+    color:var(--primary-400);
+    margin-right: 8px;
+    html[dir="rtl"] & {
+        margin-left: 8px;
+    }
+    border-radius:4px 4px 0 0;
+      &:hover,&.active {
+        background:var(--primary-400);
+        color: var(--white);
       }
     }
-  }
-
-  .select-language {
-    border: none;
-    background: none;
-    color: blue;
-    outline: none;
-  }
-
-  
-
 }
