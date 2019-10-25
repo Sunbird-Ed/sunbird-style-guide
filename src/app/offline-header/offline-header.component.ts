@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OfflineHeaderComponent implements OnInit {
 
   constructor() { }
-
+  isShown: boolean = true ;
   ngOnInit() {
   }
 
