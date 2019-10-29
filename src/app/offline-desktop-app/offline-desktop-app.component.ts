@@ -193,6 +193,33 @@ export class OfflineDesktopAppComponent implements OnInit {
       `,
       copyCode: `
       `
+    },
+    {
+      expandCode: false,
+      title: 'New Updates',
+      demoCode: `
+      <div class="sb-offline-updates p-24">
+      <div class="sb-offline-updates-content text-center">
+        <div class="sb-offline-updates-content-logo">
+          <img src="assets/images/Group16.svg" class="logo" alt="DIKSHA Logo">
+        </div>
+        <div class="sb-offline-updates-content-desc mb-32">
+          <h3 class="sb-offline-updates-content-title mt-16 mb-8 font-weight-bold">New Update Available!</h3>
+          <p class="sb-offline-updates-content-para">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.</p>
+        </div>
+        <div class="sb-offline-label">
+          <div class="d-inline-flex">
+            <span class="sb-label-name mr-8">Use this:</span>
+            <span><a href="" class="sb-color-success">diksha.gov.in/desktop/latest</a></span>
+          </div>
+        </div>
+        <p class="sb-offline-updates-content-para mt-4">*Requires Windows 64 bit operating system</p>
+      </div>
+    </div>
+      `,
+      copyCode: `
+      `
     }
   ];
 
