@@ -418,7 +418,7 @@ body ::-webkit-scrollbar-track
   border: none;
   background: none;
   min-width: 100px;
-  margin: 0 ($base-block-space * 2) + 4;
+  margin: 0;
 
   .medium-selection{
     min-width:120px;

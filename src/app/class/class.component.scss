@@ -8,7 +8,7 @@
   .sb-pills-container {
     display: inline-flex;
     align-items: center;
-    padding:  ($base-block-space * 2)  $base-block-space * 2;
+    padding:$base-block-space 0;
 
     .pill {
       background-color: var(--white);
