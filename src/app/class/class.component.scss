@@ -30,24 +30,23 @@
 
   .sb-grade-pills-container {
     min-height: 48px;
-    
+    width:100%;
     .pill {
       border-radius: ($base-block-space * 2);
       padding: ($base-block-space / 2) ($base-block-space * 2);
       box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.19);
-      color: var(--blue);
+      color: var(--primary-400);
       min-height: ($base-block-space * 4);
       cursor: pointer;
-
       &:hover{
-        background-color:  var(--blue);
+        background-color:  var(--primary-400);
         color: var(--white);
        
       }
     }
 
     .pill.active {
-      background-color:  var(--blue);
+      background-color:var(--primary-400);
       color: var(--white);
       cursor: pointer;
     }
