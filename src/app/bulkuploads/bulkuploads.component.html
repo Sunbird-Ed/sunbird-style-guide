@@ -290,7 +290,8 @@
     </div>
 
     <sui-modal *ngIf="showErrorUserModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
-      [size]="'normal'" class="sb-modal sb-error" appBodyScroll (dismissed)="showErrorUserModal = !showErrorUserModal" #modal>
+      [size]="'normal'" class="sb-modal sb-error" appBodyScroll (dismissed)="showErrorUserModal = !showErrorUserModal"
+      #modal>
       <div class="sb-modal-header">
         Error in Upload Users
       </div>
@@ -339,7 +340,172 @@
   <!--/Display code-->
 </div>
 <!--/Normal Modal-->
+
+
+<!--Normal Modal-->
+<div class="docs-sections">
+  <h4 class="docs-sectionHeading">
+    Create
+    <i class="fa fa-code text-gray docs-expandCode" (click)="createmodal = !createmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <div class="sb-bulk-upload">
+      <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="showCreateModal = !showCreateModal">
+        Create
+      </button>
+    </div>
+
+    <sui-modal *ngIf="showCreateModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showCreateModal = !showCreateModal" #modal>
+      <div class="sb-modal-header">
+        Create
+      </div>
+      <div class="sb-modal-content">
+        <div class="twelve wide column">
+          <div class="ui grid m-0">
+            <div class="three wide column p-8">
+              <div class="ui card text-center common-contribution-card">
+                <div class="content">
+                  <i class="check circle icon"></i>
+                  <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+                  <div class="content-title py-16">Course</div>
+                </div>
+              </div>
+            </div>
+            <div class="three wide column p-8">
+              <div class="ui card text-center common-contribution-card">
+                <div class="content">
+                  <i class="check circle icon"></i>
+                  <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+                  <div class="content-title py-16">Explanation </div>
+                </div>
+              </div>
+            </div>
+            <div class="three wide column p-8">
+              <div class="ui card text-center common-contribution-card">
+                <div class="content">
+                  <i class="check circle icon"></i>
+                  <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+                  <div class="content-title py-16">Lesson PLans</div>
+                </div>
+              </div>
+            </div>
+            <div class="three wide column p-8">
+              <div class="ui card text-center common-contribution-card">
+                <div class="content">
+                  <i class="check circle icon"></i>
+                  <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+                  <div class="content-title py-16">Practice Sets</div>
+                </div>
+              </div>
+            </div>
+            <div class="three wide column p-8">
+              <div class="ui card text-center common-contribution-card">
+                <div class="content">
+                  <i class="check circle icon"></i>
+                  <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+                  <div class="content-title py-16">Curiosity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal sb-btn-primary"
+          (click)="showViewCreateModalCode = !showViewCreateModalCode">
+          Next
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="createmodal">
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="ViewCreateModalCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+          <code [highlight]="ViewCreateModalCode"></code>
+        </pre>
+    <!--Copy code display-->
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Normal Modal-->
+
+
+<!--Normal Modal-->
+<div class="docs-sections">
+  <h4 class="docs-sectionHeading">
+    Reject Errors
+    <i class="fa fa-code text-gray docs-expandCode" (click)="errorrejectmodal = !errorrejectmodal" title="Toggle Code"
+      tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode">
+    <div class="sb-bulk-upload">
+      <button class="sb-btn sb-btn-error sb-btn-normal" (click)="showErrorRejectModal = !showErrorRejectModal">
+        Reject Errors
+      </button>
+    </div>
+
+    <sui-modal *ngIf="showErrorRejectModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+      [size]="'normal'" class="sb-modal sb-error" appBodyScroll
+      (dismissed)="showErrorRejectModal = !showErrorRejectModal" #modal>
+      <div class="sb-modal-header">
+        Reject “Untitled Practice Set “
+      </div>
+      <div class="sb-modal-content">
+        <div class="ui error reject message">
+          <ol class="pl-8">
+            <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+              question only.
+              Click Continue to Publish the set.. </li>
+            <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+              question only.
+              Click Continue to Publish the set.
+            </li>
+            <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+              question only.
+              Click Continue to Publish the set.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="sb-modal-actions">
+        <button class="sb-btn sb-btn-normal  sb-btn-error"
+          (click)="showViewDeatilsErrorModal = !showViewDeatilsErrorModal">
+          Send Feedback
+        </button>
+      </div>
+    </sui-modal>
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="errorrejectmodal">
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="showViewDeatilsErrorCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+          <code [highlight]="showViewDeatilsErrorCode"></code>
+        </pre>
+    <!--Copy code display-->
+  </div>
+  <!--/Display code-->
+</div>
+<!--/Normal Modal-->
+
 <!--Page Content-->
-
-
-
