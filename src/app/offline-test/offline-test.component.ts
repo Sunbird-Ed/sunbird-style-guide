@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./offline-test.component.scss']
 })
 export class OfflineTestComponent implements OnInit {
-  private selectOption: any;
+ selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
-    // this.selectOption = [{name: 'English'}, {name: 'Hindi'}, {name: 'Urdu'}];
     this.selectOption = [
       {
         name: 'English',

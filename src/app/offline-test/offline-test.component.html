@@ -8,7 +8,8 @@
   </div>
 </div>
 
-<div class="sb-menubar sb-bg-color-primary-0 px-8">
+<div class="sb-menubar sb-bg-color-primary-0">
+    <div class="ui container d-flex flex-ai-center flex-jc-space-between">
   <app-offline-menubar></app-offline-menubar>
   <sui-select class="selection state-medium medium-selection" labelField="name" [(ngModel)]="selectMedium">
       <sui-select-option *ngFor="let option of selectOption" [value]="option">
