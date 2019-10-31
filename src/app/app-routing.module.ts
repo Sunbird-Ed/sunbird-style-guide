@@ -54,6 +54,7 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { CbseHomepageComponent } from './cbse-homepage/cbse-homepage.component';
 import { ManageComponent } from './manage/manage.component';
 import { OfflineTestComponent } from './offline-test/offline-test.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -112,6 +113,7 @@ const routes: Routes = [
   { path: 'cbse-homepage', component: CbseHomepageComponent},
   { path: 'manage', component: ManageComponent},
   { path: 'offline-test', component: OfflineTestComponent},
+  { path: 'offline-login', component: LoginComponent},
 ];
 
 @NgModule({

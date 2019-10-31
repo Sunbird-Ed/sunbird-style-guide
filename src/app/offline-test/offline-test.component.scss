@@ -1,7 +1,7 @@
+@import'variables';
 .state-medium-container {
-
   &__dropdown {
-    padding: 16px 0px;
+    padding: ($base-block-space *2) 0px;
     z-index: 1;
   }
 

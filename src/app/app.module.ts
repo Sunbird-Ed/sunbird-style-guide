@@ -92,6 +92,7 @@ import { OfflineAppbarComponent } from './offline-appbar/offline-appbar.componen
 import { OfflineHeaderComponent } from './offline-header/offline-header.component';
 import { OfflineTestComponent } from './offline-test/offline-test.component';
 import { OfflineMenubarComponent } from './offline-menubar/offline-menubar.component';
+import { LoginComponent } from './login/login.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -173,7 +174,8 @@ export function hljsLanguages() {
     OfflineAppbarComponent,
     OfflineHeaderComponent,
     OfflineTestComponent,
-    OfflineMenubarComponent
+    OfflineMenubarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
