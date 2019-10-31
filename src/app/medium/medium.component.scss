@@ -1,3 +1,5 @@
+@import "variables";
+
 .sb-medium{
     width: 100%;
 
@@ -5,18 +7,18 @@
         min-height: 64px;
 
         .pill {
-            border: #008840 1px solid;
-            color: #008840;
+            border: 1px solid var(--green);
+            color: var(--green);
             cursor: pointer;
             
             &:hover{
-                background-color: #008840;
-                color: #fff;     
+                background-color: var(--green);
+                color: var(--white);     
               }
         }
         .pill.active {
-            background-color: #008840;
-            color: #fff;
+            background-color: var(--green);
+            color: var(--white);
             cursor: pointer;
           }
     }
@@ -24,16 +26,16 @@
     &__sb-pills-content {
         display: inline-flex;
         align-items: center;
-        padding: 16px 0px;
+        padding: ($base-block-space * 2) 0;
 
         .pill {
-            background-color: #fff;
+            background-color: var(--white);
             white-space: nowrap;
             -webkit-appearance: none;
             text-overflow: ellipsis;
-            min-height: 32px;
-            margin-right: 8px;
-            padding: 4px 8px;
+            min-height: ($base-block-space * 4);
+            margin-right: $base-block-space;
+            padding:($base-block-space / 2) ( $base-block-space );
             border-radius: 2px;
             text-transform: capitalize;
             text-decoration: none;

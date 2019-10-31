@@ -19,6 +19,8 @@ export class BulkuploadsComponent implements OnInit {
   showErrorUserModal;
   errorUserModal;
   errorusermodal;
+  createmodal;
+  errorrejectmodal;
 
   pageTitle = 'Modals';
   uploadModalCode = ` <div class="sb-bulk-upload">
@@ -223,6 +225,101 @@ ViewErrorUsersModalCode = `  <sui-modal *ngIf="showErrorUserModal" [mustScroll]=
 <div class="sb-modal-actions">
   <button class="sb-btn sb-btn-normal  sb-btn-error" (click)="showViewDeatilsModal = !showViewDeatilsModal">
     Copy to clipboard
+  </button>
+</div>
+</sui-modal>`
+
+ViewCreateModalCode = ` <sui-modal *ngIf="showCreateModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showCreateModal = !showCreateModal" #modal>
+<div class="sb-modal-header">
+  Create
+</div>
+<div class="sb-modal-content">
+  <div class="twelve wide column">
+    <div class="ui grid m-0">
+      <div class="three wide column p-8">
+        <div class="ui card text-center common-contribution-card">
+          <div class="content">
+            <i class="check circle icon"></i>
+            <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+            <div class="content-title py-16">Course</div>
+          </div>
+        </div>
+      </div>
+      <div class="three wide column p-8">
+        <div class="ui card text-center common-contribution-card">
+          <div class="content">
+            <i class="check circle icon"></i>
+            <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+            <div class="content-title py-16">Explanation </div>
+          </div>
+        </div>
+      </div>
+      <div class="three wide column p-8">
+        <div class="ui card text-center common-contribution-card">
+          <div class="content">
+            <i class="check circle icon"></i>
+            <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+            <div class="content-title py-16">Lesson PLans</div>
+          </div>
+        </div>
+      </div>
+      <div class="three wide column p-8">
+        <div class="ui card text-center common-contribution-card">
+          <div class="content">
+            <i class="check circle icon"></i>
+            <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+            <div class="content-title py-16">Practice Sets</div>
+          </div>
+        </div>
+      </div>
+      <div class="three wide column p-8">
+        <div class="ui card text-center common-contribution-card">
+          <div class="content">
+            <i class="check circle icon"></i>
+            <img class="mt-16" src="assets/images/book.png" rel="placeholder">
+            <div class="content-title py-16">Curiosity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary"
+    (click)="showViewCreateModalCode = !showViewCreateModalCode">
+    Next
+  </button>
+</div>
+</sui-modal>`
+
+showViewDeatilsErrorCode = `<sui-modal *ngIf="showErrorRejectModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal sb-error" appBodyScroll
+(dismissed)="showErrorRejectModal = !showErrorRejectModal" #modal>
+<div class="sb-modal-header">
+  Reject “Untitled Practice Set “
+</div>
+<div class="sb-modal-content">
+  <div class="ui error reject message">
+    <ol class="pl-8">
+      <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+        question only.
+        Click Continue to Publish the set.. </li>
+      <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+        question only.
+        Click Continue to Publish the set.
+      </li>
+      <li>You have rejected 3 of 12 questions in this set. Puclishing . This set would publish the 9 accepted
+        question only.
+        Click Continue to Publish the set.
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal  sb-btn-error"
+    (click)="showViewDeatilsErrorModal = !showViewDeatilsErrorModal">
+    Send Feedback
   </button>
 </div>
 </sui-modal>`
