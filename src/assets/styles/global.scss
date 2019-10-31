@@ -125,3 +125,11 @@ body {
   .ui.calendar .ui.table tr td.disabled, .ui.calendar .ui.table tr.disabled td, .ui.calendar .ui.table tr.disabled:hover, .ui.calendar .ui.table tr:hover td.disabled {
   cursor:default
   }
+
+
+
+[dir="rtl"] {
+    .sb-offline-menu-container a {
+    margin-left: 0px;
+  }
+}

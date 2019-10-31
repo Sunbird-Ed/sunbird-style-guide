@@ -9,11 +9,11 @@
     position: relative;
     background: #BAC9D8; //var(--primary-200);
     font-size: $font-size-sm;
-    padding: ($base-block-space) ($base-block-space * 2);
+    padding: $base-block-space ($base-block-space * 2);
     color:var(--primary-400);
-    margin-right: ($base-block-space);
-    html[dir="rtl"] & {
-        margin-left: ($base-block-space);
+    margin-right: $base-block-space;
+    *[dir="rtl"] & {
+        margin-left: $base-block-space;
     }
     border-radius: ($base-block-space / 2) ($base-block-space / 2) 0 0;
       &:hover,&.active {
@@ -21,4 +21,12 @@
         color: var(--white);
       }
     }
+}
+
+
+
+*[dir="rtl"] {
+  .sb-offline-menu-container a {
+  margin-left: 0px;
+}
 }
