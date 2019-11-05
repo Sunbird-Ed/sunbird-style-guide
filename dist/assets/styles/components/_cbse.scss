@@ -2,7 +2,18 @@
 .questionTab.button {
   border-bottom: 1px solid #cecece;
 }
-
+.ui.segment, .ui.segments .questionTab.segment {
+  label {
+    font-size: 12px;
+  }
+  &:hover, &.active {
+    background-color: #EDF4F9;
+    color: #024f9d;
+    label {
+      font-weight: 700;
+    }
+  }
+}
 .questionsMenu {
   overflow-y: auto;
   max-height: 500px;
@@ -12,9 +23,15 @@
   border: none;
 }
 
-i.icon.trash {
-  color: var(--red-100);
+i.icon {
+  &.trash {
+    color: var(--red-100);
+  }
+  &.expand {
+    color: var(--primary-color);
+  }
 }
+
 
 // mcq preview layout styles
 .sb-question-outerframe {
