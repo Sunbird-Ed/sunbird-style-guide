@@ -361,28 +361,28 @@ export class CBSEProgramComponent implements OnInit {
      <div class="ui questionsMenu">
        <button class="sb-btn sb-btn-primary sb-btn-normal width-100">Create</button>
        <div class="ui vertical segments" style="max-height:50vh;overflow-y:auto;">
-         <div class="questionTab ui header aligned segment p-8">
-           <div class="item d-flex flex-ai-center cursor-pointer">
-             <div>
-               <label class="mb-0 font-weight-normal" for="check1"> Question 1</label>
-             </div>
-             <span class="sb-status-label sb-bg-success sb-shape-circle ml-auto"></span>
+         <div class="questionTab ui header aligned segment p-16 cursor-pointer active">
+           <div class="item d-flex flex-ai-center">
+           <span class="sb-status-label sb-bg-success sb-shape-circle mr-16"></span>
+           <label class="mb-0 mr-auto" for="check1"> Multiple Choice 1<i class="info circle sb-color-warning fs-1 icon ml-16"></i></label>
+           <i class="trash alternate outline icon"></i>
+           <i class="expand arrows alternate icon ml-16"></i>
            </div>
          </div>
-         <div class="questionTab ui header aligned segment p-8">
-           <div class="item d-flex flex-ai-center cursor-pointer">
-             <div>
-               <label class="mb-0 font-weight-normal" for="check1"> Question 2</label>
-             </div>
-             <span class="sb-status-label sb-bg-warning sb-shape-circle ml-auto"></span>
+         <div class="questionTab ui header aligned segment p-16 cursor-pointer">
+           <div class="item d-flex flex-ai-center">
+           <span class="sb-status-label sb-bg-warning sb-shape-circle mr-16"></span>
+           <label class="mb-0 mr-auto" for="check1"> Multiple Choice 2</label>
+           <i class="trash alternate outline icon"></i>
+           <i class="expand arrows alternate icon ml-16"></i>
            </div>
          </div>
-         <div class="questionTab ui header aligned segment p-8">
-           <div class="item d-flex flex-ai-center cursor-pointer">
-             <div>
-               <label class="mb-0 font-weight-normal" for="check1"> Question 3</label>
-             </div>
-             <span class="sb-status-label sb-bg-error sb-shape-circle ml-auto"></span>
+         <div class="questionTab ui header aligned segment p-16 cursor-pointer">
+           <div class="item d-flex flex-ai-center">
+           <span class="sb-status-label sb-bg-error sb-shape-circle mr-16"></span>
+           <label class="mb-0 mr-auto" for="check1"> Multiple Choice 3</label>
+           <i class="trash alternate outline icon"></i>
+           <i class="expand arrows alternate icon ml-16"></i>
            </div>
          </div>
          <div class="questionTab ui header aligned segment p-8">
