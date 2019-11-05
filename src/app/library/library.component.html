@@ -7,76 +7,88 @@
     <app-page-section [ShowContent]="false"></app-page-section>
     <br> <br>
     <sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel"
-      [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
-      <sui-accordion-panel>
-        <div title class="p-0">
-          <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
-            <span>Content Manager</span>
-            <i class="chevron up icon d-flex flex-ai-center"></i>
+    [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
+    <sui-accordion-panel>
+      <div title class="p-0">
+        <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
+          <span>Content Manager</span>
+          <i class="chevron up icon d-flex flex-ai-center"></i>
+        </div>
+      </div>
+      <div content>
+        <div class="sb-single-pannel-accordion-list-item">
+          <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
+          <div class="download-details-container">
+            <div class="d-flex flex-ai-center flex-w-wrap">
+              <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
+              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-8">
+                Pause
+              </button>
+              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
+                Cancel
+              </button>
+            </div>
+            <div class="info-text">300MB/350MB</div>
+            <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0 mt-8"></sui-progress>
+
           </div>
         </div>
-        <div content>
-          <div class="sb-single-pannel-accordion-list-item">
-              <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud">
-              <div class="download-details-container">
+        <div class="sb-single-pannel-accordion-list-item flex-ai-center">
+          <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
 
-                <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-                  <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
-                  <div class="download-text">Downloading content name 5</div>
-                  <div class="sb-label sb-label-table sb-label-warning-0 ml-auto">Waiting...</div>
-                  <!-- <div class="waiting-text">Waiting...</div> -->
-                </div>
-              </div>
+          <div class="download-details-container">
+
+            <div class="d-flex flex-ai-center flex-w-wrap">
+              <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+              <div class="download-text mr-auto">Downloading content name 5</div>
+              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-warning ml-8">
+                Retry
+              </button>
+              <!-- <div class="waiting-text">Waiting...</div> -->
+            </div>
+            <div class="info-text">300MB/350MB</div>
+
           </div>
-          <div class="sb-single-pannel-accordion-list-item flex-ai-center">
-            <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB">
+        </div>
+        <div class="sb-single-pannel-accordion-list-item">
+          <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
 
-            <div class="download-details-container">
-              <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-                <div class="download-text">Downloading content name 2</div>
-                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-auto">
-                  Pause
-                </button>
-                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
-                  Close
-                </button>
+          <div class="download-details-container">
+
+            <div class="d-flex flex-ai-center flex-w-wrap">
+              <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+              <div class="download-text mr-auto">Data Structure and Algorithm- Assignment chapter for students</div>
+              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
+                Cancel
+              </button>
+              <!-- <div class="waiting-text">Waiting...</div> -->
+            </div>
+            <div class="info-text">300MB/350MB</div>
+            <div class="fs-0-785 sb-color-warning">
+                Waiting for Download...
               </div>
-              <div class="info-text">300MB/350MB</div>
-              <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0 mt-8"></sui-progress>
+
+          </div>
+          <!-- <div class="error-text">Download failed</div> -->
+        </div>
+
+        <div class="sb-single-pannel-accordion-list-item">
+          <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
+          <i class="check circle icon success-icon mr-8 fs-1-429"></i>
+          <div class="download-details-container">
+            <div class="d-flex flex-ai-center flex-w-wrap">
+              <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
 
             </div>
-          </div>
-          <div class="sb-single-pannel-accordion-list-item">
-            <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud">
-
-            <div class="download-details-container">
-              <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-                <div class="download-text">Downloading content name 3</div>
-                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-auto">
-                  Retry
-                </button>
-              </div>
-
-            </div>
-            <!-- <div class="error-text">Download failed</div> -->
-          </div>
-
-          <div class="sb-single-pannel-accordion-list-item">
-            <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB">
-
-            <div class="download-details-container">
-              <div class="d-flex flex-ai-center flex-jc-center flex-basis-100">
-                <div class="download-text">Downloading content name downloading content name</div>
-                <div class="sb-label sb-label-table sb-label-success-0 ml-auto">
-                  <i class="check circle icon success-icon ml-auto"></i>Completed
-                </div>
-  
-              </div>
+            <div class="info-text">300MB/350MB</div>
+            <div class="fs-0-785 sb-color-success">
+              Completed
             </div>
           </div>
         </div>
-      </sui-accordion-panel>
-    </sui-accordion>
+      </div>
+    </sui-accordion-panel>
+  </sui-accordion>
     <!-- footer component -->
     <app-footer [ShowContent]="false"></app-footer>
   </div>
