@@ -21,6 +21,8 @@ export class BulkuploadsComponent implements OnInit {
   errorusermodal;
   createmodal;
   errorrejectmodal;
+  showCreateModal;
+  showErrorRejectModal;
 
   pageTitle = 'Modals';
   uploadModalCode = ` <div class="sb-bulk-upload">
