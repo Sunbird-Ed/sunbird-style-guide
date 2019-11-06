@@ -105,12 +105,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    @include rtl  {
+    html[dir="rtl"] & {
       border-radius:($base-block-space / 2 ) 0 0 ($base-block-space / 2 );
     }
-    // html[dir="rtl"] & {
-    //   border-radius: 4px 0px 0px 4px;
-    // }
   }
 }
 

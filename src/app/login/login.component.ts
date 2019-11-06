@@ -10,9 +10,10 @@ import { DOCUMENT } from '@angular/common';
 export class LoginComponent implements OnInit {
 
   languageSelection = [
-    {name: 'English(Detected)', checked: false}, {name: 'Hindi', checked: false}, {name: 'Marathi', checked: false},
-  {name: 'Kannada', checked: false}, {name: 'Telugu', checked: false}, {name: 'Malayalam', checked: false}
-];
+    { name: 'English (Detected)', checked: true }, { name: 'हिंदी', checked: false }, { name: 'मराठी', checked: false },
+    { name: 'ಕನ್ನಡ', checked: false }, { name: 'తెలుగు', checked: false }, { name: 'বাংলা', checked: false },
+    { name: 'தமிழ்', checked: false }, { name: 'اردو', checked: false }
+  ];
   selectMediumOption: { name: string; value: string; }[];
   selectBoardOption: { name: string; value: string; }[];
   selectClassOption: { name: string; value: string; }[];
