@@ -7,88 +7,144 @@
     <app-page-section [ShowContent]="false"></app-page-section>
     <br> <br>
     <sui-accordion class="styled fluid sb-single-pannel-accordion sb-download-manager-panel"
-    [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
-    <sui-accordion-panel>
-      <div title class="p-0">
-        <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
-          <span>Content Manager</span>
-          <i class="chevron up icon d-flex flex-ai-center"></i>
-        </div>
-      </div>
-      <div content>
-        <div class="sb-single-pannel-accordion-list-item">
-          <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
-          <div class="download-details-container">
-            <div class="d-flex flex-ai-center flex-w-wrap">
-              <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
-              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-8">
-                Pause
-              </button>
-              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
-                Cancel
-              </button>
-            </div>
-            <div class="info-text">300MB/350MB</div>
-            <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0 mt-8"></sui-progress>
-
+      [ngClass]="{'sb-single-pannel-accordion-fixed': panelOpened === true}">
+      <sui-accordion-panel>
+        <div title class="p-0">
+          <div class="sb-single-pannel-accordion-heading" (click)="panelOpened = !panelOpened">
+            <span>Download/Upload Status</span>
+            <i class="chevron up icon d-flex flex-ai-center"></i>
           </div>
         </div>
-        <div class="sb-single-pannel-accordion-list-item flex-ai-center">
-          <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
+        <div content>
+          <div class="sb-single-pannel-accordion-list-item">
+            <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
+            <div class="download-details-container">
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
+                  Cancel
+                </button>
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-8">
+                  Pause
+                </button>
+              </div>
+              <div class="info-text">300MB/350MB</div>
+              <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0"></sui-progress>
 
-          <div class="download-details-container">
-
-            <div class="d-flex flex-ai-center flex-w-wrap">
-              <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
-              <div class="download-text mr-auto">Downloading content name 5</div>
-              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-warning ml-8">
-                Retry
-              </button>
-              <!-- <div class="waiting-text">Waiting...</div> -->
             </div>
-            <div class="info-text">300MB/350MB</div>
-
           </div>
-        </div>
-        <div class="sb-single-pannel-accordion-list-item">
-          <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
 
-          <div class="download-details-container">
+          <div class="sb-single-pannel-accordion-list-item">
+            <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
 
-            <div class="d-flex flex-ai-center flex-w-wrap">
-              <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
-              <div class="download-text mr-auto">Data Structure and Algorithm- Assignment chapter for students</div>
-              <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
-                Cancel
-              </button>
-              <!-- <div class="waiting-text">Waiting...</div> -->
+            <div class="download-details-container">
+
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+                <div class="download-text mr-auto">Downloading content name 5</div>
+
+                <!-- <div class="waiting-text">Waiting...</div> -->
+              </div>
+              <div class="info-text">300MB/350MB</div>
+              <div class="d-flex flex-ai-center">
+                <div class="fs-1 sb-color-error font-weight-bold mr-auto">
+                  Cancel the Download ?
+                </div>
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-8">
+                  Continue
+                </button>
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
+                  Cancel
+                </button>
+              </div>
             </div>
-            <div class="info-text">300MB/350MB</div>
-            <div class="fs-0-785 sb-color-warning">
-                Waiting for Download...
+          </div>
+
+          <div class="sb-single-pannel-accordion-list-item">
+            <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
+
+            <div class="download-details-container">
+
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+                <div class="download-text mr-auto">Data Structure and Algorithm- Assignment chapter for students</div>
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-primary ml-8">
+                  Resume
+                </button>
+                <!-- <div class="waiting-text">Waiting...</div> -->
+              </div>
+              <div class="info-text">300MB/350MB</div>
+              <div class="fs-0-785 sb-color-primary">
+                Download paused. Click Resume to continue
               </div>
 
+            </div>
+            <!-- <div class="error-text">Download failed</div> -->
           </div>
-          <!-- <div class="error-text">Download failed</div> -->
-        </div>
 
-        <div class="sb-single-pannel-accordion-list-item">
-          <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
-          <i class="check circle icon success-icon mr-8 fs-1-429"></i>
-          <div class="download-details-container">
-            <div class="d-flex flex-ai-center flex-w-wrap">
-              <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
+          <div class="sb-single-pannel-accordion-list-item">
+            <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
+
+            <div class="download-details-container">
+
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+                <div class="download-text mr-auto">Data Structure and Algorithm- Assignment chapter for students</div>
+
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-warning ml-8">
+                  Retry
+                </button>
+                <!-- <div class="waiting-text">Waiting...</div> -->
+              </div>
+              <div class="info-text">350MB</div>
+              <div class="fs-0-785 sb-color-error">
+                Download failed. Try again
+              </div>
 
             </div>
-            <div class="info-text">300MB/350MB</div>
-            <div class="fs-0-785 sb-color-success">
-              Completed
+            <!-- <div class="error-text">Download failed</div> -->
+          </div>
+
+          <div class="sb-single-pannel-accordion-list-item">
+            <!-- <img src="../../assets/images/cloud-download.svg" alt="download" class="download-image" title="Download from Cloud"> -->
+
+            <div class="download-details-container">
+
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <!-- <i class="history icon waiting-icon d-flex flex-ai-center"></i> -->
+                <div class="download-text mr-auto">Data Structure and Algorithm- Assignment chapter for students</div>
+
+                <button type="button" class="sb-btn sb-btn-xs sb-btn-outline-error ml-8">
+                  Cancel
+                </button>
+                <!-- <div class="waiting-text">Waiting...</div> -->
+              </div>
+              <div class="info-text">350MB</div>
+              <div class="fs-0-785 sb-color-warning">
+                Waiting for download...
+              </div>
+
+            </div>
+            <!-- <div class="error-text">Download failed</div> -->
+          </div>
+
+          <div class="sb-single-pannel-accordion-list-item download-complete">
+            <!-- <img src="../../assets/images/usb.svg" alt="download" class="download-image" title="Download from USB"> -->
+            <i class="check circle icon success-icon mr-8 fs-1-429"></i>
+            <div class="download-details-container">
+              <div class="d-flex flex-ai-center flex-w-wrap">
+                <div class="download-text">Data Structure and Algorithm- Assignment chapter for students</div>
+
+              </div>
+              <div class="info-text">300MB/350MB</div>
+              <div class="fs-0-785 sb-color-success">
+                Completed
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </sui-accordion-panel>
-  </sui-accordion>
+      </sui-accordion-panel>
+    </sui-accordion>
     <!-- footer component -->
     <app-footer [ShowContent]="false"></app-footer>
   </div>
