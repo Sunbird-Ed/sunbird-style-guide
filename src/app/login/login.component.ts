@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2, Inject, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-// declare var Swiper: any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   selectClass = false;
   selectMedium = false;
   selectBoard = false;
+  activeSlide: number;
+  slides: string[] = ['slide-1', 'slide-2', 'slide-3'];
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {
     this.languageSelection = [
@@ -181,10 +183,10 @@ export class LoginComponent implements OnInit {
     ];
   }
   ngOnInit() {
+    this.activeSlide = 0;
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
   }
-  showNextContent() {
-    this.showContent = !this.showContent;
+  showNextContent(ind: number) {
+    this.activeSlide = ind;
   }
-
 }

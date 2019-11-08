@@ -40,15 +40,22 @@
         padding: ($base-block-space * 2);
       }
 
+      // .active-slide{
+      //   display:none;
+      // }
+      // .inactive-slide{
+      //   display:block;
+      // }
       .swiper-slide {
         height: 360px;
-
+        width:100%;
+        transition: all 5s linear;
+     
         .slide-title {
           font-size: 14px;
           color: #024F9D;
           margin-bottom: 0px;
         }
-
 
         .title {
           text-align: center;
