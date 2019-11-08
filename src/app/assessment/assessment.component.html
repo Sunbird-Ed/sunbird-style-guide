@@ -1,6 +1,6 @@
 <!--Page Content-->
 
-<div class="docs-sections">
+<div class="docs-sections" style="display: none;">
   <h4 class="docs-sectionHeading">
     Assessment Instructions
     <i class="fa fa-code text-gray docs-expandCode" (click)="AssessmentInstructions = !AssessmentInstructions"
@@ -60,15 +60,15 @@
     <div class="assessment-overlay">
     <div class="assessment-content assessment-result-content">
       <div class="assessment-content-title">Submit your assessment to check your score.</div>
-      <div class="assessment-content-description mt-16">
+      <div class="assessment-content-description">
         <div class="assessment-scorelist text-center">
           <div class="assessment-scoreitem">Total questions: <span class="score">5</span></div>
           <div class="assessment-scoreitem">Questions answered: <span class="score">3</span></div>
           <div class="assessment-scoreitem">Questions skipped: <span class="score">2</span></div>
         </div>
       </div>
-      <div class="assessment-action-buttons mt-40">
-        <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-responsive mr-24"> Go Back </button>
+      <div class="assessment-action-buttons">
+        <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-responsive mr-24"> Review </button>
         <button type="submit" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-responsive"> Submit </button>
       </div>
     </div>
@@ -109,23 +109,22 @@
   <!--Display output-->
   <div class="docs-sectionDemoCode">
     <div class="assessment-content assessment-score-content">
-      <div class="assessment-content-title mt-32">You assessment score is 3/5</div>
-      <div class="assessment-content-description mt-16">
+      <div class="assessment-content-title">Your score is 3/5</div>
+      <div class="assessment-content-description">
         <div class="text-center">
-          You can re-take the assessment to improve your score or move to
-          next module to continue learning.
+          You can redo the assessment to improve your score.
         </div>
       </div>
-      <div class="assessment-action-buttons mt-40">
-        <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-responsive mr-24"> Re-take Assessment
+      <div class="assessment-action-buttons mt-24">
+        <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-responsive mr-24"> Redo
         </button>
-        <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-responsive"> Go to Next Module </button>
+        <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-responsive">Exit </button>
       </div>
-      <div class="assessment-action-buttons mt-32">
+      <!-- <div class="assessment-action-buttons mt-32">
         <div class="assement-view">To view answers to this assessment,
           <a href="" class="text-decoration-underline"> click here</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!--/Display output-->
@@ -151,7 +150,7 @@
 
 <!--Page Content-->
 
-<div class="docs-sections">
+<div class="docs-sections"  style="display: none;">
   <h4 class="docs-sectionHeading">
     Assessment Answers
     <i class="fa fa-code text-gray docs-expandCode" (click)="AssessmentAnswers = !AssessmentAnswers" title="Toggle Code"
@@ -200,7 +199,7 @@
 
 <!--Page Content-->
 
-<div class="docs-sections">
+<div class="docs-sections"  style="display: none;">
   <h4 class="docs-sectionHeading">
     Assessment Completed
     <i class="fa fa-code text-gray docs-expandCode" (click)="AssessmentCompleted = !AssessmentCompleted"
@@ -250,7 +249,7 @@
 
   <!--Page Content-->
 
-  <div class="docs-sections">
+  <div class="docs-sections"  style="display: none;">
     <h4 class="docs-sectionHeading">
       Assessment Completed
       <i class="fa fa-code text-gray docs-expandCode" (click)="AssessmentFinalReport = !AssessmentFinalReport"
