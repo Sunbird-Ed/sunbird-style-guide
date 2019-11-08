@@ -1,49 +1,77 @@
-<div class="loginform">
+<div class="bg-image">
+  <div class="loginform">
     <div class="loginform__content">
+
       <div class="loginform__content__header">
         <img src="assets/images/DIKSHA.svg" alt="DIKSHA Logo">
       </div>
 
-      <div *ngIf="!showContent">
+      <!-- Slides -->
+      <div class="swiper-slide" *ngIf="!showContent">
         <div class="title">Choose Your Preferred Language</div>
         <div class="language-selection">
           <div class="scrollbar" id="stylingScroll">
-            <label class="language-selection__container" *ngFor="let select of languageSelection">
-              <div class="language-selection__label">{{select.name}}</div>
-              <input type="radio" name="categories" [value]="select.name" [(ngModel)]="select.checked">
+            <label class="radio-container" *ngFor="let select of languageSelection">
+              <div class="label">{{select.name}}</div>
+              <input type="radio" [value]="select" [(ngModel)]="radiobtnchecked">
               <span class="checkmark"></span>
             </label>
           </div>
         </div>
       </div>
 
-      <div *ngIf="showContent">
+      <div class="swiper-slide" *ngIf="showContent">
         <div class="header-title">Provide the details below for suggesting content that is relevant for you. </div>
         <div class='d-flex flex-dc fields-selection'>
-          <div class="d-flex fields-selection__label">Board</div>
-          <sui-select class="selection" labelField="name" [(ngModel)]="selectBoard">
+          <label class="d-flex fields-selection__label" [ngClass]="{ textColorChange: !selectBoard }">Board</label>
+          <sui-select class="selection selectionfield" labelField="name" [(ngModel)]="selectBoard">
             <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
             </sui-select-option>
           </sui-select>
 
-          <div class="d-flex fields-selection__label">Medium</div>
+          <label class="d-flex fields-selection__label" [ngClass]="{ textColorChange: !selectMedium }">Medium</label>
           <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectMedium" #multiSelect>
             <sui-select-option *ngFor="let option of selectMediumOption" [value]="option">
             </sui-select-option>
           </sui-multi-select>
 
-          <div class="d-flex fields-selection__label">Class</div>
+          <label class="d-flex fields-selection__label" [ngClass]="{ textColorChange: !selectClass }">Class</label>
           <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectClass" #multiSelect>
             <sui-select-option *ngFor="let option of selectClassOption" [value]="option">
             </sui-select-option>
           </sui-multi-select>
         </div>
+      </div>
 
+      <!-- <div class="swiper-slide" *ngIf="showContent">
+            <label class='slide-title'>Your Location</label>
+            <div class="header-title">Your location details helps us to suggest content that is useful to you.
+              Is the location given correct?
+              if not, select your correct location and click Submit </div>
+            <div class='d-flex flex-dc fields-selection'>
+              <sui-select class="selection selectionfield" labelField="name" [(ngModel)]="selectState">
+                <sui-select-option *ngFor="let option of selectStateOption" [value]="option">
+                </sui-select-option>
+              </sui-select>
+
+              <sui-select class="selection selectionfield mt-10" labelField="name" [(ngModel)]="selectPlace">
+                <sui-select-option *ngFor="let option of selectPlaceOption" [value]="option">
+                </sui-select-option>
+              </sui-select>
+
+            </div>
+       </div> -->
+
+      <div class="bullets-container">
+        <div class="circle active update completed" (click)='showNextContent()'></div>
+        <div class="circle active update completed" (click)='showNextContent()'></div>
+        <div class="circle active update completed" (click)='showNextContent()'></div>
       </div>
 
       <button type="button" class="sb-btn sb-btn-primary sb-btn-sm" (click)='showNextContent()'>
         CONTINUE
-        <span class='icon'><i class="arrow right icon"></i></span></button>
+        <span class='arrow-icon'><i class="arrow right icon"></i></span></button>
     </div>
 
+  </div>
 </div>
