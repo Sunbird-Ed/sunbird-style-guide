@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, Inject } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,18 +8,28 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  languageSelection = [
-    { name: 'English (Detected)', checked: true }, { name: 'हिंदी', checked: false }, { name: 'मराठी', checked: false },
-    { name: 'ಕನ್ನಡ', checked: false }, { name: 'తెలుగు', checked: false }, { name: 'বাংলা', checked: false },
-    { name: 'தமிழ்', checked: false }, { name: 'اردو', checked: false }
-  ];
-  selectMediumOption: { name: string; value: string; }[];
-  selectBoardOption: { name: string; value: string; }[];
-  selectClassOption: { name: string; value: string; }[];
+  languageSelection: any [];
+  selectMediumOption: any[];
+  selectBoardOption: any[];
+  selectClassOption: any[];
+  selectStateOption: any[];
+  selectPlaceOption: any[];
   showContent: any;
+  radiobtnchecked: any;
+  selectClass = false;
+  selectMedium = false;
+  selectBoard = false;
+  activeSlide: number;
+  slides: string[] = ['slide-1', 'slide-2', 'slide-3'];
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {
+    this.languageSelection = [
+      { name: 'English (Detected)', value: '0' }, { name: 'हिंदी', value: '1' }, { name: 'मराठी', value: '2' },
+      { name: 'ಕನ್ನಡ', value: '3' }, { name: 'తెలుగు', value: '4' }, { name: 'বাংলা', value: '5' },
+      { name: 'தமிழ்', value: '6' }, { name: 'اردو', value: '7' }
+    ];
+    this.radiobtnchecked = this.languageSelection[0];
+
     this.selectMediumOption = [
       {
         name: 'English',
@@ -49,6 +59,34 @@ export class LoginComponent implements OnInit {
       , {
         name: 'Malayalam',
         value: '7'
+      }
+    ];
+
+    this.selectPlaceOption = [
+      {
+        name: 'Amravati',
+        value: '0'
+      }, {
+        name: 'Bangalore',
+        value: '1'
+      }, {
+        name: 'Chennai',
+        value: '2'
+      }, {
+        name: 'thiruvanthpuram',
+        value: '3'
+      }
+      , {
+        name: 'Ahemdabad',
+        value: '4'
+      }
+      , {
+        name: 'Mumbai',
+        value: '5'
+      }
+      , {
+        name: 'Lucknow',
+        value: '6'
       }
     ];
 
@@ -115,11 +153,40 @@ export class LoginComponent implements OnInit {
         value: '7'
       }
     ];
+
+    this.selectStateOption = [
+      {
+        name: 'Andhra Pradesh',
+        value: '0'
+      }, {
+        name: 'Karnataka',
+        value: '1'
+      }, {
+        name: 'Tamil Nadu',
+        value: '2'
+      }, {
+        name: 'Kerala',
+        value: '3'
+      }
+      , {
+        name: 'Gujarat',
+        value: '4'
+      }
+      , {
+        name: 'Maharashtra',
+        value: '5'
+      }
+      , {
+        name: 'UP',
+        value: '6'
+      }
+    ];
   }
   ngOnInit() {
+    this.activeSlide = 0;
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
   }
-  showNextContent() {
-    this.showContent = !this.showContent;
+  showNextContent(ind: number) {
+    this.activeSlide = ind;
   }
 }
