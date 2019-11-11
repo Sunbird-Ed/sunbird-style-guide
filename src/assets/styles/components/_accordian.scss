@@ -35,7 +35,7 @@
 
 .ui.styled.accordion.sb-single-pannel-accordion.sb-single-pannel-accordion-fixed {
   position: fixed;
-  right: 43px;
+  right: 32px;
 }
 
 .ui.styled.accordion.sb-single-pannel-accordion .title,
@@ -121,7 +121,7 @@
 
 .sb-single-pannel-accordion-list-item {
   font-size: 14px;
-  padding: ($base-block-space) ($base-block-space * 2) ($base-block-space) ($base-block-space * 2);
+  padding: ($base-block-space)*2;
   background: $white-color;
   display: flex;
   // flex-wrap: wrap;
@@ -129,11 +129,21 @@
   border-bottom: $sb-download-manager-border;
   align-items: center;
 
+  &.download-complete {
+    background: #f2f2f2;
+  }
+
+  .sb-color-success {
+    color: #008840;
+  }
+
   .info-text {
     font-size: 12px;
     margin-bottom: 4px;
     width: auto;
     display: inline-block;
+    color: #999;
+    margin-bottom: 8px;
   }
 
   i.icon {
@@ -145,7 +155,7 @@
     }
 
     &.success-icon {
-      color: $success-color;
+      color: #008840;
       height: 60px;
     }
 
@@ -190,7 +200,6 @@
 .success-text {
   font-size: 14px;
   color: $success-color;
-  ;
   text-align: right;
 }
 
