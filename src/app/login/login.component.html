@@ -77,13 +77,14 @@
 
       <div class="bullets-container">
         <!-- <div class="circle active update completed" *ngFor="let slide of slides;let i =index;" (click)="showNextContent(i)" ></div> -->
-        <div class="circle active update completed"></div>
+        <div class="circle completed"></div>
         <div class="circle active"></div>
-        <div class="circle inactive"></div>
+        <div class="circle update"></div>
       </div>
 
-      <button type="submit" class="sb-btn sb-btn-primary sb-btn-sm" disabled>CONTINUE <span class='arrow-icon'><i
-            class="arrow right icon"></i></span></button>
+      <button type="button" class="sb-btn sb-btn-primary sb-btn-sm" (click)="nextSlides()">
+        CONTINUE
+        <span class='arrow-icon'><i class="arrow right icon"></i></span></button>
     </div>
 
   </div>

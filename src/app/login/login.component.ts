@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   selectPlaceOption: any[];
   showContent: any;
   radiobtnchecked: any;
+  showNormalModal;
   selectClass = false;
   selectMedium = false;
   selectBoard = false;
@@ -188,5 +189,11 @@ export class LoginComponent implements OnInit {
   }
   showNextContent(ind: number) {
     this.activeSlide = ind;
+  }
+  nextSlides() {
+    this.activeSlide = this.activeSlide + 1;
+    if(this.activeSlide >= 2) {
+      this.activeSlide = 2;
+    }
   }
 }

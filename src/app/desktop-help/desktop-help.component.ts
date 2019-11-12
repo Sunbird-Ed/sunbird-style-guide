@@ -11,7 +11,7 @@ export class DesktopHelpComponent implements OnInit {
   selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
-
+  showNormalModal;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {

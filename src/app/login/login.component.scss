@@ -91,7 +91,6 @@
         }
 
         .fields-selection {
-          // margin: 0px 0px ($base-block-space * 6);
 
           .textColorChange {
             color:var(--primary-400);
@@ -102,21 +101,6 @@
             font-weight: normal;
             margin-bottom: 0px;
           }
-
-          // .ui.multiple.dropdown {
-          //   border-color: #dededf;
-
-          //   &:hover {
-          //     border-color: #bdb6b6;
-          //   }
-          // }
-
-          // .ui.selection.dropdown {
-          //   margin-bottom: 8px;
-          //   padding: ($base-block-space);
-          //   color: var(--gray-800);
-          //   border-radius: 0px;
-          // }
 
         }
       }
@@ -132,13 +116,12 @@
         justify-content: center;
         align-items: center;
         padding: 16px 0px;
-        cursor: pointer;
 
         .circle {
           margin: 0 3px;
           border: 1px solid #eee;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
         }
 
