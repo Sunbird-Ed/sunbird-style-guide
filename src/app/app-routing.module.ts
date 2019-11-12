@@ -55,6 +55,7 @@ import { CbseHomepageComponent } from './cbse-homepage/cbse-homepage.component';
 import { ManageComponent } from './manage/manage.component';
 import { OfflineTestComponent } from './offline-test/offline-test.component';
 import { LoginComponent } from './login/login.component';
+import { DesktopHelpComponent } from './desktop-help/desktop-help.component';
 
 
 const routes: Routes = [
@@ -114,6 +115,7 @@ const routes: Routes = [
   { path: 'manage', component: ManageComponent},
   { path: 'offline-test', component: OfflineTestComponent},
   { path: 'offline-login', component: LoginComponent},
+  { path: 'desktop-help', component: DesktopHelpComponent},
 ];
 
 @NgModule({

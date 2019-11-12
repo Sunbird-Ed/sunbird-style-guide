@@ -1,0 +1,58 @@
+<div class="sb-offline-app-bar">
+  <app-offline-appbar></app-offline-appbar>
+</div>
+
+<div class="sb-header-offline-bar sb-bg-color-white">
+  <div class="ui container">
+    <app-offline-header></app-offline-header>
+  </div>
+</div>
+
+<div class="sb-menubar">
+  <div class="ui container d-flex flex-ai-center flex-jc-space-between">
+    <app-offline-menubar></app-offline-menubar>
+    <sui-select class="selection state-medium medium-selection" labelField="name" [(ngModel)]="selectMedium">
+      <sui-select-option *ngFor="let option of selectOption" [value]="option">
+      </sui-select-option>
+    </sui-select>
+  </div>
+</div>
+
+    <div class='question-title sb-bg-color-white'>
+        Learn more about how to use DIKSHA
+    </div>
+
+  <div class="question__content">
+    <p class="question__content__text">
+      Haven't found what are you looking for?
+    </p>
+    <button type="button" class="d-flex sb-btn sb-btn-outline-primary report-btn m-auto"
+      (click)="showNormalModal = !showNormalModal">Report other issue</button>
+  </div>
+
+
+<sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
+  class="sb-modal" appBodyScroll (dismissed)="showNormalModal = !showNormalModal" #modal>
+  <div class="sb-modal-header">
+    Report an issue
+  </div>
+  <div class="sb-modal-content"> 
+    <div class="sb-field-group mt-16">
+      <div class="sb-field">
+        <label>Email address</label>
+        <input type="text" class="sb-form-control" placeholder="Enter email address here">
+      </div>
+    </div>
+    <div class="sb-field-group mt-16">
+      <div class="sb-field">
+        <label>Tell us a more about the problem you faced</label>
+        <textarea rows="4" class="sb-form-control" placeholder="Type here..."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="sb-modal-actions">
+    <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="doSomething()">
+      Submit Issue
+    </button>
+  </div>
+</sui-modal>
