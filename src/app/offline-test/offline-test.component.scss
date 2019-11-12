@@ -1,25 +1,23 @@
 @import "variables";
 .state-medium-container {
-
   &__dropdown {
     padding: ($base-block-space * 2) 0;
     z-index: 1;
   }
 
-    &__separator{
-      border-left: 1px solid var(--gray-200);
-      height: ($base-block-space * 3);
-      margin:auto 10px;
-    }
-  
-  &__medium{
+  &__separator {
+    border-left: 1px solid var(--gray-200);
+    height: ($base-block-space * 3);
+    margin: auto 10px;
+  }
+
+  &__medium {
     overflow-x: auto;
     overflow-y: hidden;
   }
 }
 
 .sb-menubar {
-  
 }
 
 .select-language {

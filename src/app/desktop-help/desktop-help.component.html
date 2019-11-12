@@ -1,34 +1,43 @@
-<div class="sb-offline-app-bar">
-  <app-offline-appbar></app-offline-appbar>
-</div>
-
-<div class="sb-header-offline-bar sb-bg-color-white">
+<app-offline-test></app-offline-test>
+<div class="sbpage-title sb-bg-color-white">
   <div class="ui container">
-    <app-offline-header></app-offline-header>
+    <h1>Learn more about how to use DIKSHA</h1>
   </div>
 </div>
 
-<div class="sb-menubar">
-  <div class="ui container d-flex flex-ai-center flex-jc-space-between">
-    <app-offline-menubar></app-offline-menubar>
-    <sui-select class="selection state-medium medium-selection" labelField="name" [(ngModel)]="selectMedium">
-      <sui-select-option *ngFor="let option of selectOption" [value]="option">
-      </sui-select-option>
-    </sui-select>
-  </div>
-</div>
+<div class="ui container sb-two-column help-video mt-32">
+  <div class="sb-column help-video__player">
 
-    <div class='question-title sb-bg-color-white'>
-        Learn more about how to use DIKSHA
+    <div class="aspectratio" data-ratio="16:9">
+      <div>
+        <p>16:9</p>
+      </div>
     </div>
 
-  <div class="question__content">
-    <p class="question__content__text">
+    <div class="help-video__player__title">
+      <h3>How do i add content to DIKSHA app when i am offline or using a pen drive?</h3>
+      <div class="help-video__player__tools">
+        <div><i></i>Share</div>
+        <div><i></i>Download</div>
+      </div>
+    </div>
+  </div>
+  <div class="sb-column help-video__content">
+    left list
+  </div>
+</div>
+
+
+<div class="ui container sb-two-column help-faq mt-32 mb-32">
+  <div class="sb-column help-faq__list"></div>
+  <div class="sb-column help-faq__report">
+    <p class="help-faq__report_text">
       Haven't found what are you looking for?
     </p>
-    <button type="button" class="d-flex sb-btn sb-btn-outline-primary report-btn m-auto"
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary"
       (click)="showNormalModal = !showNormalModal">Report other issue</button>
   </div>
+</div>
 
 
 <sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
@@ -36,7 +45,7 @@
   <div class="sb-modal-header">
     Report an issue
   </div>
-  <div class="sb-modal-content"> 
+  <div class="sb-modal-content">
     <div class="sb-field-group mt-16">
       <div class="sb-field">
         <label>Email address</label>

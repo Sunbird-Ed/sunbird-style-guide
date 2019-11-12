@@ -1,3 +1,5 @@
+@import 'mixins/mixins';
+
 html,
 body {
   height: 100%;
@@ -127,9 +129,4 @@ body {
   }
 
 
-
-[dir="rtl"] {
-    .sb-offline-menu-container a {
-    margin-left: 0px;
-  }
-}
+  

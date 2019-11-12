@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   selectPlaceOption: any[];
   showContent: any;
   radiobtnchecked: any;
+  showNormalModal;
   selectClass = false;
   selectMedium = false;
   selectBoard = false;

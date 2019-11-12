@@ -20,29 +20,29 @@ export class OfflineTestComponent implements OnInit {
         name: 'English',
         value: '0'
       }, {
-        name: 'Hindi',
+        name: 'বাংলা',
         value: '1'
       }, {
-        name: 'Urdu',
+        name: 'اردو',
         value: '2'
       }, {
-        name: 'Marathi',
+        name: 'मराठी',
         value: '3'
       }
       , {
-        name: 'Kannada',
+        name: 'ಕನ್ನಡ',
         value: '4'
       }
       , {
-        name: 'Telugu',
+        name: 'తెలుగు',
         value: '5'
       }
       , {
-        name: 'Tamil',
+        name: 'हिंदी',
         value: '6'
       }
       , {
-        name: 'Malayalam',
+        name: 'தமிழ்',
         value: '7'
       }
     ];

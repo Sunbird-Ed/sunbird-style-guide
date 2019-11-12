@@ -89,7 +89,7 @@
 
     .search-page-pdf-arrow-container {
       position: relative;
-      background: #024F9D;
+      background: #024f9d;
       height: 100%;
       display: inline-block;
       width: 25%;
@@ -140,7 +140,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-//   z-index: 99999;
+  //   z-index: 99999;
   background: white;
   border: 1px solid white;
   color: black;
@@ -176,7 +176,7 @@
   &::before {
     border-style: solid;
     border-width: 2px 2px 0 0;
-    content: '';
+    content: "";
     display: inline-block;
     height: 10px;
     transform: rotate(-45deg);
@@ -220,7 +220,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
   .bold-page,
   .sb-pdf-container .pdf-name,
   #pdf-find-text {
@@ -232,7 +231,7 @@
   }
 }
 
-// Overlay Menu 
+// Overlay Menu
 .overlay-menu-container {
   width: 40%;
   height: 100vh;
