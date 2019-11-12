@@ -12,6 +12,7 @@ export class DesktopHelpComponent implements OnInit {
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
   showNormalModal;
+  issueReportText: boolean = false;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
@@ -48,5 +49,8 @@ export class DesktopHelpComponent implements OnInit {
       }
     ];
     this.selectMedium = this.selectOption[0];
+  }
+  submitIssue() {
+    this.issueReportText = !this.issueReportText;
   }
 }
