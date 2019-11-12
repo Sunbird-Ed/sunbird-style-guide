@@ -1,48 +1,48 @@
 @import "variables";
 
-.sb-medium{
-    width: 100%;
+.sb-medium {
+  width: 100%;
 
-    &__pills-container{
-        min-height: 64px;
+  &__pills-container {
+    min-height: 64px;
 
-        .pill {
-            border: 1px solid var(--green);
-            color: var(--green);
-            cursor: pointer;
-            
-            &:hover{
-                background-color: var(--green);
-                color: var(--white);     
-              }
-        }
-        .pill.active {
-            background-color: var(--green);
-            color: var(--white);
-            cursor: pointer;
-          }
+    .pill {
+      border: 1px solid var(--green);
+      color: var(--green);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--green);
+        color: var(--white);
+      }
     }
-    
-    &__sb-pills-content {
-        display: inline-flex;
-        align-items: center;
-        padding: ($base-block-space * 2) 0;
-
-        .pill {
-            background-color: var(--white);
-            white-space: nowrap;
-            -webkit-appearance: none;
-            text-overflow: ellipsis;
-            min-height: ($base-block-space * 4);
-            margin-right: $base-block-space;
-            padding:($base-block-space / 2) ( $base-block-space );
-            border-radius: 2px;
-            text-transform: capitalize;
-            text-decoration: none;
-            text-align: center;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-        }
+    .pill.active {
+      background-color: var(--green);
+      color: var(--white);
+      cursor: pointer;
     }
+  }
+
+  &__sb-pills-content {
+    display: inline-flex;
+    align-items: center;
+    padding: ($base-block-space * 2) 0;
+
+    .pill {
+      background-color: var(--white);
+      white-space: nowrap;
+      -webkit-appearance: none;
+      text-overflow: ellipsis;
+      min-height: ($base-block-space * 4);
+      margin: 0px ($base-block-space/2) 0px ($base-block-space/2);
+      padding: ($base-block-space / 2) ($base-block-space);
+      border-radius: 2px;
+      text-transform: capitalize;
+      text-decoration: none;
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
