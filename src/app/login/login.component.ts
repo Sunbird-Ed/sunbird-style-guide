@@ -189,4 +189,10 @@ export class LoginComponent implements OnInit {
   showNextContent(ind: number) {
     this.activeSlide = ind;
   }
+  nextSlides() {
+    this.activeSlide = this.activeSlide + 1;
+    if(this.activeSlide >= 2) {
+      this.activeSlide = 2;
+    }
+  }
 }
