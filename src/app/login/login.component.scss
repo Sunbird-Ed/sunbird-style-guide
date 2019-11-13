@@ -91,17 +91,13 @@
         }
 
         .fields-selection {
+             .sb-field{
+               margin-bottom: 16px 0px;
+             }
 
           .textColorChange {
             color:var(--primary-400);
           }
-
-          &__label {
-            padding: ($base-block-space +2) 2px;
-            font-weight: normal;
-            margin-bottom: 0px;
-          }
-
         }
       }
       .animate-slide-on {
