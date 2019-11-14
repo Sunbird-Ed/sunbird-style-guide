@@ -182,7 +182,9 @@ export class LoginComponent implements OnInit {
         value: '6'
       }
     ];
+
   }
+  
   ngOnInit() {
     this.activeSlide = 0;
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');

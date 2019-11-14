@@ -1,7 +1,27 @@
 @import "variables";
+
+
+//layout
+@media only screen and (max-width: 991px) and (min-width: 768px){
+.ui.container {
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px){
+.ui.container {
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+}
+
+
 .state-medium-container {
+  position: relative;
+  height:64px;
   &__dropdown {
-    padding: ($base-block-space * 2) 0;
     z-index: 1;
   }
 
@@ -14,10 +34,16 @@
   &__medium {
     overflow-x: auto;
     overflow-y: hidden;
+    height:64px;
   }
 }
 
 .sb-menubar {
+}
+
+.sb-class-bar{
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .select-language {

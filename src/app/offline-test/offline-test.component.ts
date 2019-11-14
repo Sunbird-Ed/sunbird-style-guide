@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./offline-test.component.scss']
 })
 export class OfflineTestComponent implements OnInit {
- selectOption: any;
+  selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
 

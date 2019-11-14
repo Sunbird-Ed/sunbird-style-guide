@@ -6,9 +6,11 @@
     min-height: ($base-block-space * 4);
     width: 100%;
     margin-top: ($base-block-space);
-    margin-left:$base-block-space;
+    margin-left:0px;
+    padding-left:5px;
+    overflow: hidden;
     html[dir="rtl"] & {
-      margin-right:8px;
+      margin-right:0px;
     }
     a {
       position: relative;
@@ -16,7 +18,7 @@
       font-size: $font-size-sm;
       padding: $base-block-space ($base-block-space * 3);
       color: var(--primary-400);
-      margin-right: ($base-block-space * 2);
+      margin-right: ($base-block-space + 2);
       border-radius: ($base-block-space / 2) ($base-block-space / 2) 0 0;
       html[dir="rtl"] & {
         margin-left: $base-block-space;
@@ -28,33 +30,34 @@
         position: absolute;
         height: 10px;
         width: 20px;
-        bottom: 0;
+        bottom:0px;
       }
 
       &:after {
         right: -20px;
         border-radius: 0 0 0 10px;
-        box-shadow: -10px 0 0 0 #bac9d8;
+        box-shadow: -8px 0 0 0 #bac9d8;
       }
 
       &:before {
         left: -20px;
         border-radius: 0 0 10px 0;
-        box-shadow: 10px 0 0 0 #bac9d8;
+        box-shadow: 8px 0 0 0 #bac9d8;
       }
 
       &.active:after, &:hover:after {
-        box-shadow: -10px 0 0 0 var(--primary-400);
+        box-shadow: -8px 0 0 0 var(--primary-400);
       }
       
       &.active:before, &:hover:before {
-        box-shadow: 10px 0 0 0 var(--primary-400);
+        box-shadow: 8px 0 0 0 var(--primary-400);
       }
 
       &:hover,
       &.active {
         background: var(--primary-400);
         color: var(--white);
+        text-decoration: none;
       }
     }
   }
