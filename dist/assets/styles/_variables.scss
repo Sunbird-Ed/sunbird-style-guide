@@ -57,8 +57,11 @@
   --alpha50: 0.50;
   --alpha75: 0.75;
 
-  --base-font-size:14px;
   --base-block-space: 8px;
+
+  --base-font-size:14px;
+  --font-size:14px;
+
   --icon-svg-xxs: 12px;
   --icon-svg-xs: calc(var(--base-block-space) * 2);
   --icon-svg-sm: calc(var(--base-block-space) * 3);

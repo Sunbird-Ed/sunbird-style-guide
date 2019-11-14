@@ -95,3 +95,12 @@
     opacity: 0.8;
   }
 }
+
+
+.characters-left {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: var(--gray-200);
+  font-size: $font-size-sm;
+}

@@ -12,12 +12,12 @@ export class DesktopHelpComponent implements OnInit {
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
   showNormalModal;
-  issueReportText: boolean = false;
-  
+  issueReportText = false;
+
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
 
-    window.addEventListener('load', function () {
+    window.addEventListener('load', function() {
       const getVideoHeight = (document.querySelector('#player-area-height') as HTMLElement).offsetHeight;
       this.alert(getVideoHeight + 'px');
       (document.querySelector<HTMLElement>('#help-video-content-scroll') as HTMLElement).style.height = getVideoHeight + 'px';
