@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, Inject } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,6 +8,13 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./desktop-help.component.scss']
 })
 export class DesktopHelpComponent implements OnInit {
+  @ViewChild('aspectRatio') aspectRatio;
+  @ViewChild('playerInfo') playerInfo;
+
+  videoContainerHeight: number;
+  aspectRatioHeight: number;
+  playerInfoHeight: number;
+
   selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
@@ -16,6 +23,10 @@ export class DesktopHelpComponent implements OnInit {
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
+    this.aspectRatioHeight = this.aspectRatio.nativeElement.offsetHeight;
+    this.playerInfoHeight = this.playerInfo.nativeElement.offsetHeight
+    this.videoContainerHeight = this.aspectRatioHeight + this.playerInfoHeight;
+
     this.selectOption = [
       {
         name: 'English',
@@ -48,5 +59,11 @@ export class DesktopHelpComponent implements OnInit {
       }
     ];
     this.selectMedium = this.selectOption[0];
+  }
+
+  // @HostListener('window:resize', ['$event'])
+  onWindowResize(event) {
+    this.aspectRatioHeight = event.target.document.querySelector('#help-video-aspect-ratio').offsetHeight;
+    this.videoContainerHeight = this.aspectRatioHeight + this.playerInfoHeight;
   }
 }
