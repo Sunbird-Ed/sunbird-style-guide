@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, Inject, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
@@ -8,6 +8,13 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./desktop-help.component.scss']
 })
 export class DesktopHelpComponent implements OnInit {
+  @ViewChild('aspectRatio') aspectRatio;
+  @ViewChild('playerInfo') playerInfo;
+
+  videoContainerHeight: number;
+  aspectRatioHeight: number;
+  playerInfoHeight: number;
+
   selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
@@ -17,13 +24,11 @@ export class DesktopHelpComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
 
-    window.addEventListener('load', function () {
-      const getVideoHeight = (document.querySelector('#player-area-height') as HTMLElement).offsetHeight;
-      this.alert(getVideoHeight + 'px');
-      (document.querySelector<HTMLElement>('#help-video-content-scroll') as HTMLElement).style.height = getVideoHeight + 'px';
-    });
-
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
+    this.aspectRatioHeight = this.aspectRatio.nativeElement.offsetHeight;
+    this.playerInfoHeight = this.playerInfo.nativeElement.offsetHeight
+    this.videoContainerHeight = this.aspectRatioHeight + this.playerInfoHeight;
+
     this.selectOption = [
       {
         name: 'English',
@@ -57,7 +62,10 @@ export class DesktopHelpComponent implements OnInit {
     ];
     this.selectMedium = this.selectOption[0];
   }
-  submitIssue() {
-    this.issueReportText = !this.issueReportText;
+
+  // @HostListener('window:resize', ['$event'])
+  onWindowResize(event) {
+    this.aspectRatioHeight = event.target.document.querySelector('#help-video-aspect-ratio').offsetHeight;
+    this.videoContainerHeight = this.aspectRatioHeight + this.playerInfoHeight;
   }
 }
