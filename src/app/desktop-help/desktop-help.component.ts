@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, Inject, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
@@ -19,9 +19,11 @@ export class DesktopHelpComponent implements OnInit {
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
   showNormalModal;
+  issueReportText: boolean = false;
+  
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
-
   ngOnInit() {
+
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
     this.aspectRatioHeight = this.aspectRatio.nativeElement.offsetHeight;
     this.playerInfoHeight = this.playerInfo.nativeElement.offsetHeight

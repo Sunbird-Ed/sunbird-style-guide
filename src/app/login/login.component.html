@@ -8,7 +8,6 @@
 
       <!-- Slides -->
       <div class="d-flex">
-
         <div class="swiper-slide" *ngIf="slides[activeSlide] =='slide-1'">
           <!--*ngIf="!showContent"-->
           <div class="swiper-slide__title pt-8">Choose Your Preferred Language</div>
@@ -23,68 +22,75 @@
           </div>
         </div>
 
-        <div class="swiper-slide" *ngIf="slides[activeSlide] =='slide-2'">
-          <!--*ngIf="showContent"-->
-          <div class="swiper-slide__para pt-8">Provide the details below for suggesting content that is relevant for
-            you. </div>
-          <div class='d-flex flex-dc fields-selection'>
-            <div class="pb-8 d-flex flex-dc">
-              <label class="d-flex fields-selection__label" [ngClass]="{ textColorChange: !selectBoard }">Board</label>
-              <div class="sb-field">
-                <sui-select class="selection selectionfield" labelField="name" [(ngModel)]="selectBoard">
-                  <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
-                  </sui-select-option>
-                </sui-select>
-              </div>
-            </div>
-            <div class="pb-8 d-flex flex-dc">
-              <label class="d-flex fields-selection__label"
-                [ngClass]="{ textColorChange: !selectMedium }">Medium</label>
-              <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectMedium" #multiSelect>
-                <sui-select-option *ngFor="let option of selectMediumOption" [value]="option">
-                </sui-select-option>
-              </sui-multi-select>
-            </div>
-            <div class="pb-8 d-flex flex-dc">
-              <label class="d-flex fields-selection__label" [ngClass]="{ textColorChange: !selectClass }">Class</label>
-              <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectClass" #multiSelect>
-                <sui-select-option *ngFor="let option of selectClassOption" [value]="option">
-                </sui-select-option>
-              </sui-multi-select>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide " *ngIf="slides[activeSlide] =='slide-3'">
+        <div class="swiper-slide " *ngIf="slides[activeSlide] =='slide-2'">
           <!--*ngIf="!showContent"-->
           <label class='swiper-slide__title'>Your Location</label>
           <div class="swiper-slide__para">Your location details helps us to suggest content that is useful to you.
             Is the location given correct? if not, select your correct location and click Submit </div>
           <div class='d-flex flex-dc fields-selection'>
-            <sui-select class="selection selectionfield" labelField="name" [(ngModel)]="selectState">
+              <div class="sb-field">
+            <sui-select class="selection" labelField="name" [(ngModel)]="selectState">
               <sui-select-option *ngFor="let option of selectStateOption" [value]="option">
               </sui-select-option>
             </sui-select>
-
-            <sui-select class="selection selectionfield mt-10" labelField="name" [(ngModel)]="selectPlace">
+            </div>
+            
+            <div class="sb-field">
+            <sui-select class="selection" labelField="name" [(ngModel)]="selectPlace">
               <sui-select-option *ngFor="let option of selectPlaceOption" [value]="option">
               </sui-select-option>
             </sui-select>
-
+          </div>
+          </div>
+        </div>
+        <div class="swiper-slide" *ngIf="slides[activeSlide] =='slide-3'">
+          <!--*ngIf="showContent"-->
+          <div class="swiper-slide__para pt-8">Provide the details below for suggesting content that is relevant for
+            you. </div>
+          <div class='d-flex flex-dc fields-selection'>
+            <div class="d-flex flex-dc">
+              <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectBoard }">Board</label>
+              <div class="sb-field">
+                <sui-select class="selection" labelField="name" [(ngModel)]="selectBoard" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+            <div class="d-flex flex-dc">
+                <div class="sb-field">
+              <label class="d-flex font-weight-normal"
+                [ngClass]="{ textColorChange: !selectMedium }">Medium</label>
+              <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectMedium" #multiSelect>
+                <sui-select-option *ngFor="let option of selectMediumOption" [value]="option">
+                </sui-select-option>
+              </sui-multi-select>
+              </div>
+            </div>
+            <div class="d-flex flex-dc">
+                <div class="sb-field">
+              <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectClass }">Class</label>
+              <sui-multi-select class="selection" labelField="name" [(ngModel)]="selectClass" #multiSelect>
+                <sui-select-option *ngFor="let option of selectClassOption" [value]="option">
+                </sui-select-option>
+              </sui-multi-select>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="bullets-container">
-        <!-- <div class="circle active update completed" *ngFor="let slide of slides;let i =index;" (click)="showNextContent(i)" ></div> -->
-        <div class="circle completed"></div>
-        <div class="circle active"></div>
-        <div class="circle update"></div>
+      <div>
+        <div class="bullets-container">
+          <!-- <div class="circle active update completed" *ngFor="let slide of slides;let i =index;" (click)="showNextContent(i)" ></div> -->
+          <div class="circle completed"></div>
+          <div class="circle active"></div>
+          <div class="circle update"></div>
+        </div>
+        <button type="button" class="sb-btn sb-btn-primary sb-btn-sm w-100" (click)="nextSlides()">
+          CONTINUE
+          <span class='arrow-icon'><i class="arrow right icon"></i></span></button>
       </div>
-
-      <button type="button" class="sb-btn sb-btn-primary sb-btn-sm" (click)="nextSlides()">
-        CONTINUE
-        <span class='arrow-icon'><i class="arrow right icon"></i></span></button>
     </div>
 
   </div>
