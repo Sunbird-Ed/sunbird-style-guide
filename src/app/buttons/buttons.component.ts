@@ -205,6 +205,75 @@ export class ButtonsComponent implements OnInit {
                             </div>
                         </div>
       `
+    },
+    {
+      expandCode: false,
+      title: 'Tile Buttons with icons',
+      demoCode: `
+      <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Tile Outline Buttons with icons',
+      demoCode: `
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-outline-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Tile link Buttons with icons',
+      demoCode: `
+      <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-warning sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-error sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      <button class="sb-btn sb-btn-link sb-btn-link-gray sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
+      `
+    },
+    {
+      expandCode: false,
+      title: 'Tile Buttons with icons of different sizes',
+      demoCode: `
+      <button class="sb-btn sb-btn-warning sb-btn-sm sb-btn-square mr-8"><i class="icon share alternate"></i><span>Small</span></button>
+      <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square mr-8"><i class="icon share alternate"></i><span>Normal</span</button>
+      <button class="sb-btn sb-btn-secondary sb-btn-lg sb-btn-square"><i class="icon share alternate"></i><span>Large</span></button>
+
+      `,
+      copyCode: `
+      <button class="sb-btn sb-btn-warning sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>Small</span></button>
+      <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>Normal</span</button>
+      <button class="sb-btn sb-btn-secondary sb-btn-lg sb-btn-square"><i class="icon share alternate"></i><span>Large</span></button>
+      `
     }
   ];
 
