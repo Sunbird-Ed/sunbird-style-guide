@@ -46,26 +46,20 @@
 .help-video {
   &__player {
 
-    &__title,
+    &__details,
     &__tools {
       display: flex;
     }
-
-    &__title {
+    &__details{
       align-items: center;
       height: 64px;
-
-      h6 {
+    }
+    &__title {
         font-weight: bold;
         color: #024f9d;
-        margin: 0 auto 0 0;
         font-size: 16px;
-      }
     }
-
     &__tools {
-      cursor: pointer;
-      padding: 8px 16px;
     }
 
   }
@@ -142,7 +136,7 @@
     width: 64px;
     height: 64px;
     &:hover{
-      background: var(--primary-200);
+      background: var(--gray-100);
     }
     i.icon {
       font-size: 24px;
@@ -238,6 +232,9 @@
   }
   &:last-child{
     margin-bottom:0px !important;
+  }
+  &:hover h4.sbcard__title {
+    color:var(--primary-400);
   }
 }
 
