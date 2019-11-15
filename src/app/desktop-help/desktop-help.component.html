@@ -18,8 +18,10 @@
       </div>
     </div>
 
-    <div class="help-video__player__title" #playerInfo>
-      <h6 class="ml-16 sb__ellipsis sb__ellipsis--two">How do i add content to DIKSHA app when i am offline or using a pen drive?</h6>
+    <div class="help-video__player__details sb-bg-color-white" #playerInfo>
+      <h6 class="help-video__player__title  ml-16 mr-auto sb__ellipsis sb__ellipsis--two">How do i add content to DIKSHA
+        app
+        when i am offline or using a pen drive?&lrm;</h6>
       <div class="help-video__player__tools">
         <div class="icons-withtext__share-alternate"><i class="share alternate icon"></i>Share</div>
         <div class="icons-withtext__cloud-download"><i class="cloud download icon"></i>Download</div>
@@ -40,7 +42,7 @@
         </div>
         <!-- card mobile view details -->
         <div class="sbcard__info">
-          <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{ videoitem.text }} </h4>
+          <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{ videoitem.text }}</h4>
           <div class="sbcard__meta1">
             <span class="sb__ellipsis sb-color-primary">Play Video</span>
           </div>
@@ -55,7 +57,7 @@
   <div class="sb-column help-faq__list"></div>
   <div class="sb-column help-faq__report">
     <p class="help-faq__report_text">
-      Haven't found what are you looking for?
+      Haven't found what are you looking for?&lrm;
     </p>
     <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary"
       (click)="showNormalModal = !showNormalModal">Report other issue</button>
@@ -76,24 +78,23 @@
       <div class="sb-field">
         <label for="moretext">Tell us a more about the problem you faced</label>
         <div class="relative">
-        <textarea rows="4" name="moretext" class="sb-form-control" placeholder="Type here..."></textarea>
-        <span class="characters-left">1000 Characters left</span>
-      </div>
+          <textarea rows="4" name="moretext" class="sb-form-control pb-24" placeholder="Type here..."></textarea>
+          <span class="characters-left">1000 Characters left</span>
+        </div>
       </div>
     </div>
     <div class="report-content" *ngIf='issueReportText'>
       <div class='d-flex flex-jc-center flex-ai-center icon'>
-       <img src="../../assets/images/circle-with-check-symbol.svg">
+        <img src="../../assets/images/circle-with-check-symbol.svg">
       </div>
-      <div class="text-center font-weight-bold success-text">Issue reported successfully.</div>
-      <div class="text-center fs-0-785  success-para">Note: Your report will be automatically sent to DIKSHA while
-        online. </div>
+      <div class="text-center font-weight-bold success-text">Issue reported successfully.&lrm;</div>
+      <div class="text-center fs-0-785  success-para">Note: Your report will be automatically sent to SUNBIRD
+      </div>
     </div>
-
-  </div>
-  <div class="sb-modal-actions" *ngIf='!issueReportText'>
-    <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="submitIssue()">
-      Submit Issue
-    </button>
-  </div>
+    </div> 
+    <div class="sb-modal-actions" *ngIf='!issueReportText'>
+      <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="submitIssue()">
+        Submit Issue
+      </button>
+    </div>
 </sui-modal>
