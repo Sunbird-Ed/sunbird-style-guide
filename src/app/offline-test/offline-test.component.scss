@@ -1,26 +1,9 @@
 @import "variables";
 
-
-//layout
-@media only screen and (max-width: 991px) and (min-width: 768px){
-.ui.container {
-    width: 90%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-}
-@media only screen and (max-width: 1199px) and (min-width: 992px){
-.ui.container {
-    width: 90%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-}
-
-
 .state-medium-container {
   position: relative;
   height:64px;
+  z-index:2;
   &__dropdown {
     z-index: 1;
   }
@@ -44,6 +27,7 @@
 .sb-class-bar{
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
   position: relative;
+  z-index: 1;
 }
 
 .select-language {

@@ -25,6 +25,19 @@ a {
 .text-inherit {
   text-transform: inherit !important;
 }
+
+.sb__ellipsis {
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  display: block;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &--two {
+    -webkit-line-clamp: 2;
+  }
+}
 .ellipsis{
   white-space: nowrap; 
   overflow: hidden;

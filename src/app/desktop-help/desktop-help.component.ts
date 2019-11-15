@@ -8,6 +8,45 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./desktop-help.component.scss']
 })
 export class DesktopHelpComponent implements OnInit {
+
+
+
+  videoitems = [
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    },
+    {
+      imgpath: '',
+      text: 'Photographs are a way of preserving a moment in our lives for the rest of our lives.'
+    }
+
+  ];
+
   @ViewChild('aspectRatio') aspectRatio;
   @ViewChild('playerInfo') playerInfo;
 
@@ -67,5 +106,8 @@ export class DesktopHelpComponent implements OnInit {
   onWindowResize(event) {
     this.aspectRatioHeight = event.target.document.querySelector('#help-video-aspect-ratio').offsetHeight;
     this.videoContainerHeight = this.aspectRatioHeight + this.playerInfoHeight;
+  }
+  submitIssue() {
+    this.issueReportText = !this.issueReportText;
   }
 }

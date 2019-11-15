@@ -104,6 +104,13 @@
   }
 }
 
+.characters-left {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: var(--gray-200);
+  font-size: $font-size-sm;
+}
 // .sb-textarea {
 //   border-radius: .2143rem;
 //   height: 12rem;

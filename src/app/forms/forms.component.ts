@@ -369,15 +369,16 @@ export class FormsComponent implements OnInit {
       <label>Field Label</label>
           <div class="sb-field">
               <textarea rows="4" class="sb-form-control" placeholder="Enter summary"></textarea>
+              <span class="characters-left">1000 Characters left</span>
           </div>
           </div>
       `,
       copyCode: `
       <div class="sb-field-group">
       <label>Field Label</label>
-          <div class="sb-field">
-              <textarea rows="4" class="sb-form-control" placeholder="Enter summary"></textarea>
-          </div>
+          <div class="sb-field relative">
+          <textarea rows="4" name="moretext" class="sb-form-control" placeholder="Type here..."></textarea>
+          <span class="characters-left">1000 Characters left</span>
           </div>
       `
     },
