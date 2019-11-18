@@ -509,6 +509,60 @@ a.sb-btn {
   }
 }
 
+//Tile button
+
+.sb-btn-square {
+
+  &.sb-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-sm;
+    padding: $base-block-space;
+
+    i.icon {
+      margin: 0 0 0 0;
+    }
+
+    span {
+      margin: $base-block-space 0 0 0;
+    }
+  }
+
+  &.sb-btn-normal {
+    height: $base-block-space*8;
+    width: $base-block-space*8;
+
+    i.icon {
+      font-size: 18px;
+    }
+  }
+
+  &.sb-btn-lg {
+    height: 128px;
+    width: 128px;
+    font-size: $font-size-base;
+
+    i.icon {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &.sb-btn-sm {
+    padding: 4px;
+    height: $base-block-space*4;
+    min-width: $base-block-space*4;
+    font-size: $font-size-xs;
+    i.icon {
+      font-size: $font-size-sm;
+    }
+    span {
+      margin: 4px 0 0 0;
+    }
+  }
+}
+
 //dashed buttons
 .sb-btn-dashed {
   border-style: dashed;
