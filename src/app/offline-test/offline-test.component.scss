@@ -1,9 +1,10 @@
 @import "variables";
+@import "mixins/mixins";
 
 .state-medium-container {
   position: relative;
-  height:64px;
-  z-index:2;
+  height: 64px;
+  z-index: 2;
   &__dropdown {
     z-index: 1;
   }
@@ -17,22 +18,25 @@
   &__medium {
     overflow-x: auto;
     overflow-y: hidden;
-    height:64px;
+    height: 64px;
   }
 }
 
 .sb-menubar {
 }
 
-.sb-class-bar{
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+.sb-class-bar {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
 }
 
-.select-language {
-  border: none;
+.sb-field .ui.selection.dropdown.select-language {
+  min-width: 80px;
+  border: 0px;
   background: none;
+}
+.ui.dropdown.select-language > .text {
   color: var(--primary-400);
-  outline: none;
+  padding-right: 24px !important;
 }

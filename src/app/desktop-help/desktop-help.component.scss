@@ -8,7 +8,7 @@
   align-items: center;
 
   h1 {
-    font-size: $font-size-normal;
+    font-size: $font-size-md;
     font-weight: $font-weight-bold;
   }
 }
@@ -53,6 +53,7 @@
     &__details{
       align-items: center;
       height: 64px;
+      padding:8px;
     }
     &__title {
         font-weight: bold;
@@ -117,37 +118,6 @@
     text-align: center;
     color: var(--gray-800);
   }
-}
-
-// Icons
-
-.icons-withtext {
-
-  &__cloud-download,
-  &__share-alternate {
-
-    font-size: $font-size-xs;
-    color: var(--gray-400);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 8px;
-    width: 64px;
-    height: 64px;
-    &:hover{
-      background: var(--gray-100);
-    }
-    i.icon {
-      font-size: 24px;
-      color: #024f9d;
-      height: 24px;
-      margin: 0 0 4px 0;
-      flex-basis: 100%;
-
-    }
-  }
-
 }
 
 // sb card css
