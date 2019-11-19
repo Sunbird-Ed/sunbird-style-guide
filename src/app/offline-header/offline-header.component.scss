@@ -56,12 +56,18 @@
     }
     &__search {
       width: 100%;
-      flex: 0 0 70%;
-      @include respond-above(sm) {
-        flex: 0 0 70%;
-      }
+      flex: 1;
     }
     &__actions {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      @include respond-above(sm) {
+        width: inherit;
+      }
+      & > button {
+        flex: auto;
+      }
     }
   }
 
@@ -72,11 +78,6 @@
     width: 100%;
     @include respond-above(sm) {
       flex: 0 0 50%;
-    }
-    .sb-btn-qrcode {
-      box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.1),
-        0 3px 4px 0 rgba(0, 0, 0, 0.2);
-      border: 0px solid #ddd;
     }
   }
 
