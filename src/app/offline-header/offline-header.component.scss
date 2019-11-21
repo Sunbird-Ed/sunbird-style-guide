@@ -2,7 +2,9 @@
 @import "mixins/mixins";
 
 :host {
+
   .sbheader--offline {
+
     & > div {
       margin-bottom: $base-block-space;
     }
