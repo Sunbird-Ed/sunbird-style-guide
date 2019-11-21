@@ -13,6 +13,7 @@
 .ui.styled.accordion .title {
   padding: ($base-block-space * 2);
   color: $gray-800;
+  font-size: 1rem;
 }
 
 .ui.accordion .active.title .chevron.down.icon {
