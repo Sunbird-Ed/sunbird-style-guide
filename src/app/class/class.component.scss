@@ -1,55 +1,102 @@
 @import "variables";
 
 .sb-slider-pills-container {
-  overflow-x: auto;
-  width: 100%;
-  background:  var(--gray-0);
+  position: relative;
+	padding: 0 16px 0px 16px;
 
   .sb-pills-container {
-    display: inline-flex;
-    align-items: center;
     padding:$base-block-space 0;
-
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
     .pill {
       background-color: var(--white);
       white-space: nowrap;
       -webkit-appearance: none;
       text-overflow: ellipsis;
-      min-height: ($base-block-space * 4);
       margin-right: $base-block-space;
-      padding:($base-block-space / 2) ($base-block-space);
-      border-radius: 2px;
       text-transform: capitalize;
       text-decoration: none;
       text-align: center;
-      box-sizing: border-box;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-    }
-  }
-
-  .sb-grade-pills-container {
-    min-height: 48px;
-    width:100%;
-    .pill {
       border-radius: ($base-block-space * 2);
       padding: ($base-block-space / 2) ($base-block-space * 2);
-      // box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.19);
       color: var(--primary-400);
       min-height: ($base-block-space * 4);
       cursor: pointer;
       &:hover{
         background-color:  var(--primary-400);
         color: var(--white);
-       
+      }
+      &.active {
+        background-color:var(--primary-400);
+        color: var(--white);
+      }
+      &[aria-selected="true"] {
+        color: #111;
       }
     }
-
-    .pill.active {
-      background-color:var(--primary-400);
-      color: var(--white);
-      cursor: pointer;
-    }
   }
-
 }
+
+.pn-ProductNav_Contents {
+	float: left;
+	transition: transform .2s ease-in-out;
+}
+
+.pn-ProductNav_Contents-no-transition {
+	transition: none;
+}
+
+
+.pn-Advancer {
+	appearance: none;
+	padding: 0;
+  border: 0;
+  position: absolute;
+	top: 8px;
+	bottom: 0;
+  opacity: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: var(--white);
+  transition: opacity .3s;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.12);
+  .pn-Advancer_Icon {
+    width: 10px;
+    height: 32px;
+    fill: var(--primary-400);
+  }
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+    cursor: pointer;
+    background: var(--primary-400);
+    .pn-Advancer_Icon {
+      fill: var(--white);
+    }
+	}
+	
+}
+
+.pn-Advancer_Left {
+	left: 0;
+	[data-overflowing="both"] ~ &,
+	[data-overflowing="left"] ~ & {
+		opacity: 1;
+	}
+}
+
+.pn-Advancer_Right {
+	right: 0;
+	[data-overflowing="both"]  ~ &,
+	[data-overflowing="right"] ~ & {
+		opacity: 1;
+	}
+}
+
+
+
