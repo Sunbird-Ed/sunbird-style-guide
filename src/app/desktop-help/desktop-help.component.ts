@@ -8,9 +8,6 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./desktop-help.component.scss']
 })
 export class DesktopHelpComponent implements OnInit {
-
-
-
   videoitems = [
     {
       imgpath: '',
