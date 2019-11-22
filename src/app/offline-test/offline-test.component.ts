@@ -5,12 +5,103 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-offline-test',
   templateUrl: './offline-test.component.html',
-  styleUrls: ['./offline-test.component.scss']
+  styleUrls: ['./offline-test.component.scss', './sb-card.scss']
 })
 export class OfflineTestComponent implements OnInit, AfterViewInit {
   selectOption: any;
   panelOpened = false;
   selectMedium: { name: string; id: string; value: string; };
+
+  sbcards = [
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    },
+    {
+      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
+      subject: 'Social Science',
+      class: 'Class 8',
+      medium: 'Hindi',
+      board: 'CBSE',
+      type: 'Book'
+    }
+  ];
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
