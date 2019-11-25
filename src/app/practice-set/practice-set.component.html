@@ -10,6 +10,7 @@
       <div class="d-flex flex-ai-center flex-jc-space-between practical-header__content">
         <div class="font-weight-bold fs-1">
           Untiled Practice Set <span class="fs-0-785 pl-8"><a href=''>Edit</a></span>
+          <div class="fs-0-785 pt-8">License: CC BY 4.0</div>
         </div>
         <div class='practical-sb-buttons'>
           <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple mr-8" (click)="uploadModal()">Change File</button>
@@ -20,14 +21,16 @@
   </div>
 
   <div class="middle-section-set">
-      <div class="msg-box">
-          <div class="fs-0-92 msg-box__label">Under Review</div>
-         <!--  <div class="fs-0-92 msg-box__label">Published</div> -->
-          <!-- <div class="msg-box__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
-          <div class="container msg-box__blank-box"></div>
+      <div class="ui container msg-box">
+        <div class="msg-box__content">
+            <div class="fs-0-92 msg-box__content__label">Under Review</div>
+            <!--  <div class="fs-0-92 msg-box__content__label">Published</div> -->
+             <!-- <div class="msg-box__content__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
+             <div class="container msg-box__content__blank-box"></div>
+        </div>
         </div>
       
-        <form class='licence-form'>
+        <form class='ui container licence-form'>
           <div class='licence-form__content'>
             <div class="d-flex licence-form__content__fields">
               <div class="sb-field">
