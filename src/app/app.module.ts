@@ -95,6 +95,7 @@ import { OfflineMenubarComponent } from './offline-menubar/offline-menubar.compo
 import { LoginComponent } from './login/login.component';
 import { DesktopHelpComponent } from './desktop-help/desktop-help.component';
 import { PracticeSetComponent } from './practice-set/practice-set.component';
+import { DesktopSearchResultComponent } from './desktop-search-result/desktop-search-result.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -179,7 +180,8 @@ export function hljsLanguages() {
     OfflineMenubarComponent,
     LoginComponent,
     DesktopHelpComponent,
-    PracticeSetComponent
+    PracticeSetComponent,
+    DesktopSearchResultComponent
   ],
   imports: [
     BrowserModule,
