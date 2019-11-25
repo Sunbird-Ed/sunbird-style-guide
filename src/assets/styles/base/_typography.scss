@@ -32,13 +32,13 @@ p {
     line-height: ($p-font-size * 1.618); //* 1.618
 }
 .fmedium {
-    font-size: $font-size-md;
+    font-size: $font-size-md !important;
 }
 .fxsmall {
-    font-size: $font-size-sm;
+    font-size: $font-size-sm !important;
 }
 .fxsmall {
-    font-size: $font-size-xs;
+    font-size: $font-size-xs !important;
 }
 .sb-h1-title{
 

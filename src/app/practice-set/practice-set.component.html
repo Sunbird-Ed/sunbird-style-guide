@@ -13,63 +13,65 @@
           <div class="fs-0-785 pt-8">License: CC BY 4.0</div>
         </div>
         <div class='practical-sb-buttons'>
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple mr-8" (click)="uploadModal()">Change
-            File</button>
+          <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple mr-8" (click)="uploadModal()">Change File</button>
           <button class="sb-btn sb-btn-secondary sb-btn-normal ripple">Submit</button>
         </div>
       </div>
     </div>
   </div>
+
   <div class="middle-section-set">
-    <div class="ui container msg-box">
-      <div class="msg-box__content">
-        <div class="fs-0-92 msg-box__content__label">Under Review</div>
-        <!--  <div class="fs-0-92 msg-box__content__label">Published</div> -->
-        <!-- <div class="msg-box__content__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
-        <div class="container msg-box__content__blank-box"></div>
-      </div>
-    </div>
-    <form class='ui container licence-form'>
-      <div class='licence-form__content'>
-        <div class="d-flex licence-form__content__fields">
-          <div class="sb-field">
-            <label for="outcome">Learning Outcome</label>
-            <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectOutcomeOption"
-              placeholder="select">
-              <sui-select-option *ngFor="let option of selectOutcomeOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
-          </div>
-          <div class="sb-field space-btn-field">
-            <label for="level">Learning Level</label>
-            <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectLevelOption"
-              placeholder="select">
-              <sui-select-option *ngFor="let option of selectLevelOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
-          </div>
+      <div class="ui container msg-box">
+        <div class="msg-box__content">
+            <div class="fs-0-92 msg-box__content__label">Under Review</div>
+            <!--  <div class="fs-0-92 msg-box__content__label">Published</div> -->
+             <!-- <div class="msg-box__content__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
+             <div class="container msg-box__content__blank-box"></div>
         </div>
-        <div class="d-flex licence-form__content__fields">
-          <div class="sb-field">
-            <label for="author">Authors</label>
-            <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
-          </div>
-          <div class="sb-field space-btn-field">
-            <label for="license">License</label>
-            <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectLicenceOption1"
-              placeholder="select">
-              <sui-select-option *ngFor="let option of selectLicenseOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
-          </div>
         </div>
-      </div>
-      <p class="paragraph fs-0-785">
-        “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
-        <span class="link font-weight-bold">https://creativecommons.org/licenses .</span>
-        Please choose the applicable creative commons license you wish to apply to your content”.
-      </p>
-    </form>
+      
+        <form class='ui container licence-form'>
+          <div class='licence-form__content'>
+            <div class="d-flex licence-form__content__fields">
+              <div class="sb-field">
+                <label for="outcome">Learning Outcome</label>
+                <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectOutcome" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectOutcomeOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+      
+              <div class="sb-field space-btn-field">
+                <label for="level">Learning Level</label>
+                <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectLevel" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLevelOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+      
+            <div class="d-flex licence-form__content__fields">
+              <div class="sb-field">
+                <label for="author">Authors</label>
+                <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
+              </div>
+      
+              <div class="sb-field space-btn-field">
+                <label for="license">License</label>
+                <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectLicence" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLicenseOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+          </div>
+      
+          <p class="paragraph fs-0-785">
+            “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
+            <span class="link font-weight-bold">https://creativecommons.org/licenses .</span>
+            Please choose the applicable creative commons license you wish to apply to your content”.
+          </p>
+        </form>
   </div>
 </div>
 <sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
