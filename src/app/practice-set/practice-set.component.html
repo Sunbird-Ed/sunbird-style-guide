@@ -2,7 +2,8 @@
   <div>
     <div class="d-flex practical-appbar">
       <div class="d-flex flex-ai-center flex-jc-space-between practical-appbar__content">
-        <div class="back-label">Back</div>
+        <div class="back-label">
+          <span><i class="angle double left icon"></i></span>Back</div>
       </div>
     </div>
     <div class="d-flex sb-bg-color-gray-0 practical-header">
@@ -11,62 +12,65 @@
           Untiled Practice Set <span class="fs-0-785 pl-8"><a href=''>Edit</a></span>
         </div>
         <div class='practical-sb-buttons'>
-          <button class="sb-btn sb-btn-normal sb-btn-file mr-8" (click)="uploadModal()">Change File</button>
-          <button class="sb-btn sb-btn-normal sb-btn-submit">Submit</button>
+          <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple mr-8" (click)="uploadModal()">Change File</button>
+          <button class="sb-btn sb-btn-secondary sb-btn-normal ripple">Submit</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="msg-box">
-    <!-- <div class="fs-0-92 msg-box__label">Under Review</div>
-    <div class="fs-0-92 msg-box__label">Published</div> -->
-    <div class="msg-box__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div>
-    <div class="container msg-box__blank-box"></div>
+  <div class="middle-section-set">
+      <div class="msg-box">
+          <div class="fs-0-92 msg-box__label">Under Review</div>
+         <!--  <div class="fs-0-92 msg-box__label">Published</div> -->
+          <!-- <div class="msg-box__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
+          <div class="container msg-box__blank-box"></div>
+        </div>
+      
+        <form class='licence-form'>
+          <div class='licence-form__content'>
+            <div class="d-flex licence-form__content__fields">
+              <div class="sb-field">
+                <label for="outcome">Learning Outcome</label>
+                <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectOutcome" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectOutcomeOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+      
+              <div class="sb-field space-btn-field">
+                <label for="level">Learning Level</label>
+                <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectLevel" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLevelOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+      
+            <div class="d-flex licence-form__content__fields">
+              <div class="sb-field">
+                <label for="author">Authors</label>
+                <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
+              </div>
+      
+              <div class="sb-field space-btn-field">
+                <label for="license">License</label>
+                <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectLicence" placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLicenseOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+          </div>
+      
+          <p class="paragraph fs-0-785">
+            “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
+            <span class="link font-weight-bold">https://creativecommons.org/licenses .</span>
+            Please choose the applicable creative commons license you wish to apply to your content”.
+          </p>
+        </form>
   </div>
 
-  <form class='licence-form'>
-    <div class='licence-form__content'>
-      <div class="d-flex licence-form__content__fields">
-        <div class="sb-field">
-          <label for="outcome">Learning Outcome</label>
-          <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectBoard" placeholder="select">
-            <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-
-        <div class="sb-field space-btn-field">
-          <label for="level">Learning Level</label>
-          <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectBoard" placeholder="select">
-            <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-      </div>
-
-      <div class="d-flex licence-form__content__fields">
-        <div class="sb-field">
-          <label for="author">Authors</label>
-          <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
-        </div>
-
-        <div class="sb-field space-btn-field">
-          <label for="license">License</label>
-          <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectBoard" placeholder="select">
-            <sui-select-option *ngFor="let option of selectBoardOption" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-      </div>
-    </div>
-
-    <p class="paragraph fs-0-785">
-      “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
-      <span class="link font-weight-bold">https://creativecommons.org/licenses .</span>
-      Please choose the applicable creative commons license you wish to apply to your content”.
-    </p>
-  </form>
 
 </div>
 
@@ -87,7 +91,7 @@
 
     <div *ngIf='uploadFiles' class="uploading-files">
       <div class='d-flex flex-dc flex-jc-center flex-ai-center icon'>
-        <img src="processing.gif" class='process-icon'>
+        <img src="../../assets/images/Spin.gif" class='process-icon'>
         <div class="fs-0-785 pt-16">120 MB Uploading Files (65%)
         </div>
         <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0"></sui-progress>
