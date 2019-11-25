@@ -1,0 +1,23 @@
+::ng-deep .ui.fixed.header-menu {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  z-index: 999;
+  border: 0;
+  margin-bottom: -1px;
+}
+
+::ng-deep .ui.fixed.header-menu.scroll-down {
+  top: 0;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+
+::ng-deep .ui.fixed.header-menu.scroll-up {
+  top: -200px;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+/*# sourceMappingURL=header.component.css.map */

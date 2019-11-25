@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,64gHAA64gH,CAAC,cAAc;EACj6gH,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,qu7GAAqu7G,CAAC,cAAc;EACzv7G,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM",
+    "sources": [
+        "notosans-oriya.scss"
+    ],
+    "names": [],
+    "file": "notosans-oriya.css"
+}
