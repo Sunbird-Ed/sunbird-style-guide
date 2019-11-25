@@ -1,0 +1,308 @@
+.sb-offline-tab-header {
+  background: #063C72;
+  color: #e4e4e4;
+  height: 32px;
+  padding: 8px 16px;
+}
+
+.sb-offline-tab-header .minimize-bar {
+  height: 2px;
+  width: 12px;
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+.sb-offline-tab-header i.icon {
+  height: auto;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.sb-offline-tab-container {
+  min-height: 32px;
+  width: 100%;
+  background: #063C72;
+  color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sb-offline-tab-container .profile-image-container {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.sb-offline-tab-container .profile-image-container .profile-image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sb-offline-tab-container .sb-offline-btn {
+  font-size: 12px;
+  font-size: 12px;
+  background: transparent;
+  color: #e4e4e4;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 32px;
+  border-bottom: 32px solid transparent;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+
+.sb-offline-tab-container .sb-offline-btn:hover, .sb-offline-tab-container .sb-offline-btn.active {
+  border-bottom: 32px solid #024f9d;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.sb-offline-tab-container .offline-link-btn {
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 8px;
+}
+
+.sb-offline-tab-container .offline-link-btn a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e4e4e4;
+  position: relative;
+}
+
+.sb-offline-tab-container .offline-link-btn a.active {
+  z-index: 3;
+}
+
+.sb-offline-tab-container .offline-link-btn a.active:before, .sb-offline-tab-container .offline-link-btn a.active:after {
+  z-index: 1;
+  background: #024F9D;
+}
+
+.sb-offline-tab-container .offline-link-btn a.active span {
+  background: #024f9d;
+}
+
+.sb-offline-tab-container .offline-link-btn a.active span:before, .sb-offline-tab-container .offline-link-btn a.active span:after {
+  background: #063C93;
+}
+
+.sb-offline-tab-container .offline-link-btn a:hover {
+  opacity: inherit;
+}
+
+.sb-offline-tab-container .offline-link-btn a:before, .sb-offline-tab-container .offline-link-btn a:after {
+  width: 10px;
+  height: 10px;
+  background: #063C93;
+}
+
+.sb-offline-tab-container .offline-link-btn a:before {
+  left: -10px;
+}
+
+.sb-offline-tab-container .offline-link-btn a:after {
+  right: -10px;
+}
+
+.sb-offline-tab-container .offline-link-btn a span {
+  font-size: 12px;
+  padding: 8px 24px;
+  background: #063C93;
+  border-radius: 16px 16px 0 0;
+}
+
+.sb-offline-tab-container .offline-link-btn a span:before {
+  left: -20px;
+}
+
+.sb-offline-tab-container .offline-link-btn a span:after {
+  right: -20px;
+}
+
+.sb-offline-tab-container .offline-link-btn a span:before, .sb-offline-tab-container .offline-link-btn a span:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #063C93;
+  z-index: 2;
+}
+
+.sb-offline-tab-container .offline-link-btn a:first-child span:before,
+.sb-offline-tab-container .offline-link-btn a:last-child span:after {
+  background: #063C72;
+}
+
+.sb-offline-tab-container .offline-link-btn a:before, .sb-offline-tab-container .offline-link-btn a:after,
+.sb-offline-tab-container .offline-link-btn a span:before,
+.sb-offline-tab-container .offline-link-btn a span:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.sb-offline-tab-container .notification-img-container {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sb-offline-tab-content {
+  width: 100%;
+  background: #024F9D;
+  padding: 8px 16px;
+  min-height: 48px;
+}
+
+.sb-offline-tab-content .search-btn {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.sb-offline-tab-content .sb-search-box {
+  border: none;
+}
+
+.sb-offline-tab-content .sb-btn-filter {
+  background-color: #0162C5;
+  border-color: #0162C5;
+}
+
+.sb-offline-tab-content .sb-btn-content-download {
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
+  color: black;
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.img.notification-img {
+  background-image: url("../../assets/images/notification.svg");
+}
+
+.img.language-img {
+  background-image: url("../../assets/images/translate.svg");
+}
+
+.img.offline-status-img {
+  background-image: url("../../assets/images/wifi-connection-signal-symbol.svg");
+}
+
+.img.qr-code-img {
+  background-image: url("../../assets/images/qr-code.svg");
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  right: 8px;
+}
+
+.wifi-symbol {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 8px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.wifi-symbol.animate .wifi-circle {
+  opacity: 0;
+  -webkit-animation: wifianimation 2s infinite;
+  animation: wifianimation 2s infinite;
+}
+
+.wifi-symbol .wifi-circle {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-color: #07b480;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 100% 0 0;
+}
+
+.wifi-symbol .wifi-circle.first {
+  width: 16px;
+  height: 16px;
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+
+.wifi-symbol .wifi-circle.second {
+  width: 12px;
+  height: 12px;
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+
+.wifi-symbol .wifi-circle.third {
+  width: 8px;
+  height: 8px;
+}
+
+.wifi-symbol .wifi-circle.fourth {
+  width: 4px;
+  height: 4px;
+  opacity: 1;
+  background-color: #07b480;
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes wifianimation {
+  0% {
+    opacity: 1;
+  }
+}
+
+@keyframes wifianimation {
+  0% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=offline-tab.component.css.map */

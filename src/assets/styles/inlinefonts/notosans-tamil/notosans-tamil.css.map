@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,62vCAA62vC,CAAC,cAAc;EACj4vC,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,ivxCAAivxC,CAAC,cAAc;EACrwxC,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+    "sources": [
+        "notosans-tamil.scss"
+    ],
+    "names": [],
+    "file": "notosans-tamil.css"
+}

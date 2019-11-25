@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,mBAAmB;EAChC,GAAG,EAAE,q9zCAAq9zC,CAAC,cAAc;EACz+zC,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,mBAAmB;EAChC,GAAG,EAAE,ix1CAAix1C,CAAC,cAAc;EACry1C,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM",
+    "sources": [
+        "notosans-kannada.scss"
+    ],
+    "names": [],
+    "file": "notosans-kannada.css"
+}

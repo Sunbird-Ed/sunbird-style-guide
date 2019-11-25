@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,sBAAsB;EACnC,GAAG,EAAE,ih8FAAih8F,CAAC,cAAc;EACri8F,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,sBAAsB;EACnC,GAAG,EAAE,6/mGAA6/mG,CAAC,cAAc;EACjhnG,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+    "sources": [
+        "notosans-devanagari.scss"
+    ],
+    "names": [],
+    "file": "notosans-devanagari.css"
+}

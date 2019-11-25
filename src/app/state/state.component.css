@@ -1,0 +1,62 @@
+.ui.selection.dropdown .menu > .item {
+  font-size: 12px;
+  padding: 1em 1em !important;
+}
+
+.ui.selection.dropdown.state-medium {
+  color: var(--blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  min-width: 100px;
+  margin: 0;
+}
+
+.ui.selection.dropdown.state-medium .medium-selection {
+  min-width: 120px;
+}
+
+.ui.selection.dropdown.state-medium:hover {
+  background: #e5edf5;
+}
+
+.ui.selection.dropdown.state-selection {
+  color: var(--primary-400);
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--primary-400);
+}
+
+.ui.selection.dropdown.state-selection:active {
+  background: #bac9d8 !important;
+  color: var(--primary-400) !important;
+}
+
+.ui.selection.dropdown.state-selection:hover {
+  background: #bac9d8;
+  color: var(--blue) !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.5px solid var(--primary-400);
+  border-radius: 2px;
+  background-color: #e5edf5;
+}
+
+.ui.selection.dropdown .menu {
+  max-height: 20em;
+}
+
+.ui.default.dropdown:not(.button) > .text, .ui.dropdown:not(.button) > .default.text {
+  color: red;
+}
+/*# sourceMappingURL=state.component.css.map */
