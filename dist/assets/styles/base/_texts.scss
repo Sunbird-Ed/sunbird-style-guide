@@ -25,6 +25,25 @@ a {
 .text-inherit {
   text-transform: inherit !important;
 }
+
+.sb__ellipsis {
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  display: block;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &--two {
+    -webkit-line-clamp: 2;
+  }
+}
+.ellipsis{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
 .break-word {
   word-break: break-word;
 }
@@ -55,30 +74,6 @@ a {
 .text-center {
   text-align: center !important;
 }
-
-
-.sb__ellipsis {
-  /* autoprefixer: off */
-  -webkit-box-orient: vertical;
-  /* autoprefixer: on */
-  display:-webkit-box;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  &--two {
-    -webkit-line-clamp: 2;
-  }
-  &--three {
-    -webkit-line-clamp: 3;
-  }
-}
-.ellipsis{
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-
 
 *[dir="ltr"] {
   .text-right {

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,oBAAoB;EACjC,GAAG,EAAE,6ktHAA6ktH,CAAC,cAAc;EACjmtH,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,oBAAoB;EACjC,GAAG,EAAE,60iHAA60iH,CAAC,cAAc;EACj2iH,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
-    "sources": [
-        "notosans-gujarati.scss"
-    ],
-    "names": [],
-    "file": "notosans-gujarati.css"
-}

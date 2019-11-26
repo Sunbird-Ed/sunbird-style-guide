@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,oBAAoB;EACjC,GAAG,EAAE,qqpOAAqqpO,CAAC,cAAc;EACzrpO,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
-    "sources": [
-        "noto-nastaliqurdu.scss"
-    ],
-    "names": [],
-    "file": "noto-nastaliqurdu.css"
-}

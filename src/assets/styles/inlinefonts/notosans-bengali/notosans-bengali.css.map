@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,mBAAmB;EAChC,GAAG,EAAE,6knEAA6knE,CAAC,cAAc;EACjmnE,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,mBAAmB;EAChC,GAAG,EAAE,6/lEAA6/lE,CAAC,cAAc;EACjhmE,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
-    "sources": [
-        "notosans-bengali.scss"
-    ],
-    "names": [],
-    "file": "notosans-bengali.css"
-}

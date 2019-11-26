@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,qBAAqB;EAClC,GAAG,EAAE,iqlCAAiqlC,CAAC,cAAc;EACrrlC,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,qBAAqB;EAClC,GAAG,EAAE,65lCAA65lC,CAAC,cAAc;EACj7lC,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
-    "sources": [
-        "notosans-malayalam.scss"
-    ],
-    "names": [],
-    "file": "notosans-malayalam.css"
-}

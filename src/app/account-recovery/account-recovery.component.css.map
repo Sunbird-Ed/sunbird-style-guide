@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,AAAA,MAAM,AAAA,MAAM,CAAA;EACX,aAAa,EAAE,MAAM;EACrB,SAAS,EAAE,OAAO;EAClB,OAAO,EAAE,QAAQ;EACjB,KAAK,EAAE,IAAI;CAKd;;AATD,AAKI,GALD,AAAA,MAAM,AAAA,MAAM,CAKX,GAAG,CAAA;EACC,KAAK,EAAE,eAAe;EACtB,MAAM,EAAE,eAAe;CAC1B",
-    "sources": [
-        "account-recovery.component.scss"
-    ],
-    "names": [],
-    "file": "account-recovery.component.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,SAAS;EACtB,GAAG,EAAE,6/QAA6/Q,CAAC,kBAAkB;EACrhR,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
-    "sources": [
-        "sb-icons.scss"
-    ],
-    "names": [],
-    "file": "sb-icons.css"
-}

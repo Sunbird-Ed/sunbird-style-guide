@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,qvhlBAAqvhlB,CAAC,kBAAkB;EAC7whlB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,qthlBAAqthlB,CAAC,kBAAkB;EAC7uhlB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM",
-    "sources": [
-        "notosans.scss"
-    ],
-    "names": [],
-    "file": "notosans.css"
-}
