@@ -132,7 +132,8 @@
   }
 }
 
-::ng-deep .uploading-files {
+:host {
+.uploading-files {
   margin: ($base-block-space * 3) auto;
 
   .process-icon {
@@ -149,6 +150,7 @@
     background: #FFA11D;
     height: ($base-block-space) !important;
   }
+}
 }
 
 @include respond-below(sm) {
