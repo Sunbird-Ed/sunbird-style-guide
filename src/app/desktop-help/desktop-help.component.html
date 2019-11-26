@@ -23,9 +23,8 @@
       <h6 class="help-video__player__title  ml-8 mr-auto sb__ellipsis sb__ellipsis--two">How do i add content to DIKSHA
         app when i am offline or using a pen drive?&lrm;</h6>
       <div class="help-video__player__tools">
-        <!-- <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>share</span></button> -->
-        <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-            class="icon download alternate"></i><span>Download</span></button>
+          <!-- <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>share</span></button> -->
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon download alternate"></i><span>Download</span></button>
       </div>
     </div>
   </div>
@@ -93,10 +92,10 @@
       <div class="text-center fs-0-785  success-para">Note: Your report will be automatically sent to SUNBIRD
       </div>
     </div>
-  </div>
-  <div class="sb-modal-actions" *ngIf='!issueReportText'>
-    <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="submitIssue()">
-      Submit Issue
-    </button>
-  </div>
+    </div> 
+    <div class="sb-modal-actions" *ngIf='!issueReportText'>
+      <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="submitIssue()">
+        Submit Issue
+      </button>
+    </div>
 </sui-modal>

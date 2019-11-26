@@ -73,7 +73,11 @@
           </p>
         </form>
   </div>
+
+
 </div>
+
+
 <sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
   class="sb-modal" appBodyScroll (dismissed)="uploadModal()" #modal>
   <div class="sb-modal-header fs-0-92" *ngIf='!uploadFiles'>Upload Files</div>
@@ -87,6 +91,7 @@
         <li><a href="" class="link-files">How to compress the MP4 file</a></li>
       </ul>
     </div>
+
     <div *ngIf='uploadFiles' class="uploading-files">
       <div class='d-flex flex-dc flex-jc-center flex-ai-center icon'>
         <img src="../../assets/images/Spin.gif" class='process-icon'>
@@ -97,8 +102,7 @@
       <div class="text-center fs-0-785">“By Uploading asset on SunbirdEd, you consent to publish it
         under the Creative Commons License Framework
       </div>
-      <div class="text-center fs-0-785 pt-8"><a href="#" class="link-text">https://creativecommons.org/licenses .</a>
-      </div>
+      <div class="text-center fs-0-785 pt-8"><a href="#" class="link-files">https://creativecommons.org/licenses .</a></div>
     </div>
   </div>
   <div class="sb-modal-actions">

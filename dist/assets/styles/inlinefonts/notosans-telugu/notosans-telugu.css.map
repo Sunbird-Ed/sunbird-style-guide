@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,kBAAkB;EAC/B,GAAG,EAAE,qtxDAAqtxD,CAAC,cAAc;EACzuxD,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,kBAAkB;EAC/B,GAAG,EAAE,680DAA680D,CAAC,cAAc;EACj+0D,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM",
-    "sources": [
-        "notosans-telugu.scss"
-    ],
-    "names": [],
-    "file": "notosans-telugu.css"
-}
