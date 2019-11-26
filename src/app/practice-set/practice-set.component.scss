@@ -11,12 +11,19 @@
 
     .back-label {
       color: var(--white);
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
 
 .practical-header {
   height: ($base-block-space * 11 + 10);
+
+  &__title{
+    font-weight: 700;
+  }
 
   &__content {
     margin: 0 ($base-block-space * 8 - 4);
@@ -50,19 +57,18 @@
   margin: 0 auto;
 
   .msg-box {
-    margin: ($base-block-space * 4) auto;
+    margin: ($base-block-space * 4) auto ($base-block-space * 6) auto;
 
     &__content{
-      margin: ($base-block-space * 3) 0px;
-
+  
       &__label {
         color: #00BD7F;
-        padding-bottom: ($base-block-space * 2);
+        padding-bottom: ($base-block-space + 4);
       }
   
       &__error-msg {
         color: #FF0000;
-        padding-bottom: ($base-block-space * 2);
+        padding-bottom: ($base-block-space + 4);
       }
   
       &__blank-box {
@@ -81,9 +87,8 @@
       height: auto;
       border: 1px solid #80A7CE;
       background: #F5F9FC;
-      border-radius: ($base-block-space -4);
+      border-radius: ($base-block-space - 4);
       padding: 0 ($base-block-space * 3);
-      margin: ($base-block-space * 3) 0px;
 
       &__fields {
         margin: ($base-block-space * 2) 0px;
@@ -101,17 +106,15 @@
 
     .paragraph {
       color: #9F9F9F;
-      padding: ($base-block-space * 2) 0px;
-
-      .link {
-        color: var(--primary-400);
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+      padding: ($base-block-space + 4) 0px ($base-block-space * 6) 0px;
     }
   }
+}
+
+.links {
+  &:hover{
+    text-decoration: underline;
+ }  
 }
 
 .link-label {
@@ -120,22 +123,14 @@
 }
 
 .convert-files {
-  list-style-type: disc;
-  margin: 5px 0px;
+  list-style-type: inherit;
+  margin: 0px;
 
   li {
-    margin-bottom: 12px;
-
-    .link-files {
-      color: var(--primary-400);
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    margin-bottom: ($base-block-space);
+    font-size: 15px;
   }
 }
-
 
 ::ng-deep .uploading-files {
   margin: ($base-block-space * 3) auto;
@@ -154,7 +149,6 @@
     background: #FFA11D;
     height: ($base-block-space) !important;
   }
-
 }
 
 @include respond-below(sm) {
@@ -167,7 +161,9 @@
   }
 
   .middle-section-set {
-
+    .msg-box {
+      margin: 32px auto 48px auto !important;
+  }
     .licence-form {
       &__content {
         &__fields {

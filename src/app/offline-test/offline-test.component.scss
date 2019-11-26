@@ -28,12 +28,17 @@
 .sb-menubar {
   width: 100%;
   border-bottom: 1px solid var(--primary-400);
-  padding: 0 32px;
+  // padding: 0 32px;
+
   .sb-btn-load{
-    border: 1px solid #FFA11D;
-    background: #FEEDD7;
-    color: #000;
-    box-shadow: 0 6px 10px -7px rgba(255,161,29,0.5)
+    color: #333333;
+    
+    .plus-icon{
+      position: relative;
+      font-size: 24px;
+      bottom: 7px;
+      margin-right: 5px;   
+    }
   }
 }
 
