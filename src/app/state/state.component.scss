@@ -52,6 +52,8 @@
 //     color: red;
 // }
 
-::ng-deep .dropdown:not(.button) > .default.text {
+:host{
+  .dropdown:not(.button) > .default.text {
   color: var(--primary-400) !important;
+}
 }
