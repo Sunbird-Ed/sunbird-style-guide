@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 export class PracticeSetComponent implements OnInit {
   showNormalModal;
   uploadFiles = false;
+  selectOutcome: any;
+  selectLevel: any;
+  selectLicence: any;
   selectOutcomeOption: any = [];
   selectLevelOption: any = [];
   selectLicenseOption: any = [];

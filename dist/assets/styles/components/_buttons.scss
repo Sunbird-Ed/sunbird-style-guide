@@ -27,6 +27,7 @@ a.sb-btn {
   min-width: ($base-block-space * 8);
   @include border-radius(3px);
   position: relative;
+  line-height: 1.15;
   text: {
     transform: capitalize;
     decoration: none;
@@ -105,7 +106,8 @@ a.sb-btn {
   &-tertiary,
   &-error {
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       color: $white;
       border: 1px solid transparent;
     }
@@ -118,7 +120,8 @@ a.sb-btn {
   &-info {
     @include btn-theme($primary-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $primary-800;
     }
   }
@@ -126,7 +129,8 @@ a.sb-btn {
   &-success {
     @include btn-theme($secondary-200);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $secondary-400;
     }
   }
@@ -134,42 +138,48 @@ a.sb-btn {
   &-warning {
     @include btn-theme($tertiary-100);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $tertiary-400;
     }
   }
   &-success {
     @include btn-theme($success-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $secondary-400;
     }
   }
   &-info {
     @include btn-theme($info-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $primary-800;
     }
   }
   &-warning {
     @include btn-theme($warning-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $tertiary-400;
     }
   }
   &-error {
     @include btn-theme($danger-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $red-400;
     }
   }
   &-gray {
     @include btn-theme($gray-200);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $gray-400;
     }
   }
@@ -179,7 +189,8 @@ a.sb-btn {
   &-outline-info {
     @include btn-theme-bgwhite($primary-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $primary-100;
       color: $primary-800;
       border-color: $primary-800;
@@ -191,7 +202,8 @@ a.sb-btn {
     color: $secondary-100;
     border-color: $secondary-100;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $secondary-0;
       color: $secondary-400;
       border-color: $secondary-400;
@@ -203,7 +215,8 @@ a.sb-btn {
     color: $tertiary-100;
     border-color: $tertiary-100;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $tertiary-0;
       color: $tertiary-400;
       border-color: $tertiary-400;
@@ -214,7 +227,8 @@ a.sb-btn {
     color: $red-100;
     border-color: $red-100;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $red-0;
       color: $red-400;
       border-color: $red-400;
@@ -225,7 +239,8 @@ a.sb-btn {
     color: $gray-300;
     border-color: $gray-300;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $gray-0;
       color: $gray-800;
       border-color: $gray-800;
@@ -236,7 +251,8 @@ a.sb-btn {
     color: $primary-800;
     border-color: $white;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $gray-0;
       color: $primary-800;
       border-color: $white;
@@ -259,7 +275,8 @@ a.sb-btn {
   &-link-info {
     @include btn-theme-links($primary-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $primary-100;
     }
   }
@@ -267,7 +284,8 @@ a.sb-btn {
   &-link-success {
     @include btn-theme-links($secondary-200);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $secondary-0;
     }
   }
@@ -275,7 +293,8 @@ a.sb-btn {
   &-link-warning {
     @include btn-theme-links($tertiary-color);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $tertiary-0;
       border: 0px;
     }
@@ -283,14 +302,16 @@ a.sb-btn {
   &-link-error {
     @include btn-theme-links($red-400);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $red-0;
     }
   }
   &-link-gray {
     @include btn-theme-links($gray-800);
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background: $gray-0;
     }
   }
@@ -314,7 +335,8 @@ a.sb-btn {
     border-color: $primary-400;
     color: $sb-btn-dashed-color;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       background-color: $primary-0;
     }
   }
@@ -551,7 +573,6 @@ a.sb-btn {
     box-shadow: none;
   }
 }
-
 // button groups
 .btn-group {
   border: $sb-btn-group-border-width solid $sb-btn-group-border-color;
@@ -599,7 +620,7 @@ a.sb-btn {
   }
 }
 
-.loading-spinner {
+.sb-loading-spinner {
   width: 1rem;
   height: 1rem;
   margin-right: 8px;
@@ -730,4 +751,12 @@ a.sb-btn {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+*[lang="hi"] .sb-btn-xs {
+  line-height: 2.2;
+}
+
+*[lang="hi"] .sb-btn-normal {
+  line-height: 1.5;
 }
