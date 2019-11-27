@@ -24,15 +24,13 @@
 .sb-header-offline-bar {
   position: relative;
   z-index: 1;
+  background: #FAFAFA;
 }
 .sb-menubar {
   width: 100%;
   border-bottom: 1px solid var(--primary-400);
   // padding: 0 32px;
 
-  .sb-btn-load{
-    color: #333333;
-    
     .plus-icon{
       position: relative;
       font-size: 24px;
@@ -40,7 +38,7 @@
       margin-right: 5px;   
     }
   }
-}
+
 
 .sb-class-bar {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -56,4 +54,15 @@
 .ui.dropdown.select-language > .text {
   color: var(--primary-400);
   padding-right: 24px !important;
+}
+
+
+@include respond-below(sm){
+  .sb-menubar{
+    border-bottom: 0px;
+    &__content{
+      flex-wrap: wrap;
+      display: block !important;
+    }
+  }
 }
