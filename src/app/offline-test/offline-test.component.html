@@ -1,22 +1,20 @@
 <header>
-<div class="sb-offline-app-bar">
+  <div class="sb-offline-app-bar">
   <app-offline-appbar></app-offline-appbar>
-</div>
+  </div>
 
-
-    <div class="sb-header-offline-bar sb-bg-color-white">
+  <div class="sb-header-offline-bar">
         <div class="ui container">
             <app-offline-header></app-offline-header>
         </div>
-      </div>
-
-
-<div class="sb-menubar sb-bg-color-white">
-  <div class="ui container d-flex flex-ai-center flex-jc-space-between">
-    <app-offline-menubar></app-offline-menubar>
-    <button class="d-flex sb-btn sb-btn-outline-error sb-btn-normal sb-btn-load"><span class="plus-icon">&#43;</span>Load Content</button>
   </div>
-</div> 
+
+  <div class="sb-menubar sb-bg-color-white">
+  <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
+    <app-offline-menubar></app-offline-menubar>
+    <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8"><span class="plus-icon">&#43;</span>Load Content</button>
+  </div>
+  </div> 
 <!-- 
   <div class="sb-menubar sb-bg-color-primary-0">
     <div class="ui container d-flex flex-ai-center flex-jc-space-between">
@@ -47,13 +45,13 @@
       <app-class></app-class>
     </div>
   </div>
+
   <div class="sb-desktop-search-result">
       <app-desktop-search-result></app-desktop-search-result>
   </div>
 </header>
-
-<section class="sb-page-layout ui container  my-32">
-
+ 
+<section class="sb-page-layout ui container my-32">
     <div class="sbgrid sbgrid--grid-carousel">
       <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
         <div class="sbcard__main_area">
