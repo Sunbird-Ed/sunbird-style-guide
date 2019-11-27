@@ -1,23 +1,24 @@
 <header>
-<div class="sb-offline-app-bar">
-  <app-offline-appbar></app-offline-appbar>
-</div>
-
-
-    <div class="sb-header-offline-bar sb-bg-color-white">
-        <div class="ui container">
-            <app-offline-header></app-offline-header>
-        </div>
-      </div>
-
-
-<div class="sb-menubar sb-bg-color-white">
-  <div class="ui container d-flex flex-ai-center flex-jc-space-between">
-    <app-offline-menubar></app-offline-menubar>
-    <button class="d-flex sb-btn sb-btn-outline-error sb-btn-normal sb-btn-load"><span class="plus-icon">&#43;</span>Load Content</button>
+  <div class="sb-offline-app-bar">
+    <app-offline-appbar></app-offline-appbar>
   </div>
-</div> 
-<!-- 
+
+
+  <div class="sb-header-offline-bar sb-bg-color-white">
+    <div class="ui container">
+      <app-offline-header></app-offline-header>
+    </div>
+  </div>
+
+
+  <div class="sb-menubar sb-bg-color-white">
+    <div class="ui container d-flex flex-ai-center flex-jc-space-between">
+      <app-offline-menubar></app-offline-menubar>
+      <button class="d-flex sb-btn sb-btn-outline-error sb-btn-normal sb-btn-load"><span
+          class="plus-icon">&#43;</span>Load Content</button>
+    </div>
+  </div>
+  <!-- 
   <div class="sb-menubar sb-bg-color-primary-0">
     <div class="ui container d-flex flex-ai-center flex-jc-space-between">
       <app-offline-menubar></app-offline-menubar>
@@ -48,35 +49,36 @@
     </div>
   </div>
   <div class="sb-desktop-search-result">
-      <app-desktop-search-result></app-desktop-search-result>
+    <app-desktop-search-result></app-desktop-search-result>
   </div>
 </header>
 
 <section class="sb-page-layout ui container  my-32">
 
-    <div class="sbgrid sbgrid--grid-carousel">
-      <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
-        <div class="sbcard__main_area">
-          <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-          <div class="sbcard__info">
-            <h4 class="sbcard__title">{{sbcard.title}}</h4>
-            <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span class="dot-divider"></span><span>{{sbcard.class}}</span>
-            </div>
+  <div class="sbgrid sbgrid--grid-carousel">
+    <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+      <div class="sbcard__main_area">
+        <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
+        <div class="sbcard__info">
+          <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+          <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+              class="dot-divider"></span><span>{{sbcard.class}}</span>
           </div>
         </div>
-        <div class="sbcard__moreinfo sb__DesktopOnly">
-          <div class="sbcard__meta2">
-            <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
-            <div class="sbcard__org">{{sbcard.board}}</div>
-          </div>
-
-          <div class="sbcard__tags">
-            <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-            <span class="sbcard__type">{{sbcard.type}}</span>
-          </div>
-        </div>
-
       </div>
+      <div class="sbcard__moreinfo sb__DesktopOnly">
+        <div class="sbcard__meta2">
+          <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
+          <div class="sbcard__org">{{sbcard.board}}</div>
+        </div>
+
+        <div class="sbcard__tags">
+          <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
+          <span class="sbcard__type">{{sbcard.type}}</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </section>
