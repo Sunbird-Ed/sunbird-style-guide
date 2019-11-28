@@ -1,9 +1,4 @@
 // dropdown css for offline menu bar
-.ui.selection.dropdown .menu > .item {
-  font-size: 12px;
-  padding: 1em 1em !important;
-}
-
 .ui.selection.dropdown.state-medium {
   color: var(--blue);
   display: flex;
@@ -21,7 +16,6 @@
     background: #e5edf5;
   }
 }
-
 
 .ui.selection.dropdown.state-selection {
   color: var(--primary-400);
@@ -52,6 +46,17 @@
 //     color: red;
 // }
 
-:host ::ng-deep .dropdown:not(.button) > .default.text {
-  color: var(--primary-400) !important;
+:host ::ng-deep {
+  .ui.selection.dropdown .menu {
+    min-height: 368px;
 }
+
+  .dropdown:not(.button) > .default.text {
+    color: var(--primary-400) !important;
+  }
+
+  .ui.selection.dropdown .menu > .item {
+    padding: 1em 1.5em !important;
+  }
+}
+
