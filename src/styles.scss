@@ -1,4 +1,3 @@
-@import "~highlight.js/styles/github.css";
 @import "variables";
 
 .sb-spacer48 {
@@ -398,18 +397,16 @@ h6 {
 body ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  background-color: $primary-400;
+  // background-color: $primary-400;
   -webkit-appearance: none;
 }
 
 body ::-webkit-scrollbar-thumb {
-
-  background-color:var(--primary-300)
+  background-color: rgb(223, 217, 217);
 }
 
 body ::-webkit-scrollbar-track {
-  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--white);
+  background-color: $gray-0;
 }
 
 .hideLeftTopBars {

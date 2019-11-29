@@ -3,63 +3,42 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
 }
-h1 {
-    font-size: $h1-font-size;
+h1, .sb-h1 {
+    font-size: $h1-font-size; //32px
     line-height: ($h1-font-size + 8);
 }
-h2 {
-    font-size: $h2-font-size;
+h2, .sb-h2 {
+    font-size: $h2-font-size; //28px
     line-height: ($h2-font-size + 8);
 }
-h3 {
-    font-size: $h3-font-size;
+h3, .sb-h3 {
+    font-size: $h3-font-size; //24px
     line-height: ($h3-font-size + 8);
 }
-h4 {
-    font-size: $h4-font-size;
+h4, .sb-h4 {
+    font-size: $h4-font-size; //20px
     line-height: ($h4-font-size + 8); //* 1.42857
 }
-h5 {
-    font-size: $h5-font-size;
+h5, .sb-h5 {
+    font-size: $h5-font-size; //16px
     line-height: ($h5-font-size + 8);
 }
-h6 {
-    font-size: $h6-font-size;
+h6, .sb-h6 {
+    font-size: $h6-font-size; //14px
     line-height: ($h6-font-size + 8);
 }
-p {
-    font-size: $p-font-size;
+p, .sb-para {
+    font-size: $p-font-size; //14px
     line-height: ($p-font-size * 1.618); //* 1.618
 }
 .fmedium {
-    font-size: $font-size-md !important;
+    font-size: $font-size-md !important; //16px
 }
 .fxsmall {
-    font-size: $font-size-sm !important;
+    font-size: $font-size-sm !important; //12px
 }
 .fxsmall {
-    font-size: $font-size-xs !important;
-}
-.sb-h1-title{
-
-}
-.sb-h2-title {
-
-}
-.sb-h3-title {
-
-}
-.sb-h4-title {
-
-}
-.sb-h5-title {
-
-}
-.sb-h6-title {
-
-}
-.sb-para {
-
+    font-size: $font-size-xs !important; //10px
 }
 .sb-section-title,
 .sb-pageSection-title {
