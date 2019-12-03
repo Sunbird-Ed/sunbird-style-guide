@@ -2,19 +2,19 @@
   <div>
     <div class="d-flex practical-appbar">
       <div class="d-flex flex-ai-center flex-jc-space-between practical-appbar__content">
-        <div class="back-label">
-          <span><i class="angle double left icon"></i></span>Back</div>
+          <button  class="sb-btn sb-btn-normal sb-btn-link sb-left-icon-btn" type="button">
+               <i class="arrow left icon"></i>Back</button>
       </div>
     </div>
     <div class="d-flex sb-bg-color-gray-0 practical-header">
       <div class="d-flex flex-ai-center flex-jc-space-between practical-header__content">
-        <div class="font-weight-bold fs-1">
-          Untiled Practice Set <span class="fs-0-785 pl-8"><a href=''>Edit</a></span>
-          <div class="fs-0-785 pt-8">License: CC BY 4.0</div>
+        <div class="practical-header__title fs-1">
+          Untiled Practice Set <a href='javascript:void(0);' class="fs-0-785 pl-8 links">Edit</a>
+          <div class="fs-0-785">License: CC BY 4.0</div>
         </div>
         <div class='practical-sb-buttons'>
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal ripple mr-8" (click)="uploadModal()">Change File</button>
-          <button class="sb-btn sb-btn-secondary sb-btn-normal ripple">Submit</button>
+          <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8" (click)="uploadModal()">Change File</button>
+          <button class="sb-btn sb-btn-secondary sb-btn-normal">Submit</button>
         </div>
       </div>
     </div>
@@ -24,8 +24,8 @@
       <div class="ui container msg-box">
         <div class="msg-box__content">
             <div class="fs-0-92 msg-box__content__label">Under Review</div>
-            <!--  <div class="fs-0-92 msg-box__content__label">Published</div> -->
-             <!-- <div class="msg-box__content__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div> -->
+             <div class="fs-0-92 msg-box__content__label">Published</div>
+             <div class="msg-box__content__error-msg font-weight-normal fs-0-92">Rejected with comment: "go fish yourself"</div>
              <div class="container msg-box__content__blank-box"></div>
         </div>
         </div>
@@ -68,7 +68,7 @@
       
           <p class="paragraph fs-0-785">
             “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
-            <span class="link font-weight-bold">https://creativecommons.org/licenses .</span>
+            <a href="javascript:void(0);" class="links">https://creativecommons.org/licenses .</a>
             Please choose the applicable creative commons license you wish to apply to your content”.
           </p>
         </form>
@@ -86,9 +86,9 @@
     <div *ngIf='!uploadFiles'>
       <label class="link-label fs-0-785">Refer link for</label>
       <ul class="convert-files fs-0-785">
-        <li><a href="" class="link-files">How to convert doc into pdf</a></li>
-        <li><a href="" class="link-files">How to convert video file to MP4</a></li>
-        <li><a href="" class="link-files">How to compress the MP4 file</a></li>
+        <li><a href="javascript:void(0);" class="fs-0-785 links">How to convert doc into pdf</a></li>
+        <li><a href="javascript:void(0);" class="fs-0-785 links">How to convert video file to MP4</a></li>
+        <li><a href="javascript:void(0);" class="fs-0-785 links">How to compress the MP4 file</a></li>
       </ul>
     </div>
 
@@ -102,7 +102,7 @@
       <div class="text-center fs-0-785">“By Uploading asset on SunbirdEd, you consent to publish it
         under the Creative Commons License Framework
       </div>
-      <div class="text-center fs-0-785 pt-8"><a href="#" class="link-files">https://creativecommons.org/licenses .</a></div>
+     <div class="text-center fs-0-785 pt-4 links"><a href="javascript:void(0);">https://creativecommons.org/licenses .</a></div>
     </div>
   </div>
   <div class="sb-modal-actions">

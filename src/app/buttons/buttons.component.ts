@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { HighlightResult } from 'ngx-highlightjs';
+import { Component, OnInit } from "@angular/core";
+import { HighlightResult } from "ngx-highlightjs";
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './buttons.component.html'
+  selector: "app-buttons",
+  templateUrl: "./buttons.component.html"
 })
 export class ButtonsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  pageTitle  = 'Buttons';
+  pageTitle = "Buttons";
   sections = [
     {
       expandCode: false,
-      title: 'Basic Buttons',
+      title: "Basic Buttons",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8 ripple">Primary Button/Info</button>
       <button type="button" class="sb-btn sb-btn-outline-secondary sb-btn-normal mr-8 ripple">Secondary/Success</button>
@@ -31,7 +30,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Colored Buttons',
+      title: "Colored Buttons",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8 ripple">Primary Button/Info</button>
       <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-8 ripple">Secondary/Success</button>
@@ -49,7 +48,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Button Groups',
+      title: "Button Groups",
       demoCode: `
       <div class="btn-group">
       <button type="button" class="sb-btn sb-btn-normal"><i class="plus icon"></i></button>
@@ -65,7 +64,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Dashed Buttons',
+      title: "Dashed Buttons",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-normal sb-btn-dashed sb-btn-dashed-primary mr-8">Basic Button</button>
       `,
@@ -75,7 +74,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Icon Buttons',
+      title: "Icon Buttons",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn mr-8">Sort by <i class="chevron down icon"></i></button>
       <button type="button" class="sb-btn sb-btn-normal sb-btn-primary sb-right-icon-btn mr-8">View More<i class="chevron down icon"></i></button>
@@ -91,7 +90,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Text Link Buttons',
+      title: "Text Link Buttons",
       demoCode: `
 <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary mr-8">Text Link</button>
 <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-secondary mr-8">Text Link</button>
@@ -121,23 +120,23 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Loading Button',
+      title: "Loading Button",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-loading-spinner sb-btn-primary">
-    <div class="loading-spinner" role="status" aria-hidden="true"></div>
+    <div class="sb-loading-spinner" role="status" aria-hidden="true"></div>
     Primary loading
   </button>
       `,
       copyCode: `
       <button type="button" class="sb-btn sb-btn-loading-spinner sb-btn-primary">
-    <div class="loading-spinner" role="status" aria-hidden="true"></div>
+    <div class="sb-loading-spinner" role="status" aria-hidden="true"></div>
     Primary loading
   </button>
       `
     },
     {
       expandCode: false,
-      title: 'Button States',
+      title: "Button States",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-disabled sb-btn-normal  mr-8">Primary Disable</button>
       <button type="button" class="sb-btn sb-btn-outline-disabled sb-btn-normal">Basic Button Disable</button>
@@ -147,10 +146,10 @@ export class ButtonsComponent implements OnInit {
       <button type="button" class="sb-btn sb-btn-outline-disabled sb-btn-normal">Basic Button Disable</button>
       `
     },
-  
+
     {
       expandCode: false,
-      title: 'Button Sizes',
+      title: "Button Sizes",
       demoCode: `
       <button type="button" class="sb-btn sb-btn-primary sb-btn-xs mr-8">mini</button>
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mr-8">normal</button>
@@ -180,7 +179,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Dropdowns',
+      title: "Dropdowns",
       demoCode: `
       <div class="ui dropdown sb-dotted-dropdown"
                             suiDropdown autoClose="itemClick">
@@ -208,7 +207,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Tile Buttons with icons',
+      title: "Tile Buttons with icons",
       demoCode: `
       <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
       <button class="sb-btn sb-btn-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
@@ -226,7 +225,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Tile Outline Buttons with icons',
+      title: "Tile Outline Buttons with icons",
       demoCode: `
       <button class="sb-btn sb-btn-outline-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
       <button class="sb-btn sb-btn-outline-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
@@ -244,7 +243,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Tile link Buttons with icons',
+      title: "Tile link Buttons with icons",
       demoCode: `
       <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
       <button class="sb-btn sb-btn-link sb-btn-link-secondary sb-btn-normal sb-btn-square"><i class="icon share alternate"></i><span>share</span></button>
@@ -262,7 +261,7 @@ export class ButtonsComponent implements OnInit {
     },
     {
       expandCode: false,
-      title: 'Tile Buttons with icons of different sizes',
+      title: "Tile Buttons with icons of different sizes",
       demoCode: `
       <button class="sb-btn sb-btn-warning sb-btn-sm sb-btn-square mr-8"><i class="icon share alternate"></i><span>Small</span></button>
       <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-square mr-8"><i class="icon share alternate"></i><span>Normal</span</button>
@@ -277,7 +276,5 @@ export class ButtonsComponent implements OnInit {
     }
   ];
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

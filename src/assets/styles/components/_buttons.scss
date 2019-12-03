@@ -27,6 +27,7 @@ a.sb-btn {
   min-width: ($base-block-space * 8);
   @include border-radius(3px);
   position: relative;
+  line-height: 1.15;
   text: {
     transform: capitalize;
     decoration: none;
@@ -203,7 +204,7 @@ a.sb-btn {
     color: $secondary-100;
     border-color: $secondary-100;
     &:hover,
-    &:active, 
+    &:active,
     &.active {
       background: $secondary-0;
       color: $secondary-400;
@@ -574,7 +575,6 @@ a.sb-btn {
     box-shadow: none;
   }
 }
-
 // button groups
 .btn-group {
   border: $sb-btn-group-border-width solid $sb-btn-group-border-color;
@@ -622,7 +622,7 @@ a.sb-btn {
   }
 }
 
-.loading-spinner {
+.sb-loading-spinner {
   width: 1rem;
   height: 1rem;
   margin-right: 8px;
@@ -753,4 +753,12 @@ a.sb-btn {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+*[lang="hi"] .sb-btn-xs {
+  line-height: 2.2;
+}
+
+*[lang="hi"] .sb-btn-normal {
+  line-height: 1.5;
 }

@@ -11,7 +11,7 @@
   </div>
 
   <div class="sbheader-mid-container">
-  <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-white"><span class="qrcode"><i class="icon-svg icon-svg--xxs icon-qr"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#qr-code"></use></svg></i> Enter QR Code</span></button>
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-white"><i class="icon-svg icon-svg--xxs icon-qr"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#qr"></use></svg></i> Enter QR Code</button>
   <div class="sbheader--offline__search ml-16">
 
     <div class="sbsearchbox">
@@ -27,9 +27,17 @@
   </div>
 </div>
 
-  <div class="sbheader--offline__actions">
+  <!-- <div class="sbheader--offline__actions">
     <button class="sb-btn sb-btn-normal sb-btn-outline-primary mr-8"><i class="icon-svg icon-svg--xxs icon-play"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#play"></use></svg></i> Take Tour</button>
     <button class="sb-btn sb-btn-normal sb-btn-outline-tertiary">Upload Content</button>
-  </div>
+  </div> -->
+
+  <div class="sbheader--offline__actions">
+      <sui-select class="ui dropdown" labelField="name" [(ngModel)]="selectLanguage">
+          <sui-select-option *ngFor="let option of selectOption" [value]="option">
+          </sui-select-option>
+        </sui-select>
+      <div class="ml-16"><img src="../../assets/images/Profile.svg" width="40px" height="40px"></div>
+    </div>
 
 </div>

@@ -14,8 +14,13 @@ export class StateComponent implements OnInit , OnDestroy {
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
-    this.multiSelect1 = [{name: 'Karnataka'}, {name: 'Andhra Pradesh'}, {name: 'Tamil Nadu'},
-    {name: 'Maharashtra'}, {name: 'Kerala'}, {name: 'Telangana'}];
+    this.multiSelect1 = [  {name: 'Assam'}, {name: 'Andhra Pradesh'}, {name: 'Arunachal Pradesh'},
+     {name: 'Bihar'}, {name: 'Chandigarh'}, {name: 'Chattisgarh'}, {name: 'Delhi'}, {name: 'Goa'},
+     {name: 'Gujarat'}, {name: 'Harayana'}, {name: 'Himachal Pradesh'}, {name: 'Jammu And Kashmir'},
+     {name: 'Jharkhand'}, {name: 'Karnataka'}, {name: 'Kerala'},  {name: 'Maharashtra'}, {name: 'Madhya Pradesh'},
+     {name: 'Manipur'}, {name: 'Meghalaya'}, {name: 'Mizoram'}, {name: 'Nagaland'}, {name: 'Orissa'},
+     {name: 'Punjab'}, {name: 'Rajasthan'}, {name: 'Sikkim'}, {name: 'Tamil Nadu'}, {name: 'Telangana'},
+     {name: 'Tripura'}, {name: 'Uttarakhand'}, {name: 'Uttar Pradesh'}, {name: 'West Bengal'}];
   }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
