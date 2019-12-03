@@ -1,57 +1,165 @@
 /* typography styles */
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
-h1, .sb-h1 {
-    font-size: $h1-font-size; //32px
-    line-height: ($h1-font-size + 8);
+h1,
+.sb-h1 {
+  font-size: $h1-font-size; //32px
+  line-height: ($h1-font-size * 1.61803398875);
 }
-h2, .sb-h2 {
-    font-size: $h2-font-size; //28px
-    line-height: ($h2-font-size + 8);
+h2,
+.sb-h2 {
+  font-size: $h2-font-size; //28px
+  line-height: ($h2-font-size * 1.61803398875);
 }
-h3, .sb-h3 {
-    font-size: $h3-font-size; //24px
-    line-height: ($h3-font-size + 8);
+h3,
+.sb-h3 {
+  font-size: $h3-font-size; //24px
+  line-height: ($h3-font-size * 1.61803398875);
 }
-h4, .sb-h4 {
-    font-size: $h4-font-size; //20px
-    line-height: ($h4-font-size + 8); //* 1.42857
+h4,
+.sb-h4 {
+  font-size: $h4-font-size; //20px
+  line-height: ($h4-font-size * 1.61803398875); //* 1.42857
 }
-h5, .sb-h5 {
-    font-size: $h5-font-size; //16px
-    line-height: ($h5-font-size + 8);
+h5,
+.sb-h5 {
+  font-size: $h5-font-size; //16px
+  line-height: ($h5-font-size * 1.61803398875);
 }
-h6, .sb-h6 {
-    font-size: $h6-font-size; //14px
-    line-height: ($h6-font-size + 8);
+h6,
+.sb-h6 {
+  font-size: $h6-font-size; //14px
+  line-height: ($h6-font-size * 1.61803398875);
 }
-p, .sb-para {
-    font-size: $p-font-size; //14px
-    line-height: ($p-font-size * 1.618); //* 1.618
+p,
+.sb-para {
+  font-size: $p-font-size; //14px
+  line-height: ($p-font-size * 1.61803398875); //* 1.618
 }
 .fmedium {
-    font-size: $font-size-md !important; //16px
+  font-size: $font-size-md !important; //16px
 }
 .fxsmall {
-    font-size: $font-size-sm !important; //12px
+  font-size: $font-size-sm !important; //12px
 }
 .fxsmall {
-    font-size: $font-size-xs !important; //10px
+  font-size: $font-size-xs !important; //10px
 }
+
+.font-weight-bold {
+  font-weight: bold !important;
+}
+.font-weight-normal {
+  font-weight: normal !important;
+}
+.font-italic {
+  font-style: italic;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+.text-sentencecase {
+  text-transform: lowercase !important;
+  &::first-letter {
+    text-transform: uppercase !important;
+  }
+}
+.text-inherit {
+  text-transform: inherit !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
+.white-space-nowrap {
+  white-space: nowrap !important;
+}
+
+.cursor-text {
+  cursor: text !important;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+.va-bottom {
+  vertical-align: bottom !important;
+}
+.va-middle {
+  vertical-align: middle;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right;
+  html[dir="rtl"] & {
+    text-align: left;
+  }
+}
+
+.text-left {
+  text-align: left;
+  html[dir="rtl"] & {
+    text-align: right;
+  }
+}
+
 .sb-section-title,
 .sb-pageSection-title {
-    font-size: $h5-font-size;
-    display: inline;
-    font-weight: 600;
-    &.sb-pageSection-sentenceCase {
-        text-transform: lowercase;
-        &::first-letter {
-            text-transform: uppercase;
-        }
+  font-size: $h5-font-size;
+  display: inline;
+  font-weight: 600;
+  &.sb-pageSection-sentenceCase {
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: uppercase;
     }
-    &.sb-pageSection-title-light {
-        color: $gray-400;
-    }
+  }
+  &.sb-pageSection-title-light {
+    color: $gray-400;
+  }
+}
+
+.sb__ellipsis {
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &--two {
+    -webkit-line-clamp: 2;
+  }
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }

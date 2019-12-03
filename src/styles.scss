@@ -402,7 +402,7 @@ body ::-webkit-scrollbar {
 }
 
 body ::-webkit-scrollbar-thumb {
-  background-color: rgb(223, 217, 217);
+  background-color: var(--primary-300);
 }
 
 body ::-webkit-scrollbar-track {
