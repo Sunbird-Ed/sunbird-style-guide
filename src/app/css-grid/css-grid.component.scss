@@ -1,107 +1,50 @@
 @import "variables";
 @import 'mixins/mixins';
 
-
-:root {
-    --rowNum: 4;
-    --colNum: 5;
-    --gridHeight: 120px;
-  }
-  
-  body {
-    min-height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-  }
-  .sb-grid-layout {
+.sb-grid-layout { 
     display: grid;
-    grid-template-rows: repeat(var(--rowNum), var(--gridHeight));
-    grid-template-columns: repeat(var(--colNum), auto);
-    gap: 5px;
+    grid-gap: 16px;
+    .sb-grid-content {
+        overflow: hidden;
+        border-radius: 4px;
+        img {
+          width: 100%;
+        }
+    }
+    &.sb-grid-layout-one{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &.sb-grid-layout-two{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &.sb-grid-layout-three{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &.sb-grid-layout-four{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &.sb-grid-layout-five{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    &.sb-grid-layout-six{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &.sb-grid-layout-seven{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    &.sb-grid-layout-eight{
+        grid-template-columns: repeat(8, 1fr);
+    }
+    &.sb-grid-layout-nine{
+        grid-template-columns: repeat(9, 1fr);
+    }
+    &.sb-grid-layout-ten{
+        grid-template-columns: repeat(10, 1fr);
+    }
+    &.sb-grid-layout-eleven{
+        grid-template-columns: repeat(11, 1fr);
+    }
+    &.sb-grid-layout-twelve{
+        grid-template-columns: repeat(12, [col-start] 1fr);
+    }
   }
-  .sb-grid-content {
-    grid-column-start: auto;
-    grid-row-start: auto;
-  }
-//   @for $i from 0 to 100 {
-//     .sb-grid-content:nth-child(#{$i}) {
-//       background-color: rgba(random(256)-1, random(256)-1, random(256)-1, random(10)/10);
-//     }
-//   }
-  
-
-
-// .sb-grid-layout { 
-//     display: grid;
-//     grid-gap: 16px;
-//     .sb-grid-content {
-//         overflow: hidden;
-//         border-radius: 4px;
-//         img {
-//           width: 100%;
-//         }
-//     }
-//     &.sb-grid-layout-one{
-//         grid-template-columns: repeat(1, 1fr);
-//     }
-//     &.sb-grid-layout-two{
-//         grid-template-columns: repeat(2, 1fr);
-//         &__xs{
-//             @include respond-above(xs){
-//                 .sb-grid-content{
-//                     grid-column: span 6;
-//                 }
-//             }
-//         }
-    
-//     }
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     &.sb-grid-layout-three{
-//         grid-template-columns: repeat(3, 1fr);
-//     }
-//     &.sb-grid-layout-four{
-//         grid-template-columns: repeat(4, 1fr);
-//     }
-//     &.sb-grid-layout-five{
-//         grid-template-columns: repeat(5, 1fr);
-//     }
-//     &.sb-grid-layout-six{
-//         grid-template-columns: repeat(6, 1fr);
-//     }
-//     &.sb-grid-layout-seven{
-//         grid-template-columns: repeat(7, 1fr);
-//     }
-//     &.sb-grid-layout-eight{
-//         grid-template-columns: repeat(8, 1fr);
-//     }
-//     &.sb-grid-layout-nine{
-//         grid-template-columns: repeat(9, 1fr);
-//     }
-//     &.sb-grid-layout-ten{
-//         grid-template-columns: repeat(10, 1fr);
-//     }
-//     &.sb-grid-layout-eleven{
-//         grid-template-columns: repeat(11, 1fr);
-//     }
-//     &.sb-grid-layout-twelve{
-//         grid-template-columns: repeat(12, [col-start] 1fr);
-//     }
-//   }
-
