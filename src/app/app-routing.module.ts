@@ -57,7 +57,7 @@ import { OfflineTestComponent } from './offline-test/offline-test.component';
 import { LoginComponent } from './login/login.component';
 import { DesktopHelpComponent } from './desktop-help/desktop-help.component';
 import { PracticeSetComponent } from './practice-set/practice-set.component';
-
+import { CssGridComponent } from './css-grid/css-grid.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -117,7 +117,8 @@ const routes: Routes = [
   { path: 'offline-test', component: OfflineTestComponent},
   { path: 'offline-login', component: LoginComponent},
   { path: 'desktop-help', component: DesktopHelpComponent},
-  { path: 'practical-set', component: PracticeSetComponent}
+  { path: 'practical-set', component: PracticeSetComponent},
+  { path: 'css-grid', component: CssGridComponent}
 ];
 
 @NgModule({
