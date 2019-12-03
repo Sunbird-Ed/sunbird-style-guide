@@ -1,0 +1,50 @@
+@import "variables";
+@import 'mixins/mixins';
+
+.sb-grid-layout { 
+    display: grid;
+    grid-gap: 16px;
+    .sb-grid-content {
+        overflow: hidden;
+        border-radius: 4px;
+        img {
+          width: 100%;
+        }
+    }
+    &.sb-grid-layout-one{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &.sb-grid-layout-two{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &.sb-grid-layout-three{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &.sb-grid-layout-four{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &.sb-grid-layout-five{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    &.sb-grid-layout-six{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &.sb-grid-layout-seven{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    &.sb-grid-layout-eight{
+        grid-template-columns: repeat(8, 1fr);
+    }
+    &.sb-grid-layout-nine{
+        grid-template-columns: repeat(9, 1fr);
+    }
+    &.sb-grid-layout-ten{
+        grid-template-columns: repeat(10, 1fr);
+    }
+    &.sb-grid-layout-eleven{
+        grid-template-columns: repeat(11, 1fr);
+    }
+    &.sb-grid-layout-twelve{
+        grid-template-columns: repeat(12, [col-start] 1fr);
+    }
+  }

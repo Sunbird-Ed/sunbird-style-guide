@@ -1,0 +1,32 @@
+@import "variables";
+
+.pill {
+  width: auto !important;
+  max-width: 90px !important;
+  background-color: var(--white);
+  white-space: nowrap;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  margin-right: $base-block-space;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  border-radius: ($base-block-space * 2);
+  padding: ($base-block-space / 2) ($base-block-space * 2);
+  color: var(--primary-400);
+  min-height: ($base-block-space * 4);
+  cursor: pointer;
+  &:hover{
+    background-color:  var(--primary-400);
+    color: var(--white);
+  }
+  &.active {
+    background-color:var(--primary-400);
+    color: var(--white);
+  }
+  &[aria-selected="true"] {
+    color: #111;
+  }
+}
