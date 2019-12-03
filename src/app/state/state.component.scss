@@ -1,3 +1,5 @@
+@import 'variables';
+
 // dropdown css for offline menu bar
 .ui.selection.dropdown.state-medium {
   color: var(--blue);
@@ -38,17 +40,33 @@
   }
 }
 
-.ui.selection.dropdown .menu {
-    max-height: 20em;
-}
-
 // .ui.default.dropdown:not(.button) > .text, .ui.dropdown:not(.button) > .default.text {
 //     color: red;
 // }
 
 :host ::ng-deep {
+
   .ui.selection.dropdown .menu {
+    max-height: 20em;
     min-height: 368px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      -webkit-appearance: none;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #E5EDF5 !important;
+      &:hover{
+        background: var(--primary-300) !important;
+      }
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: $gray-0;
+      width:5px;
+    }
 }
 
   .dropdown:not(.button) > .default.text {

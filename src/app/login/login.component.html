@@ -7,14 +7,14 @@
         <img src="assets/images/sunbird_logo.png" alt="SUNBIRD">
       </div>
 
-     
+
       <!-- Slides -->
       <div class="d-flex">
         <div class="swiper-slide" *ngIf="slides[activeSlide] =='slide-1'">
           <!--*ngIf="!showContent"-->
           <div class="swiper-slide__title">Choose Your Preferred Language</div>
           <div class="language-selection">
-            <div class="scrollbar">
+            <div class="login-scroll sb-style-scrollbar">
               <div class="radio-box">
                   <label class="radio-container" *ngFor="let select of languageSelection">
                       <div class="label">{{select.name}}</div>

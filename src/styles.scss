@@ -394,23 +394,28 @@ h6 {
   left: 230px !important;
 }
 
-body ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  // background-color: $primary-400;
-  -webkit-appearance: none;
-}
+// scroll css //
+.sb-style-scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    -webkit-appearance: none;
+  }
 
-body ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-300);
-}
+  &::-webkit-scrollbar-thumb {
+    background-color: #e5edf5 !important;
+    &:hover {
+      background: var(--primary-300) !important;
+    }
+  }
 
-body ::-webkit-scrollbar-track {
-  background-color: $gray-0;
+  &::-webkit-scrollbar-track {
+    background-color: $gray-0;
+    width: 5px;
+  }
 }
 
 .hideLeftTopBars {
-
   .docs-sidebar,
   .docs-pageHeading {
     display: none;
@@ -439,7 +444,6 @@ body ::-webkit-scrollbar-track {
   .footer {
     position: relative;
   }
-
 }
 
 .ui.menu {
@@ -474,9 +478,6 @@ body ::-webkit-scrollbar-track {
     padding: 16px !important;
   }
 }
-
-
-
 
 .clearfix {
   *zoom: 1;

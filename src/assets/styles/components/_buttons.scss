@@ -97,7 +97,9 @@ a.sb-btn {
   &-full {
     width: 100%;
   }
-
+  &-radius{
+    border-radius: 2rem;
+  }
   // default colored btns
   &-primary,
   &-info,

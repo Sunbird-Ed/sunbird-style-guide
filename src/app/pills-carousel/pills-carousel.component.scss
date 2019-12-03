@@ -1,0 +1,72 @@
+@import "variables";
+
+.sb-pills-container {
+    padding:$base-block-space 0;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+.pn-ProductNav_Contents {
+	float: left;
+	transition: transform .2s ease-in-out;
+}
+
+.pn-ProductNav_Contents-no-transition {
+	transition: none;
+}
+
+.pnProductNavContents{
+  width:100% !important;
+}
+.pn-Advancer {
+	appearance: none;
+	padding: 0;
+  border: 0;
+  position: absolute;
+	top: 8px;
+	bottom: 0;
+  opacity: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: var(--white);
+  transition: opacity .3s;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.12);
+  .pn-Advancer_Icon {
+    width: 10px;
+    height: 32px;
+    fill: var(--primary-400);
+  }
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+    cursor: pointer;
+    background: var(--primary-400);
+    .pn-Advancer_Icon {
+      fill: var(--white);
+    }
+	}
+	
+}
+
+.pn-Advancer_Left {
+	left: 0;
+	[data-overflowing="both"] ~ &,
+	[data-overflowing="left"] ~ & {
+		opacity: 1;
+	}
+}
+
+.pn-Advancer_Right {
+	right: 0;
+	[data-overflowing="both"]  ~ &,
+	[data-overflowing="right"] ~ & {
+		opacity: 1;
+	}
+}
+
+
+
+

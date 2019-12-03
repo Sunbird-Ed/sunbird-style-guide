@@ -96,6 +96,8 @@ import { LoginComponent } from './login/login.component';
 import { DesktopHelpComponent } from './desktop-help/desktop-help.component';
 import { PracticeSetComponent } from './practice-set/practice-set.component';
 import { DesktopSearchResultComponent } from './desktop-search-result/desktop-search-result.component';
+import { PillsCarouselComponent } from './pills-carousel/pills-carousel.component';
+import { CssGridComponent } from './css-grid/css-grid.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -181,7 +183,9 @@ export function hljsLanguages() {
     LoginComponent,
     DesktopHelpComponent,
     PracticeSetComponent,
-    DesktopSearchResultComponent
+    DesktopSearchResultComponent,
+    PillsCarouselComponent,
+    CssGridComponent
   ],
   imports: [
     BrowserModule,

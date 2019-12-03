@@ -1,3 +1,5 @@
-<p>
-  testing works!
-</p>
+<div class="m-32">
+    <ngx-slick class="carousel" [config]="slideConfig">
+        <div ngxSlickItem class="pill" *ngFor="let class of Classes;  let index = index"> {{ class.name }}  </div>
+    </ngx-slick>
+</div>
