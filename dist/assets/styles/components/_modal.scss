@@ -75,6 +75,7 @@
             overflow-x: hidden;
             .sb-modal-header {
                 height: $sb-modal-fs-header-height;
+                line-height: $sb-modal-fs-header-line-height;
                 width: auto;
                 border-radius: 0;
                 display: flex;
