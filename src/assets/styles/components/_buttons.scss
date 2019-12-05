@@ -25,7 +25,7 @@ a.sb-btn {
   color: $white-color;
   cursor: pointer;
   min-width: ($base-block-space * 8);
-  @include border-radius(3px);
+  @include border-radius(0.125rem);
   position: relative;
   line-height: 1.15;
   text: {
@@ -97,7 +97,7 @@ a.sb-btn {
   &-full {
     width: 100%;
   }
-  &-radius{
+  &-radius {
     border-radius: 2rem;
   }
   // default colored btns
@@ -404,11 +404,12 @@ a.sb-btn {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       font-size: $font-size-sm;
       padding: $base-block-space;
       i.icon {
         margin: 0 0 0 0;
+        font-size: calc(var(--base-block-space) * 2);
       }
       span {
         margin: $base-block-space 0 0 0;
@@ -418,21 +419,14 @@ a.sb-btn {
       height: $base-block-space * 6;
       width: $base-block-space * 6;
       font-size: $font-size-xs;
-      i.icon {
-        font-size: 18px;
-      }
     }
     &.sb-btn-normal {
       height: $base-block-space * 8;
       width: $base-block-space * 8;
-      i.icon {
-        font-size: 18px;
-      }
     }
-
     &.sb-btn-lg {
-      height: 128px;
-      width: 128px;
+      height: $base-block-space * 15.5;
+      width: $base-block-space * 15.5;
       font-size: $font-size-base;
       i.icon {
         font-size: $font-size-lg;
@@ -440,7 +434,7 @@ a.sb-btn {
     }
 
     &.sb-btn-xs {
-      padding: 4px;
+      padding: ($base-block-space / 2);
       height: $base-block-space * 4;
       min-width: $base-block-space * 4;
       font-size: $font-size-xs;
@@ -448,7 +442,7 @@ a.sb-btn {
         font-size: $font-size-xs;
       }
       span {
-        margin: 4px 0 0 0;
+        margin: ($base-block-space / 2) 0 0 0;
       }
     }
   }

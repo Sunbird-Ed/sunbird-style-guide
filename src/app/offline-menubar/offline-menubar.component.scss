@@ -2,7 +2,6 @@
 @import "mixins/mixins";
 
 :host {
-
   .sb-offline-menu-container {
     min-height: ($base-block-space * 4);
     width: 100%;
@@ -10,23 +9,23 @@
     margin-left: 0px;
     overflow: hidden;
 
-    @include respond-below(sm){
-      border-bottom:1px solid var(--primary-400);
+    @include respond-below(sm) {
+      border-bottom: 1px solid var(--primary-400);
       margin-bottom: 8px;
     }
 
     html[dir="rtl"] & {
-      margin-right:0px;
+      margin-right: 0px;
     }
     a {
       position: relative;
       background: #bac9d8; //var(--primary-200);
       font-size: $font-size-sm;
       color: var(--primary-400);
-      margin-right: ($base-block-space + 2);
+      margin-right: $base-block-space;
       border-radius: ($base-block-space / 2) ($base-block-space / 2) 0 0;
       height: ($base-block-space * 4);
-      padding:($base-block-space) ($base-block-space * 2);
+      padding: ($base-block-space) ($base-block-space * 2);
 
       html[dir="rtl"] & {
         margin-left: $base-block-space;
@@ -57,7 +56,7 @@
       // &.active:after, &:hover:after {
       //   box-shadow: -8px 0 0 0 var(--primary-400);
       // }
-      
+
       // &.active:before, &:hover:before {
       //   box-shadow: 8px 0 0 0 var(--primary-400);
       // }
@@ -70,8 +69,4 @@
       }
     }
   }
-
 }
-
-
-
