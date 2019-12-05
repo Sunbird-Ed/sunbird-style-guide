@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class OfflineTestComponent implements OnInit, AfterViewInit {
   selectOption: any;
   panelOpened = false;
+  isShowContent = false;
   selectMedium: { name: string; id: string; value: string; };
 
   sbcards = [
@@ -139,7 +140,6 @@ export class OfflineTestComponent implements OnInit, AfterViewInit {
     ];
     this.selectMedium = this.selectOption[0];
   }
-
 
   ngAfterViewInit() {
     var SETTINGS = {
@@ -272,5 +272,9 @@ export class OfflineTestComponent implements OnInit, AfterViewInit {
           return "none";
       }
     }
+  }
+
+  shownContent() {
+    this.isShowContent = !this.isShowContent;
   }
 }
