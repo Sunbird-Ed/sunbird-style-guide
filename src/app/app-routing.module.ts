@@ -58,6 +58,10 @@ import { LoginComponent } from './login/login.component';
 import { DesktopHelpComponent } from './desktop-help/desktop-help.component';
 import { PracticeSetComponent } from './practice-set/practice-set.component';
 import { CssGridComponent } from './css-grid/css-grid.component';
+import { DownloadComponent } from './download/download.component';
+import { OfflineComponent } from './offline/offline.component';
+import { OnlineComponent } from './online/online.component';
+import { NoContentComponent } from './no-content/no-content.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -118,11 +122,14 @@ const routes: Routes = [
   { path: 'offline-login', component: LoginComponent},
   { path: 'desktop-help', component: DesktopHelpComponent},
   { path: 'practical-set', component: PracticeSetComponent},
-  { path: 'css-grid', component: CssGridComponent}
+  { path: 'no-content', component: NoContentComponent},
+  { path: 'online', component: OnlineComponent},
+  { path: 'offline', component: OfflineComponent},
+  { path: 'download', component: DownloadComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

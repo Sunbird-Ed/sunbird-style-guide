@@ -1,0 +1,12 @@
+.download-container{
+    width: 100%;
+    height: 100%;
+
+    &__icon{
+      position: relative;
+      bottom: 4px;
+    }
+    &__label{
+        color:var(--primary-400);
+    }
+}

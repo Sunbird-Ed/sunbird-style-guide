@@ -1,4 +1,4 @@
-<header>
+<header (click)="shownContent()">
   <div class="sb-offline-app-bar">
   <app-offline-appbar></app-offline-appbar>
   </div>
@@ -51,37 +51,54 @@
       <app-class></app-class>
     </div>
   </div> -->
-  <div class="sb-desktop-search-result">
+  
+  <div class="sb-desktop-search-result" *ngIf="!isShowContent">
     <app-desktop-search-result></app-desktop-search-result>
   </div>
 </header>
 
-<section class="sb-page-layout ui container  my-32">
-
-  <div class="sbgrid sbgrid--grid-carousel">
-    <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
-      <div class="sbcard__main_area">
-        <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-        <div class="sbcard__info">
-          <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
-          <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
-              class="dot-divider"></span><span>{{sbcard.class}}</span>
+<section class="sb-page-layout ui container my-32" *ngIf="!isShowContent">
+    <div class="sbgrid sbgrid--grid-carousel">
+      <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+        <div class="sbcard__main_area">
+          <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
+          <div class="sbcard__info">
+            <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+            <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                class="dot-divider"></span><span>{{sbcard.class}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="sbcard__moreinfo sb__DesktopOnly">
+          <div class="sbcard__meta2">
+            <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
+            <div class="sbcard__org">{{sbcard.board}}</div>
+          </div>
+  
+          <div class="sbcard__tags">
+            <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
+            <span class="sbcard__type">{{sbcard.type}}</span>
+          </div>
+        </div>
+        <div class="sbcard-overlay">
+          <div class="d-flex flex-ai-center flex-jc-space-around sbcard-overlay__content">
+            <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
+              <!-- <a class="icon" href="#" title=""><img src="../../assets/images/pendrive.svg"></a>
+              <div class="fs-0-92">Save to Pendrive</div> -->
+              <a class="icon" href="#" title=""><img src="../../assets/images/download.svg"></a>
+              <div class="fs-0-92">Download</div>
+            </div>
+            <div class="sbcard-overlay__content__separator"></div>
+            <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
+                <a class="icon" href="#" title=""><img src="../../assets/images/open.svg"></a>
+              <div class="fs-0-92">Open</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="sbcard__moreinfo sb__DesktopOnly">
-        <div class="sbcard__meta2">
-          <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
-          <div class="sbcard__org">{{sbcard.board}}</div>
-        </div>
-
-        <div class="sbcard__tags">
-          <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-          <span class="sbcard__type">{{sbcard.type}}</span>
-        </div>
-      </div>
-
     </div>
-  </div>
-
 </section>
+
+<div *ngIf="isShowContent" class="no-content-area">
+  <app-no-content></app-no-content>
+</div>
