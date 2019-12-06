@@ -76,5 +76,10 @@
   .ui.selection.dropdown .menu > .item {
     padding: 1em 1.5em !important;
   }
+  .ui.selection.dropdown .menu > .item.active {
+    color: var(--primary-color) !important;
+    background : var(--primary-250) !important;
+  }
 }
 
+// .prominent-filter .ui.selection.dropdown .menu > .item.active
