@@ -12,8 +12,13 @@
   <div class="sb-menubar sb-bg-color-white">
   <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
     <app-offline-menubar></app-offline-menubar>
-    <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
-      <span class="plus-icon mr-5">&#43;</span>Load Content</button>
+    <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal font-weight-bold active">
+      <i class="icon-svg icon-svg--xxs">
+        <svg class="icon icon-svg--tertiary">
+      <use xlink:href="assets/images/libdemo/add.svg"></use></svg></i>Load Content</button>
+
+    <!-- <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
+      <span class="plus-icon mr-5 fs-1-3 ">&#43;</span>Load Content</button> -->
   </div>
   </div> 
   
@@ -62,6 +67,10 @@
 
 <div class="ui container sb-two-column" *ngIf="!isShownContent">
     <section class="sb-page-layout sb-column my-24">
+      <div class="no-result">
+          <div class="fs-1 mb-16">No results found for "Social Science" from <a href="#" class="download-area">My Downloads</a></div>
+      </div>
+      <div class="fs-1 mb-16">Showing 10 results for “Social Science” from <a href="#" class="download-area">My Downloads</a></div>
         <div class="sbgrid sbgrid--grid-carousel">
           <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
             <div class="sbcard__main_area">
@@ -104,16 +113,14 @@
     </section>
   
     <div class="sb-column">
-      <!-- <app-offline></app-offline> -->
-      <app-online></app-online>
-      <div class="download-content">
+      <app-offline></app-offline>
+      <div class="my-16">
         <app-download></app-download>
       </div>
     </div>
 </div>
 
-<div class="no-content-area" *ngIf="isShownContent">
-      <!-- <app-no-content></app-no-content> -->
-      <app-offline-content></app-offline-content>
+<div class="p-16" *ngIf="isShownContent">
+      <app-no-content></app-no-content>
   </div>
-    
+     
