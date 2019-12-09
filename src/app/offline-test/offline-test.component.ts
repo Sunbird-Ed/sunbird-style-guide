@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class OfflineTestComponent implements OnInit, AfterViewInit {
   selectOption: any;
   panelOpened = false;
-  isShowContent = false;
   selectMedium: { name: string; id: string; value: string; };
 
   sbcards = [
@@ -103,6 +102,7 @@ export class OfflineTestComponent implements OnInit, AfterViewInit {
       type: 'Book'
     }
   ];
+  isShownContent = false;
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
@@ -273,8 +273,7 @@ export class OfflineTestComponent implements OnInit, AfterViewInit {
       }
     }
   }
-
-  shownContent() {
-    this.isShowContent = !this.isShowContent;
+   ContentLoad() {
+    this.isShownContent = !this.isShownContent;
   }
 }
