@@ -1,24 +1,23 @@
+@import "variables", "components/select";
 
-@import "variables";
-
-.sb-offline-updates{
-    background: var(--white);
+.sb-offline-updates {
+  background: var(--white);
+}
+.sb-offline-updates-content {
+}
+.sb-offline-updates-content-logo {
+  .logo {
+    height: 100px;
   }
-  .sb-offline-updates-content{
-  }
-  .sb-offline-updates-content-logo{
-    .logo{
-      height: 100px;
-    }
-  }
-  .sb-offline-updates-content-title{
-    font-size: 18px;
-  }
-  .sb-offline-updates-content-para{
-    font-size: $font-size-sm;
-    color: var(--gray-400);
-    line-height: $sb-selection-line-height;
-  }
-  .sb-offline-label{
-    font-size: $h5-font-size;
-  }
+}
+.sb-offline-updates-content-title {
+  font-size: 18px;
+}
+.sb-offline-updates-content-para {
+  font-size: $font-size-sm;
+  color: var(--gray-400);
+  line-height: $sb-selection-line-height;
+}
+.sb-offline-label {
+  font-size: $h5-font-size;
+}

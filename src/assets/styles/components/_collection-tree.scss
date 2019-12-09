@@ -1,3 +1,47 @@
+// TOC or Collection Tree
+$sb-collectionTree-border-radius: calculateRem(4px);
+$sb-collectionTree-border: calculateRem(1px) solid $primary-200;
+$sb-collectionTree-padding: calculateRem(16px);
+$sb-collectionTree-margin: $base-block-space 0 0 0;
+$sb-collectionTree-background-color: $white-color;
+$sb-collectionTree-title-color: $gray-800;
+$sb-collectionTree-title-font-size: $h6-font-size;
+$sb-collectionTree-title-line-height: calculateRem(20px);
+$sb-collectionTree-title-font-weight: 400;
+$sb-collectionTree-active-title-color: $primary-color;
+$sb-collectionTree-active-title-font-weight: bold;
+$sb-collectionTree-title-icon-color: $tertiary-100;
+$sb-collectionTree-title-icon-font-size: calculateRem(20px);
+$sb-collectionTree-title-icon-line-height: calculateRem(20px);
+$sb-collectionTree-title-icon-height: calculateRem(20px);
+$sb-collectionTree-title-icon-font-weight: 500;
+$sb-collectionTree-title-toggle-icon-color: $primary-color;
+$sb-collectionTree-title-toggle-icon-font-size: $font-size-sm;
+$sb-collectionTree-title-toggle-icon-line-height: calculateRem(20px);
+$sb-collectionTree-title-toggle-icon-height: calculateRem(20px);
+$sb-collectionTree-title-toggle-icon-font-weight: 500;
+$sb-collectionTree-disabled-border: calculateRem(1px) solid $gray-100;
+$sb-collectionTree-disabled-title-icon-color: $gray-100;
+
+// Fancy Tree
+$sb-fancyTree-margin-ltr: 0 0 0 ($base-block-space * 1.25);
+$sb-fancyTree-margin-rtl: 0 ($base-block-space * 1.25) 0 0;
+$sb-fancyTree-padding: calculateRem(16px) 0 0 0;
+$sb-fancyTree-list-border-color: $primary-200;
+$sb-fancyTree-list-border-width: calculateRem(1px);
+$sb-fancyTree-list-item-margin: 0 0 calculateRem(16px) 0;
+$sb-fancyTree-list-item-padding-ltr: 0 0 0 ($base-block-space * 1.75);
+$sb-fancyTree-list-item-padding-rtl: 0 ($base-block-space * 1.75) 0 0;
+$sb-fancyTree-list-item-border-text-spacing: ($base-block-space * 1.75);
+$sb-fancyTree-list-item-icon-size: calculateRem(20px);
+$sb-fancyTree-default-list-item-icon-color: $tertiary-100;
+$sb-fancyTree-completed-list-item-icon-color: $success-color;
+$sb-fancyTree-inprogress-list-item-icon-color: $primary-color;
+$sb-fancyTree-disabled-list-item-icon-color: $gray-100;
+$sb-fancyTree-list-item-title-padding: 0 ($base-block-space);
+$sb-fancyTree-list-item-title-font-size: $h6-font-size;
+$sb-fancyTree-list-item-title-commingSoonMessage-spacing: 0 calculateRem(16px);
+
 .sb-collectionTree {
   width: 100%;
   border-radius: $sb-collectionTree-border-radius;
@@ -21,8 +65,8 @@
         font-weight: $sb-collectionTree-title-font-weight;
         unicode-bidi: plaintext;
       }
-    
-     .sb-collectionTree-title-icon {
+
+      .sb-collectionTree-title-icon {
         font-size: $sb-collectionTree-title-icon-font-size;
         line-height: $sb-collectionTree-title-icon-line-height;
         height: $sb-collectionTree-title-icon-height;
@@ -80,7 +124,7 @@
   &:before {
     position: absolute;
     display: block;
-    content: ' ';
+    content: " ";
     top: -3px;
     left: 0;
     height: 100%;
@@ -100,7 +144,7 @@
     &:before {
       position: absolute;
       display: block;
-      content: ' ';
+      content: " ";
       top: 10px;
       left: 0;
       width: $sb-fancyTree-list-item-border-text-spacing;
@@ -114,7 +158,7 @@
       &:after {
         position: absolute;
         display: block;
-        content: ' ';
+        content: " ";
         top: 11px;
         left: 0;
         height: 100%;
@@ -137,12 +181,12 @@
         color: $sb-fancyTree-default-list-item-icon-color;
         margin: 0;
 
-        &.fancy-tree-green {	
-          color: $sb-fancyTree-completed-list-item-icon-color;	
+        &.fancy-tree-green {
+          color: $sb-fancyTree-completed-list-item-icon-color;
         }
 
-        &.fancy-tree-blue {	
-          color: $sb-fancyTree-inprogress-list-item-icon-color;	
+        &.fancy-tree-blue {
+          color: $sb-fancyTree-inprogress-list-item-icon-color;
         }
       }
 
@@ -151,13 +195,12 @@
         font-size: $sb-fancyTree-list-item-title-font-size;
       }
 
-      &.disabled{
+      &.disabled {
         pointer-events: none;
 
         .sb-fancyTree-icon {
           color: $sb-fancyTree-disabled-list-item-icon-color;
         }
-
       }
     }
   }
@@ -191,6 +234,5 @@
         left: auto;
       }
     }
-
   }
 }
