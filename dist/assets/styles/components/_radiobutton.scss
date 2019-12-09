@@ -1,18 +1,31 @@
+// Radio buttons
+$sb-radio-btn-border: calculateRem(1px); //width of the border
+$sb-radio-btn-border-radius: 100%;
+$sb-radio-btn-disabled-opacity: 0.5;
+$sb-radio-btn-border-color: $primary-300;
+$sb-radio-btn-border-disabled-color: $gray-100;
+$sb-radio-btn-label-color: $gray-200;
+$sb-radio-btn-backgroud-before-checked: $white-color;
+$sb-radio-btn-backgroud-after-checked: $primary-300;
+
 .sb-radio-btn {
   input[type="radio"] {
-    &:checked, &:not(:checked) {
+    &:checked,
+    &:not(:checked) {
       position: absolute;
       left: -9999px;
     }
-    &[disabled="disabled"] + label{
+    &[disabled="disabled"] + label {
       opacity: $sb-radio-btn-disabled-opacity;
       cursor: not-allowed;
     }
-    &[disabled="disabled"]:checked + label:before, &[disabled="disabled"]:not(:checked) + label:before {
+    &[disabled="disabled"]:checked + label:before,
+    &[disabled="disabled"]:not(:checked) + label:before {
       border: $sb-radio-btn-border solid $sb-radio-btn-border-disabled-color;
       opacity: $sb-radio-btn-disabled-opacity;
     }
-    &:checked + label, &:not(:checked) + label {
+    &:checked + label,
+    &:not(:checked) + label {
       position: relative;
       padding-left: ($base-block-space * 3);
       cursor: pointer;
@@ -20,8 +33,9 @@
       display: inline-block;
       color: $sb-radio-btn-label-color;
     }
-    &:checked + label:before, &:not(:checked) + label:before {
-      content: '';
+    &:checked + label:before,
+    &:not(:checked) + label:before {
+      content: "";
       position: absolute;
       left: 0;
       top: 1px;
@@ -32,7 +46,7 @@
       background: $sb-radio-btn-backgroud-before-checked;
     }
     &:checked + label:after {
-      content: '';
+      content: "";
       width: ($base-block-space * 1);
       height: ($base-block-space * 1);
       background: $sb-radio-btn-backgroud-after-checked;
@@ -44,9 +58,9 @@
       transition: all 0.2s ease;
     }
     &:not(:checked) + label:after {
-      content: '';
-      width: ($base-block-space * 1);;
-      height: ($base-block-space * 1);;
+      content: "";
+      width: ($base-block-space * 1);
+      height: ($base-block-space * 1);
       background: $sb-radio-btn-backgroud-after-checked;
       position: absolute;
       top: 4px;
@@ -65,7 +79,7 @@
     }
   }
 }
-.sb-account-recover-page{
+.sb-account-recover-page {
   .sb-radio-btn-checkbox.sb-radio-btn-primary label:before {
     border: 1px solid $blue !important;
   }

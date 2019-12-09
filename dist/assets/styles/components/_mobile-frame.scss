@@ -1,3 +1,25 @@
+// Mobile Device
+$sb-mobileDevice-width-mobile: calculateRem(360px);
+$sb-mobileDevice-height-mobile: calculateRem(202.5px);
+$sb-mobileDevice-width-tablet: calculateRem(680px);
+$sb-mobileDevice-height-tablet: calculateRem(360px);
+$sb-mobileDevice-width-desktop: calculateRem(800px);
+$sb-mobileDevice-height-desktop: calculateRem(420px);
+$sb-mobileDevice-border: calculateRem(10px) solid $black;
+$sb-mobileDevice-border-radius: calculateRem(15px);
+$sb-mobileDevice-sensors-background: $black;
+$sb-mobileDevice-sensors-padding: calculateRem(10px) calculateRem(5px)
+  calculateRem(10px) 0;
+$sb-mobileDevice-sensors-border-radius: calculateRem(25px);
+$sb-mobileDevice-sensor-background: #252525;
+$sb-mobileDevice-sensor-size: calculateRem(8px);
+$sb-mobileDevice-speaker-height: calculateRem(74px);
+$sb-mobileDevice-speaker-width: calculateRem(5px);
+$sb-mobileDevice-speaker-border-radius: calculateRem(10px);
+$sb-mobileDevice-speaker-padding: calculateRem(10px) 0 calculateRem(10px)
+  calculateRem(1px);
+$sb-mobileDevice-videoScreen-border-radius: calculateRem(5px);
+
 .sb-mobileDevice {
   .sb-mobileDevice-screen {
     height: $sb-mobileDevice-height-mobile;

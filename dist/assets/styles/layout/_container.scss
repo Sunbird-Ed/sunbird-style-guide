@@ -22,3 +22,41 @@
   padding-bottom: 12px;
 }
 
+.sb-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.sb-g-col-12 {
+  grid-column: span 12;
+}
+
+
+// two column layout 
+.sb-two-column {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 16px;
+
+  .sb-column {
+    grid-column: col-start / span 12;
+  }
+
+  .sb-column:nth-child(2) {
+    overflow: auto;
+  }
+
+  @include respond-above(md) {
+    //grid-template-columns: 1fr 400px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+
+    .sb-column {
+      grid-column: col-start / span 8;
+    }
+
+    .sb-column:nth-child(2) {
+      grid-column: col-start 9 / span 4;
+      overflow: auto;
+    }
+  }
+}
+

@@ -1,3 +1,21 @@
+@import "radiobutton";
+// Checkbox
+$sb-checkbox-primary-background: $primary-color;
+$sb-checkbox-secondary-background: $secondary-100;
+$sb-checkbox-warning-background: $tertiary-100;
+$sb-checkbox-error-background: $red-100;
+$sb-radio-btn-primary-border: $primary-color;
+$sb-radio-btn-secondary-border: $secondary-100;
+$sb-radio-btn-warning-border: $tertiary-100;
+$sb-radio-btn-error-border: $red-100;
+$sb-checkbox-border-width: calculateRem(1px);
+$sb-checkbox-background-color: $secondary-100;
+$sb-checkbox-label-font-size: 0.8571rem;
+$sb-checkbox-border-radius: calculateRem(4px);
+$sb-checkbox-after-checked-color: $white-color;
+$sb-checkbox-before-checked-background-color: $white-color;
+$sb-radio-btn-border-color: $primary-300;
+
 .sb-checkbox,
 .sb-radio-btn-checkbox {
   position: relative;
@@ -22,14 +40,16 @@
   }
 
   label:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: ($base-block-space * 2);
     height: ($base-block-space * 2);
     background: $sb-checkbox-before-checked-background-color;
-    transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease, -webkit-transform .1s cubic-bezier(0.25, 0.1, 0.43, 0.82);
+    transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease,
+      box-shadow 0.1s ease,
+      -webkit-transform 0.1s cubic-bezier(0.25, 0.1, 0.43, 0.82);
     border: $sb-checkbox-border-width solid $sb-radio-btn-border-color;
   }
 
@@ -41,58 +61,57 @@
     left: 0;
     opacity: 0;
     z-index: 3;
-    width: $base-block-space*2;
-    height: $base-block-space*2;
+    width: $base-block-space * 2;
+    height: $base-block-space * 2;
   }
 
-  [disabled="disabled"]+label,
+  [disabled="disabled"] + label,
   input[disabled="disabled"],
-  [disabled="true"]+label,
+  [disabled="true"] + label,
   input[disabled="true"],
-  [disabled]+label,
-  input[disabled]{
+  [disabled] + label,
+  input[disabled] {
     opacity: $sb-radio-btn-disabled-opacity;
     cursor: default;
   }
 
-  [disabled="disabled"]:checked+label:before,
-  &[disabled="disabled"]:not(:checked)+label:before {
+  [disabled="disabled"]:checked + label:before,
+  &[disabled="disabled"]:not(:checked) + label:before {
     border: $sb-radio-btn-border solid $sb-radio-btn-border-disabled-color;
     opacity: $sb-radio-btn-disabled-opacity;
   }
 }
 
 .sb-checkbox {
-
   &.sb-checkbox-primary {
-    input:checked~label:before {
+    input:checked ~ label:before {
       background-color: $sb-checkbox-primary-background;
       border-color: $sb-radio-btn-primary-border;
     }
   }
 
   &.sb-checkbox-secondary {
-    input:checked~label:before {
+    input:checked ~ label:before {
       background-color: $sb-checkbox-secondary-background;
       border-color: $sb-radio-btn-secondary-border;
     }
   }
 
   &.sb-checkbox-warning {
-    input:checked~label:before {
+    input:checked ~ label:before {
       background-color: $sb-checkbox-warning-background;
       border-color: $sb-radio-btn-warning-border;
     }
   }
 
   &.sb-checkbox-error {
-    input:checked~label:before {
+    input:checked ~ label:before {
       background-color: $sb-checkbox-error-background;
       border-color: $sb-radio-btn-error-border;
     }
   }
 
-  input:checked~label:before {
+  input:checked ~ label:before {
     background-color: $sb-checkbox-primary-background;
     border-color: $sb-radio-btn-primary-border;
   }
@@ -112,34 +131,34 @@
     opacity: 0;
     // background-color: $sb-checkbox-background-color;
     color: $sb-checkbox-after-checked-color;
-    transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease, -webkit-transform .1s ease;
+    transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease,
+      box-shadow 0.1s ease, -webkit-transform 0.1s ease;
   }
 
-  input:checked~.box:after,
-  input:checked~label:after {
+  input:checked ~ .box:after,
+  input:checked ~ label:after {
     opacity: 1;
   }
 
-  input:checked~.box:after,
-  input:checked~label:after {
-    content: '✔';
+  input:checked ~ .box:after,
+  input:checked ~ label:after {
+    content: "✔";
     border-radius: $sb-checkbox-border-radius;
     font-weight: normal;
   }
 
-  input[type=checkbox] {   
+  input[type="checkbox"] {
     outline: 0;
   }
 }
 
 .sb-radio-btn-checkbox {
-
   &.sb-radio-btn-primary {
     label:before {
       border: 1px solid $sb-radio-btn-primary-border;
     }
 
-    input:checked~label:after {
+    input:checked ~ label:after {
       background-color: $sb-checkbox-primary-background;
     }
   }
@@ -149,7 +168,7 @@
       border: 1px solid $sb-radio-btn-secondary-border;
     }
 
-    input:checked~label:after {
+    input:checked ~ label:after {
       background-color: $sb-checkbox-secondary-background;
     }
   }
@@ -159,7 +178,7 @@
       border: 1px solid $sb-radio-btn-warning-border;
     }
 
-    input:checked~label:after {
+    input:checked ~ label:after {
       background-color: $sb-checkbox-warning-background;
     }
   }
@@ -169,7 +188,7 @@
       border: 1px solid $sb-radio-btn-error-border;
     }
 
-    input:checked~label:after {
+    input:checked ~ label:after {
       background: $sb-checkbox-error-background;
     }
   }
@@ -188,31 +207,32 @@
     opacity: 0;
   }
 
-  input:checked~label:after {
-    content: '';
+  input:checked ~ label:after {
+    content: "";
     background: $sb-checkbox-primary-background;
     opacity: 1;
   }
 }
 
 .sb-chapterlist-modal {
-  .sb-checkbox label, .sb-radio-btn-checkbox label {
+  .sb-checkbox label,
+  .sb-radio-btn-checkbox label {
     padding-left: 0;
     padding-right: 24px;
     margin-bottom: 0;
   }
-  
+
   .sb-checkbox label:before {
     left: unset;
     right: 0;
   }
-  
+
   .sb-radio-btn-checkbox label {
     &:before {
       left: unset;
       right: 0;
     }
-  
+
     &:after {
       left: unset;
       right: 4px;
@@ -221,7 +241,8 @@
 
   .chapter-lists--item {
     .sb-radio-btn-checkbox label {
-      &::before, &::after {
+      &::before,
+      &::after {
         top: 50%;
         transform: translateY(-50%);
       }
