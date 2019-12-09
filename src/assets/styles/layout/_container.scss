@@ -30,7 +30,6 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
   [class*="sb-g-col-"] {
-    grid-column: span 12;
   }
   [class*="sb-g-col-xl"] {
   }
@@ -42,9 +41,9 @@
   }
   [class*="sb-g-col-xs"] {
   }
-  @include respond-above(md) {
+  @include respond-below(md) {
     [class*="sb-g-col-md"] {
-      border: 1px solid green;
+      grid-column: span 12;
     }
   }
 }

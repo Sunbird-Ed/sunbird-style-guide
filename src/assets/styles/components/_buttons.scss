@@ -148,7 +148,9 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
     }
   }
 }
-
+.sb-btn-radius {
+  border-radius: 2rem;
+}
 .sb-btn-square {
   display: inline-flex;
   flex-direction: column;
@@ -166,7 +168,7 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
 .sb-btn-outline-disabled {
   background-color: var(--white);
   border: 1px solid var(--gray-100);
-  color: var(--gray-100);
+  color: var(--gray-200);
   cursor: default;
   font-weight: normal;
 }

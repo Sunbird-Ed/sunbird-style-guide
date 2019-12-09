@@ -6,32 +6,61 @@
 }*/
 
 @include respond-above(lg) {
-  .ui.container,.ui.grid.container {
+  .ui.container,
+  .ui.grid.container {
     width: 1216px !important;
   }
 }
 
 @include respond-above(xxl) {
-  .ui.container,.ui.grid.container {
+  .ui.container,
+  .ui.grid.container {
     width: 1524px !important;
   }
 }
 
-.ui.grid>.column:not(.row) {
+.ui.grid > .column:not(.row) {
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
-.sb-grid {
+// Grid template creation
+.sb-g {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-}
-.sb-g-col-12 {
-  grid-column: span 12;
+  grid-column-gap: 1rem;
+  [class*="sb-g-col-"] {
+  }
+  [class*="sb-g-col-xl"] {
+  }
+  [class*="sb-g-col-lg"] {
+  }
+  [class*="sb-g-col-md"] {
+  }
+  [class*="sb-g-col-sm"] {
+  }
+  [class*="sb-g-col-xs"] {
+  }
+  @include respond-below(md) {
+    [class*="sb-g-col-md"] {
+      grid-column: span 12;
+    }
+  }
 }
 
+@for $i from 1 through 12 {
+  .sb-g-col-#{$i},
+  .sb-g-col-xs-#{$i},
+  .sb-g-col-sm-#{$i},
+  .sb-g-col-md-#{$i},
+  .sb-g-col-lg-#{$i},
+  .sb-g-col-xl-#{$i} {
+    grid-column: span $i;
+    //width: unquote((8.5 * $i - 2)+"%");
+  }
+}
 
-// two column layout 
+// two column layout
 .sb-two-column {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -59,4 +88,3 @@
     }
   }
 }
-
