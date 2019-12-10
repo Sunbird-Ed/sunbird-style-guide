@@ -61,6 +61,7 @@ import { CssGridComponent } from './css-grid/css-grid.component';
 import { DownloadComponent } from './download/download.component';
 import { OfflineComponent } from './offline/offline.component';
 import { NoContentComponent } from './no-content/no-content.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -124,6 +125,7 @@ const routes: Routes = [
   { path: 'no-content', component: NoContentComponent},
   { path: 'offline', component: OfflineComponent},
   { path: 'download', component: DownloadComponent},
+  { path: 'profile-page', component: ProfilePageComponent }
 ];
 
 @NgModule({
