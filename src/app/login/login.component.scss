@@ -65,7 +65,7 @@
           text-align: left;
           font-size: 12px;
           padding-bottom: ($base-block-space * 3);
-          color: #333333;
+          color: var(--gray-800);
         }
 
         .language-selection {
