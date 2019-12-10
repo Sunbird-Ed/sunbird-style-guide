@@ -4,67 +4,67 @@ $mValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
   $baseMvalue: 0.0625 * $value + rem;
   /* Margin in all direction */
   .m-#{$value} {
-    @include margin($baseMvalue !important);
+    @include margin($baseMvalue);
   }
   /* Margin in top direction */
   .mt-#{$value} {
-    @include margin($baseMvalue null null null !important);
+    @include margin($baseMvalue null null null);
   }
   /* Margin in bottom direction */
   .mb-#{$value} {
-    @include margin(null null $baseMvalue null !important);
+    @include margin(null null $baseMvalue null);
   }
   /* Margin in top and bottom direction */
   .my-#{$value} {
-    @include margin($baseMvalue null $baseMvalue null !important);
+    @include margin($baseMvalue null $baseMvalue null);
   }
   /* Margin in left and right direction */
   .mx-#{$value} {
-    @include margin(null $baseMvalue null $baseMvalue !important);
+    @include margin(null $baseMvalue null $baseMvalue);
   }
   /* Margin in left direction */
   .ml-#{$value} {
-    @include margin(null null null $baseMvalue !important);
+    @include margin(null null null $baseMvalue);
     margin: 0 0 0 $baseMvalue;
     html[dir="rtl"] & {
-      @include margin(null $baseMvalue null null !important);
+      @include margin(null $baseMvalue null null);
     }
   }
   /* Margin in right direction */
   .mr-#{$value} {
-    @include margin(null $baseMvalue null null !important);
+    @include margin(null $baseMvalue null null);
     margin: 0 $baseMvalue 0 0;
     html[dir="rtl"] & {
-      @include margin(null null null $baseMvalue !important);
+      @include margin(null null null $baseMvalue);
     }
   }
 }
 
 .m-auto {
-  @include margin(0 auto 0 auto !important);
+  @include margin(0 auto 0 auto);
 }
 .mt-auto {
-  @include margin(auto null null null !important);
+  @include margin(auto null null null);
 }
 .mb-auto {
-  @include margin(null null auto null !important);
+  @include margin(null null auto null);
 }
 .mx-auto {
-  @include margin(null auto !important);
+  @include margin(null auto);
 }
 .my-auto {
-  @include margin(auto null !important);
+  @include margin(auto null);
 }
 .ml-auto {
-  @include margin(null null null auto !important);
+  @include margin(null null null auto);
   html[dir="rtl"] & {
-    @include margin(null auto null null !important);
+    @include margin(null auto null null);
   }
 }
 .mr-auto {
-  @include margin(null auto null null !important);
+  @include margin(null auto null null);
   html[dir="rtl"] & {
-    @include margin(null null null auto !important);
+    @include margin(null null null auto);
   }
 }
 /* Negative margins */
