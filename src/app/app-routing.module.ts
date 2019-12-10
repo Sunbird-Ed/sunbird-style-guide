@@ -63,6 +63,7 @@ import { OfflineComponent } from './offline/offline.component';
 import { OnlineComponent } from './online/online.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { OfflineContentComponent } from './offline-content/offline-content.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
@@ -127,7 +128,8 @@ const routes: Routes = [
   { path: 'online', component: OnlineComponent},
   { path: 'offline', component: OfflineComponent},
   { path: 'download', component: DownloadComponent},
-  { path: 'offline-content', component: OfflineContentComponent}
+  { path: 'offline-content', component: OfflineContentComponent},
+  { path: 'profile-page', component: ProfilePageComponent }
 ];
 
 @NgModule({
