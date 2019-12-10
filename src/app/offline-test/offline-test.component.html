@@ -104,16 +104,15 @@
       </div>
     </section>
     <div class="sb-g-col-md-3">
-      <!-- <app-offline></app-offline> -->
-      <app-online></app-online>
-      <div class="download-content">
+      <app-offline></app-offline>
+      <div class="download-content my-24">
         <app-download></app-download>
       </div>
     </div>
   </div>
 </div>
 
-<div class="no-content-area" *ngIf="isShownContent">
-  <!-- <app-no-content></app-no-content> -->
-  <app-offline-content></app-offline-content>
-</div>
+<div class="p-16" *ngIf="isShownContent">
+      <app-no-content></app-no-content>
+  </div>
+     

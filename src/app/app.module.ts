@@ -100,9 +100,7 @@ import { PillsCarouselComponent } from './pills-carousel/pills-carousel.componen
 import { CssGridComponent } from './css-grid/css-grid.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { OfflineComponent } from './offline/offline.component';
-import { OnlineComponent } from './online/online.component';
 import { DownloadComponent } from './download/download.component';
-import { OfflineContentComponent } from './offline-content/offline-content.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 /**
  * Import every language you wish to highlight here
@@ -194,9 +192,7 @@ export function hljsLanguages() {
     CssGridComponent,
     NoContentComponent,
     OfflineComponent,
-    OnlineComponent,
     DownloadComponent,
-    OfflineContentComponent,
     ProfilePageComponent
   ],
   imports: [

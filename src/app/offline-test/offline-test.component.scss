@@ -1,24 +1,22 @@
 @import "variables";
 @import "mixins/mixins";
 
-.sb-offline-app-bar{
-  background: var(--primary-800); 
+.sb-offline-app-bar {
+  background: var(--primary-800);
 }
 
 .sb-header-offline-bar {
   position: relative;
   z-index: 3;
-  background: #FAFAFA;
+  background: #fafafa;
 }
 
 .sb-menubar {
   width: 100%;
   border-bottom: 1px solid var(--primary-400);
-  // padding: 0 32px;
 
   .plus-icon {
     position: relative;
-    font-size: 24px;
     bottom: 7px;
     margin-right: 5px;
   }
@@ -46,9 +44,9 @@
   }
 }
 
-.class-content{
-  background: #F0F0F0;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+.class-content {
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sb-class-bar {
@@ -63,7 +61,7 @@
   background: none;
 }
 
-.ui.dropdown.select-language>.text {
+.ui.dropdown.select-language > .text {
   color: var(--primary-400);
   padding-right: 24px !important;
 }
@@ -79,11 +77,21 @@
   }
 }
 
+.download-area{
+  text-decoration: underline;
+}
+
+.no-result{
+  width:100%;
+  border-bottom: 0.5px solid var(--primary-400);
+  margin-bottom: 1rem;
+}
+
 .sbcard {
   position: relative;
   width: 100%;
 
-  .sbcard-overlay{
+  .sbcard-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -92,44 +100,36 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
     background-color: var(--primary-400);
 
-    &__content{
+    &__content {
       width: 100%;
       height: 100%;
 
-      .description{ 
-        color:#fff;
-        
+      .description {
+        color: #fff;
+
         .icon {
           color: #fff;
           font-size: 24px;
         }
-        
+
         .fa-user:hover {
           color: #eee;
         }
       }
 
-      &__separator{
-        border-left:1px solid white;
+      &__separator {
+        border-left: 1px solid white;
         height: 40px;
       }
     }
   }
-  
+
   &:hover .sbcard-overlay {
     opacity: 1;
   }
-}
-
-.no-content-area{
-  padding: ($base-block-space * 3);
-}
-
-.download-content{
-  margin:($base-block-space * 3) 0;
 }
 
 // two column layout
@@ -160,4 +160,3 @@
     }
   }
 }
-
