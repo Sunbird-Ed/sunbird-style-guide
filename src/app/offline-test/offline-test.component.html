@@ -1,28 +1,23 @@
 <header>
   <div class="sb-offline-app-bar">
-  <app-offline-appbar></app-offline-appbar>
+    <app-offline-appbar></app-offline-appbar>
   </div>
 
   <div class="sb-header-offline-bar">
-        <div class="ui container">
-            <app-offline-header></app-offline-header>
-        </div>
+    <div class="ui container">
+      <app-offline-header></app-offline-header>
+    </div>
   </div>
 
   <div class="sb-menubar sb-bg-color-white">
-  <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
-    <app-offline-menubar></app-offline-menubar>
-    <button class="sb-btn sb-btn-outline-tertiary sb-btn-normal font-weight-bold active">
-      <i class="icon-svg icon-svg--xxs">
-        <svg class="icon icon-svg--tertiary">
-      <use xlink:href="assets/images/libdemo/add.svg"></use></svg></i>Load Content</button>
-
-    <!-- <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
-      <span class="plus-icon mr-5 fs-1-3 ">&#43;</span>Load Content</button> -->
+    <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
+      <app-offline-menubar></app-offline-menubar>
+      <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
+        <span class="plus-icon mr-5">&#43;</span>Load Content</button>
+    </div>
   </div>
-  </div> 
-  
-<!-- 
+
+  <!-- 
   <div class="sb-menubar sb-bg-color-primary-0">
     <div class="ui container d-flex flex-ai-center flex-jc-space-between">
       <app-offline-menubar></app-offline-menubar>
@@ -48,76 +43,73 @@
   </div>
 
   <div class="class-content" (click)="ContentLoad()">
-      <div class="ui container relative" >
-          <app-pills-carousel></app-pills-carousel>
-      </div>
+    <div class="ui container relative">
+      <app-pills-carousel></app-pills-carousel>
+    </div>
   </div>
-  
+
 
   <!-- <div class="sb-class-bar sb-bg-color-gray-0">
     <div class="ui container">
       <app-class></app-class>
     </div>
   </div> -->
-  
+
   <div class="sb-desktop-search-result" *ngIf="!isShownContent">
     <app-desktop-search-result></app-desktop-search-result>
   </div>
 </header>
 
-<div class="ui container sb-two-column" *ngIf="!isShownContent">
-    <section class="sb-page-layout sb-column my-24">
-      <div class="no-result">
-          <div class="fs-1 mb-16">No results found for "Social Science" from <a href="#" class="download-area">My Downloads</a></div>
-      </div>
-      <div class="fs-1 mb-16">Showing 10 results for “Social Science” from <a href="#" class="download-area">My Downloads</a></div>
-        <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
-            <div class="sbcard__main_area">
-              <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
-              <div class="sbcard__info">
-                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
-                <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
-                    class="dot-divider"></span><span>{{sbcard.class}}</span>
-                </div>
+<div class="ui container" *ngIf="!isShownContent">
+  <div class="sb-g">
+    <section class="sb-g-col-md-9 sb-page-layout my-24">
+      <div class="sbgrid sbgrid--grid-carousel">
+        <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+          <div class="sbcard__main_area">
+            <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
+            <div class="sbcard__info">
+              <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+              <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                  class="dot-divider"></span><span>{{sbcard.class}}</span>
               </div>
             </div>
-            <div class="sbcard__moreinfo sb__DesktopOnly">
-              <div class="sbcard__meta2">
-                <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
-                <div class="sbcard__org">{{sbcard.board}}</div>
-              </div>
-      
-              <div class="sbcard__tags">
-                <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                <span class="sbcard__type">{{sbcard.type}}</span>
-              </div>
+          </div>
+          <div class="sbcard__moreinfo sb__DesktopOnly">
+            <div class="sbcard__meta2">
+              <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
+              <div class="sbcard__org">{{sbcard.board}}</div>
             </div>
-            <div class="sbcard-overlay">
-              <div class="d-flex flex-ai-center flex-jc-space-around sbcard-overlay__content">
-                <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
-                  <!-- <a class="icon" href="#" title=""><img src="../../assets/images/pendrive.svg"></a>
+
+            <div class="sbcard__tags">
+              <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
+              <span class="sbcard__type">{{sbcard.type}}</span>
+            </div>
+          </div>
+          <div class="sbcard-overlay">
+            <div class="d-flex flex-ai-center flex-jc-space-around sbcard-overlay__content">
+              <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
+                <!-- <a class="icon" href="#" title=""><img src="../../assets/images/pendrive.svg"></a>
                   <div class="fs-0-92">Save to Pendrive</div> -->
-                  <a class="icon" href="#" title=""><img src="../../assets/images/download.svg"></a>
-                  <div class="fs-0-92">Download</div>
-                </div>
-                <div class="sbcard-overlay__content__separator"></div>
-                <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
-                    <a class="icon" href="#" title=""><img src="../../assets/images/open.svg"></a>
-                  <div class="fs-0-92">Open</div>
-                </div>
+                <a class="icon" href="#" title=""><img src="../../assets/images/download.svg"></a>
+                <div class="fs-0-92">Download</div>
+              </div>
+              <div class="sbcard-overlay__content__separator"></div>
+              <div class="d-flex flex-dc flex-ai-center flex-jc-center description">
+                <a class="icon" href="#" title=""><img src="../../assets/images/open.svg"></a>
+                <div class="fs-0-92">Open</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
-  
-    <div class="sb-column">
+    <div class="sb-g-col-md-3">
       <app-offline></app-offline>
-      <div class="my-16">
+      <div class="download-content my-24">
         <app-download></app-download>
       </div>
     </div>
+  </div>
 </div>
 
 <div class="p-16" *ngIf="isShownContent">
