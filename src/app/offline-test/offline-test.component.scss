@@ -14,11 +14,9 @@
 .sb-menubar {
   width: 100%;
   border-bottom: 1px solid var(--primary-400);
-  // padding: 0 32px;
 
   .plus-icon {
     position: relative;
-    font-size: 24px;
     bottom: 7px;
     margin-right: 5px;
   }
@@ -79,6 +77,16 @@
   }
 }
 
+.download-area{
+  text-decoration: underline;
+}
+
+.no-result{
+  width:100%;
+  border-bottom: 0.5px solid var(--primary-400);
+  margin-bottom: 1rem;
+}
+
 .sbcard {
   position: relative;
   width: 100%;
@@ -122,10 +130,6 @@
   &:hover .sbcard-overlay {
     opacity: 1;
   }
-}
-
-.no-content-area {
-  padding: ($base-block-space * 3);
 }
 
 // two column layout
