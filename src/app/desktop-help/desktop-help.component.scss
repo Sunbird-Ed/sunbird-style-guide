@@ -3,7 +3,7 @@
 // @import "../../assets/styles/";
 
 .sbpage-title {
-  min-height: 56px;
+  min-height: calculateRem(56px);
   display: flex;
   align-items: center;
 
@@ -18,7 +18,7 @@
 .sb-two-column {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 16px;
+  grid-gap: calculateRem(16px);
 
   .sb-column {
     grid-column: col-start / span 12;
@@ -52,21 +52,21 @@
     }
     &__details {
       align-items: center;
-      height: 64px;
-      padding: 8px;
+      height: calculateRem(64px);
+      padding: calculateRem(8px);
     }
     &__title {
       font-weight: bold;
       color: #024f9d;
-      font-size: 16px;
+      font-size: calculateRem(16px);
     }
     &__tools {
     }
   }
   &__content {
-    padding-right: 8px;
-    margin-right: -8px;
-    padding-bottom: 8px;
+    padding-right: calculateRem(8px);
+    margin-right: calculateRem(-8px);
+    padding-bottom: calculateRem(8px);
   }
 }
 
@@ -102,8 +102,8 @@
 .help-faq {
   &__report {
     width: 100%;
-    padding: 32px;
-    min-height: 160px;
+    padding: calculateRem(32px);
+    min-height: calculateRem(160px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,12 +128,12 @@
   flex-direction: column;
   cursor: pointer;
   position: relative;
-  border-bottom: 1px solid $gray-0;
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.12);
+  border-bottom: calculateRem(1px) solid $gray-0;
+  box-shadow: 0 calculateRem(3px) calculateRem(5px) 0 rgba(0, 0, 0, 0.12);
   contain: content;
   @include respond-above(sm) {
-    border-radius: 2px;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.16);
+    border-radius: calculateRem(2px);
+    box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.16);
     border-bottom: 0px solid $gray-0;
   }
   &__main-area {
@@ -145,12 +145,12 @@
     // border-bottom: 1px solid var(--gray-0);
   }
   &__img {
-    height: 72px;
-    width: 72px;
+    height: calculateRem(72px);
+    width: calculateRem(72px);
     overflow: hidden;
     /* margin-right: 8px; */
-    flex: 0 0 72px;
-    padding: 8px;
+    flex: 0 0 calculateRem(72px);
+    padding: calculateRem(8px);
 
     .img-container {
       display: flex;
@@ -170,7 +170,7 @@
     font-size: $font-size-normal;
     margin: 0px;
     line-height: normal;
-    line-height: 20px;
+    line-height: calculateRem(20px);
     word-break: break-word;
   }
   &__meta1 {
@@ -178,25 +178,25 @@
     font-size: $font-size-sm;
     display: inline-flex;
     align-items: center;
-    line-height: 20px;
+    line-height: calculateRem(20px);
   }
   &--recently-viewed {
     .sbcard__img {
-      width: 88px;
-      height: 88px;
-      flex: 0 0 88px;
+      width: calculateRem(88px);
+      height: calculateRem(88px);
+      flex: 0 0 calculateRem(88px);
 
       .img-container {
         display: flex;
         align-items: center;
         background-color: $gray-100;
-        margin: -8px;
+        margin:calculateRem(-8px);
         height: $base-block-space * 11;
         width: $base-block-space * 11;
       }
     }
     .sbcard__info {
-      padding: 8px;
+      padding: calculateRem(8px);
     }
   }
   &:last-child {

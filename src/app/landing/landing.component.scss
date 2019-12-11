@@ -1,4 +1,6 @@
 @import "variables";
+@import 'mixins/mixins';
+
 ::ng-deep{
 
 .sb-landing-page {
@@ -8,13 +10,13 @@
   //height: 100vh;
   justify-content: center;
   justify-content: space-evenly;
-  padding:24px;
+  padding:calculateRem(24px);
   .sb-landing-page-container {
     // padding-top: 7%;
 
     .sb-landing-page-logo {
-      width: 150px;
-      height: 150px;
+      width: calculateRem(150px);
+      height: calculateRem(150px);
 
       img {
         width: 100%;
@@ -22,7 +24,7 @@
     }
 
     .sb-landing-section-title {
-      margin-top: 15px;
+      margin-top: calculateRem(15px);
 
       .sb-doc-app-title {
         text-decoration: none;
@@ -31,7 +33,7 @@
   }
 
   .sb-landing-page-search {
-    margin: 20px 0;
+    margin: calculateRem(20px) 0;
   }
 
   .sb-landing-page-list {
@@ -40,7 +42,7 @@
       //   background: #f1f3f4;
         border: none;
         a {
-          color: #000;
+          color:var(--black);
         }
       }
     }
@@ -57,17 +59,18 @@
       margin: 0px 0px;
       display: inline-block;
       a {
-        margin: 4px;
-        padding: 4px 12px;
+        margin: calculateRem(16px);
+        padding: calculateRem(4px) calculateRem(12px);
         line-height: inherit;
-        border: 1px solid var(--gray-100);
-        border-radius: 60px;
-        background: #fff;
-        font-size: 12px;display: inline-block;
+        border: calculateRem(1px) solid var(--gray-100);
+        border-radius: calculateRem(60px);
+        background:var(--white);
+        font-size: calculateRem(12px);
+        display: inline-block;
         &:hover {
           background: $primary-200;
           color: $white;
-          box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.16);
         }
         }
     }
@@ -80,10 +83,10 @@
   .sb-landing-page-copyright {
     max-width: 1024px;
     margin: 0 auto;
-    padding-top: 24px;
+    padding-top: calculateRem(24px);
     width: 100%;
-    border-top: 1px solid #ddd;
-    margin-top: 24px;font-size:12px;
+    border-top: calculateRem(1px) solid #ddd;
+    margin-top: calculateRem(24px);font-size:calculateRem(12px);
   }
 
 }

@@ -1,5 +1,5 @@
 // Set basic variables
-$border-width:1px;
+$border-width:calculateRem(1px);
 $border-color: #CCCCCC;
 //@include border(border,$border-width,$border-color);
 

@@ -45,7 +45,7 @@ $sb-selection-line-height: calculateRem(18px);
   min-height: $sb-selection-dropdown-min-height;
   padding: $sb-selection-dropdown-padding;
   //line-height: $sb-selection-line-height;
-  font-size: 12px;
+  font-size: calculateRem(12px);
 }
 
 .ui.multiple.dropdown .label {
@@ -77,7 +77,7 @@ $sb-selection-line-height: calculateRem(18px);
 .ui.selection.dropdown.sb-offline-header-selection {
   color: white;
   border: none;
-  min-width: 88px;
+  min-width: calculateRem(88px);
   background: transparent;
   display: flex;
   align-items: center;
@@ -97,11 +97,11 @@ $sb-selection-line-height: calculateRem(18px);
 .sb-textbook-allchapters {
   .ui.dropdown {
     > .text {
-      margin-top: 4px;
+      margin-top: calculateRem(4px);
     }
 
     .menu > .item {
-      font-size: 14px;
+      font-size: calculateRem(14px);
     }
   }
 }
@@ -109,17 +109,17 @@ $sb-selection-line-height: calculateRem(18px);
 .sb-select-textbox-container {
   .ui {
     &.default.dropdown:not(.button) > .text {
-      margin-top: 4px;
+      margin-top: calculateRem(4px);
     }
 
     &.dropdown {
       &:not(.button) > .default.text,
       > .text {
-        margin-top: 4px;
+        margin-top: calculateRem(4px);
       }
 
       .menu > .item {
-        font-size: 14px;
+        font-size: calculateRem(14px);
       }
     }
   }

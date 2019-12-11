@@ -11,12 +11,12 @@ import { CustomerService, Customer, CustomerSearchCriteria } from '../services/t
 export class FiltersComponent implements OnInit {
 
 
-  
+
   pageTitle = 'Filters';
   multiSelect1: any;
-  
-  constructor( ) {
-    this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
+
+  constructor() {
+    this.multiSelect1 = [{ name: 'Example' }, { name: 'Test' }, { name: 'that' }];
   }
   showfiltersCode;
   filters;
@@ -25,7 +25,7 @@ export class FiltersComponent implements OnInit {
   filtersCode = ` <div class="sb-explore-filter">
   <div class="sb-prominent-filter">
     <div class="ui container">
-      <div class="sb-prominent-filter-container">
+      <div class="sb-prominent-filter-container pt-16 px-16 pb-0">
         <div class="sb-prominent-filter-field">
           <label>Select Board</label>
           <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"  [isSearchable]="true" #multiSelect>
@@ -84,7 +84,7 @@ export class FiltersComponent implements OnInit {
   </div>
 </div>`;
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
 

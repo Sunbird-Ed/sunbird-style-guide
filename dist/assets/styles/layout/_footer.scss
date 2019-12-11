@@ -1,24 +1,24 @@
-.download-diksha {
-  border-radius: 20px 20px 0 0;
+.download-sunbird {
+  border-radius: calculateRem(20px) calculateRem(20px) 0 0;
   position: absolute;
   bottom: 0px;
-  padding: 32px 12px 0 12px;
+  padding: calculateRem(32px) calculateRem(12px) 0 calculateRem(12px);
   background: #333;
-  box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.2);
-  max-width: 250px;
+  box-shadow: 0 calculateRem(20px) calculateRem(20px) calculateRem(10px) rgba(0, 0, 0, 0.2);
+  max-width: calculateRem(250px);
   right: 0;
   left: 0;
   margin: 0 auto;
   z-index: 9;
 
-  .diksha-logo {
+  .sunbird-logo {
     background: $white;
     color: $black;
     border-radius: $base-block-space $base-block-space 0 0;
     text-align: center;
 
     .playStore-img {
-      width: 120px;
+      width: calculateRem(120px);
     }
 
     .app-download {
@@ -45,10 +45,10 @@
 
   .mobile-circles {
     position: absolute;
-    top: 10px;
+    top: calculateRem(10px);
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 calculateRem(20px);
 
     .border-round {
       border: none;
@@ -60,14 +60,14 @@
     }
 
     .big-box {
-      height: 14px;
-      width: 14px;
+      height: calculateRem(14px);
+      width: calculateRem(14px);
     }
 
     .oval-box {
-      height: 6px;
-      width: 76px;
-      border-radius: 3px;
+      height: calculateRem(6px);
+      width: calculateRem(76px);
+      border-radius: calculateRem(3px);
     }
 
     .small-box {
@@ -80,8 +80,8 @@
 
 *[dir="rtl"] {
 
-  .diksha-logo {
-    height: 148px;
+  .sunbird-logo {
+    height: calculateRem(148px);
   }
 
   .mobile-circles {
@@ -89,12 +89,12 @@
 
     .oval-box {
       margin-right: 0px !important;
-      margin-left: 20px !important;
+      margin-left: calculateRem(20px) !important;
     }
 
     .border-round:nth-child(3) {     
-      margin-left: 20px !important;
-      margin-right: 10px !important;
+      margin-left: calculateRem(20px) !important;
+      margin-right: calculateRem(10px) !important;
     }
   }
 
@@ -103,8 +103,8 @@
 .footer {
   background: $primary-color;
   color: $white-color !important;
-  padding: 34px 0;
-  font-size: 14px;
+  padding: calculateRem(34px) 0;
+  font-size: calculateRem(14px);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -154,7 +154,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .download-diksha {
+  .download-sunbird {
     bottom: 204px;
     margin: 0 auto;
     right: 0;
@@ -167,10 +167,10 @@
     }
   }
 
-    .download-diksha {
+    .download-sunbird {
       height: auto;
 
-      .diksha-logo {
+      .sunbird-logo {
         height: auto;
       }
 

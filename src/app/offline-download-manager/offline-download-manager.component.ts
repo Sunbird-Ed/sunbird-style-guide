@@ -151,7 +151,7 @@ export class OfflineDownloadManagerComponent implements OnInit {
               </div>
               <div class="sb-modal-content">
                 <div class="sb-merge-account-modal">
-                  <p class="mb-8">If you have two accounts with DIKSHA, click <b>Merge</b> to:</p>
+                  <p class="mb-8">If you have two accounts with SUNBIRD, click <b>Merge</b> to:</p>
                     <ul class="m-0">
                       <li class="mb-8">
                         Combine usage details of the other account with this account

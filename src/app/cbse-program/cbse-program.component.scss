@@ -1,4 +1,6 @@
-::ng-deep {
+@import 'mixins/mixins';
+
+:host ::ng-deep {
   root {
   --font-size-base: 1rem;
   --font-size-factor: 1vw;
