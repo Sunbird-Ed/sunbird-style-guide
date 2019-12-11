@@ -3,22 +3,24 @@
     <app-offline-appbar></app-offline-appbar>
   </div>
 
-  <div class="sb-header-offline-bar">
-    <div class="ui container">
-      <app-offline-header></app-offline-header>
+  <div class="sb-offline-header">
+    <div class="sb-header-offline-bar">
+      <div class="ui container">
+        <app-offline-header></app-offline-header>
+      </div>
+    </div>
+
+    <div class="sb-menubar sb-bg-color-white">
+      <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
+        <app-offline-menubar></app-offline-menubar>
+        <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
+          <span class="plus-icon mr-5">&#43;</span>Load Content</button>
+      </div>
     </div>
   </div>
 
-  <div class="sb-menubar sb-bg-color-white">
-    <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
-      <app-offline-menubar></app-offline-menubar>
-      <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
-        <span class="plus-icon mr-5">&#43;</span>Load Content</button>
-    </div>
-  </div>
 
-  <!-- 
-  <div class="sb-menubar sb-bg-color-primary-0">
+  <!-- <div class="sb-menubar sb-bg-color-primary-0">
     <div class="ui container d-flex flex-ai-center flex-jc-space-between">
       <app-offline-menubar></app-offline-menubar>
       <div class="sb-field mb-0">
@@ -113,6 +115,5 @@
 </div>
 
 <div *ngIf="isShownContent">
-      <app-no-content></app-no-content>
-  </div>
-     
+  <app-no-content></app-no-content>
+</div>
