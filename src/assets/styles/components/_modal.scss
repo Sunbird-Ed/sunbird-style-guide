@@ -218,12 +218,35 @@ $sb-modal-corner-radius: $base-block-space;
   }
 }
 
-.ui.dimmer {
-  z-index: 99999;
+// workspace modal spacing issue
+.sb-workspace-modal{
+    .twelve.wide.column{
+        padding: 0;
+    }
+    .six.wide.column:nth-child(even){
+        padding: 0;
+        padding-right: 8px;
+    }
+    .six.wide.column:nth-child(odd){
+        padding: 0;
+        padding-left: 8px;
+    }
+}
+//merge account modal bullet list
+.sb-merge-account-modal {
+    ul {
+        list-style-type: disc;
+    }
 }
 
-.sb-merge-account-modal {
-  ul {
-    list-style-type: disc;
-  }
+.ui.error.message.bulkupload-error {
+    max-height: 200px;
+    overflow: auto;
+    .errorDiv{
+        opacity: 0.00001;
+        .errorTextArea{
+            height:8px;
+        }
+    }
 }
+

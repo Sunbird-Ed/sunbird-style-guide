@@ -84,18 +84,21 @@ $sb-selection-line-height: calculateRem(18px);
     pointer-events: none;
   }
   .ui.selection.dropdown {
-    border-radius: 3px;
+    border-radius: calculateRem(2px);
     //line-height: 18px;
     font-size: 12px;
     width: 100%;
     min-height: $sb-selection-dropdown-min-height;
     padding: ($base-block-space / 2) ($base-block-space * 1);
-    border-color: #999999;
+    border-color: var(--gray-200);
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
     .text {
       text-overflow: ellipsis;
       overflow: hidden;
       line-height: 1.5;
-      margin: 1px 0 1px 3px;
+      margin: 0px 0 0px 0px;
     }
     .menu > .item {
       padding: 7px 5px;

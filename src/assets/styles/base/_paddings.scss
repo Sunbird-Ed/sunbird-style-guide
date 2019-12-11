@@ -4,36 +4,36 @@ $pValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
   $basePvalue: 0.0625 * $value + rem;
   /* padding in all direction */
   .p-#{$value} {
-    padding: $basePvalue !important;
+    padding: $basePvalue;
   }
   /* padding in top direction */
   .pt-#{$value} {
-    @include padding($basePvalue null null null !important);
+    @include padding($basePvalue null null null);
   }
   /* padding in bottom direction */
   .pb-#{$value} {
-    @include padding(null null $basePvalue null !important);
+    @include padding(null null $basePvalue null);
   }
   /* padding in top and bottom direction */
   .py-#{$value} {
-    @include padding($basePvalue null $basePvalue null !important);
+    @include padding($basePvalue null $basePvalue null);
   }
   /* padding in left and right direction */
   .px-#{$value} {
-    @include padding(null $basePvalue null $basePvalue !important);
+    @include padding(null $basePvalue null $basePvalue);
   }
   /* padding in left direction */
   .pl-#{$value} {
-    @include padding(null null null $basePvalue !important);
+    @include padding(null null null $basePvalue);
     html[dir="rtl"] & {
-      @include padding(null $basePvalue null null !important);
+      @include padding(null $basePvalue null null);
     }
   }
   /* padding in right direction */
   .pr-#{$value} {
-    @include padding(null $basePvalue null null !important);
+    @include padding(null $basePvalue null null);
     html[dir="rtl"] & {
-      @include padding(null null null $basePvalue !important);
+      @include padding(null null null $basePvalue);
     }
   }
 }
