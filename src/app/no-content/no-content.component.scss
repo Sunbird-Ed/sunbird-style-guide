@@ -1,38 +1,86 @@
-.empty-container{
+@import "variables";
+@import "mixins/mixins";
+.no-content-container{
     width: 100%;
     height: 100%;
 }
 
-.offline-content-area{
-  width: 100%;
-  height: 100%;
+.sb-modal{
+  .disable-color{
+    color: var(--gray-400);
+    opacity: 0.5;
+  }
+
+  .sb-label-status:before {
+    transform: none !important;
+    border-radius: 10px !important;
+  }
+
+  // .show-mode{
+  //       border-radius: 1.5rem;
+  //       height: 1.125rem;
+  //       font-size: 0.625rem;
+  //       padding: 0px 8px;
+    
+  //     &__offline-circle{
+  //       width: 6px;
+  //       height: 6px;
+  //       border: 1px solid var(--orange);
+  //       border-radius: 50%;
+  //       background: var(--orange);
+  //       position: relative;
+  //       top: 2px;
+  //       margin-right: 4px;
+  //       }
+        
+  //       &__online-circle{
+  //           width: 6px;
+  //           height: 6px;
+  //           border: 1px solid var(--green);
+  //           border-radius: 50%;
+  //           background: var(--green);
+  //           position: relative;
+  //           top: 2px;
+  //           margin-right: 4px;
+  //           }
+  //  }
 }
 
-  .show-mode{
-      border-radius: 1.5rem;
-      height: 1.125rem;
-      font-size: 0.625rem;
-      padding: 0px 8px;
-  
-    &__offline-circle{
-      width: 6px;
-      height: 6px;
-      border: 1px solid #E55A28;
-      border-radius: 50%;
-      background: #E55A28;
-      position: relative;
-      top: 2px;
-      margin-right: 4px;
-      }
+.custom-radio{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .custom-radio-label{
+    padding-left: calculateRem(24px);
+  }
+  html[dir="rtl"] & {
+    align-items: end;
+    label{
+      margin-right: 0 !important;
+    }
+    .custom-radio-label{
+      padding-left: calculateRem(0px);
+    }
+  }
+}
+
+// :host ::ng-deep{
+//     html[dir="rtl"] {
+//       .sb-radio-btn-checkbox label:before {
+//           right: -22px !important;
+//           margin-right: 2px; 
+//       }
+//       .sb-radio-btn-checkbox label:after {
+//           position: absolute;
+//           right: -1rem !important;
+//       }
       
-      &__online-circle{
-          width: 6px;
-          height: 6px;
-          border: 1px solid #008840;
-          border-radius: 50%;
-          background: #008840;
-          position: relative;
-          top: 2px;
-          margin-right: 4px;
-          }
-   }
+//        .sb-radio-btn-checkbox input[type="radio"] {
+//           right: -13px !important;
+//        }
+//       }
+//   }
+
+
+
+  
