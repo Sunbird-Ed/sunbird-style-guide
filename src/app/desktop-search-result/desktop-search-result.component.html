@@ -2,44 +2,49 @@
   <div class="ui container py-8">
     <div class="d-flex flex-ai-center flex-jc-space-between sb-back-btn-bar">
       <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn fmedium">
-        <i class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use></svg></i> Back</button>
-        <button class="sb-btn sb-btn-outline-primary sb-btn-normal font-weight-bold active"><i class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary"><use xlink:href="assets/images/libdemo/sprite.svg#filter"></use></svg></i> Filter By</button>
+        <i class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary">
+            <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+          </svg></i> Back</button>
+      <button class="sb-btn sb-btn-outline-primary sb-btn-normal font-weight-bold active"><i
+          class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary">
+            <use xlink:href="assets/images/libdemo/sprite.svg#filter"></use>
+          </svg></i> Filter By</button>
     </div>
   </div>
 </div>
 
 <div class="sb-prominent-filter sb-filter sb-bg-color-gray-0 pb-0 pt-16">
-    <div class="ui container">
-        <span class="sb-filter-label pb-8 fmedium">Filter content by</span>
-      <div class="sb-prominent-filter-container">
-        <div class="sb-prominent-filter-field">
-          <sui-select class="selection board-selection" placeholder="Select board" labelField="name" #multiSelect>
-            <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-        <div class="sb-prominent-filter-field">
-          <sui-select class="selection medium-selection" placeholder="Select medium" labelField="name" #multiSelect>
-            <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-        <div class="sb-prominent-filter-field">
-          <sui-select class="selection grade-selection" placeholder="Select grade" labelField="name" #multiSelect>
-            <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-        <div class="sb-prominent-filter-field">
-          <sui-select class="selection subject-selection" placeholder="Select subject" labelField="name" #multiSelect>
-            <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
-            </sui-select-option>
-          </sui-select>
-        </div>
-        <div class="sb-prominent-filter-field">
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
-          <button class="sb-btn sb-btn-primary sb-btn-normal">Submit</button>
-        </div>
+  <div class="ui container">
+    <span class="sb-filter-label pb-8 fmedium">Filter content by</span>
+    <div class="sb-prominent-filter-container">
+      <div class="sb-prominent-filter-field">
+        <sui-select class="selection board-selection" placeholder="Select board" labelField="name" #multiSelect>
+          <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+          </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="sb-prominent-filter-field">
+        <sui-select class="selection medium-selection" placeholder="Select medium" labelField="name" #multiSelect>
+          <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+          </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="sb-prominent-filter-field">
+        <sui-select class="selection grade-selection" placeholder="Select grade" labelField="name" #multiSelect>
+          <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+          </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="sb-prominent-filter-field">
+        <sui-select class="selection subject-selection" placeholder="Select subject" labelField="name" #multiSelect>
+          <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
+          </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="sb-prominent-filter-field">
+        <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
+        <button class="sb-btn sb-btn-primary sb-btn-normal">Submit</button>
       </div>
     </div>
   </div>
+</div>

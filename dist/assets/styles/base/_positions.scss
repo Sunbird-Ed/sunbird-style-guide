@@ -27,7 +27,7 @@
   bottom: 0 !important;
 }
 .bottom-5 {
-  bottom: 5px !important;
+  bottom: calculateRem(5px) !important;
 }
 
 .sb-sticky-bottom {

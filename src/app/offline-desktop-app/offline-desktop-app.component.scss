@@ -1,4 +1,6 @@
-@import "variables", "components/select";
+@import "variables"; 
+@import 'mixins/mixins';
+@import 'components/select';
 
 .sb-offline-updates {
   background: var(--white);
@@ -7,11 +9,11 @@
 }
 .sb-offline-updates-content-logo {
   .logo {
-    height: 100px;
+    height: calculateRem(100px);
   }
 }
 .sb-offline-updates-content-title {
-  font-size: 18px;
+  font-size: calculateRem(100px);
 }
 .sb-offline-updates-content-para {
   font-size: $font-size-sm;
