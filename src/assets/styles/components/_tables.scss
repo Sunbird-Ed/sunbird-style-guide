@@ -301,6 +301,12 @@
     border-bottom: calculateRem(1px) solid $gray-100;
   }
 
+  tr:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+
   &.body-large {
     td {
       height: $base-block-space*8;
@@ -437,6 +443,7 @@
   width: 100%;
   border-radius: calculateRem(4px);
   min-height: $base-block-space*5;
+  border:1px solid var(--gray-100);
 
   .sb-course-progress-name {
     min-width: calculateRem(140px);

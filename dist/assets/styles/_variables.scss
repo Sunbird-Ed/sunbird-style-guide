@@ -210,7 +210,7 @@ $block-padding-x: ($base-block-space * 2) ($base-block-space * 2); // left right
 $block-padding-y: ($base-block-space * 1) ($base-block-space * 1); // top bottom spacing
 $block-margin-xl-minus: -($base-block-space * 2); // minus margin 16px left
 $block-margin-xr-minus: -($base-block-space * 2); // minus margin 16px right
-$block-margin-xr-minus: -($base-block-space * 2) - ($base-block-space * 2); // minus margin 16px left & right
+$block-margin-xr-minus: -($base-block-space * 2) -($base-block-space * 2); // minus margin 16px left & right
 // button height
 $base-btn-xs-height: ($base-block-space * 3);
 $base-btn-normal-height: ($base-block-space * 4);
@@ -293,9 +293,7 @@ $sb-btn-group-btn-background: $white-color;
 $sb-btn-group-btn-color: $primary-400;
 $sb-btn-group-btn-active-background-color: $primary-100;
 
-//accordions
-$sb-download-manager-border: calculateRem(1px) solid $gray-100;
-$sb-download-text-max-width: 18em;
+
 
 // To clean
 $text-gray: $gray-100;
@@ -306,4 +304,4 @@ $qr-btn: $gray-100;
 $signup-btn-bg-active-color: $secondary-400;
 $form-input-border-active-color: $primary-400;
 
-// lists
+
