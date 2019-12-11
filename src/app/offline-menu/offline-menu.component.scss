@@ -1,3 +1,5 @@
+@import 'mixins/mixins';
+
 .sb-pdf-container {
   height: 100vh;
 
@@ -8,8 +10,8 @@
     flex-wrap: wrap;
     -webkit-box-align: center;
     align-items: center;
-    min-height: 40px;
-    background: #f2f2f2;
+    min-height: calculateRem(40px);
+    background: var(--gray-0);
     padding: 1% 1.25%;
     height: 10%;
     position: fixed;
@@ -20,7 +22,7 @@
 
   .sb-pdf-headerfix {
     position: relative;
-    min-height: 40px;
+    min-height: calculateRem(40px);
     padding: 0.5% 2%;
     height: 10%;
     top: 0;
@@ -36,9 +38,9 @@
 
   .download-pdf-image {
     margin: 0 1.25% 0 7.75%;
-    background: white;
+    background: var(--white);
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: calculateRem(4px);
     height: 100%;
     display: inline-flex;
     align-items: center;
@@ -67,7 +69,7 @@
     flex-wrap: wrap;
     height: 100%;
     font-size: calc(0.8rem + 0.25vw);
-    min-width: 128px;
+    min-width: calculateRem(128px);
 
     .search-box {
       height: 100%;
@@ -78,23 +80,23 @@
     }
 
     .search-input {
-      border: 1px solid #dedede;
+      border: calculateRem(1px) solid #dedede;
       padding: 5% 1% 11% 1%;
-      border-radius: 4px;
-      max-width: 56px;
-      color: #999;
+      border-radius: calculateRem(4px);
+      max-width: calculateRem(516px);
+      color: var(--gray-200);
       height: 100%;
       text-align: center;
     }
 
     .search-page-pdf-arrow-container {
       position: relative;
-      background: #024f9d;
+      background:var(--primary-400);
       height: 100%;
       display: inline-block;
       width: 25%;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-top-right-radius: calculateRem(4px);
+      border-bottom-right-radius: calculateRem(4px);
       cursor: pointer;
     }
 
@@ -118,8 +120,8 @@
   z-index: 1;
   position: fixed;
   left: 1.25%;
-  min-height: 28px;
-  min-width: 28px;
+  min-height: calculateRem(28px);
+  min-width: calculateRem(28px);
   width: 4%;
   top: 1.75%;
   height: calc(10% - 3.5%);
@@ -130,20 +132,20 @@
 }
 
 .sb-btn-arrows {
-  min-width: 48px;
+  min-width: calculateRem(48px);
   width: 6%;
   cursor: pointer;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-  border-radius: 3px;
+  border-radius: calculateRem(3px);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   //   z-index: 99999;
-  background: white;
-  border: 1px solid white;
-  color: black;
+  background:var(--white);
+  border: calculateRem(1px) solid var(--white);
+  color: var(--black);
   position: fixed;
   top: 1.75%;
   display: -webkit-box;
@@ -152,7 +154,7 @@
   justify-content: center;
   padding: 0;
   height: calc(10% - 3.5%);
-  min-height: 28px;
+  min-height: calculateRem(28px);
 
   &.prev {
     right: 9%;
@@ -165,8 +167,8 @@
   &:hover,
   &.active {
     background: #024f9d;
-    border: 1px solid #024f9d;
-    color: white;
+    border: calculateRem(1px) solid #024f9d;
+    color: var(--white);
   }
 }
 
@@ -175,28 +177,28 @@
 
   &::before {
     border-style: solid;
-    border-width: 2px 2px 0 0;
+    border-width: calculateRem(2px) calculateRem(2px) 0 0;
     content: "";
     display: inline-block;
-    height: 10px;
+    height: calculateRem(10px);
     transform: rotate(-45deg);
-    width: 10px;
+    width: calculateRem(10px);
   }
 
   &.right::before {
     transform: rotate(45deg);
-    margin-right: 4px;
+    margin-right: calculateRem(4px);
   }
 
   &.left::before {
     transform: rotate(-135deg);
-    margin-left: 4px;
+    margin-left: calculateRem(4px);
   }
 }
 
 .bold-page {
   font-size: calc(11px + 0.25vw);
-  margin-left: 4px;
+  margin-left: calculateRem(4px);
 
   &:last-child {
     margin-left: 0;
@@ -205,7 +207,7 @@
 
 @media screen and (max-width: 640px) {
   .sb-pdf-container .pdf-searchbar .search-input {
-    width: 32px;
+    width: calculateRem(32px);
   }
 
   .sb-btn-arrows.prev {
@@ -215,7 +217,7 @@
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .sb-pdf-container .pdf-searchbar .search-input {
-    width: 40px;
+    width: calculateRem(40px);
   }
 }
 
@@ -227,7 +229,7 @@
   }
 
   .sb-pdf-container .pdf-searchbar .search-input {
-    width: 48px;
+    width: calculateRem(48px);
   }
 }
 
@@ -241,7 +243,7 @@
   left: 0;
   z-index: 2;
   background: white;
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 calculateRem(14px) 0 rgba(0, 0, 0, 0.22);
   overflow-y: auto;
 
   .overlay-menu {
@@ -256,15 +258,15 @@
       color: white;
       padding: 10% 9.5% 10% 9.5%;
       font-weight: 700;
-      min-height: 110px;
+      min-height: calculateRem(110px);
     }
 
     &.list {
       padding: 5% 3.75% 5% 9.5%;
       color: #005391;
-      border-bottom: 1px solid #dedede;
+      border-bottom: calculateRem(1px) solid #dedede;
       cursor: pointer;
-      min-height: 60px;
+      min-height: calculateRem(60px);
 
       &:hover {
         background-color: #edf4f9;
@@ -303,13 +305,13 @@
 
   .download-modal-content {
     width: 100%;
-    height: 180px;
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.22);
+    height: calculateRem(180px);
+    background: var(--white);
+    border-radius: calculateRem(4px);
+    box-shadow: 0 0 calculateRem(24px) 0 rgba(0, 0, 0, 0.22);
     // padding: 3.75% 2.9% 2.5% 1.9%;
-    padding: 24px 18px 16px 12px;
-    max-width: 360px;
+    padding: calculateRem(24px) calculateRem(18px) calculateRem(12px) calculateRem(12px);
+    max-width: calculateRem(360px);
 
     .modal-body {
       display: flex;
@@ -323,32 +325,32 @@
 
       .cancel-link,
       .download-link {
-        font-size: 12px;
+        font-size: calculateRem(12px);
         cursor: pointer;
       }
 
       .cancel-link {
-        color: #666;
-        margin-right: 8px;
+        color: var(--gray-400);
+        margin-right: calculateRem(8px);
       }
 
       .download-link {
-        color: #024f9d;
+        color: var(--primary-400);
         font-weight: bold;
       }
     }
 
     .pdf-download-image {
-      background: white;
+      background: var(--white);
       cursor: pointer;
       border-radius: 4px;
-      border: 1px solid #dedede;
-      height: 36px;
+      border: calculateRem(1px) solid #dedede;
+      height: calculateRem(36px);
       display: inline-flex;
       -webkit-box-align: center;
       align-items: center;
       width: 100%;
-      max-width: 36px;
+      max-width: calculateRem(36px);
       justify-content: center;
 
       img {
@@ -357,14 +359,14 @@
     }
 
     .download-name-container {
-      border-left: 1px solid #ccc;
+      border-left: calculateRem(1px) solid #ccc;
       margin-left: 3.75%;
       padding-left: 3.75%;
-      font-size: 14px;
+      font-size: calculateRem(14px);
 
       .download-name,
       .download-description {
-        margin-bottom: 12px;
+        margin-bottom: calculateRem(12px);
       }
 
       .download-name {
@@ -372,11 +374,11 @@
       }
 
       .download-description {
-        color: #666;
+        color: var(--gray-400);
       }
 
       .download-size {
-        color: #000;
+        color:var(--black);
       }
     }
   }

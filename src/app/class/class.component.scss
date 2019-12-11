@@ -1,7 +1,9 @@
 @import "variables";
+@import 'mixins/mixins';
+
 .pill {
   width: auto !important;
-  max-width: 90px !important;
+  max-width: calculateRem(90px) !important;
   background-color: var(--white);
   white-space: nowrap;
   -webkit-appearance: none;

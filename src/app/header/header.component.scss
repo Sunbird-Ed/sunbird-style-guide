@@ -1,4 +1,6 @@
-::ng-deep {
+@import 'mixins/mixins';
+
+:host ::ng-deep {
   
       .ui.fixed.header-menu {
         position: -webkit-sticky;
@@ -8,7 +10,7 @@
  position: sticky;
  z-index: 999;
  border: 0;
- margin-bottom: -1px;
+ margin-bottom: calculateRem(-1px);
  &.scroll-down{
    top: 0;
    transition: top 0.5s ease-in-out;

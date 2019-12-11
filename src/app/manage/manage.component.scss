@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins/mixins';
 
 .sb-manage-section{
     background: $white;
@@ -26,7 +27,7 @@
         color: $blue;
     }
     .sb-user-list{
-        margin-bottom: 4px !important;
+        margin-bottom: calculateRem(4px) !important;
     }
 }
 

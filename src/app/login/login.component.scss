@@ -22,13 +22,13 @@
     background: var(--white);
     height: 100%;
     width: 100%;
-    padding: 32px;
-    box-shadow: 0px 10px 40px -14px rgba(0, 0, 0, 0.5);
+    padding: calculateRem(32px);
+    box-shadow: 0px calculateRem(10px) calculateRem(40px) calculateRem(-14px) rgba(0, 0, 0, 0.5);
     overflow: hidden;
 
     @include respond-above(sm) {
-      min-width: 360px;
-      max-width: 416px;
+      min-width: calculateRem(360px);
+      max-width: calculateRem(416px);
       height: auto;
       justify-content: center;
     }
@@ -45,25 +45,25 @@
         padding: 0px ($base-block-space * 2);
 
         img {
-          width: 100px;
+          width: calculateRem(100px);
         }
       }
 
       .swiper-slide {
-        height: 360px;
+        height: calculateRem(360px);
         width: 100%;
         transition: all 2s linear;
 
         &__title {
           text-align: center;
-          font-size: 16px;
+          font-size: calculateRem(16px);
           padding: ($base-block-space * 3) 0px;
           margin: 0px;
         }
 
         &__para {
           text-align: left;
-          font-size: 12px;
+          font-size: calculateRem(12px);
           padding-bottom: ($base-block-space * 3);
           color: var(--gray-800);
         }
@@ -71,9 +71,9 @@
         .language-selection {
           display: flex;
           background: $primary-0;
-          box-shadow: 0 2px 4px 0 #D8D8D8;
+          box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 #D8D8D8;
           padding: ($base-block-space * 2) 0px;
-          max-height: 280px;
+          max-height: calculateRem(280px);
 
           // scrollbar css //
           .login-scroll {
@@ -89,12 +89,12 @@
               display: flex;
               position: relative;
               justify-content: space-between;
-              padding: 16px 10px;
+              padding: calculateRem(16px) calculateRem(10px);
               margin-bottom: 0px;
               cursor: pointer;
-              font-size: 14px;
+              font-size: calculateRem(14px);
               user-select: none;
-              border-bottom: 1px solid #ddd;
+              border-bottom: calculateRem(1px) solid #ddd;
               font-weight: normal;
 
               &:focus {
@@ -124,8 +124,8 @@
             }
 
             .checkmark {
-              height: 18px;
-              width: 18px;
+              height: calculateRem(18px);
+              width: calculateRem(18px);
               border-radius: 50%;
               float: right;
               background-color: #cec3c3;
@@ -133,7 +133,7 @@
             }
 
             .radio-container:hover input~.checkmark {
-              background-color: #ccc;
+              background-color: var(--gray-100);
             }
 
             .radio-container input:checked~.checkmark {
@@ -154,10 +154,10 @@
               left: 6px;
               position: relative;
               top: 3px;
-              width: 5px;
-              height: 10px;
+              width: calculateRem(5px);
+              height: calculateRem(10px);
               border: solid white;
-              border-width: 0 3px 3px 0;
+              border-width: 0 calculateRem(3px) calculateRem(3px) 0;
               transform: rotate(45deg);
             }
           }
@@ -166,7 +166,7 @@
 
         .fields-selection {
           .sb-field {
-            margin-bottom: 16px 0px;
+            margin-bottom: calculateRem(16px) 0px;
           }
 
           .textColorChange {
@@ -193,13 +193,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 16px 0px;
+        padding: calculateRem(16px) 0px;
 
         .circle {
-          margin: 0 3px;
+          margin: 0 calculateRem(3px);
           border: 1px solid #eee;
-          width: 8px;
-          height: 8px;
+          width: calculateRem(8px);
+          height: calculateRem(8px);
           border-radius: 50%;
         }
 

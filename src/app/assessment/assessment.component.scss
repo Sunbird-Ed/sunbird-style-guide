@@ -1,3 +1,5 @@
+@import 'mixins/mixins';
+
 ::ng-deep {
   root {
     --font-size-base: 1rem;
@@ -29,7 +31,7 @@
     width: 30em;
     margin: 0 auto;
     background: #fff;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px calculateRem(2px) calculateRem(6px) 0px rgba(0, 0, 0, 0.2);
     height: auto;
   }
   .assessment-result-content  .score{
@@ -37,12 +39,12 @@
   }
   .assessment-content-title{
     font-size: 0.9em;
-    color: #024F9D;
+    color:var(--primary-0);
     text-align: center;
     margin: 1em 0;
   }
   .assessment-content-description{
-    color: #333333;
+    color: var(--gray-800);
     font-size: 0.9em;
     padding: 1em 0px 2em 0px;
   }
@@ -66,11 +68,11 @@
     border: 0.05em solid;
   }
   .assessment-score-content .assessment-content-title{
-    color: #333333;
+    color: var(--gray-800);
     font-weight: bold;
   }
   .assessment-score-content .assessment-content-description{
-    color: #666666;
+    color: var(--gray-400);
     padding-top: 0;
   }
   .mr-24 {
@@ -81,13 +83,13 @@
 
 .assement-view{
   font-size: 0.9em;
-  color: #024F9D;
+  color:var(--primary-color);
   a{
-      color: #024F9D;
+      color:var(--primary-color);
   }
 }
 .assessment-result{
-  color:#008840;
+  color:var(--secondary-color);
   font-size: 0.7em;
   display: flex;
   justify-content: center;
@@ -97,6 +99,6 @@
 font-size: 1.7em;
 }
 .assessment-result-info{
-color: #008840;
+color: var(--secondary-color);
 font-size: 0.9em;
 }

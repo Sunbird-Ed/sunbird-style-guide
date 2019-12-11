@@ -1,75 +1,89 @@
 <div class="no-content-container d-flex flex-jc-center sb-bg-color-primary-0">
-    <div class="d-flex flex-dc flex-jc-center flex-ai-center p-24">
-      <div>
-        <img src="../../assets/images/no-text.svg" width="101px" height="124px">
+  <div class="d-flex flex-dc flex-jc-center flex-ai-center p-24">
+    <div>
+      <img src="../../assets/images/no-text.svg" width="101px" height="124px">
+    </div>
+    <div class="mt-8">No Textbooks Available</div>
+    <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal my-24" (click)="showLoadModal()">Load
+      Content</button>
+    <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
+  </div>
+</div>
+
+<div class="no-content-container  d-flex flex-jc-center sb-bg-color-gray-0">
+  <div class="d-flex flex-dc flex-jc-center flex-ai-center p-24">
+    <div>
+      <img src="../../assets/images/offline-icon.svg" width="90px" height="90px">
+    </div>
+    <div class="fs-1-16 font-weight-bold">You are offline</div>
+    <p class="fs-1 mt-8">Please connect to the internet to view content</p>
+    <p class="fs-1 mb-16">Have a textbook downloaded on your system/ pendrive? Click below link to upload</p>
+    <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mb-8" (click)="showLoadModal()">
+      Load Content</button>
+    <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
+  </div>
+</div>
+
+<sui-modal *ngIf="showLoadContent" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
+  class="sb-modal" appBodyScroll (dismissed)="showLoadModal()" #modal>
+  <div class="sb-modal-header font-weight-normal">Load Content from</div>
+  <div class="sb-modal-content">
+    <div class="p-8" *ngIf='!loadContent'>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio pb-24 disable-color">
+        <div class="d-flex">
+          <input type="radio" id="offline" name="example" disabled="disabled">
+          <label for="offline">Online Library</label>
+          <div class="sb-label-status sb-label-status-error">
+            <span class="sb-label-status-indicator sb-label-status-indicator-error"></span>You are offline
+          </div>
+        </div>
+        <div class="fs-0-92 custom-radio-label">This imports/ downloads contents from SUNBIRD Online Library when if you
+          are connected to Internet</div>
       </div>
-      <div class="mt-8">No Textbooks Available</div>
-      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal my-24" (click)="showLoadModal()">Load
-        Content</button>
-      <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio">
+        <input type="radio" id="radio2" name="example2" checked>
+        <label class="font-weight-bold" for="radio2">Pendrive or External Drives</label>
+        <div class="fs-0-92 custom-radio-label">This adds contents from you pendrive/ external device connected to
+          SUNBIRD app.</div>
+      </div>
+      <div class="fs-0-92 pl-24">This imports/ downloads contents from SUNBIRD Online Library when if you are connected
+        to Internet</div>
+    </div>
+    <div class="p-8" *ngIf='loadContent'>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio pb-24">
+        <div class="d-flex">
+          <input type="radio" id="radio3" name="example3" checked>
+          <label class="font-weight-bold" for="radio3">Online Library</label>
+          <div class="sb-label-status sb-label-status-success">
+            <span class="sb-label-status-indicator sb-label-status-indicator-success"></span>You are online
+          </div>
+        </div>
+        <div class="fs-0-92 custom-radio-label">
+          This imports/ downloads contents from SUNBIRD Online Library when if you are connected to Internet</div>
+      </div>
+      <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio">
+        <input type="radio" id="radio4" name="example4">
+        <label class="font-weight-bold" for="radio4">Pendrive or External Drives</label>
+        <div class="fs-0-92 custom-radio-label">This adds contents from you pendrive/ external device connected to
+          SUNBIRD app.</div>
+      </div>
     </div>
   </div>
-
-  <div class="no-content-container  d-flex flex-jc-center sb-bg-color-gray-0">
-      <div class="d-flex flex-dc flex-jc-center flex-ai-center p-24">
-        <div>
-          <img src="../../assets/images/offline-icon.svg" width="90px" height="90px">
-        </div>
-        <div class="fs-1-16 font-weight-bold">You are offline</div>
-        <p class="fs-1 mt-8">Please connect to the internet to view content</p>
-        <p  class="fs-1 mb-16">Have a textbook downloaded on your system/ pendrive? Click below link to upload</p>
-        <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mb-8" (click)="showLoadModal()">
-          Load Content</button>
-        <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
+  <div class="p-8" *ngIf='loadContent'>
+    <div class="sb-radio-btn-checkbox sb-radio-btn-secondary pb-24">
+      <div class="d-flex">
+        <input type="radio" id="radio3" name="example3" checked>
+        <label class="font-weight-bold" for="radio3">Online Library</label>
+        <button type="button" class="d-flex sb-btn sb-btn-outline-secondary sb-btn-normal show-mode">
+          <span class="show-mode__online-circle"></span>You are online</button>
       </div>
+      <div class="fs-0-92 pl-24">
+        This imports/ downloads contents from SUNBIRD Online Library when if you are connected to Internet</div>
     </div>
-
-
-  <sui-modal *ngIf="showLoadContent" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
-    class="sb-modal" appBodyScroll (dismissed)="showLoadModal()" #modal>
-    <div class="sb-modal-header font-weight-normal">Load Content from</div>
-    <div class="sb-modal-content">
-      <div class="p-8" *ngIf='!loadContent'>
-        <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio pb-24 disable-color">
-          <div class="d-flex">
-          <input type="radio" id="offline" name="example" disabled="disabled">
-              <label for="offline">Online Library</label>
-               <div class="sb-label-status sb-label-status-error">
-                  <span class="sb-label-status-indicator sb-label-status-indicator-error"></span>You are offline
-                </div>
-          </div>
-          <div class="fs-0-92 custom-radio-label">This imports/ downloads contents from DIKSHA Online Library when if you are connected to Internet</div>
-        </div>
-        <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio">
-          <input type="radio" id="radio2" name="example2" checked>
-          <label class="font-weight-bold" for="radio2">Pendrive or External Drives</label>
-          <div class="fs-0-92 custom-radio-label">This adds contents from you pendrive/ external device connected to DIKSHA app.</div>
-        </div>
-      </div>
-      <div class="p-8" *ngIf='loadContent'>
-          <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio pb-24">
-              <div class="d-flex">
-              <input type="radio" id="radio3" name="example3" checked>       
-                  <label class="font-weight-bold" for="radio3">Online Library</label>
-                  <div class="sb-label-status sb-label-status-success">
-                      <span class="sb-label-status-indicator sb-label-status-indicator-success"></span>You are online
-                    </div>
-              </div>
-              <div class="fs-0-92 custom-radio-label">
-                This imports/ downloads contents from DIKSHA Online Library when if you are connected to Internet</div>
-            </div>
-        <div class="sb-radio-btn-checkbox sb-radio-btn-secondary custom-radio">
-          <input type="radio" id="radio4" name="example4">
-          <label class="font-weight-bold" for="radio4">Pendrive or External Drives</label>
-          <div class="fs-0-92 custom-radio-label">This adds contents from you pendrive/ external device connected to DIKSHA app.</div>
-        </div>
-      </div>
+    <div class="sb-radio-btn-checkbox sb-radio-btn-secondary">
+      <input type="radio" id="radio4" name="example4">
+      <label class="font-weight-bold" for="radio4">Pendrive or External Drives</label>
+      <div class="fs-0-92 pl-24">This adds contents from you pendrive/ external device connected to SUNBIRD app.</div>
     </div>
-    <div class="sb-modal-actions">
-      <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="continueLoadContent()">Continue</button>
-      <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal" (click)="showLoadModal()">Cancel</button>
-    </div>
-  </sui-modal>
-  
- 
- 
+  </div>
+</sui-modal>

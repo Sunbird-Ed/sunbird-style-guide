@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins/mixins';
 
 // dropdown css for offline menu bar
 .ui.selection.dropdown.state-medium {
@@ -7,11 +8,11 @@
   align-items: center;
   border: none;
   background: none;
-  min-width: 100px;
+  min-width: calculateRem(100px);
   margin: 0;
 
   .medium-selection {
-    min-width: 120px;
+    min-width: calculateRem(120px);
   }
 
   &:hover {
@@ -24,7 +25,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  border: 1px solid var(--primary-400);
+  border: calculateRem(1px) solid var(--primary-400);
   &:active {
     background: #bac9d8 !important;
     color: var(--primary-400) !important;
@@ -35,7 +36,7 @@
     color: var(--blue) !important;
     box-sizing: border-box;
     border: 0.5px solid var(--primary-400);
-    border-radius: 2px;
+    border-radius: calculateRem(2px);
     background-color: #e5edf5;
   }
 }
@@ -48,11 +49,11 @@
 
   .ui.selection.dropdown .menu {
     max-height: 20em;
-    min-height: 368px;
+    min-height: calculateRem(368px);
 
     &::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
+      width: calculateRem(4px);
+      height: calculateRem(4px);
       -webkit-appearance: none;
     }
     
@@ -65,7 +66,7 @@
     
     &::-webkit-scrollbar-track {
       background-color: $gray-0;
-      width:5px;
+      width:calculateRem(4px);
     }
 }
 

@@ -1,12 +1,14 @@
+@import 'mixins/mixins';
+
 .sb-offline-tab-header {
   background: #063C72;
   color: #e4e4e4;
-  height: 32px;
-  padding: 8px 16px;
+  height: calculateRem(32px);
+  padding: calculateRem(8px) calculateRem(16px);
 
   .minimize-bar {
-    height: 2px;
-    width: 12px;
+    height: calculateRem(2px);
+    width: calculateRem(12px);
     background: #e4e4e4;
     cursor: pointer;
   }
@@ -14,12 +16,12 @@
   i.icon {
     height: auto;
     cursor: pointer;
-    font-size: 12px;
+    font-size: calculateRem(12px);
   }
 }
 
 .sb-offline-tab-container {
-  min-height: 32px;
+  min-height: calculateRem(32px);
   width: 100%;
   background: #063C72;
   color: #e4e4e4;
@@ -27,8 +29,8 @@
   align-items: center;
 
   .profile-image-container {
-    width: 24px;
-    height: 24px;
+    width: calculateRem(24px);
+    height: calculateRem(24px);
     border-radius: 50%;
 
     .profile-image {
@@ -38,8 +40,7 @@
   }
 
   .sb-offline-btn {
-    font-size: 12px;
-    font-size: 12px;
+    font-size: calculateRem(12px);
     background: transparent;
     color: #e4e4e4;
     outline: 0;
@@ -48,20 +49,20 @@
     display: inline-flex;
     // align-items: center;
     // justify-content: center;
-    height: 32px;
-    height: 32px;
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 32px;
-    border-bottom: 32px solid transparent;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
+    height: calculateRem(32px);
+    height: calculateRem(32px);
+    padding-left: calculateRem(10px);
+    padding-right: calculateRem(10px);
+    line-height: calculateRem(32px);
+    border-bottom: calculateRem(32px) solid transparent;
+    border-left: calculateRem(16px) solid transparent;
+    border-right: calculateRem(16px) solid transparent;
 
     &:hover,
     &.active {
-      border-bottom: 32px solid #024f9d;
-      border-left: 16px solid transparent;
-      border-right: 16px solid transparent;
+      border-bottom: calculateRem(32px) solid #024f9d;
+      border-left: calculateRem(16px) solid transparent;
+      border-right: calculateRem(16px) solid transparent;
       position: relative;
       padding-top: 0;
       padding-bottom: 0;
@@ -72,9 +73,9 @@
   }
 
   .offline-link-btn {
-    height: 32px;
+    height: calculateRem(32px);
     display: flex;
-    margin-left: 8px;
+    margin-left: calculateRem(8px);
 
     a {
       position: relative;
@@ -89,11 +90,11 @@
         &:before,
         &:after {
           z-index: 1;
-          background: #024F9D;
+          background: var(--primary-400);
         }
 
         span {
-          background: #024f9d;
+          background: var(--primary-400);
 
           &:before,
           &:after {
@@ -108,38 +109,38 @@
 
       &:before,
       &:after {
-        width: 10px;
-        height: 10px;
+        width: calculateRem(10px);
+        height: calculateRem(10px);
         background: #063C93;
       }
 
       &:before {
-        left: -10px;
+        left: calculateRem(-10px);
       }
 
       &:after {
-        right: -10px;
+        right: calculateRem(-10px);
       }
 
       span {
-        font-size: 12px;
-        padding: 8px 24px;
+        font-size: calculateRem(12px);
+        padding: calculateRem(8px) calculateRem(24px);
         background: #063C93;
-        border-radius: 16px 16px 0 0;
+        border-radius: calculateRem(16px) calculateRem(16px) 0 0;
 
         &:before {
-          left: -20px;
+          left: calculateRem(-20px);
         }
 
         &:after {
-          right: -20px;
+          right: calculateRem(-20px);
         }
 
         &:before,
         &:after {
-          width: 20px;
-          height: 20px;
-          border-radius: 10px;
+          width: calculateRem(20px);
+          height: calculateRem(20px);
+          border-radius: calculateRem(10px);
           background: #063C93;
           z-index: 2;
         }
@@ -248,8 +249,8 @@
   // }
 
   .notification-img-container {
-    width: 24px;
-    height: 24px;
+    width: calculateRem(24px);
+    height: calculateRem(24px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,12 +260,12 @@
 .sb-offline-tab-content {
   width: 100%;
   background: #024F9D;
-  padding: 8px 16px;
-  min-height: 48px;
+  padding: calculateRem(8px) calculateRem(16px);
+  min-height: calculateRem(48px);
 
   .search-btn {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     text-transform: uppercase;
     font-weight: normal;
   }
@@ -281,7 +282,7 @@
   .sb-btn-content-download {
     background-color: #F5F5F5;
     border-color: #F5F5F5;
-    color: black;
+    color: var(--white);
   }
 }
 
@@ -290,8 +291,8 @@
   background-position: center;
   background-repeat: no-repeat;
   display: inline-block;
-  height: 16px;
-  width: 16px;
+  height: calculateRem(16px);
+  width: calculateRem(16px);
   cursor: pointer;
 
   &.notification-img {
@@ -308,19 +309,19 @@
 
   &.qr-code-img {
     background-image: url('../../assets/images/qr-code.svg');
-    background-color: white;
+    background-color: var(--white);
     position: absolute;
     right: 0;
-    top: 8px;
-    right: 8px;
+    top: calculateRem(8px);
+    right: calculateRem(8px);
   }
 }
 
 .wifi-symbol {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 8px;
+  width: calculateRem(16px);
+  height: calculateRem(8px);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 
@@ -336,37 +337,37 @@
     display: block;
     width: 100%;
     height: 100%;
-    font-size: 4px;
+    font-size: calculateRem(4px);
     position: absolute;
     bottom: 0;
     left: 0;
     border-color: #07b480;
     border-style: solid;
-    border-width: 2px 2px 0 0;
+    border-width: calculateRem(2px) calculateRem(2px) 0 0;
     border-radius: 0 100% 0 0;
 
     &.first {
-      width: 16px;
-      height: 16px;
+      width: calculateRem(16px);
+      height: calculateRem(16px);
       -webkit-animation-delay: 800ms;
       animation-delay: 800ms;
     }
 
     &.second {
-      width: 12px;
-      height: 12px;
+      width: calculateRem(12px);
+      height: calculateRem(12px);
       -webkit-animation-delay: 400ms;
       animation-delay: 400ms;
     }
 
     &.third {
-      width: 8px;
-      height: 8px;
+      width: calculateRem(8px);
+      height: calculateRem(8px);
     }
 
     &.fourth {
-      width: 4px;
-      height: 4px;
+      width: calculateRem(4px);
+      height: calculateRem(4px);
       opacity: 1;
       background-color: #07b480;
       -webkit-animation: none;

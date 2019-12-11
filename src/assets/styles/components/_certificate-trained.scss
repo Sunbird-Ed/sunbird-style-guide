@@ -1,6 +1,6 @@
 .sb-certificate-trained {
   border: 0.5px solid $gray-100;
-  border-radius: 4px;
+  border-radius: calculateRem(4px);
   background-color: $white-color;
   margin: 0 auto;
   // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -10,7 +10,7 @@
   }
 
   .list-heading {
-    border-bottom: 1px solid $gray-100;
+    border-bottom: calculateRem(1px) solid $gray-100;
 
     label {
       font-size: $base-block-space*3;
@@ -40,10 +40,10 @@
       min-width: 80px;
 
       .bar {
-        height: 2px;
-        width: 16px;
-        background: #999;
-        margin-right: 8px;
+        height: calculateRem(2px);
+        width: calculateRem(16px);
+        background: var(--gray-200);
+        margin-right: calculateRem(8px);
       }
     }
   }
@@ -81,9 +81,9 @@
 }
 
 .sb-or-divider {
-  color: #999999;
+  color: var(--gray-200);
   background-image: linear-gradient(#969696,#969696),linear-gradient(#969696,#969696);
-  background-size: 45% 1px;
+  background-size: 45% calculateRem(1px);
   background-position: center left,center right;
   background-repeat: no-repeat;
   text-align: center;

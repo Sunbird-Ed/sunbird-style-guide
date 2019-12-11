@@ -4,7 +4,7 @@
 }
 .ui.segment, .ui.segments .questionTab.segment {
   label {
-    font-size: 12px;
+    font-size: calculateRem(12px);
   }
   &:hover, &.active {
     background-color: #EDF4F9;
@@ -16,7 +16,7 @@
 }
 .questionsMenu {
   overflow-y: auto;
-  max-height: 500px;
+  max-height: calculateRem(500px);
 }
 
 .emptyList {
@@ -36,18 +36,18 @@ i.icon {
 // mcq preview layout styles
 .sb-question-outerframe {
   height: 100%;
-  height: 392px;
-  max-width: 800px;
-  border: 10px solid var(--black);
+  height: calculateRem(392px);
+  max-width: calculateRem(800px);
+  border: calculateRem(10px) solid var(--black);
   margin: 0 auto;
   position: relative;
 }
 .sb-question-dsp-container {
   .sb-editor-image {
-    height: 392px;
-    max-width: 800px;
-    border: 10px solid var(--black);
-    border-radius: 15px;
+    height: calculateRem(392px);
+    max-width: calculateRem(800px);
+    border: calculateRem(10px) solid var(--black);
+    border-radius: calculateRem(15px);
     margin: 0 auto;
     position: relative;
     .phone-sensors {
@@ -58,9 +58,9 @@ i.icon {
       margin: auto;
       left: 0px;
       background: var(--black);
-      padding: calculateRem(10px) calculateRem(5px) calculateRem(10px) 0;
-      border-top-right-radius: calculateRem(25px);
-      border-bottom-right-radius: calculateRem(25px);
+      padding: ($base-block-space + 2) ($base-block-space - 3) ($base-block-space + 2) 0;
+      border-top-right-radius: ($base-block-space * 3) + 1;
+      border-bottom-right-radius: ($base-block-space * 3) + 1;
 
       .sensor {
         width: $base-block-space;
@@ -69,11 +69,11 @@ i.icon {
         border-radius: 50%;
       }
       .speaker {
-        width:calculateRem(5px);
-        height: 74px;
+        width: ($base-block-space - 3);
+        height: calculateRem(74px);
         background: #252525;
         border-radius: calculateRem(10px);
-        margin: ($base-block-space + 2) 0 ($base-block-space + 2) 1px;
+        margin:calculateRem(10px) 0 calculateRem(10px) calculateRem(1px);
       }
       .sensor {
         width: $base-block-space;
@@ -89,7 +89,7 @@ i.icon {
     // max-height: 392px;
     // margin: 0 auto;
     // overflow: hidden;
-    border-radius: ($base-block-space - 4);
+    border-radius: calculateRem(4px);
     //height: calc(100% - 48px);
     height: 100vh;
 
@@ -110,12 +110,12 @@ i.icon {
 
       .hambergur-menu {
         width: ($base-block-space * 3);
-        height: ($base-block-space - 5);
-        margin: ($base-block-space - 4) 0;
+        height: calculateRem(3px);
+        margin: calculateRem(4px) 0;
         background-color: var(--gray);
       }
       .sb-btn-arrows {
-        min-width: 50px;
+        min-width: calculateRem(50px);
         .icon {
           margin: 0;
         }
@@ -161,7 +161,7 @@ i.icon {
       min-height: 72px;
       font-weight: inherit;
       line-height: normal;
-      box-shadow: 2px 5px 7px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: calculateRem(2px) calculateRem(5px) calculateRem(7px) 0 rgba(0, 0, 0, 0.2);
       border: 0.5px solid var(--gray-0);
       padding: ($base-block-space * 2);
       // overflow: auto;
@@ -221,8 +221,8 @@ i.icon {
           overflow-y: auto;
 
           .sb-question-content-card {
-            min-height: 60px;
-            line-height: ($base-block-space * 3) - 3;
+            min-height: calculateRem(60px);
+            line-height: calculateRem(21px);
             margin: ($base-block-space * 2) ($base-block-space * 3);
 
             &:first-child {
@@ -231,7 +231,7 @@ i.icon {
             .sb-learning-outcome-label {
               width: 100%;
               span.sb-status-label {
-                padding: ($base-block-space - 4);
+                padding: calculateRem(4px);
               }
               label {
                 margin-bottom: 0px;
@@ -256,7 +256,7 @@ i.icon {
             }
           }
           .sb-question-content-card {
-            min-height: 60px;
+            min-height: calculateRem(60px);
             margin: ($base-block-space * 2) ($base-block-space * 3);
             margin-top: 0;
             .sb-question-content-focus-spot-group {
@@ -269,7 +269,7 @@ i.icon {
               .sb-focus-spot-label {
                 width: 100%;
                 span.sb-status-label {
-                  padding: ($base-block-space - 4);
+                  padding: calculateRem(4px);
                 }
                 label {
                   margin-bottom: 0px;
@@ -290,7 +290,7 @@ i.icon {
     .mcq-grid {
       display: flex;
       flex-wrap: wrap;
-      max-width: 1440px;
+      max-width: calculateRem(1440px);
       /* margin: 0 auto; */
       /* align-items: stretch; */
       position: relative;
@@ -309,10 +309,10 @@ i.icon {
         background: var(--white);
         font-weight: 700;
         //   max-height: 76px;
-        height: 76px;
+        height: calculateRem(76px);
         overflow: hidden;
         z-index: 999;
-        box-shadow: 2px 5px 7px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: calculateRem(2px) calculateRem(5px) calculateRem(7px) 0 rgba(0, 0, 0, 0.2);
         border-radius: 0;
 
         p svg {
@@ -337,10 +337,10 @@ i.icon {
         .mcq-option {
           margin-bottom: ($base-block-space * 2);
           height: auto;
-          box-shadow: 2px 5px 7px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: calculateRem(2px) calculateRem(5px) calculateRem(7px) 0 rgba(0, 0, 0, 0.2);
           background: var(--white);
           border-radius: $base-block-space;
-          line-height: 20px;
+          line-height: calculateRem(20px);
           padding: $base-block-space;
 
           p {
@@ -352,7 +352,7 @@ i.icon {
       i.chevron {
         position: absolute;
         bottom: $base-block-space;
-        right: ($base-block-space - 4);
+        right:calculateRem(4px);
         z-index: 999;
         cursor: pointer;
         background: #024a93;
@@ -377,7 +377,7 @@ i.icon {
         position: initial;
         max-height: 100vh;
         overflow-y: auto;
-        padding: ($base-block-space * 2) 8px ($base-block-space * 2) 24px;
+        padding: ($base-block-space * 2) calculateRem(8px) ($base-block-space * 2) calculateRem(24px);
         height: 100%;
       }
 
@@ -455,7 +455,7 @@ i.icon {
     background: var(--gray-0);
     padding: ($base-block-space * 2);
     display: flex;
-    border: 1px solid #c4c4c4;
+    border: calculateRem(1px) solid #c4c4c4;
     border-top: none;
 
     label {
@@ -482,7 +482,7 @@ i.icon {
     color: var(--gray-800);
 
     .sb-card-circular-list {
-      padding: 0 15px;
+      padding: 0 calculateRem(15px);
       .sb-circular-list-item {
         list-style-type: decimal;
         font-size: 0.9286rem;

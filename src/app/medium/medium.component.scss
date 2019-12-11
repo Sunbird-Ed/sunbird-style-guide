@@ -1,13 +1,14 @@
 @import "variables";
+@import "mixins/mixins";
 
 .sb-medium {
   width: 100%;
 
   &__pills-container {
-    min-height: 64px;
+    min-height: calculateRem(64px);
 
     .pill {
-      border: 1px solid var(--green);
+      border: calculateRem(1px) solid var(--green);
       color: var(--green);
       cursor: pointer;
 
@@ -36,7 +37,7 @@
       min-height: ($base-block-space * 4);
       margin: 0px ($base-block-space/2) 0px ($base-block-space/2);
       padding: ($base-block-space / 2) ($base-block-space);
-      border-radius: 2px;
+      border-radius: calculateRem(2px);
       text-transform: capitalize;
       text-decoration: none;
       text-align: center;
