@@ -149,6 +149,7 @@ $sb-radio-btn-border-color: $primary-300;
 
   input[type="checkbox"] {
     outline: 0;
+    opacity: 0 ;
   }
 }
 
@@ -211,6 +212,11 @@ $sb-radio-btn-border-color: $primary-300;
     content: "";
     background: $sb-checkbox-primary-background;
     opacity: 1;
+  }
+
+  input[type="radio"] {
+    outline: 0;
+    opacity: 0;
   }
 }
 
