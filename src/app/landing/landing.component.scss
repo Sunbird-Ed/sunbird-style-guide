@@ -59,7 +59,7 @@
       margin: 0px 0px;
       display: inline-block;
       a {
-        margin: calculateRem(16px);
+        margin:0.25rem;
         padding: calculateRem(4px) calculateRem(12px);
         line-height: inherit;
         border: calculateRem(1px) solid var(--gray-100);
