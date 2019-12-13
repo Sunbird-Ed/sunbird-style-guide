@@ -1,12 +1,12 @@
-@import 'mixins/mixins';
-
+@import "./variables";
+@import "./mixins/mixins";
 html,
 body {
   height: 100%;
+  font-size: $font-size-base;
 }
 
 body {
-  font-size: $font-size-base;
   background: $body-background-color !important;
   position: relative;
   font-family: $font-stack-en;
@@ -18,12 +18,33 @@ body {
   text-rendering: optimizeLegibility;
   &.pushable {
     background: $body-background-color !important;
-    &>.pusher {
+    & > .pusher {
       background: transparent !important;
       padding-bottom: 400px !important;
       &.dimmed {
         height: 100vh;
       }
+    }
+  }
+}
+@include respond-above(lg) {
+  body {
+    .footer-fix {
+      padding-bottom: 56px;
+    }
+  }
+}
+@include respond-between(md, lg) {
+  body {
+    .footer-fix {
+      padding-bottom: 64px;
+    }
+  }
+}
+@include respond-between(sm, md) {
+  body {
+    .footer-fix {
+      padding-bottom: 112px;
     }
   }
 }

@@ -26,10 +26,10 @@ $sb-label-status-indicator-error-background: $tertiary-color;
 // base label styles
 .sb-label {
   display: inline-block;
-  border: 1px solid;
+  border: calculateRem(1px) solid;
   color: $white-color;
   line-height: inherit;
-  @include border-radius(3px);
+  @include border-radius(calculateRem(3px));
   text: {
     transform: capitalize;
     decoration: none;
@@ -270,8 +270,8 @@ $sb-label-status-indicator-error-background: $tertiary-color;
 
 // cbse
 .sb-status-label {
-  width: 8px;
-  height: 8px;
+  width: calculateRem(8px);
+  height: calculateRem(8px);
   display: inline-block;
   &.sb-shape-circle {
     border-radius: 100%;

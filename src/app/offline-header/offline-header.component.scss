@@ -16,7 +16,7 @@
     }
 
     display: flex;
-    min-height: 64px;
+    min-height: calculateRem(64px);
     background: #fafafa;
     padding: ($base-block-space) 0px;
     align-items: center;
@@ -52,7 +52,7 @@
       justify-content: center;
       .logo {
         img {
-          height: 45px;
+          height: calculateRem(45px);
         }
       }
       .onoff-status {
@@ -128,20 +128,20 @@
       outline: 0;
       line-height: normal;
       // background: var(--white);
-      border: 1px solid var(--primary-200);
+      border: calculateRem(1px) solid var(--primary-200);
       border-right-width: 0px;
-      padding: 4px 32px 4px 8px;
-      border-radius: 4px 0px 0px 4px;
+      padding: calculateRem(4px) calculateRem(32px) calculateRem(4px) calculateRem(8px);
+      border-radius: calculateRem(4px) 0px 0px calculateRem(4px);
       //@debug@include bidi-style(padding-right,32px,padding-left,8px);
       html[dir="rtl"] & {
-        padding: 4px 8px 4px 32px;
-        border-radius: 0px 4px 4px 0px;
-        border-right-width: 1px;
+        padding: calculateRem(4px) calculateRem(8px) calculateRem(4px) calculateRem(32px);
+        border-radius: 0px calculateRem(4px) calculateRem(4px) 0px;
+        border-right-width: calculateRem(1px);
         unicode-bidi: bidi-override;
       }
     }
     &__input-action {
-      flex: 0 0 32px;
+      flex: 0 0 calculateRem(32px);
       width: ($base-block-space * 4);
       height: ($base-block-space * 4);
       background: var(--primary-400);
@@ -151,7 +151,7 @@
       justify-content: center;
       cursor: pointer;
       html[dir="rtl"] & {
-        border-radius: 4px 0px 0px 4px;
+        border-radius: calculateRem(4px) 0px 0px calculateRem(4px);
       }
     }
   }

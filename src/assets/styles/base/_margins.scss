@@ -58,13 +58,15 @@ $mValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
 .ml-auto {
   @include margin(null null null auto);
   html[dir="rtl"] & {
-    @include margin(null auto null null);
+    @include margin(null auto null null !important);
+    margin-left: inherit !important;
   }
 }
 .mr-auto {
   @include margin(null auto null null);
   html[dir="rtl"] & {
-    @include margin(null null null auto);
+    @include margin(null null null auto !important);
+    margin-right: inherit !important;
   }
 }
 /* Negative margins */

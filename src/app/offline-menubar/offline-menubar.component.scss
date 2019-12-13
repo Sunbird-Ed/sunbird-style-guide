@@ -10,8 +10,8 @@
     overflow: hidden;
 
     @include respond-below(sm) {
-      border-bottom: 1px solid var(--primary-400);
-      margin-bottom: 8px;
+      border-bottom: calculateRem(1px) solid var(--primary-400);
+      margin-bottom: calculateRem(8px);
     }
 
     html[dir="rtl"] & {

@@ -1,32 +1,37 @@
 @import "variables";
+@import "mixins/mixins";
 
-.pill {
-  width: auto !important;
-  max-width: 90px !important;
-  background-color: var(--white);
-  white-space: nowrap;
-  -webkit-appearance: none;
-  text-overflow: ellipsis;
-  margin-right: $base-block-space;
-  text-transform: capitalize;
-  text-decoration: none;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  border-radius: ($base-block-space * 2);
-  padding: ($base-block-space / 2) ($base-block-space * 2);
-  color: var(--primary-400);
-  min-height: ($base-block-space * 4);
-  cursor: pointer;
-  &:hover{
-    background-color:  var(--primary-400);
-    color: var(--white);
+.sb-about-title{
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color)
+}
+
+.sb-left-content{
+  display: flex;
+  color: var(--gray-400);
+  .list-value {
+    margin-left: 0.5rem;
+    word-break: break-all;
+   }
+
+  @include respond-below(sm){
+    display:block;
   }
-  &.active {
-    background-color:var(--primary-400);
-    color: var(--white);
+}
+
+.update-link:hover{
+  text-decoration: underline;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+
+@include respond-below(sm){
+  .sb-about-content{
+    flex-direction: column;
   }
-  &[aria-selected="true"] {
-    color: #111;
-  }
+  .sb-left-content .list-value{
+  margin-left: 0rem;
+ }
 }
