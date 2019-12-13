@@ -16,9 +16,6 @@
     .sb-label-status:before {
       transform: none !important;
       border-radius: 10px !important;
-      *[dir="rtl"] &{
-        margin-right: 8px !important;
-      }
     }
   }
 
