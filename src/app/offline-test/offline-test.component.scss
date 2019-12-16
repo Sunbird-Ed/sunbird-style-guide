@@ -3,6 +3,7 @@
 
 .sb-offline-app-bar {
   background: #D9D8D8;
+  padding: $base-block-space 0px;
 }
 
 .sb-offline-header {
@@ -16,12 +17,11 @@
 
   .sb-menubar {
     width: 100%;
-
-    .plus-icon {
-      position: relative;
-      bottom: 2px;
-      font-size: 16px;
+    @include respond-below(sm) {
+    .sb-btn-load{
+      margin: $base-block-space 0px;
     }
+   }
   }
 }
 
