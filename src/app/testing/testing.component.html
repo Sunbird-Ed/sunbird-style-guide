@@ -1,3 +1,10 @@
+
+<div class="m-32">
+  <ngx-slick class="carousel" [config]="slideConfig">
+      <div ngxSlickItem class="pill" *ngFor="let class of Classes;  let index = index"> {{ class.name }}  </div>
+  </ngx-slick>
+</div> 
+
 <div class="ui container">
   <div class="mt-24 sb-bg-color-white">
     <div class="sb-about-title">

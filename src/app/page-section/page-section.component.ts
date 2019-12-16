@@ -65,35 +65,35 @@ export class PageSectionComponent implements OnInit {
       {
         "breakpoint": 2200,
         "settings": {
-          "slidesToShow": 5,
-          "slidesToScroll": 3
+          "slidesToShow": 4,
+          "slidesToScroll": 2
         }
       },
       {
         "breakpoint": 1920,
         "settings": {
-          "slidesToShow": 5,
+          "slidesToShow": 4,
           "slidesToScroll": 3
         }
       },
       {
         "breakpoint": 1440,
         "settings": {
-          "slidesToShow": 3.5,
-          "slidesToScroll": 3
+          "slidesToShow": 3,
+          "slidesToScroll": 1
         }
       },
       {
         "breakpoint": 1200,
         "settings": {
-          "slidesToShow": 3,
-          "slidesToScroll": 3
+          "slidesToShow": 2,
+          "slidesToScroll": 1
         }
       },
       {
         "breakpoint": 992,
         "settings": {
-          "slidesToShow": 2.25,
+          "slidesToShow": 2,
           "slidesToScroll": 2
         }
       },

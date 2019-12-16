@@ -174,7 +174,7 @@ $sb-label-status-indicator-error-background: $tertiary-color;
   background: $tertiary-color;
   padding: ($base-block-space/2) ($base-block-space);
   border-radius: ($base-block-space / 2);
-  font-size: ($font-size-base + 2);
+  font-size: calculateRem(16px);
   border: none;
   height: auto;
 }
