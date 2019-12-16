@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./testing.component.scss']
 })
 export class TestingComponent implements OnInit {
+
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
+
+  panelOpened = false;
+
+
   Classes = [
     {name : "class 1"},
     {name : "class 2"},  
@@ -34,13 +40,10 @@ export class TestingComponent implements OnInit {
     {name : "class 23"},
     {name : "class 24"}
   ];
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
-
-  panelOpened = false;
   
   slideConfig = {
     dots: false,
-  infinite: true,
+  infinite: false,
   speed: 300,
   slidesToShow: 1,
   centerMode: false,
