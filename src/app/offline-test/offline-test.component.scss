@@ -2,7 +2,7 @@
 @import "mixins/mixins";
 
 .sb-offline-app-bar {
-  background: var(--primary-800);
+  background: #D9D8D8;
 }
 
 .sb-offline-header {
@@ -67,17 +67,6 @@
 .ui.dropdown.select-language>.text {
   color: var(--primary-400);
   padding-right: calculateRem(24px) !important;
-}
-
-@include respond-below(sm) {
-  .sb-menubar {
-    border-bottom: 0px;
-
-    &__content {
-      flex-wrap: wrap;
-      display: block !important;
-    }
-  }
 }
 
 .download-area {
