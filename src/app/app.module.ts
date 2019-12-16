@@ -102,6 +102,7 @@ import { NoContentComponent } from './no-content/no-content.component';
 import { OfflineComponent } from './offline/offline.component';
 import { DownloadComponent } from './download/download.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -193,7 +194,8 @@ export function hljsLanguages() {
     NoContentComponent,
     OfflineComponent,
     DownloadComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    QmlSolutionsComponent
   ],
   imports: [
     BrowserModule,
