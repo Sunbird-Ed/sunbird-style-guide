@@ -27,10 +27,6 @@
   text-decoration: underline;
 }
 
-.link:hover{
-  text-decoration: underline;
-}
-
 @include respond-below(sm){
   .sb-about-content{
     flex-direction: column;
