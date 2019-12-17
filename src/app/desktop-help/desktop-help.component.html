@@ -1,4 +1,4 @@
-<app-offline-test></app-offline-test> 
+<app-offline-test></app-offline-test>
 
 <!-- <div class="sbpage-title sb-bg-color-white">
   <div class="ui container">
@@ -7,170 +7,180 @@
 </div> -->
 
 <div class="sb-bg-color-white">
-    <div class="ui container py-8">
-      <div class="d-flex flex-ai-center flex-jc-space-between sb-back-btn-bar">
-        <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn fmedium">
-          <i class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary">
-              <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
-            </svg></i> Back</button>
+  <div class="ui container py-8">
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn fmedium px-0">
+      <i class="icon-svg icon-svg--xxs icon-filter"><svg class="icon icon-svg--primary">
+          <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+        </svg></i> Back</button>
+  </div>
+</div>
+
+<div class="content-header">
+  <div class="ui container py-16">
+    <div class="sbcard__main_area d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
+      <div class="sbcard__info">
+        <div class="sbcard__title content-header__title font-weight-bold">
+          Great thinkers and Great thinkers</div>
+        <div class="sbcard__meta1"><span>Social Science</span>
+          <span class="dot-divider"></span><span>Class 8</span></div>
+      </div>
+      <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
+        <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Update Textbook</button>
+        <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Delete</button>
+        <button type="button" class="sb-btn sb-btn-primary sb-btn-normal">Save to Pendrive</button>
+        <!-- <button type="button" class="sb-btn sb-btn-primary sb-btn-normal">Download Book</button> -->
       </div>
     </div>
   </div>
-  
-  <div class="textbook-content">
-    <div class="ui container py-16">
-      <div class="d-flex flex-ai-center flex-jc-space-between">
-        <div class="d-flex flex-dc">
-          <div class="textbook-content__title font-weight-bold">Great thinkers and Great thinkers</div>
-          <div class="sbcard__meta1"><span>Social Science</span><span class="dot-divider">.</span><span>Class 8</span>
-          </div>
-        </div>
-        <div class="d-flex flex-ai-end">
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-5">Update Textbook</button>
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-5">Delete</button>
-          <button type="button" class="sb-btn sb-btn-primary sb-btn-normal">Save to Pendrive</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-
-
+</div>
 
 <div class="ui container sb-two-column help-video mt-32">
-    <div class="sb-column help-video__player" id="player-area-height">
-      <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio" #aspectRatio>
-        <div>
-          <video width="400" controls>
-            <source src="mov_bbb.mp4" type="video/mp4">
-            <source src="mov_bbb.ogg" type="video/ogg">
-            Your browser does not support HTML5 video.
-          </video>
-        </div>
+  <div class="sb-column help-video__player" id="player-area-height">
+    <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio" #aspectRatio>
+      <div>
+        <video width="400" controls>
+          <source src="mov_bbb.mp4" type="video/mp4">
+          <source src="mov_bbb.ogg" type="video/ogg">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
-      <div class="help-video__player__details sb-bg-color-white" #playerInfo>
-        <h6 class="help-video__player__title  ml-8 mr-auto sb__ellipsis sb__ellipsis--two">How do i add content to SUNBIRD
-          app when i am offline or using a pen drive?&lrm;</h6>
-        <div class="help-video__player__tools">
-          <!-- <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>share</span></button> -->
-          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-              class="icon download alternate"></i><span>Download</span></button>
+    </div>
+    <div class="help-video__player__details sb-bg-color-white" #playerInfo>
+      <h6 class="help-video__player__title  ml-8 mr-auto sb__ellipsis sb__ellipsis--two">How do i add content to SUNBIRD
+        app when i am offline or using a pen drive?&lrm;</h6>
+      <div class="help-video__player__tools">
+        <!-- <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>share</span></button> -->
+        <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
+            class="icon download alternate"></i><span>Download</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="sb-column help-video__content" [style.height.px]="videoContainerHeight"
+    (window:resize)="onWindowResize($event)">
+
+    <!-- card component -->
+    <div *ngFor="let videoitem of videoitems" class="sbcard sbcard--recently-viewed mb-8">
+      <div class="sbcard__main-area">
+        <!-- card img -->
+        <div class="sbcard__img">
+          <div class="img-container">
+            <img src="./assets/images/book.png" alt="">
+          </div>
+        </div>
+        <!-- card mobile view details -->
+        <div class="sbcard__info">
+          <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{ videoitem.text }}</h4>
+          <div class="sbcard__meta1">
+            <span class="sb__ellipsis sb-color-primary">Play Video</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="sb-column help-video__content" [style.height.px]="videoContainerHeight"
-      (window:resize)="onWindowResize($event)">
-  
-      <!-- card component -->
-      <div *ngFor="let videoitem of videoitems" class="sbcard sbcard--recently-viewed mb-8">
-        <div class="sbcard__main-area">
-          <!-- card img -->
-          <div class="sbcard__img">
-            <div class="img-container">
-              <img src="./assets/images/book.png" alt="">
-            </div>
-          </div>
-          <!-- card mobile view details -->
-          <div class="sbcard__info">
-            <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{ videoitem.text }}</h4>
-            <div class="sbcard__meta1">
-              <span class="sb__ellipsis sb-color-primary">Play Video</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="sb-column content-metadeta">
-        <div class="sbgrid sbgrid--grid-carousel">
-            <div class="sbcard sbcard--resource sbcard--course">
-              <div class="sbcard__main_area p-16">
-                <div class="sbcard__info my-8">
-                  <h4 class="content-metadeta__title font-weight-bold">DESCRIPTION</h4>
-                  <div class="content-metadeta__text">
-                    Curabitur lobortis id lorem id bibendum.
-                    Ut id consectetur magna. Quisque volut lobortis is id lorem id bibendum.
-                    Ut id consectetur magna.
-                  </div>
-                </div>
-          
-                <div class="my-8">
-                  <div class="content-metadeta__title">BOARD
-                  </div>
-                  <div class="content-metadeta__text"></div>CBSE</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">MEDIUM
-                  </div>
-                  <div class="content-metadeta__text">English</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">CLASS
-                  </div>
-                  <div class="content-metadeta__text">Class 8</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">SUBJECT
-                  </div>
-                  <div class="content-metadeta__text">English</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">License terms
-                  </div>
-                  <div class="content-metadeta__text">
-                    CC BY-NC-SA 4.0: This license is Creative Commons
-                    Attribution-NonCommercial-ShareAlike -
-                    <a href="#">https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode</a>
-                  </div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">COPYRIGHT
-                  </div>
-                  <div class="content-metadeta__text">Content Credits</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">CREATED ON DIKSHA BY
-                  </div>
-                  <div class="content-metadeta__text">Creator Name</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">AUTHOR
-                  </div>
-                  <div class="content-metadeta__text">Author Name</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">CREATED ON
-                  </div>
-                  <div class="content-metadeta__text">2nd April 2018</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">KEYWORDS
-                  </div>
-                  <div class="content-metadeta__text">Story</div>
-                </div>
-          
-                <div class="sbcard__meta2">
-                  <div class="content-metadeta__title">RESOURCE TYPE
-                  </div>
-                  <div class="content-metadeta__text">Read</div>
-                </div>
-  
-              </div>
-            </div>
-     </div> -->
-
   </div>
 
- <div class="ui container sb-two-column help-faq mt-32 mb-32">
+  <div class="sb-column content-metadeta mb-24">
+    <div class="sbgrid sbgrid--grid-carousel">
+      <div class="sbcard sbcard--resource sbcard--course">
+        <div class="sbcard__main_area p-16 pb-0">
+          <div class="sbcard__information pb-16">
+            <div class="content-metadeta__title fsmall font-weight-bold mb-8">DESCRIPTION</div>
+            <div class="content-metadeta__text  fsmall">
+              Curabitur lobortis id lorem id bibendum.
+              Ut id consectetur magna. Quisque volut lobortis is id lorem id bibendum.
+              Ut id consectetur magna.
+            </div>
+          </div>
+        </div>
+
+        <sui-accordion class="styled fluid sb-accordion">
+          <sui-accordion-panel>
+            <div title class="sb-accordion-title fsmall">
+              Content Information
+              <i class="chevron down icon ml-8"></i>
+            </div>
+            <div content class="sb-accordion-content sb-bg-color-white pt-0 pb-8">
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">BOARD
+                </div>
+                <div class="content-metadeta__text  fsmall">CBSE </div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">MEDIUM
+                </div>
+                <div class="content-metadeta__text  fsmall">English</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">CLASS
+                </div>
+                <div class="content-metadeta__text  fsmall">Class 8</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">SUBJECT
+                </div>
+                <div class="content-metadeta__text  fsmall">English</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title fxsmall mb-8">License terms
+                </div>
+                <div class="content-metadeta__text fsmall">
+                  CC BY-NC-SA 4.0: This license is Creative Commons
+                  Attribution-NonCommercial-ShareAlike -
+                  <a href="#"
+                    class="content-metadeta__text__link cursor-pointer mt-8">https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode</a>
+                </div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">COPYRIGHT
+                </div>
+                <div class="content-metadeta__text  fsmall">Content Credits</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">CREATED ON DIKSHA BY
+                </div>
+                <div class="content-metadeta__text  fxsmall">Creator Name</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">AUTHOR
+                </div>
+                <div class="content-metadeta__text  fsmall
+                      ">Author Name</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">CREATED ON
+                </div>
+                <div class="content-metadeta__text  fsmall
+                      ">2nd April 2018</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall mb-8">KEYWORDS
+                </div>
+                <div class="content-metadeta__text  fsmall">Story</div>
+              </div>
+
+              <div class="py-8">
+                <div class="content-metadeta__title  fxsmall">RESOURCE TYPE
+                </div>
+                <div class="content-metadeta__text  fsmall">Read</div>
+              </div>
+
+            </div>
+          </sui-accordion-panel>
+        </sui-accordion>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui container sb-two-column help-faq mt-32 mb-32">
   <div class="sb-column help-faq__list">
     FAQ Component comes here
   </div>
@@ -182,7 +192,6 @@
       (click)="showNormalModal = !showNormalModal">Report other issue</button>
   </div>
 </div>
-
 
 <sui-modal *ngIf="showNormalModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
   class="sb-modal" appBodyScroll (dismissed)="showNormalModal = !showNormalModal" #modal>
@@ -222,15 +231,3 @@
     </button>
   </div>
 </sui-modal>
-
-
-
-
-
-
-
-
-
-
-
-
