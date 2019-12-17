@@ -230,3 +230,21 @@
     opacity: 0.8;
   }
 }
+
+
+.textbook-content{
+  background:#FAFAFA;
+  &__title{
+    color:var(--primary-400);
+    font-size:calculateRem(18px);
+  }
+}
+
+.content-metadeta{
+  &__title{
+    color:var(--gray-200);
+  }
+  &__text{
+    color:var(--gray-800);
+  }
+}
