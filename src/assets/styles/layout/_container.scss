@@ -24,72 +24,70 @@
   padding-bottom: calculateRem(12px);
 }
 
-
-$colsizes: xs,sm,md,lg,xl,xxl;
-@each $colsize in $colsizes {
-  [class*="sb-g-col-#{nth($colsize, 1)}"] {
-
+//grid columns
+$columns: 12;
+@for $i from 1 through $columns {
+  $colsizes: xs sm md lg xl xxl xxxl;
+  .sb-g-col-#{$i} {
+    grid-column: span $i;
+  }
+  @each $colsize in $colsizes {
+    .sb-g-col-#{nth($colsize, 1)}-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  .sb-g-col-offset-#{$i} {
+    margin-left: (100% / $columns) * $i;
   }
 }
+
 // Grid template creation
 .sb-g {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
-  [class*="sb-g-col-"] {
-  }
-  [class*="sb-g-col-xl-"] {
-  }
-  [class*="sb-g-col-lg-"] {
-  }
-  [class*="sb-g-col-md-"] {
-  }
-  [class*="sb-g-col-sm-"] {
-  }
-  [class*="sb-g-col-xs-"] {
-  }
-
-  //responsive columns
-  @include respond-below(xs) {
-    [class*="sb-g-col-xs-"] {
-      grid-column: span 12;
-      border:1px solid red;
-    }
-  }
-  @include respond-below(sm) {
-    [class*="sb-g-col-sm-"] {
-      grid-column: span 12;border:1px solid green;
-    }
-  }
-  @include respond-below(md) {
-    [class*="sb-g-col-md-"] {
-      grid-column: span 12;border:1px solid blue;
-    }
-  }
-  @include respond-below(lg) {
-    [class*="sb-g-col-lg-"] {
-      grid-column: span 12;border:1px solid olive;
-    }
-  }
-  @include respond-below(xl) {
-    [class*="sb-g-col-xl-"] {
-      grid-column: span 12;border:1px solid violet;
-    }
-  }
-
-  
 }
 
-@for $i from 1 through 12 {
-  .sb-g-col-#{$i},
-  .sb-g-col-xs-#{$i},
-  .sb-g-col-sm-#{$i},
-  .sb-g-col-md-#{$i},
-  .sb-g-col-lg-#{$i},
-  .sb-g-col-xl-#{$i} {
-    //width: unquote((8.5 * $i - 2)+"%");
-    grid-column: span $i;
-    
+//responsive columns
+@include respond-below(xs) {
+  [class*="sb-g-col-xs-"] {
+    grid-column: span 12;
+    border: 1px solid red;
+  }
+}
+@include respond-below(sm) {
+  [class*="sb-g-col-sm-"] {
+    grid-column: span 12;
+    border: 1px solid green;
+  }
+}
+@include respond-below(md) {
+  [class*="sb-g-col-md-"] {
+    grid-column: span 12;
+    border: 1px solid blue;
+  }
+}
+@include respond-below(lg) {
+  [class*="sb-g-col-lg-"] {
+    grid-column: span 12;
+    border: 1px solid olive;
+  }
+}
+@include respond-below(xl) {
+  [class*="sb-g-col-xl-"] {
+    grid-column: span 12;
+    border: 1px solid violet;
+  }
+}
+
+//flex columns
+$columns: 12;
+@for $i from 1 through $columns {
+  .sb-fx-col-#{$i} {
+    flex: 0 0 100% / $columns * $i;
+  }
+  .sb-fx-col-offset-#{$i} {
+    margin-left: 100% / $columns * $i;
   }
 }
 
