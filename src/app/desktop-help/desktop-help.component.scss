@@ -43,28 +43,27 @@
   }
 }
 
-// helpl video
-.help-video {
-  &__player {
-
-    &__details,
-    &__tools {
-      display: flex;
-    }
+// content player
+.content-player {
+  &__info {
 
     &__details {
       align-items: center;
-      height: calculateRem(64px);
+      // height: calculateRem(64px);
       padding: calculateRem(8px);
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+      }
     }
 
     &__title {
-      font-weight: bold;
-      color: #024f9d;
+      color:var(--primary-color);
       font-size: calculateRem(16px);
-    }
 
-    &__tools {}
+      &__subtitle {
+        color:var(--gray-800);
+      }
+    }
   }
 
   &__content {
@@ -254,13 +253,17 @@
     font-size: calculateRem(18px);
   }
 
+  &__info {
+    color: var(--gray-800);
+  }
+
   .dot-divider {
-    width: 0.25rem;
-    height: 0.25rem;
+    width: ($base-block-space / 2);
+    height: ($base-block-space / 2);
     border-radius: 100%;
-    background-color: #d8d8d8;
+    background-color: var(--gray-800);
     display: inline-block;
-    margin: 0px 0.5rem;
+    margin: 0px $base-block-space;
   }
 
   @include respond-below(sm) {
@@ -271,10 +274,6 @@
 }
 
 .content-metadeta {
-  .sbcard__information {
-    border-bottom: 1px solid var(--gray-100);
-  }
-
   &__title {
     color: var(--gray-200);
   }
@@ -295,11 +294,11 @@
 
   .ui.styled.accordion .active.title,
   .ui.styled.accordion .accordion .active.title {
-    padding: 1rem 1rem 0.5rem 1rem !important;
+    padding: ($base-block-space * 2) ($base-block-space * 2) $base-block-space  ($base-block-space * 2) !important;
   }
 
   .ui.accordion .active.title .chevron.down.icon {
-    display: none;
+    position: relative;
+    top:calculateRem(5px);
   }
-
 }

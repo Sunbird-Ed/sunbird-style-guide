@@ -87,6 +87,12 @@
         width: inherit;
       }
 
+      .profile-avtar{
+        a:hover{
+            text-decoration: none;
+        }
+    }
+
        &>button {
          flex: auto;
        }

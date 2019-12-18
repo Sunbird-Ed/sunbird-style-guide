@@ -40,7 +40,30 @@
           <sui-select-option *ngFor="let option of selectOption" [value]="option">
           </sui-select-option>
         </sui-select>
-      <div class="ml-16 cursor-pointer"><img src="../../assets/images/Profile.svg" width="40px" height="40px"></div>
+
+      <div class="ml-16 cursor-pointer">
+          <a class="profile-avtar p-0 ml-15"
+          tabindex="0">
+          <div suiDropdown class="ui dropdown right top pointing" id="dropdown-menu-list-header">
+              <img src="assets/images/Profile.svg" width="40px" height="40px">
+              <div class="menu" suiDropdownMenu>
+                  <div class="item headerDropdownProfile">
+                      Profile
+                  </div>
+                  <div class="ui divider"></div>
+                  <a class="item" routerLink="">
+                      About SUNBIRD
+                  </a>
+                  <a class="item"  routerLink="">
+                      Telemetry Sync
+                  </a>
+              </div>
+          </div>
+          </a>
+       
+      </div>
     </div>
 
 </div>
+
+<!-- <img src="../../assets/images/Profile.svg" width="40px" height="40px"> -->

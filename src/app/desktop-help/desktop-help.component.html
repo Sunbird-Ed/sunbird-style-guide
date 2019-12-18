@@ -17,12 +17,15 @@
 
 <div class="content-header">
   <div class="ui container py-16">
-    <div class="sbcard__main_area d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
-      <div class="sbcard__info">
-        <div class="sbcard__title content-header__title font-weight-bold">
+    <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
+      <div>
+        <div class="content-header__title font-weight-bold">
           Great thinkers and Great thinkers</div>
-        <div class="sbcard__meta1"><span>Social Science</span>
-          <span class="dot-divider"></span><span>Class 8</span></div>
+        <div class="content-header__info fxsmall">
+          <span>Social Science</span>
+          <span class="dot-divider"></span>
+          <span>Class 8</span>
+        </div>
       </div>
       <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
         <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Update Textbook</button>
@@ -34,8 +37,8 @@
   </div>
 </div>
 
-<div class="ui container sb-two-column help-video mt-32">
-  <div class="sb-column help-video__player" id="player-area-height">
+<div class="ui container sb-two-column content-player mt-32">
+  <div class="sb-column content-player__info" id="player-area-height">
     <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio" #aspectRatio>
       <div>
         <video width="400" controls>
@@ -45,17 +48,31 @@
         </video>
       </div>
     </div>
-    <div class="help-video__player__details sb-bg-color-white" #playerInfo>
-      <h6 class="help-video__player__title  ml-8 mr-auto sb__ellipsis sb__ellipsis--two">How do i add content to SUNBIRD
-        app when i am offline or using a pen drive?&lrm;</h6>
-      <div class="help-video__player__tools">
-        <!-- <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon share alternate"></i><span>share</span></button> -->
-        <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-            class="icon download alternate"></i><span>Download</span></button>
+    <div class="d-flex content-player__info__details sb-bg-color-white" #playerInfo>
+      <div class="d-flex flex-dc">
+          <div class="content-player__info__title font-weight-bold ml-8 mr-auto sb__ellipsis sb__ellipsis--one">
+              Social Science Term 
+            </div>
+            <div class="content-player__info__title__subtitle fxsmall ml-8 mt-8">
+                <span class="mr-8">by TNSCERT</span>
+                <span class="mr-8">*</span>
+                <span>4.7</span>
+            </div>
       </div>
-    </div>
+    
+        <div class="d-flex content-player__info__tools">
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
+              class="icon share alternate"></i><span>share</span></button>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
+              class="icon download alternate"></i><span>Download</span></button>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
+              class="icon share alternate"></i><span>share</span></button>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
+              class="icon download alternate"></i><span>Download</span></button>
+        </div>
+      </div>
   </div>
-  <div class="sb-column help-video__content" [style.height.px]="videoContainerHeight"
+  <div class="sb-column content-player__content" [style.height.px]="videoContainerHeight"
     (window:resize)="onWindowResize($event)">
 
     <!-- card component -->
@@ -79,107 +96,89 @@
   </div>
 </div>
 
-<div class="ui container sb-two-column mt-32">
-    <div class="sb-column content-metadeta">
-        <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course">
-            <div class="sbcard__main_area p-16 pb-0">
-              <div class="sbcard__information pb-16">
-                <div class="content-metadeta__title fsmall font-weight-bold mb-8">DESCRIPTION</div>
-                <div class="content-metadeta__text  fsmall">
-                  Curabitur lobortis id lorem id bibendum.
-                  Ut id consectetur magna. Quisque volut lobortis is id lorem id bibendum.
-                  Ut id consectetur magna.
-                </div>
+<div class="ui container sb-two-column py-8">
+  <div class="sb-column">
+    <div class="content-metadeta sb-bg-color-white mt-8">
+      <div class="content-metadeta__title fsmall font-weight-bold p-16">DESCRIPTION</div>
+      <p class="content-metadeta__text px-16 fsmall mb-0">
+        Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volut lobortis is id lorem id
+        bibendum. Ut
+        id consectetur magna.
+      </p>
+
+      <sui-accordion class="styled fluid sb-accordion">
+        <sui-accordion-panel>
+          <div title class="sb-accordion-title fsmall">
+            Content Information
+            <i class="chevron down icon ml-8"></i>
+          </div>
+          <div content class="sb-accordion-content sb-bg-color-white pt-0 pb-8">
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">BOARD</div>
+              <div class="content-metadeta__text  fsmall">CBSE </div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">MEDIUM</div>
+              <div class="content-metadeta__text  fsmall">English</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">CLASS</div>
+              <div class="content-metadeta__text  fsmall">Class 8</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">SUBJECT</div>
+              <div class="content-metadeta__text  fsmall">English</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title fxsmall mb-8">License terms</div>
+              <div class="content-metadeta__text fsmall">
+                CC BY-NC-SA 4.0: This license is Creative Commons
+                Attribution-NonCommercial-ShareAlike -
+                <a href="#" class="content-metadeta__text__link cursor-pointer mt-8">
+                  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode</a>
               </div>
             </div>
-    
-            <sui-accordion class="styled fluid sb-accordion">
-              <sui-accordion-panel>
-                <div title class="sb-accordion-title fsmall">
-                  Content Information
-                  <i class="chevron down icon ml-8"></i>
-                </div>
-                <div content class="sb-accordion-content sb-bg-color-white pt-0 pb-8">
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">BOARD
-                    </div>
-                    <div class="content-metadeta__text  fsmall">CBSE </div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">MEDIUM
-                    </div>
-                    <div class="content-metadeta__text  fsmall">English</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">CLASS
-                    </div>
-                    <div class="content-metadeta__text  fsmall">Class 8</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">SUBJECT
-                    </div>
-                    <div class="content-metadeta__text  fsmall">English</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title fxsmall mb-8">License terms
-                    </div>
-                    <div class="content-metadeta__text fsmall">
-                      CC BY-NC-SA 4.0: This license is Creative Commons
-                      Attribution-NonCommercial-ShareAlike -
-                      <a href="#"
-                        class="content-metadeta__text__link cursor-pointer mt-8">https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode</a>
-                    </div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">COPYRIGHT
-                    </div>
-                    <div class="content-metadeta__text  fsmall">Content Credits</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">CREATED ON DIKSHA BY
-                    </div>
-                    <div class="content-metadeta__text  fxsmall">Creator Name</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">AUTHOR
-                    </div>
-                    <div class="content-metadeta__text  fsmall
-                          ">Author Name</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">CREATED ON
-                    </div>
-                    <div class="content-metadeta__text  fsmall
-                          ">2nd April 2018</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall mb-8">KEYWORDS
-                    </div>
-                    <div class="content-metadeta__text  fsmall">Story</div>
-                  </div>
-    
-                  <div class="py-8">
-                    <div class="content-metadeta__title  fxsmall">RESOURCE TYPE
-                    </div>
-                    <div class="content-metadeta__text  fsmall">Read</div>
-                  </div>
-    
-                </div>
-              </sui-accordion-panel>
-            </sui-accordion>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">COPYRIGHT</div>
+              <div class="content-metadeta__text  fsmall">Content Credits</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">CREATED ON SUNBIRD BY</div>
+              <div class="content-metadeta__text  fxsmall">Creator Name</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">AUTHOR</div>
+              <div class="content-metadeta__text  fsmall">Author Name</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">CREATED ON</div>
+              <div class="content-metadeta__text  fsmall">2nd April 2018</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">KEYWORDS</div>
+              <div class="content-metadeta__text  fsmall">Story</div>
+            </div>
+
+            <div class="py-8">
+              <div class="content-metadeta__title  fxsmall mb-8">RESOURCE TYPE</div>
+              <div class="content-metadeta__text  fsmall">Read</div>
+            </div>
+
           </div>
-        </div>
-      </div>
+        </sui-accordion-panel>
+      </sui-accordion>
+
+    </div>
+  </div>
 </div>
 
 <div class="ui container sb-two-column help-faq mt-32 mb-32">
