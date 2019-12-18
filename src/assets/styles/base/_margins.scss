@@ -25,17 +25,17 @@ $mValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
   /* Margin in left direction */
   .ml-#{$value} {
     @include margin(null null null $baseMvalue);
-    margin: 0 0 0 $baseMvalue;
     html[dir="rtl"] & {
       @include margin(null $baseMvalue null null);
+      margin: 0 0 0 $baseMvalue;
     }
   }
   /* Margin in right direction */
   .mr-#{$value} {
     @include margin(null $baseMvalue null null);
-    margin: 0 $baseMvalue 0 0;
     html[dir="rtl"] & {
       @include margin(null null null $baseMvalue);
+      margin: 0 $baseMvalue 0 0;
     }
   }
 }
