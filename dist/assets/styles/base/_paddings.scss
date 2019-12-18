@@ -4,7 +4,7 @@ $pValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
   $basePvalue: 0.0625 * $value + rem;
   /* padding in all direction */
   .p-#{$value} {
-    padding: $basePvalue;
+    @include padding($basePvalue);
   }
   /* padding in top direction */
   .pt-#{$value} {
@@ -27,6 +27,7 @@ $pValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
     @include padding(null null null $basePvalue);
     html[dir="rtl"] & {
       @include padding(null $basePvalue null null);
+      padding-left: 0;
     }
   }
   /* padding in right direction */
@@ -34,6 +35,7 @@ $pValues: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 52, 56, 60, 64, 68, 72, 76, 80,
     @include padding(null $basePvalue null null);
     html[dir="rtl"] & {
       @include padding(null null null $basePvalue);
+      padding-right: 0;
     }
   }
 }
