@@ -11,10 +11,10 @@
     </div>
 
     <div class="sb-menubar sb-bg-color-white">
-      <div class="sb-menubar__content ui container d-flex flex-ai-center flex-jc-space-between">
+      <div class="ui container d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
         <app-offline-menubar></app-offline-menubar>
-        <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal pt-8">
-          <span class="plus-icon mr-5">&#43;</span>Load Content</button>
+        <button class="d-flex sb-btn sb-btn-outline-tertiary sb-btn-normal sb-btn-load">
+          <i class="plus icon mr-5"></i>Load Content</button>
       </div>
     </div>
   </div>
@@ -61,6 +61,21 @@
     <app-desktop-search-result></app-desktop-search-result>
   </div>
 </header>
+
+<div>
+  <div class="ui container">
+    <div class="category-label fs-1 py-24">No results found for "Social Science" from <a href="#" class="link">My Downloads</a></div>
+    <div>Masonary grid list items container</div>
+    <div class="text-center"><button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn">View more <i class="icon angle right"></i></button></div> 
+  </div>
+  <hr class="border">
+  <div class="ui container">
+    <div class="category-label fs-1 py-24">Showing 10 results for "Social Science" from <a href="#" class="link">Online Library</a></div>
+    <div>Masonary grid list items container</div>
+    <div class="text-center"><button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn">View more <i class="icon angle right"></i> </button></div> 
+    </div>
+</div>
+
 
 <div class="ui container" *ngIf="!isShownContent">
   <div class="sb-g">
