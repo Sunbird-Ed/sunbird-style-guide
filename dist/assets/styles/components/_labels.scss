@@ -1,6 +1,6 @@
 // label
 $sb-label-status-width: calculateRem(130px);
-$sb-label-status-height: calculateRem(16px);
+$sb-label-status-height: auto;
 $sb-label-status-padding: calculateRem(5px);
 $sb-label-status-font-size: calculateRem(14px);
 $sb-label-status-before-border: calculateRem(1px) solid teal;
@@ -35,36 +35,7 @@ $sb-label-status-indicator-error-background: $tertiary-color;
     decoration: none;
   }
 }
-// label sizes
-.sb-label-xs,
-.sb-label-normal,
-.sb-label-sm,
-.sb-label-md {
-  padding: ($base-block-space / 1) ($base-block-space * 2);
-}
-.sb-label-xs {
-  height: ($base-block-space * 3);
-  padding: ($base-block-space / 2) ($base-block-space / 2);
-  font-size: $font-size-sm;
-}
-//primary label style
-.sb-label-normal {
-  height: ($base-block-space * 4);
-  font-size: $font-size-sm;
-}
-.sb-label-sm {
-  height: ($base-block-space * 5);
-  font-size: $font-size-normal;
-}
-.sb-label-md {
-  height: ($base-block-space * 6);
-  font-size: $font-size-md;
-}
-.sb-label-lg {
-  height: ($base-block-space * 7);
-  padding: ($base-block-space * 3);
-  font-size: $font-size-lg;
-}
+
 .sb-label-table {
   padding: ($base-block-space / 2) ($base-block-space);
   font-size: $font-size-sm;
@@ -79,102 +50,91 @@ $sb-label-status-indicator-error-background: $tertiary-color;
     margin-right: $base-block-space/2;
   }
 }
-// default outline colored labels
-.sb-label-outline-primary {
-  @include label-theme-bgwhite($primary-color);
+
+// sb label sizes
+$sblabelsSize: "xs" (calculateRem(4px) calculateRem(4px)) calculateRem(24px)
+    calculateRem(12px),
+  "sm" (calculateRem(8px) calculateRem(16px)) calculateRem(40px)
+    calculateRem(14px),
+  "normal" (calculateRem(8px) calculateRem(16px)) calculateRem(32px)
+    calculateRem(12px),
+  "md" (calculateRem(8px) calculateRem(16px)) calculateRem(48px)
+    calculateRem(16px),
+  "lg" (calculateRem(24px) calculateRem(24px)) calculateRem(56px)
+    calculateRem(20px);
+
+@each $i in $sblabelsSize {
+  .sb-label-#{nth($i, 1)} {
+    padding: nth($i, 2);
+    height: nth($i, 3);
+    font-size: nth($i, 4);
+  }
 }
-.sb-label-outline-secondary {
-  @include label-theme-bgwhite($secondary-200);
+
+$sblabelsColor: "gray-hs" var(--gray-hs), "gray" var(--gray),
+  "gray-0" var(--gray-0), "gray-100" var(--gray-100), "gray-200" var(--gray-200),
+  "gray-300" var(--gray-300), "gray-400" var(--gray-400),
+  "gray-800" var(--gray-800), "primary" var(--blue),
+  "primary-0" var(--primary-0), "primary-100" var(--primary-100),
+  "primary-200" var(--primary-200), "primary-250" var(--primary-250),
+  "primary-300" var(--primary-300), "primary-400" var(--primary-400),
+  "primary-600" var(--primary-600), "primary-800" var(--primary-800),
+  "info" var(--blue), "secondary" var(--green), "secondary-0" var(--secondary-0),
+  "secondary-100" var(--secondary-100), "secondary-200" var(--secondary-200),
+  "secondary-400" var(--secondary-400), "success" var(--green),
+  "success-0" var(--secondary-0), "success-100" var(--secondary-100),
+  "success-200" var(--secondary-200), "success-400" var(--secondary-400),
+  "tertiary" var(--orange), "tertiary-0" var(--tertiary-0),
+  "tertiary-100" var(--tertiary-100), "tertiary-400" var(--tertiary-400),
+  "warning" var(--orange), "warning-0" var(--tertiary-0),
+  "warning-100" var(--tertiary-100), "warning-400" var(--tertiary-400),
+  "red" var(--red), "red-0" var(--red-0), "red-100" var(--red-100),
+  "red-400" var(--red-400), "error" var(--red), "error-0" var(--red-0),
+  "error-100" var(--red-100), "error-400" var(--red-400), "white" var(--white),
+  "black" var(--black); // colors
+
+@each $i in $sblabelsColor {
+  //sb label brands colors
+  .sb-label-#{nth($i, 1)} {
+    @include label-theme(nth($i, 2));
+  }
+  //sb label outline brand colors
+  .sb-label-outline-#{nth($i, 1)} {
+    @include label-theme-bgwhite(nth($i, 2));
+  }
+  // sb label text brand colors
+  .sb-label-text-#{nth($i, 1)} {
+    color: nth($i, 2);
+  }
 }
-.sb-label-outline-tertiary {
-  @include label-theme-bgwhite($tertiary-color);
+
+[class*="sb-label-gray-"] {
+  color: var(--gray-400);
 }
-// status outline labels
-.sb-label-outline-info {
-  @include label-theme-bgwhite($primary-color);
+[class*="sb-label-primary-"],
+[class*=".sb-label-info-"] {
+  color: var(--primary-color);
 }
-.sb-label-outline-success {
-  @include label-theme-bgwhite($secondary-200);
+[class*="sb-label-secondary-"],
+[class*="sb-label-success-"] {
+  color: var(--secondary-200);
 }
-.sb-label-outline-warning {
-  @include label-theme-bgwhite($tertiary-color);
+[class*="sb-label-tertiary-"],
+[class*="sb-label-warning-"] {
+  color: var(--tertiary-color);
 }
-.sb-label-outline-error {
-  @include label-theme-bgwhite($red);
+[class*="sb-label-red-"],
+[class*="sb-label-error-"] {
+  color: var(--red-400);
 }
-.sb-label-outline-gray {
-  @include label-theme-bgwhite($gray-800);
-}
-// default colored labels
-.sb-label-primary,
-.sb-label-info {
-  @include label-theme($primary-color);
-}
-.sb-label-primary-100,
-.sb-label-info-100 {
-  @include label-theme($primary-100);
-  color: $primary-color;
-}
-.sb-label-text-primary-100,
-.sb-label-text-info-100 {
-  color: $primary-color;
-}
-.sb-label-secondary,
-.sb-label-success {
-  @include label-theme($secondary-200);
-}
-.sb-label-secondary-0,
-.sb-label-success-0 {
-  @include label-theme($secondary-0);
-  color: $secondary-200;
-}
-.sb-label-text-secondary-200,
-.sb-label-text-success-200 {
-  color: $secondary-200;
-}
-.sb-label-tertiary,
-.sb-label-warning {
-  @include label-theme($tertiary-color);
-}
-.sb-label-tertiary-0,
-.sb-label-warning-0 {
-  @include label-theme($tertiary-0);
-  color: $tertiary-color;
-}
-.sb-label-text-tertiary-0,
-.sb-label-text-warning-0 {
-  color: $tertiary-color;
-}
-.sb-label-success {
-  @include label-theme($success-color);
-}
-.sb-label-info {
-  @include label-theme($info-color);
-}
-.sb-label-warning {
-  @include label-theme($warning-color);
-}
-.sb-label-error {
-  @include label-theme($danger-color);
-}
-.sb-label-error-0 {
-  @include label-theme($red-0);
-  color: $red-400;
-}
-.sb-label-gray-0 {
-  @include label-theme($gray-0);
-  color: $gray-400;
-}
-.sb-label-text-gray-0 {
-  color: $gray-400;
-}
+
 //qr code result label
 .sb-result-label,
 .sb-pageSection-count {
   background: $tertiary-color;
   padding: ($base-block-space/2) ($base-block-space);
   border-radius: ($base-block-space / 2);
-  font-size: ($font-size-base + 2);
+  font-size: calculateRem(16px);
   border: none;
   height: auto;
 }
@@ -185,13 +145,7 @@ $sb-label-status-indicator-error-background: $tertiary-color;
   color: $gray-800;
   margin-bottom: 0px;
 }
-.sb-section-title {
-  font-size: $font-size-md;
-  font-weight: 600;
-  line-height: ($base-block-space * 3);
-  color: $gray-800;
-  margin-bottom: 0px;
-}
+
 .sb-filter-label {
   display: inline-block;
   > div.d-inline-flex {
@@ -214,6 +168,7 @@ $sb-label-status-indicator-error-background: $tertiary-color;
     border-radius: $base-block-space/4;
   }
 }
+
 //network status label offline
 .sb-label-status {
   width: $sb-label-status-width;

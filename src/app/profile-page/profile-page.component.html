@@ -16,7 +16,8 @@
         <div class="fmedium sb-profile-page__location-label">District :</div>
         <div class="fmedium ml-4"> Bangalore </div>
       </div>
-      <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button" (click)="showLocationModal = !showLocationModal">Edit</button>
+      <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button"
+        (click)="showLocationModal = !showLocationModal">Edit</button>
     </div>
   </section>
 
@@ -40,26 +41,28 @@
             <span class="fmedium white-space-nowrap">Classes :</span>
             <span class="fmedium font-weight-bold pl-4">Class 6, Class 7, Class 8 </span>
           </div>
-          <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button" (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
+          <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button"
+            (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<sui-modal *ngIf="showLocationModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
-[size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showLocationModal = !showLocationModal" #modal>
-<div class="sb-modal-header">
+<sui-modal *ngIf="showLocationModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
+  class="sb-modal" appBodyScroll (dismissed)="showLocationModal = !showLocationModal" #modal>
+  <div class="sb-modal-header">
     Your Location
-</div>
-<div class="sb-modal-content o-y-visible">
+  </div>
+  <div class="sb-modal-content o-y-visible">
     <form class="sb-form">
-        <p class="mb-8">Your location details helps us to suggest content that is useful to you. Is the location given correct? if not, select your correct location and click Submit</p>
+      <p class="mb-8">Your location details helps us to suggest content that is useful to you. Is the location given
+        correct? if not, select your correct location and click Submit</p>
       <div class="sb-field">
         <label>State :</label>
-          <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
-            <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
-          </sui-select>
+        <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
+          <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
+        </sui-select>
       </div>
       <div class="sb-fielgroup">
         <label>District:</label>
@@ -71,27 +74,27 @@
       </div>
     </form>
   </div>
-<div class="sb-modal-actions">
-  <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
-    Submit
-  </button>
-</div>
+  <div class="sb-modal-actions">
+    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
+      Submit
+    </button>
+  </div>
 </sui-modal>
 
 
 
 <sui-modal *ngIf="showBoardSelectnModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
-[size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showBoardSelectnModal = !showBoardSelectnModal" #modal>
-<div class="sb-modal-header">
+  [size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showBoardSelectnModal = !showBoardSelectnModal" #modal>
+  <div class="sb-modal-header">
     To discover content relevant to you, update the following details:
-</div>
-<div class="sb-modal-content o-y-visible">
+  </div>
+  <div class="sb-modal-content o-y-visible">
     <form class="sb-form">
       <div class="sb-field">
-        <label>Board :</label>
-          <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
-            <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
-          </sui-select>
+        <label>Board:</label>
+        <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
+          <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
+        </sui-select>
       </div>
       <div class="sb-fielgroup">
         <label>Medium:</label>
@@ -102,26 +105,26 @@
         </div>
       </div>
       <div class="sb-fielgroup">
-          <label>Class:</label>
-          <div class="sb-field">
-            <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
-              <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-            </sui-select>
-          </div>
+        <label>Class:</label>
+        <div class="sb-field">
+          <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
+            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
+          </sui-select>
         </div>
-        <div class="sb-fielgroup">
-            <label>Subject:</label>
-            <div class="sb-field">
-              <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
-                <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-              </sui-select>
-            </div>
-          </div>
+      </div>
+      <div class="sb-fielgroup">
+        <label>Subject:</label>
+        <div class="sb-field">
+          <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
+            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
+          </sui-select>
+        </div>
+      </div>
     </form>
   </div>
-<div class="sb-modal-actions">
-  <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
-    Submit
-  </button>
-</div>
+  <div class="sb-modal-actions">
+    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
+      Submit
+    </button>
+  </div>
 </sui-modal>

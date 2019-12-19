@@ -66,6 +66,7 @@
   }
 
   &__content {
+    overflow-y: auto;
     padding-right: calculateRem(8px);
     margin-right: calculateRem(-8px);
     padding-bottom: calculateRem(8px);
