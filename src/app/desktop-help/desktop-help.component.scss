@@ -48,7 +48,6 @@
   &__info {
 
     &__details {
-      align-items: center;
       // height: calculateRem(64px);
       padding: calculateRem(8px);
       @include respond-below(sm) {
@@ -67,6 +66,7 @@
   }
 
   &__content {
+    overflow-y: auto;
     padding-right: calculateRem(8px);
     margin-right: calculateRem(-8px);
     padding-bottom: calculateRem(8px);
