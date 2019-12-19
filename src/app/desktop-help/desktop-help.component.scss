@@ -48,7 +48,6 @@
   &__info {
 
     &__details {
-      align-items: center;
       // height: calculateRem(64px);
       padding: calculateRem(8px);
       @include respond-below(sm) {
