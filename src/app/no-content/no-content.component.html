@@ -1,40 +1,47 @@
 <div class="no-content-container d-flex flex-jc-center sb-bg-color-primary-0">
-  <div class="d-flex flex-dc flex-jc-center flex-ai-center pt-48 p-24">
-    <div>
-      <img src="../../assets/images/no-text.svg" width="101px" height="124px">
+  <div class="my-48 p-16 w-100">
+    <div class="d-flex flex-dc flex-jc-center flex-ai-center">
+      <div>
+        <img src="../../assets/images/no-text.svg" width="101px" height="124px">
+      </div>
+      <div class="mt-8">No Textbooks Available</div>
+      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mt-16 mb-8" (click)="showLoadModal()">Load
+        Content</button>
+      <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
     </div>
-    <div class="mt-8">No Textbooks Available</div>
-    <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal my-24" (click)="showLoadModal()">Load
-      Content</button>
-    <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
   </div>
 </div>
 
 <div class="no-content-container d-flex flex-jc-center sb-bg-color-gray-0">
-  <div class="d-flex flex-dc flex-jc-center flex-ai-center pt-48 p-24">
-    <div>
-      <img src="../../assets/images/offline-icon.svg" width="90px" height="90px">
-    </div>
-    <div class="fs-1-16 font-weight-bold">You are offline</div>
-    <p class="fs-1 mt-8">Please connect to the internet to view content</p>
-    <p class="fs-1 mb-16">Have a textbook downloaded on your system/ pendrive? Click below link to upload</p>
-    <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mb-8" (click)="showLoadModal()">
-      Load Content</button>
-    <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
-  </div>
-</div>
-
-<div class="no-content-container d-flex flex-jc-center sb-bg-color-primary-0">
-    <div class="d-flex flex-dc flex-jc-center flex-ai-center pt-48p-24">
+  <div class="my-48 p-16 w-100">
+    <div class="d-flex flex-dc flex-jc-center flex-ai-center">
       <div>
         <img src="../../assets/images/offline-icon.svg" width="90px" height="90px">
       </div>
-      <div class="fs-1-16 font-weight-bold">Board is adding books</div>
-      <p class="fs-0-92 mt-8 text-center">Your board is yet to add more books.Tap the button to see more books and content on SUNBIRD</p>
+      <div class="fs-1-16 font-weight-bold">You are offline</div>
+      <p class="fs-1 mt-8">Please connect to the internet to view content</p>
+      <p class="fs-1">Have a textbook downloaded on your system/ pendrive? Click below link to upload</p>
+      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mb-8" (click)="showLoadModal()">
+        Load Content</button>
+      <div class="fs-0-785">Load Textbooks to your library for offline usage</div>
+    </div>
+  </div>
+</div>
+
+<div class="no-content-container d-flex flex-jc-center sb-bg-color-white">
+  <div class="my-48 p-16 w-100">
+    <div class="d-flex flex-dc flex-jc-center flex-ai-center">
+      <div>
+        <img src="../../assets/images/group.svg" width="90px" height="90px">
+      </div>
+      <div class="fs-1-16 board-title">Board is adding books</div>
+      <p class="fs-0-92 mt-8 text-center board-text">Your board is yet to add more books.Tap the button to see more
+        books and content on SUNBIRD</p>
       <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mb-8" (click)="showLoadModal()">
         SEE MORE BOOKS AND CONTENT</button>
     </div>
-  </div> 
+  </div>
+</div>
 
 
 <sui-modal *ngIf="showLoadContent" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
@@ -42,19 +49,18 @@
   <div class="sb-modal-header font-weight-normal">Load Content from</div>
   <div class="sb-modal-content">
     <div class="p-8" *ngIf='!loadContent'>
-      <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary disable-color mb-16">
-        <div class="d-flex">
+      <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary disable-color m-0 mb-16">
+        <div class="d-flex flex-ai-center">
           <input type="radio" id="offline" name="example" disabled="disabled">
           <label for="offline">Online Library</label>
-          <div class="sb-label-status sb-label-status-error">
-            <span class="sb-label-status-indicator sb-label-status-indicator-error"></span>You are offline
-          </div>
+          <div class="sb-label sb-label-table sb-label-error-0 ml-12">
+            <span class="sb-live-error mr-8"></span>You are offline</div>
         </div>
         <div class="fs-0-92">This imports/ downloads contents from Sunbird Online Library when if you
           are connected to Internet</div>
       </div>
       <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary">
-        <div class="d-flex">
+        <div class="d-flex flex-ai-center">
           <input type="radio" id="radio2" name="example2" checked>
           <label class="font-weight-bold" for="radio2">Pendrive or External Drives</label>
         </div>
@@ -63,19 +69,19 @@
       </div>
     </div>
     <div class="p-8" *ngIf='loadContent'>
-      <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary mb-16">
-        <div class="d-flex">
+      <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary m-0 mb-16">
+        <div class="d-flex flex-ai-center">
           <input type="radio" id="radio3" name="example3" checked>
           <label class="font-weight-bold" for="radio3">Online Library</label>
-          <div class="sb-label-status sb-label-status-success">
-            <span class="sb-label-status-indicator sb-label-status-indicator-success"></span>You are online
+          <div class="sb-label sb-label-table sb-label-success-0 ml-12">
+            <span class="sb-live mr-8"></span>You are online
           </div>
         </div>
         <div class="fs-0-92">
           This imports/ downloads contents from Sunbird Online Library when if you are connected to Internet</div>
       </div>
       <div class="d-flex flex-dc sb-radio-btn-checkbox sb-radio-btn-secondary">
-        <div class="d-flex">
+        <div class="d-flex flex-ai-center">
           <input type="radio" id="radio4" name="example4">
           <label class="font-weight-bold" for="radio4">Pendrive or External Drives</label>
         </div>

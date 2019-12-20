@@ -145,7 +145,7 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
         font-size: 2em;
       }
       span {
-        margin: 0.5rem 0 0 0;
+        margin: 0.25rem 0 0 0;
       }
     }
   }
@@ -219,7 +219,7 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
     margin-right: 0;
   }
   html[dir="rtl"] & {
-    padding: ($base-block-space * 1) ($base-block-space * 1)
+    padding: ($base-block-space * 1) ($base-block-space * 2)
       ($base-block-space * 1) ($base-block-space * 2);
     i.icon {
       margin-left: 0;

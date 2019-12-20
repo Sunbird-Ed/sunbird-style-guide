@@ -6,7 +6,7 @@
           <i class="icon-svg icon-svg--xxs icon-filter">
             <svg _ngcontent-nak-c11="" class="icon icon-svg--white">
               <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
-            </svg></i> Back</button>
+            </svg></i>&nbsp;Back</button>
       </div>
     </div>
     <div class="d-flex sb-bg-color-gray-0 practical-header">
@@ -36,46 +36,102 @@
 
     <form class='ui container licence-form'>
       <div class='licence-form__content'>
-        <div class="d-flex licence-form__content__fields">
-          <div class="sb-field">
-            <label for="outcome">Learning Outcome</label>
-            <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectOutcome"
-              placeholder="select">
-              <sui-select-option *ngFor="let option of selectOutcomeOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
+        <div class="ui stackable grid licence-form__content__fields">
+          <div class="row">
+            <div class="twelve wide column">
+              <div class="sb-field">
+                <label for="outcome" class="d-flex mb-4">Learning Outcome <span class="sb-color-red">*</span> <a
+                    class="ml-4" href="javascript:void(0)" title="title comes here"><img width="16" alt=""
+                      src="assets/images/Info.svg"></a></label>
+                <sui-select class="selection" labelField="name" name="outcome" [(ngModel)]="selectOutcome"
+                  placeholder="select">
+                  <sui-select-option *ngFor="let option of selectOutcomeOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
           </div>
-
-          <div class="sb-field space-btn-field">
-            <label for="level">Learning Level</label>
-            <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectLevel" placeholder="select">
-              <sui-select-option *ngFor="let option of selectLevelOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
+          <div class="row pt-0">
+            <div class="four wide column">
+              <div class="sb-field space-btn-field">
+                <label for="level" class="d-flex mb-4">Learning Level <span class="sb-color-red">*</span> <a
+                    href="javascript:void(0)" title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <sui-select class="selection" labelField="name" name="level" [(ngModel)]="selectLevel"
+                  placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLevelOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
+            <div class="four wide column p-0">
+              <div class="sb-field">
+                <label for="author" class="d-flex mb-4">Authors <a href="javascript:void(0)"
+                    title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
+              </div>
+            </div>
+            <div class="four wide column">
+              <div class="sb-field space-btn-field">
+                <label for="license" class="d-flex mb-4">License <a href="javascript:void(0)"
+                    title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectLicence"
+                  placeholder="select">
+                  <sui-select-option *ngFor="let option of selectLicenseOption" [value]="option">
+                  </sui-select-option>
+                </sui-select>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="d-flex licence-form__content__fields">
-          <div class="sb-field">
-            <label for="author">Authors</label>
-            <input type="email" name="author" class="sb-form-control" placeholder="Type Author's Name">
+        <div class="ui stackable grid licence-form__content__fields">
+          <div class="row">
+            <div class="twelve wide column">
+              <div class="sb-field">
+                <label for="outcome" class="d-flex mb-4">Learning Outcome <span class="sb-color-red">*</span> <a
+                    class="ml-4" href="javascript:void(0)" title="title comes here"><img width="16" alt=""
+                      src="assets/images/Info.svg"></a></label>
+                <p class="fs-0-785">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem
+                  Ipsum simply dummy text of the printing and typesetting industry</p>
+              </div>
+            </div>
           </div>
-
-          <div class="sb-field space-btn-field">
-            <label for="license">License</label>
-            <sui-select class="selection" labelField="name" name="license" [(ngModel)]="selectLicence"
-              placeholder="select">
-              <sui-select-option *ngFor="let option of selectLicenseOption" [value]="option">
-              </sui-select-option>
-            </sui-select>
+          <div class="row pt-0">
+            <div class="four wide column">
+              <div class="sb-field space-btn-field">
+                <label for="level" class="d-flex mb-4">Learning Level <span class="sb-color-red">*</span> <a
+                    href="javascript:void(0)" title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <p class="fs-0-785">Lorem Ipsum is simply dummy text of the printing Dummy text of the printing</p>
+              </div>
+            </div>
+            <div class="four wide column p-0">
+              <div class="sb-field">
+                <label for="author" class="d-flex mb-4">Author(s) <a href="javascript:void(0)"
+                    title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <p class="fs-0-785">Lorem Ipsum is simply </p>
+              </div>
+            </div>
+            <div class="four wide column">
+              <div class="sb-field space-btn-field">
+                <label for="license" class="d-flex mb-4">License <a href="javascript:void(0)"
+                    title="title comes here"><img width="16" alt="" class="ml-4"
+                      src="assets/images/Info.svg"></a></label>
+                <p class="fs-0-785">ACT456</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <p class="paragraph fs-0-785">
-        “By creating content on SunbirdEd, you consent to publish it under the Creative Commons License Framework
-        <a href="javascript:void(0);" class="links">https://creativecommons.org/licenses .</a>
-        Please choose the applicable creative commons license you wish to apply to your content”.
+        <strong>Disclaimer:</strong> By uploading assets to ...., you consent to publish under the Common Creative
+        License framework. For details, refer
+        <a href="javascript:void(0);" class="links">https://creativecommons.org/licenses</a>. Select the appropriate
+        license.
       </p>
     </form>
   </div>
@@ -100,7 +156,7 @@
 
     <div *ngIf='uploadFiles' class="uploading-files">
       <div class='d-flex flex-dc flex-jc-center flex-ai-center icon'>
-        <img src="../../assets/images/Spin.gif" class='process-icon'>
+        <img src="assets/images/Spin.gif" width="64" class='process-icon'>
         <div class="fs-0-785 pt-16">120 MB Uploading Files (65%)
         </div>
         <sui-progress [value]="60" [maximum]="100" class="mb-0 mr-0"></sui-progress>
