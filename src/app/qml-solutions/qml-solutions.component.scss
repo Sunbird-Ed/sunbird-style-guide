@@ -122,7 +122,6 @@
     position: absolute;
     width: 100%;
     height: 1em;
-    background: #20c688;
     bottom: 0;
     overflow: hidden;
     z-index: 1;
@@ -165,6 +164,12 @@
     background: #20c688;
   }
   .feedback-overlay .feedback-popup-content.wrong-answer-popup .left-section {
+    background: #7CB5EC;
+  }
+  .feedback-overlay .feedback-popup-content.correct-answer-popup .left-section .result .empty-layer {
+    background: #20c688;
+  }
+  .feedback-overlay .feedback-popup-content.wrong-answer-popup .left-section .result .empty-layer {
     background: #7CB5EC;
   }
   .feedback-overlay .feedback-popup-content .sb-btn-responsive {
