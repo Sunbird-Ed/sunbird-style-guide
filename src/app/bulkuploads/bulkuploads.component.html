@@ -508,4 +508,162 @@
 </div>
 <!--/Normal Modal-->
 
+
+<!--Normal Modal-->
+<div class="docs-sections">
+    <h4 class="docs-sectionHeading">
+        Delete Content
+      <i class="fa fa-code text-gray docs-expandCode" (click)="delectcontentmodal = !delectcontentmodal" title="Toggle Code"
+        tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode">
+      <div class="sb-bulk-upload">
+        <button class="sb-btn sb-btn-error sb-btn-normal " (click)="showDelectContentModal = !showDelectContentModal">
+            Delete Content
+        </button>
+      </div>
+      <sui-modal *ngIf="showDelectContentModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+        [size]="'normal'" class="sb-modal sb-error sb-modal-center" appBodyScroll
+        (dismissed)="showDelectContentModal = !showDelectContentModal" #modal>
+        <div class="sb-modal-header text-left">
+            Delete Content
+        </div>
+        <div class="sb-modal-content">
+            <p>Lorem Ipsum is simply dummy text of the 
+                printingand typesetting industry.</p> 
+        </div>
+        <div class="sb-modal-actions">
+          <button type="button" class="sb-btn sb-btn-normal"> Delete </button>
+        </div>
+      </sui-modal>
+    </div>
+    <!--/Display output-->
+</div>
+  <!--/Normal Modal-->
+
+<!--Normal Modal-->
+<div class="docs-sections">
+    <h4 class="docs-sectionHeading">
+       Publish
+      <i class="fa fa-code text-gray docs-expandCode" (click)="publishmodal = !publishmodal" title="Toggle Code"
+        tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode">
+      <div class="sb-bulk-upload">
+        <button class="sb-btn sb-btn-primary sb-btn-normal " (click)="showPublishModal = !showPublishModal">
+            Publish
+        </button>
+      </div>
+      <sui-modal *ngIf="showPublishModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+        [size]="'normal'" class="sb-modal" appBodyScroll
+        (dismissed)="showPublishModal = !showPublishModal" #modal>
+        <div class="sb-modal-header text-left">
+            Publish (Content Type)
+        </div>
+        <div class="sb-modal-content">
+           <div class="sb-publish-content">
+             <div class="sb-publish-content-title"> Click Publish to:</div>
+             <p class="py-8">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+             </p>
+           </div>
+        </div>
+        <div class="sb-modal-actions">
+          <button type="button" class="sb-btn sb-btn-normal sb-btn-primary"> Publish </button>
+        </div>
+      </sui-modal>
+    </div>
+    <!--/Display output-->
+</div>
+  <!--/Normal Modal-->
+
+
+ <!--Normal Modal-->
+ <div class="docs-sections">
+    <h4 class="docs-sectionHeading">
+        Review Comments
+      <i class="fa fa-code text-gray docs-expandCode" (click)="reviewmodal = !reviewmodal" title="Toggle Code"
+        tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode">
+      <div class="sb-bulk-upload">
+        <button class="sb-btn sb-btn-primary sb-btn-normal " (click)="showReviewModal = !showReviewModal">
+            Review Comments
+        </button>
+      </div>
+      <sui-modal *ngIf="showReviewModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+        [size]="'normal'" class="sb-modal" appBodyScroll
+        (dismissed)="showReviewModal = !showReviewModal" #modal>
+        <div class="sb-modal-header">
+            Review Comments
+        </div>
+        <div class="sb-modal-content">
+           <div class="sb-publish-content">
+              <div class="review-modal-list">
+                <ol class="list">
+                  <li class="pb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </li>
+                  <li class="pb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </li>
+                  <li class="pb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </li>
+                </ol>
+           </div>
+           </div>
+        </div>
+        <div class="sb-modal-actions">
+          <button type="button" class="sb-btn sb-btn-normal sb-btn-primary"> Continue </button>
+        </div>
+      </sui-modal>
+    </div>
+    <!--/Display output-->
+</div>
+  <!--/Normal Modal-->
+
+   <!--Normal Modal-->
+ <div class="docs-sections">
+    <h4 class="docs-sectionHeading">
+        Add Review
+      <i class="fa fa-code text-gray docs-expandCode" (click)="addreviewmodal = !addreviewmodal" title="Toggle Code"
+        tabindex="0"></i>
+    </h4>
+  
+    <!--Display output-->
+    <div class="docs-sectionDemoCode">
+      <div class="sb-bulk-upload">
+        <button class="sb-btn sb-btn-primary sb-btn-normal " (click)="showAddReviewModal = !showAddReviewModal">
+           Add Review
+        </button>
+      </div>
+      <sui-modal *ngIf="showAddReviewModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+        [size]="'normal'" class="sb-modal" appBodyScroll
+        (dismissed)="showAddReviewModal = !showAddReviewModal" #modal>
+        <div class="sb-modal-header">
+           Add Review
+        </div>
+        <div class="sb-modal-content">
+           
+
+            <div class="sb-field-group">
+                <label>Enter your comments</label>
+                    <div class="sb-field relative">
+                    <textarea rows="4" name="moretext" class="sb-form-control" placeholder="Type here..."></textarea>
+                    <span class="characters-left">1000 Characters left</span>
+                    </div>
+            </div>
+                
+
+        </div>
+        <div class="sb-modal-actions">
+          <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary"> Submit Review </button>
+        </div>
+      </sui-modal>
+    </div>
+    <!--/Display output-->
+</div>
+  <!--/Normal Modal-->
+
 <!--Page Content-->

@@ -169,7 +169,7 @@ a {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
   html[dir="rtl"] & {
     text-align: right;
   }
