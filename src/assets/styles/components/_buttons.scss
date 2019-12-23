@@ -214,7 +214,7 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
   padding: $base-block-space $base-block-space $base-block-space
     $base-block-space;
   i.icon {
-    margin-left: $base-block-space;
+    margin-left: ($base-block-space / 2);
     margin-right: 0;
   }
   html[dir="rtl"] & {
@@ -222,7 +222,7 @@ $btnSquaresizes: "xs" 1.5rem 1.5rem 1rem null, "normal" 4rem 4rem 0.75rem null,
       $base-block-space;
     i.icon {
       margin-left: 0;
-      margin-right: $base-block-space;
+      margin-right: ($base-block-space / 2);
     }
   }
 }
