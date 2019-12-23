@@ -12,3 +12,19 @@
         }   
     }
 }
+
+.storage-container{
+    color:var(--gray-800);
+    width: 100%;
+    padding:1.5rem ;
+    box-shadow: 0px calculateRem(5px) calculateRem(10px) 0px rgba(0,0,0,0.12); 
+}
+
+
+:host ::ng-deep {
+    .ui.progress .bar {
+        background: var(--green);
+        height: 0.5rem !important;
+        border-radius: 0 !important;
+    }
+}
