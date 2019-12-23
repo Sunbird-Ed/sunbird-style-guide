@@ -51,9 +51,12 @@ export class OfflineDesktopAppComponent implements OnInit {
 </div>
 <ul class="sb-bordered-list mt-24">
   <li class="sb-bordered-list-item m-0">
-  <div class="d-flex flex-ai-center">
-  <div class="sb-bordered-list-item-title">Files imported (03)&#x200E;</div>
-  <div class="sb-bordered-list-item-title-extra ml-16">Total size: 75KB</div>
+  <div class="d-flex flex-ai-center flex-jc-space-between">
+  <div class="sb-bordered-list-item-title">Files imported (03)&lrm;
+  <span class="sb-bordered-list-item-title-extra ml-16">Total size: 75KB</span></div>
+  <button  class="d-flex sb-btn sb-btn-outline-primary sb-btn-normal sb-btn-load">
+   <span class="mr-8"><img src="assets/images/plus-icon.svg" width="12px" height="12px"></span>
+   import new file</button>
   </div>
   </li>
   <li class="sb-bordered-list-item m-0">
