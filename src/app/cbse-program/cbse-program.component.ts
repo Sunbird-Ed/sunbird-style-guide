@@ -573,25 +573,46 @@ export class CBSEProgramComponent implements OnInit {
       title: 'VSA/SA/LA Layout',
       demoCode: `
       <div class="sb-question-dsp-container">
-    <div class="sb-question-dsp-body">
-      <div class="sb-question-header question-bg">
+      <div class="sb-question-dsp-body">
+        <div class="sb-question-header question-bg">
           <span class="sb-question"></span>
           <span class="sb-mark">4 Marks</span>
-          <button type="button" class="sb-btn sb-btn-primary sb-btn-normal" id="questionBtn" (click)="onScroll('question')" style="display: none;">Question</button>
-          <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-0" id="answerBtn" (click)="onScroll('answer')">Solution</button>
-      </div>
-      <div class="sb-question-content" (scroll)="onScroll($event)">
+          <button type="button" class="sb-btn sb-btn-primary sb-btn-normal" id="questionBtn" (click)="onScroll('question')"
+            style="display: none;">Question</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal mr-0" id="answerBtn"
+            (click)="onScroll('answer')">Solution</button>
+        </div>
+        <div class="sb-question-content" (scroll)="onScroll($event)">
           <div class="page-section question-bg" id="question">
-              <div class="sb-question">Question<span class=" sb-star-icon"><i class="star outline icon"></i></span></div>
-              <div class="sb-question-content-card">quesiton 21</div>
+            <div class="sb-question">Question<span class=" sb-star-icon"><i class="star outline icon"></i></span></div>
+            <div class="sb-question-content-card">quesiton 21</div>
           </div>
           <div class="page-section answer-bg" id="answer">
-              <div class="sb-answer">Solution</div>
-              <div class="sb-question-content-card">answer 21</div>
+            <div class="sb-answer">Solution</div>
+            <div class="sb-question-content-card">
+              <div class="sbcard-solution-content">
+                <div class="solution-container">
+                  <div class="sb-solution-card">
+                    <img src="assets/images/landingPage.jpg" alt="image">
+                  </div>
+                  <div class="sb-solution-card-overlay">
+                    <div class="play-btn">
+                    <img src="../../assets/images/player-play-button.png">
+                    </div>
+                  </div>
+                </div>
+                <div class="solution-content">
+                  <p>Understanding Mixtures and Solutions -
+                  text wrapping if there is second line</p>
+                  <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-btn-responsive" type="button">Play
+                      Video</button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-  </div>
+    </div>
       `,
       copyCode: ``
     }
