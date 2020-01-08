@@ -263,4 +263,66 @@
       transform: scale(1.1);
     }
   }
+
+  .page-section{
+    .sb-solution-card {
+      background: var(--white);
+      border-radius: 0.5rem;
+      min-height: 72px;
+      font-weight: inherit;        
+      line-height: normal;
+      box-shadow: 0.125rem 0.3125rem 0.4375rem 0 rgba(0, 0, 0, 0.2);
+      border: 0.5px solid var(--gray-0);
+      padding: 1rem;
+      .sb-solution-card-title{
+        border-bottom:1px solid  var(--gray-100);
+        color:var(--gray-200);
+      }
+      
+      .solution-container{
+        position: relative;
+      }
+      
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .sbcard-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008CBA;
+      }
+      
+      .solution-container:hover .sbcard-overlay {
+        opacity: 1;
+      }
+      
+      .icon {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  }
+  @include respond-below(sm) {
+  .sbcard-solution-content{
+    flex-direction: column;
+  }
+  }
+
 }
