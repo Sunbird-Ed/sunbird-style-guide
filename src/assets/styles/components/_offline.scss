@@ -28,6 +28,10 @@ $sb-circular-list-item-circle-top: calculateRem(12px);
 
 .offline-page-content {
   height: 100%;
+  .desktop-icon{
+    width:100%;
+    max-width:300px;
+  }
 }
 
 //offline
