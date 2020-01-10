@@ -45,8 +45,7 @@ export class OnlineDesktopAppComponent implements OnInit {
       title: 'Download ***** Lite Desktop App',
       demoCode: `
       <div class="ui stackable grid">
-     <div class="one wide column"></div>
-     <div class="six wide column pr-8">
+     <div class="seven wide column pr-8">
     <div class="offline-download-card">
       <h2 class="offline-download-card-heading">Download ***** Lite Desktop App</h2>
       <dl class="mt-16">
@@ -71,13 +70,28 @@ export class OnlineDesktopAppComponent implements OnInit {
           </ul>      
     </div>
   </div>
-    <div class="four wide column pl-0">
+    <div class="five wide column pl-0">
     <div class="offline-download-card offline-page-content">
         <div class="d-flex flex-ai-center flex-jc-center text-center flex-dc offline-page-content">
-            <img src="assets/images/offline-computer.png" alt="download ***** app">
-            <button type="button" class="sb-btn sb-btn-primary sb-btn-normal mt-32">Download for Windows (64-bit)&#x200E;</button>
+            <img src="assets/images/offline-computer.png" alt="download ***** app" class="desktop-icon">
+            <div class="d-flex flex-dc text-left">
+            <div class="mt-24 mb-8 cursor-pointer">Recommended for your PC</div>
+            <button type="button" class="w-100 text-left d-flex flex-ai-center sb-btn sb-btn-primary sb-btn-normal py-0">
+             <span class="mr-8"><img src="assets/images/window.svg" width="18px"></span>
+            Download for Windows (64-bit)&lrm;</button>
+            </div>
+            <div class="d-flex flex-dc text-left">
+            <div class="mt-16 cursor-pointer" >Other versions</div>
+            <button type="button" class="w-100 text-left d-flex flex-ai-center sb-btn sb-btn-outline-primary 
+            sb-btn-normal my-8 py-0">
+            <span class="mr-8"><img src="assets/images/windows.svg" width="18px"></span>
+            Download for Windows (32-bit)&lrm;</button>
+            <button type="button" class="w-100 text-left d-flex flex-ai-center sb-btn sb-btn-outline-primary sb-btn-normal py-0">
+             <span class="mr-8"><img src="assets/images/ubuntu.svg" width="18px"></span>
+            Download for Ubuntu (64-bit)&lrm;</button>
+            </div>
             <div class="offline-download-card-extra mt-16 cursor-pointer">See download instructions</div>
-        </div>      
+        </div>
     </div>
   </div>
     <div class="one wide column"></div>

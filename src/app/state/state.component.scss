@@ -1,24 +1,6 @@
 @import 'variables';
 @import 'mixins/mixins';
 
-// dropdown css for offline menu bar
-.ui.selection.dropdown.state-medium {
-  color: var(--blue);
-  display: flex;
-  align-items: center;
-  border: none;
-  background: none;
-  min-width: calculateRem(100px);
-  margin: 0;
-
-  .medium-selection {
-    min-width: calculateRem(120px);
-  }
-
-  &:hover {
-    background: #e5edf5;
-  }
-}
 
 .ui.selection.dropdown.state-selection {
   color: var(--primary-400);
@@ -41,11 +23,11 @@
   }
 }
 
-// .ui.default.dropdown:not(.button) > .text, .ui.dropdown:not(.button) > .default.text {
-//     color: red;
-// }
-
 :host ::ng-deep {
+
+  .sb-field .ui.selection.dropdown .text {
+    margin: 0rem calculateRem(20px) 0rem 0rem;
+  }
 
   .ui.selection.dropdown .menu {
     max-height: 20em;
@@ -69,7 +51,6 @@
       width:calculateRem(4px);
     }
 }
-
   .dropdown:not(.button) > .default.text {
     color: var(--primary-400) !important;
   }
@@ -77,6 +58,7 @@
   .ui.selection.dropdown .menu > .item {
     padding: 1em 1.5em !important;
   }
+
   .ui.selection.dropdown .menu > .item.active {
     color: var(--primary-color) !important;
     background : var(--primary-250) !important;
