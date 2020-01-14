@@ -2,7 +2,7 @@
 @import "mixins/mixins";
 
 .offline-telemetry-title {
-    font-size: calculateRem(14px);
+    font-size: calculateRem(16px);
     font-weight: bold;
     border-bottom: calculateRem(1px) solid var(--primary-color);
     color: var(--primary-color);
@@ -17,7 +17,8 @@
         margin:0px calculateRem(24px);
       }
   }
-
+  
+  .sb-radio-btn input[type="radio"]:checked + label,
   .sb-radio-btn input[type="radio"]:not(:checked) + label {
     color: var(--primary-color);
     font-weight: normal;
