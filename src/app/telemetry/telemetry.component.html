@@ -3,23 +3,25 @@
 <div class="ui container">
   <div class="my-16">
     <div class="sb-bg-color-white py-16">
-      <div class="offline-telemetry-title sb-bg-color-white px-16 pb-8"> Telemetry Settings </div>
+      <div class="offline-telemetry-title sb-bg-color-white px-16 pb-8"> Sync telemetry </div>
   
       <div class="d-flex flex-jc-space-between p-16">
-        <a class="cursor-pointer">Sync telemetry automatically</a>
+        <a class="cursor-pointer">Automatically sync telemetry</a>
         <!-- <a class="cursor-pointer">Clear Telemetry</a> -->
       </div>
-  
-      <div class="sb-radio-btn sb-radio-primary px-16 pb-8">
+
+      <div class="d-flex flex-dc flex-w-wrap">
+      <div class="d-flex sb-radio-btn-checkbox sb-radio-btn-primary px-16 pb-8">
         <input type="radio" id="alwaysOn" name="radio-group">
         <label for="alwaysOn">Always on</label>
       </div>
   
-      <div class="sb-radio-btn sb-radio-primary px-16 pb-8">
+      <div class="d-flex sb-radio-btn-checkbox sb-radio-btn-primary px-16 pb-8">
         <input type="radio" id="off" name="radio-group">
         <label for="off">Off</label>
       </div>
-  
+      </div>
+
       <div class="d-flex flex-w-wrap px-16">
         <div>
           <button type="button" class="sb-btn sb-btn-primary sb-btn-normal my-8">Sync Telemetry (500KB)&lrm;</button>
