@@ -57,6 +57,8 @@
       font-size: $font-size-md;
 
       &__subtitle {
+        display: flex;
+        align-items: center;
         color:var(--gray-800);
         i{
           color: var(--yellow);

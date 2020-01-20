@@ -28,6 +28,7 @@
   &__content {
     margin: 0 calculateRem(60px);
     width: 100%;
+    padding: 0 1rem;
 
     .practical-sb-buttons {
       .sb-btn-file {
@@ -83,8 +84,8 @@
   .licence-form {
     &__content {
       height: auto;
-      border: calculateRem(1px) solid #80a7ce;
-      background: #f5f9fc;
+      // border: calculateRem(1px) solid #80a7ce;
+      // background: #f5f9fc;
       border-radius: calculateRem(4px);
       padding: 0 0;
 
@@ -181,4 +182,31 @@
       }
     }
   }
+}
+.licence-form {
+  &__content {
+    height: auto;
+    border-radius: calculateRem(4px);
+    padding: 0 0;
+    &__fields {
+      margin: 0px 0px;
+      .sb-field {
+        width: 100%;
+        margin-bottom: 0px;
+      }
+      .space-btn-field {
+        // margin-left: ($base-block-space * 2);
+      }
+    }
+  }
+  .paragraph {
+    color: var(--gray-200);
+    padding: calculateRem(16px) 0px;
+    line-height: normal;
+  }
+}
+.links {
+&:hover {
+  text-decoration: underline;
+}
 }

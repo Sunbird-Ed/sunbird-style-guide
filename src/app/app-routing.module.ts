@@ -63,7 +63,7 @@ import { OfflineComponent } from './offline/offline.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
-
+import { TelemetryComponent } from './telemetry/telemetry.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -127,7 +127,8 @@ const routes: Routes = [
   { path: 'offline', component: OfflineComponent},
   { path: 'download', component: DownloadComponent},
   { path: 'profile-page', component: ProfilePageComponent },
-  { path: 'qml-solutions', component:QmlSolutionsComponent }
+  { path: 'qml-solutions', component:QmlSolutionsComponent },
+  { path: 'telemetry', component:TelemetryComponent }
 ];
 
 @NgModule({

@@ -261,3 +261,20 @@ $sb-radio-btn-border-color: $primary-300;
     }
   }
 }
+
+[dir="rtl"] {
+  .sb-radio-btn-checkbox label {
+    padding-left: 0;
+    padding-right: ($base-block-space * 3);
+
+    &::before {
+      left: unset;
+      right: 0;
+    }
+    
+    &::after {
+      left: unset;
+      right: 4px;
+    }
+  }
+}
