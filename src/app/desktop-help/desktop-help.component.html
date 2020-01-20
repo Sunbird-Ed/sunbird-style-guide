@@ -9,7 +9,7 @@
 <div class="sb-bg-color-white">
   <div class="ui container py-8">
     <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0">
-      <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
+      <i class="icon-svg icon-svg--xxs icon-back mr-8"><svg class="icon icon-svg--primary">
           <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
         </svg></i> Back</button>
   </div>
@@ -20,8 +20,7 @@
     <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
       <div class="flex-basis-1 mr-32">
         <div class="content-header__title font-weight-bold sb__ellipsis sb__ellipsis--one">
-          Great thinkers and Great thinkers, Great thinkers and Great thinkersGreat thinkers and Great thinkersGreat
-          thinkers and Great thinkersGreat thinkers and Great thinkers</div>
+          Great thinkers and Great thinkers</div>
         <div class="d-flex flex-ai-center content-header__info fxsmall mt-4">
           <span>Social Science</span>
           <span class="dot-divider"></span>
@@ -38,10 +37,9 @@
   </div>
 </div>
 
-<div class="ui container content-player mt-32">
-  <div class="sb-g">
-    <section class="sb-g-col-xs-12 sb-g-col-sm-12 sb-g-col-md-8 sb-g-col-lg-9 content-player__info"
-      id="player-area-height">
+<div class="ui container mt-32">
+  <div class="sb-g content-video">
+    <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-9 content-video__player" id="player-area-height">
       <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio" #aspectRatio>
         <div>
           <video width="400" controls>
@@ -51,33 +49,58 @@
           </video>
         </div>
       </div>
-      <div class="d-flex content-player__info__details sb-bg-color-white" #playerInfo>
+
+      <!-- <div class="d-flex flex-ai-center flex-w-wrap content-video__player__details sb-bg-color-white" #playerInfo>
+              <div class="d-flex flex-dc flex-basis-1">
+                <h6 class="content-video__player__title ml-8 mr-auto sb__ellipsis sb__ellipsis--one">
+                  How do i add content to SUNBIRD app when i am offline or using a pen drive?‎</h6>
+              </div>
+      
+              <div class="d-flex flex-w-wrap content-video__player__tools">
+                  <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square">
+                    <i class="icon download alternate"></i><span>Download</span>
+                  </button>
+              </div>
+            </div> -->
+
+      <div class="d-flex flex-ai-center flex-w-wrap content-video__player__details sb-bg-color-white" #playerInfo>
         <div class="d-flex flex-dc flex-basis-1">
-          <h6 class="content-player__info__title ml-8 mr-auto sb__ellipsis sb__ellipsis--one">
-            How do i add content to SUNBIRD app when i am offline or using a pen drive?‎</h6>
-          <!-- <div class="content-player__info__title font-weight-bold ml-8 mr-auto sb__ellipsis sb__ellipsis--one">
+          <div class="content-video__player__title ml-8 mr-auto sb__ellipsis sb__ellipsis--one">
             Social Science Term
           </div>
-          <div class="content-player__info__title__subtitle fxsmall ml-8 mt-8">
+          <div class="content-video__player__title__subtitle fxsmall ml-8 mt-8">
             <span class="mr-8">by TNSCERT</span>
             <span class="mr-8">*</span>
-            <span>4.7</span>
-          </div> -->
+            <span class="mr-8">4.7</span>
+            <span><i class="icon star outline"></i></span>
+          </div>
         </div>
 
-        <div class="d-flex content-player__info__tools">
+        <div class="d-flex flex-w-wrap content-video__player__tools">
           <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-              class="icon share alternate"></i><span>share</span></button>
+              class="sync alternate icon"></i><span class="fxsmall">update</span></button>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon trash"></i><span
+              class="fxsmall">Delete</span></button>
           <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-              class="icon download alternate"></i><span>Download</span></button>
+              class="icon share alternate"></i><span class="fxsmall">share</span></button>
           <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-              class="icon share alternate"></i><span>share</span></button>
+              class="icon star outline "></i><span class="fxsmall">Rate</span></button>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i class="icon print"></i><span
+              class="fxsmall">Print</span></button>
           <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-              class="icon download alternate"></i><span>Download</span></button>
+              class="icon download alternate"></i><span class="fxsmall">Download</span></button>
+        </div>
+
+        <div class="d-flex content-video__player__screenpart">
+          <div class="separator"></div>
+          <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square">
+            <i class="icon expand"></i><span class="fxsmall">Full Screen</span></button>
         </div>
       </div>
+
     </section>
-    <section class="sb-g-col-xs-12 sb-g-col-sm-12 sb-g-col-md-4 sb-g-col-lg-3 content-player__content"
+
+    <section class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-3 content-video__content"
       [style.height.px]="videoContainerHeight" (window:resize)="onWindowResize($event)">
 
       <!-- card component -->
@@ -100,18 +123,21 @@
       </div>
     </section>
   </div>
+
 </div>
 
 <div class="ui container py-8">
   <div class="sb-g">
     <section class="sb-g-col-xs-12 sb-g-col-sm-12 sb-g-col-md-8 sb-g-col-lg-9">
       <div class="content-metadeta sb-bg-color-white mt-8">
-        <div class="content-metadeta__title fsmall font-weight-bold p-16">DESCRIPTION</div>
-        <p class="content-metadeta__text px-16 fsmall mb-0">
-          Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volut lobortis is id lorem id
-          bibendum. Ut
-          id consectetur magna.
-        </p>
+        <div class="mx-16 py-16 content-metadeta__content">
+          <div class="content-metadeta__title fsmall font-weight-bold">DESCRIPTION</div>
+          <p class="content-metadeta__text fsmall pt-8">
+            Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volut lobortis is id lorem id
+            bibendum. Ut
+            id consectetur magna.
+          </p>
+        </div>
 
         <sui-accordion class="styled fluid sb-accordion">
           <sui-accordion-panel>

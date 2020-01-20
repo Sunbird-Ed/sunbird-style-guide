@@ -52,17 +52,17 @@ $grid_arr: (
 }
 
 // from now on, dummy code for fanciness
-.row {
-  background: black;
-  color: red;
-  margin-bottom: 10px;
-}
+// .row {
+//   background: black;
+//   color: red;
+//   margin-bottom: 10px;
+// }
 
-div[class*="col-"] {
-  height: 50px;
-  background: red;
-  color: black;
-}
+// div[class*="col-"] {
+//   height: 50px;
+//   background: red;
+//   color: black;
+// }
 
 //grid columns
 $columns: 12;
