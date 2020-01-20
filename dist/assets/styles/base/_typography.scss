@@ -199,8 +199,12 @@ a {
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-word;
   &--two {
     -webkit-line-clamp: 2;
+  }
+  &--three {
+    -webkit-line-clamp: 3;
   }
 }
 .ellipsis {
