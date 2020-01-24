@@ -54,19 +54,19 @@ p,
 }
 
 .fs-0-785 {
-  font-size: 0.785rem !important;  
+  font-size: 0.785rem !important;
 }
 .fs-0-92 {
-  font-size: 0.9286rem !important;  
+  font-size: 0.9286rem !important;
 }
 .fs-1 {
-  font-size: 1rem !important;  
+  font-size: 1rem !important;
 }
 .fs-1-143 {
-  font-size: 1.143rem !important;  
+  font-size: 1.143rem !important;
 }
 .fs-1-16 {
-  font-size: 1.16rem !important;  
+  font-size: 1.16rem !important;
 }
 .fs-1-286 {
   font-size: 1.286rem !important;
@@ -88,10 +88,10 @@ p,
 }
 .fs-2-5 {
   font-size: 2.5rem !important;
-} 
+}
 .fs-2-57 {
   font-size: 2.571rem !important;
-}  
+}
 .fs-3 {
   font-size: 3rem !important;
 }
@@ -169,7 +169,7 @@ a {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
   html[dir="rtl"] & {
     text-align: right;
   }
@@ -199,8 +199,12 @@ a {
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-word;
   &--two {
     -webkit-line-clamp: 2;
+  }
+  &--three {
+    -webkit-line-clamp: 3;
   }
 }
 .ellipsis {
@@ -209,3 +213,56 @@ a {
   text-overflow: ellipsis;
   cursor: pointer;
 }
+
+.sb__ellipsis-t2 {
+  --max-lines: 1;
+  -webkit-line-clamp: 1;
+  position: relative;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  padding-right: 1rem; /* space for ellipsis */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  &--two {
+    --max-lines: 2;
+    -webkit-line-clamp: 2;
+    max-height: calc(var(--lh) * var(--max-lines));
+  }
+  &--two {
+    --max-lines: 3;
+    -webkit-line-clamp: 3;
+    max-height: calc(var(--lh) * var(--max-lines));
+  }
+  &::before {
+    position: absolute;
+    content: "...";
+    /*   inset-block-end: 0;
+    inset-inline-end: 0; */
+    bottom: 0;
+    right: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    /*   inset-inline-end: 0; */
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }
+}
+
+// .fade {
+//   position: relative;
+//   height: 3.6em; /* exactly three lines */
+// }
+// .fade:after {
+//   content: "";
+//   text-align: right;
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   width: 70%;
+//   height: 1.2em;
+//   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+// }
