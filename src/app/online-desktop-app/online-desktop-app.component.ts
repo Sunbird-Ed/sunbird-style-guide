@@ -74,6 +74,7 @@ export class OnlineDesktopAppComponent implements OnInit {
     <div class="offline-download-card offline-page-content">
         <div class="d-flex flex-ai-center flex-jc-center text-center flex-dc offline-page-content">
             <img src="assets/images/offline-computer.png" alt="download ***** app" class="desktop-icon">
+            <div class="container" style="max-width:280px; width:100%">
             <div class="d-flex flex-dc text-left">
             <div class="mt-24 mb-8 cursor-pointer">Recommended for your PC</div>
             <button type="button" class="w-100 text-left d-flex flex-ai-center sb-btn sb-btn-primary sb-btn-normal py-0">
@@ -91,6 +92,7 @@ export class OnlineDesktopAppComponent implements OnInit {
             Download for Ubuntu (64-bit)&lrm;</button>
             </div>
             <div class="offline-download-card-extra mt-16 cursor-pointer">See download instructions</div>
+            </div>
         </div>
     </div>
   </div>
