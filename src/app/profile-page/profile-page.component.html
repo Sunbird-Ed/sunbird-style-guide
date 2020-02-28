@@ -21,13 +21,13 @@
                 (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
             </div>
           </div>
-        </div> 
+      </div> 
   </section>
 
   <section class="d-flex flex-ai-center flex-dc pt-30 pb-30 sb-profile-page__profile-bg">
     <div class="ui container">
       <div class="d-flex flex-jc-center relative">
-        <div class="w-100 text-center">
+        <div class="text-center" style="width: 100%; max-width: 315px;">
           <div class="mb-16 d-flex flex-jc-center sb-profile-page__category">
             <span class="fmedium white-space-nowrap">Board :</span>
             <span class="fmedium font-weight-bold pl-4">State Board Tamil Nadu</span>
@@ -51,8 +51,6 @@
     </div>
   </section>
 </div>
-
-
 
 <sui-modal *ngIf="showLocationModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
   class="sb-modal" appBodyScroll (dismissed)="showLocationModal = !showLocationModal" #modal>
