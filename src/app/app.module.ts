@@ -104,6 +104,8 @@ import { DownloadComponent } from './download/download.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
+import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
+import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -197,7 +199,9 @@ export function hljsLanguages() {
     DownloadComponent,
     ProfilePageComponent,
     QmlSolutionsComponent,
-    TelemetryComponent
+    TelemetryComponent,
+    SkeletonLoaderComponent,
+    TocLoadingComponent
   ],
   imports: [
     BrowserModule,

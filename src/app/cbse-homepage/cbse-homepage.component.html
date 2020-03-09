@@ -359,7 +359,7 @@
     <!-- Selection of Layout in modal -->
     <div class="sb-modal-content sb-chapterlist-modal">
 
-      <sui-accordion class="styled fluid sb-accordion sb-chapterlist-accordion" [closeOthers]="true">
+      <sui-accordion class="styled fluid sb-accordion sb-chapterlist-accordion" [closeOthers]="false">
         <sui-accordion-panel [isOpen]="true">
           <div title class="sb-accordion-title d-flex flex-ai-center">
             <i class="chevron down icon mr-16"></i>
@@ -411,6 +411,30 @@
           </div>
         </sui-accordion-panel>
 
+        <sui-accordion-panel [isOpen]="true">
+          <div title class="sb-accordion-title d-flex flex-ai-center">
+            <i class="chevron down icon mr-16"></i>
+            <div class="item d-flex flex-ai-center cursor-pointer width-100">
+              <div class="sb-radio-btn-checkbox sb-radio-btn-primary width-100">
+                <input type="radio" id="radio2" name="example">
+                <label for="radio2">Chapter 2</label>
+              </div>
+            </div>
+          </div>
+          <div content>
+            <div class="chapter-lists level1">
+              <div class="chapter-lists--item">
+                <div class="item d-flex flex-ai-center cursor-pointer width-100">
+                  <div class="sb-radio-btn-checkbox sb-radio-btn-primary width-100">
+                    <input type="radio" id="radio1.2" name="example">
+                    <label for="radio1.2">Chapter 1.2</label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </sui-accordion-panel>
       </sui-accordion>
     </div>
 

@@ -20,11 +20,19 @@
     <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
       <div class="flex-basis-1 mr-32">
         <div class="content-header__title font-weight-bold sb__ellipsis sb__ellipsis--one">
-          Great thinkers and Great thinkers</div>
-        <div class="d-flex flex-ai-center content-header__info fxsmall mt-4">
-          <span>Social Science</span>
+          <div *ngIf="showSkeletonLoader">Great thinkers and Great thinkers</div>
+          <app-skeleton-loader *ngIf="!showSkeletonLoader" [height]="skeletonHeight" [width]="skeletonWidth"></app-skeleton-loader>
+        </div>
+        <div class="d-flex flex-ai-center content-header__info fxsmall mt-8">
+          <span>
+            <span *ngIf="showSkeletonLoader">Social Science</span>
+            <app-skeleton-loader *ngIf="!showSkeletonLoader" [height]="skeletonHeight" [width]="'80px'"></app-skeleton-loader>c
+          </span>
           <span class="dot-divider"></span>
-          <span>Class 8</span>
+          <span>
+            <span *ngIf="showSkeletonLoader">Class 8</span>
+            <app-skeleton-loader *ngIf="!showSkeletonLoader" [height]="skeletonHeight" [width]="'40px'"></app-skeleton-loader>c
+          </span>
         </div>
       </div>
       <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
@@ -41,13 +49,14 @@
   <div class="sb-g content-video">
     <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-9 content-video__player" id="player-area-height">
       <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio" #aspectRatio>
-        <div>
+        <div *ngIf="showSkeletonLoader">
           <video width="400" controls>
             <source src="mov_bbb.mp4" type="video/mp4">
             <source src="mov_bbb.ogg" type="video/ogg">
             Your browser does not support HTML5 video.
           </video>
         </div>
+        <app-skeleton-loader *ngIf="!showSkeletonLoader" [height]="'100%'" [width]="'100%'"></app-skeleton-loader>
       </div>
 
       <!-- <div class="d-flex flex-ai-center flex-w-wrap content-video__player__details sb-bg-color-white" #playerInfo>
