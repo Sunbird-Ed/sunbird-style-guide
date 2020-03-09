@@ -187,7 +187,7 @@
   width: 100%;
   background: $white-color;
   border: calculateRem(1px) solid $gray-100;
-  border-bottom: none;
+  // border-bottom: none;
   box-shadow: none;
   border-radius: calculateRem(4px) calculateRem(4px) 0 0;
   text-align: left;

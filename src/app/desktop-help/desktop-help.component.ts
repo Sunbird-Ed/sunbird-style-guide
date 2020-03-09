@@ -56,6 +56,9 @@ export class DesktopHelpComponent implements OnInit {
   selectMedium: { name: string; id: string; value: string; };
   showNormalModal;
   issueReportText = false;
+  showSkeletonLoader = false;
+  skeletonHeight = '16px';
+  skeletonWidth = '100%';
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   ngOnInit() {
@@ -97,6 +100,10 @@ export class DesktopHelpComponent implements OnInit {
       }
     ];
     this.selectMedium = this.selectOption[0];
+
+    setTimeout(() => {
+      this.showSkeletonLoader = !this.showSkeletonLoader;
+    }, 3000);
   }
 
   // @HostListener('window:resize', ['$event'])

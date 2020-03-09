@@ -64,6 +64,7 @@ import { NoContentComponent } from './no-content/no-content.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
+import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -128,7 +129,8 @@ const routes: Routes = [
   { path: 'download', component: DownloadComponent},
   { path: 'profile-page', component: ProfilePageComponent },
   { path: 'qml-solutions', component:QmlSolutionsComponent },
-  { path: 'telemetry', component:TelemetryComponent }
+  { path: 'telemetry', component:TelemetryComponent },
+  { path: 'toc-loading', component: TocLoadingComponent}
 ];
 
 @NgModule({
