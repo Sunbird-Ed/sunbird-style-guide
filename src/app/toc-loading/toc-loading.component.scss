@@ -149,7 +149,7 @@
 }
 
 .loading {
-  animation: placeloader 1s linear infinite forwards;
+  animation: placeloader 2s linear infinite forwards;
   background: linear-gradient(69deg, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
   background-size: 2000px;
   position: relative;
@@ -157,10 +157,10 @@
 
 @keyframes placeloader {
   0% {
-    background-position: 100%;
+    background-position: -2000px;
   }
 
   100% {
-    background-position: 0%;
+    background-position: 2000px;
   }
 }
