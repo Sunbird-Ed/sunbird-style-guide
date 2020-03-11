@@ -1,0 +1,40 @@
+app-skeleton-loader {
+  width: 100%;
+}
+
+app-skeleton-loader div {
+  margin-bottom: 16px;
+}
+
+app-skeleton-loader:last-of-type div {
+  margin-bottom: 0;
+}
+
+.sbchapter__item, .content-header__info {
+    app-skeleton-loader div {
+        margin-bottom: 0;
+    }
+}
+
+.loading {
+  animation: placeloader 2s linear infinite forwards;
+  background: linear-gradient(69deg, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 2000px;
+  position: relative;
+}
+
+@keyframes placeloader {
+  0% {
+    background-position: -2000px;
+  }
+
+  100% {
+    background-position: 2000px;
+  }
+}
+
+html[dir="rtl"] {
+    .loading {
+        animation: placeloader 2s linear infinite reverse;
+    }
+}
