@@ -1,80 +1,75 @@
-
-
-
-
-
 <!--Page Content-->
 <div class="docs-sections" *ngFor="let section of sections;">
-    <h4 class="docs-sectionHeading">
-        {{section.title}}
-        <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
-            title="Toggle Code" tabindex="0"></i>
-    </h4>
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
 
-    <!--Display output  [innerHTML]="section.demoCode | keepHtml"-->
-    <div class="docs-sectionDemoCode">
+  <!--Display output  [innerHTML]="section.demoCode | keepHtml"-->
+  <div class="docs-sectionDemoCode">
 
 
-        <div class="twelve wide column px-0 sb-workspace-bg">
-            <div class="ui container stackable grid mt-48">
-                <div class="two wide column sb-sidebar-menu px-0">
-                    <h5>My Workspace</h5>
-                    <ul>
-                        <li title="create" alt="create">Create</li>
-                        <li class="active">All my content</li>
-                        <li>Course Batches</li>
-                        <li>Create</li>
-                    </ul>
+    <div class="twelve wide column px-0 sb-workspace-bg">
+      <div class="ui container stackable grid mt-48">
+        <div class="two wide column sb-sidebar-menu px-0">
+          <h5>My Workspace</h5>
+          <ul>
+            <li title="create" alt="create">Create</li>
+            <li class="active">All my content</li>
+            <li>Course Batches</li>
+            <li>Create</li>
+          </ul>
+        </div>
+        <div class="ten wide column sb-sideview-tab-container p-24 pt-72">
+
+          <div class="d-flex">
+            <div class="sb-wspace-card active">
+              <div class="sb-wspace-body">
+                <div class="sb-wspace-title">Book</div>
+                <div class="sb-wspace-description">Build books using resources for an interesting
+                  learning experience.</div>
+              </div>
+            </div>
+
+            <div class="sb-wspace-card">
+              <div class="sb-wspace-body">
+                <div class="sb-wspace-title">Course</div>
+                <div class="sb-wspace-description">Build books using resources for an interesting
+                  learning experience.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sb-table-container">
+            <div class="sb-table-search-header px-0">
+              <div class="sb-search-box small">
+                <div class="input-div relative">
+                  <i class="search icon"></i>
+                  <input class="sb-search-input" type="text" placeholder="Search..." />
+                  <i class="close icon"></i>
+                  <div class="sb-loader"></div>
                 </div>
-                <div class="ten wide column sb-sideview-tab-container p-24 pt-72">
+                <button class="sb-btn sb-btn-normal">Search</button>
+              </div>
 
-                    <div class="d-flex">
-                        <div class="sb-wspace-card active">
-                            <div class="sb-wspace-body">
-                                <div class="sb-wspace-title">Book</div>
-                                <div class="sb-wspace-description">Build books using resources for an interesting
-                                    learning experience.</div>
-                            </div>
-                        </div>
+              <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto sb-btn-dropdown"
+                suiDropdown autoClose="itemClick">
+                <div class="text">Sort by</div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                  <div class="item">Modified on</div>
+                  <div class="item">Created on</div>
+                </div>
+              </div>
+              <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn" (click)="toggleSbFilter()">Show
+                Filters<i class="caret down icon"></i>
+              </button>
+              <div class="sb-explore-filter sb-posi-absolute" *ngIf="sbExploreFilter" @fade>
+                <app-explore-filter></app-explore-filter>
+              </div>
 
-                        <div class="sb-wspace-card">
-                            <div class="sb-wspace-body">
-                                <div class="sb-wspace-title">Course</div>
-                                <div class="sb-wspace-description">Build books using resources for an interesting
-                                    learning experience.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sb-table-container">
-                        <div class="sb-table-search-header px-0">
-                            <div class="sb-search-box small">
-                                <div class="input-div relative">
-                                    <i class="search icon"></i>
-                                    <input class="sb-search-input" type="text" placeholder="Search..." />
-                                    <i class="close icon"></i>
-                                    <div class="sb-loader"></div>
-                                </div>
-                                <button class="sb-btn sb-btn-normal">Search</button>
-                            </div>
-
-                            <div class="ui dropdown sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary ml-auto sb-btn-dropdown"
-                                suiDropdown autoClose="itemClick">
-                                <div class="text">Sort by</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu" suiDropdownMenu>
-                                    <div class="item">Modified on</div>
-                                    <div class="item">Created on</div>
-                                </div>
-                            </div>
-                            <button class="sb-btn sb-btn-primary sb-btn-normal ml-8 sb-right-icon-btn"
-                                (click)="toggleSbFilter()">Show Filters<i class="caret down icon"></i>
-                            </button>
-                            <div class="sb-explore-filter sb-posi-absolute" *ngIf="sbExploreFilter" @fade>
-                                <app-explore-filter></app-explore-filter>
-                            </div>
-
-                            <!--<div class="ui dropdown sb-btn sb-btn-normal sb-btn-outline-primary ml-auto sb-table-dropdown" suiDropdown autoClose="itemClick">
+              <!--<div class="ui dropdown sb-btn sb-btn-normal sb-btn-outline-primary ml-auto sb-table-dropdown" suiDropdown autoClose="itemClick">
                                                     <div class="text">Sort by</div>
                                                     <i class="dropdown icon"></i>
                                                     <div class="menu" suiDropdownMenu>
@@ -91,241 +86,233 @@
                                                 </div>
                                                 <button class="sb-btn sb-btn-primary sb-btn-normal ml-auto"
                                                  suiPopup [popupTemplate]="popupTemplate" popupTrigger="outsideClick" [popupPlacement]="'bottom right'">Show Filter</button> -->
-                        </div>
-
-                        <div class="sb-filter-label mb-16">
-                            <div class="d-inline-flex"><span class="sb-label-name">Board/Syllabus:</span><span
-                                    class="sb-label-value">CBSE<i class="close icon mr-0 pl-4"></i></span>
-                            </div>
-                            <div class="d-inline-flex"><span class="sb-label-name">Grade:</span><span
-                                    class="sb-label-value">KG<i class="close icon mr-0 pl-4"></i></span>
-                            </div>
-                            <div class="d-inline-flex"><span class="sb-label-name">Medium:</span><span
-                                    class="sb-label-value">English<i class="close icon mr-0 pl-4"></i></span></div>
-                            <div class="d-inline-flex"><span class="sb-label-name">Resource Type:</span><span
-                                    class="sb-label-value">Practice<i class="close icon mr-0 pl-4"></i></span></div>
-                            <div class="d-inline-flex"><span class="sb-label-name">Status:</span><span
-                                    class="sb-label-value">Draft<i class="close icon mr-0 pl-4"></i></span></div>
-                        </div>
-
-                        <div class="sb-table-responsive-div">
-                            <table class="sb-table sb-table-hover sb-table-sortable">
-                                <thead class="sb-table-header heading-large">
-                                    <tr>
-                                        <th class="sb-sort-icon">Name</th>
-                                        <th class="sb-sort-icon">Age</th>
-                                        <th class="sb-sort-icon">Job</th>
-                                        <th class="sb-sort-icon">
-                                            <span class="ui dropdown sb-table-dropdown d-inline-flex" suiDropdown>
-                                                <div class="text">Status</div>
-                                                <i class="dropdown icon"></i>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">All</div>
-                                                    <div class="item">Live</div>
-                                                    <div class="item selected">Draft</div>
-                                                    <div class="item">Review</div>
-                                                    <div class="item">Unlisted</div>
-                                                </div>
-                                            </span>
-                                        </th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="sb-table-body body-large">
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="sb-media">
-                                                <img src="" alt="" class="sb-media-object mr-15">
-                                                <div class="sb-media-body">
-                                                    <h6 class="media-heading ellipsis p-0" suiPopup
-                                                        popupPlacement="bottom" popupHeader="Popup Header"
-                                                        popupText="United Resource - Area of focusUnited Resource - Area of focus">
-                                                        United Resource - Area of focusUnited Resource - Area of focus
-                                                    </h6>
-                                                    <p class="media-description">Course Name: Course progress in mobile
-                                                    </p>
-                                                    <p class="media-description">Creator: Kumar Content Creator</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-label="Age">24</td>
-                                        <td data-label="Job">Engineer</td>
-                                        <td data-label="live"><span
-                                                class="sb-label sb-label-table sb-label-primary-100">Review/Upcoming</span>
-                                        </td>
-                                        <td>
-                                            <div class="ui dropdown sb-dotted-dropdown" suiDropdown
-                                                autoClose="itemClick">
-                                                <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">Edit</div>
-                                                    <div class="item">Share</div>
-                                                    <div class="item">Preview</div>
-                                                    <div class="item">Delete</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="sb-media">
-                                                <img src="" alt="" class="sb-media-object mr-15">
-                                                <div class="sb-media-body">
-                                                    <h6 class="media-heading">United Course</h6>
-                                                    <p class="media-description">Course</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-label="Age">26</td>
-                                        <td data-label="Job">Engineer</td>
-                                        <td data-label="live"><span
-                                                class="sb-label sb-label-table sb-label-success-0"><span
-                                                    class="sb-live"></span>Live</span></td>
-                                        <td>
-                                            <div class="ui dropdown sb-dotted-dropdown" suiDropdown
-                                                autoClose="itemClick">
-                                                <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">Edit</div>
-                                                    <div class="item">Share</div>
-                                                    <div class="item">Preview</div>
-                                                    <div class="item">Delete</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="sb-media">
-                                                <img src="" alt="" class="sb-media-object mr-15">
-                                                <div class="sb-media-body">
-                                                    <h6 class="media-heading">United Course</h6>
-                                                    <p class="media-description">Course</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-label="Age">24</td>
-                                        <td data-label="Job">Designer</td>
-                                        <td data-label="live"><span
-                                                class="sb-label sb-label-table sb-label-warning-0">Draft/Expired</span><span
-                                                class="sb-lock-icon" suiPopup popupPlacement="bottom right"
-                                                popupHeader="Title" popupText="You don't have access"><i
-                                                    class="lock icon"></i></span></td>
-                                        <td>
-                                            <div class="ui dropdown sb-dotted-dropdown" suiDropdown
-                                                autoClose="itemClick">
-                                                <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">Edit</div>
-                                                    <div class="item">Share</div>
-                                                    <div class="item">Preview</div>
-                                                    <div class="item">Delete</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="sb-media">
-                                                <img src="" alt="" class="sb-media-object mr-15">
-                                                <div class="sb-media-body">
-                                                    <h6 class="media-heading">United Course</h6>
-                                                    <p class="media-description">Course</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-label="Age">24</td>
-                                        <td data-label="Job">Designer</td>
-                                        <td data-label="live"><span
-                                                class="sb-label sb-label-table sb-label-gray-0">Unlisted</span></td>
-                                        <td>
-                                            <div class="ui dropdown sb-dotted-dropdown" suiDropdown
-                                                autoClose="itemClick">
-                                                <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">Edit</div>
-                                                    <div class="item">Share</div>
-                                                    <div class="item">Preview</div>
-                                                    <div class="item">Delete</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="sb-media">
-                                                <img src="" alt="" class="sb-media-object mr-15">
-                                                <div class="sb-media-body">
-                                                    <h6 class="media-heading">United Course</h6>
-                                                    <p class="media-description">Course</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-label="Age">24</td>
-                                        <td data-label="Job">Designer</td>
-                                        <td data-label="live"><span
-                                                class="sb-label sb-label-table sb-label-success-0">Live/On going</span>
-                                        </td>
-                                        <td>
-                                            <div class="ui dropdown sb-dotted-dropdown" suiDropdown
-                                                autoClose="itemClick">
-                                                <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
-                                                <div class="menu" suiDropdownMenu>
-                                                    <div class="item">Edit</div>
-                                                    <div class="item">Share</div>
-                                                    <div class="item">Preview</div>
-                                                    <div class="item">Delete</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="sb-pagination-container flex-jc-flex-end">
-                        <div class="sb-pagination">
-                            <a class="sb-item">&laquo;</a>
-                            <a class="sb-item">&lt;</a>
-                            <a class="sb-item sb-item-active">1</a>
-                            <a class="sb-item no-border">...</a>
-                            <a class="sb-item">10</a>
-                            <a class="sb-item">11</a>
-                            <a class="sb-item">12</a>
-                            <a class="sb-item">&gt;</a>
-                            <a class="sb-item">&raquo;</a>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-            <!-- <ng-template let-popup #popupTemplate>
+
+            <div class="sb-filter-label mb-16">
+              <div class="d-inline-flex"><span class="sb-label-name">Board/Syllabus:</span><span
+                  class="sb-label-value">CBSE<i class="close icon mr-0 pl-4"></i></span>
+              </div>
+              <div class="d-inline-flex"><span class="sb-label-name">Grade:</span><span class="sb-label-value">KG<i
+                    class="close icon mr-0 pl-4"></i></span>
+              </div>
+              <div class="d-inline-flex"><span class="sb-label-name">Medium:</span><span
+                  class="sb-label-value">English<i class="close icon mr-0 pl-4"></i></span></div>
+              <div class="d-inline-flex"><span class="sb-label-name">Resource Type:</span><span
+                  class="sb-label-value">Practice<i class="close icon mr-0 pl-4"></i></span></div>
+              <div class="d-inline-flex"><span class="sb-label-name">Status:</span><span class="sb-label-value">Draft<i
+                    class="close icon mr-0 pl-4"></i></span></div>
+            </div>
+
+            <div class="sb-table-responsive-div">
+              <table class="sb-table sb-table-hover sb-table-sortable sb-table-lg">
+                <thead>
+                  <tr>
+                    <th class="sb-sort-icon ascending descending">Name</th>
+                    <th class="sb-sort-icon ascending descending">Age</th>
+                    <th class="sb-sort-icon ascending descending">Job</th>
+                    <th class="sb-sort-icon ascending descending">
+                      <span class="ui dropdown sb-table-dropdown d-inline-flex" suiDropdown>
+                        <div class="text">Status</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">All</div>
+                          <div class="item">Live</div>
+                          <div class="item selected">Draft</div>
+                          <div class="item">Review</div>
+                          <div class="item">Unlisted</div>
+                        </div>
+                      </span>
+                    </th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">
+                      <div class="sb-media">
+                        <img src="" alt="" class="sb-media-object mr-15">
+                        <div class="sb-media-body">
+                          <h6 class="media-heading ellipsis p-0" suiPopup popupPlacement="bottom"
+                            popupHeader="Popup Header"
+                            popupText="United Resource - Area of focusUnited Resource - Area of focus">
+                            United Resource - Area of focusUnited Resource - Area of focus
+                          </h6>
+                          <p class="media-description">Course Name: Course progress in mobile
+                          </p>
+                          <p class="media-description">Creator: Kumar Content Creator</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Engineer</td>
+                    <td data-label="live"><span
+                        class="sb-label sb-label-table sb-label-primary-100">Review/Upcoming</span>
+                    </td>
+                    <td>
+                      <div class="ui dropdown sb-dotted-dropdown" suiDropdown autoClose="itemClick">
+                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">Edit</div>
+                          <div class="item">Share</div>
+                          <div class="item">Preview</div>
+                          <div class="item">Delete</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">
+                      <div class="sb-media">
+                        <img src="" alt="" class="sb-media-object mr-15">
+                        <div class="sb-media-body">
+                          <h6 class="media-heading">United Course</h6>
+                          <p class="media-description">Course</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td data-label="Age">26</td>
+                    <td data-label="Job">Engineer</td>
+                    <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0"><span
+                          class="sb-live"></span>Live</span></td>
+                    <td>
+                      <div class="ui dropdown sb-dotted-dropdown" suiDropdown autoClose="itemClick">
+                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">Edit</div>
+                          <div class="item">Share</div>
+                          <div class="item">Preview</div>
+                          <div class="item">Delete</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">
+                      <div class="sb-media">
+                        <img src="" alt="" class="sb-media-object mr-15">
+                        <div class="sb-media-body">
+                          <h6 class="media-heading">United Course</h6>
+                          <p class="media-description">Course</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Designer</td>
+                    <td data-label="live"><span
+                        class="sb-label sb-label-table sb-label-warning-0">Draft/Expired</span><span
+                        class="sb-lock-icon" suiPopup popupPlacement="bottom right" popupHeader="Title"
+                        popupText="You don't have access"><i class="lock icon"></i></span></td>
+                    <td>
+                      <div class="ui dropdown sb-dotted-dropdown" suiDropdown autoClose="itemClick">
+                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">Edit</div>
+                          <div class="item">Share</div>
+                          <div class="item">Preview</div>
+                          <div class="item">Delete</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">
+                      <div class="sb-media">
+                        <img src="" alt="" class="sb-media-object mr-15">
+                        <div class="sb-media-body">
+                          <h6 class="media-heading">United Course</h6>
+                          <p class="media-description">Course</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Designer</td>
+                    <td data-label="live"><span class="sb-label sb-label-table sb-label-gray-0">Unlisted</span></td>
+                    <td>
+                      <div class="ui dropdown sb-dotted-dropdown" suiDropdown autoClose="itemClick">
+                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">Edit</div>
+                          <div class="item">Share</div>
+                          <div class="item">Preview</div>
+                          <div class="item">Delete</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">
+                      <div class="sb-media">
+                        <img src="" alt="" class="sb-media-object mr-15">
+                        <div class="sb-media-body">
+                          <h6 class="media-heading">United Course</h6>
+                          <p class="media-description">Course</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Designer</td>
+                    <td data-label="live"><span class="sb-label sb-label-table sb-label-success-0">Live/On going</span>
+                    </td>
+                    <td>
+                      <div class="ui dropdown sb-dotted-dropdown" suiDropdown autoClose="itemClick">
+                        <div class="p-8 w-auto"><span class="sb-dotmenu"></span></div>
+                        <div class="menu" suiDropdownMenu>
+                          <div class="item">Edit</div>
+                          <div class="item">Share</div>
+                          <div class="item">Preview</div>
+                          <div class="item">Delete</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="sb-pagination-container flex-jc-flex-end">
+            <div class="sb-pagination">
+              <a class="sb-item">&laquo;</a>
+              <a class="sb-item">&lt;</a>
+              <a class="sb-item sb-item-active">1</a>
+              <a class="sb-item no-border">...</a>
+              <a class="sb-item">10</a>
+              <a class="sb-item">11</a>
+              <a class="sb-item">12</a>
+              <a class="sb-item">&gt;</a>
+              <a class="sb-item">&raquo;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- <ng-template let-popup #popupTemplate>
                                     <div style="width: 880px; padding: 16px;">
                                         <app-explore-filter></app-explore-filter>
                                     </div>
                                   </ng-template> -->
-        </div>
-
     </div>
-    <!--/Display output-->
 
-    <!--Display code-->
-    <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+  </div>
+  <!--/Display output-->
 
-        <!--Copy code button-->
-        <button ngxClipboard [cbContent]="section.copyCode"
-            class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-        <!--/Copy code button-->
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
 
-        <!--Copy code display-->
-        <pre>
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
         <code [highlight]="section.demoCode"></code>
       </pre>
-        <!--/Copy code display-->
+    <!--/Copy code display-->
 
-    </div>
-    <!--/Display code-->
+  </div>
+  <!--/Display code-->
 
 </div>
 <!--Page Content-->
@@ -337,20 +324,20 @@
 <h4>Sort Testing</h4>
 <div class="sb-table-container">
 
-    <table sortable-table (sorted)="onSorted($event)" class="sb-table sb-table-hover sb-table-sortable">
-        <thead class="sb-table-header heading-large">
-            <tr>
-                <th sortable-column="id" sort-direction="asc">Id</th>
-                <th sortable-column="firstname">First Name</th>
-                <th sortable-column="lastname">Last Name</th>
-            </tr>
-        </thead>
-        <tbody class="sb-table-body body-large">
-            <tr *ngFor="let c of customers">
-                <td>{{c.id}}</td>
-                <td>{{c.firstname}}</td>
-                <td>{{c.lastname}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <table sortable-table (sorted)="onSorted($event)" class="sb-table sb-table-hover sb-table-sortable">
+    <thead class="sb-table-header heading-large">
+      <tr>
+        <th sortable-column="id" sort-direction="asc">Id</th>
+        <th sortable-column="firstname">First Name</th>
+        <th sortable-column="lastname">Last Name</th>
+      </tr>
+    </thead>
+    <tbody class="sb-table-body body-large">
+      <tr *ngFor="let c of customers">
+        <td>{{c.id}}</td>
+        <td>{{c.firstname}}</td>
+        <td>{{c.lastname}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

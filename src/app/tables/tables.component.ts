@@ -20,15 +20,15 @@ export class TablesComponent implements OnInit {
         title: 'Table - Default',
         demoCode: `
             <div class="sb-table-container">
-            <table class="sb-table sb-table-fixed sb-table-hover">
-            <thead class="sb-table-header heading-large">
+            <table class="sb-table sb-table-fixed sb-table-hover sb-table-lg">
+            <thead>
                 <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Job</th>
                 </tr>
             </thead>
-            <tbody class="sb-table-body body-large">
+            <tbody>
                 <tr>
                 <td data-label="Name">
                     <div class="sb-media">
@@ -113,15 +113,15 @@ export class TablesComponent implements OnInit {
       `,
         copyCode: `
             <div class="sb-table-container">
-            <table class="sb-table sb-table-fixed sb-table-hover">
-            <thead class="sb-table-header heading-large">
+            <table class="sb-table sb-table-fixed sb-table-hover sb-table-lg">
+            <thead>
                 <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Job</th>
                 </tr>
             </thead>
-            <tbody class="sb-table-body body-large">
+            <tbody>
                 <tr>
                 <td data-label="Name">
                     <div class="sb-media">
@@ -232,18 +232,18 @@ export class TablesComponent implements OnInit {
             <button class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-auto mr-8"><i class="download icon"></i>Score Card</button>
             <button class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="download icon"></i>Progress Report</button>
           </div>
-          <table class="sb-table sb-table-striped sb-table-sortable sb-table-fixed">
-            <thead class="sb-table-header sb-table-thead-gray">
+          <table class="sb-table sb-table-striped sb-table-sortable sb-table-fixed sb-table-course-dashboard">
+            <thead>
               <tr>
-                <th class="sb-sort-icon">External ID</th>
-                <th class="sb-sort-icon">User Name</th>
-                <th class="sb-sort-icon">Organisation Name</th>
-                <th class="sb-sort-icon">Enrolled On</th>
-                <th class="sb-sort-icon">Progress</th>
-                <th class="sb-sort-icon">Certificate Status</th>
+                <th class="sb-sort-icon ascending descending">External ID</th>
+                <th class="sb-sort-icon ascending descending">User Name</th>
+                <th class="sb-sort-icon ascending descending">Organisation Name</th>
+                <th class="sb-sort-icon ascending descending">Enrolled On</th>
+                <th class="sb-sort-icon ascending descending">Progress</th>
+                <th class="sb-sort-icon ascending descending">Certificate Status</th>
               </tr>
             </thead>
-            <tbody class="sb-table-body">
+            <tbody>
               <tr>
                 <td data-label="Name">177402120</td>
                 <td data-label="Age">Course User 100</td>
@@ -327,18 +327,18 @@ export class TablesComponent implements OnInit {
             <button class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-auto mr-8"><i class="download icon"></i>Score Card</button>
             <button class="sb-btn sb-btn-xs sb-btn-link sb-btn-link-primary sb-left-icon-btn"><i class="download icon"></i>Progress Report</button>
           </div>
-          <table class="sb-table sb-table-striped sb-table-sortable sb-table-fixed">
-            <thead class="sb-table-header sb-table-thead-gray">
+          <table class="sb-table sb-table-striped sb-table-sortable sb-table-fixed sb-table-course-dashboard">
+            <thead>
               <tr>
-                <th class="sb-sort-icon">External ID</th>
-                <th class="sb-sort-icon">User Name</th>
-                <th class="sb-sort-icon">Organisation Name</th>
-                <th class="sb-sort-icon">Enrolled On</th>
-                <th class="sb-sort-icon">Progress</th>
-                <th class="sb-sort-icon">Certificate Status</th>
+                <th class="sb-sort-icon ascending descending">External ID</th>
+                <th class="sb-sort-icon ascending descending">User Name</th>
+                <th class="sb-sort-icon ascending descending">Organisation Name</th>
+                <th class="sb-sort-icon ascending descending">Enrolled On</th>
+                <th class="sb-sort-icon ascending descending">Progress</th>
+                <th class="sb-sort-icon ascending descending">Certificate Status</th>
               </tr>
             </thead>
-            <tbody class="sb-table-body">
+            <tbody>
               <tr>
                 <td data-label="Name">177402120</td>
                 <td data-label="Age">Course User 100</td>
@@ -404,15 +404,15 @@ export class TablesComponent implements OnInit {
         title: 'Table - with Placeholder',
         demoCode: `
             <div class="sb-table-container">
-            <table class="sb-table sb-table-fixed sb-table-placeholder">
-            <thead class="sb-table-header heading-large">
+            <table class="sb-table sb-table-fixed sb-table-placeholder sb-table-lg">
+            <thead>
                 <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Job</th>
                 </tr>
             </thead>
-            <tbody class="sb-table-body body-large">
+            <tbody>
                 <tr>
                 <td>
                     <div class="sb-media-obj-placeholder">
@@ -433,15 +433,15 @@ export class TablesComponent implements OnInit {
         copyCode: `
 
             <div class="sb-table-container">
-            <table class="sb-table sb-table-fixed sb-table-placeholder">
-            <thead class="sb-table-header heading-large">
+            <table class="sb-table sb-table-fixed sb-table-placeholder sb-table-lg">
+            <thead>
                 <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Job</th>
                 </tr>
             </thead>
-            <tbody class="sb-table-body body-large">
+            <tbody>
                 <tr>
                 <td>
                     <div class="sb-media-obj-placeholder">
