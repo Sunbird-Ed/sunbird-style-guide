@@ -31,16 +31,27 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
     min-height: 180px;
     transition: height 500ms;
   }
+
   &.Close {
     overflow: hidden;
     transition: height 500ms;
     height: 0px;
   }
 }
+
 .sb-prominent-filter {
   background: $sb-prominent-filter-background-color;
   // padding: $sb-prominent-filter-padding;
   border: 0px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  top: 100%;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+
 
   .sb-prominent-filter-header {
     font-weight: $sb-prominent-filter-header-font-weight;
@@ -117,23 +128,28 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
             color: $sb-prominent-filter-dropdown-item-active-color;
             font-weight: $sb-prominent-filter-dropdown-item-active-font-weight;
           }
+
           &:hover {
             background: $primary-250;
             color: $blue;
           }
+
           i.icon.square.outline {
             height: ($base-block-space * 2);
             width: ($base-block-space * 2);
             border: 1px solid $primary-300;
             border-radius: 5px;
+
             &::before {
               content: "\f14a";
               visibility: hidden;
             }
+
             &.check {
               background: $blue;
               border: none;
               color: $sb-prominent-filter-background-color;
+
               &::before {
                 content: "\2713";
                 line-height: ($base-block-space * 2);
@@ -151,6 +167,7 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
           margin: 0;
           padding: $sb-prominent-filter-field-input-padding;
           font-size: $sb-prominent-filter-field-font-size;
+
           &::first-letter {
             text-transform: uppercase;
           }
@@ -163,9 +180,7 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
 // responsive
 
 @include respond-above(lg) {
-  .sb-prominent-filter
-    .sb-prominent-filter-container
-    .sb-prominent-filter-field {
+  .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
     width: $sb-prominent-filter-field-width-above-lg;
 
     &:nth-child(5n + 5) {
@@ -174,15 +189,15 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
   }
 
   *[dir="rtl"] {
-    .sb-prominent-filter
-      .sb-prominent-filter-container
-      .sb-prominent-filter-field {
+    .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
       &:nth-child(5n + 5) {
         padding-right: $sb-prominent-filter-field-side-spacing;
       }
+
       &:nth-child(5n + 1) {
         padding-right: 0;
       }
+
       &:last-child {
         padding-right: $sb-prominent-filter-field-side-spacing;
         margin-right: auto;
@@ -194,9 +209,7 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
 }
 
 @include respond-between(md, lg) {
-  .sb-prominent-filter
-    .sb-prominent-filter-container
-    .sb-prominent-filter-field {
+  .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
     width: $sb-prominent-filter-field-width-above-md;
 
     &:nth-child(4n + 4) {
@@ -205,15 +218,15 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
   }
 
   *[dir="rtl"] {
-    .sb-prominent-filter
-      .sb-prominent-filter-container
-      .sb-prominent-filter-field {
+    .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
       &:nth-child(4n + 4) {
         padding-right: $sb-prominent-filter-field-side-spacing;
       }
+
       &:nth-child(4n + 1) {
         padding-right: 0;
       }
+
       &:last-child {
         padding-right: $sb-prominent-filter-field-side-spacing;
         margin-right: auto;
@@ -225,9 +238,7 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
 }
 
 @include respond-between(sm, md) {
-  .sb-prominent-filter
-    .sb-prominent-filter-container
-    .sb-prominent-filter-field {
+  .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
     width: $sb-prominent-filter-field-width-above-sm;
 
     &:nth-child(3n + 3) {
@@ -236,15 +247,15 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
   }
 
   *[dir="rtl"] {
-    .sb-prominent-filter
-      .sb-prominent-filter-container
-      .sb-prominent-filter-field {
+    .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
       &:nth-child(3n + 3) {
         padding-right: $sb-prominent-filter-field-side-spacing;
       }
+
       &:nth-child(3n + 1) {
         padding-right: 0;
       }
+
       &:last-child {
         padding-right: $sb-prominent-filter-field-side-spacing;
         margin-right: auto;
@@ -256,9 +267,7 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
 }
 
 @include respond-below(sm) {
-  .sb-prominent-filter
-    .sb-prominent-filter-container
-    .sb-prominent-filter-field {
+  .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
     width: $sb-prominent-filter-field-width-below-sm;
 
     &:nth-child(2n + 2) {
@@ -267,15 +276,15 @@ $sb-prominent-filter-dropdown-item-active-font-weight: 700;
   }
 
   *[dir="rtl"] {
-    .sb-prominent-filter
-      .sb-prominent-filter-container
-      .sb-prominent-filter-field {
+    .sb-prominent-filter .sb-prominent-filter-container .sb-prominent-filter-field {
       &:nth-child(2n + 2) {
         padding-right: $sb-prominent-filter-field-side-spacing;
       }
+
       &:nth-child(2n + 1) {
         padding-right: 0;
       }
+
       &:last-child {
         padding-right: $sb-prominent-filter-field-side-spacing;
         margin-right: auto;

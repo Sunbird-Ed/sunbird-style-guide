@@ -1,46 +1,46 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { CustomerService, Customer, CustomerSearchCriteria } from '../services/table-data.service';
-import { trigger, state, animation, transition, animate, style } from '@angular/animations';
+import { trigger, transition, animate, style } from '@angular/animations';
 
 
 @Component({
-  selector: 'app-workspace',
-  templateUrl: './workspace.component.html',
-  styleUrls: ['./workspace.component.scss'],
-  animations: [
-    trigger('fade', [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate(500, style({opacity: 1}))
-      ]),
-      transition('* => void', [
-        animate(1000, style({ opacity: 0 }))
-      ])
-    ])
-  ]
+    selector: 'app-workspace',
+    templateUrl: './workspace.component.html',
+    styleUrls: ['./workspace.component.scss'],
+    animations: [
+        trigger('fade', [
+            transition('void => *', [
+                style({ opacity: 0 }),
+                animate(100, style({ opacity: 1 }))
+            ]),
+            transition('* => void', [
+                animate(100, style({ opacity: 0 }))
+            ])
+        ])
+    ]
 })
 
 export class WorkspaceComponent implements OnInit {
 
-  sbExploreFilter = false;
+    sbExploreFilter = false;
 
-  handlePin() {
-    console.log('pinned');
-  }
-  handleUnpin() {
-    console.log('unpinned');
-  }
+    handlePin() {
+        console.log('pinned');
+    }
+    handleUnpin() {
+        console.log('unpinned');
+    }
 
-  pageTitle = 'Workspace';
+    pageTitle = 'Workspace';
 
-  sections = [
-    {
-      expandCode: false,
-      title: 'All my content',
-      demoCode: `
+    sections = [
+        {
+            expandCode: false,
+            title: 'All my content',
+            demoCode: `
       
       `,
-      copyCode: `
+            copyCode: `
       <div class="twelve wide column px-0 sb-workspace-bg">
             <div class="ui container stackable grid mt-48">
                 <div class="two wide column sb-sidebar-menu px-0">
@@ -135,13 +135,13 @@ export class WorkspaceComponent implements OnInit {
                         </div>
 
                         <div class="sb-table-responsive-div">
-                            <table class="sb-table sb-table-hover sb-table-sortable">
-                                <thead class="sb-table-header heading-large">
+                            <table class="sb-table sb-table-hover sb-table-sortable sb-table-lg">
+                                <thead>
                                     <tr>
-                                        <th class="sb-sort-icon">Name</th>
-                                        <th class="sb-sort-icon">Age</th>
-                                        <th class="sb-sort-icon">Job</th>
-                                        <th class="sb-sort-icon">
+                                        <th class="sb-sort-icon ascending descending">Name</th>
+                                        <th class="sb-sort-icon ascending descending">Age</th>
+                                        <th class="sb-sort-icon ascending descending">Job</th>
+                                        <th class="sb-sort-icon ascending descending">
                                             <span class="ui dropdown sb-table-dropdown d-inline-flex" suiDropdown>
                                                 <div class="text">Status</div>
                                                 <i class="dropdown icon"></i>
@@ -157,7 +157,7 @@ export class WorkspaceComponent implements OnInit {
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody class="sb-table-body body-large">
+                                <tbody>
                                     <tr>
                                         <td data-label="Name">
                                             <div class="sb-media">
@@ -328,32 +328,32 @@ export class WorkspaceComponent implements OnInit {
             </div>
         </div>
       `
+        }
+    ]
+
+    multiSelect1: any;
+
+    constructor(private service: CustomerService) {
+        this.multiSelect1 = [{ name: 'Example' }, { name: 'Test' }, { name: 'that' }];
     }
-  ]
 
-  multiSelect1: any;
+    customers: Customer[];
 
-  constructor(private service: CustomerService) {
-    this.multiSelect1 = [{ name: 'Example' }, { name: 'Test' }, { name: 'that' }];
-  }
+    getCustomers(criteria: CustomerSearchCriteria) {
+        this.customers = this.service.getCustomers(criteria);
+    }
 
-  customers: Customer[];
+    onSorted($event) {
+        this.getCustomers($event);
+    }
 
-  getCustomers(criteria: CustomerSearchCriteria) {
-    this.customers = this.service.getCustomers(criteria);
-  }
+    ngOnInit() {
+        this.getCustomers({ sortColumn: 'id', sortDirection: 'asc' });
+    }
 
-  onSorted($event) {
-    this.getCustomers($event);
-  }
-
-  ngOnInit() {
-    this.getCustomers({ sortColumn: 'id', sortDirection: 'asc' });
-  }
-
-  toggleSbFilter () {
-    //debugger;
-    this.sbExploreFilter = !this.sbExploreFilter;
-  }
+    toggleSbFilter() {
+        //debugger;
+        this.sbExploreFilter = !this.sbExploreFilter;
+    }
 
 }
