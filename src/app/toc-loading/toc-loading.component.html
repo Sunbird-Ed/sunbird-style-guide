@@ -1,7 +1,7 @@
 <!-- placeholder loading section for cards -->
-<div class="sb-bg-color-white">
+<div class="sb-bg-color-white content-header">
   <div class="ui container py-16">
-    <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
+    <div class="content-header__content d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
       <div class="flex-basis-1 mr-32">
         <div class="content-header__title font-weight-bold sb__ellipsis sb__ellipsis--one">
           <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
@@ -30,24 +30,43 @@
           <app-skeleton-loader [width]="'100%'" [height]="'100%'"></app-skeleton-loader>
         </div>
         <div class="player__content p-16">
-          <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
           <app-skeleton-loader [width]="'50%'" [height]="'12px'"></app-skeleton-loader>
+          <app-skeleton-loader [width]="'25%'" [height]="'12px'" [mTop]="'12px'"></app-skeleton-loader>
         </div>
       </div>
 
-      <div class="player__content mt-16 p-16 sb-bg-color-white">
-        <div class="player__content__header mb-24">
-          <div class="sb-color-gray-200 fsmall font-weight-bold mb-16">DESCRIPTION</div>
+      <div class="content-metadeta sb-bg-color-white mt-8">
+        <div class="mx-16 py-16 content-metadeta__content" style="border-bottom: 0.0625rem solid #ccc;">
+          <div class="sb-color-gray-200 fsmall font-weight-bold mb-8 content-metadeta__title">DESCRIPTION</div>
           <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
         </div>
-        <div class="player__content__desc">
-          <div class="sb-color-primary fs-1 font-weight-bold mb-16">Content<i
-              class="angle up icon ml-16 font-weight-bold"></i></div>
-          <div class="sb-color-gray-200 fsmall font-weight-bold mb-8">BOARD</div>
-          <app-skeleton-loader [width]="'25%'" [height]="'12px'"></app-skeleton-loader>
-          <div class="sb-color-gray-200 fsmall font-weight-bold mb-8">MEDIUM</div>
-          <app-skeleton-loader [width]="'25%'" [height]="'12px'"></app-skeleton-loader>
-        </div>
+
+        <sui-accordion class="sb-accordion">
+          <sui-accordion-panel>
+            <div title>
+              <div class="sb-accordion-title fsmall font-weight-bold sb-color-primary pb-8 p-16 ">
+                Content Information
+                <i class="chevron down icon ml-8"></i>
+              </div>
+            </div>
+            <div content>
+              <div class="sb-accordion-content sb-bg-color-white pt-0 pb-8">
+                <div class="py-8">
+                  <div class="content-metadeta__title  fxsmall mb-8">BOARD</div>
+                  <div class="content-metadeta__text  fsmall">
+                    <app-skeleton-loader [width]="'25%'" [height]="'12px'"></app-skeleton-loader>
+                  </div>
+                </div>
+                <div class="py-8">
+                  <div class="content-metadeta__title  fxsmall mb-8">MEDIUM</div>
+                  <div class="content-metadeta__text  fsmall">
+                    <app-skeleton-loader [width]="'25%'" [height]="'12px'"></app-skeleton-loader>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sui-accordion-panel>
+        </sui-accordion>
       </div>
     </section>
     <section class="sb-g-col-xs-12 sb-g-col-md-5 sb-g-col-lg-4 sb-bg-color-gray-0">
@@ -58,32 +77,225 @@
               <span>All</span>
             </div>
             <div class="pill rounded rounded-with-icon">
+              <i class="icon-svg icon-svg--xs icon-videos mr-4"><svg class="icon icon-svg--primary">
+                  <use xlink:href="assets/images/libdemo/sprite.svg#play"></use>
+                </svg></i>
               <span>Video</span>
             </div>
             <div class="pill rounded rounded-with-icon">
+              <i class="icon-svg icon-svg--xs icon-videos mr-4"><svg class="icon icon-svg--primary">
+                  <use xlink:href="assets/images/libdemo/sprite.svg#touch"></use>
+                </svg></i>
               <span>Interactive</span>
             </div>
             <div class="pill rounded rounded-with-icon">
-              <span>All</span>
+              <i class="icon-svg icon-svg--xs icon-videos mr-4"><svg class="icon icon-svg--primary">
+                  <use xlink:href="assets/images/libdemo/sprite.svg#doc"></use>
+                </svg></i>
+              <span>Docs</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="sidebar-toc-content player__content">
-        <div class="sbaccordion__panel-header">
-          <app-skeleton-loader [width]="'50%'" [height]="'12px'"></app-skeleton-loader>
+        <div class="sbaccordion__panel-header" style="background: var(--white);
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        height: 3rem;
+        box-shadow: 0 0.25rem 0.4375rem 0 rgba(0, 0, 0, 0.1);">
+          <app-skeleton-loader [width]="'50%'" [height]="'12px'" style="flex: 1 1 auto;"></app-skeleton-loader>
         </div>
-        <div class="sbaccordion__panel-content p-16 mb-8">
+        <div class="sbaccordion__panel-content p-16 mb-8" style="border-top: .0625rem solid #e0e0e0;
+        background: var(--gray-0);
+        min-height: 2rem;
+        overflow: hidden;
+        overflow-y: auto;
+        box-shadow:rgba(0, 0, 0, 0.1);">
           <div class="sbchapter__item">
-            <app-skeleton-loader [width]="'50%'" [height]="'12px'"></app-skeleton-loader>
+            <app-skeleton-loader [width]="'50%'" [height]="'12px'" style="flex: 1 1 auto;"></app-skeleton-loader>
             <app-skeleton-loader [width]="'40px'" [height]="'40px'" style="width: auto;"></app-skeleton-loader>
           </div>
         </div>
-        <div class="sbaccordion__panel-header mb-8" *ngFor="let i of [0,1,2,3,4]">
-          <app-skeleton-loader [width]="'50%'" [height]="'12px'"></app-skeleton-loader>
+        <div class="sbaccordion__panel-header mb-8" *ngFor="let i of [0,1,2,3,4]" style="background: var(--white);
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        height: 3rem;
+        box-shadow: 0 0.25rem 0.4375rem 0 rgba(0, 0, 0, 0.1);">
+          <app-skeleton-loader [width]="'50%'" [height]="'12px'" style="flex: 1 1 auto;"></app-skeleton-loader>
         </div>
       </div>
     </section>
+  </div>
+</div>
+
+<div class="ui container">
+  <div class="ui stackable grid">
+    <div class="eight wide column">
+      <div class="sb-meta-data-container sb-meta-data-row-facing mt-24 content-player-metadata">
+        <h4 class="sb-section-title text-capitalize mb-16 d-block">Description</h4>
+        <div>
+          <span class="overflow-word-wrap">
+            <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+          </span>
+          <div class="ui divider mt-24 mb-24"></div>
+          <h4 class="sb-section-title text-capitalize mb-16 d-block">Content Information</h4>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Title</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Created on SUNBIRD by</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Original author</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>License Terms</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Copyright</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Medium</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Board/University</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Class</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Subject</dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Created On
+            </dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Last update
+            </dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Keywords
+            </dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+          <dl class="sb-meta-data flex-ai-center">
+            <dt>Content Type
+            </dt>
+            <dd>
+              <app-skeleton-loader [width]="'100%'" [height]="'12px'"></app-skeleton-loader>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui container">
+  <div class="collection-player-metadata sb-meta-data-container sb-meta-data-column d-flex flex-w-wrap my-24">
+    <dl class="sb-meta-data">
+      <dt>Medium</dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Class</dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Subject</dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Last update
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Created On
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Created on SUNBIRD by
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>License Terms
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Published on SUNBIRD by
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
+    <dl class="sb-meta-data">
+      <dt>Content Credits
+      </dt>
+      <dd>
+        <app-skeleton-loader [width]="'50%'" [height]="'12px'" [mTop]="'8px'"></app-skeleton-loader>
+      </dd>
+    </dl>
   </div>
 </div>
