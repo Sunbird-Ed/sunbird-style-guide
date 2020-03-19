@@ -22,3 +22,21 @@
         }
     }
 }
+
+.sb-dropdown-rightaligned {
+    &.ui.dropdown {
+        .menu {
+            right: 0 !important;
+            left: auto !important;
+        }
+    }
+}
+
+.sb-dropdown-leftaligned {
+    &.ui.dropdown {
+        .menu {
+            left: 0 !important;
+            right: auto !important;
+        }
+    }
+}
