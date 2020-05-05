@@ -65,7 +65,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
 import { TocLoadingComponent } from './toc-loading/toc-loading.component';
-import { ScoolingAtHomeComponent } from './scooling-at-home/scooling-at-home.component';
+import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -133,7 +133,7 @@ const routes: Routes = [
   { path: 'telemetry', component:TelemetryComponent },
   { path: 'toc-loading', component: TocLoadingComponent},
   { path: 'project-dock', loadChildren: './project-dock/project-dock.module#ProjectDockModule'},
-  { path: 'scooling-at-home', component: ScoolingAtHomeComponent},
+  { path: 'schooling-at-home', component: schoolingAtHomeComponent},
 ];
 
 @NgModule({
