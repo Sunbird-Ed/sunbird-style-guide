@@ -2,12 +2,12 @@ import { Component, OnInit, OnDestroy, Inject, Renderer2} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-scooling-at-home',
-  templateUrl: './scooling-at-home.component.html',
-  styleUrls: ['./scooling-at-home.component.scss']
+  selector: 'app-schooling-at-home',
+  templateUrl: './schooling-at-home.component.html',
+  styleUrls: ['./schooling-at-home.component.scss']
 })
 
-export class ScoolingAtHomeComponent implements OnInit, OnDestroy  {
+export class schoolingAtHomeComponent implements OnInit, OnDestroy  {
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
