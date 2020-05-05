@@ -107,6 +107,7 @@ import { TelemetryComponent } from './telemetry/telemetry.component';
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.component';
+import { SchoolingInformationComponent } from './schooling-at-home/schooling-information/schooling-information.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -203,7 +204,8 @@ export function hljsLanguages() {
     TelemetryComponent,
     SkeletonLoaderComponent,
     TocLoadingComponent,
-    schoolingAtHomeComponent
+    schoolingAtHomeComponent,
+    SchoolingInformationComponent
   ],
   imports: [
     BrowserModule,
