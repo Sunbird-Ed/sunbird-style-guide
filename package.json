@@ -39,7 +39,7 @@
     "html2canvas": "^1.0.0-rc.3",
     "html2pdf.js": "^0.9.1",
     "izimodal": "^1.5.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "jquery.fancytree": "^2.28.1",
     "jspdf": "^1.5.3",
     "lodash-es": "^4.17.14",
