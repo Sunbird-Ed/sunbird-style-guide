@@ -106,6 +106,7 @@ import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
 import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.component';
 import { TocLoadingComponent } from './toc-loading/toc-loading.component';
+import { ScoolingAtHomeComponent } from './scooling-at-home/scooling-at-home.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -201,7 +202,8 @@ export function hljsLanguages() {
     QmlSolutionsComponent,
     TelemetryComponent,
     SkeletonLoaderComponent,
-    TocLoadingComponent
+    TocLoadingComponent,
+    ScoolingAtHomeComponent
   ],
   imports: [
     BrowserModule,
