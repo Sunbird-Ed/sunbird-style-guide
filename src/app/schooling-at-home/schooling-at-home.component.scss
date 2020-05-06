@@ -83,12 +83,14 @@
     right: calculateRem(16px);
     top: calculateRem(16px);
     z-index: 9;
+    min-width: auto;
   }
 
   .back-btn {
     position: absolute;
-    left: 8px;
-    top: 8px;
+    left: calculateRem(8px);
+    top: calculateRem(16px);
+    min-width: auto;
   }
 }
 
