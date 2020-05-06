@@ -7,13 +7,12 @@
         </select>
         <label class="d-flex font-weight-normal">State</label>
   </div>
-    <div class="sb-field field-focus onboard-content"> 
+    <div class="sb-field field-focus onboard-content mt-16"> 
         <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectPlace">
             <option [ngValue]="option" *ngFor="let option of selectPlaceOption" [value]="option">{{option?.name}}</option>
           </select>
           <label class="d-flex font-weight-normal"> District</label>
     </div>
 </div>
-    <div class="py-16">Your location details helps us to suggest content that is useful to you.
-      Is the location given correct? if not, select your correct location and click Submit</div>
+    <div class="py-16">Your location details helps us to suggest content that is useful to you. Is the location given correct? if not, select your correct location and click Continue</div>
   </div> 
