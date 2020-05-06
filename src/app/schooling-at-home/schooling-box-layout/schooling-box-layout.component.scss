@@ -2,8 +2,7 @@
 @import "mixins/mixins";
 
 
-.sb-grid-box{
-	 padding: calculateRem(16px) 0;
+.sb-onbrd-g-box{
 	&__language-select{
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(144px, auto));
@@ -55,6 +54,7 @@
 			box-shadow: 0 calculateRem(20px) calculateRem(40px) calculateRem(-10px) #D8D8D8;
 			text-align: center;
 			position: relative;
+			border: 2px solid var(--white);
 			.title{
 				color: var(--gray-800);
 				font-size: calculateRem(22px);

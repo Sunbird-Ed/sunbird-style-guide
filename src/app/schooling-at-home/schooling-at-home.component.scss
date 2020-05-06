@@ -6,6 +6,9 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     @include respond-above(sm) {
         background: url('../../assets/images/schooling/onboard_bg.svg');
         background-size: cover;
@@ -43,20 +46,17 @@
             text-align: center;
             margin:calculateRem(8px) 0px;
         }
-        p {
-            color:var(--gray-800);
-            font-size: calculateRem(18px);
-            font-weight: bold;
-            letter-spacing: 0;
-            line-height:calculateRem(26px);
-            text-align: center;
-        }
     }
     &__content{
+        padding:0px calculateRem(32px) calculateRem(32px) calculateRem(32px);
         width: calculateRem(648px);
         max-width: 100%;
+        margin-bottom:auto;
+        overflow: hidden;
+        overflow-y: auto;
     }
     &__footer{
+        margin-top: calculateRem(16px);
         width: calculateRem(328px);
     }
     .brand-logo {
@@ -73,5 +73,22 @@
         right:calculateRem(16px);
         top:calculateRem(16px);
         z-index: 9;
+    }
+}
+::ng-deep {
+    p.subtitle {
+        color:var(--gray-800);
+        font-size: calculateRem(18px);
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height:calculateRem(26px);
+        text-align: center;
+    }
+}
+
+.animation {
+    &.start {
+        transform: translateX(-999px);  
+        transition: all .75s ease;
     }
 }
