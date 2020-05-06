@@ -1,24 +1,19 @@
-
-    <p class="subtitle">Your Location</p>
-  <div class="schooling-location">
-    <div class='fields-selection'>
-      <div class="sb-field">
+<p class="subtitle">Your Location</p>
+<div class="schooling-location">
+  <div class="fields-selection">
+    <div class="sb-field field-focus"> 
+      <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectState">
+          <option [ngValue]="option" *ngFor="let option of selectStateOption" [value]="option">{{option?.name}}</option>
+        </select>
         <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectState }">State</label>
-        <sui-select class="selection onboard-information" labelField="name" [(ngModel)]="selectState">
-          <sui-select-option *ngFor="let option of selectStateOption" [value]="option">
-          </sui-select-option>
-        </sui-select>
-      </div>
-
-      <div class="sb-field district-dropdown">
-        <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectPlace}">District</label>
-        <sui-select class="selection onboard-information" labelField="name" [(ngModel)]="selectPlace">
-          <sui-select-option *ngFor="let option of selectPlaceOption" [value]="option">
-          </sui-select-option>
-        </sui-select>
-      </div>
-
-    </div>
-
-    <div class="py-16">Your location details helps us to suggest content that is useful to you. Is the location given correct? if not, select your correct location and click Continue</div>
   </div>
+    <div class="sb-field field-focus onboard-content"> 
+        <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectPlace">
+            <option [ngValue]="option" *ngFor="let option of selectPlaceOption" [value]="option">{{option?.name}}</option>
+          </select>
+          <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectPlace }"> District</label>
+    </div>
+</div>
+    <div class="py-16">Your location details helps us to suggest content that is useful to you.
+      Is the location given correct? if not, select your correct location and click Submit</div>
+  </div> 
