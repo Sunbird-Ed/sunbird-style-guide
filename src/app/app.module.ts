@@ -108,6 +108,7 @@ import { SkeletonLoaderComponent } from './skeleton-loader/skeleton-loader.compo
 import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.component';
 import { SchoolingInformationComponent } from './schooling-at-home/schooling-information/schooling-information.component';
+import { SchoolingBoxLayoutComponent } from './schooling-at-home/schooling-box-layout/schooling-box-layout.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -206,6 +207,7 @@ export function hljsLanguages() {
     TocLoadingComponent,
     schoolingAtHomeComponent,
     SchoolingInformationComponent
+    SchoolingBoxLayoutComponent
   ],
   imports: [
     BrowserModule,
