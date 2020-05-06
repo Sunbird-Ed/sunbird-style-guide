@@ -1,0 +1,32 @@
+@import './../../assets/styles/variables';
+@import './../../assets/styles/mixins/mixins';
+
+.fields-selection {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+  }
+
+  .sb-field {
+    margin-bottom: calculateRem(16px) 0px;
+    width: 100%;
+
+    label {
+      font-size: 14px;
+    }
+  }
+
+  .district-dropdown {
+    margin: 0.5rem 0 0 0;
+
+    @include respond-above(sm) {
+      margin: 0 0 0 2rem;
+    }
+  }
+
+  .textColorChange {
+    color: var(--primary-color);
+  }
+}

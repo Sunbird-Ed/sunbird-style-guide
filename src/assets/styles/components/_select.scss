@@ -124,3 +124,9 @@ $sb-selection-line-height: calculateRem(18px);
     }
   }
 }
+
+.sb-field .ui.selection.dropdown.onboard-information .menu > .item.active {
+  color: var(--primary-color);
+  background-color: #E5EDF5;
+}
+
