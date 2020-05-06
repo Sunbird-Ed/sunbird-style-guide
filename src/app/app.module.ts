@@ -206,7 +206,7 @@ export function hljsLanguages() {
     SkeletonLoaderComponent,
     TocLoadingComponent,
     schoolingAtHomeComponent,
-    SchoolingInformationComponent
+    SchoolingInformationComponent,
     SchoolingBoxLayoutComponent
   ],
   imports: [

@@ -1,32 +1,68 @@
 @import './../../assets/styles/variables';
 @import './../../assets/styles/mixins/mixins';
 
-.fields-selection {
-  display: flex;
-  flex-direction: column;
-
-  @include respond-above(sm) {
-    flex-direction: row;
-  }
-
-  .sb-field {
-    margin-bottom: calculateRem(16px) 0px;
-    width: 100%;
-
-    label {
-      font-size: 14px;
-    }
-  }
-
-  .district-dropdown {
-    margin: 0.5rem 0 0 0;
-
+:host {
+  .fields-selection {
+    display: flex;
+    flex-direction: column;
+  
     @include respond-above(sm) {
-      margin: 0 0 0 2rem;
+      flex-direction: row;
     }
-  }
+  
+    .sb-field .ui.selection.active.dropdown {
+      border-color: #96c8da;
+    }
+  
+    .sb-field .ui.selection.active.dropdown .text {
+      color: #0076FE !important;
+    }
+  
+    .sb-field {
+      margin-bottom: calculateRem(16px) 0px;
+      width: 100%;
+  
+      label {
+        font-size: 14px;
+      }
+    }
+  
+    .onboard-content {
+      @include respond-above(sm) {
+        margin-left:2rem;
+        html[dir="rtl"] & {
+          margin-right:2rem;
+        }
+      }
+    }
+  
+    .textColorChange {
+      color:#0076FE;
+    }
+  } 
+}
 
-  .textColorChange {
-    color: var(--primary-color);
+.field-focus {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.ui.selection.dropdown.fields-dropdown {
+  height: 2rem !important;
+  &:focus{
+      border: calculateRem(1px) solid #0076FE;  
+      color:#0076FE !important;
   }
+}
+
+.ui.selection.dropdown.fields-dropdown:focus~label {
+  border: 0px;
+  color: #0076FE;
+  font-weight: normal;
+}
+
+.ui.selection.dropdown.fields-dropdown option{
+background: var(--white);
+color:var(--black);
 }
