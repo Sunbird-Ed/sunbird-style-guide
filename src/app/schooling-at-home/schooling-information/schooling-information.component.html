@@ -7,7 +7,7 @@
         </select>
         <label class="d-flex font-weight-normal" [ngClass]="{ textColorChange: !selectState }">State</label>
   </div>
-    <div class="sb-field field-focus onboard-content"> 
+    <div class="sb-field field-focus onboard-content mt-16"> 
         <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectPlace">
             <option [ngValue]="option" *ngFor="let option of selectPlaceOption" [value]="option">{{option?.name}}</option>
           </select>
