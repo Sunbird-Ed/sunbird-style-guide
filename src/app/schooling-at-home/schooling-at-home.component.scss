@@ -105,9 +105,47 @@
   }
 }
 
+// .animation {
+//   &.start {
+//     transform: translateX(-999px);
+//     transition: all .75s ease;
+//   }
+// }
+
+.sb-onboard__content {
+}
+
 .animation {
-  &.start {
-    transform: translateX(-999px);
-    transition: all .75s ease;
+  &.show {
+    animation-name: fade-in;
+  }
+  &.back {
+    animation-name: fade-out
+  }
+  &.show, &.back {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
