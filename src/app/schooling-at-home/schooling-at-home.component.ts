@@ -14,6 +14,7 @@ export class schoolingAtHomeComponent implements OnInit, OnDestroy  {
   panelOpened = false;
   screenSequence = {'school-box-layout':true,'school-information':false};
   allLayouts:any[] = ['school-box-layout','school-information'];
+  visitedBack:boolean = false;
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
   }
@@ -27,6 +28,7 @@ export class schoolingAtHomeComponent implements OnInit, OnDestroy  {
       if(this.screenSequence[each] && this.allLayouts[index+1]){
         this.screenSequence[each] = false;
         this.screenSequence[this.allLayouts[index+1]] = true;
+        this.visitedBack = true;
       }
     })
   }
