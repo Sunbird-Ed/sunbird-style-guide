@@ -1,0 +1,84 @@
+.add-to-library {
+  .back-btn {
+    min-width: auto;
+  }
+
+  .add-to-library-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: inline-block;
+    margin: 0px 0.5rem;
+  }
+
+  &__tab {
+    .item {
+      padding: 8px 24px;
+      font-size: 12px;
+
+      &.active, &:hover {
+        border-bottom: 3px solid var(--primary-color);
+        color: var(--primary-color);
+      }
+
+    }
+  }
+
+// CSS will come from Common consumption
+  .sb-medium {
+
+    &__pills-container {
+
+      .pill {
+        border: calculateRem(1px) solid var(--green);
+        color: var(--green);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--green);
+          color: var(--white);
+        }
+      }
+
+      .pill.active {
+        background-color: var(--green);
+        color: var(--white);
+        cursor: pointer;
+      }
+    }
+
+    &__sb-pills-content {
+      display: inline-flex;
+      align-items: center;
+      padding: ($base-block-space * 2) 0;
+
+      .pill {
+        background-color: var(--white);
+        white-space: nowrap;
+        -webkit-appearance: none;
+        text-overflow: ellipsis;
+        min-height: ($base-block-space * 4);
+        margin: 0px ($base-block-space/2) 0px ($base-block-space/2);
+        padding: ($base-block-space / 2) ($base-block-space);
+        border-radius: calculateRem(2px);
+        text-transform: capitalize;
+        text-decoration: none;
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+      }
+    }
+  }
+// CSS will come from Common consumption
+
+  &__divider {
+    width: 1px;
+    height: 32px;
+    background: #ccc;
+    margin: 0 4px;
+    display: inline-block;
+  }
+}
