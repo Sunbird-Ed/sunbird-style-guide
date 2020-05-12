@@ -110,6 +110,10 @@ import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.
 import { SchoolingInformationComponent } from './schooling-at-home/schooling-information/schooling-information.component';
 import { SchoolingBoxLayoutComponent } from './schooling-at-home/schooling-box-layout/schooling-box-layout.component';
 import { AddToLibraryComponent } from './add-to-library/add-to-library.component';
+import { SchoolingHomeGroupsComponent } from './schooling-home-groups/schooling-home-groups.component';
+import { GroupFormComponent } from './schooling-home-groups/group-form/group-form.component';
+import { MembersComponent } from './schooling-home-groups/members/members.component';
+import { CoursesComponent } from './schooling-home-groups/courses/courses.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -209,7 +213,11 @@ export function hljsLanguages() {
     schoolingAtHomeComponent,
     SchoolingInformationComponent,
     SchoolingBoxLayoutComponent,
-    AddToLibraryComponent
+    AddToLibraryComponent,
+    SchoolingHomeGroupsComponent,
+    GroupFormComponent,
+    MembersComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

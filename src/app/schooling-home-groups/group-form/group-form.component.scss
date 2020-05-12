@@ -1,0 +1,12 @@
+
+@import 'mixins/mixins';
+
+.status-container{
+    width: 100%;
+    box-shadow: 0px calculateRem(5px) calculateRem(10px) 0px rgba(0,0,0,0.12);
+
+    &__para{
+        color:var(--gray-800);
+        font-size: 1rem;
+    }
+}
