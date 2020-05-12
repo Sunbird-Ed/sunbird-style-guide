@@ -66,6 +66,7 @@ import { QmlSolutionsComponent } from './qml-solutions/qml-solutions.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
 import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.component';
+import { AddToLibraryComponent } from './add-to-library/add-to-library.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -134,6 +135,8 @@ const routes: Routes = [
   { path: 'toc-loading', component: TocLoadingComponent},
   { path: 'project-dock', loadChildren: './project-dock/project-dock.module#ProjectDockModule'},
   { path: 'schooling-at-home', component: schoolingAtHomeComponent},
+  { path: 'add-to-library', component: AddToLibraryComponent},
+
 ];
 
 @NgModule({
