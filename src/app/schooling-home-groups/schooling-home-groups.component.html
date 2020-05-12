@@ -1,0 +1,92 @@
+<div class="ui fixed relative main menu bs-0 d-block">
+  <div class="ui container sb-header-ui-container">
+    <div class="ui grid padded width-100">
+      <div class="six wide column p-0">
+        <a class="d-flex logo" role="banner" tabindex="0" title="SUNBIRD">
+          <img class="cursor-pointer" alt="SUNBIRD" src="http://localhost:3000/assets/images/sunbird_logo.png"></a>
+        </div>
+        <div class="six wide column p-0 d-flex flex-jc-flex-end flex-ai-center">
+
+            <div class="ui text menu m-0 d-flex flex-jc-center flex-ai-center ">
+
+              <a class="item py-8 pl-0 pr-24"
+              routerLink="/contribute" > Libray
+            </a>
+            <a class="item py-8 pl-0 pr-24"
+             tabindex="0">
+             Trainings
+            </a>
+            <a class="item py-8 pl-0 pr-24" 
+            tabindex="0"> My Groups 
+            <span class="group__type">New</span>   
+           </a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ui container my-24">
+  <div class="sb-g">
+    <section class="sb-g-col-xs-12 sb-g-col-sm-12 sb-g-col-md-8 sb-g-col-lg-9">
+     <div class="sbgrid sbgrid--grid-carousel">
+        <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+          <div class="sbcard__main_area">
+            <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
+            <div class="sbcard__info">
+              <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+              <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                  class="dot-divider"></span><span>{{sbcard.class}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- <div class="my-24">
+        <app-group-form></app-group-form> 
+      </div> -->
+
+    </section>
+    <section class="sb-g-col-xs-12 sb-g-col-sm-12 sb-g-col-md-4 sb-g-col-lg-3">
+      <div class="download-content my-24">
+       <!-- <app-group-form></app-group-form> -->
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+<!-- <div class="sb-bg-color-white">
+  <div class="ui container py-8">
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0">
+      <i class="icon-svg icon-svg--xxs icon-back mr-8"><svg class="icon icon-svg--primary">
+          <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+        </svg></i> Back</button>
+  </div>
+</div>
+
+<div class="content-header">
+  <div class="ui container py-16">
+    <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
+      <div class="flex-basis-1 mr-32">
+        <div class="content-header__title font-weight-bold sb__ellipsis sb__ellipsis--one">
+          <div>Great thinkers and Great thinkers</div>
+        </div>
+        <div class="d-flex flex-ai-center content-header__info fxsmall mt-8">
+          <div>Social Science</div>
+          <span class="dot-divider"></span>
+        </div>
+      </div>
+      <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
+        <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Update Textbook</button>
+        <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Delete</button>
+        <button type="button" class="sb-btn sb-btn-primary sb-btn-normal">Save to Pendrive</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
