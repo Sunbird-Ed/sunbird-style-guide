@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+          <div class="sbcard sbcard--resource sbcard--course" (click)="GotoMygroupDetailsView();" *ngFor="let sbcard of sbcards">
             <div class="sbcard__main_area">
               <div class="sbcard__img"><img src="../../../assets/images/noun_School.svg" alt="" title="" /></div>
               <div class="sbcard__info">
