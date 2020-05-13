@@ -84,8 +84,18 @@
         <div class="members-list-item">
           <div class="oval">A</div>
           <div class="member-name"><span>Abdul Malik</span></div>
-          <div class="menu"></div>
           <div class="status">Admin</div>
+          <div class="menu" (click)="dropdownMenu()"></div>
+          <div class="dropdown-content" [hidden]="dropdownContent">
+            <div class="list">
+              <img class="" alt="admin" src="assets/images/schooling/admin-blue.svg">
+               <span>Promote to admin</span>
+            </div>
+            <div class="list">
+              <img class="" alt="admin" src="assets/images/schooling/remove-from-group.svg">
+               <span>Remove from group</span>
+            </div>
+          </div>
         </div>
         <div class="members-list-item">
           <div class="oval">A</div>
@@ -95,8 +105,8 @@
         <div class="members-list-item">
           <div class="oval">A</div>
           <div class="member-name"><span>Arvind Gupta</span></div>
-          <div class="menu"></div>
           <div class="status">Teacher</div>
+          <div class="menu"></div>
         </div>
         <div class="members-list-item">
           <div class="oval">B</div>
