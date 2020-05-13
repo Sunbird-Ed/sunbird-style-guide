@@ -25,8 +25,7 @@
       height: 0;
       border-width: calculateRem(10px) calculateRem(5px);
       border-style: solid;
-      border-color: var(--gray-200) var(--gray-200) var(--gray-200)
-        transparent;
+      border-color: #FF6979 #FF6979 #FF6979 transparent;
       position: absolute;
       left: calculateRem(-10px);
       html[dir="rtl"] & {
