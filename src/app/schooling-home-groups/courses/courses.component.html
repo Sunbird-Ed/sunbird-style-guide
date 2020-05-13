@@ -1,3 +1,36 @@
-<p>
-  courses works!
-</p>
+
+
+<div class="course-content">
+  <div class="card-header">
+    <div class="title font-weight-bold">
+    <i class="icon-svg icon-svg--sm">
+    <svg class="icon">
+    <use xlink:href="assets/common-consumption/images/sprite.svg#book">
+    </use></svg></i> My groups <span class="badge">1</span></div>
+  </div>
+  <div class="twelve wide column">
+           <div class="sbgrid sbgrid--grid-carousel">
+          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+            <div class="sbcard__main_area">
+              <div class="sbcard__img"><img src="../../../assets/images/noun_School.svg" alt="" title="" /></div>
+              <div class="sbcard__info">
+                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+                <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                    class="dot-divider"></span><span>{{sbcard.class}}</span>
+                </div>
+              </div>
+              <div class="ml-auto"><button class="sb-btn sb-btn-normal sb-btn-outline-secondary my-24" type="button">
+                admin </button></div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="text-center">
+<button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn my-24" type="button">
+  View more </button></div>
