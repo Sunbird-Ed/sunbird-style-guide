@@ -1,13 +1,14 @@
 
 
 <div class="course-content">
-  <div class="card-header">
-    <div class="title font-weight-bold">
-    <i class="icon-svg icon-svg--sm">
-    <svg class="icon">
-    <use xlink:href="assets/common-consumption/images/sprite.svg#book">
-    </use></svg></i> My groups <span class="badge">1</span></div>
-  </div>
+  <div class="sb-pageSection">
+    <div class="sb-pageSection-header pt-24">
+        <h4 class="sb-pageSection-title m-0 mr-5">
+          Courses
+        </h4>
+        <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">25</span>
+        </div>
+      </div>
   <div class="twelve wide column">
            <div class="sbgrid sbgrid--grid-carousel">
           <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
@@ -19,8 +20,6 @@
                     class="dot-divider"></span><span>{{sbcard.class}}</span>
                 </div>
               </div>
-              <div class="ml-auto"><button class="sb-btn sb-btn-xs sb-btn-outline-secondary my-24" type="button">
-                admin </button></div>
             </div>
           </div>
         </div>
