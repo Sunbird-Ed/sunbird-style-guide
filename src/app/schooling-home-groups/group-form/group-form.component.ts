@@ -100,9 +100,11 @@ export class GroupFormComponent implements OnInit {
   classes: any [];
   medium: any [];
   subjects: any [];
-  noGroupContent: boolean = true;
+  noGroupContent: boolean = false;
   loginContent: boolean = true;
   groupCardContent: boolean = true;
+  hideLoginContainer: boolean = true;
+  CreateGroupRightPanel: boolean = false;
   showBoardSelectnModal;
   constructor() { }
 
@@ -129,12 +131,15 @@ export class GroupFormComponent implements OnInit {
      {name: 'Bengali'}, {name: 'Punjabi'}, {name: 'Urdu'}];
   }
   login() {
-    this.noGroupContent = !this.noGroupContent;
+    this.hideLoginContainer = !this.hideLoginContainer;
+    this.noGroupContent = true;
   }
   onMyGroups() {
     this.loginContent = !this.loginContent;
   }
   onCreateGroup() {
     this.groupCardContent = !this.groupCardContent ;
+    this.noGroupContent = false;
+    this.CreateGroupRightPanel = true;
   }
 }

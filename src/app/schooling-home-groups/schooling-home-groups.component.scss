@@ -7,7 +7,7 @@
     background: #FF6979;
     position: relative;
     height: calculateRem(20px);
-    padding: 0 calculateRem(8px) 0px calculateRem(4px);
+    padding: 0 calculateRem(4px) 0px calculateRem(4px);
     color: var(--white);
     margin-right: calculateRem(-8px);
     html[dir="rtl"] & {
@@ -31,8 +31,8 @@
       html[dir="rtl"] & {
         right: calculateRem(-10px);
         left: inherit;
-        border-color: var(--gray-200) transparent var(--gray-200)
-          var(--gray-200);
+        border-color: #FF6979 transparent #FF6979
+        #FF6979;
       }
     }
   }
