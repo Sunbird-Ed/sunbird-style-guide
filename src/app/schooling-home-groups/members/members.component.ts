@@ -14,10 +14,8 @@ export class MembersComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSelect(){
-    this.IsHidden= !this.IsHidden;
-   }
-   onSelectVerify(){
+
+   onSelect(){
      this.IsHiddenVerify = !this.IsHiddenVerify
    }
    onVerify(){

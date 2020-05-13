@@ -15,7 +15,7 @@
             Trainings
           </a>
           <a class="item py-8 pl-0 pr-24" tabindex="0"> My Groups
-            <span class="group__type">New</span>
+            <span class="group__type ml-16">New</span>
           </a>
 
         </div>
@@ -33,7 +33,7 @@
 <div class="sb-bg-color-white">
   <div class="ui container py-8">
     <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0">
-      <i class="icon-svg icon-svg--xxs icon-back mr-8"><svg class="icon icon-svg--primary">
+      <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
           <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
         </svg></i> Back</button>
   </div>
@@ -84,8 +84,18 @@
         <div class="members-list-item">
           <div class="oval">A</div>
           <div class="member-name"><span>Abdul Malik</span></div>
-          <div class="menu"></div>
           <div class="status">Admin</div>
+          <div class="menu" (click)="dropdownMenu()"></div>
+          <div class="dropdown-content" [hidden]="dropdownContent">
+            <div class="list">
+              <img class="" alt="admin" src="assets/images/schooling/admin-blue.svg">
+               <span>Promote to admin</span>
+            </div>
+            <div class="list">
+              <img class="" alt="admin" src="assets/images/schooling/remove-from-group.svg">
+               <span>Remove from group</span>
+            </div>
+          </div>
         </div>
         <div class="members-list-item">
           <div class="oval">A</div>
@@ -95,8 +105,8 @@
         <div class="members-list-item">
           <div class="oval">A</div>
           <div class="member-name"><span>Arvind Gupta</span></div>
-          <div class="menu"></div>
           <div class="status">Teacher</div>
+          <div class="menu"></div>
         </div>
         <div class="members-list-item">
           <div class="oval">B</div>
