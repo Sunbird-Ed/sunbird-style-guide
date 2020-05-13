@@ -141,5 +141,6 @@ export class GroupFormComponent implements OnInit {
     this.groupCardContent = !this.groupCardContent ;
     this.noGroupContent = false;
     this.CreateGroupRightPanel = true;
+    this.showBoardSelectnModal = false;
   }
 }
