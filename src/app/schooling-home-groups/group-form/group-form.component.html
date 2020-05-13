@@ -3,61 +3,67 @@
 
     <div class="nine wide column p-0 ">
 
-      
-        <div [hidden]="!hideLoginContainer" class="flex-dc d-flex flex-jc-center p-24 login-to-create-group-container">
-          <div class="my-48 p-16 d-flex flex-jc-center flex-as-center status-container__content">
-            <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
-              <div><img src="../../../assets/images/noun_School.svg" width="91px" height="162px"></div>
-              <div class="mt-8 fs-1"> You have to log in to create groups</div>
-              <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8 w-50" type="button" (click)="login()">
-                Login</button>
+
+      <div *ngIf="hideLoginContainer" class="flex-dc d-flex flex-jc-center p-24 login-to-create-group-container">
+        <div class="my-48 p-16 d-flex flex-jc-center flex-as-center status-container__content">
+          <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
+            <div><img src="../../../assets/images/noun_School.svg" width="91px" height="162px"></div>
+            <div class="mt-8 fs-1"> You have to log in to create groups</div>
+            <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8 w-50" type="button"
+              (click)="login()">
+              Login</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex-dc d-flex flex-ai-center flex-jc-center my-48 p-24 create-group-container"
+        *ngIf="noGroupContent">
+        <div><img src="../../../assets/images/noun_School.svg" width="91px" height="162px"></div>
+        <div class="mt-8 fs-1 text-center">
+          Currently, you do not have any Groups Click on create group to create groups, choose admin and much more
+          (Group discription here)</div>
+        <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8" type="button"
+          (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button>
+      </div>
+
+
+      <div [hidden]="groupCardContent" class="my-groups-container">
+        <div class="sb-pageSection">
+          <div class="sb-pageSection-header pt-24">
+            <h4 class="sb-pageSection-title m-0 mr-5">Members</h4>
+            <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">25</span>
+          </div>
+        </div>
+        <div class="sbgrid sbgrid--grid-carousel">
+          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+            <div class="sbcard__main_area">
+              <div class="sbcard__img"><img src="../../../assets/images/noun_School.svg" alt="" title="" /></div>
+              <div class="sbcard__info">
+                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+                <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                    class="dot-divider"></span><span>{{sbcard.class}}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-    
-        <div class="flex-dc d-flex flex-ai-center flex-jc-center my-48 p-24 create-group-container" [hidden]="noGroupContent">
-          <div><img src="../../../assets/images/noun_School.svg" width="91px" height="162px"></div>
-          <div class="mt-8 fs-1 text-center">
-            Currently, you do not have any Groups Click on create group to create groups, choose admin and much more (Group discription here)</div>
-          <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8" type="button" (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button>
-        </div>
-
-
-       <div [hidden]="groupCardContent" class="my-groups-container">
-        <div class="sb-pageSection">
-          <div class="sb-pageSection-header pt-24">
-              <h4 class="sb-pageSection-title m-0 mr-5">Members</h4>
-              <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">25</span>
-              </div>
-            </div>
-            <div class="sbgrid sbgrid--grid-carousel">
-              <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
-                <div class="sbcard__main_area">
-                  <div class="sbcard__img"><img src="../../../assets/images/noun_School.svg" alt="" title="" /></div>
-                  <div class="sbcard__info">
-                    <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
-                    <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
-                        class="dot-divider"></span><span>{{sbcard.class}}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  
-        </div>
+      </div>
 
     </div>
 
     <div class="three wide column p-0 pl-16">
-      <div class="sb-sticky-right-panel">
+      <div class="sb-sticky-right-panel" *ngIf="CreateGroupRightPanel">
         <div class="info-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white">
           <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
             <div class="info-container__icon">
               <img height="37px" src="../../../assets/images/noun_School.svg" width="37px">
             </div>
-            <div class="mt-8 text-center info-container__para">Currently, you do not have any Groups Click on create group to create groups, choose admin and much more ( Group discription here )</div>
+            <div class="mt-8 text-center info-container__para">Currently, you do not have any Groups Click on create
+              group to create groups, choose admin and much more ( Group discription here )</div>
           </div>
-          <button class="sb-btn sb-btn-primary sb-btn-normal mt-16 mb-8 w-100" type="button" (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button> 
+          <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-100" type="button"
+            (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button>
         </div>
       </div>
     </div>
@@ -71,10 +77,10 @@
   <div class="sb-modal-content o-y-visible">
     <div class="create-group-title pb-16">Enter the following information</div>
     <form class="sb-form">
-        <label>Group Name</label>
-        <div class="sb-field">
-            <input class="sb-form-control" type="text" placeholder="Enter Group Name">
-        </div>
+      <label>Group Name</label>
+      <div class="sb-field">
+        <input class="sb-form-control" type="text" placeholder="Enter Group Name">
+      </div>
       <div class="sb-field">
         <label>Board:</label>
         <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
@@ -113,28 +119,3 @@
     </button>
   </div>
 </sui-modal>
-
-
-
-
-<!--<div class="status-container d-flex flex-dc flex-jc-center p-24 sb-bg-color-white">
-  <div class="d-flex flex-dc flex-jc-center flex-ai-center text-center">
-    <div class="status-container__icon">
-      <img src="../../../assets/images/no-text.svg" width="150px" height="125px">
-    </div>
-    <div class="mt-8 text-center status-container__para">    
-      No member found</div>
-     <div class="mt-8 text-center status-container__para">    
-      No course available</div> 
-  </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
