@@ -29,7 +29,11 @@
     font-size: 0.875rem;
   }
 }
-
+.create-group-container {
+  max-width: 420px;
+  width:100%;
+  margin: 0 auto;
+}
 :host {
   .sbgrid {
     display: grid;
