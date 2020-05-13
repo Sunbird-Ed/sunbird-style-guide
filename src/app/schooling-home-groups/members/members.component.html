@@ -5,23 +5,10 @@
         src="../../../assets/images/noun_School.svg" width="37px"></div>
     <div class="mt-8 text-center status-container__para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
   </div>
-  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-sm mt-16 w-100" (click)="onSelect()">
+  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100" (click)="onSelect()">
     Add Member
    </button>
 </div>
-
- <div [hidden]="IsHidden">
-  <div class="title my-16 font-weight-bold">Add Member</div>
-   <div class="sb-field">
-    <label for="email">Member ID</label>
-    <input type="email" name="email" class="sb-form-control  mb-8" placeholder="Enter member ID">
-    <small class="message sb-color-error font-weight-bold">Invalid member ID</small>
-  </div>
-  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-sm mt-16 w-100" (click)="onSelectVerify()">
-    Verify
-  </button>
- </div>
-
 
  <div [hidden]="IsHiddenVerify">
   <div class="title my-16 font-weight-bold">
@@ -29,10 +16,10 @@
   </div>
    <div class="sb-field">
     <label for="email">Member ID</label>
-    <input type="email" name="email" class="sb-form-control  mb-8" placeholder="Enter member ID">
+    <input type="email" name="email" class="sb-form-control  mb-8 is-invalid" placeholder="Enter member ID">
     <small class="message sb-color-error font-weight-bold">Invalid member ID</small>
   </div>
-  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-sm mt-16 w-100" (click)="onVerify()">
+  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100" (click)="onVerify()">
     Verify
   </button>
  </div>
@@ -48,30 +35,16 @@
   </div>
   <div class="d-flex flex-jc-center flex-ai-center add-member-content py-24">
     <div class="add-member-text text-center">
-      <div class="circle">
-        <img src="../../../assets/images/oval.png" width="56px" height="56px">
-      </div>
+      <div class="oval">A</div>
       <div class="name-label fs-1">Arvind Gupta</div>
     </div>
  
   </div>
   <div class="fs-1">Do you want to add <span class="font-weight-bold">Arvind Gupta</span> as a member?</div>
-  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-sm mt-16 w-100">
+  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100">
    Add to groups
   </button>
  </div>
-
-
-
-
-<!-- <div class="sb-field">
-  <label for="email">{{resourceService.frmelmnts?.lbl?.email}}</label>
-  <input type="email" name="email" formControlName="email"
-    [ngClass]="{'is-invalid': reportOtherissueForm.controls.email.touched && reportOtherissueForm.controls['email'].errors}"
-    class="sb-form-control  mb-8" placeholder="{{resourceService.frmelmnts?.lbl?.enterEmailID}}">
-  <small *ngIf="reportOtherissueForm.controls.email.touched && reportOtherissueForm.controls['email'].errors"
-    class="message sb-color-error">{{resourceService.frmelmnts?.lbl?.validEmail}}</small>
-</div> -->
 
 
 
