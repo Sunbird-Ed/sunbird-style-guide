@@ -5,11 +5,11 @@
 
       <div>
         <div class="status-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white">
-          <div class="my-48 p-16 w-100">
+          <div class="my-48 p-16 d-flex flex-jc-center flex-as-center status-container__content">
             <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
               <div><img src="../../../assets/images/noun_School.svg" width="91px" height="162px"></div>
               <div class="mt-8 fs-1"> You have to log in to create groups</div>
-              <button class="sb-btn sb-btn-primary sb-btn-normal mt-16 mb-8 w-100" type="button" (click)="login()">
+              <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8 w-50" type="button" (click)="login()">
                 Login</button>
             </div>
           </div>
@@ -26,72 +26,23 @@
                 Click on create group to create groups,
                 choose admin and much more
                 ( Group discription here )</div>
-              <button class="sb-btn sb-btn-primary sb-btn-normal mt-16 mb-8 w-100" type="button" (click)="onCreateGroup()">Create group</button>
+              <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8 w-20" type="button" (click)="onCreateGroup()">Create group</button>
             </div>
           </div>
         </div>
       </div>
 
-        <!-- <div class="ui grid sb-form m-0 sb-workspace-modal">
-      <div *ngFor="let field of formFieldProperties;let i = index" class="{{field.renderingHints.semanticColumnWidth || 'twelve'}} wide column">
-    
-        <div *ngIf="field.inputType==='text' || field.inputType==='number'" class="sb-field-group" [ngClass]="{ 'disabled':!field.editable}">
-          <label>
-            {{field.label}}
-          </label>
-          <div class="sb-field">
-            <input class="sb-form-control" name={{field.code}} type={{field.inputType}} [(ngModel)]="formInputData[field.code]" placeholder={{field.placeholder}} autofocus>
-          </div>
-        </div>
-    
-        <div *ngIf="field.inputType==='select' && field.code!='year' && field.code!='contentType'" class="sb-field-group" [ngClass]="{ 'disabled':!field.editable}">
-          <label>{{field.label}}</label>
-          <div class="sb-field">
-            <sui-select id={{field.code}}  name={{field.code}} class="selection" [(ngModel)]="formInputData[field.code]" (ngModelChange)="updateForm({index:i, field:field, value:formInputData[field.code],formData:formInputData})">
-              <sui-select-option *ngFor="let option of categoryList[field.code]" [value]="option.name"></sui-select-option>
-            </sui-select>
-          </div>
-        </div>
-        <div *ngIf="field.inputType==='select' && field.code==='contentType'"  class="sb-field-group" [ngClass]="{ 'disabled':!field.editable}">
-          <label>{{field.label}}</label>
-          <div class="sb-field">
-            <sui-select id={{field.code}} [options]="categoryList[field.code]"
-                        labelField="name" valueField="value" name={{field.code}} class="selection" [(ngModel)]="formInputData[field.code]" (ngModelChange)="updateForm({index:i, field:field, value:formInputData[field.code],formData:formInputData})">
-              <sui-select-option *ngFor="let option of categoryList[field.code]" [value]="option"></sui-select-option>
-            </sui-select>
-          </div>
-        </div>
-        <div *ngIf="field.inputType==='multiSelect'" class="sb-field-group" [ngClass]="{ 'disabled':!field.editable}">
-          <label>{{field.label}}</label>
-          <div class="sb-field">
-            <sui-multi-select id={{field.code}} name={{field.code}} class="selection" [(ngModel)]="formInputData[field.code]" 
-            labelField="name" valueField="name"
-            (ngModelChange)="updateForm({index:i, field:field, value:formInputData[field.code],formData:formInputData})"
-            [options]="categoryList[field.code]" #multiSelect>
-              <sui-select-option *ngFor="let option of multiSelect.filteredOptions" [value]="option"> </sui-select-option>
-            </sui-multi-select>
-          </div>
-        </div>
-        <div *ngIf="field.code==='year'" class="sb-field-group" [ngClass]="{ 'disabled':!field.editable}">
-          <label>{{field.label}}</label>
-          <div class="sb-field">
-            <sui-select id={{field.code}}  name={{field.code}} class="selection" [(ngModel)]="formInputData[field.code]">
-              <sui-select-option *ngFor="let option of years"  [value]="option"> </sui-select-option>
-            </sui-select>
-          </div>
-        </div>
-
-      </div>
-    </div> -->
 
        <div [hidden]="groupCardContent">
-        <div class="card-header">
-        <div class="title font-weight-bold">
-        <i class="icon-svg icon-svg--sm">
-        <svg class="icon">
-        <use xlink:href="assets/common-consumption/images/sprite.svg#book">
-        </use></svg></i> My groups <span class="badge">1</span></div>
-      </div>
+        <div class="sb-pageSection">
+          <div class="sb-pageSection-header pt-24">
+              <h4 class="sb-pageSection-title m-0 mr-5">
+                Members
+              </h4>
+              <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">25</span>
+              </div>
+            </div>
+
 
       <div class="sbgrid sbgrid--grid-carousel">
         <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
@@ -112,16 +63,15 @@
 
     <div class="three wide column p-0 pl-16">
       <div class="sb-sticky-right-panel">
-        <div class="status-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white">
+        <div class="info-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white">
           <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
-            <div class="status-container__icon">
+            <div class="info-container__icon">
               <img height="37px" src="../../../assets/images/noun_School.svg" width="37px">
             </div>
-            <div class="mt-8 text-center status-container__para">Currently, you do not have any Groups Click on create group to create groups, choose admin and much more ( Group discription here )</div>
+            <div class="mt-8 text-center info-container__para">Currently, you do not have any Groups Click on create group to create groups, choose admin and much more ( Group discription here )</div>
           </div>
           <button class="sb-btn sb-btn-primary sb-btn-normal mt-16 mb-8 w-100" type="button" (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button> 
         </div>
-
       </div>
     </div>
   </div>
