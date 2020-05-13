@@ -25,9 +25,9 @@
       height: 0;
       border-width: calculateRem(10px) calculateRem(5px);
       border-style: solid;
-      border-color: #FF6979 #FF6979 #FF6979 transparent;
-      position: absolute;
-      left: calculateRem(-10px);
+      border-color: #FF6979 transparent  #FF6979 #FF6979;
+          position: absolute;
+          right: calculateRem(-10px);
       html[dir="rtl"] & {
         right: calculateRem(-10px);
         left: inherit;
