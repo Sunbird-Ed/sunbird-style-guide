@@ -17,6 +17,7 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownMenu(){
     this.dropdownContent = !this.dropdownContent;
   }
+
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }

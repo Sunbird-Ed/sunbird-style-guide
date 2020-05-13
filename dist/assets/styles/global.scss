@@ -160,4 +160,18 @@ body {
   }
 
 
-  
+
+// no-reult scss//
+.no-reult-container {
+  width: 100%;
+
+  &__content{
+    width: 100%;
+    max-width: 360px;
+  }
+
+  &__para {
+    color: var(--gray-800);
+    font-size: 0.875rem;
+  }
+}
