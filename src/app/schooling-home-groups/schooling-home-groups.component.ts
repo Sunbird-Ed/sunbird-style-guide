@@ -8,96 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./schooling-home-groups.component.scss']
 })
 export class SchoolingHomeGroupsComponent implements OnInit {
-  sbcards = [
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    },
-    {
-      title: 'Great thinkers and Great thinkers and thinkers and great thinkers',
-      subject: 'Social Science',
-      class: 'Class 8',
-      medium: 'Hindi',
-      board: 'CBSE',
-      type: 'Book'
-    }
-  ];
+
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
@@ -106,5 +17,6 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }
+
 
 }
