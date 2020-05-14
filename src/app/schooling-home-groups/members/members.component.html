@@ -4,10 +4,15 @@
     <div class="status-container__icon"><img _ngcontent-kvo-c3="" height="37px"
         src="./assets/images/noun_School.svg" width="37px"></div>
     <div class="mt-8 text-center status-container__para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100 flex-ai-jc-center" (click)="onSelect()">
+      <i class="icon-svg icon-svg--sm icon-addMember mr-4">
+        <svg class="icon icon-svg--white">
+          <use xlink:href="./assets/images/libdemo/sprite.svg#AddMember"></use>
+        </svg>
+      </i> Add Member
+     </button>
   </div>
-  <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100" (click)="onSelect()">
-    Add Member
-   </button>
+ 
 </div>
 
  <div [hidden]="IsHiddenVerify">
@@ -36,13 +41,13 @@
   <div class="d-flex flex-jc-center flex-ai-center add-member-content py-24">
     <div class="add-member-text text-center">
       <div class="oval">A</div>
-      <div class="name-label fs-1 mt-4">Arvind Gupta</div>
+      <div class="name-label fs-1 mt-4 font-weight-bold">Gupta</div>
     </div>
  
   </div>
   <div class="fs-1 mt-4">Do you want to add <span class="font-weight-bold">Arvind Gupta</span> as a member?</div>
   <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100">
-   Add to groups
+   Add to group
   </button>
  </div>
 

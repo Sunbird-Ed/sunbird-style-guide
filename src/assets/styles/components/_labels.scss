@@ -131,12 +131,15 @@ $sblabelsColor: "gray-hs" var(--gray-hs), "gray" var(--gray),
 //qr code result label
 .sb-result-label,
 .sb-pageSection-count {
-  background: $tertiary-color;
-  padding: ($base-block-space/2) ($base-block-space);
-  border-radius: ($base-block-space / 2);
+  background: #D4D3D3;
+  color: var(--gray-800);
+  text-align: center;
+  padding: calculateRem(0px) calculateRem(12px);
+  border-radius: calculateRem(4px);
+  height: calculateRem(24px);
+  line-height: calculateRem(24px);
   font-size: calculateRem(16px);
-  border: none;
-  height: auto;
+  font-weight: normal;
 }
 .sb-section-title {
   font-size: $font-size-md;
