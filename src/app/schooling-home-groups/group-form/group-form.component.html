@@ -9,7 +9,7 @@
           <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
             <div><img src="./assets/images/noun_School.svg" width="91px" height="162px"></div>
             <div class="mt-8 fs-1"> You have to log in to create groups</div>
-            <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8 w-50" type="button"
+            <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-50" type="button"
               (click)="login()">
               Login</button>
           </div>
@@ -23,8 +23,12 @@
         <div class="mt-8 fs-1 text-center">
           Currently, you do not have any Groups Click on create group to create groups, choose admin and much more
           (Group discription here)</div>
-        <button class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 mb-8" type="button"
-          (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button>
+        <button class="sb-btn sb-btn-primary sb-btn-md mt-16 flex-ai-jc-center mb-8" type="button"
+          (click)="showBoardSelectnModal = !showBoardSelectnModal"><i class="icon-svg icon-svg--md icon-addMembers mr-4">
+            <svg class="icon icon-svg--white">
+              <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers"></use>
+            </svg>
+          </i> Create Group</button>
       </div>
 
 
@@ -32,7 +36,7 @@
         <div class="sb-pageSection">
           <div class="sb-pageSection-header pt-24">
             <h4 class="sb-pageSection-title m-0 mr-5">My Groups</h4>
-            <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">12</span>
+            <span class="sb-pageSection-count">12</span>
           </div>
         </div>
         <div class="sbgrid sbgrid--grid-carousel">
@@ -62,8 +66,12 @@
             <div class="mt-8 text-center info-container__para">Currently, you do not have any Groups Click on create
               group to create groups, choose admin and much more ( Group discription here )</div>
           </div>
-          <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-100" type="button"
-            (click)="showBoardSelectnModal = !showBoardSelectnModal">Create group</button>
+          <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-100 flex-ai-jc-center" type="button"
+            (click)="showBoardSelectnModal = !showBoardSelectnModal"><i class="icon-svg icon-svg--md icon-addMembers mr-4">
+              <svg class="icon icon-svg--white">
+                <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers"></use>
+              </svg>
+            </i> Create group</button>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@
   <div class="ui container py-8">
     <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0">
       <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
-          <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+          <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-long-left"></use>
         </svg></i> Back</button>
   </div>
 </div>
@@ -51,12 +51,18 @@
         </div>
       </div>
       <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
-        <button class="sb-btn sb-btn-primary sb-btn-normal sb-left-icon-btn mr-8"><i class="edit icon mr-0"></i>
-          Edit</button>
-        <button type="button" class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8"><i
-            class="user icon mr-0"></i> Show Past members</button>
-        <button class="sb-btn sb-btn-outline-error sb-left-icon-btn sb-btn-normal"><i class="delete icon mr-0"></i>
-          Delete</button>
+        <button class="sb-btn sb-btn-outline-error sb-left-icon-btn sb-btn-normal flex-ai-jc-center mr-8"><i class="icon-svg icon-svg--xs icon-delete mr-4">
+          <svg class="icon icon-svg--red">
+            <use xlink:href="./assets/images/libdemo/sprite.svg#delete"></use>
+          </svg></i> Delete</button>
+        <button type="button" class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8 flex-ai-jc-center"><i class="icon-svg icon-svg--xs icon-members mr-4">
+          <svg class="icon icon-svg--primary">
+            <use xlink:href="./assets/images/libdemo/sprite.svg#members"></use>
+          </svg></i> Show Past members</button>
+        <button class="sb-btn sb-btn-primary sb-btn-normal sb-left-icon-btn flex-ai-jc-center"><i class="icon-svg icon-svg--xs icon-edit mr-4">
+          <svg class="icon icon-svg--white">
+            <use xlink:href="./assets/images/libdemo/sprite.svg#edit"></use>
+          </svg></i> Edit</button>
       </div>
     </div>
   </div>
@@ -75,7 +81,7 @@
             <h4 class="sb-pageSection-title m-0 mr-5">
               Members
             </h4>
-            <span class="sb-pageSection-count sb-label sb-label-xs sb-label-error">25</span>
+            <span class="sb-pageSection-count">25</span>
             </div>
           </div>
       <div class="members-list">
@@ -86,11 +92,11 @@
           <div class="menu" (click)="dropdownMenu()"></div>
           <div class="dropdown-content" [hidden]="dropdownContent">
             <div class="list">
-              <img class="" alt="admin" src="assets/images/schooling/admin-blue.svg">
+              <img class="" alt="admin" src="./assets/images/schooling/admin-blue.svg">
                <span>Promote to admin</span>
             </div>
             <div class="list">
-              <img class="" alt="admin" src="assets/images/schooling/remove-from-group.svg">
+              <img class="" alt="admin" src="./assets/images/schooling/remove-from-group.svg">
                <span>Remove from group</span>
             </div>
           </div>
