@@ -86,13 +86,13 @@
         </div>
 
         <!-- Cards Section Suggestions-->
-        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" title="Restore Down"><i
+        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" #SectionSuggestions title="Restore Down"><i
             class="icon-svg icon-svg--xs icon-restore-down mr-8"><svg class="icon icon-svg--tertiary">
               <use xlink:href="assets/images/libdemo/sprite.svg#restore-down"></use>
             </svg></i>Suggestions<span class="badge ml-8">10</span></div>
 
         <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards" (click)="enablePlayer();Navigate(SectionSuggestions);">
             <div class="sbcard__main_area">
               <i class="check circle icon icon-check"></i>
               <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
@@ -120,10 +120,10 @@
 
       </div>
       <div class="section section--toc-content" *ngIf="enableTocPlayerGrid">
-        <div class="toc-content-list">
+        <div class="toc-content-list" *ngIf="disableTocOnly">
           <!-- card component -->
           <div class="sbtoc-container">
-            <div class="sbselectpopover sbselectpopover--bg-white">
+            <div class="sbselectpopover sbselectpopover--bg-white hide">
               <h4>Select Chapter</h4>
               <i class="icon-svg icon-svg--sm icon-arrow-round-right"><svg class="icon icon-svg--primary">
                   <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-round-right"></use>
@@ -151,12 +151,12 @@
                     <div class="sbchapter__item sbchapter__item--active">
                       <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
                         Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
-                      <div class="sbchapter__img"></div>
+                      <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
                     </div>
                     <div class="sbchapter__item">
                       <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Chapter Item
                         Title</h4>
-                      <div class="sbchapter__img"></div>
+                      <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
                     </div>
                   </div>
                   <!-- chapter ends -->
@@ -171,7 +171,7 @@
                     class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
                     Chapter 02 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
                       class="icon icon-svg--primary">
-                      <use xlink:href="assets/common-consumption/images/sprite.svg#arrow-down"></use>
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
                     </svg></i>
                 </div>
                 <!-- panel header ends -->
@@ -181,13 +181,13 @@
                     <div class="sbchapter__item">
                       <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
                         Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
-                      <div class="sbchapter__img"><img src="assets/images/book.png" alt="Chapter Title"
+                      <div class="sbchapter__img"><img src="./assets/images/book.png" alt="Chapter Title"
                           title="Chapter Title" /></div>
                     </div>
                     <div class="sbchapter__item">
                       <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Chapter Item
                         Title</h4>
-                      <div class="sbchapter__img"><img src="assets/images/book.png" alt="Chapter Title"
+                      <div class="sbchapter__img"><img src="./assets/images/book.png" alt="Chapter Title"
                           title="Chapter Title" /></div>
                     </div>
                   </div>
@@ -197,11 +197,11 @@
               <!-- panel ends -->
             </div>
           </div>
-          <div class="sbtoc-container sbtoc-container--detailed">
+          <div class="sbtoc-container sbtoc-container--detailed hide">
             <div class="sbselectpopover sbselectpopover--bg-white">
               <h4>Select Chapter</h4>
               <i class="icon-svg icon-svg--sm icon-down-round-arrow opacity50"><svg class="icon icon-svg--primary">
-                  <use xlink:href="assets/common-consumption/images/sprite.svg#arrow-round-right"></use>
+                  <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-round-right"></use>
                 </svg></i>
             </div>
             <div class="sbchapter-open">
@@ -228,11 +228,12 @@
         <div class="toc-content-player content-video">
           <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio">
             <div>
-              <video width="400" controls>
+              <!-- <video width="400" controls>
                 <source src="mov_bbb.mp4" type="video/mp4">
                 <source src="mov_bbb.ogg" type="video/ogg">
                 Your browser does not support HTML5 video.
-              </video>
+              </video> -->
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8MPTb1iu_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
           <div class="d-flex flex-ai-center flex-w-wrap content-video__player__details sb-bg-color-white">
@@ -259,7 +260,10 @@
                   class="plus square icon mr-4"></i>Add to library</button>
               <div class="separator"></div>
               <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square">
-                <i class="icon expand"></i><span class="fxsmall">Full Screen</span></button>
+                <i class="icon-svg icon-svg--sm icon-back"><svg
+                  class="icon icon-svg--primary">
+                  <use xlink:href="./assets/images/libdemo/sprite.svg#fullscreen"></use>
+                </svg></i><span class="fxsmall">Full Screen</span></button>
             </div>
           </div>
           <div class="content-metadeta sb-bg-color-white mt-8">

@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy, Inject, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-to-library',
-  templateUrl: './add-to-library.component.html'
+  templateUrl: './add-to-library.component.html',
+  styleUrls: ['./add-to-library.component.scss']
 })
 export class AddToLibraryComponent implements OnInit {
   Classes = [
@@ -89,8 +90,10 @@ export class AddToLibraryComponent implements OnInit {
     }
   ];
 
+  @ViewChild("SectionSuggestions") scrollTo: ElementRef;
   enableTocPlayerGrid: boolean = false;
   enableSuggestions: boolean = false;
+  disableTocOnly: boolean = true;
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
@@ -100,7 +103,17 @@ export class AddToLibraryComponent implements OnInit {
 
   enableTocPlayer() {
     this.enableTocPlayerGrid = !this.enableTocPlayerGrid;
+    this.disableTocOnly = true;
   }
+  enablePlayer() {
+    this.disableTocOnly = false;
+    this.enableTocPlayerGrid = !this.enableTocPlayerGrid;
+  }
+
+
+Navigate(elem: HTMLElement) {
+    elem.scrollIntoView({ behavior: 'smooth' });
+}
 
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
