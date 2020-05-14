@@ -1,37 +1,33 @@
 <div class="ui container">
-  <div class="ui stackable grid m-0">
-
-    <div class="nine wide column p-0 ">
-
-
-      <div *ngIf="hideLoginContainer" class="flex-dc d-flex flex-jc-center p-24 login-to-create-group-container">
-        <div class="my-48 p-16 d-flex flex-jc-center flex-as-center status-container__content">
-          <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
-            <div><img src="./assets/images/noun_School.svg" width="91px" height="162px"></div>
-            <div class="mt-8 fs-1"> You have to log in to create groups</div>
-            <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-50" type="button"
-              (click)="login()">
-              Login</button>
-          </div>
+  <div class="twelve wide column p-0">
+    <div *ngIf="hideLoginContainer" class="flex-dc d-flex flex-jc-center p-24 login-to-create-group-container">
+      <div class="my-48 p-16 d-flex flex-jc-center flex-as-center status-container__content">
+        <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">
+          <div><img src="./assets/images/noun_School.svg" width="91px" height="162px"></div>
+          <div class="mt-8 fs-1"> You have to log in to create groups</div>
+          <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-50" type="button" (click)="login()">
+            Login</button>
         </div>
       </div>
+    </div>
 
 
-      <div class="flex-dc d-flex flex-ai-center flex-jc-center my-48 p-24 create-group-container"
-        *ngIf="noGroupContent">
-        <div><img src="./assets/images/noun_School.svg" width="91px" height="162px"></div>
-        <div class="mt-8 fs-1 text-center">
-          Currently, you do not have any Groups Click on create group to create groups, choose admin and much more
-          (Group discription here)</div>
-        <button class="sb-btn sb-btn-primary sb-btn-md mt-16 flex-ai-jc-center mb-8" type="button"
-          (click)="showBoardSelectnModal = !showBoardSelectnModal">
-          <i class="icon-svg icon-svg--md icon-addMembers mr-4">
-            <svg class="icon icon-svg--white">
-              <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers"></use>
-            </svg></i> Create Group</button>
-      </div>
-
-
+    <div class="flex-dc d-flex flex-ai-center flex-jc-center my-48 p-24 create-group-container" *ngIf="noGroupContent">
+      <div class="my-16">Place holder images</div>
+      <div class="d-flex flex-as-center"><img src="./assets/images/profileimages.png"></div>
+      <div class="my-24 fs-1 text-center">
+        Currently, you do not have any Groups Click on create group to create groups, choose admin and much more
+        (Group discription here)</div>
+      <button class="sb-btn sb-btn-primary sb-btn-md flex-ai-jc-center mb-8" type="button"
+        (click)="showBoardSelectnModal = !showBoardSelectnModal">
+        <i class="icon-svg icon-svg--md icon-addMembers mr-4">
+          <svg class="icon icon-svg--white">
+            <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers"></use>
+          </svg></i> Create Group</button>
+    </div>
+  </div>
+  <div class="ui stackable grid m-0">
+    <div class="nine wide column p-0 ">
       <div [hidden]="groupCardContent" class="my-groups-container">
         <div class="sb-pageSection">
           <div class="sb-pageSection-header pt-24">
@@ -40,7 +36,8 @@
           </div>
         </div>
         <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" (click)="GotoMygroupDetailsView();" *ngFor="let sbcard of sbcards">
+          <div class="sbcard sbcard--resource sbcard--course" (click)="GotoMygroupDetailsView();"
+            *ngFor="let sbcard of sbcards">
             <div class="sbcard__main_area">
               <div class="sbcard__img"><img src="./assets/images/noun_School.svg" alt="" title="" /></div>
               <div class="sbcard__info">
@@ -67,7 +64,8 @@
               group to create groups, choose admin and much more ( Group discription here )</div>
           </div>
           <button class="sb-btn sb-btn-primary sb-btn-md mt-16 mb-8 w-100 flex-ai-jc-center" type="button"
-            (click)="showBoardSelectnModal = !showBoardSelectnModal"><i class="icon-svg icon-svg--md icon-addMembers mr-4">
+            (click)="showBoardSelectnModal = !showBoardSelectnModal"><i
+              class="icon-svg icon-svg--md icon-addMembers mr-4">
               <svg class="icon icon-svg--white">
                 <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers"></use>
               </svg>
@@ -78,7 +76,7 @@
   </div>
 </div>
 
-
+<!-- Create Group form modal -->
 <sui-modal *ngIf="showBoardSelectnModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
   [size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showBoardSelectnModal = !showBoardSelectnModal" #modal>
   <div class="sb-modal-header">Create Group</div>

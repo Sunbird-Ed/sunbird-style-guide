@@ -10,6 +10,11 @@ import { Router } from '@angular/router';
 export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownContent: boolean = true;
   GroupWelcomScreen: boolean = true;
+  showRemoveModal;
+  showDismissAdminModal;
+  showMakeAdminModal;
+  showDeleteModal;
+  showPastMemberModal;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
