@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownContent: boolean = true;
+  GroupWelcomScreen: boolean = true;
   showRemoveModal;
   showDismissAdminModal;
   showMakeAdminModal;
@@ -22,7 +23,9 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownMenu(){
     this.dropdownContent = !this.dropdownContent;
   }
-
+  getStarted() {
+    this.GroupWelcomScreen = !this.GroupWelcomScreen;
+  }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }
