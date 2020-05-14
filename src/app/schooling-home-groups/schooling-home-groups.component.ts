@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownContent: boolean = true;
+  GroupWelcomScreen: boolean = true;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
@@ -17,7 +18,9 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   dropdownMenu(){
     this.dropdownContent = !this.dropdownContent;
   }
-
+  getStarted() {
+    this.GroupWelcomScreen = !this.GroupWelcomScreen;
+  }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }

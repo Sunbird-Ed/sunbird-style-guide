@@ -1,3 +1,19 @@
+<div class="sb-group-welcome-page-container" *ngIf="GroupWelcomScreen">
+    <div class="sb-group-welcome-container">
+      <a class="close" (click)="getStarted()"><i class="icon-svg icon-svg--xxs icon-back"><svg class="icon icon-svg--white">
+        <use xlink:href="./assets/images/libdemo/sprite.svg#close"></use>
+      </svg></i></a>
+      <h4 class="sb-group-welcome-container__title">Have you discovered the power of groups yet?</h4>
+      <img src="./assets/images/welcome-group-img.png" class="sb-group-welcome-container__img" />
+      <p class="sb-group-welcome-container__description">Bring people together with a few clicks. Create your own group, classroom or study circle to share, monitor and connect.</p>
+      <button type="button" class="sb-btn sb-btn-sm sb-btn-primary text-uppercase w-100" (click)="getStarted()">Get Started <span
+        class='arrow-icon pull-right'><i class="icon-svg icon-svg--xxs icon-back">
+          <svg class="icon icon-svg--white">
+            <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-long-right"></use>
+          </svg></i></span></button>
+    </div>
+  </div>
+
 <div class="ui fixed relative main menu bs-0 d-block">
   <div class="ui container sb-header-ui-container">
     <div class="ui grid padded width-100">
