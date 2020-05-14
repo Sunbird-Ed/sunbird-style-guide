@@ -51,11 +51,15 @@
         </div>
       </div>
       <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
-        <button class="sb-btn sb-btn-outline-error sb-left-icon-btn sb-btn-normal flex-ai-jc-center mr-8"><i class="icon-svg icon-svg--xs icon-delete mr-4">
+        <button class="sb-btn sb-btn-outline-error sb-left-icon-btn sb-btn-normal flex-ai-jc-center mr-8" 
+        (click)="showDeleteModal = !showDeleteModal">
+          <i class="icon-svg icon-svg--xs icon-delete mr-4">
           <svg class="icon icon-svg--red">
             <use xlink:href="./assets/images/libdemo/sprite.svg#delete"></use>
           </svg></i> Delete</button>
-        <button type="button" class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8 flex-ai-jc-center"><i class="icon-svg icon-svg--xs icon-members mr-4">
+        <button type="button" class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8 flex-ai-jc-center"
+        (click)="showPastMemberModal = !showPastMemberModal">
+          <i class="icon-svg icon-svg--xs icon-members mr-4">
           <svg class="icon icon-svg--primary">
             <use xlink:href="./assets/images/libdemo/sprite.svg#members"></use>
           </svg></i> Show Past members</button>
@@ -83,7 +87,7 @@
             </h4>
             <span class="sb-pageSection-count">25</span>
             </div>
-          </div>
+      </div>
       <div class="members-list">
         <div class="members-list-item">
           <div class="oval">A</div>
@@ -91,11 +95,15 @@
           <div class="status">Admin</div>
           <div class="menu" (click)="dropdownMenu()"></div>
           <div class="dropdown-content" [hidden]="dropdownContent">
-            <div class="list">
+            <div class="list" (click)="showMakeAdminModal = !showMakeAdminModal">
               <img class="" alt="admin" src="./assets/images/schooling/admin-blue.svg">
                <span>Promote to admin</span>
             </div>
-            <div class="list">
+            <div class="list mb-8" (click)="showDismissAdminModal = !showDismissAdminModal">
+              <img class="" alt="admin" src="./assets/images/schooling/admin-blue.svg">
+               <span>Dismiss as admin</span>
+            </div>
+            <div class="list" (click)="showRemoveModal = !showRemoveModal">
               <img class="" alt="admin" src="./assets/images/schooling/remove-from-group.svg">
                <span>Remove from group</span>
             </div>
@@ -124,3 +132,117 @@
     </div>
   </div>
 </div>
+
+ <!-- Remove modal -->
+<sui-modal *ngIf="showRemoveModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+class="sb-modal sb-error" appBodyScroll (dismissed)="showRemoveModal = !showRemoveModal" #modal>
+<div class="sb-modal-header">
+ Remove member ?
+</div>
+<div class="sb-modal-content">
+  Do you want to remove
+ <span class="font-weight-bold">Arvind Gupta</span>
+from this group?
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-outline-error" (click)="showRemoveModal = !showRemoveModal">
+   Remove
+  </button>
+  <button class="sb-btn sb-btn-normal sb-btn-error " (click)="showRemoveModal = !showRemoveModal">
+  No
+  </button>
+</div>
+</sui-modal>
+
+<!-- Admin Dismiss Modal -->
+<sui-modal *ngIf="showDismissAdminModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+class="sb-modal " appBodyScroll (dismissed)="showDismissAdminModal = !showDismissAdminModal" #modal>
+<div class="sb-modal-header">
+Dismiss as admin ?
+</div>
+<div class="sb-modal-content">
+  Do you want to dismiss
+ <span class="font-weight-bold">Abdul Malik</span>
+as admin?
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showDismissAdminModal = !showDismissAdminModal">
+ Yes
+  </button>
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary " (click)="showDismissAdminModal = !showDismissAdminModal">
+    No </button>
+</div>
+</sui-modal>
+
+ <!-- make admin modal -->
+ <sui-modal *ngIf="showMakeAdminModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+ class="sb-modal " appBodyScroll (dismissed)="showMakeAdminModal = !showMakeAdminModal" #modal>
+ <div class="sb-modal-header">
+  Make admin ?
+ </div>
+ <div class="sb-modal-content">
+   Do you want to make
+  <span class="font-weight-bold">Rajesh Kumar Sharma</span>
+ as admin?
+ </div>
+ <div class="sb-modal-actions">
+   <button class="sb-btn sb-btn-normal sb-btn-primary" (click)="showMakeAdminModal = !showMakeAdminModal">
+     Yes
+   </button>
+   <button class="sb-btn sb-btn-normal sb-btn-outline-primary " (click)="showMakeAdminModal = !showMakeAdminModal">
+    No
+   </button>
+ </div>
+ </sui-modal>
+
+ <!-- Delete Group modal -->
+ <sui-modal *ngIf="showDeleteModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+ class="sb-modal sb-error" appBodyScroll (dismissed)="showDeleteModal = !showDeleteModal" #modal>
+ <div class="sb-modal-header">
+ Delete Group ?
+ </div>
+ <div class="sb-modal-content">
+  Are you sure you want to delete "group name" ?
+ </div>
+ <div class="sb-modal-actions">
+   <button class="sb-btn sb-btn-normal sb-btn-outline-error" (click)="showDeleteModal = !showDeleteModal">
+   Delete
+   </button>
+   <button class="sb-btn sb-btn-normal sb-btn-error" (click)="showDeleteModal = !showDeleteModal">
+  No
+   </button>
+ </div>
+ </sui-modal>
+
+  <!-- show past members modal -->
+  <sui-modal *ngIf="showPastMemberModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+  class="sb-modal " appBodyScroll (dismissed)="showPastMemberModal = !showPastMemberModal" #modal>
+
+  <div class="sb-modal-content">
+   <div class="font-weight-bold my-16">Past Members List</div>
+   <div class="members-list my-24">
+    <div class="members-list-item">
+      <div class="oval">A</div>
+      <div class="member-name"><span>Abdul Malik</span></div>
+      <div class="status">Admin</div>
+    </div>
+    <div class="members-list-item">
+      <div class="oval">A</div>
+      <div class="member-name"><span>Anand Kumar</span></div>
+      <div class="menu"></div>
+    </div>
+    <div class="members-list-item">
+      <div class="oval">A</div>
+      <div class="member-name"><span>Arvind Gupta</span></div>
+      <div class="status">Teacher</div>
+      <div class="menu"></div>
+    </div>
+    <div class="members-list-item">
+      <div class="oval">B</div>
+      <div class="member-name"><span>Babar Ali</span></div>
+      <div class="menu"></div>
+    </div>
+  </div>
+  </div>
+
+  </sui-modal>
