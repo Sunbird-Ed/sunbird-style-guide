@@ -167,10 +167,10 @@
   &--secondary {
     fill: var(--secondary-color);
   }
-  &--tertiary {
+  &--tertiary,&--warning {
     fill: var(--tertiary-color);
   }
-  &--red {
+  &--red,&--error {
     fill: var(--red-400);
   }
   &--gray {

@@ -27,3 +27,46 @@ $colours: "gray-hs" var(--gray-hs), "gray" var(--gray), "gray-0" var(--gray-0),
 .sb-workspace-bg {
   background-image: linear-gradient(-90deg, $primary-0, $white);
 }
+
+
+/* opacity classes */
+/* opacity */
+.opacity0 {
+  opacity: var(--alpha0);
+}
+.opacity10 {
+  opacity: var(--alpha10);
+}
+.opacity20 {
+  opacity: var(--alpha20);
+}
+.opacity25 {
+  opacity: var(--alpha25);
+}
+.opacity30 {
+  opacity: var(--alpha30);
+}
+.opacity40 {
+  opacity: var(--alpha40);
+}
+.opacity50 {
+  opacity: var(--alpha50);
+}
+.opacity60 {
+  opacity: var(--alpha60);
+}
+.opacity70 {
+  opacity: var(--alpha70);
+}
+.opacity75 {
+  opacity: var(--alpha75);
+}
+.opacity80 {
+  opacity: var(--alpha80);
+}
+.opacity90 {
+  opacity: var(--alpha90);
+}
+.opacity100 {
+  opacity: var(--alpha100);
+}
