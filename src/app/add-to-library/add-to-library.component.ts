@@ -11,16 +11,7 @@ export class AddToLibraryComponent implements OnInit {
   Classes = [
     { name: "class 1" },
     { name: "class 2" },
-    { name: "class 3" },
-    { name: "class 4" },
-    { name: "class 5" },
-    { name: "class 6" },
-    { name: "class 7" },
-    { name: "class 8" },
-    { name: "class 9" },
-    { name: "class 10" },
-    { name: "class 11" },
-    { name: "class 12" },
+    { name: "class 3" }
   ];
 
   sbcards = [
@@ -94,7 +85,7 @@ export class AddToLibraryComponent implements OnInit {
   enableTocPlayerGrid: boolean = false;
   enableSuggestions: boolean = false;
   disableTocOnly: boolean = true;
-
+  showFilter: boolean = false;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {

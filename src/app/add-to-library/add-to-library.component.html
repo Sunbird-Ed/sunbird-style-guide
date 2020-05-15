@@ -1,7 +1,7 @@
 <div class="add-to-library">
   <!-- Blue Header -->
   <div class="sb-bg-color-primary add-to-library__header">
-    <div class="ui container py-16">
+    <div class="ui container relative position">
       <div class="d-flex flex-ai-center">
         <button class="sb-btn sb-btn-primary sb-btn-xs back-btn"><i class="icon-svg icon-svg--xxs icon-back"><svg
               class="icon icon-svg--white">
@@ -12,6 +12,48 @@
           <h5 class="font-weight-bold">A Pact with the Sun</h5>
           <div class="d-flex flex-ai-center fsmall">
             <span>English</span><span class="add-to-library-dot"></span><span>Class 7</span>
+          </div>
+        </div>
+        <div class="add-to-library__filter ml-auto" (click)="showFilter=!showFilter" [ngClass]="{'active': showFilter}">
+          <i class="icon-svg icon-svg--xs icon-filter mx-8"><svg class="icon icon-svg--white">
+              <use xlink:href="./assets/images/libdemo/sprite.svg#filter"></use>
+            </svg></i>
+          FILTERS
+          <i class="caret down icon ml-4"></i>
+        </div>
+        <div class="add-to-library__filter-panel" *ngIf="showFilter">
+          <div class="d-flex panel-container">
+            <div class="panel">
+              <label class="sb-color-primary d-block">Medium</label>
+              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
+                <div class="pill active">English medium</div>
+                <div class="pill">Hindi medium</div>
+              </div>
+            </div>
+            <div class="panel">
+              <label class="sb-color-primary d-block">Content</label>
+              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
+                <div class="pill pill-content active">Practice Content</div>
+                <div class="pill pill-content">Explanation Content</div>
+              </div>
+            </div>
+            <div class="panel">
+              <label class="sb-color-primary d-block">Subject</label>
+              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
+                <div class="pill active">Mathamatics</div>
+                <div class="pill">Economics</div>
+                <div class="pill">Geography</div>
+                <div class="pill">Science</div>
+              </div>
+            </div>
+            <div class="panel">
+              <label class="sb-color-primary d-block">Class</label>
+              <div class="add-to-library__class flex-w-wrap">
+                <div class="pill active">Class 2</div>
+                <div class="pill active">Class 3</div>
+                <div class="pill">Class 5</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,8 +103,7 @@
   <!-- Cards Section -->
   <div class="ui container">
     <div class="d-flex add-to-library__cards-layout">
-      <div class="section section--card"
-        [ngClass]="{'section--card': enableTocPlayerGrid}">
+      <div class="section section--card" [ngClass]="{'section--card': enableTocPlayerGrid}">
         <!-- Cards Section TextBooks-->
         <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" title="Restore Down"><i
             class="icon-svg icon-svg--xs icon-restore-down mr-8"><svg class="icon icon-svg--tertiary">
@@ -86,13 +127,15 @@
         </div>
 
         <!-- Cards Section Suggestions-->
-        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" #SectionSuggestions title="Restore Down"><i
-            class="icon-svg icon-svg--xs icon-restore-down mr-8"><svg class="icon icon-svg--tertiary">
+        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" #SectionSuggestions
+          title="Restore Down"><i class="icon-svg icon-svg--xs icon-restore-down mr-8"><svg
+              class="icon icon-svg--tertiary">
               <use xlink:href="assets/images/libdemo/sprite.svg#restore-down"></use>
             </svg></i>Suggestions<span class="badge ml-8">10</span></div>
 
         <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards" (click)="enablePlayer();Navigate(SectionSuggestions);">
+          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards"
+            (click)="enablePlayer();Navigate(SectionSuggestions);">
             <div class="sbcard__main_area">
               <i class="check circle icon icon-check"></i>
               <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
@@ -228,12 +271,9 @@
         <div class="toc-content-player content-video">
           <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio">
             <div>
-              <!-- <video width="400" controls>
-                <source src="mov_bbb.mp4" type="video/mp4">
-                <source src="mov_bbb.ogg" type="video/ogg">
-                Your browser does not support HTML5 video.
-              </video> -->
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8MPTb1iu_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8MPTb1iu_0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
           </div>
           <div class="d-flex flex-ai-center flex-w-wrap content-video__player__details sb-bg-color-white">
@@ -249,21 +289,14 @@
               </div>
             </div>
 
-            <!-- <div class="d-flex flex-w-wrap content-video__player__tools">
-              <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-                  class="icon print"></i><span class="fxsmall">Print</span></button>
-              <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square"><i
-                  class="icon download alternate"></i><span class="fxsmall">Download</span></button>
-            </div> -->
             <div class="d-flex content-video__player__screenpart d-flex flex-ai-center">
               <button class="sb-btn sb-btn-normal sb-btn-tertiary sb-left-icon-btn mr-16 shine-effect"><i
                   class="plus square icon mr-4"></i>Add to library</button>
               <div class="separator"></div>
               <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-sm sb-btn-square">
-                <i class="icon-svg icon-svg--sm icon-back"><svg
-                  class="icon icon-svg--primary">
-                  <use xlink:href="./assets/images/libdemo/sprite.svg#fullscreen"></use>
-                </svg></i><span class="fxsmall">Full Screen</span></button>
+                <i class="icon-svg icon-svg--sm icon-back"><svg class="icon icon-svg--primary">
+                    <use xlink:href="./assets/images/libdemo/sprite.svg#fullscreen"></use>
+                  </svg></i><span class="fxsmall">Full Screen</span></button>
             </div>
           </div>
           <div class="content-metadeta sb-bg-color-white mt-8">
@@ -354,27 +387,3 @@
   </div>
 
 </div>
-
-
-<!-- column layout -->
-<!-- <div class="ui container">
-<div class="library-cards-layout d-flex" style="border: 1px solid red;
-height: calc(100vh - 218px);">
-  <div class="cards-fullbox make-full-column" style="width:28%;border-right:1px solid red;">cards panel</div>
-  <div class="cards-cnt-container d-flex hide-column" style="width:72%;">
-    <div class="cards-toc" style="width:45%;border-right:1px solid green;">TOC panel</div>
-    <div class="cards-toc-player" style="width:55%;">player panel</div>
-  </div>
-</div>
-</div>
-
-<div class="ui container hide">
-  <div class="library-cards-layout sb-g" style="border: 1px solid red;
-  height: calc(100vh - 218px);">
-    <div class="cards-fullbox sb-g-col-md-4" style="border-right:1px solid red;">cards panel</div>
-    <div class="cards-cnt-container sb-g sb-g-col-md-8">
-      <div class="cards-toc sb-g-col-md-6" style="border-right:1px solid green;background:rgba(0,0,0,0.6)">TOC panel</div>
-      <div class="cards-toc-player sb-g-col-md-6" style="background:rgba(0,0,0,0.2)">player panel</div>
-    </div>
-  </div>
-  </div> -->
