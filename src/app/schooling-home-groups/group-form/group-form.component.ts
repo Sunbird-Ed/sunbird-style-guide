@@ -26,7 +26,7 @@ export class GroupFormComponent implements OnInit {
   hideLoginContainer: boolean = true;
   CreateGroupRightPanel: boolean = false;
   showBoardSelectnModal;
-  @Output() showView = new EventEmitter<any>();
+  @Output() showGroupDetailView = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
@@ -65,6 +65,6 @@ export class GroupFormComponent implements OnInit {
     this.showBoardSelectnModal = false;
   }
   GotoMygroupDetailsView(){
-    this.showView.emit(true);
+    this.showGroupDetailView.emit(true);
   }
 }
