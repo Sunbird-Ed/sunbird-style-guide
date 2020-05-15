@@ -658,7 +658,17 @@
     padding: calculateRem(8px);
     cursor: pointer;
     min-height: calculateRem(56px);
-
+    position:relative;
+    .btn-addtoLibrary {
+      position: absolute;
+    right: 0px;
+    visibility: hidden;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    }
     h4 {
       font-size: $font-size-sm;
       line-height: calculateRem(20px);
@@ -685,7 +695,9 @@
     &:hover {
       background: var(--gray-0);
     }
-
+    &:hover .btn-addtoLibrary {
+      visibility: visible;
+    }
     &--active {
       background: var(--primary-100);
     }

@@ -1,8 +1,16 @@
 
-<div class="">
 
- 
-</div>
+  <div class="d-flex flex-dc flex-jc-center text-center flex-ai-center">	
+    <div class="d-flex flex-as-center"><img src="./assets/images/profileimages.png"></div>	
+    <div class="mt-8 text-center status-container__para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>	
+    <button type="button" class="sb-btn sb-btn-primary sb-btn-normal sb-btn-md mt-16 w-100 flex-ai-jc-center" (click)="onSelect()">	
+      <i class="icon-svg icon-svg--sm icon-addMember mr-4">	
+        <svg class="icon icon-svg--white">	
+          <use xlink:href="./assets/images/libdemo/sprite.svg#AddMember"></use>	
+        </svg>	
+      </i> Add Member	
+     </button>	
+  </div>
 
  <div [hidden]="IsHiddenVerify">
   <div class="title my-16 font-weight-bold">
