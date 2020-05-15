@@ -1,47 +1,52 @@
-
-
-<div class="course-content">
+<div>
+  <div class="sb-search-box no-btn">
+    <div class="input-div relative">
+      <i class="search icon"></i>
+      <input class="sb-search-input" type="text" placeholder="Search..." />
+      <i class="close icon"></i>
+      <div class="sb-loader"></div>
+    </div>
+    <button class="sb-btn sb-btn-normal">Search</button>
+  </div>
 
   <div class="sb-pageSection">
     <div class="sb-pageSection-header pt-24">
-        <h4 class="sb-pageSection-title m-0 mr-5">
-          Courses
-        </h4>
-        <span class="sb-pageSection-count">25</span>
-        </div>
-      </div>
+      <h4 class="sb-pageSection-title m-0 mr-5">
+        Courses
+      </h4>
+      <span class="sb-pageSection-count">25</span>
+    </div>
+  </div>
 
   <div class="no-result-container d-flex flex-dc flex-jc-center p-24 mt-16">
     <div class="d-flex flex-dc flex-jc-center flex-ai-center text-center">
       <div class="no-result-container__icon">
         <img src="./assets/images/no-text.svg" width="150px" height="125px">
       </div>
-       <div class="mt-8 text-center no-result-container__para">    
-        No course available</div> 
+      <div class="mt-8 text-center no-result-container__para">
+        No course available</div>
     </div>
   </div>
 
 
   <div class="twelve wide column">
-        <div class="sbgrid sbgrid--grid-carousel">
-          <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
-            <div class="sbcard__main_area">
-              <div class="sbcard__img"><img src="./assets/images/noun_School.svg" alt="" title="" /></div>
-              <div class="sbcard__info">
-                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
-                <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
-                    class="dot-divider"></span><span>{{sbcard.class}}</span>
-                </div>
-              </div>
-              <div class="ml-auto"><button class="sb-btn sb-btn-xs sb-btn-outline-secondary my-24" type="button">
-                admin </button></div>
+    <div class="sbgrid sbgrid--grid-carousel">
+      <div class="sbcard sbcard--resource sbcard--course" *ngFor="let sbcard of sbcards">
+        <div class="sbcard__main_area">
+          <div class="sbcard__img"><img src="./assets/images/noun_School.svg" alt="" title="" /></div>
+          <div class="sbcard__info">
+            <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+            <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                class="dot-divider"></span><span>{{sbcard.class}}</span>
             </div>
           </div>
+          <div class="ml-auto"><button class="sb-btn sb-btn-xs sb-btn-outline-secondary my-24" type="button">
+              admin </button></div>
         </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="text-center">
-<button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn my-24" type="button">
-  View more </button></div>
-
-
+  <button class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn my-24" type="button">
+    View more </button></div>
