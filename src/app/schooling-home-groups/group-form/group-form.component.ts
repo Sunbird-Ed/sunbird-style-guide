@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-group-form',
@@ -26,6 +26,7 @@ export class GroupFormComponent implements OnInit {
   hideLoginContainer: boolean = true;
   CreateGroupRightPanel: boolean = false;
   showBoardSelectnModal;
+  @Output() showView = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
@@ -62,5 +63,8 @@ export class GroupFormComponent implements OnInit {
     this.noGroupContent = false;
     this.CreateGroupRightPanel = true;
     this.showBoardSelectnModal = false;
+  }
+  GotoMygroupDetailsView(){
+    this.showView.emit(true);
   }
 }

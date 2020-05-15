@@ -15,6 +15,8 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   showMakeAdminModal;
   showDeleteModal;
   showPastMemberModal;
+  ShowGroupDetailedView: boolean = false;
+  HideGroupListingView:boolean = true;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
@@ -25,6 +27,14 @@ export class SchoolingHomeGroupsComponent implements OnInit {
   }
   getStarted() {
     this.GroupWelcomScreen = !this.GroupWelcomScreen;
+  }
+  ShowGDetailedView(){
+    this.ShowGroupDetailedView = true;
+    this.HideGroupListingView = false;
+  }
+  BacktoListing(){
+    this.ShowGroupDetailedView = false;
+    this.HideGroupListingView = true;
   }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');

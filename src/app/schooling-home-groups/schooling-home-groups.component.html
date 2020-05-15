@@ -42,19 +42,19 @@
   </div>
 </div>
 
-<div>
-  <app-group-form></app-group-form>
+<div *ngIf="HideGroupListingView">
+  <app-group-form (showView)="ShowGDetailedView();"></app-group-form>
 </div>
 
+<div class="" *ngIf="ShowGroupDetailedView">
 <div class="sb-bg-color-white">
   <div class="ui container py-8">
-    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0">
+    <button type="button" class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn px-0" (click)="BacktoListing();">
       <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
           <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-long-left"></use>
         </svg></i> Back</button>
   </div>
 </div>
-
 <div class="content-header">
   <div class="ui container py-16">
     <div class="d-flex flex-ai-center flex-jc-space-between flex-w-wrap">
@@ -62,64 +62,48 @@
         <div class="content-header__title font-weight-bold sb__ellipsis sb__ellipsis--one">
           <div>Group Name 123</div>
         </div>
-        <div class="d-flex flex-ai-center content-header__info fxsmall mt-8 hide">
+        <div class="d-flex flex-ai-center content-header__info fsmall mt-8 hide">
           <div>Social Science</div>
           <span class="dot-divider"></span>
           <div>Social Science</div>
         </div>
       </div>
       <div class="d-flex flex-ai-end flex-w-wrap content-header__buttons">
-        <button class="sb-btn sb-btn-outline-error sb-left-icon-btn sb-btn-normal flex-ai-jc-center mr-8"
-          (click)="showDeleteModal = !showDeleteModal">
-          <i class="icon-svg icon-svg--xs icon-delete mr-4">
-            <svg class="icon icon-svg--red">
-              <use xlink:href="./assets/images/libdemo/sprite.svg#delete"></use>
-            </svg></i> <span>Delete</span></button>
+        <button class="sb-btn sb-btn-outline-error sb-btn-normal mr-8"
+          (click)="showDeleteModal = !showDeleteModal">Delete</button>
         <button type="button"
-          class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8 flex-ai-jc-center"
-          (click)="showPastMemberModal = !showPastMemberModal">
-          <i class="icon-svg icon-svg--xs icon-members mr-4">
-            <svg class="icon icon-svg--primary">
-              <use xlink:href="./assets/images/libdemo/sprite.svg#members"></use>
-            </svg></i> <span>Show Past members</span></button>
-        <button class="sb-btn sb-btn-primary sb-btn-normal sb-left-icon-btn flex-ai-jc-center"><i
-            class="icon-svg icon-svg--xs icon-edit mr-4">
-            <svg class="icon icon-svg--white">
-              <use xlink:href="./assets/images/libdemo/sprite.svg#edit"></use>
-            </svg></i> <span>Edit</span></button>
+          class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8"
+          (click)="showPastMemberModal = !showPastMemberModal">Show Past members</button>
+        <button class="sb-btn sb-btn-primary sb-btn-normal">Edit</button>
       </div>
     </div>
   </div>
 </div>
-
-<div class="ui container pb-24">
+<div class="sui-tab-fullwidth"></div>
+<div class="ui container pb-24" style="margin-top:-56px;">
   <div class="ui stackable grid m-0">
-
     <div class="nine wide column p-0">
-      <sui-tabset>
-        <div class="ui pointing secondary menu">
+      <sui-tabset class="sb-tabs">
+        <div class="ui pointing secondary menu sb-tabs__header p-0">
             <a class="item" suiTabHeader="1">Members</a>
             <a class="item" suiTabHeader="2">Courses</a>
         </div>
-        <div class="ui segment" suiTabContent="1">
+        <div class="ui segment sb-tabs__content-container mt-0" suiTabContent="1">
           <div class="sb-search-box no-btn">
             <div class="input-div relative">
                 <i class="search icon"></i>
                 <input class="sb-search-input" type="text" placeholder="Search..." />
                 <i class="close icon"></i>
-                <div class="sb-loader"></div>
             </div>
             <button class="sb-btn sb-btn-normal">Search</button>
         </div>
-
-
       <div class="sb-pageSection">
         <div class="sb-pageSection-header pt-24">
           <h4 class="sb-pageSection-title m-0 mr-5">Members</h4>
           <span class="sb-pageSection-count">25</span>
         </div>
       </div>
-      <div class="no-result-container d-flex flex-dc flex-jc-center p-24 sb-bg-color-white my-16">
+      <div class="no-result-container d-flex flex-dc flex-jc-center p-24 my-16">
         <div class="d-flex flex-dc flex-jc-center flex-ai-center text-center">
           <div class="no-result-container__icon">
             <img src="./assets/images/no-text.svg" width="150px" height="125px">
@@ -167,18 +151,19 @@
         </div>
       </div>
         </div>
-        <div class="ui segment" suiTabContent="2">
+        <div class="ui segment sb-tabs__content-container mt-0" suiTabContent="2">
           <app-courses></app-courses>
         </div>
     </sui-tabset>
     </div>
   
-    <div class="three wide column p-0">
+    <div class="three wide column p-0" style="margin-top:56px;">
       <div class="status-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white bs-3">
         <app-members></app-members>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Remove modal -->
