@@ -74,19 +74,19 @@
           <i class="icon-svg icon-svg--xs icon-delete mr-4">
             <svg class="icon icon-svg--red">
               <use xlink:href="./assets/images/libdemo/sprite.svg#delete"></use>
-            </svg></i> Delete</button>
+            </svg></i> <span>Delete</span></button>
         <button type="button"
           class="sb-btn sb-btn-outline-primary sb-left-icon-btn sb-btn-normal mr-8 flex-ai-jc-center"
           (click)="showPastMemberModal = !showPastMemberModal">
           <i class="icon-svg icon-svg--xs icon-members mr-4">
             <svg class="icon icon-svg--primary">
               <use xlink:href="./assets/images/libdemo/sprite.svg#members"></use>
-            </svg></i> Show Past members</button>
+            </svg></i> <span>Show Past members</span></button>
         <button class="sb-btn sb-btn-primary sb-btn-normal sb-left-icon-btn flex-ai-jc-center"><i
             class="icon-svg icon-svg--xs icon-edit mr-4">
             <svg class="icon icon-svg--white">
               <use xlink:href="./assets/images/libdemo/sprite.svg#edit"></use>
-            </svg></i> Edit</button>
+            </svg></i> <span>Edit</span></button>
       </div>
     </div>
   </div>
@@ -95,17 +95,19 @@
 <div class="ui container pb-24">
   <div class="ui stackable grid m-0">
 
-    <div class="five wide column p-0">
-     
+    <div class="nine wide column p-0">
+      <sui-tabset>
+        <div class="ui pointing secondary menu">
+            <a class="item" suiTabHeader="1">Members</a>
+            <a class="item" suiTabHeader="2">Courses</a>
+        </div>
+        <div class="ui segment" suiTabContent="1">
       <div class="sb-pageSection">
         <div class="sb-pageSection-header pt-24">
-          <h4 class="sb-pageSection-title m-0 mr-5">
-            Members
-          </h4>
+          <h4 class="sb-pageSection-title m-0 mr-5">Members</h4>
           <span class="sb-pageSection-count">25</span>
         </div>
       </div>
-      
       <div class="no-result-container d-flex flex-dc flex-jc-center p-24 sb-bg-color-white my-16">
         <div class="d-flex flex-dc flex-jc-center flex-ai-center text-center">
           <div class="no-result-container__icon">
@@ -115,9 +117,6 @@
             No member found</div>
         </div>
       </div>
-
-    
-
       <div class="members-list">
         <div class="members-list-item">
           <div class="oval">A</div>
@@ -156,16 +155,17 @@
           <div class="menu"></div>
         </div>
       </div>
+        </div>
+        <div class="ui segment" suiTabContent="2">
+          <app-courses></app-courses>
+        </div>
+    </sui-tabset>
     </div>
-    <div class="four wide column pt-0">
-      <app-courses></app-courses>
-
-    </div>
+  
     <div class="three wide column p-0">
       <div class="status-container flex-dc d-flex flex-jc-center p-24 sb-bg-color-white bs-3">
         <app-members></app-members>
       </div>
-
     </div>
   </div>
 </div>
