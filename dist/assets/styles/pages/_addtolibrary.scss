@@ -2,6 +2,12 @@
   height: 100%;
   background: var(--primary-100) !important;
 
+  &__header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+
   .back-btn {
     min-width: auto;
   }
@@ -29,6 +35,57 @@
     }
   }
 
+  &__filter {
+    height: 72px;
+    cursor: pointer;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    border-right: 2px solid var(--primary-color);
+    padding:0px calculateRem(16px);
+    i.caret.down {
+      height: auto;
+    }
+
+    &:hover, &.active {
+      background-color: #e5edf6;
+      color: var(--primary-color);
+
+      .icon-svg .icon-svg--white {
+        fill: var(--primary-color);
+      }
+    }
+
+  }
+
+  &__filter-panel {
+    background: #e5edf6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    width: 100%;
+    top: 97%;
+    border: 2px solid var(--primary-color);
+    min-height: 120px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+
+    .panel-container {
+      min-height: 120px;
+    }
+
+    .panel {
+      flex: 0 0 25%;
+      padding: 1rem 0.5rem;
+      border-right: 1px solid #ccc;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
   /* CSS will come from Common consumption */
   // Filter Section
   .sb-medium {
@@ -51,12 +108,23 @@
         color: var(--white);
         cursor: pointer;
       }
+
+      .pill.pill-content {
+        border: calculateRem(1px) solid var(--primary-color);
+        color: var(--primary-color);
+        cursor: pointer;
+        &.active, &:hover {
+          background-color: var(--primary-color);
+          color: var(--white);
+          cursor: pointer;
+        }
+      }
     }
 
     &__sb-pills-content {
       display: inline-flex;
       align-items: center;
-      padding: ($base-block-space * 2) 0;
+      flex-wrap: wrap;
 
       .pill {
         background-color: var(--white);
@@ -64,7 +132,7 @@
         -webkit-appearance: none;
         text-overflow: ellipsis;
         min-height: ($base-block-space * 4);
-        margin: 0px ($base-block-space/2) 0px ($base-block-space/2);
+        margin-right: 8px;
         padding: ($base-block-space / 2) ($base-block-space);
         border-radius: calculateRem(2px);
         text-transform: capitalize;
@@ -74,6 +142,7 @@
         display: flex;
         align-items: center;
         font-size: 12px;
+        margin-bottom: 8px;
       }
     }
   }
@@ -81,7 +150,7 @@
   /* CSS will come from Common consumption */
 
   &__class {
-    background-color: #f0f0f0;
+    // background-color: #f0f0f0;
 
     /* CSS will come from Common consumption */
     // Class Section
@@ -98,6 +167,7 @@
       text-align: center;
       display: inline-flex;
       align-items: center;
+      flex-wrap: wrap;
       border-radius: ($base-block-space * 2);
       padding: ($base-block-space / 2) ($base-block-space * 2);
       color: var(--primary-400);
@@ -148,13 +218,10 @@
     flex-direction: column;
     cursor: pointer;
     transition: all 1s ease;
-    box-shadow: 0 0.125rem 0.4375rem 0 rgba(0,0,0,.16);
-    &.sbcard--resource {
-      &.active {
-        background: var(--primary-100);
-      }
+    box-shadow: 0 0.125rem 0.4375rem 0 rgba(0, 0, 0, .16);
 
-      &:hover {
+    &.sbcard--resource {
+      &:hover,&.active {
         background-color: var(--primary-color);
         box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.16);
 
@@ -386,12 +453,13 @@
     &--toc-content {
       width: 72%;
       display: flex;
-      background:#fff;
+      background: #fff;
+
       .toc-content {
         &-list {
           padding: 0 8px;
           overflow: auto;
-          background:#f2f2f2;
+          background: #f2f2f2;
           flex: 0 0 40%;
         }
 
@@ -586,7 +654,17 @@
     padding: calculateRem(8px);
     cursor: pointer;
     min-height: calculateRem(56px);
-
+    position:relative;
+    .btn-addtoLibrary {
+      position: absolute;
+    right: 1px;
+    visibility: hidden;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    }
     h4 {
       font-size: $font-size-sm;
       line-height: calculateRem(20px);
@@ -599,7 +677,8 @@
       width: calculateRem(40px);
       height: calculateRem(40px);
       flex: 0 0 calculateRem(40px);
-      overflow:hidden;
+      overflow: hidden;
+
       img {
         width: 100%;
       }
@@ -612,7 +691,9 @@
     &:hover {
       background: var(--gray-0);
     }
-
+    &:hover .btn-addtoLibrary {
+      visibility: visible;
+    }
     &--active {
       background: var(--primary-100);
     }

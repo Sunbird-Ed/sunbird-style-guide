@@ -130,3 +130,8 @@ $sb-selection-line-height: calculateRem(18px);
   background-color: #E5EDF5;
 }
 
+.sb-field{
+  .ui.sb-form-control.dropdown>.dropdown.icon {
+   float:right;
+  }
+}
