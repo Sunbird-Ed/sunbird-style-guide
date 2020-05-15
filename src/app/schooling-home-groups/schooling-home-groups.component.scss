@@ -261,3 +261,19 @@
     }
   }
 }
+
+
+/* tab css */
+.sui-tab-fullwidth {
+  background:#fff;height:56px;
+}
+.ui.secondary.pointing.menu.sb-tabs__header {
+  height:56px;
+}
+.ui.secondary.pointing.menu.sb-tabs__header .item {
+  margin: 0 0 1px;
+  color: var(--primary-400);
+}
+.ui.segment.sb-tabs__content-container.active {
+  background: none;
+}

@@ -256,3 +256,13 @@
     height: 56px;
     width: 56px;
 }
+
+.status {
+  border: 0.03125rem solid var(--secondary-100);
+    border-radius: 2px;
+    font-size: 10px;
+    color: var(--secondary-100);
+    background-color: var(--white);
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.5rem;
+}
