@@ -5,6 +5,50 @@ $sb-pointing-tabs-border: #dededf; //TODO design team need to add this in color 
 $sb-pointing-tabs-min-width: calculateRem(36px);
 $sb-pointing-tabs-border-radius: calculateRem(4px);
 
+// .sb-tabs {
+//   &__header {
+//     height:calculateRem(56px);
+//     background:var(--white);
+//     margin: 0rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     a {
+//     vertical-align: middle;
+//     line-height: 1;
+//     text-decoration: none;
+//     flex: 0 0 auto;
+//     user-select: none;
+//     background: 0 0;
+//     padding: 1.14285714em 1.14285714em;
+//     text-transform: none;
+//     color: #212121;
+//     font-weight: 400;
+//     border-bottom-color: transparent;
+//     border-bottom-style: solid;
+//     border-radius: 0;
+//     align-self: flex-end;
+//     margin: 0 0 -2px;
+//     padding: .85714286em 1.14285714em;
+//     border-bottom-width: 2px;
+//   }
+    
+//     &:hover,&:active,&.active {
+//       border-color: var(--primary-color);
+//       color: #333333;
+//       font-weight: 400;
+//     }
+//   }
+//   &__content-container {
+
+//   }
+// }
+.ui.secondary.pointing.menu.sb-tabs__header {
+  height:56px;
+}
+.ui.secondary.pointing.menu.sb-tabs__header .item {
+  margin: 0 0 1px;
+}
 .ui.secondary.pointing.menu .active.item,
 .ui.secondary.pointing.menu .active.item:hover {
   border-color: $sb-tabs-border-active-color;

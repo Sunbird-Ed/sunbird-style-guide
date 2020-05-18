@@ -44,7 +44,7 @@
     position: relative;
     z-index: 10;
     border-right: 2px solid var(--primary-color);
-
+    padding:0px calculateRem(16px);
     i.caret.down {
       height: auto;
     }
@@ -221,11 +221,7 @@
     box-shadow: 0 0.125rem 0.4375rem 0 rgba(0, 0, 0, .16);
 
     &.sbcard--resource {
-      &.active {
-        background: var(--primary-100);
-      }
-
-      &:hover {
+      &:hover,&.active {
         background-color: var(--primary-color);
         box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.16);
 
@@ -661,7 +657,7 @@
     position:relative;
     .btn-addtoLibrary {
       position: absolute;
-    right: 0px;
+    right: 1px;
     visibility: hidden;
     background: #f2f2f2;
     display: flex;
