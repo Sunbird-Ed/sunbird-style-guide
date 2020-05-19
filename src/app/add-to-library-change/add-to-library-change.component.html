@@ -74,7 +74,7 @@
   <!-- Prominent Filter Section -->
   <div class="sb-prominent-filter">
     <div class="ui container">
-      <div class="sb-prominent-filter-container pt-16 px-16 pb-0">
+      <div class="sb-prominent-filter-container py-16 pb-0">
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Board</label>
           <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"
@@ -108,7 +108,7 @@
           </sui-multi-select>
         </div>
 
-        <div class="sb-prominent-filter-field">
+        <div class="sb-prominent-filter-field hide">
           <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
           <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
         </div>
@@ -119,7 +119,7 @@
   <!-- TOC player -->
   <div class="ui container">
     <div class="sb-g add-to-library__toc-player">
-      <section class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-4">
+      <section class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-4 sb-bg-color-white">
         <!-- Search Bar -->
         <div class="add-to-library__toc-player-searchbar p-8 sb-bg-color-gray-0">
           <div class="sb-search-box large no-btn">
@@ -129,12 +129,12 @@
             </div>
           </div>
         </div>
-        <!-- Class separator -->
-        <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 6&nbsp;(120)</label>
-          <div class="label-separator"></div>
-        </div>
 
-        <div class="sbtoc-container">
+        <div class="sbtoc-container px-8">
+          <!-- Class separator -->
+          <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 6&nbsp;(120)</label>
+            <div class="label-separator"></div>
+          </div>
           <div class="sbaccordion sbaccordion--toc">
             <!-- panel begins -->
             <div class="sbaccordion__panel">
@@ -151,7 +151,7 @@
               <div class="sbaccordion__panel-content">
                 <!-- chapter begins -->
                 <div class="sbchapter">
-                  <h4 class="sbchapter__title text-left sb__ellipsis sb__ellipsis--two ml-16 mb-8">Vedic culture in
+                  <h4 class="sbchapter__title text-left sb__ellipsis sb__ellipsis--two mb-8">Vedic culture in
                     north India vedic culture in north India vedic culture in north India</h4>
                   <div class="sbchapter__item sbchapter__item--active">
                     <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
@@ -233,7 +233,7 @@
         </div>
       </section>
 
-      <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-8 relative position">
+      <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-8 relative position ml-24">
         <div class="select-chapters-overlay">
           <h3>Please select a content from the listed chapters to see preview</h3>
         </div>
@@ -352,3 +352,38 @@
     </div>
   </div>
 </div>
+
+<footer class="footer">
+  <div class="ui container">
+    <div class="ui grid stackable">
+      <div class="four wide column footerMenu mr-auto">
+        <ul class="p-0 m-0">
+          <li class="mb-16"><a apptelemetryinteract="" href="/help/getting-started/explore-diksha/index.html"
+              ng-reflect-telemetry-interact-edata="[object Object]"> Help Center </a></li>
+          <li><label class="d-block mb-0"> Contact for queries: </label><a apptelemetryinteract="" class="d-block mb-0"
+              href="mailto:support@SUNBIRD-ncte.freshdesk.com" ng-reflect-telemetry-interact-edata="[object Object]">
+              support@SUNBIRD-ncte.freshdesk.com </a></li>
+        </ul>
+      </div>
+      <div class="download-mobile-app" style="bottom: 0px;">
+        <div class="download-mobile-app-logo p-16" style="min-height: 174px;">
+          <div class="mobile-circles">
+            <div class="big-box border-round border-r50"></div>
+            <div class="oval-box border-round ml-24"></div>
+            <div class="small-box border-round border-r50 ml-16 mr-8"></div>
+            <div class="small-box border-round border-r50"></div>
+          </div><label class="d-block text-center">Download SUNBIRD for Mobile</label><a
+            class="d-block app-download"><img class="playStore-img" width="100%" src="https://diksha.gov.in/assets/images/google_playstore.png"
+              alt="SUNBIRD for Mobile"></a>
+          <p class="d-block pt-10">Get unlimited access to textbooks, lessons and trainings offline on your mobile
+            phone.</p>
+        </div>
+      </div>
+      <div class="four wide column contantDetails"><label class="d-block mb-16"><a apptelemetryinteract=""
+            href="/term-of-use.html" ng-reflect-telemetry-interact-edata="[object Object]"> Terms and Privacy
+          </a><span>| © 2020, SUNBIRD</span></label><label class="sb-footer-license"><img
+            src="https://diksha.gov.in/assets/images/CCby.svg"><span>All content here is licensed under a Creative Commons license (CC-BY
+            4.0) unless otherwise noted.</span></label></div>
+    </div>
+  </div>
+</footer>

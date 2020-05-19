@@ -1,3 +1,51 @@
 @import './variables';
 @import 'mixins/mixins';
 @import './pages/addtolibrary';
+
+
+.download-mobile-app {
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: absolute;
+    bottom: 0px;
+    padding: 2rem 0.75rem 0 0.75rem;
+    background: var(--gray-800);
+    box-shadow: 0 1.25rem 1.25rem 0.625rem rgba(0, 0, 0, 0.2);
+    max-width: 15.625rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 9;
+}
+.download-mobile-app .download-mobile-app-logo {
+    background: var(--white);
+    color: var(--black);
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+    min-height: 9.25rem;
+    overflow-y: auto;
+}
+.download-mobile-app .mobile-circles {
+    position: absolute;
+    top: 0.625rem;
+    display: flex;
+    align-items: center;
+    margin: 0 1.25rem;
+}
+.download-mobile-app .download-mobile-app-logo p, .download-mobile-app .download-mobile-app-logo label {
+    font-size: 0.75rem;
+}
+
+.download-mobile-app label {
+    font-weight: bold;
+}
+.download-mobile-app .download-mobile-app-logo .app-download {
+    line-height: 0;
+}
+.sb-footer-license {
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: normal;
+    align-items: flex-start;
+    justify-content: center;
+}
