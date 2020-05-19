@@ -110,7 +110,7 @@
               <use xlink:href="assets/images/libdemo/sprite.svg#restore-down"></use>
             </svg></i>Textbooks<span class="badge ml-8">10</span></div>
 
-        <div class="sbgrid">
+        <div class="sbgrid sbgrid--grid-carousel">
           <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard}" *ngFor="let sbcard of sbcards"
             (click)="enableTocPlayer($event, sbcard)">
             <div class="sbcard__main_area">
@@ -127,34 +127,34 @@
         </div>
 
         <!-- Cards Section Suggestions-->
-        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16" id="SectionSuggestionsID"
+        <div class="title mt-24 mb-16 sb-color-primary font-weight-bold fs-1-16"
           title="Restore Down"><i class="icon-svg icon-svg--xs icon-restore-down mr-8"><svg
               class="icon icon-svg--tertiary">
               <use xlink:href="assets/images/libdemo/sprite.svg#restore-down"></use>
             </svg></i>Suggestions<span class="badge ml-8">10</span></div>
 
-        <div class="sbgrid">
-          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard1}" *ngFor="let sbcard1 of sbcards"
-            (click)="enablePlayer($event, sbcard1)">
+        <div class="sbgrid sbgrid--grid-carousel">
+          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard}" *ngFor="let sbcard of sbcards"
+            (click)="enablePlayer($event, sbcard)">
             <div class="sbcard__main_area">
               <i class="check circle icon icon-check"></i>
               <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
               <div class="sbcard__info">
-                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard1.title}}</h4>
-                <div class="sbcard__meta1"><span>{{sbcard1.subject}}</span><span
-                    class="dot-divider"></span><span>{{sbcard1.class}}</span>
+                <h4 class="sbcard__title sb__ellipsis sb__ellipsis--two">{{sbcard.title}}</h4>
+                <div class="sbcard__meta1"><span>{{sbcard.subject}}</span><span
+                    class="dot-divider"></span><span>{{sbcard.class}}</span>
                 </div>
               </div>
             </div>
             <div class="sbcard__moreinfo sb__DesktopOnly">
               <div class="sbcard__meta2">
-                <div class="sbcard__medium">Medium: <span class="medium">{{sbcard1.medium}}</span></div>
-                <div class="sbcard__org">{{sbcard1.board}}</div>
+                <div class="sbcard__medium">Medium: <span class="medium">{{sbcard.medium}}</span></div>
+                <div class="sbcard__org">{{sbcard.board}}</div>
               </div>
 
               <div class="sbcard__tags">
                 <span class="sbcard__badge"><img src="assets/images/badge.svg" alt="" title="" /></span>
-                <span class="sbcard__type">{{sbcard1.type}}</span>
+                <span class="sbcard__type">{{sbcard.type}}</span>
               </div>
             </div>
 

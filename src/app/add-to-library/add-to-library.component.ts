@@ -88,14 +88,12 @@ export class AddToLibraryComponent implements OnInit {
 		this.renderer.addClass(this.document.body, 'hideLeftTopBars');
 	}
 
-	enableTocPlayer(event, newValue1) {
-    console.log(newValue1);
-    this.selectedItem = newValue1;
+	enableTocPlayer(event, newValue) {
+    this.selectedItem = newValue;
 		this.enableTocPlayerGrid = true;
 		this.disableTocOnly = true;
 	}
 	enablePlayer(event, newValue) {
-    console.log(newValue);
     this.selectedItem = newValue;
 		this.disableTocOnly = false;
 		this.enableTocPlayerGrid = true;
