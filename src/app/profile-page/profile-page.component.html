@@ -1,27 +1,39 @@
 <div class="sb-profile-page">
   <section class="py-24 d-flex flex-ai-center flex-dc">
-      <div class="ui container">
-          <div class="d-flex flex-jc-center relative flex-dc">
-              <div class="w-100 text-center">
-                  <div class="sb-profile-page__avatar">
-                    <img src="assets/images/guest.svg" alt="guest" class="w-100">
-                  </div>
-                  <div class="fs-2-5 font-weight-bold mb-24">Guest</div>
-                </div>
-            <div class="w-100 text-center">
-              <div class="mb-16 d-flex flex-jc-center sb-profile-page__category">
-                <span class="fmedium white-space-nowrap">State :</span>
-                <span class="fmedium font-weight-bold pl-4">Tamil Nadu</span>
-              </div>
-              <div class="mb-16 d-flex flex-jc-center sb-profile-page__m-responsive-flex-dc">
-                <span class="fmedium white-space-nowrap">District:</span>
-                <span class="fmedium font-weight-bold pl-4">Chennai </span>
-              </div>
-              <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button"
-                (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
-            </div>
+    <div class="ui container">
+      <div class="d-flex flex-jc-center relative flex-dc">
+        <div class="w-100 text-center">
+          <div class="sb-profile-page__avatar">
+            <img src="assets/images/guest.svg" alt="guest" class="w-100">
           </div>
-      </div> 
+          <div class="fs-2-5 font-weight-bold mb-24">Guest</div>
+        </div>
+        <div class="w-100 text-center">
+          <div class="mb-16 d-flex flex-jc-center sb-profile-page__category">
+            <span class="fmedium white-space-nowrap">State :</span>
+            <span class="fmedium font-weight-bold pl-4">Tamil Nadu</span>
+          </div>
+          <div class="mb-16 d-flex flex-jc-center sb-profile-page__m-responsive-flex-dc">
+            <span class="fmedium white-space-nowrap">District:</span>
+            <span class="fmedium font-weight-bold pl-4">Chennai </span>
+          </div>
+          <button type="submit"  class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn mx-8 sb-profile-btn" 
+          (click)="showPastMemberModal = !showPastMemberModal">
+           <i class="chevron plus icon"></i> Add User
+         </button>
+<!-- 
+         <button class="sb-btn sb-btn-outline-primary sb-right-icon-btn mx-8 sb-profile-btn" type="button">
+          Switch User
+           <i class="icon-svg icon-svg--xs icon-addMembers mx-4">
+             <svg class="icon icon-svg--primary">
+               <use xlink:href="./assets/images/libdemo/sprite.svg#AddMembers">
+            </use></svg></i></button> -->
+
+          <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn sb-profile-btn"
+            (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="d-flex flex-ai-center flex-dc pt-30 pb-30 sb-profile-page__profile-bg">
@@ -44,88 +56,130 @@
             <span class="fmedium white-space-nowrap">Classes :</span>
             <span class="fmedium font-weight-bold pl-4">Class 6, Class 7, Class 8 </span>
           </div>
-          <button type="button" class="sb-btn sb-btn-primary sb-btn-xs sb-profile-page__right-aligned-button"
-            (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
+          <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn sb-profile-btn"
+          (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<sui-modal *ngIf="showLocationModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
-  class="sb-modal" appBodyScroll (dismissed)="showLocationModal = !showLocationModal" #modal>
-  <div class="sb-modal-header">
-    Your Location
-  </div>
-  <div class="sb-modal-content o-y-visible">
-    <form class="sb-form">
-      <p class="mb-8">Your location details helps us to suggest content that is useful to you. Is the location given
-        correct? if not, select your correct location and click Submit</p>
-      <div class="sb-field">
-        <label>State :</label>
-        <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
-          <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
-        </sui-select>
-      </div>
-      <div class="sb-fielgroup">
-        <label>District:</label>
-        <div class="sb-field">
-          <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
-            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-          </sui-select>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="sb-modal-actions">
-    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
-      Submit
-    </button>
-  </div>
-</sui-modal>
 
 <sui-modal *ngIf="showBoardSelectnModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
   [size]="'normal'" class="sb-modal" appBodyScroll (dismissed)="showBoardSelectnModal = !showBoardSelectnModal" #modal>
-  <div class="sb-modal-header">
+  <!-- <div class="sb-modal-header">
     To discover content relevant to you, update the following details:
-  </div>
+  </div> -->
   <div class="sb-modal-content o-y-visible">
-    <form class="sb-form">
+    <div class="user-label">Create User</div>
+    <form class="sb-form my-16">
+
       <div class="sb-field">
-        <label>Board:</label>
+        <label class="font-weight-normal">Name<span>*</span></label>
+        <input class="sb-form-control" type="text" placeholder="Enter user name">
+      </div>
+
+      <div class="sb-field my-16">
+        <label class="font-weight-normal">Board:</label>
         <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
           <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
         </sui-select>
       </div>
+
       <div class="sb-fielgroup">
-        <label>Medium:</label>
+        <label class="font-weight-normal">Medium:</label>
         <div class="sb-field">
           <sui-multi-select class="selection" name="district" labelField="name" placeholder="Select district">
             <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
           </sui-multi-select>
         </div>
       </div>
-      <div class="sb-fielgroup">
-        <label>Class:</label>
+
+      <div class="sb-fielgroup my-16">
+        <label class="font-weight-normal">Class:</label>
         <div class="sb-field">
           <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
             <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
           </sui-select>
         </div>
       </div>
-      <div class="sb-fielgroup">
-        <label>Subject:</label>
-        <div class="sb-field">
-          <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
-            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-          </sui-select>
+
+      <div class="fields-selection">
+        <div class="sb-field field-focus my-16">
+          <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectState">
+            <option [ngValue]="option" *ngFor="let option of selectStateOption" [value]="option">{{option?.name}}
+            </option>
+          </select>
+          <label class="d-flex font-weight-normal">State</label>
+        </div>
+        <div class="sb-field field-focus onboard-content">
+          <select class="ui dropdown selection fields-dropdown" name="district" labelField="name"
+            placeholder="Select district">
+            <option [ngValue]="district" *ngFor="let district of districts" [value]="district">{{district?.name}}
+            </option>
+          </select>
+          <label class="d-flex font-weight-normal">District</label>
         </div>
       </div>
     </form>
+
+    <div class="required sb-checkbox sb-checkbox-primary sb-field">
+      <input type="checkbox" role="checkbox" name="checkbox">
+      <label for="checkbox" class="fsmall mx-8 font-weight-normal">I understand and accept the
+        <a class="text-underline fsmall" href="javascript:void(0)">DIKSHA Terms of Use.
+        </a>
+      </label></div>
+
   </div>
   <div class="sb-modal-actions">
-    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary">
-      Submit
+    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-primary" 
+     (click)="showPastMemberModal = !showPastMemberModal"> Add User
     </button>
   </div>
+</sui-modal>
+
+
+<!-- show past members modal -->
+<sui-modal *ngIf="showPastMemberModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
+  class="sb-modal " appBodyScroll (dismissed)="showPastMemberModal = !showPastMemberModal" #modal>
+
+  <div class="sb-modal-content">
+    <div class="d-flex flex-jc-space-between my-16">
+      <div class="user-label">Choose Users</div>
+      <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary"  (click)="showPastMemberModal = !showPastMemberModal">Delete</button>
+    </div>
+
+    <div class="members-list">
+      <div class="members-list-item">
+        <div class="d-flex flex-jc-space-between flex-ai-center w-100">
+          <div class="d-flex">
+          <div class="oval">A</div>
+          <div class="member-name"><span>User Name 01</span></div>
+          </div>
+          <div class="sb-checkbox sb-checkbox-primary">
+            <input type="checkbox" id="check1" name="example">
+            <label for="check1"></label>
+            </div>
+        </div>
+   
+      </div>
+      <div class="members-list-item">
+        <div class="oval">B</div>
+        <div class="member-name"><span>User Name 02</span></div>
+      </div>
+    </div>
+
+    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn w-100 mt-16 mb-8" 
+    (click)="showPastMemberModal = !showPastMemberModal">
+     <i class="chevron plus icon"></i> Add User
+   </button>
+
+  </div>
+
+  <div class="sb-modal-actions">
+    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-primary" 
+     (click)="showPastMemberModal = !showPastMemberModal"> Switch User
+    </button>
+  </div>
+
 </sui-modal>

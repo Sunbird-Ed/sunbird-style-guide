@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins/mixins";
 
-
 .sb-profile-page{
     &__avatar{
         width: calculateRem(92px);
@@ -36,3 +35,119 @@
     // }
 }
 
+
+:host {
+    .fields-selection {
+      display: flex;
+      flex-direction: column;
+    
+      @include respond-above(sm) {
+        flex-direction: row;
+      }
+    
+      .sb-field .ui.selection.active.dropdown {
+        border-color: #96c8da;
+      }
+    
+      .sb-field .ui.selection.active.dropdown .text {
+        color: #0076FE !important;
+      }
+    
+      .sb-field {
+        margin-bottom: calculateRem(16px) 0px;
+        width: 100%;
+    
+        label {
+          font-size: 14px;
+        }
+      }
+    
+      .onboard-content {
+        @include respond-above(sm) {
+          margin-left:2rem;
+          html[dir="rtl"] & {
+            margin-right:2rem;
+          }
+        }
+      }
+    
+      .textColorChange {
+        color:#0076FE;
+      }
+    } 
+  }
+  
+  .field-focus {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  
+  .ui.selection.dropdown.fields-dropdown {
+    height: 2rem !important;
+    &:focus{
+        border: calculateRem(1px) solid #0076FE;  
+        color:#0076FE !important;
+    }
+  }
+  
+  .ui.selection.dropdown.fields-dropdown:focus~label {
+    border: 0px;
+    color: #0076FE;
+    font-weight: normal;
+  }
+  
+  .ui.selection.dropdown.fields-dropdown option{
+  background: var(--white);
+  color:var(--black);
+  }
+  
+  .user-label{
+      font-weight: bold;
+      color:var(--primary-color);
+      font-size: calculateRem(18px);
+  }
+
+.sb-profile-btn{
+    border-radius: 40px;
+}
+
+  /* members css */
+.members-list{
+    width: 100%;
+    .members-list-item{
+        display: flex;
+        align-items: center;
+        padding: calculateRem(8px);
+        position: relative;
+
+        &:active, &:hover{
+            background: var(--primary-250);
+            border:1px solid var(--primary-color);
+        }
+        .oval{
+            height: calculateRem(36px);
+            width: calculateRem(36px);
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            border-radius: 50%;
+            border: calculateRem(6px) solid var(--white);
+            background-color: var(--white);
+            box-shadow: 0 0 calculateRem(6px) 0 rgba(0, 0, 0, 0.1);
+        }
+        .member-name{
+            color: $gray-800;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 2.25rem;
+            flex: 1;
+            padding: 0 calculateRem(16px);
+            span{
+                // display: flex;
+                // width: 90%;
+            }
+        }
+ 
+    }
+  }

@@ -8,14 +8,47 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent implements OnInit {
+  selectStateOption: any[];
+  selectState = false;
   states: any [];
   districts: any [];
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   panelOpened = false;
   showLocationModal;
   showBoardSelectnModal;
+  showPastMemberModal;
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
+    this.selectStateOption = [
+      {
+        name: 'Andhra Pradesh',
+        value: '0'
+      },
+      {
+        name: 'Karnataka',
+        value: '1'
+      },
+      {
+        name: 'Tamil Nadu',
+        value: '2'
+      },
+      {
+        name: 'Kerala',
+        value: '3'
+      },
+      {
+        name: 'Gujarat',
+        value: '4'
+      },
+      {
+        name: 'Maharashtra',
+        value: '5'
+      },
+      {
+        name: 'UP',
+        value: '6'
+      }
+    ];
     this.states = [  {name: 'Assam'}, {name: 'Andhra Pradesh'}, {name: 'Arunachal Pradesh'},
      {name: 'Bihar'}, {name: 'Chandigarh'}, {name: 'Chattisgarh'}, {name: 'Delhi'}, {name: 'Goa'},
      {name: 'Gujarat'}, {name: 'Harayana'}, {name: 'Himachal Pradesh'}, {name: 'Jammu And Kashmir'},
