@@ -68,6 +68,7 @@ import { TocLoadingComponent } from './toc-loading/toc-loading.component';
 import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.component';
 import { AddToLibraryComponent } from './add-to-library/add-to-library.component';
 import { SchoolingHomeGroupsComponent } from './schooling-home-groups/schooling-home-groups.component';
+import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -138,6 +139,8 @@ const routes: Routes = [
   { path: 'schooling-at-home', component: schoolingAtHomeComponent},
   { path: 'add-to-library', component: AddToLibraryComponent},
   { path: 'school-home-group', component: SchoolingHomeGroupsComponent},
+  { path: 'add-to-library-change', component: AddToLibraryChangeComponent},
+
 
 ];
 

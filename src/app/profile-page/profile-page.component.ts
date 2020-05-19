@@ -11,6 +11,7 @@ export class ProfilePageComponent implements OnInit {
   selectStateOption: any[];
   selectState = false;
   states: any [];
+  boards: any [];  mediums: any [];  classes: any [];
   districts: any [];
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   panelOpened = false;
@@ -56,7 +57,9 @@ export class ProfilePageComponent implements OnInit {
      {name: 'Manipur'}, {name: 'Meghalaya'}, {name: 'Mizoram'}, {name: 'Nagaland'}, {name: 'Orissa'},
      {name: 'Punjab'}, {name: 'Rajasthan'}, {name: 'Sikkim'}, {name: 'Tamil Nadu'}, {name: 'Telangana'},
      {name: 'Tripura'}, {name: 'Uttarakhand'}, {name: 'Uttar Pradesh'}, {name: 'West Bengal'}];
-
+     this.classes = [  {name: 'Class 1'}, {name: 'Class 2'}];
+     this.mediums = [  {name: 'Telugu'}, {name: 'English'}];
+     this.boards = [  {name: 'Telangana'}, {name: 'Andhra Pradesh'}];
      this.districts = [  {name: 'Assam'}, {name: 'Andhra Pradesh'}, {name: 'Arunachal Pradesh'},
      {name: 'Bihar'}, {name: 'Chandigarh'}, {name: 'Chattisgarh'}, {name: 'Delhi'}, {name: 'Goa'},
      {name: 'Gujarat'}, {name: 'Harayana'}, {name: 'Himachal Pradesh'}, {name: 'Jammu And Kashmir'},
