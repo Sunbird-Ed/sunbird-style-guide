@@ -17,11 +17,12 @@
             <span class="fmedium white-space-nowrap">District:</span>
             <span class="fmedium font-weight-bold pl-4">Chennai </span>
           </div>
-          <button type="submit"  class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn mx-8 sb-profile-btn" 
-          (click)="showPastMemberModal = !showPastMemberModal">
-           <i class="chevron plus icon"></i> Add User
-         </button>
-<!-- 
+          <button type="submit"
+            class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn mx-8 sb-profile-btn"
+            (click)="showPastMemberModal = !showPastMemberModal">
+            <i class="chevron plus icon"></i> Add User
+          </button>
+          <!-- 
          <button class="sb-btn sb-btn-outline-primary sb-right-icon-btn mx-8 sb-profile-btn" type="button">
           Switch User
            <i class="icon-svg icon-svg--xs icon-addMembers mx-4">
@@ -57,7 +58,7 @@
             <span class="fmedium font-weight-bold pl-4">Class 6, Class 7, Class 8 </span>
           </div>
           <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn sb-profile-btn"
-          (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
+            (click)="showBoardSelectnModal = !showBoardSelectnModal">Edit</button>
         </div>
       </div>
     </div>
@@ -72,53 +73,76 @@
   </div> -->
   <div class="sb-modal-content o-y-visible">
     <div class="user-label">Create User</div>
+
     <form class="sb-form my-16">
-
-      <div class="sb-field">
-        <label class="font-weight-normal">Name<span>*</span></label>
-        <input class="sb-form-control" type="text" placeholder="Enter user name">
-      </div>
-
-      <div class="sb-field my-16">
-        <label class="font-weight-normal">Board:</label>
-        <sui-select class="selection" name="state" labelField="name" placeholder="Select State">
-          <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
-        </sui-select>
-      </div>
-
-      <div class="sb-fielgroup">
-        <label class="font-weight-normal">Medium:</label>
-        <div class="sb-field">
-          <sui-multi-select class="selection" name="district" labelField="name" placeholder="Select district">
-            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-          </sui-multi-select>
+      <div class="ui stackable grid m-0">
+  
+        <div class="twelve wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus mb-8">
+          <input class="sb-form-control selection fields-dropdown ui dropdown" type="text" placeholder="Enter user name">
+          <label class="font-weight-normal">Name<span>*</span></label>
+        </div>
         </div>
       </div>
 
-      <div class="sb-fielgroup my-16">
-        <label class="font-weight-normal">Class:</label>
-        <div class="sb-field">
-          <sui-select class="selection" name="district" labelField="name" placeholder="Select district">
-            <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
-          </sui-select>
+        <div class="six wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus my-8">
+              <sui-select class="selection fields-dropdown" name="state" labelField="name" placeholder="Select State">
+                <sui-select-option *ngFor="let state of states" [value]="state"></sui-select-option>
+              </sui-select>
+              <label class="font-weight-normal">Board</label>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="fields-selection">
-        <div class="sb-field field-focus my-16">
-          <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectState">
-            <option [ngValue]="option" *ngFor="let option of selectStateOption" [value]="option">{{option?.name}}
-            </option>
-          </select>
-          <label class="d-flex font-weight-normal">State</label>
+        <div class="six wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus my-8 onboard-content">
+              <sui-multi-select class="selection fields-dropdown" name="district" labelField="name"
+                placeholder="Select district">
+                <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
+              </sui-multi-select>
+              <label class="font-weight-normal">Medium</label>
+            </div>
+          </div>
         </div>
-        <div class="sb-field field-focus onboard-content">
-          <select class="ui dropdown selection fields-dropdown" name="district" labelField="name"
-            placeholder="Select district">
-            <option [ngValue]="district" *ngFor="let district of districts" [value]="district">{{district?.name}}
-            </option>
-          </select>
-          <label class="d-flex font-weight-normal">District</label>
+
+        <div class="twelve wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus mt-8 mb-16">
+              <sui-multi-select class="selection fields-dropdown" name="district" labelField="name"
+                placeholder="Select district">
+                <sui-select-option *ngFor="let district of districts" [value]="district"></sui-select-option>
+              </sui-multi-select>
+              <label class="font-weight-normal">Class</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="six wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus">
+              <select class="ui dropdown selection fields-dropdown" [(ngModel)]="selectState">
+                <option [ngValue]="option" *ngFor="let option of selectStateOption" [value]="option">{{option?.name}}
+                </option>
+              </select>
+              <label class="d-flex font-weight-normal">State</label>
+            </div>
+          </div>
+        </div>
+        <div class="six wide column p-0">
+          <div class="fields-selection p-0">
+            <div class="sb-field field-focus onboard-content">
+              <select class="ui dropdown selection fields-dropdown" name="district" labelField="name"
+                placeholder="Select district">
+                <option [ngValue]="district" *ngFor="let district of districts" [value]="district">{{district?.name}}
+                </option>
+              </select>
+              <label class="d-flex font-weight-normal">District</label>
+            </div>
+          </div>
         </div>
       </div>
     </form>
@@ -132,8 +156,8 @@
 
   </div>
   <div class="sb-modal-actions">
-    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-primary" 
-     (click)="showPastMemberModal = !showPastMemberModal"> Add User
+    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary"
+      (click)="showPastMemberModal = !showPastMemberModal"> Add User
     </button>
   </div>
 </sui-modal>
@@ -146,22 +170,23 @@
   <div class="sb-modal-content">
     <div class="d-flex flex-jc-space-between my-16">
       <div class="user-label">Choose Users</div>
-      <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary"  (click)="showPastMemberModal = !showPastMemberModal">Delete</button>
+      <button type="button" class="sb-btn sb-btn-normal sb-btn-outline-primary"
+        (click)="showPastMemberModal = !showPastMemberModal">Delete</button>
     </div>
 
     <div class="members-list">
       <div class="members-list-item">
         <div class="d-flex flex-jc-space-between flex-ai-center w-100">
           <div class="d-flex">
-          <div class="oval">A</div>
-          <div class="member-name"><span>User Name 01</span></div>
+            <div class="oval">A</div>
+            <div class="member-name"><span>User Name 01</span></div>
           </div>
           <div class="sb-checkbox sb-checkbox-primary">
             <input type="checkbox" id="check1" name="example">
             <label for="check1"></label>
-            </div>
+          </div>
         </div>
-   
+
       </div>
       <div class="members-list-item">
         <div class="oval">B</div>
@@ -169,16 +194,16 @@
       </div>
     </div>
 
-    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn w-100 mt-16 mb-8" 
-    (click)="showPastMemberModal = !showPastMemberModal">
-     <i class="chevron plus icon"></i> Add User
-   </button>
+    <button type="submit" class="sb-btn sb-btn-normal sb-btn-outline-primary sb-right-icon-btn w-100 mt-16 mb-8"
+      (click)="showPastMemberModal = !showPastMemberModal">
+      <i class="chevron plus icon"></i> Add User
+    </button>
 
   </div>
 
   <div class="sb-modal-actions">
-    <button type="submit"  class="sb-btn sb-btn-normal sb-btn-primary" 
-     (click)="showPastMemberModal = !showPastMemberModal"> Switch User
+    <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary"
+      (click)="showPastMemberModal = !showPastMemberModal"> Switch User
     </button>
   </div>
 
