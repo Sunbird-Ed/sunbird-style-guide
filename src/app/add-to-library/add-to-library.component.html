@@ -111,8 +111,8 @@
             </svg></i>Textbooks<span class="badge ml-8">10</span></div>
 
         <div class="sbgrid">
-          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard}" *ngFor="let sbcard of sbcards"
-            (click)="enableTocPlayer($event, sbcard)">
+          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard}"
+            *ngFor="let sbcard of sbcards" (click)="enableTocPlayer($event, sbcard)">
             <div class="sbcard__main_area">
               <i class="check circle icon icon-check"></i>
               <div class="sbcard__img hide"><img src="assets/images/book.png" alt="" title="" /></div>
@@ -134,8 +134,8 @@
             </svg></i>Suggestions<span class="badge ml-8">10</span></div>
 
         <div class="sbgrid">
-          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard1}" *ngFor="let sbcard1 of sbcards"
-            (click)="enablePlayer($event, sbcard1)">
+          <div class="sbcard sbcard--resource sbcard--course" [ngClass]="{'active': selectedItem == sbcard1}"
+            *ngFor="let sbcard1 of sbcards" (click)="enablePlayer($event, sbcard1)">
             <div class="sbcard__main_area">
               <i class="check circle icon icon-check"></i>
               <div class="sbcard__img"><img src="assets/images/book.png" alt="" title="" /></div>
@@ -196,8 +196,8 @@
                         Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
                       <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
                       <div class="btn-addtoLibrary">
-                      <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
-                        class="plus square icon mr-4"></i>Add to library</button>
+                        <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                            class="plus square icon mr-4"></i>Add to library</button>
                       </div>
                     </div>
                   </div>
@@ -225,8 +225,8 @@
                         Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
                       <div class="sbchapter__img"><img src="./assets/images/book.png" alt="Chapter Title"
                           title="Chapter Title" /></div>
-                          <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn mr-16 shine-effect"><i
-                            class="plus square icon mr-4"></i>Add to library</button>
+                      <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn mr-16 shine-effect"><i
+                          class="plus square icon mr-4"></i>Add to library</button>
                     </div>
                   </div>
                   <!-- chapter ends -->
@@ -382,3 +382,56 @@
   </div>
 
 </div>
+
+<footer class="footer">
+  <div class="ui container">
+    <div class="ui grid stackable px-16">
+      <div class="four wide column footerMenu mr-auto">
+        <ul class="p-0 m-0">
+          <li class="mb-16">
+            <a href="javascript:void(0)" title="Verticals">Verticals</a>
+          </li>
+          <li class="mb-16">
+            <a href="javascript:void(0)" title="Help Center">
+              Help Center
+            </a>
+          </li>
+          <li class="mb-16">
+            <a href="javascript:void(0)" title="Partners">
+              Partners
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="download-diksha">
+        <div class="diksha-logo p-16">
+          <div class="mobile-circles">
+            <div class="big-box border-round border-r50"></div>
+            <div class="oval-box border-round ml-16"></div>
+            <div class="small-box border-round border-r50 ml-24 mr-8"></div>
+            <div class="small-box border-round border-r50"></div>
+          </div>
+          <label class="d-block mb-8">Download DIKSHA for Mobile</label>
+          <a href="javascript:void(0)" class="d-block pb-8 app-download">
+            <img class="playStore-img" src="assets/images/google_playstore.png" alt="">
+          </a>
+          <p class="d-block">Get unlimited access to textbooks, lessons and courses offline on your mobile phone.
+          </p>
+        </div>
+      </div>
+      <div class="four wide column contantDetails">
+        <label class="d-block mb-8">
+          Contact for queries:
+        </label>
+        <a href="mailto:support@diksha-ncte.freshdesk.com" class="d-block mb-32">
+          support@diksha-ncte.freshdesk.com
+        </a>
+        <label class="d-block">
+          <a href="javascript:void(0)">Terms of use</a>
+          <span>| &copy; 2019, DIKSHA</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -114,6 +114,7 @@ import { SchoolingHomeGroupsComponent } from './schooling-home-groups/schooling-
 import { GroupFormComponent } from './schooling-home-groups/group-form/group-form.component';
 import { MembersComponent } from './schooling-home-groups/members/members.component';
 import { CoursesComponent } from './schooling-home-groups/courses/courses.component';
+import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -217,7 +218,8 @@ export function hljsLanguages() {
     SchoolingHomeGroupsComponent,
     GroupFormComponent,
     MembersComponent,
-    CoursesComponent
+    CoursesComponent,
+    AddToLibraryChangeComponent
   ],
   imports: [
     BrowserModule,
