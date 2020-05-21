@@ -83,17 +83,9 @@ export class AddToLibraryChangeComponent implements OnInit {
   disableTocOnly: boolean = true;
   showFilter: boolean = false;
   selectedItem;
-  mediums: any [];  
-  classes: any [];
-  contentTypes: any [];
-  subjects: any [];
-  
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { 
-    this.classes = [{name: 'Class 6'}, {name: 'Class 7'}, {name: 'Class 8'}];
-    this.contentTypes = [  {name: 'Explanation'}, {name: 'Practice'},{name: 'Lesson Plan'}];
-    this.subjects = [  {name: 'Mathematics'}, {name: 'Social'},{name: 'Science'},{name: 'Geography'},{name: 'Economics'}];
-    this.mediums = [  {name: 'Telugu'}, {name: 'English'}];
-  }
+  multiSelect1: { name: string; }[];
+  exploreTab: boolean = true;
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
@@ -116,6 +108,9 @@ export class AddToLibraryChangeComponent implements OnInit {
     this.enableTocPlayerGrid = true;
   }
 
+  activeTab(value) {
+    this.exploreTab = (value === 'explore' ? true : false);
+  }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }
