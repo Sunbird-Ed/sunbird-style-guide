@@ -65,53 +65,53 @@
   <div class="sb-bg-color-primary-0">
     <div class="ui container">
       <div class="add-to-library__tab d-flex">
-        <span class="item active">Explore</span>
-        <span class="item">Suggestions</span>
+        <span class="item active" [ngClass]="{'active': exploreTab}" (click)="activeTab('explore')">Explore</span>
+        <span class="item" [ngClass]="{'active': !exploreTab}" (click)="activeTab('suggestion')">Suggestions</span>
       </div>
     </div>
   </div>
 
   <!-- Prominent Filter Section -->
-  <div class="sb-prominent-filter">
+  <div class="sb-prominent-filter" *ngIf="exploreTab">
     <div class="ui container">
       <div class="sb-prominent-filter-container py-16 pb-0">
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Board</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"
-            [isSearchable]="true" #multiSelect>
+          <sui-select class="selection sb-select-searchfilter" labelField="name" placeholder="Select Board" 
+            [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
-          </sui-multi-select>
+          </sui-select>
         </div>
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Medium</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"
-            [isSearchable]="true" #multiSelect>
+          <sui-select class="selection sb-select-searchfilter" labelField="name" placeholder="Select Medium"
+            [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
-          </sui-multi-select>
+          </sui-select>
         </div>
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Content Type</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"
-            [isSearchable]="true" #multiSelect>
+          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Content tyype"
+            [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
         </div>
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Classes</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="false"
-            [isSearchable]="true" #multiSelect>
+          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Classes"
+            [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of multiSelect1" [value]="option">
             </sui-select-option>
           </sui-multi-select>
         </div>
 
-        <div class="sb-prominent-filter-field hide">
+        <!-- <div class="sb-prominent-filter-field">
           <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
           <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -234,7 +234,7 @@
       </section>
 
       <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-8 relative position ml-24">
-        <div class="select-chapters-overlay">
+        <div class="select-chapters-overlay" *ngIf="exploreTab">
           <h3>Please select a content from the listed chapters to see preview</h3>
         </div>
         <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio">
