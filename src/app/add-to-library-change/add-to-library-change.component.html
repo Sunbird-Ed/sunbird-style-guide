@@ -93,7 +93,7 @@
         </div>
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Content Type(s)</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Content Type(s)"
+          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Content Type(s)" [(ngModel)]="selectedContentType"
             [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of contentTypes" [value]="option">
             </sui-select-option>
@@ -101,7 +101,7 @@
         </div>
         <div class="sb-prominent-filter-field">
           <label class="fsmall">Select Class(es)</label>
-          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Class(es)"
+          <sui-multi-select class="selection sb-select-searchfilter" labelField="name" [hasLabels]="true" placeholder="Select Class(es)" [(ngModel)]="selectedClass"
             [isSearchable]="false" #multiSelect>
             <sui-select-option *ngFor="let option of classes" [value]="option">
             </sui-select-option>
