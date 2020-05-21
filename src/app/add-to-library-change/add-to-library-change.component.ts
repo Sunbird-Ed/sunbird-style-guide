@@ -83,16 +83,19 @@ export class AddToLibraryChangeComponent implements OnInit {
   disableTocOnly: boolean = true;
   showFilter: boolean = false;
   selectedItem;
-  multiSelect1: { name: string; }[];
+  subjects: { name: string; }[];
+  classes: { name: string; }[];
+  mediums: { name: string; }[];
+  contentTypes: { name: string; }[];
   exploreTab: boolean = true;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
-    //this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
-    
-    
-    
+    this.subjects = [{name: 'English'}, {name: 'Mathematics'}, {name: 'Social'},{name: 'Geography'}];
+    this.classes = [{name: 'Class 6'}, {name: 'Class 7'}, {name: 'Class 8'}];
+    this.contentTypes = [{name: 'Explanation'}, {name: 'Practice'}, {name: 'Lesson Plan'}];
+    this.mediums = [{name: 'English'}, {name: 'Hindi'}];
   }
 
   enableTocPlayer(event, newValue1) {
