@@ -83,6 +83,7 @@ export class AddToLibraryChangeComponent implements OnInit {
   showFilter: boolean = false;
   selectedItem;
   multiSelect1: { name: string; }[];
+  exploreTab: boolean = true;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
@@ -103,6 +104,9 @@ export class AddToLibraryChangeComponent implements OnInit {
     this.enableTocPlayerGrid = true;
   }
 
+  activeTab(value) {
+    this.exploreTab = (value === 'explore' ? true : false);
+  }
   ngOnDestroy(): void {
     this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
   }
