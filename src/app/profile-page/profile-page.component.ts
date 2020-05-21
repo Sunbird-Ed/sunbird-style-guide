@@ -11,7 +11,9 @@ export class ProfilePageComponent implements OnInit {
   selectStateOption: any[];
   selectState = false;
   states: any [];
-  boards: any [];  mediums: any [];  classes: any [];
+  boards: any [];  
+  mediums: any [];  
+  classes: any [];
   districts: any [];
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
   panelOpened = false;
