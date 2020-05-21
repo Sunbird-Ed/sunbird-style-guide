@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-to-library-change.component.scss']
 })
 export class AddToLibraryChangeComponent implements OnInit {
-  Classes = [{ name: 'class 1' }, { name: 'class 2' }, { name: 'class 3' }];
 
+  //Classes = [{ name: 'class 1' }, { name: 'class 2' }, { name: 'class 3' }];
+  
   sbcards = [
     {
       title: 'Great thinkers',
@@ -76,7 +77,7 @@ export class AddToLibraryChangeComponent implements OnInit {
       type: 'Book'
     }
   ];
-
+  
   enableTocPlayerGrid: boolean = false;
   enableSuggestions: boolean = false;
   disableTocOnly: boolean = true;
@@ -88,7 +89,10 @@ export class AddToLibraryChangeComponent implements OnInit {
 
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
-    this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
+    //this.multiSelect1 = [{name: 'Example'}, {name: 'Test'}, {name: 'that'}];
+    
+    
+    
   }
 
   enableTocPlayer(event, newValue1) {
