@@ -106,11 +106,11 @@
 
 
 <!-- screen 2 code -->
-<div class="user-profile-box">
-  <div class="d-flex flex-jc-space-between">
+<div class="user-profile-box p-0">
+  <div class="d-flex flex-jc-space-between pt-16 px-16">
     <div class="user-profile-box__title">Create User</div>
   </div>
-  <form class="sb-form mb-16">
+  <form class="sb-form mb-16 px-16">
     <div class="ui stackable grid my-8">
       <div class="twelve wide column p-0 mx-16 text-center"><img src="../../assets/images/profile-icon.svg" width="88px"
           height="88px"></div>
@@ -133,7 +133,7 @@
       </div>
     </div>
   </form>
-  <div class="user-profile-box__actions">
+  <div class="user-profile-box__actions pb-16 px-16">
     <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary sb-btn-disabled"> Add User</button>
     <button type="submit" class="sb-btn sb-btn-normal sb-btn-outline-primary mr-16">Cancel</button>
   </div>
@@ -142,15 +142,18 @@
 <br><br>
 
 <!-- screen 3 code -->
-<div class="user-profile-box mt-32">
-  <div class="d-flex flex-jc-space-between">
+<div class="user-profile-box my-32 p-0">
+  <div class="d-flex flex-jc-space-between px-16 pt-16">
     <div class="user-profile-box__title">Use DIKSHA as</div>
-    <button type="button" class="sb-btn sb-btn-xs sb-btn-error">Delete</button>
+    <button type="button" class="sb-btn sb-btn-xs sb-btn-error">Delete User</button>
   </div>
-  <button type="submit" class="sb-btn sb-btn-sm sb-right-icon-btn w-100 mt-16 mb-24 sb-add-user-btn">
-    <i class="chevron plus icon"></i> Add User
-  </button>
-  <div class="members-list">
+  <div class="px-16">
+    <button type="submit" class="sb-btn sb-btn-sm sb-right-icon-btn w-100 mt-16 mb-24 sb-add-user-btn">
+      <i class="chevron plus icon"></i> Add User
+    </button>
+  </div>
+
+  <div class="members-list px-16 mb-16">
     <div class="members-list__item members-list__item--active">
       <div class="oval">A</div>
       <div class="member-name"><span>User Name 01</span></div>
@@ -162,7 +165,7 @@
       <i class="check circle icon icon_active"></i>
     </div>
   </div>
-  <div class="user-profile-box__actions">
+  <div class="user-profile-box__actions pb-16 px-16">
     <button type="submit" class="sb-btn sb-btn-normal sb-btn-primary" (click)="showSmallModal = !showSmallModal">Switch
       User</button>
     <button type="submit" class="sb-btn sb-btn-normal sb-btn-outline-primary mr-16">Cancel</button>
