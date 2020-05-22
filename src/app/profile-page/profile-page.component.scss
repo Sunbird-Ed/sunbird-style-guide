@@ -11,7 +11,7 @@
 
   &__title {
     font-weight: bold;
-    color:  var(--gray-400);;
+    color:  var(--primary-color);
     font-size: calculateRem(16px);
   }
 
@@ -31,7 +31,7 @@
 .members-list {
   width: 100%;
   background-color: var(--white);
-  box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.25);
+  // box-shadow: 0 calculateRem(2px) calculateRem(7px) 0 rgba(0, 0, 0, 0.25);
 
   .members-list__item {
     display: flex;
@@ -46,7 +46,7 @@
       border-top: calculateRem(1px) solid rgba(151, 151, 151, 0.5);
     }
     &:last-child {
-      border-top: calculateRem(1px) solid rgba(151, 151, 151, 0.5);
+      border-bottom: calculateRem(1px) solid rgba(151, 151, 151, 0.5);
     }
     .icon{font-size: 1.4em;}
     .icon_active {
@@ -261,6 +261,7 @@
   border-radius: 40px;
 }
 
+// go to profile modal scss 
 .diksha-label{
   color:var(--primary-color);
 }
