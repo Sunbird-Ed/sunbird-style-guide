@@ -20,6 +20,7 @@ export class ProfilePageComponent implements OnInit {
   showLocationModal;
   showBoardSelectnModal;
   showPastMemberModal;
+  showSmallModal;
   ngOnInit() {
     this.renderer.addClass(this.document.body, 'hideLeftTopBars');
     this.selectStateOption = [
