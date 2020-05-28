@@ -88,6 +88,8 @@ export class AddToLibraryChangeComponent implements OnInit {
   mediums: { name: string; }[];
   contentTypes: { name: string; }[];
   exploreTab: boolean = true;
+  selectedContentType: { name: string; }[];
+  selectedClass: { name: string; }[];
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
@@ -96,6 +98,8 @@ export class AddToLibraryChangeComponent implements OnInit {
     this.classes = [{name: 'Class 6'}, {name: 'Class 7'}, {name: 'Class 8'}];
     this.contentTypes = [{name: 'Explanation'}, {name: 'Practice'}, {name: 'Lesson Plan'}];
     this.mediums = [{name: 'English'}, {name: 'Hindi'}];
+    this.selectedContentType = this.contentTypes;
+    this.selectedClass = this.classes;
   }
 
   enableTocPlayer(event, newValue1) {
