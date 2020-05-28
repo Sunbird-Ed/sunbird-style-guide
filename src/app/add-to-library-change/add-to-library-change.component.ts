@@ -82,12 +82,13 @@ export class AddToLibraryChangeComponent implements OnInit {
   enableSuggestions: boolean = false;
   disableTocOnly: boolean = true;
   showFilter: boolean = false;
+  exploreTab: boolean = true;
   selectedItem;
+  noResult: boolean = false;
   subjects: { name: string; }[];
   classes: { name: string; }[];
   mediums: { name: string; }[];
   contentTypes: { name: string; }[];
-  exploreTab: boolean = true;
   selectedContentType: { name: string; }[];
   selectedClass: { name: string; }[];
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) { }

@@ -14,49 +14,6 @@
             <span>English</span><span class="add-to-library-dot"></span><span>Class 7</span><span class="add-to-library-dot"></span><span>A Pact with the Sun</span>
           </div>
         </div>
-        <!-- Filter Section -->
-        <!-- <div class="add-to-library__filter ml-auto" (click)="showFilter=!showFilter" [ngClass]="{'active': showFilter}">
-          <i class="icon-svg icon-svg--xs icon-filter mx-8"><svg class="icon icon-svg--white">
-              <use xlink:href="./assets/images/libdemo/sprite.svg#filter"></use>
-            </svg></i>
-          FILTERS
-          <i class="caret down icon ml-4"></i>
-        </div>
-        <div class="add-to-library__filter-panel" *ngIf="showFilter">
-          <div class="d-flex panel-container">
-            <div class="panel">
-              <label class="sb-color-primary d-block">Medium</label>
-              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
-                <div class="pill active">English medium</div>
-                <div class="pill">Hindi medium</div>
-              </div>
-            </div>
-            <div class="panel">
-              <label class="sb-color-primary d-block">Content</label>
-              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
-                <div class="pill pill-content active">Practice Content</div>
-                <div class="pill pill-content">Explanation Content</div>
-              </div>
-            </div>
-            <div class="panel">
-              <label class="sb-color-primary d-block">Subject</label>
-              <div class="sb-medium__sb-pills-content  sb-medium__pills-container flex-w-wrap">
-                <div class="pill active">Mathamatics</div>
-                <div class="pill">Economics</div>
-                <div class="pill">Geography</div>
-                <div class="pill">Science</div>
-              </div>
-            </div>
-            <div class="panel">
-              <label class="sb-color-primary d-block">Class</label>
-              <div class="add-to-library__class flex-w-wrap">
-                <div class="pill active">Class 2</div>
-                <div class="pill active">Class 3</div>
-                <div class="pill">Class 5</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -108,22 +65,25 @@
           </sui-multi-select>
         </div>
 
-        <!-- <div class="sb-prominent-filter-field">
-          <button class="sb-btn sb-btn-outline-primary sb-btn-normal mr-8">Reset</button>
-          <button class="sb-btn sb-btn-primary sb-btn-normal">Apply</button>
-        </div> -->
       </div>
     </div>
   </div>
 
   <!-- TOC player -->
   <div class="ui container">
-    <div class="add-to-library__no-result">
-      <img src="assets/images/offline-desktop.svg" alt="">
+
+    <!-- No result if the videos are not available starts here. note- just remove the class hide to see the view -->
+    <div class="add-to-library__no-result" [ngClass]="{'hide': noResult}">
+      <img src="assets/images/offline-desktop.svg" alt="No Content available">
       <h5 class="font-weight-bold mt-16">No content available</h5>
       <h6 class="sb-color-gray-300 font-weight-normal mt-8">Please select a subject filter and other filters to get the content.</h6>
+      <button class="sb-btn sb-btn-primary sb-btn-normal" (click)="noResult=!noResult">Click to enable preview</button>
     </div>
-    <div class="sb-g add-to-library__toc-player hide">
+    <!-- No result if the videos are not available ends here. -->
+
+    <!-- Player Section -->
+    <div class="sb-g add-to-library__toc-player" *ngIf="noResult">
+      <!-- Left Sidebar for cards -->
       <section class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-4 sb-bg-color-white">
         <!-- Search Bar -->
         <div class="add-to-library__toc-player-searchbar p-8 sb-bg-color-gray-0">
@@ -323,14 +283,19 @@
         </div>
       </section>
 
+      <!-- Right Player Sections -->
       <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-8 relative position ml-24">
-        <div class="select-chapters-overlay flex-jc-center" *ngIf="exploreTab">
-          <div style="max-width: 320px;">
+        <!-- No preview available player section starts-->
+        <div class="select-chapters-overlay" *ngIf="exploreTab">
+          <div class="overlay-container">
             <img src="../../assets/images/nopreview.svg" alt="No Preview">
             <h5 class="sb-color-primary font-weight-bold mt-8">Preview not available</h5>
             <h6 class="font-weight-normal mt-8">Please select a content from the listed chapters to see preview</h6>
+            <button class="sb-btn sb-btn-secondary sb-btn-normal" (click)="exploreTab=!exploreTab">Enable Preview</button>
           </div>
         </div>
+        <!-- No preview available player section ends-->
+
         <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio">
           <div>
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8MPTb1iu_0" frameborder="0"
