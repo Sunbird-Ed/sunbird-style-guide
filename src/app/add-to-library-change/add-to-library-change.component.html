@@ -11,7 +11,7 @@
         <div class="ml-8 sb-color-white">
           <h5 class="font-weight-bold">A Pact with the Sun</h5>
           <div class="d-flex flex-ai-center fsmall">
-            <span>English</span><span class="add-to-library-dot"></span><span>Class 7</span>
+            <span>English</span><span class="add-to-library-dot"></span><span>Class 7</span><span class="add-to-library-dot"></span><span>A Pact with the Sun</span>
           </div>
         </div>
         <!-- Filter Section -->
@@ -118,7 +118,12 @@
 
   <!-- TOC player -->
   <div class="ui container">
-    <div class="sb-g add-to-library__toc-player">
+    <div class="add-to-library__no-result">
+      <img src="assets/images/offline-desktop.svg" alt="">
+      <h5 class="font-weight-bold mt-16">No content available</h5>
+      <h6 class="sb-color-gray-300 font-weight-normal mt-8">Please select a subject filter and other filters to get the content.</h6>
+    </div>
+    <div class="sb-g add-to-library__toc-player hide">
       <section class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-4 sb-bg-color-white">
         <!-- Search Bar -->
         <div class="add-to-library__toc-player-searchbar p-8 sb-bg-color-gray-0">
@@ -132,110 +137,199 @@
 
         <div class="sbtoc-container px-8">
           <!-- Class separator -->
-          <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 6&nbsp;(120)</label>
-            <div class="label-separator"></div>
-          </div>
-          <div class="sbaccordion sbaccordion--toc">
-            <!-- panel begins -->
-            <div class="sbaccordion__panel">
-              <!-- panel header begins -->
-              <div class="sbaccordion__panel-header">
-                <h4 class="sbaccordion__panel-header__title">Chapter 01 Name</h4>
-                <i class="icon-svg icon-svg--xs icon-arrow-up">
-                  <svg class="icon icon-svg--primary">
-                    <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-up"></use>
-                  </svg>
-                </i>
-              </div>
-              <!-- panel header ends -->
-              <div class="sbaccordion__panel-content">
-                <!-- chapter begins -->
-                <div class="sbchapter">
-                  <h4 class="sbchapter__title text-left sb__ellipsis sb__ellipsis--two mb-8">Vedic culture in
-                    north India vedic culture in north India vedic culture in north India</h4>
-                  <div class="sbchapter__item sbchapter__item--active">
-                    <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
-                      Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
-                    <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
-                    <div class="btn-addtoLibrary">
-                      <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
-                          class="plus square icon mr-4"></i>Add to library</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- chapter ends -->
-              </div>
-            </div>
-            <!-- panel ends -->
-
-            <!-- Class separator -->
-            <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 7&nbsp;(88)</label>
+          <div id="explore-tab" *ngIf="exploreTab">
+            <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 6&nbsp;(120)</label>
               <div class="label-separator"></div>
             </div>
-
-            <!-- panel begins -->
-            <div class="sbaccordion__panel">
-              <!-- panel header begins -->
-              <div class="sbaccordion__panel-header">
-                <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
-                  Chapter 02 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
-                    class="icon icon-svg--primary">
-                    <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
-                  </svg></i>
+            <div class="sbaccordion sbaccordion--toc">
+              <!-- panel begins -->
+              <div class="sbaccordion__panel">
+                <!-- panel header begins -->
+                <div class="sbaccordion__panel-header">
+                  <h4 class="sbaccordion__panel-header__title">Chapter 01 Name</h4>
+                  <i class="icon-svg icon-svg--xs icon-arrow-up">
+                    <svg class="icon icon-svg--primary">
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-up"></use>
+                    </svg>
+                  </i>
+                </div>
+                <!-- panel header ends -->
+                <div class="sbaccordion__panel-content">
+                  <!-- chapter begins -->
+                  <div class="sbchapter">
+                    <h4 class="sbchapter__title text-left sb__ellipsis sb__ellipsis--two mb-8">Vedic culture in
+                      north India vedic culture in north India vedic culture in north India</h4>
+                    <div class="sbchapter__item sbchapter__item--active">
+                      <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                        Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+                      <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+                      <div class="btn-addtoLibrary">
+                        <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                            class="plus square icon mr-4"></i>Add to library</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- chapter ends -->
+                </div>
               </div>
-              <!-- panel header ends -->
-
-            </div>
-            <!-- panel ends -->
-            <!-- panel begins -->
-            <div class="sbaccordion__panel">
-              <!-- panel header begins -->
-              <div class="sbaccordion__panel-header">
-                <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
-                  Chapter 03 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
-                    class="icon icon-svg--primary">
-                    <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
-                  </svg></i>
+              <!-- panel ends -->
+  
+              <!-- Class separator -->
+              <div class="add-to-library__select-chapters"><label class="fsmall mb-0 mr-24">Class 7&nbsp;(88)</label>
+                <div class="label-separator"></div>
               </div>
-              <!-- panel header ends -->
-
-            </div>
-            <!-- panel ends -->
-            <!-- panel begins -->
-            <div class="sbaccordion__panel">
-              <!-- panel header begins -->
-              <div class="sbaccordion__panel-header">
-                <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
-                  Chapter 04 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
-                    class="icon icon-svg--primary">
-                    <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
-                  </svg></i>
+  
+              <!-- panel begins -->
+              <div class="sbaccordion__panel">
+                <!-- panel header begins -->
+                <div class="sbaccordion__panel-header">
+                  <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
+                    Chapter 02 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
+                      class="icon icon-svg--primary">
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
+                    </svg></i>
+                </div>
+                <!-- panel header ends -->
+  
               </div>
-              <!-- panel header ends -->
-
-            </div>
-            <!-- panel ends -->
-            <!-- panel begins -->
-            <div class="sbaccordion__panel">
-              <!-- panel header begins -->
-              <div class="sbaccordion__panel-header">
-                <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
-                  Chapter 05 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
-                    class="icon icon-svg--primary">
-                    <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
-                  </svg></i>
+              <!-- panel ends -->
+              <!-- panel begins -->
+              <div class="sbaccordion__panel">
+                <!-- panel header begins -->
+                <div class="sbaccordion__panel-header">
+                  <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
+                    Chapter 03 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
+                      class="icon icon-svg--primary">
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
+                    </svg></i>
+                </div>
+                <!-- panel header ends -->
+  
               </div>
-              <!-- panel header ends -->
-
+              <!-- panel ends -->
+              <!-- panel begins -->
+              <div class="sbaccordion__panel">
+                <!-- panel header begins -->
+                <div class="sbaccordion__panel-header">
+                  <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
+                    Chapter 04 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
+                      class="icon icon-svg--primary">
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
+                    </svg></i>
+                </div>
+                <!-- panel header ends -->
+  
+              </div>
+              <!-- panel ends -->
+              <!-- panel begins -->
+              <div class="sbaccordion__panel">
+                <!-- panel header begins -->
+                <div class="sbaccordion__panel-header">
+                  <h4 class="sbaccordion__panel-header__title text-left sb__ellipsis sb__ellipsis--two break-word mr-16">
+                    Chapter 05 Name</h4><i class="icon-svg icon-svg--xs icon-arrow-down mr-4"><svg
+                      class="icon icon-svg--primary">
+                      <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-down"></use>
+                    </svg></i>
+                </div>
+                <!-- panel header ends -->
+  
+              </div>
+              <!-- panel ends -->
             </div>
-            <!-- panel ends -->
+          </div>
+          <div class="py-16" id="suggestions-tab" *ngIf="!exploreTab">
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item sbchapter__item--active mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
+            <div class="sbchapter__item mb-8">
+              <h4 class="sbchapter__item__title text-left sb__ellipsis sb__ellipsis--two mr-8">Social Science
+                Term 1 Social Science Term Social Science Term culture in north India vedic</h4>
+              <div class="sbchapter__img"><img src="./assets/images/book.png" /></div>
+              <div class="btn-addtoLibrary">
+                <button class="sb-btn sb-btn-normal sb-btn-secondary sb-left-icon-btn shine-effect"><i
+                    class="plus square icon mr-4"></i>Add to library</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-8 relative position ml-24">
-        <div class="select-chapters-overlay" *ngIf="exploreTab">
-          <h3>Please select a content from the listed chapters to see preview</h3>
+        <div class="select-chapters-overlay flex-jc-center" *ngIf="exploreTab">
+          <div style="max-width: 320px;">
+            <img src="../../assets/images/nopreview.svg" alt="No Preview">
+            <h5 class="sb-color-primary font-weight-bold mt-8">Preview not available</h5>
+            <h6 class="font-weight-normal mt-8">Please select a content from the listed chapters to see preview</h6>
+          </div>
         </div>
         <div class="aspectratio" data-ratio="16:9" id="help-video-aspect-ratio">
           <div>

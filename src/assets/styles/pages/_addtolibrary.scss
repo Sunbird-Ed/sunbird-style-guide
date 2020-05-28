@@ -13,8 +13,8 @@
   }
 
   .add-to-library-dot {
-    width: 6px;
-    height: 6px;
+    width: calculateRem(4px);
+    height: calculateRem(4px);
     border-radius: 50%;
     background-color: var(--white);
     display: inline-block;
@@ -88,6 +88,16 @@
         border-right: none;
       }
     }
+  }
+
+  &__no-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calculateRem(88px) 0 0 0;
+    width: calculateRem(320px);
+    text-align: center;
+    margin: 0 auto;
   }
 
   // Prominent Filter
