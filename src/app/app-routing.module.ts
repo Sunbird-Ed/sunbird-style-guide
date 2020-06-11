@@ -69,6 +69,7 @@ import { schoolingAtHomeComponent } from './schooling-at-home/schooling-at-home.
 import { AddToLibraryComponent } from './add-to-library/add-to-library.component';
 import { SchoolingHomeGroupsComponent } from './schooling-home-groups/schooling-home-groups.component';
 import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
+import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -140,7 +141,7 @@ const routes: Routes = [
   { path: 'add-to-library', component: AddToLibraryComponent},
   { path: 'school-home-group', component: SchoolingHomeGroupsComponent},
   { path: 'add-to-library-change', component: AddToLibraryChangeComponent},
-
+  { path: 'custom-theme', component: CustomeThemeComponent}
 
 ];
 

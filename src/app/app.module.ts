@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SlickModule } from 'ngx-slick';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightModule } from 'ngx-highlightjs';
 import xml from 'highlight.js/lib/languages/xml';
 import scss from 'highlight.js/lib/languages/scss';
@@ -115,6 +115,8 @@ import { GroupFormComponent } from './schooling-home-groups/group-form/group-for
 import { MembersComponent } from './schooling-home-groups/members/members.component';
 import { CoursesComponent } from './schooling-home-groups/courses/courses.component';
 import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
+import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
+import { ThemeService } from './theme.service';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -219,7 +221,8 @@ export function hljsLanguages() {
     GroupFormComponent,
     MembersComponent,
     CoursesComponent,
-    AddToLibraryChangeComponent
+    AddToLibraryChangeComponent,
+    CustomeThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -234,11 +237,12 @@ export function hljsLanguages() {
     SuiTabsModule,
     SuiSelectModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HeadroomModule,
     NgxPageScrollModule
   ],
-  providers: [CustomerService, SortService],
+  providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
