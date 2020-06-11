@@ -1,5 +1,17 @@
 @import "./variables";
 @import "./mixins/mixins";
+
+:root {
+  --main-color: #fff;
+  --background-color: #e5e5e5;
+  --text-color: #2d2d2d;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 html,
 body {
   height: 100%;
@@ -7,7 +19,7 @@ body {
 }
 
 body {
-  background: $body-background-color !important;
+  // background: $body-background-color !important;
   position: relative;
   font-family: $font-stack-en;
   letter-spacing: 0.2px;

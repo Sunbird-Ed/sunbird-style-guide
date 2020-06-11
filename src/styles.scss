@@ -147,7 +147,7 @@ html {
     min-height: 100vh;
     // height: auto;
     position: relative;
-    background: $primary-0;
+    background: var(--main-color);
 
     // overflow-y: auto;
     &.docs-fullWidth {
