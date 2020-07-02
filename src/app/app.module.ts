@@ -117,6 +117,7 @@ import { CoursesComponent } from './schooling-home-groups/courses/courses.compon
 import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
 import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 import { ThemeService } from './theme.service';
+import { NewTocComponent } from './new-toc/new-toc.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -222,7 +223,8 @@ export function hljsLanguages() {
     MembersComponent,
     CoursesComponent,
     AddToLibraryChangeComponent,
-    CustomeThemeComponent
+    CustomeThemeComponent,
+    NewTocComponent
   ],
   imports: [
     BrowserModule,
