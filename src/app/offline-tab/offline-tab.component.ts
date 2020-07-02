@@ -8,7 +8,10 @@ import { Router } from '@angular/router';
 })
 export class OfflineTabComponent implements OnInit, OnDestroy {
   multiSelect1: { name: string; }[];
-
+  showSmallModal = false;
+  showJoinModal = false;
+  enableProgress = true;
+  showMinusbtn = true;
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
