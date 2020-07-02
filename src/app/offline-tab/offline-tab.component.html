@@ -1,33 +1,44 @@
+<!-- Back Button Previous Module & Next Module button -->
 <div class="sb-bg-color-white relative position back-btn-container">
   <div class="ui container">
     <div class="py-8 d-flex flex-ai-center">
+      <!-- /* Back button */ -->
       <button class="sb-btn sb-btn-link-primary sb-btn-normal back-btn mr-auto"><i
           class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
             <use xlink:href="./assets/images/libdemo/sprite.svg#arrow-long-left"></use>
           </svg></i>&nbsp;Back
       </button>
+      <!-- Back button -->
       <div class="d-flex flex-ai-center">
+        <!-- Previous module button -->
         <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal sb-left-icon-btn">
           <i class="chevron left icon mr-4"></i>Prev Module
         </button>
+        <!-- Previous Module button -->
         <div class="modulebtn-divider"></div>
+        <!-- Next Module button -->
         <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal sb-right-icon-btn">
           Next Module<i class="chevron right icon ml-4"></i>
         </button>
+        <!-- Next Module button -->
       </div>
     </div>
   </div>
 </div>
-
+<!-- Textbook details with continue playing and join course button -->
 <div class="textbook-container">
   <div class="ui container">
     <div class="textbook py-16 sb-g">
-      <div class="sb-g-col-xs-12 sb-g-col-md-8 sb-g-col-lg-9">
+      <div class="sb-g-col-xs-12 sb-g-col-md-9 sb-g-col-lg-9">
+        <!-- Textbook details -->
         <div class="textbook__details d-flex flex-ai-center">
+          <!-- Textbook image -->
           <img src="assets/images/chapter-cover-img.png" class="textbook__bookimg" alt="textbook">
           <div class="ml-8 textbook__heading">
+            <!-- Textbook title -->
             <h5 class="textbook__title sb-color-primary font-weight-bold mb-0">TN X SCIENCE EM ALL ONE MARKS COLLECTIONS
             </h5>
+            <!-- Textbook Rating with share icon -->
             <div class="textbook__rating mt-4">
               <sui-rating class="star mini" [ngModel]="4" [maximum]="5"></sui-rating>
               <div class="d-inline-flex flex-ai-center ml-8 cursor-pointer" (click)="enableProgress=!enableProgress">
@@ -40,12 +51,15 @@
           </div>
         </div>
       </div>
-      <div class="sb-g-col-xs-12 sb-g-col-md-4 sb-g-col-lg-3 certified-course">
+      <!-- Module Progress bar with join course and continue learning button -->
+      <div class="sb-g-col-xs-12 sb-g-col-md-3 sb-g-col-lg-3 certified-course">
+        <!-- Module Progress bar -->
         <div class="certified-course__progress" *ngIf="!enableProgress">
           <div class="fsmall">Module Progress</div>
           <div class="sb-color-primary fnormal font-weight-bold mt-4">8/9 Completed</div>
           <sui-progress [value]="8" [maximum]="9" class="mb-0 mr-0 mt-8 tiny"></sui-progress>
         </div>
+        <!-- join course & continue learning buttons -->
         <div class="certified-course__btn" *ngIf="enableProgress">
           <button class="sb-btn sb-btn-secondary sb-btn-normal ml-auto textbook__addbtn"
             (click)="showJoinModal = !showJoinModal">Join Course</button>
@@ -59,32 +73,42 @@
     </div>
   </div>
 </div>
-
+<!-- Accordion and batch card section start -->
 <div class="sb-bg-color-primary-100">
   <div class="ui container">
     <div class="sb-course-details sb-g py-16">
       <div class="sb-course-details__training sb-g-col-xs-12 sb-g-col-md-9 sb-g-col-lg-9">
+        <!-- Course training information starts -->
+
         <div class="sb-bg-color-white mb-16 mobile only">
           <div class="certified-course__certificate d-inline-flex flex-ai-center py-8 px-16 width-100">
             <img src="assets/images/certificate-icon.png" alt="Certificate">
-            <span class="fmedium sb-color-primary ml-8 font-weight-bold">Certified course</span>
+            <span class="fmedium sb-color-primary ml-16 font-weight-bold">Certified course</span>
           </div>
         </div>
-        <h4 class="font-weight-bold">Course Details</h4>
-        <div class="training-relevant my-16">
-          <h6 class="mt-0 mb-8 fsmall training-relevant__heading">Training is relevant for teachers of:</h6>
-          <div class="training-relevant__class mb-4 sb-color-gray-400"><span>Class:&nbsp;</span><span>9, 10</span></div>
-          <div class="training-relevant__subject mb-4 sb-color-gray-400"><span>Subject:&nbsp;</span><span>English,
-              Mathmatics</span></div>
-          <div class="training-relevant__medium mb-4 sb-color-gray-400"><span>Medium:&nbsp;</span><span>English</span>
+
+        <div class="training-info">
+          <h4 class="font-weight-bold">Course Details</h4>
+          <div class="training-relevant my-16">
+            <h6 class="mt-0 mb-8 fsmall training-relevant__heading">Training is relevant for teachers of:</h6>
+            <div class="training-relevant__class mb-4 sb-color-gray-400"><span>Class:&nbsp;</span><span>9, 10</span>
+            </div>
+            <div class="training-relevant__subject mb-4 sb-color-gray-400"><span>Subject:&nbsp;</span><span>English,
+                Mathmatics</span></div>
+            <div class="training-relevant__medium mb-4 sb-color-gray-400"><span>Medium:&nbsp;</span><span>English</span>
+            </div>
+            <label class="fsmall mt-16 mb-8">Description</label>
+            <p class="traning-relevant__description sb-color-gray-400">This course discusses the basic building blocks
+              of
+              practice content, the steps to build practice questions and categorizing based on difficulty levels,
+              Bloom's
+              Taxonomy and Learning Outcomes, It also shows the different types of questions that can be created on
+              DIKSHA
+              Content Editor. It also lists the Dos and Don'ts to keep in mind while creating questions. This focus of
+              this course is on a language subject: English for grades 6-10.</p>
           </div>
-          <label class="fsmall mt-16 mb-8">Description</label>
-          <p class="traning-relevant__description sb-color-gray-400">This course discusses the basic building blocks of
-            practice content, the steps to build practice questions and categorizing based on difficulty levels, Bloom's
-            Taxonomy and Learning Outcomes, It also shows the different types of questions that can be created on DIKSHA
-            Content Editor. It also lists the Dos and Don'ts to keep in mind while creating questions. This focus of
-            this course is on a language subject: English for grades 6-10.</p>
         </div>
+        <!-- Course training information ends -->
         <div class="training-module mb-16 d-flex flex-ai-center">
           <div class=" font-weight-bold fs-1-143">Course modules</div>
           <button *ngIf="showMinusbtn" class="sb-btn sb-btn-outline-secondary sb-btn-normal ml-auto d-flex flex-ai-center" (click)="showMinusbtn=!showMinusbtn">
@@ -96,23 +120,27 @@
             Collapse All
           </button>
         </div>
-        <!-- <a class="font-weight-bold fsmall cursor-pointer">View more</a> -->
+
       </div>
       <div class="sb-course-details__info sb-g-col-xs-12 sb-g-col-md-3 sb-g-col-lg-3">
+        <!-- Batch card information starts -->
+        <!-- 1. Certified Course -->
         <div class="sb-bg-color-white mb-16 computer only">
-          <div class="certified-course d-inline-flex flex-ai-center py-8 px-16 width-100">
+          <div class="certified-course__certificate d-inline-flex flex-ai-center py-8 px-16 width-100">
             <img src="assets/images/certificate-icon.png" alt="Certificate">
-            <span class="fmedium sb-color-primary ml-8 font-weight-bold">Certified course</span>
+            <span class="fmedium sb-color-primary ml-16 font-weight-bold">Certified course</span>
           </div>
         </div>
-
+        <!-- 2. Course Progress bar -->
         <div class="sb-bg-color-white certified-course__progress p-16 mb-16">
           <div class="fsmall">Course Progress</div>
           <div class="sb-color-primary fnormal font-weight-bold mt-8">5% Completed</div>
           <sui-progress [value]="5" [maximum]="100" class="mb-0 mr-0 mt-8 tiny"></sui-progress>
           <div class="fsmall mt-8">Complete all the modules to get a certificate</div>
         </div>
-
+        <!-- 3. Join batch & Leave batch -->
+        <!-- Note: below both join batch & leave batch are same. just you have to disable the information based on batch details. I have shared two card types for your reference.-->
+        <!-- join batch -->
         <sui-accordion class="styled fluid sb-accordion mb-16">
           <sui-accordion-panel [isOpen]="true">
             <div title class="sb-accordion-title fsmall d-flex flex-ai-center">
@@ -122,30 +150,31 @@
             <div content class="sb-accordion-content sb-bg-color-white pt-0 pb-16">
               <div class="batch-details">
                 <!-- <div class="batch-details__name sb-color-primary font-weight-bold fmedium">Methodology of teaching Social Science</div> -->
-                <div class="batch-details__dropdown mb-16">
-                  <sui-select class="selection" placeholder="Select">
+                <div class="mb-16">
+                <div class="batch-details__dropdown">
+                  <sui-select class="selection mb-16" placeholder="Select">
                     <sui-select-option value="Upcoming"></sui-select-option>
                     <sui-select-option value="Ongoing"></sui-select-option>
                   </sui-select>
+                  <div class="batch-details__edit d-flex flex-ai-center">
+                    <div class="sb-color-primary fmedium font-weight-bold">6th April 2020 -
+                      10th May 2020</div>
+                      <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal">
+                        Edit
+                      </button>
+                    </div>
+                    <div class="batch-details__created mt-8 fsmall">20th Dec, 2019 - 31st Dec 2020</div>
+                  </div>
                 </div>
-                <div class="batch-details__edit d-flex flex-ai-center">
-                  <div class="sb-color-primary fmedium font-weight-bold">6th April 2020 -
-                    10th May 2020</div>
-                  <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal ml-auto">
-                    Edit
-                  </button>
-                </div>
-                <div class="batch-details__created mt-8 fsmall">20th Dec, 2019 - 31st Dec 2020</div>
-                <div class="batch-deatils__button text-right mt-16">
-                  <!-- <button class="sb-btn sb-btn-outline-primary sb-btn-normal">Leave course</button> -->
+                <div class="batch-deatils__button text-right">
+                  <!-- <button class="sb-btn sb-btn-outline-primary sb-btn-normal">Leave Course</button> -->
                   <button class="sb-btn sb-btn-primary sb-btn-normal width-100">Create</button>
                 </div>
               </div>
-
             </div>
           </sui-accordion-panel>
         </sui-accordion>
-
+        <!-- Leave batch card -->
         <sui-accordion class="styled fluid sb-accordion mb-16">
           <sui-accordion-panel [isOpen]="true">
             <div title class="sb-accordion-title fsmall d-flex flex-ai-center">
@@ -154,31 +183,33 @@
             </div>
             <div content class="sb-accordion-content sb-bg-color-white pt-0 pb-16">
               <div class="batch-details">
-                <div class="batch-details__name sb-color-primary font-weight-bold fmedium">Methodology of teaching Social Science</div>
-                <!-- <div class="batch-details__dropdown mb-16">
-                  <sui-select class="selection" placeholder="Select">
-                    <sui-select-option value="Upcoming"></sui-select-option>
-                    <sui-select-option value="Ongoing"></sui-select-option>
-                  </sui-select>
-                </div> -->
-                <!-- <div class="batch-details__edit d-flex flex-ai-center">
-                  <div class="sb-color-primary fmedium font-weight-bold">6th April 2020 -
-                    10th May 2020</div>
-                  <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal">
-                    Edit
-                  </button>
-                </div> -->
-                <div class="batch-details__created mt-8 fsmall">20th Dec, 2019 - 31st Dec 2020</div>
-                <div class="batch-deatils__button text-right mt-16">
-                  <button class="sb-btn sb-btn-outline-primary sb-btn-normal">Leave course</button>
+                <div class="mb-16">
+                  <div class="batch-details__name sb-color-primary font-weight-bold fmedium">Methodology of teaching
+                    Social Science</div>
+                  <!-- <div class="batch-details__dropdown mb-16">
+                    <sui-select class="selection" placeholder="Select">
+                      <sui-select-option value="Upcoming"></sui-select-option>
+                      <sui-select-option value="Ongoing"></sui-select-option>
+                    </sui-select>
+                  </div> -->
+                  <!-- <div class="batch-details__edit d-flex flex-ai-center">
+                    <div class="sb-color-primary fmedium font-weight-bold">6th April 2020 -
+                      10th May 2020</div>
+                    <button class="sb-btn sb-btn-link sb-btn-link-primary sb-btn-normal">
+                      Edit
+                    </button>
+                  </div> -->
+                  <div class="batch-details__created mt-8 fsmall">20th Dec, 2019 - 31st Dec 2020</div>
+                </div>
+                <div class="batch-deatils__button text-right">
+                  <button class="sb-btn sb-btn-outline-primary sb-btn-normal">Leave Course</button>
                   <!-- <button class="sb-btn sb-btn-primary sb-btn-normal width-100">Create</button> -->
                 </div>
               </div>
-
             </div>
           </sui-accordion-panel>
         </sui-accordion>
-
+        <!-- Credits & License information -->
         <sui-accordion class="styled fluid sb-accordion">
           <sui-accordion-panel [isOpen]="true">
             <div title class="sb-accordion-title fsmall d-flex flex-ai-center">
@@ -191,22 +222,19 @@
                   by</div>
                 <div class="content-metadeta__text  fnormal sb-color-gray-400">Chandigarh SCERT</div>
               </div>
-
               <div class="pb-24">
                 <div class="content-metadeta__title font-weight-bold fsmall mb-8 sb-color-gray-800">License Terms</div>
                 <div class="content-metadeta__text  fnormal sb-color-gray-400">Creative Commons Attribution(CC by)</div>
               </div>
-
               <a class="font-weight-bold fsmall cursor-pointer">View more</a>
-
             </div>
           </sui-accordion-panel>
         </sui-accordion>
+        <!-- batch card information ends -->
       </div>
     </div>
   </div>
 </div>
-
 <!-- Join Course -->
 <sui-modal *ngIf="showJoinModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'small'"
   class="sb-modal" appBodyScroll (dismissed)="showJoinModal = !showJoinModal" #modal>
@@ -224,7 +252,6 @@
     </button>
   </div>
 </sui-modal>
-
 <!-- Join Course Table -->
 <sui-modal *ngIf="showSmallModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0" [size]="'normal'"
   class="sb-modal" appBodyScroll (dismissed)="showSmallModal = !showSmallModal" #modal>
@@ -254,7 +281,6 @@
       </div>
     </div>
   </div>
-
 </sui-modal>
 
 <!-- Offline header -->
