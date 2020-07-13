@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins/mixins";
+
+.mob-banner-container {
+  background: var(--tertiary-100);
+  color: var(--white);
+}
+
+.desk-banner-container {
+  background: var(--white);
+  width: 100%;
+  height: 100%;
+}
+
+.banner-timing{
+    font-size: calculateRem(20px);
+    font-weight: bold;
+    color:var(--red-100);
+}
+
+.banner-text{
+    color:var(--gray-200);
+}

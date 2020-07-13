@@ -71,6 +71,7 @@ import { SchoolingHomeGroupsComponent } from './schooling-home-groups/schooling-
 import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
 import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 import { NewTocComponent } from './new-toc/new-toc.component';
+import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -143,7 +144,8 @@ const routes: Routes = [
   { path: 'school-home-group', component: SchoolingHomeGroupsComponent},
   { path: 'add-to-library-change', component: AddToLibraryChangeComponent},
   { path: 'custom-theme', component: CustomeThemeComponent},
-  { path: 'new-toc', component: NewTocComponent}
+  { path: 'new-toc', component: NewTocComponent},
+  { path: 'maintenance-banner', component:MaintenanceBannerComponent}
 ];
 
 @NgModule({
