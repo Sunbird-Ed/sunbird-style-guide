@@ -1,0 +1,210 @@
+@import "variables";
+@import "mixins/mixins";
+
+//back-header
+.back-bar {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+}
+
+// textbook header
+.textbook {
+  &-container {
+    box-shadow: 0 0.125rem 0.4375rem 0 rgba(0, 0, 0, .16);
+    position: relative;
+    background-color: #FAFAFA;
+    z-index: 3;
+    position: relative;
+    width: 100%;
+  }
+
+  &__details {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__bookimg {
+    width: calculateRem(48px);
+    height: calculateRem(48px);
+
+    img {
+      width: calculateRem(48px);
+      height: calculateRem(48px);
+    }
+  }
+
+  &__heading {
+    min-width: 0;
+
+    .textbook__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 18px;
+    }
+  }
+
+  &__addbtn {
+    white-space: nowrap;
+  }
+}
+
+:host{
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    height: 100vh;
+    overflow: auto;
+    padding-left: 40%;
+    padding-right: 0px;
+    box-shadow: 0 0.125rem 0.4375rem 0 rgba(0, 0, 0, .16);
+    [dir="rtl"] & {
+      padding-left: 0px;
+      padding-right: 40%;
+    }
+  }
+  
+  .sidebar a ,.dashboard-title{
+    display: block;
+    color: var(--gray-200);
+    padding: calculateRem(8px);
+    text-decoration: none;
+    font-size: calculateRem(16px);
+    margin:calculateRem(16px) 0px;
+    
+    &:hover{
+        color:var(--black);
+        font-weight: bold;
+    }
+  }
+  
+  .sidebar a.active {
+      border-left:calculateRem(4px) solid var(--primary-400);
+      background: var(--primary-100);
+      color:var(--primary-color);
+      font-weight: bold;
+      [dir="rtl"] & {
+        border-left:none;
+        border-right:calculateRem(4px) solid var(--primary-400);
+      }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding-left: 0;
+      [dir="rtl"] & {
+        padding-right:0px;
+      }
+    }
+  
+    .sidebar a ,.dashboard-title{
+      text-align: center;
+      float: none;
+    }
+  
+  }
+}
+
+div.content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: calculateRem(36px);
+
+  @include respond-below(sm) {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .batch-details {
+    .img-text {
+      color: var(--gray-200);
+    }
+  }
+
+  //cards css
+  .batch-content-area {
+    display: grid;
+    grid-template-areas:
+      "smallcard largecard"
+      "smallcard2 largecard";
+    grid-gap: 16px;
+    grid-template-columns: 392px 1fr;
+
+    @include respond-below(sm) {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .batch-sbcard {
+      width: 100%;
+      border-radius: calculateRem(2px);
+      background-color: var(--white);
+      box-shadow: none;
+      cursor: pointer;
+      border: 2px solid var(--white);
+      box-shadow: 0 0.125rem 0.4375rem 0 rgba(0, 0, 0, .16);
+
+      &:nth-child(1) {
+        grid-area: smallcard;
+      }
+
+      &:nth-child(2) {
+        grid-area: largecard;
+      }
+
+      &:nth-child(3) {
+        grid-area: smallcard2;
+      }
+
+      .batch-sbcard-content {
+        height: 100%;
+
+        .batch-card-title {
+          font-size: calculateRem(14px);
+          color: var(--gray-100);
+        }
+
+        .batch-card-number {
+          font-size: calculateRem(36px);
+          font-weight: bold;
+        }
+
+        .batch-card-total-number {
+          font-size: calculateRem(72px);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .course-dashboard-select {
+    width: 300px;
+  }
+
+  .ui.selection.dropdown {
+    line-height: 1em;
+  }
+
+  .ui.search.dropdown.course-dashboard-select>.text {
+    margin: calculateRem(6px) calculateRem(16px) calculateRem(6px) calculateRem(6px);
+  }
+}
+
+  .sb-no-course-found{
+    background-color: $tertiary-0;
+    border: 1px solid $tertiary-100;
+    padding: calculateRem(16px) calculateRem(24px);
+    border-radius: calculateRem(4px);
+    font-size: calculateRem(12px);
+
+    &__title{
+       color:var(--gray-800) 
+    }
+}

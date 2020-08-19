@@ -1,23 +1,83 @@
 @import "variables";
 @import "mixins/mixins";
 
-.mob-banner-container {
-  background: var(--tertiary-100);
-  color: var(--white);
-}
-
-.desk-banner-container {
-  background: var(--white);
+.banner-content{
   width: 100%;
-  height: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    margin:calculateRem(16px) 0px;
+    @include respond-below(sm){
+      margin:0px;
+    }
+    .mob-banner-container {
+      background: var(--tertiary-100);
+      color: var(--white);
+    }
+    
+    .desk-banner-container {
+      width: 100%;
+      height: 100%;
+    
+      .banner-timing {
+        font-size: calculateRem(20px);
+        font-weight: bold;
+        color: var(--red-100);
+      }
+    
+      .banner-text {
+        color: var(--gray-200);
+      }
+    }
+    .sb-manage-section {
+      .sb-manage-section-title {
+        font-size: calculateRem(16.002px);
+        line-height: normal;
+        font-weight: 600;
+      }
+    
+      .sb-multi-rows:nth-child(odd) {
+        background: var(--white);
+        border-top: calculateRem(1px) solid var(--rc-dddddd);
+        border-bottom: calculateRem(1px) solid var(--rc-dddddd);
+      }
+    
+      .sb-multi-rows:nth-child(even) {
+        background: var(--gray-0);
+        border-top: calculateRem(1px) solid var(--rc-dddddd);
+        border-bottom: calculateRem(1px) solid var(--rc-dddddd);
+      }
+    
+      .no-data-label {
+        margin-top: calculateRem(6px);
+      }
+    
+      .info-img {
+        position: relative;
+        top: calculateRem(4px);
+      }
+    }
+    
+    .sb-upload-status-modal {
+      .sb-modal-content {
+        .self-users-list {
+          line-height: normal;
+          font-size: 14px;
+        }
+    
+        .upload-btn {
+          position: absolute;
+          opacity: 0;
+          left: 0;
+          top: 0;
+          width: 100%;
+          margin: 0;
+          height: 100%;
+          cursor: pointer;
+        }
+      }
+    }
 }
 
-.banner-timing{
-    font-size: calculateRem(20px);
-    font-weight: bold;
-    color:var(--red-100);
-}
 
-.banner-text{
-    color:var(--gray-200);
-}
+

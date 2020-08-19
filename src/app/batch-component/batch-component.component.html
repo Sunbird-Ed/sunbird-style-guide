@@ -1,0 +1,90 @@
+<div class="sb-bg-color-white sb-sticky back-bar">
+  <div class="ui container py-8">
+    <button type="button" class="d-flex sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn">
+      <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
+          <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+        </svg></i>
+      Back
+    </button>
+  </div>
+</div>
+
+<div class="textbook-container">
+  <div class="ui container">
+    <div class="textbook py-16 sb-g">
+      <div class="sb-g-col-xs-12 sb-g-col-md-9 sb-g-col-lg-9">
+        <!-- Textbook details -->
+        <div class="textbook__details d-flex flex-ai-center">
+          <!-- Textbook image -->
+          <div class="textbook__bookimg">
+            <img
+              src="https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_212964160867172352120/artifact/1464174025165book.thumb.png"
+              alt="textbook">
+          </div>
+          <div class="ml-8 textbook__heading">
+            <!-- Textbook title -->
+            <div class="textbook__title sb-color-primary font-weight-bold mb-0">Methodology of teaching Social Science
+            </div>
+            <!-- Textbook Rating with share icon -->
+            <div class="textbook__rating d-flex flex-ai-center">
+
+              <sui-rating class="star mini" [maximum]="5"></sui-rating>
+
+              <button
+                class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-8 sb-btn-icon-fix">
+                <i class="icon-svg icon-svg--xs icon-share mr-8"><svg class="icon icon-svg--primary">
+                    <use xlink:href="assets/images/libdemo/sprite.svg#share"></use>
+                  </svg></i>
+                Share
+              </button>
+
+              <button
+                class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-8 sb-btn-icon-fix">
+                <i class="icon-svg icon-svg--xs icon-edit mr-8"><svg class="icon icon-svg--primary">
+                    <use xlink:href="assets/images/libdemo/sprite.svg#copy-alternate"></use>
+                  </svg></i>
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="sb-g-col-xs-12 sb-g-col-md-3 sb-g-col-lg-3 certified-course">
+        <div class="ml-auto text-right mt-8">
+          <button class="sb-btn sb-btn-outline-primary sb-btn-normal px-24">
+            Close dashboard
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui stackable grid">
+  <div class="three wide column pl-0 pr-0">
+    <div class="sidebar py-24">
+      <a href ="#course-stats">Dashboard</a>
+      <a href ="#progress">Batches</a>
+      <a href ="#certificates">Certificates</a>
+
+    </div>
+  </div>
+  <div class="eight wide column">
+    <div>
+      <div class="content">
+        <div class="batch-content-area">
+            <div class="batch-sbcard" *ngFor="let item of dashBoardItems">
+             <div class="d-flex flex-ai-center flex-jc-center flex-dc p-16 batch-sbcard-content" >
+              <div class="batch-card-title">{{item?.title}}</div>
+              <div class="batch-card-number">{{item?.count || 0}}</div>
+              </div>
+            </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
