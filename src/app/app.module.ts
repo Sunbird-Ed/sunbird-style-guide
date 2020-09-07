@@ -123,6 +123,7 @@ import { BatchComponentComponent } from './batch-component/batch-component.compo
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
 import { CountdownModule } from 'ngx-countdown';
 import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
+import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -231,9 +232,13 @@ export function hljsLanguages() {
     CustomeThemeComponent,
     NewTocComponent,
     MaintenanceBannerComponent,
+<<<<<<< HEAD
     BatchComponentComponent,
     BatchCertificateComponent,
     DikshaWebAppComponent
+=======
+    ButtonsNewComponent
+>>>>>>> 03def9979ee2fc5108c87ad08f5c7f6a1b6745f9
   ],
   imports: [
     BrowserModule,
