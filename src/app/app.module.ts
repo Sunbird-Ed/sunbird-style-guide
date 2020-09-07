@@ -119,6 +119,7 @@ import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 import { ThemeService } from './theme.service';
 import { NewTocComponent } from './new-toc/new-toc.component';
 import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
+import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -226,7 +227,8 @@ export function hljsLanguages() {
     AddToLibraryChangeComponent,
     CustomeThemeComponent,
     NewTocComponent,
-    MaintenanceBannerComponent
+    MaintenanceBannerComponent,
+    ButtonsNewComponent
   ],
   imports: [
     BrowserModule,

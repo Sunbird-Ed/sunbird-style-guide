@@ -1,0 +1,88 @@
+
+<div class="docs-sections new-theme-buttons" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></i>
+  </h4> 
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+  
+</div>
+<!--Page Content-->
+<div class="">
+  <h4 class="mt-32">Action Items</h4>
+  <fieldset id="c-group">
+    <label for="c1">
+      <input type="checkbox" id="c1" name="c-group" checked>
+      <span class="label-text">cats are good</span>
+    </label>
+    <label for="c2">
+      <input type="checkbox" id="c2" name="c-group">
+      <span class="label-text">cats are the best</span>
+    </label>
+    <label for="c4">
+      <input type="checkbox" id="c4" name="c-group" disabled>
+      <span class="label-text">i want to pet all the cats <span class="aside">(checkbox disabled)</span></span>
+    </label>
+    <label for="c5">
+      <input type="checkbox" id="c5" name="c-group" disabled checked>
+      <span class="label-text">cats are nice <span class="aside">(checkbox checked + disabled)</span></span>
+    </label>
+  </fieldset>
+  <fieldset id="r-group">
+    <label for="r1">
+      <input type="radio" id="r1" name="r-group">
+      <span class="label-text">dogs are good</span>
+    </label>
+    <label for="r2">
+      <input type="radio" id="r2" name="r-group">
+      <span class="label-text">dogs are the best</span>
+    </label>
+    <label for="r4">
+      <input type="radio" id="r4" name="r-group" disabled>
+      <span class="label-text">i want to pet all the dogs <span class="aside">(radio disabled)</span></span>
+    </label>
+    <label for="r5">
+      <input type="radio" id="r5" name="r-group" disabled checked>
+      <span class="label-text">dogs are nice <span class="aside">(radio checked + disabled)</span></span>
+    </label>
+  </fieldset>
+  <fieldset id="c-group-filled">
+    <label for="cf1">
+      <input type="checkbox" id="cf1" name="c-group-filled" class="filled" checked>
+      <span class="label-text">cats are good</span>
+    </label>
+    <label for="cf2">
+      <input type="checkbox" id="cf2" name="c-group-filled" class="filled">
+      <span class="label-text">cats are the best</span>
+    </label>
+    <label for="cf4">
+      <input type="checkbox" id="cf4" name="c-group-filled" class="filled" disabled>
+      <span class="label-text">i want to pet all the cats <span class="aside">(checkbox disabled)</span></span>
+    </label>
+    <label for="cf5">
+      <input type="checkbox" id="cf4" name="c-group-filled" class="filled" disabled checked>
+      <span class="label-text">cats are nice <span class="aside">(checkbox checked + disabled)</span></span>
+    </label>
+  </fieldset>
+</div>

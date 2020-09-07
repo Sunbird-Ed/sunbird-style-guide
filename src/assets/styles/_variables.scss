@@ -94,6 +94,13 @@
   --icon-svg-md: calc(var(--base-block-space) * 4);
   --icon-svg-lg: calc(var(--base-block-space) * 5);
   --icon-svg-xl: calc(var(--base-block-space) * 6);
+  --sbt-bradius: 0.125rem;
+  --sbt-bradius-8: calc(var(--sbt-bradius) * 4);
+  --sbt-bradius-16: calc(var(--sbt-bradius) * 8);	
+  --sbt-bradius-24: calc(var(--sbt-bradius) * 12);
+  --sbt-bradius-32: calc(var(--sbt-bradius) * 16);
+  --sbt-box-shadow-black: rgba(0, 0, 0, 0.1);
+  --sbt-box-shadow-6px: 0.375rem 0.375rem 0.125rem 0 var(--sbt-box-shadow-black);
 }
 
 // Variables
