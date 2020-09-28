@@ -75,8 +75,9 @@ import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-ban
 import { BatchComponentComponent } from './batch-component/batch-component.component';
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
 import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
-
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
+import { StateCertificateComponent } from './state-certificate/state-certificate.component';
+
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -154,7 +155,8 @@ const routes: Routes = [
   { path: 'batch', component:BatchComponentComponent},
   { path: 'batch-certificate', component:BatchCertificateComponent},
   { path: 'diksha-web', component:DikshaWebAppComponent},
-  { path: 'buttons-new', component: ButtonsNewComponent}
+  { path: 'buttons-new', component: ButtonsNewComponent},
+  { path: 'state-certificate', component: StateCertificateComponent}
 ];
 
 @NgModule({
