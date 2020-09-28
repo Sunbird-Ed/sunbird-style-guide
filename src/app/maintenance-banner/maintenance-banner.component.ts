@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Renderer2, ViewChild} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-maintenance-banner',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaintenanceBannerComponent implements OnInit {
 
-  constructor() { }
+  showUploadUserModal;
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
+    this.renderer.addClass(this.document.body, 'hideLeftTopBars');
   }
 
+  ngOnDestroy(): void {
+    this.renderer.removeClass(this.document.body, 'hideLeftTopBars');
+  }
 }

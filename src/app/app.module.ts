@@ -119,7 +119,12 @@ import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 import { ThemeService } from './theme.service';
 import { NewTocComponent } from './new-toc/new-toc.component';
 import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
+import { BatchComponentComponent } from './batch-component/batch-component.component';
+import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
+import { CountdownModule } from 'ngx-countdown';
+import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
+import { StateCertificateComponent } from './state-certificate/state-certificate.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -228,7 +233,12 @@ export function hljsLanguages() {
     CustomeThemeComponent,
     NewTocComponent,
     MaintenanceBannerComponent,
-    ButtonsNewComponent
+    BatchComponentComponent,
+    BatchCertificateComponent,
+    DikshaWebAppComponent,
+    ButtonsNewComponent,
+    DikshaWebAppComponent,
+    StateCertificateComponent
   ],
   imports: [
     BrowserModule,
@@ -246,7 +256,8 @@ export function hljsLanguages() {
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HeadroomModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    CountdownModule
   ],
   providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]

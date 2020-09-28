@@ -1,0 +1,55 @@
+.logo {
+    grid-area: logo;
+  }
+  
+  .main-menu {
+    grid-area: menu;
+  }
+  
+  .content-area {
+    grid-area: content;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+  
+  .sponsors-wrapper {
+    grid-area: sponsors;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+
+  .container {
+    display: grid;
+    margin: 0 2rem;
+    grid-template-columns: 2fr 6fr 4fr;
+    grid-gap: 2rem 1rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: Georgia, serif;
+  }
+  
+  body {
+    background-color: #fbfbfb;
+  }
+  
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main p {
+    margin-bottom: 0;
+  }

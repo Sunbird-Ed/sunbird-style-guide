@@ -1,0 +1,196 @@
+<div class="sb-bg-color-white sb-sticky back-bar">
+  <div class="ui container py-8">
+    <button type="button" class="d-flex sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn">
+      <i class="icon-svg icon-svg--xxs icon-back mr-4"><svg class="icon icon-svg--primary">
+          <use xlink:href="assets/images/libdemo/sprite.svg#arrow-long-left"></use>
+        </svg></i>
+      Back
+    </button>
+  </div>
+</div>
+
+<div class="textbook-container">
+  <div class="ui container">
+    <div class="textbook py-16 sb-g">
+      <div class="sb-g-col-xs-12 sb-g-col-md-9 sb-g-col-lg-9">
+        <!-- Textbook details -->
+        <div class="textbook__details d-flex flex-ai-center">
+          <!-- Textbook image -->
+          <div class="textbook__bookimg">
+            <img
+              src="https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_212964160867172352120/artifact/1464174025165book.thumb.png"
+              alt="textbook">
+          </div>
+          <div class="ml-8 textbook__heading">
+            <!-- Textbook title -->
+            <div class="textbook__title sb-color-primary font-weight-bold mb-0">Methodology of teaching Social Science
+            </div>
+            <!-- Textbook Rating with share icon -->
+            <div class="textbook__rating d-flex flex-ai-center">
+
+              <sui-rating class="star mini" [maximum]="5"></sui-rating>
+
+              <button
+                class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-8 sb-btn-icon-fix">
+                <i class="icon-svg icon-svg--xs icon-share mr-8"><svg class="icon icon-svg--primary">
+                    <use xlink:href="assets/images/libdemo/sprite.svg#share"></use>
+                  </svg></i>
+                Share
+              </button>
+
+              <button
+                class="sb-btn sb-btn-normal sb-btn-link sb-btn-link-primary sb-left-icon-btn ml-8 sb-btn-icon-fix">
+                <i class="icon-svg icon-svg--xs icon-edit mr-8"><svg class="icon icon-svg--primary">
+                    <use xlink:href="assets/images/libdemo/sprite.svg#copy-alternate"></use>
+                  </svg></i>
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="sb-g-col-xs-12 sb-g-col-md-3 sb-g-col-lg-3 certified-course">
+        <div class="ml-auto text-right mt-8">
+          <button class="sb-btn sb-btn-outline-primary sb-btn-normal px-24">
+            Close dashboard
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui stackable grid" style="background:lightsteelblue;">
+  <div class="three wide column pl-0 pr-0">
+    <div class="sidebar py-24">
+      <a href ="#course-stats">Dashboard</a>
+      <a href ="#progress">Batches</a>
+      <a href ="#certificates">Certificates</a>
+    </div>
+  </div>
+  <div class="eight wide column">
+    
+      <div class="content">
+        <!-- <div class="batch-content-area">
+            <div class="batch-sbcard" *ngFor="let item of dashBoardItems">
+             <div class="d-flex flex-ai-center flex-jc-center flex-dc p-16 batch-sbcard-content" >
+              <div class="batch-card-title">{{item?.title}}</div>
+              <div class="batch-card-number">{{item?.count || 0}}</div>
+              </div>
+            </div>
+        </div> -->
+
+        <sui-tabset class="batch-report-tabs">
+          <div class="ui pointing secondary menu">
+              <a class="item" suiTabHeader="1">State Wise Report</a>
+              <a class="item" suiTabHeader="2">Detailed Wise Report</a>
+          </div>
+          <div class="ui segment state-report" suiTabContent="1">
+            <div class="d-flex flex-ai-center flex-jc-space-between pb-24">
+              <div class="sb-search-box small no-btn">
+                <div class="input-div relative">
+                    <i class="search icon"></i>
+                    <input class="sb-search-input" type="text" placeholder="Search..." />
+                    <i class="close icon"></i>
+                    <div class="sb-loader"></div>
+                </div>
+                <button class="sb-btn sb-btn-normal">Search</button>
+            </div>
+            <div class="d-flex flex-ai-center cursor-pointer">
+            <img src="../../assets/images/download-icon.svg" class="mr-8">
+            Download as CSV
+            </div>
+            </div>
+            <div class="sb-table-responsive-div">
+              <table class="sb-table sb-table-sortable sb-table-striped sb-table-fixed sb-table-course-dashboard">
+                <thead>
+                  <tr>
+                    <th class="sb-sort-icon ascending descending">Start Date</th>
+                    <th class="sb-sort-icon ascending descending">End Date</th>
+                    <th class="sb-sort-icon ascending descending">Total Enrollments</th>
+                    <th class="sb-sort-icon ascending descending">Total Completions</th>
+                    <th class="sb-sort-icon ascending descending">Certifications Issued</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>10-06-2020</td>
+                  <td>10-10-2020</td>
+                  <td>100</td>
+                   <td>80</td>
+                   <td>20</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+          <div class="ui segment detailed-report" suiTabContent="2">
+            <div class='ui stackable grid mt-0'>
+              <div class="twelve wide column pt-0">
+                <div class="d-flex flex-dc">
+                  <label class="request-report-label font-weight-normal">Request Report</label>
+                  <div class="d-flex"> 
+                    <sui-select class="selection w-25" placeholder="Select" labelField="name" valueField="id"
+                      #select>
+                      <sui-select-option value="option1">Score Report</sui-select-option>
+                      <sui-select-option value="option2">Progress Report</sui-select-option>
+                    </sui-select>
+                    <button type="button" class="sb-btn sb-btn-normal sb-btn-primary ml-16">Request</button>
+                  </div>
+                  <div class="d-flex">
+                    <div class="information-icon">
+                      <img src="../../assets/images/error-icon.svg" class="mr-8" width="18px"></div>
+                    <p class=" fnormal note-text mt-8 mb-24 ml-8">This report is already requested and is in process. 
+                    Please check the downloads sections below for more details)</p></div>
+                </div>  
+              </div>
+            </div>
+            <div class="pb-8 download-section-text">Downloads Section(shows only the latest 10 requests)</div>
+            <div class="sb-table-responsive-div">
+              <table class="sb-table sb-table-striped sb-table-fixed sb-table-course-dashboard">
+                <thead>
+                  <tr>
+                    <th>Report Type</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                    <th>Download link</th>
+                    <th>Generated date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Score Report</td>
+                    <td>08-Aug-2020</td>
+                    <td><div class="success-label">Processed</div></td>
+                    <td class="fsmall">www.minifiedurl.diksha.gov.in</td>
+                    <td>09-Aug-2020</td>
+                  </tr>
+                    <tr>
+                      <td>Progress Report</td>
+                      <td>08-Aug-2020</td>
+                      <td><div class="inprocess-label">In process</div></td>
+                      <td></td>
+                      <td>09-Aug-2020</td>
+                  </tr>
+                    <tr>
+                      <td>Progress Report</td>
+                      <td>08-Aug-2020</td>
+                      <td><div class="failed-label">failed</div></td>
+                      <td></td>
+                      <td>09-Aug-2020</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="request-download-text p-16">Request response to download here</div>
+          </div>
+        </sui-tabset>
+      </div> 
+    </div>
+  </div>
+
+
+

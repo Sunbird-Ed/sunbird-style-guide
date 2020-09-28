@@ -72,7 +72,12 @@ import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-libr
 import { CustomeThemeComponent } from './custome-theme/custome-theme.component';
 import { NewTocComponent } from './new-toc/new-toc.component';
 import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
+import { BatchComponentComponent } from './batch-component/batch-component.component';
+import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
+import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
+import { StateCertificateComponent } from './state-certificate/state-certificate.component';
+
 const routes: Routes = [
   { path: '', component: GridlayoutComponent},
   { path: 'typography', component: TypographyComponent },
@@ -146,8 +151,12 @@ const routes: Routes = [
   { path: 'add-to-library-change', component: AddToLibraryChangeComponent},
   { path: 'custom-theme', component: CustomeThemeComponent},
   { path: 'new-toc', component: NewTocComponent},
-  { path: 'maintenance-banner', component: MaintenanceBannerComponent},
-  { path: 'buttons-new', component: ButtonsNewComponent}
+  { path: 'maintenance-banner', component:MaintenanceBannerComponent},
+  { path: 'batch', component:BatchComponentComponent},
+  { path: 'batch-certificate', component:BatchCertificateComponent},
+  { path: 'diksha-web', component:DikshaWebAppComponent},
+  { path: 'buttons-new', component: ButtonsNewComponent},
+  { path: 'state-certificate', component: StateCertificateComponent}
 ];
 
 @NgModule({

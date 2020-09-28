@@ -197,6 +197,15 @@
     background: #E0EFFF;
   }
 
+  &__profile-bg-2 {
+    background: var(--primary-color);
+    color:var(--white);
+  }
+
+  .title{
+    font-size: 20px;
+  }
+
   &__category {
     flex-direction: column;
     margin-top: calculateRem(16px);
@@ -249,8 +258,6 @@
   align-items: flex-start;
 }
 
-
-
 .user-label {
   font-weight: bold;
   color: var(--primary-color);
@@ -283,4 +290,8 @@
   border: calculateRem(6px) solid var(--white);
   background-color: var(--white);
   box-shadow: 0 0 calculateRem(6px) 0 rgba(0, 0, 0, 0.1);
+}
+
+.self-users-content{
+  max-width: calculateRem(450px);
 }

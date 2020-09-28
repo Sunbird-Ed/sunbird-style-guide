@@ -1,26 +1,108 @@
+<!-- <countdown [config]="{leftTime: 30}">$!h!:$!m!:$!s!</countdown> -->
+
+<div class="banner-content">
+
 <!-- for mobile -->
-<div class="d-flex flex-ai-center flex-jc-space-between p-16 mob-banner-container">
-  <div class="d-flex">
-    <div>
-      <img src="../../assets/images/Info.svg" width="20px">
+<div class="mobile only">
+  <div class="d-flex flex-ai-center flex-jc-space-between p-16 mob-banner-container">
+    <div class="d-flex">
+      <div>
+        <img src="../../assets/images/Info.svg" width="20px">
+      </div>
+      <p class="ml-8">We're currently down for maintenance,but don't worry we'll up in x hours.Come back soon!.</p>
     </div>
-    <p class="ml-8">We're currently down for maintenance,but don't worry we'll up in x hours.Come back soon!.</p>
-  </div>
-  <div class="ml-8">
-    <img src="../../assets/images/feedback-close.svg" width="20px">
+    <div class="ml-8">
+      <img src="../../assets/images/feedback-close.svg" width="20px">
+    </div>
   </div>
 </div>
-
 
 <!-- for desktop -->
-<div class="d-flex desk-banner-container p-16">
-  <div class="d-flex flex-ai-center flex-jc-center flex-dc my-0 mx-auto">
-    <div>
-      <img src="../../assets/images/Diksha-logo.png" width="75px">
+<div class="computer only">
+  <div class="d-flex desk-banner-container p-16">
+    <div class="d-flex flex-ai-center flex-jc-center flex-dc my-0 mx-auto">
+      <div>
+        <img src="../../assets/images/Diksha-logo.png" width="75px">
+      </div>
+      <div class="my-16"><img src="../../assets/images/banner-img.png" width="600px"></div>
+      <p class="mb-8 text-center">We're currently down for maintenance,but don't worry we'll up in x hours</p>
+      <div class="banner-timing">00:50:25</div>
+      <div class="my-8 banner-text">Come back soon!.</div>
     </div>
-    <div class="my-16"><img src="../../assets/images/banner-img.png" width="600px"></div>
-    <p class="mb-8 text-center">We're currently down for maintenance,but don't worry we'll up in x hours</p>
-    <div class="banner-timing">00:50:25</div>
-    <div class="my-8 banner-text">Come back soon!.</div>
   </div>
 </div>
+
+</div>
+
+<!-- user-org-management -->
+<div class="banner-content sb-bg-color-white">
+<div class="sb-manage-section w-100">
+<div class="sb-multi-rows py-16">
+  <div class="d-flex flex-ai-center flex-jc-space-between ui container">
+    <div class="d-flex flex-ai-center">
+      <h4 class="sb-manage-section-title m-0">Self Declared Details</h4>
+      <button type="button" class="sb-btn sb-btn-secondary sb-btn-normal ml-32">
+        Download
+      </button>
+    
+      <div class="d-flex ml-16 my-8">
+        <img src="../../assets/images/icon-info.svg" height="20px" class="info-img">
+        <label class="no-data-label font-weight-normal ml-8 fnormal">No Data Available</label>
+      </div>
+    </div>
+   <button type="button" class="sb-btn sb-btn-outline-primary sb-btn-normal" 
+   (click) = "showUploadUserModal = !showUploadUserModal">Upload Validation Status</button>
+  </div>
+</div>
+
+<div class="sb-multi-rows py-16">
+  <div class="d-flex flex-ai-center flex-jc-space-between ui container">
+    <h4 class="sb-manage-section-title m-0">User & Org Management</h4>
+  </div>
+</div>
+</div>
+</div>
+
+<sui-modal *ngIf="showUploadUserModal" [mustScroll]="true" [isClosable]="true" [transitionDuration]="0"
+[size]="'normal'" class="sb-modal sb-upload-status-modal" appBodyScroll (dismissed)="showUploadUserModal = !showUploadUserModal" #modal>
+<div class="sb-modal-header">
+  Uploading Validation Status For Self Declared User Information
+</div>
+<div class="sb-modal-content">
+  <div class="m-0">
+    <span class="m-0 mr-16">Please upload the CSV file</span>
+  </div>
+
+  <div class="sb-btn sb-btn-tertiary sb-btn-normal mt-8 sb-bulk-upload-btn">
+    Select CSV file for Upload
+    <input type="file" class="sb-btn-upload upload-btn" name="file" />
+  </div>
+  <div class="ui info message">
+    <div class="header">
+      Instructions:
+    </div>
+    <ol class="ui list">
+      <li class="self-users-list">Download the list of Self declared teachers from the portal using the "Download User Details" button alongside (This data is updated every 24 hours) </li>
+      <li class="self-users-list">Update the column "STATUS" for this file - the state records for the user should be matched
+        with BOTH the Phone number and State ID in the downloaded data, if a record is to updated as validated. 
+        The STATUS for all records has to be updated in the file accordingly.The values for this column can be (STATUS = VALIDATED/REJECTED/ERROR).
+      </li>
+      <li class="self-users-list">Add new col. ERROR TYPE to the file, if there are records that have STATUS = ERROR</li>
+      <li class="self-users-list">For rows where STATUS = ERROR, add value for ERROR TYPE (ERROR TYPE = ERROR-DISTRICT/ERROR-PHONE/ERROR-EMAIL/ERROR-SCHOOL ORG NAME/ERROR-SCHOOL ORG ID/ERROR-ID/ERROR-NAME)
+        based on what the error on the record is </li>
+        <li class="self-users-list">This file has be saved in the .CSV format for upload into the system.</li>
+        <li class="self-users-list">Re-upload list into portal,after filling the STATUS & ERROR TYPE (if applicable) value for each Record in the file.
+          Use the "Select CSV file for Upload" button above to do this.
+        </li>
+    </ol>
+
+  </div>
+</div>
+<div class="sb-modal-actions">
+  <button class="sb-btn sb-btn-normal sb-btn-primary">
+    Upload Users CSV
+  </button>
+</div>
+</sui-modal>
+
+
