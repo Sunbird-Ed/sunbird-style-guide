@@ -103,7 +103,7 @@
     "lint-staged": "^8.2.1",
     "merge": "^1.2.1",
     "merge-stream": "^2.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "protractor": "~5.4.0",
     "rimraf": "^2.6.3",
     "ts-node": "~7.0.0",
