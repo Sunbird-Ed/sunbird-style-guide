@@ -100,7 +100,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^13.1.0",
     "merge": "^1.2.1",
     "merge-stream": "^2.0.0",
     "node-sass": "^4.13.1",
