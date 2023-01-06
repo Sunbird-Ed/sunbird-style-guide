@@ -136,7 +136,7 @@ const routes: Routes = [
   { path: 'qml-solutions', component: QmlSolutionsComponent },
   { path: 'telemetry', component: TelemetryComponent },
   { path: 'toc-loading', component: TocLoadingComponent },
-  { path: 'project-dock', loadChildren: './project-dock/project-dock.module#ProjectDockModule' },
+  { path: 'project-dock', loadChildren: () => import('./project-dock/project-dock.module').then(m => m.ProjectDockModule) },
   { path: 'schooling-at-home', component: schoolingAtHomeComponent },
   { path: 'add-to-library', component: AddToLibraryComponent },
   { path: 'school-home-group', component: SchoolingHomeGroupsComponent },

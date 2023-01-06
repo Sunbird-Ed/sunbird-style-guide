@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, OnDestroy, Inject, Renderer2 } from "@angular/core";
 import { Router } from '@angular/router';
 import { HighlightResult } from "ngx-highlightjs";
-import { DOCUMENT } from "@angular/platform-browser";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "app-test-page",
