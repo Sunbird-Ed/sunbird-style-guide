@@ -9,7 +9,7 @@ import { Location, LocationStrategy, HashLocationStrategy } from '@angular/commo
 })
 export class LandingComponent implements OnInit {
   @Output() getMatchedLocationPath = new EventEmitter();
-  @ViewChild('searchInput', { static: false }) searchInput: ElementRef;
+  @ViewChild('searchInput') searchInput: ElementRef;
   searchText;
   routeParametertemp;
   routeParameter;
