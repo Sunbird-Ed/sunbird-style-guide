@@ -1,0 +1,44 @@
+<h1 class="bd-title mb-0" id="content">Tables</h1>
+<p class="bd-lead">Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript
+  plugins) with Bootstrap.</p>
+
+<h2 id="overview">Overview <a class="anchor-link" href="#overview" aria-label="Link to this section: Overview"></a></h2>
+<p>Due to the widespread use of <code>&lt;table&gt;</code> elements across third-party widgets like calendars and date
+  pickers, Bootstrap’s tables are <strong>opt-in</strong>. Add the base class <code>.table</code> to any
+  <code>&lt;table&gt;</code>, then extend with our optional modifier classes or custom styles. All table styles are not
+  inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.</p>
+
+
+<!--Page Content-->
+<div class="docs-sections" *ngFor="let section of sections;">
+
+  <h4 class="docs-sectionHeading">
+    {{section.title}}
+    <i class="fa fa-code text-gray docs-expandCode" (click)="section.expandCode = !section.expandCode"
+      title="Toggle Code" tabindex="0"></i>
+  </h4>
+
+  <!--Display output-->
+  <div class="docs-sectionDemoCode" [innerHTML]="section.demoCode | keepHtml">
+  </div>
+  <!--/Display output-->
+
+  <!--Display code-->
+  <div class="docs-sectionCopyCode" *ngIf="section.expandCode">
+
+    <!--Copy code button-->
+    <button ngxClipboard [cbContent]="section.copyCode"
+      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+    <!--/Copy code button-->
+
+    <!--Copy code display-->
+    <pre>
+      <code [highlight]="section.copyCode"></code>
+    </pre>
+    <!--/Copy code display-->
+
+  </div>
+  <!--/Display code-->
+
+</div>
+<!--Page Content-->

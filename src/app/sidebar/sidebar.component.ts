@@ -20,7 +20,10 @@ export class SidebarComponent implements OnInit {
   routeParameter: any;
   searchText: any;
   ClearInput: string;
-
+  showContentNav = {
+    joy : true,
+    classic : false,
+  }
   heroes = [
     { id: 11, name: 'Mr. Nice', country: 'India' }
   ];

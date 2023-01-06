@@ -14,10 +14,17 @@
       </div>
     </div>
   </div>
-
-  
+  <div (click)="showContentNav.joy = true;showContentNav.classic = false;">Joy</div>
+  <div (click)="showContentNav.classic = true;showContentNav.joy = false;">Classic</div>
   <div class="sb-components-sidebar">
-    <ul id="myUL">
+    <ul id="myUL" *ngIf="showContentNav.joy">
+      <h4 class="sb-site-list-heading">CC components</h4>
+      <!-- [routerLinkActiveOptions]="{ exact: true }" -->
+      <li class="sb-site-list-item">
+        <a routerLink="/librarycard">Library Card</a>
+      </li>
+    </ul>
+    <ul id="myUL" *ngIf="showContentNav.classic">
       <h4 class="sb-site-list-heading">Reference</h4>
       <li class="sb-site-list-item">
         <a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
