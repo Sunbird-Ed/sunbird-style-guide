@@ -1,5 +1,6 @@
 @import "variables";
 @import 'mixins/mixins';
+@import '~highlight.js/styles/github.css';
 
 .sb-spacer48 {
   height: calculateRem(48px);
@@ -195,8 +196,8 @@ html {
 
     .btn-copy {
       position: absolute;
-      top: calculateRem(30px);
-      right: calculateRem(20px);
+      top: 0.5rem;
+      right: 0.5rem;
       font-weight: bold;
     }
 
@@ -490,4 +491,34 @@ h6 {
 }
 .clearfix:after {
   clear: both;
+}
+
+
+/* new hightlight changes */
+.displaycode {
+  margin:1rem 0;
+  &--ct {
+  }
+}
+.copycode {
+  margin:1rem 0;
+  &--ct {
+    position:relative;
+    background:#f8f8f8;
+    padding:1.5rem;
+    border-radius:1rem;
+    overflow-x:auto;
+  }
+  &__btn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  pre {
+    margin:0;
+    padding:0;
+  }
+}
+
+.ui.tabular.menu .active.item {
+  background: #edf4f9;
 }

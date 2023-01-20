@@ -14,8 +14,11 @@
       </div>
     </div>
   </div>
-  <div (click)="showContentNav.joy = true;showContentNav.classic = false;">Joy</div>
-  <div (click)="showContentNav.classic = true;showContentNav.joy = false;">Classic</div>
+
+  <div class="d-flex">
+  <div class="ml-16" (click)="showContentNav.joy = true;showContentNav.classic = false;">Version 2</div>
+  <div class="ml-16" (click)="showContentNav.classic = true;showContentNav.joy = false;">Version 1</div>
+</div>
   <div class="sb-components-sidebar">
     <ul id="myUL" *ngIf="showContentNav.joy">
       <h4 class="sb-site-list-heading">CC components</h4>
