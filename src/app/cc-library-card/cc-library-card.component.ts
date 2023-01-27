@@ -8,7 +8,17 @@ import { HighlightResult } from "ngx-highlightjs";
 })
 export class CClibraryCardComponent implements OnInit {
   constructor() {}
-
+  gCardData = {
+    group: {
+      initial:"AB",
+      name:"name",
+      isSuspended:false,
+      isAdmin:false,
+      description:"description",
+      isMobile:false,
+      cardBgColor:"#b3ebd7"
+    }
+  }
   pageTitle = "Library Card";
   sections = [
     {
@@ -291,8 +301,128 @@ groupcard_mobile=`<div class="sb--card" title="group?.name" attr.aria-label="gro
       </div>
   </div>
 </div>`;
+gcardCssfull=`.sb--card {
+  background-color: var(--cc-sbcard-bg);
+}
+.sb--card:hover {
+  transform: translate(0, 0px);
+  box-shadow: 0 0.125rem 0.4375rem 0 rgba(var(--rc-rgba-black), 0.16);
+}
+@media (max-width: 767px) {
+  .sb--card {
+    box-shadow: 0 0.125rem 0.4375rem rgba(var(--rc-rgba-black), 0.16);
+  }
+}
+.sb--card__main-area {
+  height: 5.5rem;
+}
+.sb--card__img {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.sb--card__img .img-container {
+  background-color: var(--cc-sbcard-img-container-bg);
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.sb--card__img .img-container img {
+  max-width: 100%;
+}
+.sb--card__info {
+}
+.sb--card__title {
+  color: var(--cc-sbcard-title);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.sb--card__meta1 {
+  color: var(--cc-sbcard-meta-text);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+.sb--card .data_1 {
+  max-width: 50%;
+}
+.sb--card .data_2 {
+  flex: 1;
+}
+.sb--card .dot-divider {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: var(--cc-sbcard-dot-divider);
+}
+.sb--card__moreinfo {
+  border-radius: 0 0 0.125rem 0.125rem;
+  background-color: var(--cc-sbcard-moreinfo-bg);
+  min-height: 3.5rem;
+}
+.sb--card__meta2 {
+  color: var(--cc-sbcard-meta2-text);
+  font-size: 0.75rem;
+}
+.sb--card__meta2_data .label {
+}
+.sb--card__meta2_data .value {
+}
+.sb--card__org {
+  color: var(--cc-sbcard-org-text);
+}
+.sb--card__tags {
+}
+.sb--card__badge {
+}
+.sb--card__badge img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.sb--card__type {
+  background: var(--cc-sbcard-type-bg);
+  height: 1.25rem;
+  color: var(--cc-sbcard-type-text);
+  font-size: 0.6875rem;
+}
+.sb--card__type:before {
+  border-color: var(--cc-sbcard-type-br) var(--cc-sbcard-type-br) var(--cc-sbcard-type-br) transparent;
+}
+html[dir=rtl] .sb--card__type:before {
+  border-color: var(--cc-sbcard-type-br) transparent var(--cc-sbcard-type-br) var(--cc-sbcard-type-br);
+}
+.sb--card--recently-viewed .sb--card__img {
+  height: 5.5rem;
+  width: 5.5rem;
+}
+.sb--card--recently-viewed .sb--card__img .img-container {
+  background-color: var(--cc-sbcard-rv-img-container-bg);
+  height: 5.5rem;
+  width: 5.5rem;
+}
+.sb--card--recently-viewed .sb--card__info {
+}
+.sb--card__image-pos {
+}
+html[dir=rtl] .sb--card__image-pos {
+}
+.sb--card__img .img-container {
+  border-radius: 0.5rem;
+}
+.sb--card.selected {
+  border: 1px solid var(--cc-sbcard-selected-border);
+  border-radius: 4px;
+  background-color: var(--cc-sbcard-selected-bg);
+}
+.sb--card.offline .sb--card__img .img-container {
+  background-color: var(--cc-sbcard-offline-bg);
+}
+.sb--card.offline .sb--card__img .img-container img {
+  font-size: 1.5rem;
+  color: var(--cc-sbcard-offline-img-text);
+}
+.sb--card.offline .sb--card__info,
+.sb--card.offline .sb--card__moreinfo {
+}`;
 
-testSnippet= ` import { HighlightJsModule } from 'ngx-highlight-js';`;
+gcardThemeC1= `--cc-sbcard-bg: var(--yourvariable) or direct color code;
+--cc-sbcard-title: var(--yourvariable) or direct color code;`;
 
   ngOnInit() {}
 

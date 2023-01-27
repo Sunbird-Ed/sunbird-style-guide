@@ -26,6 +26,7 @@
     "@angular/platform-browser-dynamic": "^9.1.13",
     "@angular/router": "^9.1.13",
     "@ctrl/ngx-headroom": "^2.3.1",
+    "@project-sunbird/common-consumption": "^4.12.1",
     "@project-sunbird/sb-styles": "0.0.15",
     "@project-sunbird/sb-themes": "0.0.88",
     "angular-inport": "^2.0.0",

@@ -2,7 +2,11 @@
 <p class="bd-lead">Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript
   plugins) with Bootstrap.</p>
 
+  <h4>Group Card Angular integration Example</h4>
+  <sb-group-card [group]="gCardData.group" [isMobile]="false" [isAdmin]="true" [isSuspended]="true"></sb-group-card>
 
+  <br><br><br><br>
+  
 <!--Page Content-->
 <div class="docs-sections hide hidden" *ngFor="let section of sections;">
 
@@ -37,22 +41,6 @@
   <!--/Display code-->
 </div>
 <!--Page Content-->
-
-<div class="running_snippet mt-16">
-  <button class="copycode__btn" ngxClipboard [cbContent]="testSnippet" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-      <pre><code [highlight]="testSnippet"></code></pre>
-</div>
-
-
-<textarea highlight-js lang="ts">
-  import { HighlightJsModule } from 'ngx-highlight-js';
-  @NgModule({
-    imports: [ HighlightJsModule ],
-    bootstrap: [AppComponent]
-  })
-  export class AppModule {
-  }
- </textarea>
 
 <div class="ComponentBlock">
  <!--Display code-->
@@ -130,8 +118,17 @@
                 </div>
             </div>
     </sui-tabset>
+
   <!-- Code view end -->
  </div>
+ <div class="running_snippetBlock">
+  <p>You can replace the css3 variables to customize the theme to parent theme.</p>
+    <div class="running_snippet mt-16">
+      <button class="copycode__btn" ngxClipboard [cbContent]="gcardThemeC1" class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+          <pre><code [highlight]="gcardThemeC1"></code></pre>
+    </div>
+ </div>
+
 </div>
 
 
@@ -453,15 +450,15 @@
  
            <div class="ui bottom attached segment" suiTabContent="2">
                  <!-- <h6 class="mt-0 font-weight-bold text-uppercase">CSS</h6> -->
-                 <div class="relative" *ngIf="sblibrarycardV2_css">
+                 <div class="relative" *ngIf="gcardCssfull">
                    <!--Copy code button-->
-                   <button class="copycode__btn" ngxClipboard [cbContent]="sblibrarycardV2_css"
+                   <button class="copycode__btn" ngxClipboard [cbContent]="gcardCssfull"
                      class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
                    <!--Copy code button-->
                
                    <!--Copy code display-->
                    <pre>
-                     <code [languages]="['html']" [highlight]="sblibrarycardV2_css"></code>
+                     <code [languages]="['html']" [highlight]="gcardCssfull"></code>
                    </pre>
                    <!--Copy code display-->
                  </div>

@@ -116,6 +116,7 @@ import { MembersComponent } from './schooling-home-groups/members/members.compon
 import { CoursesComponent } from './schooling-home-groups/courses/courses.component';
 import { AddToLibraryChangeComponent } from './add-to-library-change/add-to-library-change.component';
 import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
+import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -238,7 +239,8 @@ export function hljsLanguages() {
     FormsModule,
     BrowserAnimationsModule,
     HeadroomModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    CommonConsumptionModule
   ],
   providers: [CustomerService, SortService],
   bootstrap: [AppComponent]
