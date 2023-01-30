@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Renderer2, OnDestroy } from '@angular/core';
 import { ThemeService } from '../theme.service';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { FormControl } from "@angular/forms";
 
 @Component({

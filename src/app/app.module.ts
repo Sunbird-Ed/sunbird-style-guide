@@ -125,6 +125,10 @@ import { CountdownModule } from 'ngx-countdown';
 import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 import { StateCertificateComponent } from './state-certificate/state-certificate.component';
+import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
+import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
+import { CardsComponent2 } from './v2/cards/cards.component';
+import { GroupComponent } from './v2/cards/group/group.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -238,7 +242,10 @@ export function hljsLanguages() {
     DikshaWebAppComponent,
     ButtonsNewComponent,
     DikshaWebAppComponent,
-    StateCertificateComponent
+    StateCertificateComponent,
+    CClibraryCardComponent,
+    CardsComponent2,
+    GroupComponent
   ],
   imports: [
     BrowserModule,
@@ -257,7 +264,8 @@ export function hljsLanguages() {
     BrowserAnimationsModule,
     HeadroomModule,
     NgxPageScrollModule,
-    CountdownModule
+    CountdownModule,
+    CommonConsumptionModule
   ],
   providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]
