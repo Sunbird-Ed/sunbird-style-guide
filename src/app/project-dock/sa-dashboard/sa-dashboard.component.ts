@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Inject, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: 'app-sa-dashboard',

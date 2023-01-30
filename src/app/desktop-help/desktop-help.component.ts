@@ -44,8 +44,8 @@ export class DesktopHelpComponent implements OnInit {
 
   ];
 
-  @ViewChild('aspectRatio') aspectRatio;
-  @ViewChild('playerInfo') playerInfo;
+  @ViewChild('aspectRatio', { static: true }) aspectRatio;
+  @ViewChild('playerInfo', { static: true }) playerInfo;
 
   videoContainerHeight: number;
   aspectRatioHeight: number;
