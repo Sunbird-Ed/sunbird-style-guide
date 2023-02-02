@@ -24,8 +24,7 @@ export class CClibraryCardComponent implements OnInit {
     {
       expandCode: false,
       title: "Library Card",
-      demoCode: `
-      <div class="sb--card" tabindex="0" role="button">
+      demoCode: `<div class="sb--card" tabindex="0" role="button">
       <div class="sb--card__main-area">
         <!-- card img -->
         <div class="sb--card__img">
@@ -243,7 +242,7 @@ groupcard_admin = `<div class="sb--card" title="group?.name" attr.aria-label="gr
   <div class="sb--card__info">
     <div class="d-flex flex-dr flex-jc-space-between">
       <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
-      <div class="sb-label-badge mr-8">Admin</div>
+      <div class="sb-label-badge">Admin</div>
     </div>
   </div>
 </div>
@@ -274,7 +273,7 @@ groupcard_web=`<div class="sb--card" title="group?.name" attr.aria-label="group?
   <div class="sb--card__info">
     <div class="d-flex flex-dr flex-jc-space-between">
       <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
-      <div class="sb-label-badge mr-8">Admin</div>
+      <div class="sb-label-badge">Admin</div>
     </div>
   </div>
 </div>
@@ -294,7 +293,7 @@ groupcard_mobile=`<div class="sb--card" title="group?.name" attr.aria-label="gro
   <div class="sb--card__info">
     <div class="d-flex flex-dr flex-jc-space-between">
       <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
-      <div class="sb-label-badge mr-8">Admin</div>
+      <div class="sb-label-badge">Admin</div>
     </div>
       <div class="sb--card__meta2 text-left p-0 pt-4">
         <div class="sb--card__meta2_data sb__ellipsis sb__ellipsis--two" title="group?.description">group?.description</div>
