@@ -2,7 +2,7 @@ export const libraryCardData = [
     {
         expandCode: false,
         title: "Library card",
-        url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+        url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
         demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
                     <div class="sb--card__main-area">
                         <!-- card img -->
@@ -53,7 +53,7 @@ export const libraryCardData = [
     {
         expandCode: false,
         title: "Library card with meta data",
-        url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+        url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
         demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
                     <div class="sb--card__main-area">
                         <!-- card img -->
@@ -126,7 +126,7 @@ export const libraryCardData = [
     {
         expandCode: false,
         title: "Library card v2",
-        url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+        url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
         demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
         <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -150,7 +150,7 @@ export const libraryCardData = [
             </div>
           </div>
           <div class="sb--card__svg-area">
-            <img src="http://localhost:5000/assets/common-consumption/images/abstract_02.svg" alt=""/>
+            <img src="/assets/images/abstract_02.svg" alt=""/>
           </div>
           <div class="sb--card__type">Card type</div>
         </div>
@@ -200,7 +200,7 @@ export const libraryCardData = [
             </div>
           </div>
           <div class="sb--card__svg-area">
-            <img src="http://localhost:5000/assets/common-consumption/images/abstract_02.svg" alt=""/>
+            <img src="/assets/images/abstract_02.svg" alt=""/>
           </div>
           <div class="sb--card__type">Card type</div>
         </div>
@@ -232,7 +232,7 @@ export const libraryCardData = [
     {
       expandCode: false,
       title: "Library card v2 for desktop only",
-      url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+      url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
       demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
       <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -256,7 +256,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="http://localhost:5000/assets/common-consumption/images/abstract_02.svg" alt=""/>
+          <img src="/assets/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -329,7 +329,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="http://localhost:5000/assets/common-consumption/images/abstract_02.svg" alt=""/>
+          <img src="/assets/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
