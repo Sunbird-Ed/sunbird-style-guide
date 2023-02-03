@@ -25,7 +25,7 @@ export class GroupComponent implements OnInit {
       id:'psection1',
       title: "Basic card",
       description:`The css3 varaiables can be replaced with your supported theme colors.</p>`,
-      url:"https://stackblitz.com/edit/web-platform-tfzf4a?file=cards/groups/basic/index.html",
+      url:"https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
       demoCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
       <div class="sb--card__main-area">
         <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left ml-16" title="group?.name">group?.name</div>
@@ -52,7 +52,7 @@ export class GroupComponent implements OnInit {
       id:'psection2',
       title: "Basic card with Thumbnail/Profile Icon",
       description:"",
-      url:"https://web-platform-tfzf4a.stackblitz.io/cards/groups/basic/index.html",
+      url:"https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
       demoCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
       <div class="sb--card__main-area">
         <div class="sb--card__img">
