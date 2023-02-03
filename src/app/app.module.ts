@@ -129,6 +129,7 @@ import { CClibraryCardComponent } from './cc-library-card/cc-library-card.compon
 import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
 import { CardsComponent2 } from './v2/cards/cards.component';
 import { GroupComponent } from './v2/cards/group/group.component';
+import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -245,7 +246,8 @@ export function hljsLanguages() {
     StateCertificateComponent,
     CClibraryCardComponent,
     CardsComponent2,
-    GroupComponent
+    GroupComponent,
+    LibraryCardComponent,
   ],
   imports: [
     BrowserModule,
