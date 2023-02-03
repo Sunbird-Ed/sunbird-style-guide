@@ -1,6 +1,4 @@
-// @use "~@project-sunbird/sb-styles/assets/mixins/mixins" as *;
-@import "./variables";
-@import "./mixins/mixins";
+@import "~@project-sunbird/sb-styles/assets/mixins/mixins";
 
 ::ng-deep :root {
   --cc-sbcard-bg: var(--white);
@@ -38,6 +36,7 @@
   --cc-sbcard-img-badge-text: var(--white);
   --cc-sblabel-badge-br: var(--secondary-color);
   --cc-sblabel-badge-text: var(--secondary-color);
+
 
 }
 
@@ -563,6 +562,7 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
+
   .card-hover {
     opacity: 0;
     transition: all 0.2s ease-in;
@@ -632,7 +632,54 @@
     }
   }
 
+  .sb--card__img {
+    .img-container--label {
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      background-color: var(--cc-sbcard-img-label-bg);
+      color: var(--cc-sbcard-img-label);
+      position: relative;
+  
+      label {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: calculateRem(21px);
+        font-weight: bold;
+      }
+  
+      .img-container--badge {
+  
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--cc-sbcard-img-badge-bg);
+        color: var(--cc-sbcard-img-badge-text);
+        font-size: calculateRem(12px);
+        text-align: center;
+        margin-bottom: calculateRem(8px);
+        line-height: normal;
+        opacity: 0.6;
+      }
+    }
+  }
+  
+  .sb-label-badge {
+  
+    font-size: calculateRem(11px);
+    border: 1px solid var(--cc-sblabel-badge-br);
+    align-self: center;
+    padding: calculateRem(4px) calculateRem(8px);
+    border-radius: calculateRem(2px);
+    color: var(--cc-sblabel-badge-text);
+    text-align: center;
+    margin:0 0.5rem 0 0.5rem;
+  }
+
 }
+
 
 
 .menu::after {
@@ -654,108 +701,16 @@
   background: var(--gray-0);
 }
 
-.sb--card__img {
-  .img-container--label {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    background-color: var(--cc-sbcard-img-label-bg);
-    color: var(--cc-sbcard-img-label);
-    position: relative;
 
-    label {
-      margin-bottom: 0px;
-      padding-bottom: 0px;
-      font-size: calculateRem(21px);
-      font-weight: bold;
-    }
-
-    .img-container--badge {
-
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: var(--cc-sbcard-img-badge-bg);
-      color: var(--cc-sbcard-img-badge-text);
-      font-size: calculateRem(12px);
-      text-align: center;
-      margin-bottom: calculateRem(8px);
-      line-height: normal;
-      opacity: 0.6;
-    }
-  }
+.current-section {
+  background-color: #f2f2f2;
 }
-
-.sb-label-badge {
-
-  font-size: calculateRem(11px);
-  border: 1px solid var(--cc-sblabel-badge-br);
-  align-self: center;
-  padding: calculateRem(4px) calculateRem(8px);
-  border-radius: calculateRem(2px);
-  color: var(--cc-sblabel-badge-text);
-  text-align: center;
-  margin:0 0.5rem 0 0.5rem;
-}
-
-
-/* code block */
-.running_snippetBlock {
-  padding: 1rem 0;
-  p {margin-bottom: 0.5rem;}
-  .running_snippet {
-    position: relative;
-    background: #f2f2f2;
-    border: 1px solid #d4d4d5;
-    padding: 0.5rem;
-    border-radius: 0 0 4px 4px;
-    pre {
-      margin: 0;padding:0;
-    }
-    code {
-      background:none;
-    }
-  }
-}
-
-.ComponentBlock {
-  margin-bottom: 2rem;
-  .note {
-    padding:0.5rem 1rem;
-    font-style: italic;
-    font-size: 0.875rem;
-    background:#fff0cd;
-    margin:1rem 0;
-    border-radius: 0.5rem;
-  }
-  &__view {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background: #edf4f9;
-    border-radius: 4px 4px 0 0;
-  }
-  &__code {
-    border-top: 0px !important;
-    background: #f2f2f2;
-    border: 1px solid #d4d4d5;
-    padding: 1rem;
-    border-radius: 0 0 4px 4px;
-  }
-  sui-tabset {
-    .ui.tabular.menu .active.item {
-      background: #f8f8f8;
-  }
-  .ui.segment.active {
-    background-color: #f8f8f8;
-    margin-bottom: 0;
-  }
-  }
-  pre {
-    margin:0;padding:0px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.current-section::before {
+  content: '→';
+  // background-color: yellow;
+  // color: red;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 0.25rem;
 }
