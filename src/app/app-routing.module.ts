@@ -80,6 +80,7 @@ import { StateCertificateComponent } from './state-certificate/state-certificate
 import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
 import { CardsComponent2 } from './v2/cards/cards.component';
 import { GroupComponent } from './v2/cards/group/group.component';
+import { MemberCardComponent } from './v2/cards/member-card/member-card.component';
 const routes: Routes = [
   { path: '', component: GridlayoutComponent },
   { path: 'typography', component: TypographyComponent },
@@ -170,6 +171,7 @@ const routes: Routes = [
   { path: 'librarycard', component: CClibraryCardComponent },
   { path: 'cc-cards', component: CardsComponent2 },
   { path: 'cc-groupcard', component: GroupComponent },
+  { path: 'member-card', component: MemberCardComponent },
   // {
   //   path: 'cccomponents',
   //   component: CccomponentsComponent,
