@@ -130,9 +130,11 @@ import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
 import { CardsComponent2 } from './v2/cards/cards.component';
 import { GroupComponent } from './v2/cards/group/group.component';
 import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
+import {MemberCardComponent} from './v2/cards/member-card/member-card.component'
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { ScrollSpyDirective } from './v2/cards/group/scroll-spy.directive';
+
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -251,6 +253,7 @@ export function hljsLanguages() {
     CardsComponent2,
     GroupComponent,
     LibraryCardComponent,
+    MemberCardComponent,
     ScrollSpyDirective
   ],
   imports: [
