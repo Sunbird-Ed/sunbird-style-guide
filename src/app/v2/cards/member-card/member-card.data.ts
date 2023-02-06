@@ -1,7 +1,7 @@
 export const memberCardData = [
     {
         expandCode: false,
-        title: "Library card",
+        title: "Member card",
         url: "https://stackblitz.com/edit/web-platform-vhadub?file=styles.css,index.html,member-card%2Fmember-card.html,member-card%2Fmember-card.css,script.js",
         demoCode: `   <div
         class="
@@ -137,6 +137,7 @@ export const memberCardData = [
         </div>
       </div>`,
         copyCode2: `
+
        .progress-circle {
             height: 36px;
             width: 36px;
@@ -229,6 +230,12 @@ export const memberCardData = [
           }
 
 `,
-        copyCode3: `copy code 3`
+        copyCode3: `   
+         --cc-members-list-item-selected:#f2f2ea;
+        --cc-members-list-item-selected-border:#e9e8d9;
+        --cc-members-list-item-menu-text:#999999;
+        --cc-members-list-item-status-text:#07bc81;
+          --cc-members-list-item-status-br:#07bc81;
+          --cc-members-list-item-status-bg:#fff;`
     }
 ];
