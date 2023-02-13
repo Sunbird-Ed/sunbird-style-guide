@@ -134,6 +134,9 @@ import {MemberCardComponent} from './v2/cards/member-card/member-card.component'
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { ScrollSpyDirective } from './v2/cards/group/scroll-spy.directive';
+import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
+import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
+import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
 
 /**
  * Import every language you wish to highlight here
@@ -254,7 +257,10 @@ export function hljsLanguages() {
     GroupComponent,
     LibraryCardComponent,
     MemberCardComponent,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    CourseCardComponent,
+    NotificationCardComponent,
+    CourseCuriculumCardComponent
   ],
   imports: [
     BrowserModule,

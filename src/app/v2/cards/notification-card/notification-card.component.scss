@@ -1,0 +1,96 @@
+@import "~@project-sunbird/sb-styles/assets/mixins/mixins";
+
+::ng-deep :root {
+  --cc-notification-list-bg:var(--white);
+  --cc-notification-list-br: var(--rc-dddddd);
+  --cc-notification-status-bg:var(--gray-200);
+  --cc-notification-date-text:var(--gray-200);
+  --cc-notification-logo-bg:var(--gray-0);
+  --cc-notification-title-text:var(--gray-400);
+  --cc-notification-title-active:var(--primary-color);
+  --cc-notification-subtitle-text:var(--gray-400);
+}
+::ng-deep {
+    .sb-notification-list{
+        border-radius: calculateRem(8px);
+        background-color: var(--cc-notification-list-bg);
+        box-shadow: calculateRem(5px) calculateRem(5px) calculateRem(2px) 0 rgba(var(--rc-rgba-black), 0.1);
+        margin-bottom: calculateRem(8px);
+        border: calculateRem(0.5px) solid var(--cc-notification-list-br);
+        &:hover{
+          cursor: pointer;
+          .sb-notification-list-header{
+            .notification-info{
+              .status{
+                background-color: var(--orange);
+              }
+            }
+            .delete-icon{
+              .Delete-red{
+                display: block;
+              }
+              .Delete-gray{
+                display: none;
+              }
+            }
+          }
+        }
+        .sb-notification-list-header{
+          .notification-info{
+            .status{
+              height: calculateRem(8px);
+              width: calculateRem(8px);
+              background-color: var(--orange);
+              border-radius: calculateRem(8px);
+            }
+            .date{
+              color: var(--cc-notification-date-text);
+              font-size: calculateRem(12px);
+            }
+          }
+          .delete-icon{
+            .Delete-red{
+              display: none;
+            }
+          }
+        }
+        .sb-notification-data{
+          .logo{
+            height: calculateRem(32px);
+            width: calculateRem(32px);
+            border-radius: calculateRem(8px);
+            background-color: var(--cc-notification-logo-bg);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            img{
+              height: calculateRem(24px);
+              max-width: calculateRem(20px);
+            }
+          }
+          .notification-content{
+            overflow: hidden;
+            .title{
+             
+              color: var(--cc-notification-title-text);
+              font-size: calculateRem(14px);
+              font-weight: bold;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              &.active{
+                color: var(--cc-notification-title-active);
+              }
+            }
+            .sub-title{
+              color: var(--cc-notification-subtitle-text);
+              font-size: calculateRem(12px);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+}
+
