@@ -175,7 +175,7 @@ const routes: Routes = [
   { path: 'add-to-library-change', component: AddToLibraryChangeComponent },
   { path: 'librarycard', component: CClibraryCardComponent },
   { path: 'cc-cards', component: CardsComponent2 },
-  { path: 'cc-groupcard', component: GroupComponent },
+  { path: 'groupcard', component: GroupComponent },
   { path: 'library-card', component: LibraryCardComponent },
   { path: 'member-card', component: MemberCardComponent },
   { path: 'course-card', component: CourseCardComponent },

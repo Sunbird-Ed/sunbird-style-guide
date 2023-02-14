@@ -566,6 +566,9 @@ body ::-webkit-scrollbar {
   border-radius: 0.5rem;
 }
 .ComponentBlock {
+  .active {
+
+  }
   margin-bottom: 2rem;
   &__view {
     border: 1px solid #ccc;
@@ -594,6 +597,10 @@ body ::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    code {
+      max-height: 360px;
+      overflow-y: auto;width:100%;
+    }
   }
 }
 
@@ -624,6 +631,9 @@ body ::-webkit-scrollbar {
       justify-content: flex-start;
       a {
 
+      }
+      &.active {
+        color:red;
       }
     }
   }
