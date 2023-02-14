@@ -2,7 +2,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 for Desktop & Web(Portal)",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
         <div class="sb--card__main-area">
             <!-- card img -->
@@ -75,7 +75,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 for Mobile",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
         <div class="sb--card__main-area">
             <!-- card img -->
@@ -126,7 +126,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 for Mobile (Recently viewed)",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--recently-viewed mb-16" tabindex="0" role="button">
         <div class="sb--card__main-area">
             <!-- card img -->
@@ -177,7 +177,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 Selected view for Desktop & Web(Portal)",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card selected mb-16" tabindex="0" role="button">
       <div class="sb--card__main-area">
           <!-- card img -->
@@ -250,7 +250,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 with QR code button",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
                     <div class="sb--card__main-area">
                         <!-- card img -->
@@ -333,7 +333,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V1 (Offline)",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16 offline" tabindex="0" role="button">
         <div class="sb--card__main-area">
             <!-- card img -->
@@ -406,7 +406,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V2 for mobile",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
         <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -512,7 +512,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V2 for desktop view",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
       <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -576,7 +576,7 @@ export const libraryCardData = [
           </div>
           <!-- other meta info Badge and card category Book, learn, practice -->
           <div class="sb--card__tags">
-            <span class="sb--card__badge" *ngIf="content?.badgeAssertions"><img
+            <span class="sb--card__badge"><img
                 src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" title="" /></span>
             <!-- <span class="sb--card__type" *ngIf="content?.contentType">{{content?.contentType}}</span> -->
           </div>
@@ -665,7 +665,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V2 selected",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 selected" role="link" tabindex="0">
       <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -729,7 +729,7 @@ export const libraryCardData = [
           </div>
           <!-- other meta info Badge and card category Book, learn, practice -->
           <div class="sb--card__tags">
-            <span class="sb--card__badge" *ngIf="content?.badgeAssertions"><img
+            <span class="sb--card__badge"><img
                 src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" title="" /></span>
             <!-- <span class="sb--card__type" *ngIf="content?.contentType">{{content?.contentType}}</span> -->
           </div>
@@ -818,7 +818,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V2 for desktop with QR code btn",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
       <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -882,7 +882,7 @@ export const libraryCardData = [
           </div>
           <!-- other meta info Badge and card category Book, learn, practice -->
           <div class="sb--card__tags">
-            <span class="sb--card__badge" *ngIf="content?.badgeAssertions"><img
+            <span class="sb--card__badge"><img
                 src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" title="" /></span>
             <!-- <span class="sb--card__type" *ngIf="content?.contentType">{{content?.contentType}}</span> -->
           </div>
@@ -979,7 +979,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V2 for Offline view",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 offline" role="link" tabindex="0">
       <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1043,7 +1043,7 @@ export const libraryCardData = [
           </div>
           <!-- other meta info Badge and card category Book, learn, practice -->
           <div class="sb--card__tags">
-            <span class="sb--card__badge" *ngIf="content?.badgeAssertions"><img
+            <span class="sb--card__badge"><img
                 src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" title="" /></span>
             <!-- <span class="sb--card__type" *ngIf="content?.contentType">{{content?.contentType}}</span> -->
           </div>
@@ -1132,7 +1132,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V3",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3" role="link" tabindex="0">
     <div class="sb--card__main-area">
         <!-- card img -->
@@ -1187,7 +1187,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V3 Selected state",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3 selected" role="link" tabindex="0">
     <div class="sb--card__main-area">
         <!-- card img -->
@@ -1248,7 +1248,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V3 Desktop only",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3" role="link" tabindex="0">
     <div class="sb--card__main-area">
         <!-- card img -->
@@ -1310,8 +1310,8 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
-    title: "Library card V3",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    title: "Library card V3 Offline",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3 offline" role="link" tabindex="0">
     <div class="sb--card__main-area">
         <!-- card img -->
@@ -1372,7 +1372,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V4",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4" tabindex="0">
     <div class="sb--card__main-area">
       <!-- card img -->
@@ -1461,7 +1461,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V4 selected",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4 selected" tabindex="0">
     <div class="sb--card__main-area">
       <!-- card img -->
@@ -1550,7 +1550,7 @@ export const libraryCardData = [
   {
     expandCode: false,
     title: "Library card V4 offline",
-    url: "https://stackblitz.com/edit/js-5ptzk8?file=style.scss",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4 offline" tabindex="0">
     <div class="sb--card__main-area">
       <!-- card img -->
