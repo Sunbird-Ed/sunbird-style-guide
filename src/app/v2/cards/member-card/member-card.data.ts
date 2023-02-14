@@ -42,7 +42,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -1747,7 +1747,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -2325,7 +2325,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -2885,7 +2885,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -3444,7 +3444,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -4007,7 +4007,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
@@ -4570,7 +4570,7 @@ export const memberCardData = [
       justify-content: center;
       border-radius: 50%;
       padding-left: 0.25rem 1rem;
-      padding-top: 0.125 1rem;
+      padding-top: 0.125rem 1rem;
       cursor: pointer;
     }
     html[dir=rtl] .sb-members-list-item .menu::after {
