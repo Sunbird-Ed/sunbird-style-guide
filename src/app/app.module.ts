@@ -131,13 +131,10 @@ import { CardsComponent2 } from './v2/cards/cards.component';
 import { GroupComponent } from './v2/cards/group/group.component';
 import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
 import {MemberCardComponent} from './v2/cards/member-card/member-card.component'
-import { InViewportModule } from '@thisissoon/angular-inviewport';
-import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
-import { ScrollSpyDirective } from './v2/cards/group/scroll-spy.directive';
 import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
 import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
 import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
-
+import { ScrollSpyDirective } from './scroll-spy.directive';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -280,8 +277,7 @@ export function hljsLanguages() {
     HeadroomModule,
     NgxPageScrollModule,
     CountdownModule,
-    CommonConsumptionModule,
-    [InViewportModule, ScrollSpyModule.forRoot()]
+    CommonConsumptionModule
   ],
   providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]

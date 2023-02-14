@@ -1,4 +1,4 @@
-<div class="d-flex" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+<div class="d-flex">
 <div class="w-80">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus excepturi est aliquid cum error repellendus dolorum! Perferendis, nostrum ea veniam deleniti minus, quidem quos aliquam repellendus natus animi nihil iusto.</p>
   <div class="note">
@@ -6,7 +6,7 @@
     </div>
     <!--Page Content-->
     <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
-        <div id="{{section.id}}"></div>
+        <section id="{{section.id}}"></section>
         <h4 class="docs-sectionHeading">
           <span>{{section.title}}</span>
           <span class="pull-right">
@@ -74,14 +74,67 @@
 
 <div class="pageSection-stickybar">
   <h4>On this this page</h4>
-  <ul>
-    <li>About</li>
+  <!-- <ul>
+    <li>About [{{ currentSection }}]</li>
+
     <li (click)="scrollTo('psection1')" [ngClass]="{ 'current-section': currentSection === 'psection1' }">Basic</li>
     <li (click)="scrollTo('psection2')" [ngClass]="{ 'current-section': currentSection === 'psection2' }">Profile/Image</li>
     <li (click)="scrollTo('psection3')" [ngClass]="{ 'current-section': currentSection === 'psection3' }">Admin & Suspend enabled</li>
-    <li (click)="scrollTo('psection5')" [ngClass]="{ 'current-section': currentSection === 'psection4' }">Mobile enabled</li>
-    <li (click)="scrollTo('psection6')" [ngClass]="{ 'current-section': currentSection === 'psection5' }">Web enabled</li>
-    <li (click)="scrollTo('psection7')" [ngClass]="{ 'current-section': currentSection === 'psection6' }">Desktop enabled</li>
-  </ul>
+    <li (click)="scrollTo('psection4')" [ngClass]="{ 'current-section': currentSection === 'psection4' }">Mobile enabled</li>
+    <li (click)="scrollTo('psection5')" [ngClass]="{ 'current-section': currentSection === 'psection5' }">Web enabled</li>
+    <li (click)="scrollTo('psection6')" [ngClass]="{ 'current-section': currentSection === 'psection6' }">Desktop enabled</li>
+  </ul> -->
+  <nav class="section-nav">
+		<ol>
+			<li><a href="#psection1">Basic</a></li>
+			<li><a href="#psection2">Profile/Image</a></li>
+			<li><a href="#psection3">Admin & Suspend enabled</a></li>
+			<li><a href="#psection4">Mobile enabled</a>
+				<!-- <ul>
+					<li class=""><a href="#endpoints--root">Root</a></li>
+				</ul> -->
+			</li>
+			<li class=""><a href="#psection5">Web enabled</a></li>
+      <li class=""><a href="#psection6">Desktop enabled</a></li>
+		</ol>
+	</nav>
 </div>
 </div>
+
+<style>
+  html {
+	scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+.pageSection-stickybar > nav {
+	/* position: sticky;
+	top: 2rem; */
+	align-self: start;
+}
+.pageSection-stickybar > nav ol {list-style: none;}
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+	color: #333;
+	font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+	padding-left: 0;
+	border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+	text-decoration: none;
+	display: block;
+	padding: .125rem 0;
+	color: #ccc;
+	transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+	color: #666;
+}
+</style>
