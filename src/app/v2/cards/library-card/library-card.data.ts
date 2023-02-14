@@ -212,21 +212,6 @@ export const libraryCardData = [
       --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -367,25 +352,7 @@ export const libraryCardData = [
       --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
+
     }`
   },
   {
@@ -546,24 +513,6 @@ export const libraryCardData = [
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -735,21 +684,8 @@ export const libraryCardData = [
       --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
       --cc-sbcard-selected-border: var(--primary-color);
       --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -925,21 +861,6 @@ export const libraryCardData = [
       --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -1123,21 +1044,8 @@ export const libraryCardData = [
       --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
       --cc-sbcard-offline-bg: var(--tertiary-color);
       --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -1334,24 +1242,15 @@ export const libraryCardData = [
     `,
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
+      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-data2-bg: #E5EDF5;
       --cc-sbcard-data2-bg-active: #0076FE;
       --cc-sbcard-data1-bg: #F0E5F5;
@@ -1601,24 +1500,15 @@ export const libraryCardData = [
     }`,
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
+      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-data2-bg: #E5EDF5;
       --cc-sbcard-data2-bg-active: #0076FE;
       --cc-sbcard-data1-bg: #F0E5F5;
@@ -1867,25 +1757,18 @@ export const libraryCardData = [
       border-top-right-radius: 0px;
     }`,
     copyCode3: `:root {
+      --cc-sbcard-selected-border: var(--primary-color);
+      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
       --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
+      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-data2-bg: #E5EDF5;
       --cc-sbcard-data2-bg-active: #0076FE;
       --cc-sbcard-data1-bg: #F0E5F5;
@@ -2143,24 +2026,15 @@ export const libraryCardData = [
     }`,
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
+      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-data2-bg: #E5EDF5;
       --cc-sbcard-data2-bg-active: #0076FE;
       --cc-sbcard-data1-bg: #F0E5F5;
@@ -2410,25 +2284,18 @@ export const libraryCardData = [
     }
     `,
     copyCode3: `:root {
+      --cc-sbcard-offline-bg: var(--tertiary-color);
+      --cc-sbcard-offline-img-text: var(--white);
       --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
       --cc-sbcard-moreinfo-bg: none;
       --cc-sbcard-moreinfo-bordertop: #cacbce;
       --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
+      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-data2-bg: #E5EDF5;
       --cc-sbcard-data2-bg-active: #0076FE;
       --cc-sbcard-data1-bg: #F0E5F5;
@@ -2621,26 +2488,7 @@ export const libraryCardData = [
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
       --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
       --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
@@ -2828,31 +2676,14 @@ export const libraryCardData = [
       }
     }`,
     copyCode3: `:root {
+      --cc-sbcard-selected-border: var(--primary-color);
+      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
       --cc-sbcard-bg: var(--white);
       --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
       --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
       --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
@@ -3047,26 +2878,7 @@ export const libraryCardData = [
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
       --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
       --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
@@ -3254,31 +3066,14 @@ export const libraryCardData = [
       }
     }`,
     copyCode3: `:root {
+      --cc-sbcard-offline-bg: var(--tertiary-color);
+      --cc-sbcard-offline-img-text: var(--white);
       --cc-sbcard-bg: var(--white);
       --cc-sbcard-img-container-bg: var(--gray-100);
       --cc-sbcard-title: var(--primary-color);
       --cc-sbcard-meta-text: var(--gray-800);
       --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
-      --cc-sbcard-type-bg: var(--gray-200);
-      --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
       --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
       --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
@@ -3507,30 +3302,9 @@ export const libraryCardData = [
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
       --cc-sbcard-img-container-bg: var(--gray-100);
-      --cc-sbcard-title: var(--primary-color);
-      --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
+      --cc-sbcard-img-br: var(--white);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -3758,30 +3532,9 @@ export const libraryCardData = [
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
       --cc-sbcard-img-container-bg: var(--gray-100);
-      --cc-sbcard-title: var(--primary-color);
-      --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
+      --cc-sbcard-img-br: var(--white);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   },
   {
@@ -4009,30 +3762,9 @@ export const libraryCardData = [
     copyCode3: `:root {
       --cc-sbcard-bg: var(--white);
       --cc-sbcard-img-container-bg: var(--gray-100);
-      --cc-sbcard-title: var(--primary-color);
-      --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-dot-divider: var(--gray-200);
-      --cc-sbcard-moreinfo-bg: none;
-      --cc-sbcard-moreinfo-bordertop: #cacbce;
-      --cc-sbcard-meta2-text: var(--gray-800);
-      --cc-sbcard-org-text: var(--gray-200);
+      --cc-sbcard-img-br: var(--white);
       --cc-sbcard-type-bg: var(--gray-200);
       --cc-sbcard-type-text: var(--white);
-      --cc-sbcard-rv-img-container-bg: var(--gray-100);
-      --cc-sbcard-selected-border: var(--primary-color);
-      --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
-      --cc-sbcard-offline-bg: var(--tertiary-color);
-      --cc-sbcard-offline-img-text: var(--white);
-      --cc-sbcard-type-br: var(--gray-200);
-      --cc-sbcard-org-text: var(--balck);
-      --cc-sbcard-img-br: var(--white);
-      --cc-sbcard-data2-bg: #E5EDF5;
-      --cc-sbcard-data2-bg-active: #0076FE;
-      --cc-sbcard-data1-bg: #F0E5F5;
-      --cc-sbcard-data1-bg-active: #6236FF;
-      --cc-sbcard-data0-bg: #E0F5EA;
-      --cc-sbcard-data0-bg-active: #008840;
-      --cc-sbcard-data1-2-text: var(--primary-color);
     }`
   }
 ];
