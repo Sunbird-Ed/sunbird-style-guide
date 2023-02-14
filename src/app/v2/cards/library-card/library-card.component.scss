@@ -179,7 +179,6 @@
 
   .sb--card__badge {
     display: flex;
-    margin-right: 0.5rem;
   }
 
   html[dir=rtl] .sb--card__badge {
@@ -201,7 +200,7 @@
     display: flex;
     align-items: center;
     padding: 0 0.5rem 0 0.5rem;
-    margin: 0 0 0 0.5rem;
+    // margin: 0 0 0 0.5rem;
   }
 
   html[dir=rtl] .sb--card__type {
