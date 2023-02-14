@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { memberCardData } from './member-card.data';
 
 @Component({
@@ -7,12 +7,14 @@ import { memberCardData } from './member-card.data';
   styleUrls: ['./member-card.component.scss']
 })
 export class MemberCardComponent implements OnInit {
+  constructor() { 
+    window.scrollTo(0, 0);  
+  }
 
-  constructor() { }
-
-  pageTitle = "member Card";
+  pageTitle = "Member Card";
   sections = memberCardData;
 
+  
   tryDemoLink(url: string) {
     window.open(url, "_blank");
   }

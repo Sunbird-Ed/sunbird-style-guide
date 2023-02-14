@@ -82,6 +82,10 @@ import { CardsComponent2 } from './v2/cards/cards.component';
 import { GroupComponent } from './v2/cards/group/group.component';
 import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
 import { MemberCardComponent } from './v2/cards/member-card/member-card.component';
+import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
+import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
+import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
+
 const routes: Routes = [
   { path: '', component: GridlayoutComponent },
   { path: 'typography', component: TypographyComponent },
@@ -174,6 +178,11 @@ const routes: Routes = [
   { path: 'cc-groupcard', component: GroupComponent },
   { path: 'library-card', component: LibraryCardComponent },
   { path: 'member-card', component: MemberCardComponent },
+  { path: 'course-card', component: CourseCardComponent },
+  { path: 'notification-card', component: NotificationCardComponent },
+  { path: 'course-curiculum-card', component: CourseCuriculumCardComponent },
+  
+  
   // {
   //   path: 'cccomponents',
   //   component: CccomponentsComponent,

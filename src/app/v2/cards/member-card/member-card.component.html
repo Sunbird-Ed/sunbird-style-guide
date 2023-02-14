@@ -1,105 +1,121 @@
-<div class="sb-members-list-item sb-members-list-item--medium sb-members-list-item--horizontal sb-members-list-item--bold"
- tabindex="0">
-    <div class="sb-member text-left">
-        <div class="sb-member__img"><span>D</span></div>
-        <label class="sb-member__name sb__ellipsis sb__ellipsis--two ml-8"><span>Dummy&lrm;</span></label>   
-    </div>
-    <div class="d-flex flex-ai-center pr-8">
-      <div class="d-flex flex-ai-center">
-        <div class="status">Admin</div>
-        <div class="menu ml-8" tabindex="0"></div>
-      </div>
-    <div class="selected ml-8"><img class="icon_select" alt="" src="assets/images/selected.svg" /></div>
-    <div class="ml-8 progress-circle progress-circle--sm">
-        <svg class="progress-circle__svg" viewport="0 0 2000 2000">
-          <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
-          <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
-        </svg>
-        <span>20%</span>
-      </div>
-    <div class="progress-circle progress-circle--sm progress-circle--success"><img class="icon_progress_check" alt="" src="assets/common-consumption/images/completed.svg"></div>
-  </div>
-</div>
+ <div class="document-container">
+   <!-- main content panel start-->
+   <section class="document-main">
+     <h2>Member Card</h2>
+     <p class="fs-1 mt-8">Member card is a content container showing members list with member information such as name,
+       photo, status and progress display in the card.</p>
+     <!--Page Content start-->
+     <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
+       <h2 id="{{section.id}}"></h2>
+       <h4 class="docs-sectionHeading">
+         <span>{{section.title}}</span>
+         <span class="pull-right">
+           <a class="fa fa-code text-gray docs-expandCode mx-8" (click)="section.expandCode = !section.expandCode"
+             title="Toggle Code" tabindex="0"></a>
+           <a class="mx-8 cursor-pointer" title="Try StalkBlitz Demo" (click)="tryDemoLink(section.url)"><svg
+               viewBox="0 0 28 28" aria-hidden="true" class="_boltIcon_yct9u_9" height="16" width="16">
+               <path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z"></path>
+             </svg></a>
+         </span>
+       </h4>
+       <div class="my-8" [innerHTML]="section.description | keepHtml"></div>
 
-<!--Loading Indicator -->
-<div class="sb-members-list-item sb-members-list-item--medium sb-members-list-item--horizontal
-sb-members-list-item--bold">    
-    <div class="sb-member mr-8">
-        <div class="sb-member__img loading-animation">D</div>
-        <label class="sb-member__name loading-animation sb--card--highlighter">Dummy</label>   
-    </div>
-</div>
+       <!--Display output-->
+       <div class="docs-sectionDemoCode ComponentBlock__view" [innerHTML]="section.demoCode | keepHtml">
+       </div>
+       <!--/Display output-->
 
+       <!--Display code-->
+       <div class="docs-sectionCopyCode ComponentBlock__code" *ngIf="section.expandCode">
 
-<!--Page Content-->
-<div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
+         <sui-tabset>
+           <div class="ui top attached tabular menu">
+             <a class="item" suiTabHeader="1">HTML</a>
+             <a class="item" suiTabHeader="2">CSS</a>
+             <a class="item" suiTabHeader="3">Variables</a>
+           </div>
+           <div class="ui bottom attached segment" suiTabContent="1">
+             <!--Copy code button-->
+             <button ngxClipboard [cbContent]="section.copyCode"
+               class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy m-4"></button>
+             <!--/Copy code button-->
 
-    <h4 class="docs-sectionHeading">
-        <span>{{section.title}}</span>
-        <span class="pull-right">
-            <a class="fa fa-code text-gray docs-expandCode mx-8" (click)="section.expandCode = !section.expandCode"
-                title="Toggle Code" tabindex="0"></a>
-            <a class="mx-8 cursor-pointer" title="Try StalkBlitz Demo" (click)="tryDemoLink(section.url)"><svg
-                    viewBox="0 0 28 28" aria-hidden="true" class="_boltIcon_yct9u_9" height="16" width="16">
-                    <path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z"></path>
-                </svg></a>
-        </span>
-    </h4>
+             <!--Copy code display-->
+             <pre class="my-16">
+                <code [highlight]="section.copyCode"></code>
+              </pre>
+             <!--/Copy code display-->
+           </div>
+           <div class="ui bottom attached segment" suiTabContent="2">
+             <!--Copy code button-->
+             <button ngxClipboard [cbContent]="section.copyCSS"
+               class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy m-4"></button>
+             <!--/Copy code button-->
 
-    <!--Display output-->
-    <div class="docs-sectionDemoCode ComponentBlock__view" [innerHTML]="section.demoCode | keepHtml">
-    </div>
-    <!--/Display output-->
+             <!--Copy code display-->
+             <pre class="my-16">
+                <code [highlight]="section.copyCSS"></code>
+              </pre>
+             <!--/Copy code display-->
+           </div>
+           <div class="ui bottom attached segment" suiTabContent="3">
 
-    <!--Display code-->
-    <div class="docs-sectionCopyCode ComponentBlock__code" *ngIf="section.expandCode">
+             <!--Copy code button-->
+             <button ngxClipboard [cbContent]="section.copyVar"
+               class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy m-4"></button>
+             <!--/Copy code button-->
+             <!--Copy code display-->
+             <pre class="my-16">
+                <code [highlight]="section.copyVar"></code>
+              </pre>
+             <!--/Copy code display-->
+           </div>
+         </sui-tabset>
 
-        <sui-tabset>
-            <div class="ui top attached tabular menu">
-                <a class="item" suiTabHeader="1">HTML</a>
-                <a class="item" suiTabHeader="2">CSS</a>
-                <a class="item" suiTabHeader="3">Variables</a>
-            </div>
-            <div class="ui bottom attached segment" suiTabContent="1">
-                <!--Copy code button-->
-                <button ngxClipboard [cbContent]="section.copyCode"
-                    class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-                <!--/Copy code button-->
+       </div>
+       <!--/Display code-->
+     </div>
 
-                <!--Copy code display-->
-                <pre>
-        <code [highlight]="section.copyCode"></code>
-      </pre>
-                <!--/Copy code display-->
-            </div>
-            <div class="ui bottom attached segment" suiTabContent="2">
-                <!--Copy code button-->
-                <button ngxClipboard [cbContent]="section.copyCode2"
-                    class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-                <!--/Copy code button-->
+     <!--Page Content end-->
 
-                <!--Copy code display-->
-                <pre>
-        <code [highlight]="section.copyCode2"></code>
-      </pre>
-                <!--/Copy code display-->
-            </div>
-            <div class="ui bottom attached segment" suiTabContent="3">
+     <!--note start-->
+     <div class="d-flex note-card fs-1">
+       <i class="fa-solid fa-circle-info mx-8 mt-4"></i>
+       <p class="fs-1"><strong>Note:</strong> The values of these properties can take in pixels and rem only</p>
+     </div>
+     <!--note end-->
+   </section>
+   <!-- main content panel end-->
 
-                <!--Copy code button-->
-                <button ngxClipboard [cbContent]="section.copyCode3"
-                    class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
-                <!--/Copy code button-->
-                <!--Copy code display-->
-                <pre>
-        <code [highlight]="section.copyCode3"></code>
-      </pre>
-                <!--/Copy code display-->
-            </div>
-        </sui-tabset>
-
-    </div>
-    <!--/Display code-->
-
-</div>
-<!--Page Content-->
+   <!-- right side panel start-->
+   <section class="document-side-panel">
+     <header>
+       <h2 class="document-side-panel-heading">In this article</h2>
+     </header>
+     <ul class="document-side-panel-list">
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#horizontal-view" aria-current="true">Members list with horizontal
+           alignment</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#vertical-view">Members list with vertical alignment</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#status">Members list with Status and Menu</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#selected">Selected Members list</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#progress">Members list with Progress</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#complete_progress">Members list with Success Progress</a>
+       </li>
+       <li class="document-side-panel-item">
+         <a class="document-side-panel-link" href="#sizes">Members list with different sizes</a>
+       </li>
+     </ul>
+   </section>
+   <!-- right side panel end-->
+ </div>
