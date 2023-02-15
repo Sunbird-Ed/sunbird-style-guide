@@ -1,6 +1,7 @@
 export const libraryCardData = [
   {
     expandCode: false,
+    id: 'libraryv1-1',
     title: "Library card V1 for Desktop & Web(Portal)",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
@@ -216,6 +217,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv1-2',
     title: "Library card V1 for Mobile",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
@@ -357,6 +359,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv1-3',
     title: "Library card V1 for Mobile (Recently viewed)",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--recently-viewed mb-16" tabindex="0" role="button">
@@ -517,6 +520,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv1-4',
     title: "Library card V1 Selected view for Desktop & Web(Portal)",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card selected mb-16" tabindex="0" role="button">
@@ -690,6 +694,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv1-5',
     title: "Library card V1 with QR code button",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16" tabindex="0" role="button">
@@ -865,6 +870,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv1-6',
     title: "Library card V1 (Offline)",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card mb-16 offline" tabindex="0" role="button">
@@ -1050,6 +1056,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv2-1',
     title: "Library card V2 for mobile",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
@@ -1262,6 +1269,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv2-2',
     title: "Library card V2 for desktop view",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
@@ -1520,6 +1528,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv2-3',
     title: "Library card V2 selected",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 selected" role="link" tabindex="0">
@@ -1780,6 +1789,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv2-4',
     title: "Library card V2 for desktop with QR code btn",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
@@ -2046,6 +2056,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv2-5',
     title: "Library card V2 for Offline view",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 offline" role="link" tabindex="0">
@@ -2307,6 +2318,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv3-1',
     title: "Library card V3",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3" role="link" tabindex="0">
@@ -2494,6 +2506,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv3-2',
     title: "Library card V3 Selected state",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3 selected" role="link" tabindex="0">
@@ -2689,6 +2702,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv3-3',
     title: "Library card V3 Desktop only",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3" role="link" tabindex="0">
@@ -2884,6 +2898,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv3-4',
     title: "Library card V3 Offline",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version3 offline" role="link" tabindex="0">
@@ -3079,6 +3094,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv4-1',
     title: "Library card V4",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4" tabindex="0">
@@ -3309,6 +3325,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv4-2',
     title: "Library card V4 selected",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4 selected" tabindex="0">
@@ -3539,6 +3556,7 @@ export const libraryCardData = [
   },
   {
     expandCode: false,
+    id: 'libraryv4-3',
     title: "Library card V4 offline",
     url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
     demoCode: `<div class="sb--card sb--card--theme2 version4 offline" tabindex="0">

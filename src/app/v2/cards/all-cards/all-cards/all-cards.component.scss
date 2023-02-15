@@ -29,9 +29,305 @@
   --cc-sbcard-data0-bg: #E0F5EA;
   --cc-sbcard-data0-bg-active: #008840;
   --cc-sbcard-data1-2-text: var(--primary-color);
+
+  //Member List Cards
+  --cc-members-list-item-selected: #f2f2ea;
+  --cc-members-list-item-selected-border: #e9e8d9;
+  --cc-members-list-item-menu-text: #999999;
+  --cc-members-list-item-status-text: #07bc81;
+  --cc-members-list-item-status-br: #07bc81;
+  --cc-members-list-item-status-bg: #fff;
+
+  // Notification List Cards
+  --cc-notification-list-bg: var(--white);
+  --cc-notification-list-br: var(--rc-dddddd);
+  --cc-notification-status-bg: var(--gray-200);
+  --cc-notification-date-text: var(--gray-200);
+  --cc-notification-logo-bg: var(--gray-0);
+  --cc-notification-title-text: var(--gray-400);
+  --cc-notification-title-active: var(--primary-color);
+  --cc-notification-subtitle-text: var(--gray-400);
 }
 
 ::ng-deep {
+
+  // Notification List card
+  .sb-notification-list {
+    border-radius: calculateRem(8px);
+    background-color: var(--cc-notification-list-bg);
+    box-shadow: calculateRem(5px) calculateRem(5px) calculateRem(2px) 0 rgba(var(--rc-rgba-black), 0.1);
+    margin-bottom: calculateRem(8px);
+    border: calculateRem(0.5px) solid var(--cc-notification-list-br);
+
+    &:hover {
+      cursor: pointer;
+
+      .sb-notification-list-header {
+        .notification-info {
+          .status {
+            background-color: var(--orange);
+          }
+        }
+
+        .delete-icon {
+          .Delete-red {
+            display: block;
+          }
+
+          .Delete-gray {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .sb-notification-list-header {
+      .notification-info {
+        .status {
+          height: calculateRem(8px);
+          width: calculateRem(8px);
+          background-color: var(--orange);
+          border-radius: calculateRem(8px);
+        }
+
+        .date {
+          color: var(--cc-notification-date-text);
+          font-size: calculateRem(12px);
+        }
+      }
+
+      .delete-icon {
+        .Delete-red {
+          display: none;
+        }
+      }
+    }
+
+    .sb-notification-data {
+      .logo {
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        border-radius: calculateRem(8px);
+        background-color: var(--cc-notification-logo-bg);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: calculateRem(24px);
+          max-width: calculateRem(20px);
+        }
+      }
+
+      .notification-content {
+        overflow: hidden;
+
+        .title {
+
+          color: var(--cc-notification-title-text);
+          font-size: calculateRem(14px);
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &.active {
+            color: var(--cc-notification-title-active);
+          }
+        }
+
+        .sub-title {
+          color: var(--cc-notification-subtitle-text);
+          font-size: calculateRem(12px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  //member list css //
+  .sb-members-list-item {
+    display: flex;
+    align-items: center;
+    border: calculateRem(1px) solid transparent;
+    position: relative;
+
+    &:hover,
+    &.selectElement {
+      background-color: var(--cc-members-list-item-selected);
+      border: calculateRem(1px) solid var(--cc-members-list-item-selected-border);
+      cursor: pointer;
+    }
+
+    .menu::after {
+      content: '\2807';
+      font-size: calculateRem(24px);
+      color: var(--cc-members-list-item-menu-text);
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      padding-left: calculateRem(4px);
+
+      html[dir='rtl'] & {
+        padding-right: calculateRem(4px);
+        padding-left: calculateRem(0px);
+      }
+
+      padding-top: calculateRem(2px);
+      cursor: pointer;
+
+    }
+
+    .menu:hover::after {
+      background: var(--gray-0);
+    }
+
+    .status {
+      border: calculateRem(1px) solid var(--cc-members-list-item-status-br);
+      border-radius: calculateRem(2px);
+      font-size: calculateRem(11px);
+      color: var(--cc-members-list-item-status-text);
+      background-color: var(--cc-members-list-item-status-bg);
+      padding: calculateRem(4px) calculateRem(8px);
+    }
+
+    /* member css */
+    .sb-member {
+      display: flex;
+      align-items: center;
+      padding: calculateRem(8px);
+
+      // font weight bold and normal
+      &__name {
+        font-weight: normal;
+        cursor: pointer;
+      }
+
+      // avatar first letter
+      &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--white);
+        box-shadow: 0 0 0.375rem 0 rgba(var(--rc-rgba-black), 0.1);
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: calculateRem(2px);
+      }
+    }
+
+    &--bold {
+      .sb-member__name {
+        font-weight: bold;
+      }
+    }
+
+    &--horizontal {
+      .sb-member {
+        flex-direction: row;
+        flex: 1;
+
+        .sb-member__name {
+          margin: 0 0 0 calculateRem(8px);
+          flex: 1;
+
+          html[dir='rtl'] & {
+            margin: 0 calculateRem(8px) 0 0;
+          }
+        }
+      }
+    }
+
+    &--vertical {
+
+      .sb-member {
+        flex-direction: column;
+
+        .sb-member__name {
+          margin: calculateRem(8px) 0 0 0;
+          text-align: center;
+          width: calculateRem(90px);
+          word-break: break-word;
+
+          &.ml-8 {
+            margin-left: 0px !important;
+          }
+        }
+      }
+    }
+
+    &--small {
+      .sb-member__img {
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        font-size: calculateRem(20px);
+      }
+
+      .sb-member__name {
+        font-size: calculateRem(14px);
+      }
+
+      .selected img {
+        width: calculateRem(20px);
+        border-radius: 50%;
+      }
+
+      .menu::after {
+        font-size: calculateRem(16px);
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+      }
+    }
+
+    &--medium {
+      .sb-member__img {
+        width: calculateRem(48px);
+        height: calculateRem(48px);
+        font-size: calculateRem(34px);
+      }
+
+      .sb-member__name {
+        font-size: calculateRem(16px);
+      }
+
+      .selected img {
+        width: calculateRem(24px);
+      }
+
+      .menu::after {
+        font-size: calculateRem(24px);
+        width: calculateRem(40px);
+        height: calculateRem(40px);
+      }
+    }
+
+    &--large {
+      .sb-member__img {
+        width: calculateRem(56px);
+        height: calculateRem(56px);
+        font-size: calculateRem(38px);
+      }
+
+      .sb-member__name {
+        font-size: calculateRem(18px);
+      }
+
+      .selected img {
+        width: calculateRem(32px);
+      }
+
+      .menu::after {
+        font-size: calculateRem(32px);
+        width: calculateRem(48px);
+        height: calculateRem(48px);
+      }
+    }
+  }
 
   /* sb card component css */
   .sb--card {
@@ -163,6 +459,14 @@
 
   .sb--card__meta2_data .value {
     font-weight: bold;
+  }
+
+  .sb--card--course .sb--card__meta_c_data {
+    --cc-sbcard-metaC-data: var(--rc-FAFAFA);
+    min-height: 2rem;
+    padding: 0.5rem;
+    background-color: var(--cc-sbcard-metaC-data);
+    font-size: .8rem;
   }
 
   .sb--card__org {
@@ -425,7 +729,7 @@
     position: absolute;
     background: var(--black);
     text-transform: uppercase;
-    margin-left: -0.5rem;
+    margin-left: -1rem;
     padding-left: 0.5rem;
   }
 
@@ -771,7 +1075,6 @@
     margin-top: 0;
     width: auto;
     text-align: center;
-    margin-left: 0rem;
   }
 
   html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__main-area .sb--card__type {
@@ -1032,6 +1335,7 @@
     .sb--card__img .img-container {
       width: 4rem;
       border-radius: 0.5rem;
+
       img {
         min-height: 100%;
       }
@@ -1100,5 +1404,3 @@
 
   }
 }
-
-/* Library card V4 styles END here */
