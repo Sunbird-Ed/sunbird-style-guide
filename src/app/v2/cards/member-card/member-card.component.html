@@ -1,8 +1,8 @@
- <div class="document-container">
+ <div class="d-flex">
    <!-- main content panel start-->
-   <section class="document-main">
+   <section class="w-80">
      <h2>Member Card</h2>
-     <p class="fs-1 mt-8">Member card is a content container showing members list with member information such as name,
+     <p class="fs-1 mt-8">Member card is a content container showing member information such as name,
        photo, status and progress display in the card.</p>
      <!--Page Content start-->
      <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
@@ -79,41 +79,32 @@
      <!--Page Content end-->
 
      <!--note start-->
-     <div class="d-flex note-card fs-1">
-       <i class="fa-solid fa-circle-info mx-8 mt-4"></i>
-       <p class="fs-1"><strong>Note:</strong> The values of these properties can take in pixels and rem only</p>
+     <div class="note">
+       <p class="mb-0 sb-color-gray-800"><strong>Note:</strong> The values of these properties can take in pixels and
+         rem only</p>
      </div>
      <!--note end-->
    </section>
    <!-- main content panel end-->
 
    <!-- right side panel start-->
-   <section class="document-side-panel">
+   <section class="pageSection-stickybar">
      <header>
-       <h2 class="document-side-panel-heading">In this article</h2>
+       <h3 class="mb-16">In this Member list</h3>
      </header>
-     <ul class="document-side-panel-list">
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#horizontal-view" aria-current="true">Members list with horizontal
-           alignment</a>
+     <ul>
+       <li><a href="#horizontal-view">Horizontal Alignment</a></li>
+       <li><a href="#vertical-view" aria-current="step">Vertical Alignment</a>
        </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#vertical-view">Members list with vertical alignment</a>
+       <li><a href="#status">Admin and Menu</a>
        </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#status">Members list with Status and Menu</a>
+       <li><a href="#selected">Selected</a>
        </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#selected">Selected Members list</a>
+       <li><a href="#progress">Progress Loader</a>
        </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#progress">Members list with Progress</a>
+       <li><a href="#complete_progress">Success Progress</a>
        </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#complete_progress">Members list with Success Progress</a>
-       </li>
-       <li class="document-side-panel-item">
-         <a class="document-side-panel-link" href="#sizes">Members list with different sizes</a>
+       <li><a href="#sizes">Different Sizes</a>
        </li>
      </ul>
    </section>

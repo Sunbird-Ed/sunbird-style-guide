@@ -136,6 +136,7 @@ import { NotificationCardComponent } from './v2/cards/notification-card/notifica
 import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { AllCardsComponent } from './v2/cards/all-cards/all-cards/all-cards.component';
+import { MyCourseCardComponent } from './v2/cards/my-course-card/my-course-card.component';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -259,7 +260,8 @@ export function hljsLanguages() {
     CourseCardComponent,
     NotificationCardComponent,
     CourseCuriculumCardComponent,
-    AllCardsComponent
+    AllCardsComponent,
+    MyCourseCardComponent
   ],
   imports: [
     BrowserModule,

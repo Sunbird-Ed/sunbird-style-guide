@@ -104,7 +104,7 @@ export class CourseCuriculumCardComponent implements OnInit {
     },
     {
       expandCode: false,
-      id: 'psection1',
+      id: 'psection2',
       title: "Course Curiculum Card - Profile/Image",
       description: ``,
       url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
