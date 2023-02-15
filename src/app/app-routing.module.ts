@@ -85,6 +85,7 @@ import { MemberCardComponent } from './v2/cards/member-card/member-card.componen
 import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
 import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
 import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
+import { MyCourseCardComponent } from './v2/cards/my-course-card/my-course-card.component';
 
 const routes: Routes = [
   { path: '', component: GridlayoutComponent },
@@ -181,6 +182,8 @@ const routes: Routes = [
   { path: 'course-card', component: CourseCardComponent },
   { path: 'notification-card', component: NotificationCardComponent },
   { path: 'course-curiculum-card', component: CourseCuriculumCardComponent },
+  { path: 'my-course-card', component: MyCourseCardComponent },
+  
   
   
   // {
