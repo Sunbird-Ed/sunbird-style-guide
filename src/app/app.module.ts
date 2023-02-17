@@ -137,6 +137,7 @@ import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/c
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { AllCardsComponent } from './v2/cards/all-cards/all-cards/all-cards.component';
 import { MyCourseCardComponent } from './v2/cards/my-course-card/my-course-card.component';
+// import { AllCardsModule } from './v2/cards/all-cards/all-cards/all-cards.module';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -281,7 +282,8 @@ export function hljsLanguages() {
     HeadroomModule,
     NgxPageScrollModule,
     CountdownModule,
-    CommonConsumptionModule
+    CommonConsumptionModule,
+    //AllCardsModule
   ],
   providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]

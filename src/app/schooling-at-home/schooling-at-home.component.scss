@@ -137,11 +137,11 @@
     opacity: 1;
     transform: translateX(0);
   }
-  &.stop {
-    left:0;
-    //transform: translateX(-999px);
-    transition: all .5s ease;
-  }
+  // &.stop {
+  //   left:0;
+  //   //transform: translateX(-999px);
+  //   transition: all .5s ease;
+  // }
   
 }
 

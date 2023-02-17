@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class GroupComponent implements OnInit {
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+
+  }
 
 
   // currentSection = 'psection1';
@@ -963,6 +965,7 @@ export class GroupComponent implements OnInit {
     window.open(url, "_blank");
   }
 
+  
   // goToLink(url: string) {
   //   window.open(url, "_blank");
   // }
@@ -974,25 +977,53 @@ export class GroupComponent implements OnInit {
   ngOnInit() {
     //this._scrollSpyService.setOffset('window', 800);
 
-    // window.addEventListener('DOMContentLoaded', () => {
-    //   const observer = new IntersectionObserver(entries => {
-    //     entries.forEach(entry => {
-    //       const id = entry.target.getAttribute('id');
-    //       if (entry.intersectionRatio > 0) {
-    //         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
-    //       } else {
-    //         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
-    //       }
-    //     });
-    //   });
-    //   // Track all sections that have an `id` applied
-    //   document.querySelectorAll('section[id]').forEach((section) => {
-    //     observer.observe(section);
-    //   });
-      
-    // });
-    
+    let section = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('nav li a');
+  
+    window.onscroll = () => {
+      section.forEach(sec =>{
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 200;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        alert(id);
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach(links => {
+            links.classList.remove('active');
+            document.querySelector('nav li a[href*=' +  id + ']').classList.add('active');
+          })
+        }
+      });
+    }
+
+   
   }
 
 
-}
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       const id = entry.target.getAttribute('id');
+  //       if (entry.intersectionRatio > 0) {
+  //         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+  //       } else {
+  //         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+  //       }
+  //     });
+  //   });
+  //   // Track all sections that have an `id` applied
+  //   document.querySelectorAll('section[id]').forEach((section) => {
+  //     observer.observe(section);
+  //   });
+    
+  // });
+
+  ngAfterViewInit() {
+  }
+
+
+
+
+
+  }
+
