@@ -74,7 +74,7 @@ import { NewTocComponent } from './new-toc/new-toc.component';
 import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
 import { BatchComponentComponent } from './batch-component/batch-component.component';
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
-import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
+import { sunbirdWebAppComponent } from './sunbird-web-app/sunbird-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 import { StateCertificateComponent } from './state-certificate/state-certificate.component';
 import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
@@ -164,7 +164,7 @@ const routes: Routes = [
   { path: 'maintenance-banner', component:MaintenanceBannerComponent},
   { path: 'batch', component:BatchComponentComponent},
   { path: 'batch-certificate', component:BatchCertificateComponent},
-  { path: 'diksha-web', component:DikshaWebAppComponent},
+  { path: 'sunbird-web', component:sunbirdWebAppComponent},
   { path: 'buttons-new', component: ButtonsNewComponent},
   { path: 'state-certificate', component: StateCertificateComponent},
   { path: 'qml-solutions', component: QmlSolutionsComponent },
