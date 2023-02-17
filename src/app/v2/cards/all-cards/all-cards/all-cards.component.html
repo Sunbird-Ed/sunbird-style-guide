@@ -81,8 +81,8 @@
         <nav class="section-nav">
             <ul>
                 
-                <li (click)="scrollTo('section' + i)" *ngFor="let section of sections; let i = index" [ngClass]="{active : section === 'section'+i}">
-                    <span>{{section.title}} | {{'section' + i }}</span>
+                <li (click)="scrollTo('section' + i)" *ngFor="let section of sections; let i = index" [ngClass]="{'active' : this.activeList === 'section'+i}">
+                    <span>{{section.title}}</span>
                     <!-- <ng-container *ngIf="section === 'psection0'">1</ng-container> -->
                 </li>
             </ul>

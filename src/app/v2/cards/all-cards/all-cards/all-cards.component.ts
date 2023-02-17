@@ -11,7 +11,7 @@ export class AllCardsComponent implements OnInit {
   pageTitle = "All Cards";
   sections = cardData;
 
-  section = 'section1';
+  activeList = 'section1';
 
   constructor() { }
 
@@ -22,45 +22,27 @@ export class AllCardsComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.section + 'abe');
-    this.section = localStorage.getItem("storage");
+    // console.log(this.activeList + 'abe');
+    this.activeList = localStorage.getItem("storage");
     //this.scrollTo(this.section);
-    console.log(this.section);
-
-    // let section = document.querySelectorAll('section');
-    // let navLinks = document.querySelectorAll('nav li a');
-
-    // window.onscroll = () => {
-    //   section.forEach(sec =>{
-    //     let top = window.scrollY;
-    //     let offset = sec.offsetTop - 200;
-    //     let height = sec.offsetHeight;
-    //     let id = sec.getAttribute('id');
-    //     alert(id);
-    //     if (top >= offset && top < offset + height) {
-    //       navLinks.forEach(links => {
-    //         links.classList.remove('active');
-    //         document.querySelector('nav li a[href*=' +  id + ']').classList.add('active');
-    //       })
-    //     }
-    //   });
-    // }
+    // console.log(this.section);
 
   }
 
   scrollTo(section) {
 
-    console.log("section", section);
-    localStorage.setItem('storage', section);
-    this.section = section;
+    this.activeList = section;
+    console.log(section);
+    console.log(this.activeList);
+    localStorage.setItem('storage', this.activeList);
 
     // console.log(this.section = section);
       document.querySelector('#' + section).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 
   }
   onSectionChange(sectionId: string) {
-    console.log(sectionId);
-    this.section = sectionId;
+    // console.log(sectionId);
+    this.activeList = sectionId;
   }
 
 
