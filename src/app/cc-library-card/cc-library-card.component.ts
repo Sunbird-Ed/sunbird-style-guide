@@ -53,7 +53,7 @@ export class CClibraryCardComponent implements OnInit {
         <!-- card img -->
         <div class="sb--card__img">
           <div class="img-container">
-            <img src="https://diksha.gov.in/assets/common-consumption/images/abstract_09.svg" alt="">
+            <img src="https://sunbird.gov.in/assets/common-consumption/images/abstract_09.svg" alt="">
           </div>
         </div>
         <!-- card mobile view details -->

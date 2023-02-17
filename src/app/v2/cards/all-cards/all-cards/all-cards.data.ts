@@ -2,7 +2,7 @@ export const cardData = [
   {
     expandCode: false,
     title: "Card style 1",
-   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/cards/card-one/card-one.component.html",
     demoCode: `<div class="sb--card" tabindex="0" role="button">
                   <div class="sb--card__main-area">
                       <!-- card img -->
@@ -330,7 +330,7 @@ export const cardData = [
   {
     expandCode: false,
     title: "Card style 2",
-   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/cards/card-two/card-two.component.html",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
     <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1349,278 +1349,278 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     --cc-sbcard-type-text: var(--white);
   }`
   },
+  // {
+  //   expandCode: false,
+  //   title: "Card style 5",
+  //   description: "",
+  //   url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+  //   demoCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
+  //       <div class="sb--card__main-area">
+  //         <div class="sb--card__img">
+  //           <div class="img-container img-container--label" style="background-color: rgb(179, 235, 215)">
+  //             <label>AB</label>
+  //           </div>
+  //         </div>
+  //         <div class="sb--card__info">
+  //           <div class="d-flex flex-dr flex-jc-space-between">
+  //             <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
+  //             <div class="sb-label-badge">Admin</div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       <div class="sb--card__moreinfo">
+  //         <div class="sb--card__meta2 text-left">
+  //           <div class="sb--card__meta2_data sb__ellipsis sb__ellipsis--two" title="group?.description">group?.description</div>
+  //         </div>
+  //       </div>
+  //       </div>`,
+  //   copyCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
+  //       <div class="sb--card__main-area">
+  //         <div class="sb--card__img">
+  //           <div class="img-container img-container--label" style="background-color: rgb(179, 235, 215)">
+  //             <label>AB</label>
+  //           </div>
+  //         </div>
+  //         <div class="sb--card__info">
+  //           <div class="d-flex flex-dr flex-jc-space-between">
+  //             <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
+  //             <div class="sb-label-badge">Admin</div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       <div class="sb--card__moreinfo">
+  //         <div class="sb--card__meta2 text-left">
+  //           <div class="sb--card__meta2_data sb__ellipsis sb__ellipsis--two" title="group?.description">group?.description</div>
+  //         </div>
+  //       </div>
+  //       </div>`,
+  //   copyCSS: `.sb--card {
+  //       width: 100%;
+  //       background-color: var(--cc-sbcard-bg);
+  //       display: flex;
+  //       flex-direction: column;
+  //       cursor: pointer;
+  //       position: relative;
+  //       margin-top: 0px;
+  //       border: 0px;
+  //       contain: content;
+  //       border-radius: 0.125rem;
+  //     }
+  //     .sb--card:hover {
+  //       transform: translate(0, 0px);
+  //       box-shadow: 0 0.125rem 0.4375rem 0 rgba(var(--rc-rgba-black), 0.16);
+  //     }
+  //     @media (max-width: 767px) {
+  //       .sb--card {
+  //         box-shadow: 0 0.125rem 0.4375rem rgba(var(--rc-rgba-black), 0.16);
+  //       }
+  //     }
+  //     .sb--card__main-area {
+  //       display: flex;
+  //       flex-direction: row;
+  //       align-items: center;
+  //       height: 5.5rem;
+  //     }
+  //     .sb--card__title {
+  //         color: var(--cc-sbcard-title);
+  //         font-size: 0.875rem;
+  //         margin: 0px;
+  //         line-height: normal;
+  //       }
+  //     .sb--card__img {
+  //       height: 4.5rem;
+  //       width: 4.5rem;
+  //       overflow: hidden;
+  //       flex: 0 0 4.5rem;
+  //       margin: 0.5rem;
+  //     }
+  //     .sb--card__img .img-container {
+  //       display: flex;
+  //       align-items: center;
+  //       background-color: var(--cc-sbcard-img-container-bg);
+  //       height: 4.5rem;
+  //       width: 4.5rem;
+  //       justify-content: center;
+  //     }
+  //     .sb--card__img .img-container img {
+  //       max-width: 100%;
+  //     }
+  //     .sb--card__info {
+  //       flex: 1;
+  //       overflow: hidden;
+  //     }
+  //     [dir=ltr] .sb--card__info {
+  //       padding-right: 0.5rem;
+  //     }
+      
+  //     [dir=rtl] .sb--card__info {
+  //       padding-left: 0.5rem;
+  //     }
+  //     .sb--card__meta1 {
+  //       color: var(--cc-sbcard-meta-text);
+  //       font-size: 0.75rem;
+  //       display: flex;
+  //       flex-direction: row;
+  //       align-items: center;
+  //       flex: 1;
+  //       line-height: 1.25rem;
+  //       margin-top: 0.25rem;
+  //     }
+  //     .sb--card .data_1 {
+  //       max-width: 50%;
+  //     }
+  //     .sb--card .data_2 {
+  //       flex: 1;
+  //     }
+  //     .sb--card .dot-divider {
+  //       width: 0.25rem;
+  //       height: 0.25rem;
+  //       min-width: 0.25rem;
+  //       max-width: 0.25rem;
+  //       min-height: 0.25rem;
+  //       max-height: 0.25rem;
+  //       border-radius: 100%;
+  //       background-color: var(--cc-sbcard-dot-divider);
+  //       display: inline-block;
+  //       margin: 0px 0.5rem;
+  //     }
+  //     .sb--card__moreinfo {
+  //       border-radius: 0 0 0.125rem 0.125rem;
+  //       background-color: var(--cc-sbcard-moreinfo-bg);
+  //       display: flex;
+  //       flex-direction: row;
+  //       align-items: stretch;
+  //       justify-content: space-between;
+  //       border-top: 0px solid var(--cc-sbcard-moreinfo-bordertop);
+  //     }
+  //     .sb--card__meta2 {
+  //       color: var(--cc-sbcard-meta2-text);
+  //       font-size: 0.75rem;
+  //       line-height: 0.875rem;
+  //       display: flex;
+  //       flex-direction: column;
+  //       flex-wrap: wrap;
+  //       justify-content: space-around;
+  //       padding: 0.5rem;
+  //     }
+  //     .sb--card__meta2_data .label {
+  //       font-weight: normal;
+  //     }
+  //     .sb--card__meta2_data .value {
+  //       font-weight: bold;
+  //     }
+  //     .sb--card__org {
+  //       color: var(--cc-sbcard-org-text);
+  //     }
+  //     .sb--card__tags {
+  //       display: flex;
+  //       flex-direction: row;
+  //       align-items: center;
+  //       justify-content: flex-end;
+  //       flex: 1;
+  //     }
+  //     .sb--card__badge {
+  //       display: flex;
+  //       margin-right: 0.5rem;
+  //     }
+  //     html[dir=rtl] .sb--card__badge {
+  //       margin-right: 0;
+  //       margin-left: 0.5rem;
+  //     .sb--card__badge img {
+  //       width: 1.25rem;
+  //       height: 1.25rem;
+  //     }
+    
+  //     .sb--card:hover .card-hover,
+  //     .sb--card:focus-within .card-hover {
+  //       opacity: 1;
+  //       z-index: 1001;
+  //       display: block;
+  //     }
+  //     .sb--card:hover .card-hover .child-content,
+  //     .sb--card:focus-within .card-hover .child-content {
+  //       --cc-sbcard-hover-text: var(--white);
+  //       --cc-sbcard-hover-bg: var(--primary-color);
+  //       color: var(--cc-sbcard-hover-text);
+  //       position: absolute;
+  //       left: 0;
+  //       right: 0;
+  //       top: 0;
+  //       bottom: 0;
+  //       opacity: 0.95;
+  //       border-radius: 0.125rem;
+  //       background-color: var(--cc-sbcard-hover-bg);
+  //       z-index: 1;
+  //       display: flex;
+  //       align-items: center;
+  //       transition: 0.2s ease-in;
+  //       flex-direction: column;
+  //       justify-content: space-evenly;
+  //     }
+      
+  //     /* group card */
+  //     .sb--card__img .img-container--label {
+  //       text-transform: capitalize;
+  //       background-color: var(--cc-sbcard-img-label-bg);
+  //       color: var(--cc-sbcard-img-label);
+  //       position: relative;
+  //     }
+  //     .sb--card__img .img-container--label label {
+  //       margin-bottom: 0px;
+  //       padding-bottom: 0px;
+  //       font-size: 1.3125rem;
+  //       font-weight: bold;
+  //     }
+  //     .sb--card__img .img-container--label .img-container--badge {
+  //       position: absolute;
+  //       bottom: 0;
+  //       width: 100%;
+  //       background-color: var(--cc-sbcard-img-badge-bg);
+  //       color: var(--cc-sbcard-img-badge-text);
+  //       font-size: 0.75rem;
+  //       text-align: center;
+  //       margin-bottom: 0.5rem;
+  //       line-height: normal;
+  //       opacity: 0.6;
+  //     }
+      
+  //     .sb-label-badge {
+  //       font-size: 0.6875rem;
+  //       border: 1px solid var(--cc-sblabel-badge-br);
+  //       align-self: center;
+  //       padding: 0.25rem 0.5rem;
+  //       border-radius: 0.125rem;
+  //       color: var(--cc-sblabel-badge-text);
+  //       text-align: center;
+  //     }`,
+  //   copyVar: `:root {
+  //       --cc-sbcard-bg: var(--white);
+  //       --cc-sbcard-img-container-bg: var(--gray-100);
+  //       --cc-sbcard-title: var(--primary-color);
+  //       --cc-sbcard-meta-text: var(--gray-800);
+  //       --cc-sbcard-dot-divider: var(--gray-200);
+  //       --cc-sbcard-moreinfo-bg: none;
+  //       --cc-sbcard-moreinfo-bordertop: #cacbce;
+  //       --cc-sbcard-meta2-text: var(--gray-800);
+  //       --cc-sbcard-org-text: var(--gray-200);
+  //       --cc-sbcard-type-bg: var(--gray-200);
+  //       --cc-sbcard-type-text: var(--white);
+  //       --cc-sbcard-rv-img-container-bg: var(--gray-100);
+  //       --cc-sbcard-type-br: var(--gray-200);
+  //       /* group card */
+  //       --cc-sbcard-img-label: #284C3F;
+  //       --cc-sbcard-img-label-bg: #B3EBD7;
+  //       --cc-sbcard-img-badge-bg: var(--black);
+  //       --cc-sbcard-img-badge-text: var(--white);
+  //       --cc-sblabel-badge-br: var(--secondary-color);
+  //       --cc-sblabel-badge-text: var(--secondary-color);
+  //     }`
+  // },
   {
     expandCode: false,
     title: "Card style 5",
     description: "",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
-    demoCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
-        <div class="sb--card__main-area">
-          <div class="sb--card__img">
-            <div class="img-container img-container--label" style="background-color: rgb(179, 235, 215)">
-              <label>AB</label>
-            </div>
-          </div>
-          <div class="sb--card__info">
-            <div class="d-flex flex-dr flex-jc-space-between">
-              <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
-              <div class="sb-label-badge">Admin</div>
-            </div>
-          </div>
-        </div>
-        <div class="sb--card__moreinfo">
-          <div class="sb--card__meta2 text-left">
-            <div class="sb--card__meta2_data sb__ellipsis sb__ellipsis--two" title="group?.description">group?.description</div>
-          </div>
-        </div>
-        </div>`,
-    copyCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
-        <div class="sb--card__main-area">
-          <div class="sb--card__img">
-            <div class="img-container img-container--label" style="background-color: rgb(179, 235, 215)">
-              <label>AB</label>
-            </div>
-          </div>
-          <div class="sb--card__info">
-            <div class="d-flex flex-dr flex-jc-space-between">
-              <div class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="group?.name">group?.name</div>
-              <div class="sb-label-badge">Admin</div>
-            </div>
-          </div>
-        </div>
-        <div class="sb--card__moreinfo">
-          <div class="sb--card__meta2 text-left">
-            <div class="sb--card__meta2_data sb__ellipsis sb__ellipsis--two" title="group?.description">group?.description</div>
-          </div>
-        </div>
-        </div>`,
-    copyCSS: `.sb--card {
-        width: 100%;
-        background-color: var(--cc-sbcard-bg);
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
-        margin-top: 0px;
-        border: 0px;
-        contain: content;
-        border-radius: 0.125rem;
-      }
-      .sb--card:hover {
-        transform: translate(0, 0px);
-        box-shadow: 0 0.125rem 0.4375rem 0 rgba(var(--rc-rgba-black), 0.16);
-      }
-      @media (max-width: 767px) {
-        .sb--card {
-          box-shadow: 0 0.125rem 0.4375rem rgba(var(--rc-rgba-black), 0.16);
-        }
-      }
-      .sb--card__main-area {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 5.5rem;
-      }
-      .sb--card__title {
-          color: var(--cc-sbcard-title);
-          font-size: 0.875rem;
-          margin: 0px;
-          line-height: normal;
-        }
-      .sb--card__img {
-        height: 4.5rem;
-        width: 4.5rem;
-        overflow: hidden;
-        flex: 0 0 4.5rem;
-        margin: 0.5rem;
-      }
-      .sb--card__img .img-container {
-        display: flex;
-        align-items: center;
-        background-color: var(--cc-sbcard-img-container-bg);
-        height: 4.5rem;
-        width: 4.5rem;
-        justify-content: center;
-      }
-      .sb--card__img .img-container img {
-        max-width: 100%;
-      }
-      .sb--card__info {
-        flex: 1;
-        overflow: hidden;
-      }
-      [dir=ltr] .sb--card__info {
-        padding-right: 0.5rem;
-      }
-      
-      [dir=rtl] .sb--card__info {
-        padding-left: 0.5rem;
-      }
-      .sb--card__meta1 {
-        color: var(--cc-sbcard-meta-text);
-        font-size: 0.75rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex: 1;
-        line-height: 1.25rem;
-        margin-top: 0.25rem;
-      }
-      .sb--card .data_1 {
-        max-width: 50%;
-      }
-      .sb--card .data_2 {
-        flex: 1;
-      }
-      .sb--card .dot-divider {
-        width: 0.25rem;
-        height: 0.25rem;
-        min-width: 0.25rem;
-        max-width: 0.25rem;
-        min-height: 0.25rem;
-        max-height: 0.25rem;
-        border-radius: 100%;
-        background-color: var(--cc-sbcard-dot-divider);
-        display: inline-block;
-        margin: 0px 0.5rem;
-      }
-      .sb--card__moreinfo {
-        border-radius: 0 0 0.125rem 0.125rem;
-        background-color: var(--cc-sbcard-moreinfo-bg);
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: space-between;
-        border-top: 0px solid var(--cc-sbcard-moreinfo-bordertop);
-      }
-      .sb--card__meta2 {
-        color: var(--cc-sbcard-meta2-text);
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 0.5rem;
-      }
-      .sb--card__meta2_data .label {
-        font-weight: normal;
-      }
-      .sb--card__meta2_data .value {
-        font-weight: bold;
-      }
-      .sb--card__org {
-        color: var(--cc-sbcard-org-text);
-      }
-      .sb--card__tags {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        flex: 1;
-      }
-      .sb--card__badge {
-        display: flex;
-        margin-right: 0.5rem;
-      }
-      html[dir=rtl] .sb--card__badge {
-        margin-right: 0;
-        margin-left: 0.5rem;
-      .sb--card__badge img {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
-    
-      .sb--card:hover .card-hover,
-      .sb--card:focus-within .card-hover {
-        opacity: 1;
-        z-index: 1001;
-        display: block;
-      }
-      .sb--card:hover .card-hover .child-content,
-      .sb--card:focus-within .card-hover .child-content {
-        --cc-sbcard-hover-text: var(--white);
-        --cc-sbcard-hover-bg: var(--primary-color);
-        color: var(--cc-sbcard-hover-text);
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        opacity: 0.95;
-        border-radius: 0.125rem;
-        background-color: var(--cc-sbcard-hover-bg);
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        transition: 0.2s ease-in;
-        flex-direction: column;
-        justify-content: space-evenly;
-      }
-      
-      /* group card */
-      .sb--card__img .img-container--label {
-        text-transform: capitalize;
-        background-color: var(--cc-sbcard-img-label-bg);
-        color: var(--cc-sbcard-img-label);
-        position: relative;
-      }
-      .sb--card__img .img-container--label label {
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-        font-size: 1.3125rem;
-        font-weight: bold;
-      }
-      .sb--card__img .img-container--label .img-container--badge {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--cc-sbcard-img-badge-bg);
-        color: var(--cc-sbcard-img-badge-text);
-        font-size: 0.75rem;
-        text-align: center;
-        margin-bottom: 0.5rem;
-        line-height: normal;
-        opacity: 0.6;
-      }
-      
-      .sb-label-badge {
-        font-size: 0.6875rem;
-        border: 1px solid var(--cc-sblabel-badge-br);
-        align-self: center;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.125rem;
-        color: var(--cc-sblabel-badge-text);
-        text-align: center;
-      }`,
-    copyVar: `:root {
-        --cc-sbcard-bg: var(--white);
-        --cc-sbcard-img-container-bg: var(--gray-100);
-        --cc-sbcard-title: var(--primary-color);
-        --cc-sbcard-meta-text: var(--gray-800);
-        --cc-sbcard-dot-divider: var(--gray-200);
-        --cc-sbcard-moreinfo-bg: none;
-        --cc-sbcard-moreinfo-bordertop: #cacbce;
-        --cc-sbcard-meta2-text: var(--gray-800);
-        --cc-sbcard-org-text: var(--gray-200);
-        --cc-sbcard-type-bg: var(--gray-200);
-        --cc-sbcard-type-text: var(--white);
-        --cc-sbcard-rv-img-container-bg: var(--gray-100);
-        --cc-sbcard-type-br: var(--gray-200);
-        /* group card */
-        --cc-sbcard-img-label: #284C3F;
-        --cc-sbcard-img-label-bg: #B3EBD7;
-        --cc-sbcard-img-badge-bg: var(--black);
-        --cc-sbcard-img-badge-text: var(--white);
-        --cc-sblabel-badge-br: var(--secondary-color);
-        --cc-sblabel-badge-text: var(--secondary-color);
-      }`
-  },
-  {
-    expandCode: false,
-    title: "Card style 6",
-    description: "",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/cards/card-five/card-five.component.html",
     demoCode: `
       <div class="sb--card sb--card--course" tabindex="0">
         <div class="sb--card__main-area">
@@ -1630,9 +1630,9 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
             </div>
           </div>
           <div class="sb--card__info">
-            <h4 class="sb--card__title sb__ellipsis sb__ellipsis--two text-left flex-basis-1" title="Dashboard Loadtest">Dashboard Loadtest</h4>
+            <h4 class="sb--card__title sb__ellipsis sb__ellipsis--two text-left flex-basis-1" title="Card Title">Card Title</h4>
             <div class="sb--card__meta1 text-left">
-              <span class="data_1 sb__ellipsis sb__ellipsis--two" title="Pre-prod Custodian Organization">Pre-prod Custodian Organization</span>
+              <span class="data_1 sb__ellipsis sb__ellipsis--two" title="Card description">Card description</span>
             </div>
           </div>
         </div> 
@@ -1752,422 +1752,237 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     }
     `
   },
-  {
-    expandCode: false,
-    title: "Card style 7",
-    description: ``,
-    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
-    demoCode: `
-    <div class="sb--card sb--card--course" tabindex="0">
-    <div class="sb--card__main-area">
-      <div class="sb--card__img">
-        <div class="img-container">
-          <img [src]="cardImg" alt="">
-        </div>
-      </div>
-      <div class="sb--card__info">
-        <h4 class="sb--card__title sb__ellipsis sb__ellipsis--two text-left flex-basis-1" title="Dashboard Loadtest">Dashboard Loadtest</h4>
-        <div class="sb--card__meta1 text-left">
-          <span class="data_1 sb__ellipsis sb__ellipsis--two" title="Pre-prod Custodian Organization">Pre-prod Custodian Organization</span>
-        </div>
-      </div>
-    </div> 
-  </div>
-        `,
-    copyCode: `
-        <div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
-          <div class="sb--card__main-area">
-            <div class="sb--card__info pl-8">
-              <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
-              <div class="sb--card__meta1 text-left">
-                <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
-              </div>
-            </div>
-            <!-- card img -->
-            <div class="sb--card__img">
-              <div class="img-container">
-                <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        `,
-    copyCSS: `
-        .sb--card {
-          width: 100%;
-          background-color: var(--cc-sbcard-bg);
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          position: relative;
-          margin-top: 0px;
-          border: 0px;
-          contain: content;
-          border-radius: 0.125rem;
-        }
-        .sb--card__main-area {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 5.5rem;
-        }
-        .sb--card__info {
-          padding: 0 0.5rem 0 0;
-          flex: 1;
-          overflow: hidden;
-        }
-        .sb--card__title {
-          color: var(--cc-sbcard-title);
-          font-size: 0.875rem;
-          margin: 0px;
-          line-height: normal;
-          line-height: 1.25rem;
-          font-weight:bold;
-        }
-        .sb--card__info {
-          flex: 1;
-          overflow: hidden;
-        }
-        .sb__ellipsis {
-          -webkit-box-orient: vertical;
-          display: block;
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-box;
-          -webkit-line-clamp: 1;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          word-break: break-word;
-        }
-        .sb__ellipsis--three {
-          -webkit-line-clamp: 3;
-        }
-        .sb--card__meta1 {
-          color: var(--cc-sbcard-meta-text);
-          font-size: 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          flex: 1;
-          line-height: 1.25rem;
-          margin-top: 0.25rem;
-        }
-        .sb--card .data_1 {
-          max-width: 50%;
-        }
-        .ellipsis {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          cursor: pointer;
-        }
-        `,
-    copyVar: `
-      :root {
-        --cc-sbcard-bg: var(--white);
-        --cc-sbcard-title: var(--primary-color);
-        --cc-sbcard-meta-text: var(--gray-800);
-      }`
-  },
-  {
-    expandCode: false,
-    title: "Card style 8",
-    description: ``,
-    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
-    demoCode: `<div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
-    <div class="sb--card__main-area">
-      <div class="sb--card__info pl-8">
-        <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
-        <div class="sb--card__meta1 text-left">
-          <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
-        </div>
-      </div>
-      <!-- card img -->
-      <div class="sb--card__img">
-        <div class="img-container">
-          <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>`,
-    copycode: `<div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
-  <div class="sb--card__main-area">
-    <div class="sb--card__info pl-8">
-      <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
-      <div class="sb--card__meta1 text-left">
-        <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
-      </div>
-    </div>
-    <!-- card img -->
-    <div class="sb--card__img">
-      <div class="img-container">
-        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-      </div>
-    </div>
-  </div>
-</div>`,
-    copyCSS: `
-        .sb--card {
-          width: 100%;
-          background-color: var(--cc-sbcard-bg);
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          position: relative;
-          margin-top: 0px;
-          border: 0px;
-          contain: content;
-          border-radius: 0.125rem;
-        }
-        .sb--card__main-area {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 5.5rem;
-        }
-        .sb--card__info {
-          padding: 0 0.5rem 0 0;
-          flex: 1;
-          overflow: hidden;
-        }
-        .sb--card__title {
-          color: var(--cc-sbcard-title);
-          font-size: 0.875rem;
-          margin: 0px;
-          line-height: normal;
-          line-height: 1.25rem;
-          font-weight:bold;
-        }
-        .sb--card__info {
-          flex: 1;
-          overflow: hidden;
-        }
-        .sb__ellipsis {
-          -webkit-box-orient: vertical;
-          display: block;
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-box;
-          -webkit-line-clamp: 1;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          word-break: break-word;
-        }
-        .sb__ellipsis--three {
-          -webkit-line-clamp: 3;
-        }
-        .sb--card__meta1 {
-          color: var(--cc-sbcard-meta-text);
-          font-size: 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          flex: 1;
-          line-height: 1.25rem;
-          margin-top: 0.25rem;
-        }
-        .sb--card .data_1 {
-          max-width: 50%;
-        }
-        .ellipsis {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          cursor: pointer;
-        }
-        `,
-    copyVar: `
-      :root {
-        --cc-sbcard-bg: var(--white);
-        --cc-sbcard-title: var(--primary-color);
-        --cc-sbcard-meta-text: var(--gray-800);
-      }`
-  },
-  {
-    expandCode: false,
-    title: "Card style 9",
-    description: ``,
-    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
-    demoCode: `<div class="sb--card sb--card--course" tabindex="0">
-    <div class="sb--card__main-area">
-      <div class="sb--card__img">
-        <div class="img-container">
-          <img src="https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_21278859656586035211271/artifact/1200x1023_1560751586952.thumb.jpg" alt="">
-        </div>
-      </div>
-      <div class="sb--container-box">
-        <div class="sb--card__info">
-          <div class="sb--holder">
-            <h4 class="sb--card__title sb__ellipsis  sb__ellipsis--three text-left" title="vk-allcontentcourse">vk-allcontentcourse</h4>
-            <div class="sb--card__meta1 text-left">
-              <span class="data_1 ellipsis" title=""> <span>publishedByText : </span> Odisha</span>
-            </div>
-          </div>
-        </div>
-        <div class="sb--card__progressbar">
-          <span [ngStyle]="fetchProgress()"></span>
-        </div>
-      </div>
-    </div>
-  </div>`,
-    copycode: `<div class="sb--card sb--card--course" tabindex="0">
-    <div class="sb--card__main-area">
-      <div class="sb--card__img">
-        <div class="img-container">
-          <img src="https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_21278859656586035211271/artifact/1200x1023_1560751586952.thumb.jpg" alt="">
-        </div>
-      </div>
-      <div class="sb--container-box">
-        <div class="sb--card__info">
-          <div class="sb--holder">
-            <h4 class="sb--card__title sb__ellipsis  sb__ellipsis--three text-left" title="vk-allcontentcourse">vk-allcontentcourse</h4>
-            <div class="sb--card__meta1 text-left">
-              <span class="data_1 ellipsis" title=""> <span>publishedByText : </span> Odisha</span>
-            </div>
-          </div>
-        </div>
-        <div class="sb--card__progressbar">
-          <span [ngStyle]="fetchProgress()"></span>
-        </div>
-      </div>
-    </div>
-  </div>`,
-    copyCSS: `
-    .sb--card {
-        width: 100%;
-        background-color: var(--cc-sbcard-bg);
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
-        margin-top: 0px;
-        border: 0px;
-        contain: content;
-        border-radius: 0.125rem;
-      }
-      .sb--card__main-area {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 5.5rem;
-      }
-      .sb--card__img {
-        height: 4.5rem;
-        width: 4.5rem;
-        overflow: hidden;
-        flex: 0 0 4.5rem;
-        margin: 0.5rem;
-      }
-      .sb--card__img .img-container {
-        display: flex;
-        align-items: center;
-        background-color: var(--cc-sbcard-img-container-bg);
-        height: 4.5rem;
-        width: 4.5rem;
-        justify-content: center;
-      }
-      .sb--card__img .img-container img {
-        max-width: 100%;
-      }
-      .sb--card--course .sb--container-box {
-        min-width: 0;
-        flex: 1;
-        padding-right: 0.5rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .sb--card--course .sb--container-box .sb--card__info {
-        padding: 0rem 0rem 0rem 0rem;
-        display: flex;
-        align-items: center;
-      }
-      .sb--card__info {
-        flex: 1;
-        overflow: hidden;
-      }
-      [dir=ltr] .sb--card__info {
-        padding-right: 0.5rem;
-      }
-      .sb--card--course .sb--container-box .sb--holder {
-        flex: 1;
-        min-width: 0;
-      }
-      .sb--card__title {
-        color: var(--cc-sbcard-title);
-        font-size: 0.875rem;
-        margin: 0px;
-        line-height: normal;
-      }
-      .sb__ellipsis {
-        -webkit-box-orient: vertical;
-        display: block;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-box;
-        -webkit-line-clamp: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: break-word;
-      }
-      .sb__ellipsis--three {
-        -webkit-line-clamp: 3;
-      }
-      .text-left {
-        text-align: left !important;
-      }
-      .sb--card__meta1 {
-        color: var(--cc-sbcard-meta-text);
-        font-size: 0.75rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex: 1;
-        line-height: 1.25rem;
-        margin-top: 0.25rem;
-      }
-      .sb--card--course .sb--card__meta1 {
-        --cc-sbcard-meta1: var(--gray-400);
-        color: var(--cc-sbcard-meta1);
-        line-height: 1rem;
-      }
-      .ellipsis {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        cursor: pointer;
-      }
-      .sb--card--course .data_1 {
-        max-width: 100% !important;
-      }
-      .sb--card__progressbar {
-        height: 0.25rem;
-        margin: 0px 0 0px;
-        border-radius: 0px;
-        box-shadow: inset 0 -0.0625rem 0.0625rem rgba(var(--rc-rgba-white), 0.3);
-        width: 100%;
-        background: var(--cc-sbcard-card__progressbar-bg);
-      }
-      .sb--card__progressbar > span {
-        display: block;
-        height: 100%;
-        background-color: var(--cc-sbcard-card__progressbar-span-bg);
-        background-image: -webkit-gradient(center bottom, var(--secondary-400), var(--secondary-200));
-        box-shadow: inset 0 0.125rem 0.5625rem var(--gray-100), inset 0 -0.125rem 0.375rem rgba(var(--rc-rgba-black), 0.4);
-        position: relative;
-        overflow: hidden;
-      }
-        `,
-    copyVar: `
-      :root {
-        --cc-sbcard-bg: var(--white);
-      --cc-sbcard-img-container-bg: var(--gray-100);
-      --cc-sbcard-meta-text: var(--gray-800);
-      --cc-sbcard-card__progressbar-bg: var(--gray-100);
-      --cc-sbcard-card__progressbar-span-bg: var(--secondary-200);
-      }`
-  },
+  // {
+  //   expandCode: false,
+  //   title: "Card style 7",
+  //   description: ``,
+  //   url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+  //   demoCode: `
+  //   <div class="sb--card sb--card--course" tabindex="0">
+  //   <div class="sb--card__main-area">
+  //     <div class="sb--card__img">
+  //       <div class="img-container">
+  //         <img [src]="cardImg" alt="">
+  //       </div>
+  //     </div>
+  //     <div class="sb--card__info">
+  //       <h4 class="sb--card__title sb__ellipsis sb__ellipsis--two text-left flex-basis-1" title="Dashboard Loadtest">Dashboard Loadtest</h4>
+  //       <div class="sb--card__meta1 text-left">
+  //         <span class="data_1 sb__ellipsis sb__ellipsis--two" title="Pre-prod Custodian Organization">Pre-prod Custodian Organization</span>
+  //       </div>
+  //     </div>
+  //   </div> 
+  // </div>
+  //       `,
+  //   copyCode: `
+  //       <div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
+  //         <div class="sb--card__main-area">
+  //           <div class="sb--card__info pl-8">
+  //             <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
+  //             <div class="sb--card__meta1 text-left">
+  //               <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
+  //             </div>
+  //           </div>
+  //           <!-- card img -->
+  //           <div class="sb--card__img">
+  //             <div class="img-container">
+  //               <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       `,
+  //   copyCSS: `
+  //       .sb--card {
+  //         width: 100%;
+  //         background-color: var(--cc-sbcard-bg);
+  //         display: flex;
+  //         flex-direction: column;
+  //         cursor: pointer;
+  //         position: relative;
+  //         margin-top: 0px;
+  //         border: 0px;
+  //         contain: content;
+  //         border-radius: 0.125rem;
+  //       }
+  //       .sb--card__main-area {
+  //         display: flex;
+  //         flex-direction: row;
+  //         align-items: center;
+  //         height: 5.5rem;
+  //       }
+  //       .sb--card__info {
+  //         padding: 0 0.5rem 0 0;
+  //         flex: 1;
+  //         overflow: hidden;
+  //       }
+  //       .sb--card__title {
+  //         color: var(--cc-sbcard-title);
+  //         font-size: 0.875rem;
+  //         margin: 0px;
+  //         line-height: normal;
+  //         line-height: 1.25rem;
+  //         font-weight:bold;
+  //       }
+  //       .sb--card__info {
+  //         flex: 1;
+  //         overflow: hidden;
+  //       }
+  //       .sb__ellipsis {
+  //         -webkit-box-orient: vertical;
+  //         display: block;
+  //         display: -webkit-box;
+  //         display: -moz-box;
+  //         display: -ms-box;
+  //         -webkit-line-clamp: 1;
+  //         overflow: hidden;
+  //         text-overflow: ellipsis;
+  //         word-break: break-word;
+  //       }
+  //       .sb__ellipsis--three {
+  //         -webkit-line-clamp: 3;
+  //       }
+  //       .sb--card__meta1 {
+  //         color: var(--cc-sbcard-meta-text);
+  //         font-size: 0.75rem;
+  //         display: flex;
+  //         flex-direction: row;
+  //         align-items: center;
+  //         flex: 1;
+  //         line-height: 1.25rem;
+  //         margin-top: 0.25rem;
+  //       }
+  //       .sb--card .data_1 {
+  //         max-width: 50%;
+  //       }
+  //       .ellipsis {
+  //         white-space: nowrap;
+  //         overflow: hidden;
+  //         text-overflow: ellipsis;
+  //         cursor: pointer;
+  //       }
+  //       `,
+  //   copyVar: `
+  //     :root {
+  //       --cc-sbcard-bg: var(--white);
+  //       --cc-sbcard-title: var(--primary-color);
+  //       --cc-sbcard-meta-text: var(--gray-800);
+  //     }`
+  // },
+//   {
+//     expandCode: false,
+//     title: "Card style 8",
+//     description: ``,
+//     url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+//     demoCode: `<div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
+//     <div class="sb--card__main-area">
+//       <div class="sb--card__info pl-8">
+//         <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
+//         <div class="sb--card__meta1 text-left">
+//           <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
+//         </div>
+//       </div>
+//       <!-- card img -->
+//       <div class="sb--card__img">
+//         <div class="img-container">
+//           <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+//         </div>
+//       </div>
+//     </div>
+//   </div>`,
+//     copycode: `<div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
+//   <div class="sb--card__main-area">
+//     <div class="sb--card__info pl-8">
+//       <h4 class="sb--card__title sb__ellipsis sb__ellipsis--three text-left" title="{{title}}" style="color: rgb(47, 39, 185)">Practice question set</h4>
+//       <div class="sb--card__meta1 text-left">
+//         <span class="data_1 ellipsis" title="{{subTitle}}">Sub Title</span>
+//       </div>
+//     </div>
+//     <!-- card img -->
+//     <div class="sb--card__img">
+//       <div class="img-container">
+//         <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+//       </div>
+//     </div>
+//   </div>
+// </div>`,
+//     copyCSS: `
+//         .sb--card {
+//           width: 100%;
+//           background-color: var(--cc-sbcard-bg);
+//           display: flex;
+//           flex-direction: column;
+//           cursor: pointer;
+//           position: relative;
+//           margin-top: 0px;
+//           border: 0px;
+//           contain: content;
+//           border-radius: 0.125rem;
+//         }
+//         .sb--card__main-area {
+//           display: flex;
+//           flex-direction: row;
+//           align-items: center;
+//           height: 5.5rem;
+//         }
+//         .sb--card__info {
+//           padding: 0 0.5rem 0 0;
+//           flex: 1;
+//           overflow: hidden;
+//         }
+//         .sb--card__title {
+//           color: var(--cc-sbcard-title);
+//           font-size: 0.875rem;
+//           margin: 0px;
+//           line-height: normal;
+//           line-height: 1.25rem;
+//           font-weight:bold;
+//         }
+//         .sb--card__info {
+//           flex: 1;
+//           overflow: hidden;
+//         }
+//         .sb__ellipsis {
+//           -webkit-box-orient: vertical;
+//           display: block;
+//           display: -webkit-box;
+//           display: -moz-box;
+//           display: -ms-box;
+//           -webkit-line-clamp: 1;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//           word-break: break-word;
+//         }
+//         .sb__ellipsis--three {
+//           -webkit-line-clamp: 3;
+//         }
+//         .sb--card__meta1 {
+//           color: var(--cc-sbcard-meta-text);
+//           font-size: 0.75rem;
+//           display: flex;
+//           flex-direction: row;
+//           align-items: center;
+//           flex: 1;
+//           line-height: 1.25rem;
+//           margin-top: 0.25rem;
+//         }
+//         .sb--card .data_1 {
+//           max-width: 50%;
+//         }
+//         .ellipsis {
+//           white-space: nowrap;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//           cursor: pointer;
+//         }
+//         `,
+//     copyVar: `
+//       :root {
+//         --cc-sbcard-bg: var(--white);
+//         --cc-sbcard-title: var(--primary-color);
+//         --cc-sbcard-meta-text: var(--gray-800);
+//       }`
+//   },
   // {
   //   expandCode: false,
   //   id: "psection2",

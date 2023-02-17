@@ -41,15 +41,15 @@ export class FooterComponent implements OnInit {
           </ul>
         </div>
 
-        <div class="download-diksha">
-          <div class="diksha-logo p-16">
+        <div class="download-sunbird">
+          <div class="sunbird-logo p-16">
             <div class="mobile-circles">
               <div class="big-box border-round border-r50"></div>
               <div class="oval-box border-round ml-16"></div>
               <div class="small-box border-round border-r50 ml-24 mr-8"></div>
               <div class="small-box border-round border-r50"></div>
             </div>
-            <label class="d-block mb-8">Download DIKSHA for Mobile</label>
+            <label class="d-block mb-8">Download sunbird for Mobile</label>
             <a href="javascript:void(0)" class="d-block pb-8 app-download">
               <img class="playStore-img" src="assets/images/google_playstore.png" alt="">
             </a>
@@ -61,12 +61,12 @@ export class FooterComponent implements OnInit {
           <label class="d-block mb-8">
             Contact for queries:
           </label>
-          <a  href="mailto:support@diksha-ncte.freshdesk.com" class="d-block mb-32">
-            support@diksha-ncte.freshdesk.com
+          <a  href="mailto:support@sunbird-ncte.freshdesk.com" class="d-block mb-32">
+            support@sunbird-ncte.freshdesk.com
           </a>
           <label class="d-block">
             <a href="javascript:void(0)">Terms of use</a>
-            <span>| &copy; 2019, DIKSHA</span>
+            <span>| &copy; 2019, sunbird</span>
           </label>
         </div>
       </div>
@@ -95,15 +95,15 @@ export class FooterComponent implements OnInit {
           </ul>
         </div>
 
-        <div class="download-diksha">
-          <div class="diksha-logo p-16">
+        <div class="download-sunbird">
+          <div class="sunbird-logo p-16">
             <div class="mobile-circles">
               <div class="big-box border-round border-r50"></div>
               <div class="oval-box border-round ml-16"></div>
               <div class="small-box border-round border-r50 ml-24 mr-8"></div>
               <div class="small-box border-round border-r50"></div>
             </div>
-            <label class="d-block mb-8">Download DIKSHA for Mobile</label>
+            <label class="d-block mb-8">Download sunbird for Mobile</label>
             <a href="javascript:void(0)" class="d-block pb-8 app-download">
               <img class="playStore-img" src="assets/images/google_playstore.png" alt="">
             </a>
@@ -115,12 +115,12 @@ export class FooterComponent implements OnInit {
           <label class="d-block mb-8">
             Contact for queries:
           </label>
-          <a  href="mailto:support@diksha-ncte.freshdesk.com" class="d-block mb-32">
-            support@diksha-ncte.freshdesk.com
+          <a  href="mailto:support@sunbird-ncte.freshdesk.com" class="d-block mb-32">
+            support@sunbird-ncte.freshdesk.com
           </a>
           <label class="d-block">
             <a href="javascript:void(0)">Terms of use</a>
-            <span>| &copy; 2019, DIKSHA</span>
+            <span>| &copy; 2019, sunbird</span>
           </label>
         </div>
       </div>
