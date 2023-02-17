@@ -929,7 +929,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
   {
     expandCode: false,
     title: "Card style 3",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--theme2 sb--card--v3" role="link" tabindex="0">
   <div class="sb--card__main-area">
       <!-- card img -->
@@ -1122,7 +1122,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
   {
     expandCode: false,
     title: "Card style 4",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--theme2 sb--card--v4" tabindex="0">
   <div class="sb--card__main-area">
     <!-- card img -->
