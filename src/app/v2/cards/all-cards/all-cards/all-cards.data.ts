@@ -2,7 +2,7 @@ export const cardData = [
   {
     expandCode: false,
     title: "Card style 1",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card" tabindex="0" role="button">
                   <div class="sb--card__main-area">
                       <!-- card img -->
@@ -330,7 +330,7 @@ export const cardData = [
   {
     expandCode: false,
     title: "Card style 2",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--theme2" role="link" tabindex="0">
     <svg width="79px" class="sb--card-svg-tail" height="36px" viewBox="0 0 79 36" version="1.1"
       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -929,7 +929,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
   {
     expandCode: false,
     title: "Card style 3",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--theme2 sb--card--v3" role="link" tabindex="0">
   <div class="sb--card__main-area">
       <!-- card img -->
@@ -1122,7 +1122,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
   {
     expandCode: false,
     title: "Card style 4",
-    url: "https://stackblitz.com/edit/angular-router-basic-example-wkxsa9?file=app/app.component.html",
+   url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--theme2 sb--card--v4" tabindex="0">
   <div class="sb--card__main-area">
     <!-- card img -->
@@ -1353,7 +1353,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     expandCode: false,
     title: "Card style 5",
     description: "",
-    url: "https://stackblitz.com/edit/bootstrap-5-gdbtdz?file=src/component2.html",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card" title="group?.name" attr.aria-label="group?.name" role="link" tabindex="0">
         <div class="sb--card__main-area">
           <div class="sb--card__img">
@@ -1620,7 +1620,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     expandCode: false,
     title: "Card style 6",
     description: "",
-    url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `
       <div class="sb--card sb--card--course" tabindex="0">
         <div class="sb--card__main-area">
@@ -1756,7 +1756,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     expandCode: false,
     title: "Card style 7",
     description: ``,
-    url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `
     <div class="sb--card sb--card--course" tabindex="0">
     <div class="sb--card__main-area">
@@ -1873,7 +1873,7 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
     expandCode: false,
     title: "Card style 8",
     description: ``,
-    url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--course--curiculum" tabindex="0" style="background: rgb(218, 212, 255)">
     <div class="sb--card__main-area">
       <div class="sb--card__info pl-8">
@@ -1982,11 +1982,12 @@ html[dir=rtl] .sb--card.sb--card--theme2 .sb--card__title {
         --cc-sbcard-title: var(--primary-color);
         --cc-sbcard-meta-text: var(--gray-800);
       }`
-  },  {
+  },
+  {
     expandCode: false,
     title: "Card style 9",
     description: ``,
-    url: "https://stackblitz.com/edit/web-platform-m2whsk?file=cards/groups/basic/index.html",
+    url: "https://stackblitz.com/edit/angular-router-basic-example-pogmh9?file=app/app.routing.module.ts",
     demoCode: `<div class="sb--card sb--card--course" tabindex="0">
     <div class="sb--card__main-area">
       <div class="sb--card__img">
