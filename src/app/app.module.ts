@@ -122,7 +122,7 @@ import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-ban
 import { BatchComponentComponent } from './batch-component/batch-component.component';
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
 import { CountdownModule } from 'ngx-countdown';
-import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
+import { sunbirdWebAppComponent } from './sunbird-web-app/sunbird-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 import { StateCertificateComponent } from './state-certificate/state-certificate.component';
 import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
@@ -248,9 +248,9 @@ export function hljsLanguages() {
     MaintenanceBannerComponent,
     BatchComponentComponent,
     BatchCertificateComponent,
-    DikshaWebAppComponent,
+    sunbirdWebAppComponent,
     ButtonsNewComponent,
-    DikshaWebAppComponent,
+    sunbirdWebAppComponent,
     StateCertificateComponent,
     CClibraryCardComponent,
     CardsComponent2,
