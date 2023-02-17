@@ -1,12 +1,12 @@
-<div class="d-flex">
-<div class="w-80">
+<div class="d-flex" >
+  <div class="w-80">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus excepturi est aliquid cum error repellendus dolorum! Perferendis, nostrum ea veniam deleniti minus, quidem quos aliquam repellendus natus animi nihil iusto.</p>
   <div class="note">
     <p class="mb-0 sb-color-gray-800"><i class="fa-solid fa-circle-info"></i> Required to configure git <a href="https://github.com/Sunbird-Ed/sb-styles">'sb-styles'</a> & <a href="https://github.com/Sunbird-Ed/sb-themes">'sb-themes'</a> repositories to get the utitlity styling.</p>
     </div>
     <!--Page Content-->
-    <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
-        <section id="{{section.id}}"></section>
+    <section class="docs-sections ComponentBlock" id="{{section.id}}" *ngFor="let section of sections;">
+        <!-- <section id="{{section.id}}"></section> -->
         <h4 class="docs-sectionHeading">
           <span>{{section.title}}</span>
           <span class="pull-right">
@@ -68,7 +68,7 @@
         </div>
         <!--/Display code-->
         
-      </div>
+      </section>
       <!--Page Content-->
 </div>
 
@@ -76,7 +76,6 @@
   <h3 class="mb-16">In this Group Card</h3>
   <!-- <ul>
     <li>About [{{ currentSection }}]</li>
-
     <li (click)="scrollTo('psection1')" [ngClass]="{ 'current-section': currentSection === 'psection1' }">Basic</li>
     <li (click)="scrollTo('psection2')" [ngClass]="{ 'current-section': currentSection === 'psection2' }">Profile/Image</li>
     <li (click)="scrollTo('psection3')" [ngClass]="{ 'current-section': currentSection === 'psection3' }">Admin & Suspend enabled</li>
@@ -86,20 +85,37 @@
   </ul> -->
   <nav class="section-nav">
 		<ol>
-			<li><a href="#psection1" aria-current="step">Basic</a></li>
+			<li><a href="#psection1">Basic</a></li>
 			<li><a href="#psection2">Profile/Image</a></li>
 			<li><a href="#psection3">Admin & Suspend enabled</a></li>
-			<li><a href="#psection4">Mobile enabled</a>
-				<!-- <ul>
-					<li class=""><a href="#endpoints--root">Root</a></li>
-				</ul> -->
-			</li>
+			<li><a href="#psection4">Mobile enabled</a></li>
 			<li class=""><a href="#psection5">Web enabled</a></li>
       <li class=""><a href="#psection6">Desktop enabled</a></li>
 		</ol>
 	</nav>
+
+  <!-- <nav class="section-nav">
+		<ol>
+			<li><a routerLink="psection1" queryParamsHandling="preserve"
+        routerLinkActive="active">Basic</a></li>
+			<li><a routerLink="psection2"
+        routerLinkActive="active">Profile/Image</a></li>
+			<li><a routerLink="#psection3"
+        routerLinkActive="active">Admin & Suspend enabled</a></li>
+			<li><a routerLink="#psection4"
+        routerLinkActive="active">Mobile enabled</a>
+		
+			</li>
+			<li><a routerLink="#psection5"
+        routerLinkActive="active">Web enabled</a></li>
+      <li><a routerLink="#psection6"
+        routerLinkActive="active">Desktop enabled</a></li>
+		</ol>
+	</nav> -->
+
 </div>
 </div>
+
 
 <style>
   html {
@@ -112,29 +128,29 @@
 	top: 2rem; */
 	align-self: start;
 }
-/* .pageSection-stickybar > nav ol {list-style: none;} */
+.pageSection-stickybar > nav ol {list-style: none;} */
 /* 3. ScrollSpy active styles (see JS tab for activation) */
-/* .section-nav li.active > a {
+.section-nav li.active > a {
 	color: #333;
 	font-weight: 500;
-} */
+}
 
 /* Sidebar Navigation */
-/* .section-nav {
+.section-nav {
 	padding-left: 0;
 	border-left: 1px solid #efefef;
-} */
+}
 
-/* .section-nav a {
+.section-nav a {
 	text-decoration: none;
 	display: block;
 	padding: .125rem 0;
 	color: #ccc;
 	transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
-/* } */
+ }
 
-/* .section-nav a:hover,
+.section-nav a:hover,
 .section-nav a:focus {
 	color: #666;
-} */
+}
 </style>

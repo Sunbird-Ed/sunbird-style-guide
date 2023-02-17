@@ -25,6 +25,9 @@ body,
 html {
   height: 100%;
 }
+body {
+  padding-top:5.75rem;
+}
 
 .docs-body {
   display: flex;
@@ -146,7 +149,7 @@ html {
   }
 
   .docs-content {
-    padding: calculateRem(140px) calculateRem(60px) calculateRem(60px) calculateRem(280px);
+    padding: 0 calculateRem(60px) calculateRem(60px) calculateRem(280px);
     width: 100vw;
     min-height: 100vh;
     // height: auto;
@@ -645,51 +648,90 @@ body ::-webkit-scrollbar {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0px;
-    letter-spacing: calculateRem(1.5px);
+    letter-spacing: calculateRem(1.5px);    line-height: normal;
+    margin-bottom: 1rem;
   }
 
-  ol,
-  ul {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    list-style: none;
-    padding-left: 0;
+  // ol,
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  //   font-size: 1rem;
+  //   list-style: none;
+  //   padding-left: 0;
 
-    li {
-      list-style: none;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+  //   li {
+  //     list-style: none;
+  //     margin: 0;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: flex-start;
 
-      a {
-        &:not(.button) {
-          border-left: calculateRem(2px) solid var(--gray-300);
-          color: var(--gray-800);
-          display: block;
-          padding: 0.5rem 1rem;
-          text-decoration: none;
-        }
+  //     a {
+  //       &:not(.button) {
+  //         border-left: calculateRem(2px) solid var(--gray-300);
+  //         color: var(--gray-800);
+  //         display: block;
+  //         padding: 0.5rem 1rem;
+  //         text-decoration: none;
+  //       }
 
-        &:not(.button):hover {
-          color: var(--primary-400);
-          font-weight: 600;
-        }
+  //       &:not(.button):hover {
+  //         color: var(--primary-400);
+  //         font-weight: 600;
+  //       }
 
-        &:not(.button):active {
-          background: var(--primary-250);
-          border-left: calculateRem(4px) solid var(--primary-400);
-          color: var(--gray-600);
-          font-weight: 600;
-        }
-       &:not(.button)[aria-current]:not([aria-current=""]){
-          background: var(--primary-250);
-          border-left: 4px solid var(--primary-400);
-          color: var(--gray-600);
-          font-weight: 600;
-        }
-      }
-    }
+  //       &:not(.button):active {
+  //         background: var(--primary-250);
+  //         border-left: calculateRem(4px) solid var(--primary-400);
+  //         color: var(--gray-600);
+  //         font-weight: 600;
+  //       }
+  //      &:not(.button)[aria-current]:not([aria-current=""]){
+  //         background: var(--primary-250);
+  //         border-left: 4px solid var(--primary-400);
+  //         color: var(--gray-600);
+  //         font-weight: 600;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+.pageSection-stickybar > nav {
+  /* position: sticky;
+  top: 2rem; */
+  align-self: start;
+}
+.pageSection-stickybar > nav ul {list-style: none;
+padding-left: 0;} 
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav li{
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #333;
+  transition: all 50ms ease-in-out;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+  padding-bottom: 0.5rem;
+  &.active, &:hover, &:focus{
+    color: var(--primary-color);
+    font-weight: 500;color: var(--primary-color);cursor: pointer;
+    border-left: 2px solid var(--primary-color);
   }
+
 }

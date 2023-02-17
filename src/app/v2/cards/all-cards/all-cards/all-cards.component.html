@@ -1,7 +1,7 @@
-<div class="d-flex" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+<div class="d-flex" ScrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
     <div class="w-80">
         <!--Page Content-->
-        <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
+        <div class="docs-sections ComponentBlock" id="{{'section' + i }}" *ngFor="let section of sections; let i = index">
 
             <h4 class="docs-sectionHeading">
                 <span>{{section.title}}</span>
@@ -44,25 +44,25 @@
                     </div>
                     <div class="ui bottom attached segment" suiTabContent="2">
                         <!--Copy code button-->
-                        <button ngxClipboard [cbContent]="section.copyCode2"
+                        <button ngxClipboard [cbContent]="section.copyCSS"
                             class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
                         <!--/Copy code button-->
 
                         <!--Copy code display-->
                         <pre>
-                <code [highlight]="section.copyCode2"></code>
+                <code [highlight]="section.copyCSS"></code>
               </pre>
                         <!--/Copy code display-->
                     </div>
                     <div class="ui bottom attached segment" suiTabContent="3">
 
                         <!--Copy code button-->
-                        <button ngxClipboard [cbContent]="section.copyCode3"
+                        <button ngxClipboard [cbContent]="section.copyVar"
                             class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
                         <!--/Copy code button-->
                         <!--Copy code display-->
                         <pre>
-                <code [highlight]="section.copyCode3"></code>
+                <code [highlight]="section.copyVar"></code>
               </pre>
                         <!--/Copy code display-->
                     </div>
@@ -73,46 +73,22 @@
 
         </div>
         <!--Page Content-->
+        <!-- <app-card-one></app-card-one> -->
+
     </div>
     <div class="pageSection-stickybar">
         <h4>On this this page</h4>
-        <!-- <ul>
-            <li (click)="scrollTo('libraryv1-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-1' }">
-                Library card V1 for Desktop & Web(Portal)</li>
-            <li (click)="scrollTo('libraryv1-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-2' }">
-                Library card V1 for Mobile</li>
-            <li (click)="scrollTo('libraryv1-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-3' }">
-                Library card V1 for Mobile (Recently viewed)</li>
-            <li (click)="scrollTo('libraryv1-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-4' }">
-                Library card V1 Selected view for Desktop & Web(Portal)</li>
-            <li (click)="scrollTo('libraryv1-5')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-5' }">
-                Library card V1 with QR code button</li>
-            <li (click)="scrollTo('libraryv1-6')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-6' }">
-                Library card V1 (Offline)</li>
-            <li (click)="scrollTo('libraryv2-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-1' }">
-                Library card V2 for mobile</li>
-            <li (click)="scrollTo('libraryv2-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-2' }">
-                Library card V2 for desktop view</li>
-            <li (click)="scrollTo('libraryv2-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-3' }">
-                Library card V2 selected</li>
-            <li (click)="scrollTo('libraryv2-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-4' }">
-                Library card V2 for desktop with QR code btn</li>
-            <li (click)="scrollTo('libraryv2-5')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-5' }">
-                Library card V2 for Offline view</li>
-            <li (click)="scrollTo('libraryv3-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-1' }">
-                Library card V3</li>
-            <li (click)="scrollTo('libraryv3-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-2' }">
-                Library card V3 Selected state</li>
-            <li (click)="scrollTo('libraryv3-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-3' }">
-                Library card V3 Desktop only</li>
-            <li (click)="scrollTo('libraryv3-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-4' }">
-                Library card V3 Offline</li>
-            <li (click)="scrollTo('libraryv4-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-1' }">
-                Library card V4</li>
-            <li (click)="scrollTo('libraryv4-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-2' }">
-                Library card V4 selected</li>
-            <li (click)="scrollTo('libraryv4-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-1' }">
-                Library card V4 offline</li>
-        </ul> -->
+        <nav class="section-nav">
+            <ul>
+                
+                <li (click)="scrollTo('section' + i)" *ngFor="let section of sections; let i = index" [ngClass]="{active : section === 'section'+i}">
+                    <span>{{section.title}} | {{'section' + i }}</span>
+                    <!-- <ng-container *ngIf="section === 'psection0'">1</ng-container> -->
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
+
+
+<!-- section === 'psection0' ? 'active' : '' -->

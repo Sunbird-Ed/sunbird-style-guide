@@ -1,0 +1,82 @@
+@import "./variables";
+@import "./mixins/mixins";
+
+
+::ng-deep :root {
+  --cc-sbcard-data1-2-text:var(--primary-color);
+}
+
+/* sb card component css */
+.sb--card.sb--card--theme2.sb--card--v3 {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__main-area {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__details {
+  font-size: 0.75rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__img {
+  width: 3.5rem;
+  flex: 0 0 3.5rem;
+  margin: 0rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__img .img-container {
+  width: 3.5rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+}
+html[dir=rtl] .sb--card.sb--card--theme2.sb--card--v3 .sb--card__info {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__info .data_3 {
+  border-radius: 0.25rem;
+  background-color: #FFE99E;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 2px;
+  margin-bottom: 0.25rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__info .data_4 {
+  font-size: 0.9rem;
+  margin: 0.125rem 0;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__title {
+  color: unset;
+  font-size: 1.125rem;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 {
+  margin-top: 0px;
+  width: 100%;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 .data_1, .sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 .data_2 {
+  color: var(--cc-sbcard-data1-2-text);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  width: auto;
+  flex: initial;
+  white-space: nowrap;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 .data_2:last-child {
+  margin-right: 0px;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 app-truncated-ellipsis {
+  color: var(--cc-sbcard-data1-2-text);
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__meta1 app-truncated-ellipsis .dot-divider {
+  background-color: var(--cc-sbcard-data1-2-text);
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__image-pos {
+  position: initial;
+}
+.sb--card.sb--card--theme2.sb--card--v3 .sb--card__image-pos .img-container {
+  height: 4.5rem;
+  border-radius: 0.5rem; border: 0;
+}
