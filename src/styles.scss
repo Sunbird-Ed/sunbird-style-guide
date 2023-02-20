@@ -1,5 +1,9 @@
+// @import './../node_modules/@project-sunbird/sb-styles/assets/mixins/mixins';
+// @import './../node_modules/@project-sunbird/sb-styles/assets/variables';
+// @import '~node_modules/@project-sunbird/sb-styles/assets/mixins/mixins';
 @import "variables";
 @import 'mixins/mixins';
+@import '~highlight.js/styles/github.css';
 
 .sb-spacer48 {
   height: calculateRem(48px);
@@ -20,6 +24,9 @@
 body,
 html {
   height: 100%;
+}
+body {
+  padding-top:5.75rem;
 }
 
 .docs-body {
@@ -142,12 +149,12 @@ html {
   }
 
   .docs-content {
-    padding: calculateRem(140px) calculateRem(60px) calculateRem(60px) calculateRem(280px);
+    padding: 0 calculateRem(60px) calculateRem(60px) calculateRem(280px);
     width: 100vw;
     min-height: 100vh;
     // height: auto;
     position: relative;
-    background: var(--main-color);
+    background: #edf4f9; //var(--main-color)
 
     // overflow-y: auto;
     &.docs-fullWidth {
@@ -195,8 +202,8 @@ html {
 
     .btn-copy {
       position: absolute;
-      top: calculateRem(30px);
-      right: calculateRem(20px);
+      top: 0.5rem;
+      right: 0.5rem;
       font-weight: bold;
     }
 
@@ -204,7 +211,7 @@ html {
       position: relative;
       display: block;
       width: 100%;
-      padding: 0;
+      padding: 1rem;
       margin: 0;
       box-sizing: border-box;
     }
@@ -396,6 +403,10 @@ h6 {
 }
 
 // scroll css //
+body ::-webkit-scrollbar {
+  height: 8px;
+}
+
 .sb-style-scrollbar {
   &::-webkit-scrollbar {
     width: calculateRem(5px);
@@ -405,6 +416,7 @@ h6 {
 
   &::-webkit-scrollbar-thumb {
     background-color: #e5edf5 !important;
+
     &:hover {
       background: var(--primary-300) !important;
     }
@@ -417,6 +429,7 @@ h6 {
 }
 
 .hideLeftTopBars {
+
   .docs-sidebar,
   .docs-pageHeading {
     display: none;
@@ -483,11 +496,242 @@ h6 {
 .clearfix {
   *zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
   display: table;
   content: "";
 }
+
 .clearfix:after {
   clear: both;
+}
+
+
+/* new hightlight changes */
+.displaycode {
+  margin: 1rem 0;
+
+  &--ct {}
+}
+
+.copycode {
+  margin: 1rem 0;
+
+  &--ct {
+    position: relative;
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow-x: auto;
+  }
+
+  &__btn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  pre {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ui.tabular.menu .active.item {
+  background: #edf4f9;
+}
+
+
+
+
+
+/* code block */
+.running_snippetBlock {
+  padding: 1rem 0;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  .running_snippet {
+    position: relative;
+    background: #f2f2f2;
+    border: 1px solid #d4d4d5;
+    padding: 0.5rem;
+    border-radius: 0 0 4px 4px;
+
+    pre {
+      margin: 0;
+      padding: 0;
+    }
+
+    code {
+      background: none;
+    }
+  }
+}
+
+.docs-body .docs-content .ComponentBlock h4 {
+  border-bottom: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.note {
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  font-size: 0.875rem;
+  background: #fff0cd;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.ComponentBlock {
+  .active {}
+
+  margin-bottom: 2rem;
+
+  &__view {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: #edf4f9;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__code {
+    border-top: 0px !important;
+    background: #f2f2f2;
+    border: 1px solid #d4d4d5;
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+  }
+
+  sui-tabset {
+    .ui.tabular.menu .active.item {
+      background: #f8f8f8;
+    }
+
+    .ui.segment.active {
+      background-color: #f8f8f8;
+      margin-bottom: 0;
+    }
+  }
+
+  pre {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    code {
+      max-height: 360px;
+      overflow-y: auto;
+      width: 100%;
+    }
+  }
+}
+
+.pageSection-stickybar {
+  height: calc(100vh - 8.75rem);
+  // experiment with this value, try changing to 110vh: ;
+  min-height: 200px;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  padding-left: 5%;
+  flex: 1;
+
+  h4 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    letter-spacing: calculateRem(1.5px);    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  // ol,
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  //   font-size: 1rem;
+  //   list-style: none;
+  //   padding-left: 0;
+
+  //   li {
+  //     list-style: none;
+  //     margin: 0;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: flex-start;
+
+  //     a {
+  //       &:not(.button) {
+  //         border-left: calculateRem(2px) solid var(--gray-300);
+  //         color: var(--gray-800);
+  //         display: block;
+  //         padding: 0.5rem 1rem;
+  //         text-decoration: none;
+  //       }
+
+  //       &:not(.button):hover {
+  //         color: var(--primary-400);
+  //         font-weight: 600;
+  //       }
+
+  //       &:not(.button):active {
+  //         background: var(--primary-250);
+  //         border-left: calculateRem(4px) solid var(--primary-400);
+  //         color: var(--gray-600);
+  //         font-weight: 600;
+  //       }
+  //      &:not(.button)[aria-current]:not([aria-current=""]){
+  //         background: var(--primary-250);
+  //         border-left: 4px solid var(--primary-400);
+  //         color: var(--gray-600);
+  //         font-weight: 600;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+.pageSection-stickybar > nav {
+  /* position: sticky;
+  top: 2rem; */
+  align-self: start;
+}
+.pageSection-stickybar > nav ul {list-style: none;
+padding-left: 0;} 
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav li{
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #333;
+  transition: all 50ms ease-in-out;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+  padding-bottom: 0.5rem;
+  &.active, &:hover, &:focus{
+    color: var(--primary-color);
+    font-weight: 500;color: var(--primary-color);cursor: pointer;
+    border-left: 2px solid var(--primary-color);
+  }
+
 }

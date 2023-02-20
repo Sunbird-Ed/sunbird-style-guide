@@ -14,13 +14,16 @@ import { HashLocationStrategy, Location, LocationStrategy } from '@angular/commo
 
 export class SidebarComponent implements OnInit {
   @Output() getMatchedLocationPath = new EventEmitter();
-  @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild('searchInput', { static: true }) searchInput: ElementRef;
   darkmode = true;
   routeParametertemp: string;
   routeParameter: any;
   searchText: any;
   ClearInput: string;
-
+  showContentNav = {
+    joy : true,
+    classic : false,
+  }
   heroes = [
     { id: 11, name: 'Mr. Nice', country: 'India' }
   ];

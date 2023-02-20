@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,6 +32,8 @@
               "node_modules/datatables.net-dt/css/jquery.dataTables.min.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/shepherd.js/dist/css/shepherd-theme-default.css",
+              "node_modules/@project-sunbird/sb-styles/assets/_styles.scss",
+              "node_modules/@project-sunbird/sb-themes/themes/themes-portal.scss",
               "src/assets/styles/styles.scss",
               "src/styles.scss"
             ],
@@ -75,6 +78,10 @@
                   "type": "initial",
                   "maximumWarning": "10mb",
                   "maximumError": "20mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }

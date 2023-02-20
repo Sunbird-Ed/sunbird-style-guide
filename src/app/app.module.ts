@@ -122,9 +122,22 @@ import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-ban
 import { BatchComponentComponent } from './batch-component/batch-component.component';
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
 import { CountdownModule } from 'ngx-countdown';
-import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
+import { sunbirdWebAppComponent } from './sunbird-web-app/sunbird-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 import { StateCertificateComponent } from './state-certificate/state-certificate.component';
+import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
+import { CommonConsumptionModule } from '@project-sunbird/common-consumption';
+import { CardsComponent2 } from './v2/cards/cards.component';
+import { GroupComponent } from './v2/cards/group/group.component';
+import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
+import {MemberCardComponent} from './v2/cards/member-card/member-card.component'
+import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
+import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
+import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
+import { ScrollSpyDirective } from './scroll-spy.directive';
+import { AllCardsComponent } from './v2/cards/all-cards/all-cards/all-cards.component';
+import { MyCourseCardComponent } from './v2/cards/my-course-card/my-course-card.component';
+// import { AllCardsModule } from './v2/cards/all-cards/all-cards/all-cards.module';
 /**
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -235,10 +248,21 @@ export function hljsLanguages() {
     MaintenanceBannerComponent,
     BatchComponentComponent,
     BatchCertificateComponent,
-    DikshaWebAppComponent,
+    sunbirdWebAppComponent,
     ButtonsNewComponent,
-    DikshaWebAppComponent,
-    StateCertificateComponent
+    sunbirdWebAppComponent,
+    StateCertificateComponent,
+    CClibraryCardComponent,
+    CardsComponent2,
+    GroupComponent,
+    LibraryCardComponent,
+    MemberCardComponent,
+    ScrollSpyDirective,
+    CourseCardComponent,
+    NotificationCardComponent,
+    CourseCuriculumCardComponent,
+    AllCardsComponent,
+    MyCourseCardComponent
   ],
   imports: [
     BrowserModule,
@@ -257,7 +281,9 @@ export function hljsLanguages() {
     BrowserAnimationsModule,
     HeadroomModule,
     NgxPageScrollModule,
-    CountdownModule
+    CountdownModule,
+    CommonConsumptionModule,
+    //AllCardsModule
   ],
   providers: [CustomerService, SortService, ThemeService],
   bootstrap: [AppComponent]

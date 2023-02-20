@@ -1,0 +1,122 @@
+@import "./variables";
+@import "./mixins/mixins";
+
+
+/* sb card common styles START here */
+::ng-deep :root {
+  --cc-sbcard-bg: var(--white);
+  --cc-sbcard-img-container-bg: var(--gray-100);
+  --cc-sbcard-title: var(--primary-color);
+  --cc-sbcard-meta-text: var(--gray-800);
+  --cc-sbcard-dot-divider: var(--gray-200);
+  --cc-sbcard-moreinfo-bg: none;
+  --cc-sbcard-moreinfo-bordertop: #cacbce;
+  --cc-sbcard-meta2-text: var(--gray-800);
+  --cc-sbcard-org-text: var(--gray-200);
+  --cc-sbcard-type-bg: var(--gray-200);
+  --cc-sbcard-type-text: var(--white);
+  --cc-sbcard-rv-img-container-bg: var(--gray-100);
+  --cc-sbcard-selected-border: var(--primary-color);
+  --cc-sbcard-selected-bg: rgba(2, 79, 157, 0.2);
+  --cc-sbcard-offline-bg: var(--tertiary-color);
+  --cc-sbcard-offline-img-text: var(--white);
+  --cc-sbcard-type-br: var(--gray-200);
+  --cc-sbcard-org-text: var(--balck);
+  --cc-sbcard-img-br: var(--white);
+  --cc-sbcard-data2-bg: #E5EDF5;
+  --cc-sbcard-data2-bg-active: #0076FE;
+  --cc-sbcard-data1-bg: #F0E5F5;
+  --cc-sbcard-data1-bg-active: #6236FF;
+  --cc-sbcard-data0-bg: #E0F5EA;
+  --cc-sbcard-data0-bg-active: #008840;
+  --cc-sbcard-data1-2-text: var(--primary-color);
+
+  //Member List Cards
+  --cc-members-list-item-selected: #f2f2ea;
+  --cc-members-list-item-selected-border: #e9e8d9;
+  --cc-members-list-item-menu-text: #999999;
+  --cc-members-list-item-status-text: #07bc81;
+  --cc-members-list-item-status-br: #07bc81;
+  --cc-members-list-item-status-bg: #fff;
+
+  // Notification List Cards
+  --cc-notification-list-bg: var(--white);
+  --cc-notification-list-br: var(--rc-dddddd);
+  --cc-notification-status-bg: var(--gray-200);
+  --cc-notification-date-text: var(--gray-200);
+  --cc-notification-logo-bg: var(--gray-0);
+  --cc-notification-title-text: var(--gray-400);
+  --cc-notification-title-active: var(--primary-color);
+  --cc-notification-subtitle-text: var(--gray-400);
+}
+::ng-deep {
+@import './card';
+@import './cardv2';
+@import './cardv3';
+@import './cardv4';
+@import './course';
+@import './groups';
+// @import './membercard';
+// @import './notification';
+}
+
+
+
+::ng-deep :root {
+  --kabab-menu-hover-bg: var(--gray-0);
+  --kabab-menu-dropdown-bg: var(--white);
+  --kabab-menu-dropdown-item-active: var(--primary-100);
+  .kabab-menu {
+    color: var(--primary-400);
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.75rem;
+    text-align: center;
+    border-radius: 50%;
+    padding-left: 0.375rem;
+  }
+  .kabab-menu:hover {
+    background: var(--kabab-menu-hover-bg);
+    cursor: pointer;
+  }
+  .kabab-menu::after {
+    content: "\2807";
+    font-size: 1.5rem;
+  }
+  .kabab-menu-dropdown-content {
+    position: absolute;
+    border-radius: 0.125rem;
+    background-color: var(--kabab-menu-dropdown-bg);
+    box-shadow: 0 0.1875rem 0.3125rem 0.25rem rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    z-index: 1;
+    text-align: left;
+    right: 0;
+    top: 0;
+    min-width: 10.625rem;
+    display: none;
+  }
+  .kabab-menu:hover .kabab-menu-dropdown-content{
+    display: block;
+  }
+  .kabab-menu-dropdown-content .list {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  .kabab-menu-dropdown-content .list:hover, .kabab-menu-dropdown-content .list:active {
+    background-color: var(--kabab-menu-dropdown-item-active);
+  }
+  .kabab-menu-dropdown-content .list:last-child .sb-btn-normal {
+    color: var(--red-400);
+  }
+  .kabab-menu-dropdown-content .list .sb-btn-normal {
+    font-size: 0.875rem;
+  }
+  ::ng-deep html[dir=rtl] .kabab-menu-dropdown-content {
+    right: auto;
+    left: 0;
+  }
+}

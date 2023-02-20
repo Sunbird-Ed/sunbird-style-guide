@@ -17,7 +17,7 @@ export class MergeAccountComponent implements OnInit {
       demoCode: `
       <div class="sb-certificatePage">
       <div class="sb-certificatePage-header mb-auto">
-        <img src="assets/images/DIKSHA.svg" class="sb-certificatePage-logo" alt="SUNBIRD Logo" />
+        <img src="assets/images/sunbird.svg" class="sb-certificatePage-logo" alt="SUNBIRD Logo" />
       </div>
       <div class="sb-certificatePage-form mb-auto">
         <div class="sb-merged-account-content text-center mb-32">
@@ -53,7 +53,7 @@ export class MergeAccountComponent implements OnInit {
       copyCode: `
       <div class="sb-certificatePage">
       <div class="sb-certificatePage-header mb-auto">
-        <img src="assets/images/DIKSHA.svg" class="sb-certificatePage-logo" alt="SUNBIRD Logo" />
+        <img src="assets/images/sunbird.svg" class="sb-certificatePage-logo" alt="SUNBIRD Logo" />
       </div>
       <div class="sb-certificatePage-form mb-auto">
         <div class="sb-merged-account-content text-center mb-32">

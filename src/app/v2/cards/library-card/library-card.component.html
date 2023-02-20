@@ -1,0 +1,118 @@
+<div class="d-flex">
+    <div class="w-80">
+        <!--Page Content-->
+        <div class="docs-sections ComponentBlock" *ngFor="let section of sections;">
+
+            <h4 class="docs-sectionHeading">
+                <span>{{section.title}}</span>
+                <span class="pull-right">
+                    <a class="fa fa-code text-gray docs-expandCode mx-8"
+                        (click)="section.expandCode = !section.expandCode" title="Toggle Code" tabindex="0"></a>
+                    <a class="mx-8 cursor-pointer" title="Try StalkBlitz Demo" (click)="tryDemoLink(section.url)"><svg
+                            viewBox="0 0 28 28" aria-hidden="true" class="_boltIcon_yct9u_9" height="16" width="16">
+                            <path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z">
+                            </path>
+                        </svg></a>
+                </span>
+            </h4>
+
+            <!--Display output-->
+            <div class="docs-sectionDemoCode ComponentBlock__view" [innerHTML]="section.demoCode | keepHtml">
+            </div>
+            <!--/Display output-->
+
+            <!--Display code-->
+            <div class="docs-sectionCopyCode ComponentBlock__code" *ngIf="section.expandCode">
+
+                <sui-tabset>
+                    <div class="ui top attached tabular menu">
+                        <a class="item" suiTabHeader="1">HTML</a>
+                        <a class="item" suiTabHeader="2">CSS</a>
+                        <a class="item" suiTabHeader="3">Variables</a>
+                    </div>
+                    <div class="ui bottom attached segment" suiTabContent="1">
+                        <!--Copy code button-->
+                        <button ngxClipboard [cbContent]="section.copyCode"
+                            class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+                        <!--/Copy code button-->
+
+                        <!--Copy code display-->
+                        <pre>
+                <code [highlight]="section.copyCode"></code>
+              </pre>
+                        <!--/Copy code display-->
+                    </div>
+                    <div class="ui bottom attached segment" suiTabContent="2">
+                        <!--Copy code button-->
+                        <button ngxClipboard [cbContent]="section.copyCode2"
+                            class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+                        <!--/Copy code button-->
+
+                        <!--Copy code display-->
+                        <pre>
+                <code [highlight]="section.copyCode2"></code>
+              </pre>
+                        <!--/Copy code display-->
+                    </div>
+                    <div class="ui bottom attached segment" suiTabContent="3">
+
+                        <!--Copy code button-->
+                        <button ngxClipboard [cbContent]="section.copyCode3"
+                            class="sb-btn sb-btn-primary sb-btn-xs fa fa-copy btn-copy"></button>
+                        <!--/Copy code button-->
+                        <!--Copy code display-->
+                        <pre>
+                <code [highlight]="section.copyCode3"></code>
+              </pre>
+                        <!--/Copy code display-->
+                    </div>
+                </sui-tabset>
+
+            </div>
+            <!--/Display code-->
+
+        </div>
+        <!--Page Content-->
+    </div>
+    <div class="pageSection-stickybar">
+        <h4>On this this page</h4>
+        <ul>
+            <li (click)="scrollTo('libraryv1-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-1' }">
+                Library card V1 for Desktop & Web(Portal)</li>
+            <li (click)="scrollTo('libraryv1-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-2' }">
+                Library card V1 for Mobile</li>
+            <li (click)="scrollTo('libraryv1-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-3' }">
+                Library card V1 for Mobile (Recently viewed)</li>
+            <li (click)="scrollTo('libraryv1-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-4' }">
+                Library card V1 Selected view for Desktop & Web(Portal)</li>
+            <li (click)="scrollTo('libraryv1-5')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-5' }">
+                Library card V1 with QR code button</li>
+            <li (click)="scrollTo('libraryv1-6')" [ngClass]="{ 'current-section': currentSection === 'libraryv1-6' }">
+                Library card V1 (Offline)</li>
+            <li (click)="scrollTo('libraryv2-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-1' }">
+                Library card V2 for mobile</li>
+            <li (click)="scrollTo('libraryv2-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-2' }">
+                Library card V2 for desktop view</li>
+            <li (click)="scrollTo('libraryv2-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-3' }">
+                Library card V2 selected</li>
+            <li (click)="scrollTo('libraryv2-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-4' }">
+                Library card V2 for desktop with QR code btn</li>
+            <li (click)="scrollTo('libraryv2-5')" [ngClass]="{ 'current-section': currentSection === 'libraryv2-5' }">
+                Library card V2 for Offline view</li>
+            <li (click)="scrollTo('libraryv3-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-1' }">
+                Library card V3</li>
+            <li (click)="scrollTo('libraryv3-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-2' }">
+                Library card V3 Selected state</li>
+            <li (click)="scrollTo('libraryv3-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-3' }">
+                Library card V3 Desktop only</li>
+            <li (click)="scrollTo('libraryv3-4')" [ngClass]="{ 'current-section': currentSection === 'libraryv3-4' }">
+                Library card V3 Offline</li>
+            <li (click)="scrollTo('libraryv4-1')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-1' }">
+                Library card V4</li>
+            <li (click)="scrollTo('libraryv4-2')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-2' }">
+                Library card V4 selected</li>
+            <li (click)="scrollTo('libraryv4-3')" [ngClass]="{ 'current-section': currentSection === 'libraryv4-1' }">
+                Library card V4 offline</li>
+        </ul>
+    </div>
+</div>

@@ -17,7 +17,7 @@ import { GridlayoutComponent } from './gridlayout/gridlayout.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { CardsComponent } from './cards/cards.component';
 import { PageSectionComponent } from './page-section/page-section.component';
-import {FormElementsComponent} from './form-elements/form-elements.component';
+import { FormElementsComponent } from './form-elements/form-elements.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RatingComponent } from './rating/rating.component';
 import { HeaderComponent } from './header/header.component';
@@ -37,7 +37,7 @@ import { OfflineDesktopAppComponent } from './/offline-desktop-app/offline-deskt
 import { MetadataComponent } from './metadata/metadata.component';
 import { TestPageComponent } from './test-page/test-page.component';
 import { AccordionComponent } from './accordion/accordion.component';
-import {HelpPageComponent} from './help-page/help-page.component';
+import { HelpPageComponent } from './help-page/help-page.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { LibraryComponent } from './library/library.component';
 import { IconsComponent } from './icons/icons.component';
@@ -74,12 +74,22 @@ import { NewTocComponent } from './new-toc/new-toc.component';
 import { MaintenanceBannerComponent } from './maintenance-banner/maintenance-banner.component';
 import { BatchComponentComponent } from './batch-component/batch-component.component';
 import { BatchCertificateComponent } from './batch-certificate/batch-certificate.component';
-import { DikshaWebAppComponent } from './diksha-web-app/diksha-web-app.component';
+import { sunbirdWebAppComponent } from './sunbird-web-app/sunbird-web-app.component';
 import { ButtonsNewComponent } from './buttons-new/buttons-new.component';
 import { StateCertificateComponent } from './state-certificate/state-certificate.component';
+import { CClibraryCardComponent } from './cc-library-card/cc-library-card.component';
+import { CardsComponent2 } from './v2/cards/cards.component';
+import { GroupComponent } from './v2/cards/group/group.component';
+import { LibraryCardComponent } from './v2/cards/library-card/library-card.component';
+import { MemberCardComponent } from './v2/cards/member-card/member-card.component';
+import { CourseCardComponent } from './v2/cards/course-card/course-card.component';
+import { NotificationCardComponent } from './v2/cards/notification-card/notification-card.component';
+import { CourseCuriculumCardComponent } from './v2/cards/course-curiculum-card/course-curiculum-card.component';
+import { AllCardsComponent } from './v2/cards/all-cards/all-cards/all-cards.component';
+import { MyCourseCardComponent } from './v2/cards/my-course-card/my-course-card.component';
 
 const routes: Routes = [
-  { path: '', component: GridlayoutComponent},
+  { path: '', component: GridlayoutComponent },
   { path: 'typography', component: TypographyComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'labels', component: LabelsComponent },
@@ -96,50 +106,50 @@ const routes: Routes = [
   { path: 'gridlayout', component: GridlayoutComponent },
   { path: 'spacing', component: SpacingComponent },
   { path: 'cards', component: CardsComponent },
-  { path: 'page-section', component: PageSectionComponent},
-  { path: 'form-elements', component: FormElementsComponent},
-  { path: 'pagination', component: PaginationComponent},
-  { path: 'rating', component: RatingComponent},
-  { path: 'guidetour', component: GuidetourComponent},
-  { path: 'header', component: HeaderComponent},
-  { path: 'footer', component: FooterComponent},
-  { path: 'tooltip', component: TooltipComponent},
-  { path: 'menus', component: MenusComponent},
-  { path: 'workspace', component: WorkspaceComponent},
-  { path: 'filters', component: FiltersComponent},
-  { path: 'treenavigation', component: TreenavigationComponent},
-  { path: 'explore-filter', component: ExploreFilterComponent},
-  { path: 'online-desktop-app', component: OnlineDesktopAppComponent},
-  { path: 'banner', component: BannerComponent},
-  { path: 'lists', component: ListsComponent},
-  { path: 'offline-desktop-app', component: OfflineDesktopAppComponent},
-  { path: 'metadata', component: MetadataComponent},
-  { path: 'test-page', component: TestPageComponent},
-  { path: 'accordion', component: AccordionComponent},
-  { path: 'help-page', component: HelpPageComponent},
-  { path: 'help-center', component: HelpCenterComponent},
-  { path: 'variables', component: VariablesComponent},
-  { path: 'library', component: LibraryComponent},
-  { path: 'icons', component: IconsComponent},
-  { path: 'landing', component: LandingComponent},
-  { path: 'CBSE-program', component: CBSEProgramComponent},
-  { path: 'certificates', component: CertificatesComponent},
-  { path: 'merge-account', component: MergeAccountComponent},
-  { path: 'offline-download', component: OfflineDownloadManagerComponent},
-  { path: 'offline-tab', component: OfflineTabComponent},
-  { path: 'account-recovery', component: AccountRecoveryComponent},
+  { path: 'page-section', component: PageSectionComponent },
+  { path: 'form-elements', component: FormElementsComponent },
+  { path: 'pagination', component: PaginationComponent },
+  { path: 'rating', component: RatingComponent },
+  { path: 'guidetour', component: GuidetourComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'tooltip', component: TooltipComponent },
+  { path: 'menus', component: MenusComponent },
+  { path: 'workspace', component: WorkspaceComponent },
+  { path: 'filters', component: FiltersComponent },
+  { path: 'treenavigation', component: TreenavigationComponent },
+  { path: 'explore-filter', component: ExploreFilterComponent },
+  { path: 'online-desktop-app', component: OnlineDesktopAppComponent },
+  { path: 'banner', component: BannerComponent },
+  { path: 'lists', component: ListsComponent },
+  { path: 'offline-desktop-app', component: OfflineDesktopAppComponent },
+  { path: 'metadata', component: MetadataComponent },
+  { path: 'test-page', component: TestPageComponent },
+  { path: 'accordion', component: AccordionComponent },
+  { path: 'help-page', component: HelpPageComponent },
+  { path: 'help-center', component: HelpCenterComponent },
+  { path: 'variables', component: VariablesComponent },
+  { path: 'library', component: LibraryComponent },
+  { path: 'icons', component: IconsComponent },
+  { path: 'landing', component: LandingComponent },
+  { path: 'CBSE-program', component: CBSEProgramComponent },
+  { path: 'certificates', component: CertificatesComponent },
+  { path: 'merge-account', component: MergeAccountComponent },
+  { path: 'offline-download', component: OfflineDownloadManagerComponent },
+  { path: 'offline-tab', component: OfflineTabComponent },
+  { path: 'account-recovery', component: AccountRecoveryComponent },
   { path: 'testing', component: TestingComponent },
-  { path: 'offline-menu', component: OfflineMenuComponent},
-  { path: 'assessment', component: AssessmentComponent},
-  { path: 'cbse-homepage', component: CbseHomepageComponent},
-  { path: 'manage', component: ManageComponent},
-  { path: 'offline-test', component: OfflineTestComponent},
-  { path: 'offline-login', component: LoginComponent},
-  { path: 'desktop-help', component: DesktopHelpComponent},
-  { path: 'practical-set', component: PracticeSetComponent},
-  { path: 'no-content', component: NoContentComponent},
-  { path: 'offline', component: OfflineComponent},
-  { path: 'download', component: DownloadComponent},
+  { path: 'offline-menu', component: OfflineMenuComponent },
+  { path: 'assessment', component: AssessmentComponent },
+  { path: 'cbse-homepage', component: CbseHomepageComponent },
+  { path: 'manage', component: ManageComponent },
+  { path: 'offline-test', component: OfflineTestComponent },
+  { path: 'offline-login', component: LoginComponent },
+  { path: 'desktop-help', component: DesktopHelpComponent },
+  { path: 'practical-set', component: PracticeSetComponent },
+  { path: 'no-content', component: NoContentComponent },
+  { path: 'offline', component: OfflineComponent },
+  { path: 'download', component: DownloadComponent },
   { path: 'profile-page', component: ProfilePageComponent },
   { path: 'qml-solutions', component:QmlSolutionsComponent },
   { path: 'telemetry', component:TelemetryComponent },
@@ -154,13 +164,46 @@ const routes: Routes = [
   { path: 'maintenance-banner', component:MaintenanceBannerComponent},
   { path: 'batch', component:BatchComponentComponent},
   { path: 'batch-certificate', component:BatchCertificateComponent},
-  { path: 'diksha-web', component:DikshaWebAppComponent},
+  { path: 'sunbird-web', component:sunbirdWebAppComponent},
   { path: 'buttons-new', component: ButtonsNewComponent},
-  { path: 'state-certificate', component: StateCertificateComponent}
+  { path: 'state-certificate', component: StateCertificateComponent},
+  { path: 'qml-solutions', component: QmlSolutionsComponent },
+  { path: 'telemetry', component: TelemetryComponent },
+  { path: 'toc-loading', component: TocLoadingComponent },
+  { path: 'project-dock', loadChildren: () => import('./project-dock/project-dock.module').then(m => m.ProjectDockModule) },
+  { path: 'schooling-at-home', component: schoolingAtHomeComponent },
+  { path: 'add-to-library', component: AddToLibraryComponent },
+  { path: 'school-home-group', component: SchoolingHomeGroupsComponent },
+  { path: 'add-to-library-change', component: AddToLibraryChangeComponent },
+  { path: 'librarycard', component: CClibraryCardComponent },
+  { path: 'cc-cards', component: CardsComponent2 },
+  { path: 'groupcard', component: GroupComponent },
+  { path: 'library-card', component: LibraryCardComponent },
+  { path: 'member-card', component: MemberCardComponent },
+  { path: 'course-card', component: CourseCardComponent },
+  { path: 'notification-card', component: NotificationCardComponent },
+  { path: 'course-curiculum-card', component: CourseCuriculumCardComponent },
+  { path: 'all-cards', component: AllCardsComponent },
+  { path: 'my-course-card', component: MyCourseCardComponent }
+  
+  
+  
+  // {
+  //   path: 'cccomponents',
+  //   component: CccomponentsComponent,
+  //   children: [
+  //     {
+  //       path: 'card',
+  //       component: CardComponent
+  //     }
+  //   ]
+  // }
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -2,7 +2,6 @@ import { Component, Input, OnInit, } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs';
-
 export let browserRefresh = false;
 
 @Component({
@@ -30,5 +29,4 @@ export class AppComponent {
   displayMatchedLocationPath(val) {
     this.selectedlink = val;
   }
-
 }

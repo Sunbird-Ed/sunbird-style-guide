@@ -15,9 +15,67 @@
     </div>
   </div>
 
-  
+  <div class="d-flex">
+  <div class="ml-16" (click)="showContentNav.joy = true;showContentNav.classic = false;">Version 2</div>
+  <div class="ml-16" (click)="showContentNav.classic = true;showContentNav.joy = false;">Version 1</div>
+</div>
   <div class="sb-components-sidebar">
-    <ul id="myUL">
+    <ul id="myUL" *ngIf="showContentNav.joy">
+      <h4 class="sb-site-list-heading">Getting Started</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Introduction</a>
+      </li>
+      <h4 class="sb-site-list-heading">Components</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/all-cards" routerLinkActive="active">All Cards</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/groupcard" routerLinkActive="active">Group Card</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/library-card" routerLinkActive="active">Library Cards (New)</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/librarycard" routerLinkActive="active">Library Card (old)</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/member-card" routerLinkActive="active">Member Card</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/course-card" routerLinkActive="active">Course Card</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/notification-card" routerLinkActive="active">Notification Card</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/course-curiculum-card" routerLinkActive="active">Course Curiculum Card</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/my-course-card" routerLinkActive="active">My Course Card</a>
+      </li>
+      <h4 class="sb-site-list-heading">Themes</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Colors</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/">CSS variables</a>
+      </li>
+      <h4 class="sb-site-list-heading">Layout</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Grid</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Buttons</a>
+      </li>
+      <h4 class="sb-site-list-heading">Utitlities</h4>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Margins</a>
+      </li>
+      <li class="sb-site-list-item">
+        <a routerLink="/">Paddings</a>
+      </li>
+    </ul>
+    <ul id="myUL" *ngIf="showContentNav.classic">
       <h4 class="sb-site-list-heading">Reference</h4>
       <li class="sb-site-list-item">
         <a href="docs/assets/design-system/index.html" target="_blank">Design System</a>
@@ -261,7 +319,7 @@
           </li>
 
           <li class="sb-site-list-item">
-            <a routerLink="/diksha-web" target="_blank" routerLinkActive="active">diksha-web</a>
+            <a routerLink="/sunbird-web" target="_blank" routerLinkActive="active">sunbird-web</a>
           </li>
          
           <li class="sb-site-list-item">
