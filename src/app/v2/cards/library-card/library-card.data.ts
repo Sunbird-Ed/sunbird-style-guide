@@ -1082,7 +1082,7 @@ export const libraryCardData = [
             </div>
           </div>
           <div class="sb--card__svg-area">
-            <img src="/assets/images/abstract_02.svg" alt=""/>
+            <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
           </div>
           <div class="sb--card__type">Card type</div>
         </div>
@@ -1132,7 +1132,7 @@ export const libraryCardData = [
             </div>
           </div>
           <div class="sb--card__svg-area">
-            <img src="/assets/images/abstract_02.svg" alt=""/>
+            <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
           </div>
           <div class="sb--card__type">Card type</div>
         </div>
@@ -1295,7 +1295,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -1368,7 +1368,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -1554,7 +1554,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -1627,7 +1627,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -1815,7 +1815,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -1892,7 +1892,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -2082,7 +2082,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
@@ -2155,7 +2155,7 @@ export const libraryCardData = [
           </div>
         </div>
         <div class="sb--card__svg-area">
-          <img src="/assets/images/abstract_02.svg" alt=""/>
+          <img src="https://staging.sunbirded.org/assets/common-consumption/images/abstract_02.svg" alt=""/>
         </div>
         <div class="sb--card__type">Card type</div>
       </div>
